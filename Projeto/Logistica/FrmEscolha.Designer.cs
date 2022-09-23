@@ -29,42 +29,42 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEscolha));
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cbSelecionar = new System.Windows.Forms.ComboBox();
+            this.btnEntrar = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cbSelecionar
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.comboBox1.ForeColor = System.Drawing.Color.Red;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbSelecionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cbSelecionar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSelecionar.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cbSelecionar.ForeColor = System.Drawing.Color.Red;
+            this.cbSelecionar.FormattingEnabled = true;
+            this.cbSelecionar.Items.AddRange(new object[] {
             "Amostra",
             "Engenharia",
             "Logistica",
             "Financeiro",
             "Orçamento",
             "Sergio"});
-            this.comboBox1.Location = new System.Drawing.Point(191, 23);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(246, 39);
-            this.comboBox1.TabIndex = 0;
+            this.cbSelecionar.Location = new System.Drawing.Point(191, 23);
+            this.cbSelecionar.Name = "cbSelecionar";
+            this.cbSelecionar.Size = new System.Drawing.Size(246, 39);
+            this.cbSelecionar.TabIndex = 0;
             // 
-            // button1
+            // btnEntrar
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(191, 90);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(246, 51);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Entrar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnEntrar.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnEntrar.Location = new System.Drawing.Point(191, 90);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(246, 51);
+            this.btnEntrar.TabIndex = 1;
+            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // progressBar1
             // 
@@ -91,8 +91,8 @@
             this.ClientSize = new System.Drawing.Size(471, 261);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnEntrar);
+            this.Controls.Add(this.cbSelecionar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -107,8 +107,8 @@
 
         #endregion
 
-        private ComboBox comboBox1;
-        private Button button1;
+        private ComboBox cbSelecionar;
+        private Button btnEntrar;
         private ProgressBar progressBar1;
         private PictureBox pictureBox1;
     }
