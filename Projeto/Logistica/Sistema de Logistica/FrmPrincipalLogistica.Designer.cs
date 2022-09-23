@@ -249,6 +249,7 @@
             // 
             // btnLimparPesquisa
             // 
+            this.btnLimparPesquisa.Image = ((System.Drawing.Image)(resources.GetObject("btnLimparPesquisa.Image")));
             this.btnLimparPesquisa.Location = new System.Drawing.Point(893, 12);
             this.btnLimparPesquisa.Name = "btnLimparPesquisa";
             this.btnLimparPesquisa.Size = new System.Drawing.Size(44, 38);
@@ -257,6 +258,7 @@
             // 
             // btnPesquisar
             // 
+            this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
             this.btnPesquisar.Location = new System.Drawing.Point(843, 12);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(44, 38);
