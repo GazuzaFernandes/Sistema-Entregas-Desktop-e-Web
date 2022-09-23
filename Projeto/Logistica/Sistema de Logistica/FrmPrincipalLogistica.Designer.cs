@@ -39,8 +39,8 @@
             this.comoEmitirARTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.roteiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saidaDoRoteiroMotoristaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbFabrica = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -70,8 +70,8 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -162,18 +162,10 @@
             this.saidaDoRoteiroMotoristaToolStripMenuItem.Size = new System.Drawing.Size(375, 36);
             this.saidaDoRoteiroMotoristaToolStripMenuItem.Text = "Saida do Roteiro Motorista";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(1519, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(229, 153);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
@@ -193,15 +185,24 @@
             this.panel1.Controls.Add(this.radioButton4);
             this.panel1.Controls.Add(this.radioButton3);
             this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Controls.Add(this.rbFabrica);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.menuStrip1);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1781, 179);
             this.panel1.TabIndex = 5;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1548, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(173, 146);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // label4
             // 
@@ -428,18 +429,18 @@
             this.radioButton2.Text = "Pedido Rb";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbFabrica
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radioButton1.ForeColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(178, 65);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(111, 35);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Fabrica";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbFabrica.AutoSize = true;
+            this.rbFabrica.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbFabrica.ForeColor = System.Drawing.Color.White;
+            this.rbFabrica.Location = new System.Drawing.Point(178, 65);
+            this.rbFabrica.Name = "rbFabrica";
+            this.rbFabrica.Size = new System.Drawing.Size(111, 35);
+            this.rbFabrica.TabIndex = 6;
+            this.rbFabrica.TabStop = true;
+            this.rbFabrica.Text = "Fabrica";
+            this.rbFabrica.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -547,9 +548,9 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -572,7 +573,6 @@
         private ToolStripMenuItem comoEmitirNotaFiscalToolStripMenuItem;
         private ToolStripMenuItem comoEmitirARTToolStripMenuItem;
         private ToolStripMenuItem saidaDoRoteiroMotoristaToolStripMenuItem;
-        private PictureBox pictureBox1;
         private Panel panel1;
         private CheckBox checkBox4;
         private CheckBox checkBox3;
@@ -587,7 +587,7 @@
         private RadioButton radioButton4;
         private RadioButton radioButton3;
         private RadioButton radioButton2;
-        private RadioButton radioButton1;
+        private RadioButton rbFabrica;
         private TextBox textBox1;
         private Button button2;
         private Button button1;
@@ -602,5 +602,6 @@
         private Label label1;
         private DataGridView dataGridView1;
         private DataGridView dataGridView2;
+        private PictureBox pictureBox1;
     }
 }
