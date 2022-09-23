@@ -15,5 +15,10 @@ namespace Projeto
             FrmPrincipalAmostra amostra = new FrmPrincipalAmostra();
                 amostra.Show();
         }
+
+        private void FrmEscolha_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
