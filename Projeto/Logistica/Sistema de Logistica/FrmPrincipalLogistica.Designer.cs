@@ -103,7 +103,8 @@
             this.msInserir});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(153, 35);
-            this.toolStripMenuItem1.Text = "Proposta";
+            this.toolStripMenuItem1.Text = "Pedidos";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click_1);
             // 
             // msInserir
             // 
