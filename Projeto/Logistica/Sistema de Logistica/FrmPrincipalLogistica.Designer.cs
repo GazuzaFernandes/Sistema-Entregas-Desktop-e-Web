@@ -31,42 +31,41 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipalLogistica));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.inserirPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.msInserir = new System.Windows.Forms.ToolStripMenuItem();
             this.ferramentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.anotarSaidaDeFerramentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.msFerramentas = new System.Windows.Forms.ToolStripMenuItem();
             this.tutorialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comoEmitirNotaFiscalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comoEmitirARTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.msNotaFiscal = new System.Windows.Forms.ToolStripMenuItem();
+            this.msArt = new System.Windows.Forms.ToolStripMenuItem();
             this.roteiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saidaDoRoteiroMotoristaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.msRoteiro = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.btnLimparPesquisa = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.cbCancelado = new System.Windows.Forms.CheckBox();
+            this.cbFinalizado = new System.Windows.Forms.CheckBox();
+            this.cbPendente = new System.Windows.Forms.CheckBox();
+            this.cbImediato = new System.Windows.Forms.CheckBox();
+            this.rbEndereco = new System.Windows.Forms.RadioButton();
+            this.rbMaterial = new System.Windows.Forms.RadioButton();
+            this.rbEng = new System.Windows.Forms.RadioButton();
+            this.rbNotaFiscal = new System.Windows.Forms.RadioButton();
+            this.rbCliente = new System.Windows.Forms.RadioButton();
+            this.rbPedidoVenda = new System.Windows.Forms.RadioButton();
+            this.rbProposta = new System.Windows.Forms.RadioButton();
+            this.rbPedidoRb = new System.Windows.Forms.RadioButton();
             this.rbFabrica = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPrincipal = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvFerramenta = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.menuStrip1.SuspendLayout();
@@ -74,9 +73,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFerramenta)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -101,66 +100,66 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.inserirPedidoToolStripMenuItem});
+            this.msInserir});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(153, 35);
             this.toolStripMenuItem1.Text = "Proposta";
             // 
-            // inserirPedidoToolStripMenuItem
+            // msInserir
             // 
-            this.inserirPedidoToolStripMenuItem.Name = "inserirPedidoToolStripMenuItem";
-            this.inserirPedidoToolStripMenuItem.Size = new System.Drawing.Size(242, 36);
-            this.inserirPedidoToolStripMenuItem.Text = "Inserir Pedido";
+            this.msInserir.Name = "msInserir";
+            this.msInserir.Size = new System.Drawing.Size(242, 36);
+            this.msInserir.Text = "Inserir Pedido";
             // 
             // ferramentasToolStripMenuItem
             // 
             this.ferramentasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.anotarSaidaDeFerramentasToolStripMenuItem});
+            this.msFerramentas});
             this.ferramentasToolStripMenuItem.Name = "ferramentasToolStripMenuItem";
             this.ferramentasToolStripMenuItem.Size = new System.Drawing.Size(153, 35);
             this.ferramentasToolStripMenuItem.Text = "Ferramentas";
             // 
-            // anotarSaidaDeFerramentasToolStripMenuItem
+            // msFerramentas
             // 
-            this.anotarSaidaDeFerramentasToolStripMenuItem.Name = "anotarSaidaDeFerramentasToolStripMenuItem";
-            this.anotarSaidaDeFerramentasToolStripMenuItem.Size = new System.Drawing.Size(397, 36);
-            this.anotarSaidaDeFerramentasToolStripMenuItem.Text = "Anotar Saida de Ferramentas";
+            this.msFerramentas.Name = "msFerramentas";
+            this.msFerramentas.Size = new System.Drawing.Size(397, 36);
+            this.msFerramentas.Text = "Anotar Saida de Ferramentas";
             // 
             // tutorialToolStripMenuItem
             // 
             this.tutorialToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.comoEmitirNotaFiscalToolStripMenuItem,
-            this.comoEmitirARTToolStripMenuItem});
+            this.msNotaFiscal,
+            this.msArt});
             this.tutorialToolStripMenuItem.Name = "tutorialToolStripMenuItem";
             this.tutorialToolStripMenuItem.Size = new System.Drawing.Size(153, 35);
             this.tutorialToolStripMenuItem.Text = "Ajuda";
             this.tutorialToolStripMenuItem.Click += new System.EventHandler(this.tutorialToolStripMenuItem_Click);
             // 
-            // comoEmitirNotaFiscalToolStripMenuItem
+            // msNotaFiscal
             // 
-            this.comoEmitirNotaFiscalToolStripMenuItem.Name = "comoEmitirNotaFiscalToolStripMenuItem";
-            this.comoEmitirNotaFiscalToolStripMenuItem.Size = new System.Drawing.Size(344, 36);
-            this.comoEmitirNotaFiscalToolStripMenuItem.Text = "Como emitir nota fiscal ";
+            this.msNotaFiscal.Name = "msNotaFiscal";
+            this.msNotaFiscal.Size = new System.Drawing.Size(344, 36);
+            this.msNotaFiscal.Text = "Como emitir nota fiscal ";
             // 
-            // comoEmitirARTToolStripMenuItem
+            // msArt
             // 
-            this.comoEmitirARTToolStripMenuItem.Name = "comoEmitirARTToolStripMenuItem";
-            this.comoEmitirARTToolStripMenuItem.Size = new System.Drawing.Size(344, 36);
-            this.comoEmitirARTToolStripMenuItem.Text = "Como emitir ART";
+            this.msArt.Name = "msArt";
+            this.msArt.Size = new System.Drawing.Size(344, 36);
+            this.msArt.Text = "Como emitir ART";
             // 
             // roteiroToolStripMenuItem
             // 
             this.roteiroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.saidaDoRoteiroMotoristaToolStripMenuItem});
+            this.msRoteiro});
             this.roteiroToolStripMenuItem.Name = "roteiroToolStripMenuItem";
             this.roteiroToolStripMenuItem.Size = new System.Drawing.Size(153, 35);
             this.roteiroToolStripMenuItem.Text = "Roteiro";
             // 
-            // saidaDoRoteiroMotoristaToolStripMenuItem
+            // msRoteiro
             // 
-            this.saidaDoRoteiroMotoristaToolStripMenuItem.Name = "saidaDoRoteiroMotoristaToolStripMenuItem";
-            this.saidaDoRoteiroMotoristaToolStripMenuItem.Size = new System.Drawing.Size(375, 36);
-            this.saidaDoRoteiroMotoristaToolStripMenuItem.Text = "Saida do Roteiro Motorista";
+            this.msRoteiro.Name = "msRoteiro";
+            this.msRoteiro.Size = new System.Drawing.Size(375, 36);
+            this.msRoteiro.Text = "Saida do Roteiro Motorista";
             // 
             // panel1
             // 
@@ -170,23 +169,22 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.checkBox4);
-            this.panel1.Controls.Add(this.checkBox3);
-            this.panel1.Controls.Add(this.checkBox2);
-            this.panel1.Controls.Add(this.checkBox1);
-            this.panel1.Controls.Add(this.radioButton10);
-            this.panel1.Controls.Add(this.radioButton9);
-            this.panel1.Controls.Add(this.radioButton8);
-            this.panel1.Controls.Add(this.radioButton7);
-            this.panel1.Controls.Add(this.radioButton6);
-            this.panel1.Controls.Add(this.radioButton5);
-            this.panel1.Controls.Add(this.radioButton4);
-            this.panel1.Controls.Add(this.radioButton3);
-            this.panel1.Controls.Add(this.radioButton2);
+            this.panel1.Controls.Add(this.btnLimparPesquisa);
+            this.panel1.Controls.Add(this.btnPesquisar);
+            this.panel1.Controls.Add(this.cbCancelado);
+            this.panel1.Controls.Add(this.cbFinalizado);
+            this.panel1.Controls.Add(this.cbPendente);
+            this.panel1.Controls.Add(this.cbImediato);
+            this.panel1.Controls.Add(this.rbEndereco);
+            this.panel1.Controls.Add(this.rbMaterial);
+            this.panel1.Controls.Add(this.rbEng);
+            this.panel1.Controls.Add(this.rbNotaFiscal);
+            this.panel1.Controls.Add(this.rbCliente);
+            this.panel1.Controls.Add(this.rbPedidoVenda);
+            this.panel1.Controls.Add(this.rbProposta);
+            this.panel1.Controls.Add(this.rbPedidoRb);
             this.panel1.Controls.Add(this.rbFabrica);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtPesquisar);
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -248,186 +246,173 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Material em SP";
             // 
-            // button2
+            // btnLimparPesquisa
             // 
-            this.button2.Location = new System.Drawing.Point(893, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(44, 38);
-            this.button2.TabIndex = 8;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnLimparPesquisa.Location = new System.Drawing.Point(893, 12);
+            this.btnLimparPesquisa.Name = "btnLimparPesquisa";
+            this.btnLimparPesquisa.Size = new System.Drawing.Size(44, 38);
+            this.btnLimparPesquisa.TabIndex = 8;
+            this.btnLimparPesquisa.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnPesquisar
             // 
-            this.button1.Location = new System.Drawing.Point(843, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(44, 38);
-            this.button1.TabIndex = 8;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Location = new System.Drawing.Point(843, 12);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(44, 38);
+            this.btnPesquisar.TabIndex = 8;
+            this.btnPesquisar.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // cbCancelado
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox4.ForeColor = System.Drawing.Color.Red;
-            this.checkBox4.Location = new System.Drawing.Point(1313, 87);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(173, 42);
-            this.checkBox4.TabIndex = 7;
-            this.checkBox4.Text = "Cancelado";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.cbCancelado.AutoSize = true;
+            this.cbCancelado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cbCancelado.ForeColor = System.Drawing.Color.Red;
+            this.cbCancelado.Location = new System.Drawing.Point(1313, 87);
+            this.cbCancelado.Name = "cbCancelado";
+            this.cbCancelado.Size = new System.Drawing.Size(173, 42);
+            this.cbCancelado.TabIndex = 7;
+            this.cbCancelado.Text = "Cancelado";
+            this.cbCancelado.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // cbFinalizado
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox3.ForeColor = System.Drawing.Color.Lime;
-            this.checkBox3.Location = new System.Drawing.Point(1313, 22);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(189, 42);
-            this.checkBox3.TabIndex = 7;
-            this.checkBox3.Text = "Finalizdado";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.cbFinalizado.AutoSize = true;
+            this.cbFinalizado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cbFinalizado.ForeColor = System.Drawing.Color.Lime;
+            this.cbFinalizado.Location = new System.Drawing.Point(1313, 22);
+            this.cbFinalizado.Name = "cbFinalizado";
+            this.cbFinalizado.Size = new System.Drawing.Size(172, 42);
+            this.cbFinalizado.TabIndex = 7;
+            this.cbFinalizado.Text = "Finalizado";
+            this.cbFinalizado.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // cbPendente
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox2.ForeColor = System.Drawing.Color.Yellow;
-            this.checkBox2.Location = new System.Drawing.Point(1058, 87);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(162, 42);
-            this.checkBox2.TabIndex = 7;
-            this.checkBox2.Text = "Pendente";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cbPendente.AutoSize = true;
+            this.cbPendente.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cbPendente.ForeColor = System.Drawing.Color.Yellow;
+            this.cbPendente.Location = new System.Drawing.Point(1058, 87);
+            this.cbPendente.Name = "cbPendente";
+            this.cbPendente.Size = new System.Drawing.Size(162, 42);
+            this.cbPendente.TabIndex = 7;
+            this.cbPendente.Text = "Pendente";
+            this.cbPendente.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // cbImediato
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox1.ForeColor = System.Drawing.Color.Blue;
-            this.checkBox1.Location = new System.Drawing.Point(1063, 13);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(157, 42);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "Imediato";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbImediato.AutoSize = true;
+            this.cbImediato.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cbImediato.ForeColor = System.Drawing.Color.Blue;
+            this.cbImediato.Location = new System.Drawing.Point(1063, 13);
+            this.cbImediato.Name = "cbImediato";
+            this.cbImediato.Size = new System.Drawing.Size(157, 42);
+            this.cbImediato.TabIndex = 7;
+            this.cbImediato.Text = "Imediato";
+            this.cbImediato.UseVisualStyleBackColor = true;
             // 
-            // radioButton10
+            // rbEndereco
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radioButton10.ForeColor = System.Drawing.Color.White;
-            this.radioButton10.Location = new System.Drawing.Point(821, 116);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(133, 35);
-            this.radioButton10.TabIndex = 6;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "Endereço";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.rbEndereco.AutoSize = true;
+            this.rbEndereco.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbEndereco.ForeColor = System.Drawing.Color.White;
+            this.rbEndereco.Location = new System.Drawing.Point(654, 113);
+            this.rbEndereco.Name = "rbEndereco";
+            this.rbEndereco.Size = new System.Drawing.Size(133, 35);
+            this.rbEndereco.TabIndex = 6;
+            this.rbEndereco.TabStop = true;
+            this.rbEndereco.Text = "Endereço";
+            this.rbEndereco.UseVisualStyleBackColor = true;
             // 
-            // radioButton9
+            // rbMaterial
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radioButton9.ForeColor = System.Drawing.Color.White;
-            this.radioButton9.Location = new System.Drawing.Point(821, 68);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(125, 35);
-            this.radioButton9.TabIndex = 6;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "Material";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.rbMaterial.AutoSize = true;
+            this.rbMaterial.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbMaterial.ForeColor = System.Drawing.Color.White;
+            this.rbMaterial.Location = new System.Drawing.Point(821, 68);
+            this.rbMaterial.Name = "rbMaterial";
+            this.rbMaterial.Size = new System.Drawing.Size(125, 35);
+            this.rbMaterial.TabIndex = 6;
+            this.rbMaterial.TabStop = true;
+            this.rbMaterial.Text = "Material";
+            this.rbMaterial.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // rbEng
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radioButton8.ForeColor = System.Drawing.Color.White;
-            this.radioButton8.Location = new System.Drawing.Point(654, 116);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(161, 35);
-            this.radioButton8.TabIndex = 6;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Comentario";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.rbEng.AutoSize = true;
+            this.rbEng.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbEng.ForeColor = System.Drawing.Color.White;
+            this.rbEng.Location = new System.Drawing.Point(654, 68);
+            this.rbEng.Name = "rbEng";
+            this.rbEng.Size = new System.Drawing.Size(143, 35);
+            this.rbEng.TabIndex = 6;
+            this.rbEng.TabStop = true;
+            this.rbEng.Text = "Eng. Resp.";
+            this.rbEng.UseVisualStyleBackColor = true;
             // 
-            // radioButton7
+            // rbNotaFiscal
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radioButton7.ForeColor = System.Drawing.Color.White;
-            this.radioButton7.Location = new System.Drawing.Point(654, 68);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(143, 35);
-            this.radioButton7.TabIndex = 6;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Eng. Resp.";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.rbNotaFiscal.AutoSize = true;
+            this.rbNotaFiscal.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbNotaFiscal.ForeColor = System.Drawing.Color.White;
+            this.rbNotaFiscal.Location = new System.Drawing.Point(492, 113);
+            this.rbNotaFiscal.Name = "rbNotaFiscal";
+            this.rbNotaFiscal.Size = new System.Drawing.Size(153, 35);
+            this.rbNotaFiscal.TabIndex = 6;
+            this.rbNotaFiscal.TabStop = true;
+            this.rbNotaFiscal.Text = "Nota Fiscal";
+            this.rbNotaFiscal.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // rbCliente
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radioButton6.ForeColor = System.Drawing.Color.White;
-            this.radioButton6.Location = new System.Drawing.Point(492, 113);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(153, 35);
-            this.radioButton6.TabIndex = 6;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Nota Fiscal";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.rbCliente.AutoSize = true;
+            this.rbCliente.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbCliente.ForeColor = System.Drawing.Color.White;
+            this.rbCliente.Location = new System.Drawing.Point(492, 65);
+            this.rbCliente.Name = "rbCliente";
+            this.rbCliente.Size = new System.Drawing.Size(120, 35);
+            this.rbCliente.TabIndex = 6;
+            this.rbCliente.TabStop = true;
+            this.rbCliente.Text = "Clientes";
+            this.rbCliente.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // rbPedidoVenda
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radioButton5.ForeColor = System.Drawing.Color.White;
-            this.radioButton5.Location = new System.Drawing.Point(492, 65);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(120, 35);
-            this.radioButton5.TabIndex = 6;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Clientes";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rbPedidoVenda.AutoSize = true;
+            this.rbPedidoVenda.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbPedidoVenda.ForeColor = System.Drawing.Color.White;
+            this.rbPedidoVenda.Location = new System.Drawing.Point(340, 113);
+            this.rbPedidoVenda.Name = "rbPedidoVenda";
+            this.rbPedidoVenda.Size = new System.Drawing.Size(134, 35);
+            this.rbPedidoVenda.TabIndex = 6;
+            this.rbPedidoVenda.TabStop = true;
+            this.rbPedidoVenda.Text = "Pd Venda";
+            this.rbPedidoVenda.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rbProposta
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radioButton4.ForeColor = System.Drawing.Color.White;
-            this.radioButton4.Location = new System.Drawing.Point(340, 113);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(134, 35);
-            this.radioButton4.TabIndex = 6;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Pd Venda";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rbProposta.AutoSize = true;
+            this.rbProposta.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbProposta.ForeColor = System.Drawing.Color.White;
+            this.rbProposta.Location = new System.Drawing.Point(340, 65);
+            this.rbProposta.Name = "rbProposta";
+            this.rbProposta.Size = new System.Drawing.Size(131, 35);
+            this.rbProposta.TabIndex = 6;
+            this.rbProposta.TabStop = true;
+            this.rbProposta.Text = "Proposta";
+            this.rbProposta.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rbPedidoRb
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radioButton3.ForeColor = System.Drawing.Color.White;
-            this.radioButton3.Location = new System.Drawing.Point(340, 65);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(131, 35);
-            this.radioButton3.TabIndex = 6;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Proposta";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(178, 113);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(144, 35);
-            this.radioButton2.TabIndex = 6;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Pedido Rb";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbPedidoRb.AutoSize = true;
+            this.rbPedidoRb.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbPedidoRb.ForeColor = System.Drawing.Color.White;
+            this.rbPedidoRb.Location = new System.Drawing.Point(178, 113);
+            this.rbPedidoRb.Name = "rbPedidoRb";
+            this.rbPedidoRb.Size = new System.Drawing.Size(144, 35);
+            this.rbPedidoRb.TabIndex = 6;
+            this.rbPedidoRb.TabStop = true;
+            this.rbPedidoRb.Text = "Pedido Rb";
+            this.rbPedidoRb.UseVisualStyleBackColor = true;
             // 
             // rbFabrica
             // 
@@ -442,14 +427,14 @@
             this.rbFabrica.Text = "Fabrica";
             this.rbFabrica.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtPesquisar
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(178, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(659, 38);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "Digite para pesquisar:";
+            this.txtPesquisar.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPesquisar.Location = new System.Drawing.Point(178, 10);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(659, 38);
+            this.txtPesquisar.TabIndex = 5;
+            this.txtPesquisar.Text = "Digite para pesquisar:";
             // 
             // tabControl1
             // 
@@ -467,7 +452,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Controls.Add(this.dgvPrincipal);
             this.tabPage1.Location = new System.Drawing.Point(4, 40);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -476,22 +461,22 @@
             this.tabPage1.Text = "Principal";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvPrincipal
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1767, 560);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvPrincipal.AllowUserToAddRows = false;
+            this.dgvPrincipal.AllowUserToDeleteRows = false;
+            this.dgvPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPrincipal.Location = new System.Drawing.Point(3, 3);
+            this.dgvPrincipal.Name = "dgvPrincipal";
+            this.dgvPrincipal.ReadOnly = true;
+            this.dgvPrincipal.RowHeadersWidth = 51;
+            this.dgvPrincipal.Size = new System.Drawing.Size(1767, 560);
+            this.dgvPrincipal.TabIndex = 0;
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Controls.Add(this.dgvFerramenta);
             this.tabPage2.Location = new System.Drawing.Point(4, 40);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -500,18 +485,18 @@
             this.tabPage2.Text = "Ferramentas Obra";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // dgvFerramenta
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(1767, 560);
-            this.dataGridView2.TabIndex = 1;
+            this.dgvFerramenta.AllowUserToAddRows = false;
+            this.dgvFerramenta.AllowUserToDeleteRows = false;
+            this.dgvFerramenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFerramenta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvFerramenta.Location = new System.Drawing.Point(3, 3);
+            this.dgvFerramenta.Name = "dgvFerramenta";
+            this.dgvFerramenta.ReadOnly = true;
+            this.dgvFerramenta.RowHeadersWidth = 51;
+            this.dgvFerramenta.Size = new System.Drawing.Size(1767, 560);
+            this.dgvFerramenta.TabIndex = 1;
             // 
             // tabPage3
             // 
@@ -553,9 +538,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFerramenta)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -568,29 +553,28 @@
         private ToolStripMenuItem ferramentasToolStripMenuItem;
         private ToolStripMenuItem tutorialToolStripMenuItem;
         private ToolStripMenuItem roteiroToolStripMenuItem;
-        private ToolStripMenuItem inserirPedidoToolStripMenuItem;
-        private ToolStripMenuItem anotarSaidaDeFerramentasToolStripMenuItem;
-        private ToolStripMenuItem comoEmitirNotaFiscalToolStripMenuItem;
-        private ToolStripMenuItem comoEmitirARTToolStripMenuItem;
-        private ToolStripMenuItem saidaDoRoteiroMotoristaToolStripMenuItem;
+        private ToolStripMenuItem msInserir;
+        private ToolStripMenuItem msFerramentas;
+        private ToolStripMenuItem msNotaFiscal;
+        private ToolStripMenuItem msArt;
+        private ToolStripMenuItem msRoteiro;
         private Panel panel1;
-        private CheckBox checkBox4;
-        private CheckBox checkBox3;
-        private CheckBox checkBox2;
-        private CheckBox checkBox1;
-        private RadioButton radioButton10;
-        private RadioButton radioButton9;
-        private RadioButton radioButton8;
-        private RadioButton radioButton7;
-        private RadioButton radioButton6;
-        private RadioButton radioButton5;
-        private RadioButton radioButton4;
-        private RadioButton radioButton3;
-        private RadioButton radioButton2;
+        private CheckBox cbCancelado;
+        private CheckBox cbFinalizado;
+        private CheckBox cbPendente;
+        private CheckBox cbImediato;
+        private RadioButton rbEndereco;
+        private RadioButton rbMaterial;
+        private RadioButton rbEng;
+        private RadioButton rbNotaFiscal;
+        private RadioButton rbCliente;
+        private RadioButton rbPedidoVenda;
+        private RadioButton rbProposta;
+        private RadioButton rbPedidoRb;
         private RadioButton rbFabrica;
-        private TextBox textBox1;
-        private Button button2;
-        private Button button1;
+        private TextBox txtPesquisar;
+        private Button btnLimparPesquisa;
+        private Button btnPesquisar;
         private TabControl tabControl1;
         private TabPage tabPage1;
         private TabPage tabPage2;
@@ -600,8 +584,8 @@
         private Label label2;
         private Label label3;
         private Label label1;
-        private DataGridView dataGridView1;
-        private DataGridView dataGridView2;
+        private DataGridView dgvPrincipal;
+        private DataGridView dgvFerramenta;
         private PictureBox pictureBox1;
     }
 }
