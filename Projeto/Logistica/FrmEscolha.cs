@@ -16,13 +16,7 @@ namespace Projeto
 
         private void FrmEscolha_Load(object sender, EventArgs e)
         {
-            BloquearBotao(true);
-        }
-
-        private void BloquearBotao(bool habilitar)
-        {
-            cbSelecionar.Enabled = habilitar;
-            btnEntrar.Enabled = habilitar;
+   
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
