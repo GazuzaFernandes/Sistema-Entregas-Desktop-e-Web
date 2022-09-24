@@ -10,6 +10,7 @@ namespace Projeto
     public partial class FrmEscolha : Form
     {
         static public string pesquisa;
+
         public FrmEscolha()
         {
             InitializeComponent();
@@ -83,7 +84,7 @@ namespace Projeto
                 if (progressBar1.Value == 10)
                 {
                     timer1.Stop();
-                    lblMessageLoad.Text = "Pegando informações...";
+                    lblMessageLoad.Text = "Obtendo informações...";
                     timer1.Start();
                 }
 
