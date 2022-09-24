@@ -8,7 +8,8 @@ using Logistica.Sistema_dos_Engenheiros;
 namespace Projeto
 {
     public partial class FrmEscolha : Form
-    { static public string pesquisa;
+    {
+        static public string pesquisa;
         public FrmEscolha()
         {
             InitializeComponent();
@@ -16,18 +17,18 @@ namespace Projeto
 
         private void FrmEscolha_Load(object sender, EventArgs e)
         {
-            BloquearBotao(true); 
+            BloquearBotao(false);
         }
 
         private void BloquearBotao(bool habilitar)
         {
             cbSelecionar.Enabled = habilitar;
             btnEntrar.Enabled = habilitar;
-        }      
+        }
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            switch(pesquisa = cbSelecionar.Text)
+            switch (pesquisa = cbSelecionar.Text)
             {
                 case "Amostra":
                     {
@@ -60,7 +61,7 @@ namespace Projeto
                 case "Orçamento":
                     {
                         FrmOrcamentoPrincipal orc = new FrmOrcamentoPrincipal();
-                            orc.Show();
+                        orc.Show();
                     }
                     break;
                 case "Sergio":
@@ -73,8 +74,80 @@ namespace Projeto
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer1_Tick_1(object sender, EventArgs e)
         {
+            try
+            {
+                progressBar1.Increment(1);
+
+                if (progressBar1.Value == 10)
+                {
+                    timer1.Stop();
+                    lblMessageLoad.Text = "Pegando informações...";
+                    timer1.Start();
+                }
+
+                if (progressBar1.Value == 25)
+                {
+                    timer1.Stop();
+                    lblMessageLoad.Text = "Validando serviços...";
+                    Application.DoEvents();
+                    timer1.Start();
+                }
+
+                if (progressBar1.Value == 40)
+                {
+                    timer1.Stop();
+
+                    lblMessageLoad.Text = "Validando banco de dados...";
+                    Application.DoEvents();
+                    timer1.Start();
+                }
+
+                if (progressBar1.Value == 55)
+                {
+                    timer1.Stop();
+
+                    lblMessageLoad.Text = "Validando a licença do sistema...";
+                    Application.DoEvents();
+                    timer1.Start();
+                }
+
+                if (progressBar1.Value == 65)
+                {
+                    timer1.Stop();
+
+                    lblMessageLoad.Text = "Validando permissões...";
+                    Application.DoEvents();
+                    Thread.Sleep(1500);
+
+                    timer1.Start();
+                }
+
+                if (progressBar1.Value == 75)
+                {
+                    timer1.Stop();
+                    lblMessageLoad.Text = "Carregando Tabelas...";
+
+                    for (int i = 90; i < 99; i++)
+                        progressBar1.Value = i;
+                    timer1.Start();
+                }
+
+                if (progressBar1.Value == 100)
+                {
+                    lblMessageLoad.Text = "Sistema liberado para uso...";
+                    Application.DoEvents();
+
+                    timer1.Stop();
+                    BloquearBotao(true);
+                }
+            }
+            catch (Exception ex)
+            {
+                timer1.Stop();
+                Application.Exit();
+            }
 
         }
     }
