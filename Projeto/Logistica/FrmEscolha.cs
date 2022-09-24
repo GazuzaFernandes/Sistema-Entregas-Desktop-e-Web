@@ -72,5 +72,10 @@ namespace Projeto
             }
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }
