@@ -16,5 +16,10 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             InitializeComponent();
         }
+
+        private void FrmProposta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

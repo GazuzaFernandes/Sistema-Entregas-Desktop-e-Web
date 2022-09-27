@@ -16,5 +16,10 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             InitializeComponent();
         }
+
+        private void tabPage6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

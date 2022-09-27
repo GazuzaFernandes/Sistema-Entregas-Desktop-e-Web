@@ -9,8 +9,6 @@ namespace Projeto
 {
     public partial class FrmEscolha : Form
     {
-        static public string pesquisa;
-
         public FrmEscolha()
         {
             InitializeComponent();
@@ -29,7 +27,7 @@ namespace Projeto
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            switch (pesquisa = cbSelecionar.Text)
+            switch (cbSelecionar.Text)
             {
                 case "Amostra":
                     {
@@ -150,6 +148,26 @@ namespace Projeto
                 Application.Exit();
             }
 
+        }
+
+        private void FrmEscolha_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            try
+            {
+                /*  FunctionsDataBase.BackupDatabase(
+                                                    "IP DA MAQUINA",
+                                                    "5432",
+                                                    "postgres",
+                                                    "q1s2e3f4t5",
+                                                    "PASTA",
+                                                    caminho de onde vai ser salvo
+                                                 $@"F:\_LOGISTICA\Restauração\SistemaControle\{DateTime.Now.ToShortDateString().Replace(":", "").Replace("/", "_").Replace(" ", "")}\",
+                                                    @"SistemaControle"); */
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
         }
     }
 }

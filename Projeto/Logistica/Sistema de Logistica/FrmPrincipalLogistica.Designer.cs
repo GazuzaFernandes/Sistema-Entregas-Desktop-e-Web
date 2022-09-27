@@ -1,4 +1,4 @@
-﻿namespace Logistica.Sistema_de_Logistica
+namespace Logistica.Sistema_de_Logistica
 {
     partial class FrmPrincipalLogistica
     {
@@ -438,7 +438,7 @@
             this.rbEndereco.AutoSize = true;
             this.rbEndereco.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbEndereco.ForeColor = System.Drawing.Color.White;
-            this.rbEndereco.Location = new System.Drawing.Point(719, 106);
+            this.rbEndereco.Location = new System.Drawing.Point(694, 107);
             this.rbEndereco.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbEndereco.Name = "rbEndereco";
             this.rbEndereco.Size = new System.Drawing.Size(133, 35);
@@ -480,7 +480,7 @@
             this.rbNotaFiscal.AutoSize = true;
             this.rbNotaFiscal.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbNotaFiscal.ForeColor = System.Drawing.Color.White;
-            this.rbNotaFiscal.Location = new System.Drawing.Point(503, 106);
+            this.rbNotaFiscal.Location = new System.Drawing.Point(502, 107);
             this.rbNotaFiscal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbNotaFiscal.Name = "rbNotaFiscal";
             this.rbNotaFiscal.Size = new System.Drawing.Size(153, 35);
@@ -508,7 +508,7 @@
             this.rbPedidoVenda.AutoSize = true;
             this.rbPedidoVenda.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbPedidoVenda.ForeColor = System.Drawing.Color.White;
-            this.rbPedidoVenda.Location = new System.Drawing.Point(353, 106);
+            this.rbPedidoVenda.Location = new System.Drawing.Point(352, 107);
             this.rbPedidoVenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbPedidoVenda.Name = "rbPedidoVenda";
             this.rbPedidoVenda.Size = new System.Drawing.Size(134, 35);
@@ -536,7 +536,7 @@
             this.rbPedidoRb.AutoSize = true;
             this.rbPedidoRb.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbPedidoRb.ForeColor = System.Drawing.Color.White;
-            this.rbPedidoRb.Location = new System.Drawing.Point(203, 106);
+            this.rbPedidoRb.Location = new System.Drawing.Point(202, 107);
             this.rbPedidoRb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbPedidoRb.Name = "rbPedidoRb";
             this.rbPedidoRb.Size = new System.Drawing.Size(144, 35);

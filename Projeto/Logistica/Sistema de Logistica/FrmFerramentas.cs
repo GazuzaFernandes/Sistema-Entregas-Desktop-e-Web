@@ -16,5 +16,25 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             InitializeComponent();
         }
+
+        private void FrmFerramentas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvFerramentas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
