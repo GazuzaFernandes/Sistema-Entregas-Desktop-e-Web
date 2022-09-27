@@ -438,7 +438,7 @@
             this.rbEndereco.AutoSize = true;
             this.rbEndereco.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbEndereco.ForeColor = System.Drawing.Color.White;
-            this.rbEndereco.Location = new System.Drawing.Point(728, 109);
+            this.rbEndereco.Location = new System.Drawing.Point(826, 102);
             this.rbEndereco.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbEndereco.Name = "rbEndereco";
             this.rbEndereco.Size = new System.Drawing.Size(133, 35);

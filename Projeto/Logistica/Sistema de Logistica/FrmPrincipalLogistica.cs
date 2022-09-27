@@ -548,7 +548,7 @@ namespace Logistica.Sistema_de_Logistica
         #region Apenas Botões
         private void btnLimparCalculos_Click(object sender, EventArgs e)
         {
-
+          //teste
         }
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
