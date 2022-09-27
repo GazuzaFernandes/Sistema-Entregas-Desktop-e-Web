@@ -1282,7 +1282,7 @@
             this.label22.ForeColor = System.Drawing.Color.White;
             this.label22.Location = new System.Drawing.Point(172, 458);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(27, 32);
+            this.label22.Size = new System.Drawing.Size(23, 25);
             this.label22.TabIndex = 75;
             this.label22.Text = "x";
             // 
@@ -1293,7 +1293,7 @@
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(167, 315);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(27, 32);
+            this.label15.Size = new System.Drawing.Size(23, 25);
             this.label15.TabIndex = 75;
             this.label15.Text = "x";
             // 
@@ -1370,7 +1370,7 @@
             this.label27.ForeColor = System.Drawing.Color.White;
             this.label27.Location = new System.Drawing.Point(74, 423);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(116, 32);
+            this.label27.Size = new System.Drawing.Size(90, 25);
             this.label27.TabIndex = 70;
             this.label27.Text = "Total m²:";
             // 
@@ -1381,7 +1381,7 @@
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(183, 287);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(109, 32);
+            this.label14.Size = new System.Drawing.Size(87, 25);
             this.label14.TabIndex = 70;
             this.label14.Text = "Largura:";
             // 
