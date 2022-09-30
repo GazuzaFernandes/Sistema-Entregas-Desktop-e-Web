@@ -50,23 +50,25 @@
             this.txtObra = new System.Windows.Forms.TextBox();
             this.txtProposta = new System.Windows.Forms.TextBox();
             this.txtPdVenda = new System.Windows.Forms.TextBox();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
+            this.txtEngResponsavel = new System.Windows.Forms.TextBox();
             this.txtPdRb = new System.Windows.Forms.TextBox();
-            this.txtFabrica = new System.Windows.Forms.TextBox();
+            this.txtEmpresa = new System.Windows.Forms.TextBox();
             this.txtCodigoCliente = new System.Windows.Forms.TextBox();
             this.btnPesquisarCliente = new System.Windows.Forms.Button();
             this.txtCodigoFabrica = new System.Windows.Forms.TextBox();
             this.btnPesquisaFabrica = new System.Windows.Forms.Button();
-            this.dtpEntrega = new System.Windows.Forms.DateTimePicker();
-            this.dtpPrevisao = new System.Windows.Forms.DateTimePicker();
-            this.dtpComentario = new System.Windows.Forms.DateTimePicker();
-            this.dtpPedido = new System.Windows.Forms.DateTimePicker();
+            this.dtpDataEntrega = new System.Windows.Forms.DateTimePicker();
+            this.dtpDataPrevista = new System.Windows.Forms.DateTimePicker();
+            this.dtpHistorico = new System.Windows.Forms.DateTimePicker();
+            this.dtpDataPedido = new System.Windows.Forms.DateTimePicker();
             this.label20 = new System.Windows.Forms.Label();
             this.btnGerarId = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCustoMaterial = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.txtGerarId = new System.Windows.Forms.TextBox();
+            this.txtPropostId = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -74,7 +76,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -140,7 +144,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1433, 733);
+            this.tabControl1.Size = new System.Drawing.Size(1445, 785);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -164,23 +168,25 @@
             this.tabPage1.Controls.Add(this.txtObra);
             this.tabPage1.Controls.Add(this.txtProposta);
             this.tabPage1.Controls.Add(this.txtPdVenda);
+            this.tabPage1.Controls.Add(this.txtTelefone);
+            this.tabPage1.Controls.Add(this.txtEngResponsavel);
             this.tabPage1.Controls.Add(this.txtPdRb);
-            this.tabPage1.Controls.Add(this.txtFabrica);
+            this.tabPage1.Controls.Add(this.txtEmpresa);
             this.tabPage1.Controls.Add(this.txtCodigoCliente);
             this.tabPage1.Controls.Add(this.btnPesquisarCliente);
             this.tabPage1.Controls.Add(this.txtCodigoFabrica);
             this.tabPage1.Controls.Add(this.btnPesquisaFabrica);
-            this.tabPage1.Controls.Add(this.dtpEntrega);
-            this.tabPage1.Controls.Add(this.dtpPrevisao);
-            this.tabPage1.Controls.Add(this.dtpComentario);
-            this.tabPage1.Controls.Add(this.dtpPedido);
+            this.tabPage1.Controls.Add(this.dtpDataEntrega);
+            this.tabPage1.Controls.Add(this.dtpDataPrevista);
+            this.tabPage1.Controls.Add(this.dtpHistorico);
+            this.tabPage1.Controls.Add(this.dtpDataPedido);
             this.tabPage1.Controls.Add(this.label20);
             this.tabPage1.Controls.Add(this.btnGerarId);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.txtCustoMaterial);
             this.tabPage1.Controls.Add(this.label16);
             this.tabPage1.Controls.Add(this.label19);
-            this.tabPage1.Controls.Add(this.txtGerarId);
+            this.tabPage1.Controls.Add(this.txtPropostId);
             this.tabPage1.Controls.Add(this.label18);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label17);
@@ -188,7 +194,9 @@
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.label29);
             this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.label28);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.label8);
@@ -198,7 +206,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 40);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1425, 689);
+            this.tabPage1.Size = new System.Drawing.Size(1437, 741);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dados da Proposta";
             // 
@@ -207,7 +215,7 @@
             this.btnImprimir.ForeColor = System.Drawing.Color.Red;
             this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(883, 561);
+            this.btnImprimir.Location = new System.Drawing.Point(875, 632);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(159, 75);
             this.btnImprimir.TabIndex = 15;
@@ -221,7 +229,7 @@
             this.btnDeletarProposta.ForeColor = System.Drawing.Color.Red;
             this.btnDeletarProposta.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletarProposta.Image")));
             this.btnDeletarProposta.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDeletarProposta.Location = new System.Drawing.Point(1080, 561);
+            this.btnDeletarProposta.Location = new System.Drawing.Point(1072, 632);
             this.btnDeletarProposta.Name = "btnDeletarProposta";
             this.btnDeletarProposta.Size = new System.Drawing.Size(159, 75);
             this.btnDeletarProposta.TabIndex = 15;
@@ -235,7 +243,7 @@
             this.btnSalvarProposta.ForeColor = System.Drawing.Color.Red;
             this.btnSalvarProposta.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarProposta.Image")));
             this.btnSalvarProposta.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSalvarProposta.Location = new System.Drawing.Point(883, 452);
+            this.btnSalvarProposta.Location = new System.Drawing.Point(875, 523);
             this.btnSalvarProposta.Name = "btnSalvarProposta";
             this.btnSalvarProposta.Size = new System.Drawing.Size(159, 75);
             this.btnSalvarProposta.TabIndex = 15;
@@ -246,7 +254,7 @@
             // 
             // rtbComentario
             // 
-            this.rtbComentario.Location = new System.Drawing.Point(31, 452);
+            this.rtbComentario.Location = new System.Drawing.Point(23, 523);
             this.rtbComentario.Name = "rtbComentario";
             this.rtbComentario.Size = new System.Drawing.Size(834, 118);
             this.rtbComentario.TabIndex = 14;
@@ -258,7 +266,7 @@
             this.rbCancelado.AutoSize = true;
             this.rbCancelado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbCancelado.ForeColor = System.Drawing.Color.Red;
-            this.rbCancelado.Location = new System.Drawing.Point(1118, 307);
+            this.rbCancelado.Location = new System.Drawing.Point(1071, 372);
             this.rbCancelado.Name = "rbCancelado";
             this.rbCancelado.Size = new System.Drawing.Size(172, 42);
             this.rbCancelado.TabIndex = 13;
@@ -271,7 +279,7 @@
             this.rbFinalizado.AutoSize = true;
             this.rbFinalizado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbFinalizado.ForeColor = System.Drawing.Color.Lime;
-            this.rbFinalizado.Location = new System.Drawing.Point(822, 307);
+            this.rbFinalizado.Location = new System.Drawing.Point(775, 372);
             this.rbFinalizado.Name = "rbFinalizado";
             this.rbFinalizado.Size = new System.Drawing.Size(171, 42);
             this.rbFinalizado.TabIndex = 13;
@@ -284,7 +292,7 @@
             this.rbImediato.AutoSize = true;
             this.rbImediato.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbImediato.ForeColor = System.Drawing.Color.Blue;
-            this.rbImediato.Location = new System.Drawing.Point(202, 307);
+            this.rbImediato.Location = new System.Drawing.Point(155, 372);
             this.rbImediato.Name = "rbImediato";
             this.rbImediato.Size = new System.Drawing.Size(156, 42);
             this.rbImediato.TabIndex = 13;
@@ -297,7 +305,7 @@
             this.rbPendente.AutoSize = true;
             this.rbPendente.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbPendente.ForeColor = System.Drawing.Color.Yellow;
-            this.rbPendente.Location = new System.Drawing.Point(488, 307);
+            this.rbPendente.Location = new System.Drawing.Point(441, 372);
             this.rbPendente.Name = "rbPendente";
             this.rbPendente.Size = new System.Drawing.Size(161, 42);
             this.rbPendente.TabIndex = 13;
@@ -308,7 +316,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1259, 452);
+            this.pictureBox1.Location = new System.Drawing.Point(1251, 523);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(158, 184);
@@ -335,7 +343,7 @@
             this.txtCarreto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtCarreto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCarreto.ForeColor = System.Drawing.Color.Red;
-            this.txtCarreto.Location = new System.Drawing.Point(31, 619);
+            this.txtCarreto.Location = new System.Drawing.Point(23, 690);
             this.txtCarreto.Name = "txtCarreto";
             this.txtCarreto.Size = new System.Drawing.Size(164, 38);
             this.txtCarreto.TabIndex = 10;
@@ -345,7 +353,7 @@
             this.txtNotaFiscal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtNotaFiscal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNotaFiscal.ForeColor = System.Drawing.Color.Red;
-            this.txtNotaFiscal.Location = new System.Drawing.Point(231, 619);
+            this.txtNotaFiscal.Location = new System.Drawing.Point(223, 690);
             this.txtNotaFiscal.Name = "txtNotaFiscal";
             this.txtNotaFiscal.Size = new System.Drawing.Size(164, 38);
             this.txtNotaFiscal.TabIndex = 10;
@@ -355,7 +363,7 @@
             this.txtRecebido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtRecebido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRecebido.ForeColor = System.Drawing.Color.Red;
-            this.txtRecebido.Location = new System.Drawing.Point(443, 619);
+            this.txtRecebido.Location = new System.Drawing.Point(435, 690);
             this.txtRecebido.Name = "txtRecebido";
             this.txtRecebido.Size = new System.Drawing.Size(164, 38);
             this.txtRecebido.TabIndex = 10;
@@ -372,7 +380,7 @@
             // 
             this.txtCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCliente.Enabled = false;
-            this.txtCliente.Location = new System.Drawing.Point(735, 183);
+            this.txtCliente.Location = new System.Drawing.Point(738, 235);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(534, 38);
             this.txtCliente.TabIndex = 10;
@@ -380,7 +388,7 @@
             // txtObra
             // 
             this.txtObra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtObra.Location = new System.Drawing.Point(461, 252);
+            this.txtObra.Location = new System.Drawing.Point(464, 304);
             this.txtObra.Name = "txtObra";
             this.txtObra.Size = new System.Drawing.Size(852, 38);
             this.txtObra.TabIndex = 10;
@@ -388,7 +396,7 @@
             // txtProposta
             // 
             this.txtProposta.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtProposta.Location = new System.Drawing.Point(155, 252);
+            this.txtProposta.Location = new System.Drawing.Point(158, 304);
             this.txtProposta.Name = "txtProposta";
             this.txtProposta.Size = new System.Drawing.Size(191, 38);
             this.txtProposta.TabIndex = 10;
@@ -396,33 +404,49 @@
             // txtPdVenda
             // 
             this.txtPdVenda.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtPdVenda.Location = new System.Drawing.Point(408, 183);
+            this.txtPdVenda.Location = new System.Drawing.Point(411, 235);
             this.txtPdVenda.Name = "txtPdVenda";
             this.txtPdVenda.Size = new System.Drawing.Size(116, 38);
             this.txtPdVenda.TabIndex = 10;
             // 
+            // txtTelefone
+            // 
+            this.txtTelefone.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtTelefone.Location = new System.Drawing.Point(687, 163);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(301, 38);
+            this.txtTelefone.TabIndex = 10;
+            // 
+            // txtEngResponsavel
+            // 
+            this.txtEngResponsavel.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtEngResponsavel.Location = new System.Drawing.Point(194, 163);
+            this.txtEngResponsavel.Name = "txtEngResponsavel";
+            this.txtEngResponsavel.Size = new System.Drawing.Size(370, 38);
+            this.txtEngResponsavel.TabIndex = 10;
+            // 
             // txtPdRb
             // 
             this.txtPdRb.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtPdRb.Location = new System.Drawing.Point(122, 183);
+            this.txtPdRb.Location = new System.Drawing.Point(125, 235);
             this.txtPdRb.Name = "txtPdRb";
             this.txtPdRb.Size = new System.Drawing.Size(128, 38);
             this.txtPdRb.TabIndex = 10;
             // 
-            // txtFabrica
+            // txtEmpresa
             // 
-            this.txtFabrica.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtFabrica.Enabled = false;
-            this.txtFabrica.Location = new System.Drawing.Point(202, 100);
-            this.txtFabrica.Name = "txtFabrica";
-            this.txtFabrica.Size = new System.Drawing.Size(263, 38);
-            this.txtFabrica.TabIndex = 10;
+            this.txtEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtEmpresa.Enabled = false;
+            this.txtEmpresa.Location = new System.Drawing.Point(202, 100);
+            this.txtEmpresa.Name = "txtEmpresa";
+            this.txtEmpresa.Size = new System.Drawing.Size(263, 38);
+            this.txtEmpresa.TabIndex = 10;
             // 
             // txtCodigoCliente
             // 
             this.txtCodigoCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtCodigoCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCodigoCliente.Location = new System.Drawing.Point(655, 183);
+            this.txtCodigoCliente.Location = new System.Drawing.Point(658, 235);
             this.txtCodigoCliente.Name = "txtCodigoCliente";
             this.txtCodigoCliente.Size = new System.Drawing.Size(62, 38);
             this.txtCodigoCliente.TabIndex = 10;
@@ -431,7 +455,7 @@
             // btnPesquisarCliente
             // 
             this.btnPesquisarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisarCliente.Image")));
-            this.btnPesquisarCliente.Location = new System.Drawing.Point(1275, 183);
+            this.btnPesquisarCliente.Location = new System.Drawing.Point(1278, 235);
             this.btnPesquisarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPesquisarCliente.Name = "btnPesquisarCliente";
             this.btnPesquisarCliente.Size = new System.Drawing.Size(38, 38);
@@ -460,47 +484,48 @@
             this.btnPesquisaFabrica.UseVisualStyleBackColor = true;
             this.btnPesquisaFabrica.Click += new System.EventHandler(this.btnPesquisaFabrica_Click);
             // 
-            // dtpEntrega
+            // dtpDataEntrega
             // 
-            this.dtpEntrega.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dtpEntrega.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEntrega.Location = new System.Drawing.Point(659, 621);
-            this.dtpEntrega.Name = "dtpEntrega";
-            this.dtpEntrega.Size = new System.Drawing.Size(148, 34);
-            this.dtpEntrega.TabIndex = 3;
+            this.dtpDataEntrega.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dtpDataEntrega.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDataEntrega.Location = new System.Drawing.Point(651, 692);
+            this.dtpDataEntrega.Name = "dtpDataEntrega";
+            this.dtpDataEntrega.Size = new System.Drawing.Size(148, 34);
+            this.dtpDataEntrega.TabIndex = 3;
             // 
-            // dtpPrevisao
+            // dtpDataPrevista
             // 
-            this.dtpPrevisao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dtpPrevisao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpPrevisao.Location = new System.Drawing.Point(655, 28);
-            this.dtpPrevisao.Name = "dtpPrevisao";
-            this.dtpPrevisao.Size = new System.Drawing.Size(148, 34);
-            this.dtpPrevisao.TabIndex = 3;
+            this.dtpDataPrevista.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dtpDataPrevista.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDataPrevista.Location = new System.Drawing.Point(655, 28);
+            this.dtpDataPrevista.Name = "dtpDataPrevista";
+            this.dtpDataPrevista.Size = new System.Drawing.Size(148, 34);
+            this.dtpDataPrevista.TabIndex = 3;
             // 
-            // dtpComentario
+            // dtpHistorico
             // 
-            this.dtpComentario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dtpComentario.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpComentario.Location = new System.Drawing.Point(415, 406);
-            this.dtpComentario.Name = "dtpComentario";
-            this.dtpComentario.Size = new System.Drawing.Size(148, 34);
-            this.dtpComentario.TabIndex = 3;
+            this.dtpHistorico.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dtpHistorico.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHistorico.Location = new System.Drawing.Point(407, 477);
+            this.dtpHistorico.Name = "dtpHistorico";
+            this.dtpHistorico.Size = new System.Drawing.Size(148, 34);
+            this.dtpHistorico.TabIndex = 3;
             // 
-            // dtpPedido
+            // dtpDataPedido
             // 
-            this.dtpPedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dtpPedido.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpPedido.Location = new System.Drawing.Point(376, 28);
-            this.dtpPedido.Name = "dtpPedido";
-            this.dtpPedido.Size = new System.Drawing.Size(148, 34);
-            this.dtpPedido.TabIndex = 3;
+            this.dtpDataPedido.AccessibleDescription = "";
+            this.dtpDataPedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dtpDataPedido.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDataPedido.Location = new System.Drawing.Point(376, 28);
+            this.dtpDataPedido.Name = "dtpDataPedido";
+            this.dtpDataPedido.Size = new System.Drawing.Size(148, 34);
+            this.dtpDataPedido.TabIndex = 3;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(659, 578);
+            this.label20.Location = new System.Drawing.Point(651, 649);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(102, 31);
             this.label20.TabIndex = 0;
@@ -541,7 +566,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(23, 406);
+            this.label16.Location = new System.Drawing.Point(15, 477);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(386, 31);
             this.label16.TabIndex = 0;
@@ -551,26 +576,26 @@
             // 
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(34, 578);
+            this.label19.Location = new System.Drawing.Point(26, 649);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(126, 31);
             this.label19.TabIndex = 0;
             this.label19.Text = "Motorista:";
             // 
-            // txtGerarId
+            // txtPropostId
             // 
-            this.txtGerarId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtGerarId.Enabled = false;
-            this.txtGerarId.Location = new System.Drawing.Point(31, 26);
-            this.txtGerarId.Name = "txtGerarId";
-            this.txtGerarId.Size = new System.Drawing.Size(97, 38);
-            this.txtGerarId.TabIndex = 1;
+            this.txtPropostId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtPropostId.Enabled = false;
+            this.txtPropostId.Location = new System.Drawing.Point(31, 26);
+            this.txtPropostId.Name = "txtPropostId";
+            this.txtPropostId.Size = new System.Drawing.Size(97, 38);
+            this.txtPropostId.TabIndex = 1;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(232, 578);
+            this.label18.Location = new System.Drawing.Point(224, 649);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(138, 31);
             this.label18.TabIndex = 0;
@@ -590,7 +615,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(445, 578);
+            this.label17.Location = new System.Drawing.Point(437, 649);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(118, 31);
             this.label17.TabIndex = 0;
@@ -621,7 +646,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(488, 352);
+            this.label13.Location = new System.Drawing.Point(441, 417);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(231, 31);
             this.label13.TabIndex = 0;
@@ -632,27 +657,47 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(202, 352);
+            this.label12.Location = new System.Drawing.Point(155, 417);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(150, 31);
             this.label12.TabIndex = 0;
             this.label12.Text = "Em São Paulo.";
             // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.ForeColor = System.Drawing.Color.White;
+            this.label29.Location = new System.Drawing.Point(570, 167);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(111, 31);
+            this.label29.TabIndex = 0;
+            this.label29.Text = "Telefone:";
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(383, 256);
+            this.label11.Location = new System.Drawing.Point(386, 308);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(72, 31);
             this.label11.TabIndex = 0;
             this.label11.Text = "Obra:";
             // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.ForeColor = System.Drawing.Color.White;
+            this.label28.Location = new System.Drawing.Point(37, 167);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(151, 31);
+            this.label28.TabIndex = 0;
+            this.label28.Text = "Responsavel:";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(23, 256);
+            this.label10.Location = new System.Drawing.Point(26, 308);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(116, 31);
             this.label10.TabIndex = 0;
@@ -662,7 +707,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(34, 187);
+            this.label9.Location = new System.Drawing.Point(37, 239);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(82, 31);
             this.label9.TabIndex = 0;
@@ -672,7 +717,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(283, 187);
+            this.label8.Location = new System.Drawing.Point(286, 239);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(119, 31);
             this.label8.TabIndex = 0;
@@ -682,7 +727,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(554, 187);
+            this.label7.Location = new System.Drawing.Point(557, 239);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 31);
             this.label7.TabIndex = 0;
@@ -739,7 +784,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 40);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1425, 689);
+            this.tabPage2.Size = new System.Drawing.Size(1437, 741);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Itens da Propsota";
             // 
@@ -988,9 +1033,9 @@
             // 
             this.panel1.Controls.Add(this.dgvitensProposta);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(3, 413);
+            this.panel1.Location = new System.Drawing.Point(3, 465);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1419, 273);
+            this.panel1.Size = new System.Drawing.Size(1431, 273);
             this.panel1.TabIndex = 0;
             // 
             // dgvitensProposta
@@ -1006,7 +1051,7 @@
             this.dgvitensProposta.RowHeadersWidth = 51;
             this.dgvitensProposta.RowTemplate.Height = 29;
             this.dgvitensProposta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvitensProposta.Size = new System.Drawing.Size(1419, 273);
+            this.dgvitensProposta.Size = new System.Drawing.Size(1431, 273);
             this.dgvitensProposta.TabIndex = 0;
             this.dgvitensProposta.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvitensProposta_CellDoubleClick);
             // 
@@ -1020,7 +1065,7 @@
             this.tabPage3.Controls.Add(this.panel2);
             this.tabPage3.Location = new System.Drawing.Point(4, 40);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1425, 689);
+            this.tabPage3.Size = new System.Drawing.Size(1437, 741);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Historico da Proposta";
             // 
@@ -1073,9 +1118,9 @@
             // 
             this.panel2.Controls.Add(this.dgvHistorico);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 147);
+            this.panel2.Location = new System.Drawing.Point(0, 199);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1425, 542);
+            this.panel2.Size = new System.Drawing.Size(1437, 542);
             this.panel2.TabIndex = 1;
             // 
             // dgvHistorico
@@ -1091,7 +1136,7 @@
             this.dgvHistorico.RowHeadersWidth = 51;
             this.dgvHistorico.RowTemplate.Height = 29;
             this.dgvHistorico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistorico.Size = new System.Drawing.Size(1425, 542);
+            this.dgvHistorico.Size = new System.Drawing.Size(1437, 542);
             this.dgvHistorico.TabIndex = 0;
             this.dgvHistorico.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorico_CellDoubleClick);
             // 
@@ -1128,7 +1173,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1433, 733);
+            this.ClientSize = new System.Drawing.Size(1445, 785);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1162,17 +1207,17 @@
         private TabPage tabPage2;
         private TabPage tabPage3;
         private Button btnGerarId;
-        private TextBox txtGerarId;
+        private TextBox txtPropostId;
         private Label label1;
-        private DateTimePicker dtpPrevisao;
-        private DateTimePicker dtpPedido;
+        private DateTimePicker dtpDataPrevista;
+        private DateTimePicker dtpDataPedido;
         private Label label3;
         private Label label2;
         private TextBox txtCustoMaterial;
         private Label label4;
         private ComboBox cbEmpresaFaturar;
         private TextBox txtFormaPagamento;
-        private TextBox txtFabrica;
+        private TextBox txtEmpresa;
         private Button btnPesquisarCliente;
         private TextBox txtCodigoFabrica;
         private Button btnPesquisaFabrica;
@@ -1201,8 +1246,8 @@
         private TextBox txtCarreto;
         private TextBox txtNotaFiscal;
         private TextBox txtRecebido;
-        private DateTimePicker dtpEntrega;
-        private DateTimePicker dtpComentario;
+        private DateTimePicker dtpDataEntrega;
+        private DateTimePicker dtpHistorico;
         private Label label20;
         private Label label16;
         private Label label19;
@@ -1245,5 +1290,9 @@
         private ContextMenuStrip cmsSalvarConteudos;
         private ToolStripMenuItem mtSalvarProposta;
         private ToolStripMenuItem mtSalvarComentario;
+        private TextBox txtTelefone;
+        private TextBox txtEngResponsavel;
+        private Label label29;
+        private Label label28;
     }
 }

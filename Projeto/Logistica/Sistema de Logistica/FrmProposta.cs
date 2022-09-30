@@ -46,9 +46,9 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     #region Codigos
                     _proposta = new DLProposta().ConsultarPorId(_proposta.PropostaId);
                     txtPropostId.Text = _proposta.PropostaId.ToString();
-                    dtpDataPrevista.Value = _proposta.DataPrevista;
+                    dtpDataPedido.Value = _proposta.DataPrevista;
                     dtpDataPedido.Value = _proposta.DataPedido;
-                    txtFabrica.Text = _proposta.Fabrica;
+                    txtEmpresa.Text = _proposta.Fabrica;
                     txtFaturado.Text = _proposta.Faturado;
                     txtFormaPag.Text = _proposta.FormaPag;
                     txtEngResp.Text = _proposta.EngResp;
@@ -143,7 +143,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 {
                     _fabrica = new DLCadastrarEmpresa().ConsultarPorId(Convert.ToInt32(txtCodigoFabrica.Text));
                     txtCodigoFabrica.Text = _fabrica.EmpresaId.ToString();
-                    txtFabrica.Text = _fabrica.Empresa;
+                    txtEmpresa.Text = _fabrica.Empresa;
                 }
                 else if (ide == 1)
                 {
@@ -189,47 +189,47 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                #region Tabela Itens Proposta
-                ReportDataSource iP = new ReportDataSource();
-                List<ItensProposta> lst = new List<ItensProposta>();
-                lst.Clear();
-                for (int i = 0; i < Dgvmaterial.Rows.Count - 0; i++)
-                {
-                    lst.Add(new ItensProposta
-                    {
-                        ItenId = int.Parse(Dgvmaterial.Rows[i].Cells[0].Value.ToString()),
-                        Material = Dgvmaterial.Rows[i].Cells[1].Value.ToString(),
-                        UndMedida = Dgvmaterial.Rows[i].Cells[2].Value.ToString(),
-                        Quantidade = Convert.ToDecimal(Dgvmaterial.Rows[i].Cells[4].Value.ToString()),
-                        M2NotaFiscal = Convert.ToDecimal(Dgvmaterial.Rows[i].Cells[6].Value.ToString()),
-                    });
-                }
-                iP.Name = "DataSet";
-                iP.Value = lst;
-                #endregion
+                //#region Tabela Itens Proposta
+                //ReportDataSource iP = new ReportDataSource();
+                //List<ItensProposta> lst = new List<ItensProposta>();
+                //lst.Clear();
+                //for (int i = 0; i < Dgvmaterial.Rows.Count - 0; i++)
+                //{
+                //    lst.Add(new ItensProposta
+                //    {
+                //        ItenId = int.Parse(Dgvmaterial.Rows[i].Cells[0].Value.ToString()),
+                //        Material = Dgvmaterial.Rows[i].Cells[1].Value.ToString(),
+                //        UndMedida = Dgvmaterial.Rows[i].Cells[2].Value.ToString(),
+                //        Quantidade = Convert.ToDecimal(Dgvmaterial.Rows[i].Cells[4].Value.ToString()),
+                //        M2NotaFiscal = Convert.ToDecimal(Dgvmaterial.Rows[i].Cells[6].Value.ToString()),
+                //    });
+                //}
+                //iP.Name = "DataSet";
+                //iP.Value = lst;
+                //#endregion
 
-                #region Tabela Historico de Comentario
-                ReportDataSource hS = new ReportDataSource();
-                List<Historico> histo = new List<Historico>();
-                histo.Clear();
-                for (int i = 0; i < DgvHistorico.Rows.Count - 0; i++)
-                {
-                    histo.Add(new Historico
-                    {
-                        HistoricoId = int.Parse(DgvHistorico.Rows[i].Cells[0].Value.ToString()),
-                        Comentario = DgvHistorico.Rows[i].Cells[2].Value.ToString(),
-                        DataComentario = Convert.ToDateTime(DgvHistorico.Rows[i].Cells[1].Value.ToString()),
-                    });
-                }
-                hS.Name = "Historico";
-                hS.Value = histo;
-                #endregion
-                FrmImpressao frmImpressao = new FrmImpressao(dtpDataEntrega.Value, txtProposta.Text, txtEmpresa.Text, txtObra.Text, iP, txtNotaFiscal.Text, rtbComentario.Text, hS);
-                frmImpressao.reportViewer1.LocalReport.DataSources.Clear();
-                frmImpressao.reportViewer1.LocalReport.DataSources.Add(iP);
-                frmImpressao.reportViewer1.LocalReport.DataSources.Add(hS);
-                frmImpressao.reportViewer1.LocalReport.ReportEmbeddedResource = "Logistica.RelatorioPDF.rdlc";
-                frmImpressao.ShowDialog();
+                //#region Tabela Historico de Comentario
+                //ReportDataSource hS = new ReportDataSource();
+                //List<Historico> histo = new List<Historico>();
+                //histo.Clear();
+                //for (int i = 0; i < DgvHistorico.Rows.Count - 0; i++)
+                //{
+                //    histo.Add(new Historico
+                //    {
+                //        HistoricoId = int.Parse(DgvHistorico.Rows[i].Cells[0].Value.ToString()),
+                //        Comentario = DgvHistorico.Rows[i].Cells[2].Value.ToString(),
+                //        DataComentario = Convert.ToDateTime(DgvHistorico.Rows[i].Cells[1].Value.ToString()),
+                //    });
+                //}
+                //hS.Name = "Historico";
+                //hS.Value = histo;
+                //#endregion
+                //FrmImpressaoProposta frmImpressao = new FrmImpressaoProposta(dtpDataEntrega.Value, txtProposta.Text, txtEmpresa.Text, txtObra.Text, iP, txtNotaFiscal.Text, rtbComentario.Text, hS);
+                //frmImpressao.reportViewer1.LocalReport.DataSources.Clear();
+                //frmImpressao.reportViewer1.LocalReport.DataSources.Add(iP);
+                //frmImpressao.reportViewer1.LocalReport.DataSources.Add(hS);
+                //frmImpressao.reportViewer1.LocalReport.ReportEmbeddedResource = "Logistica.RelatorioPDF.rdlc";
+                //frmImpressao.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -286,13 +286,12 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     if (id > 0)
                     {
                         var pAtua = new DLProposta().ConsultarPorId(id);
-                        pAtua.DataPrevista = dtpDataPrevista.Value;
+                        pAtua.DataPrevista = dtpDataPedido.Value;
                         pAtua.DataPedido = dtpDataPedido.Value;
-                        pAtua.Fabrica = txtFabrica.Text;
-                        pAtua.Faturado = txtFaturado.Text;
-                        pAtua.FormaPag = txtFormaPag.Text;
-                        pAtua.EngResp = txtEngResp.Text;
-                        pAtua.Telefone = Utils.FormatarCelular(txtTelefone.Text);
+                        pAtua.Fabrica = txtEmpresa.Text;                       
+                        pAtua.FormaPag = txtFormaPagamento.Text;
+                        pAtua.EngResp = txtEngResponsavel.Text;
+                        pAtua.Telefone = txtTelefone.Text;
                         pAtua.PdRb = txtPdRb.Text;
                         pAtua.PdVenda = txtPdVenda.Text;
                         pAtua.Propostaa = txtProposta.Text;
@@ -302,7 +301,30 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                         pAtua.RecebidoPor = txtRecebido.Text;
                         pAtua.NotaFiscal = txtNotaFiscal.Text;
                         pAtua.Carreto = txtCarreto.Text;
-                        pAtua.Material = rtbmaterial.Text;
+                        pAtua.Material = rtbMaterial.Text;
+                        switch (cbEmpresaFaturar.Text)
+                        {
+                            case "Rb Comercio":
+                                {
+                                    cbEmpresaFaturar.Sorted = true;
+                                }
+                                break;
+                            case "Rb Engenharia":
+                                {
+                                    cbEmpresaFaturar.Sorted = true;
+                                }
+                                break;
+                            case "Rb Pisos":
+                                {
+                                    cbEmpresaFaturar.Sorted = true;
+                                }
+                                break;
+                            case "Nome do Cliente":
+                                {
+                                    cbEmpresaFaturar.Sorted = true;
+                                }
+                                break;
+                        }
                         if (rbImediato.Checked == true)
                             pAtua.StatusobraId = 1;
                         else if (rbPendente.Checked == true)
@@ -688,7 +710,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             txtCodigoFaturado.Enabled = Habilitar;
             txtCodigoCliente.Enabled = Habilitar;
             txtCodigoMaterial.Enabled = Habilitar;
-            dtpDataPrevista.Enabled = Habilitar;
+            dtpDataPedido.Enabled = Habilitar;
             rtbmaterial.Enabled = Habilitar;
             btnSalvarComentario.Enabled = Habilitar;
             btnImpressao.Enabled = Habilitar;
@@ -733,7 +755,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     case 1:
                         {
                             txtCodigoFabrica.Text = id.ToString();
-                            txtFabrica.Text = empresa;
+                            txtEmpresa.Text = empresa;
                         }
                         break;
                     case 2:
@@ -759,9 +781,9 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         }
         private void LimparDadosProposta()
         {
-            dtpDataPrevista.Value = DateTime.Now;
             dtpDataPedido.Value = DateTime.Now;
-            txtFabrica.Text = Convert.ToString(null);
+            dtpDataPedido.Value = DateTime.Now;
+            txtEmpresa.Text = Convert.ToString(null);
             txtFaturado.Text = Convert.ToString(null);
             txtFormaPag.Text = Convert.ToString(null); ;
             txtEngResp.Text = Convert.ToString(null);
