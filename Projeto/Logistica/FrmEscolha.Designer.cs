@@ -120,6 +120,7 @@
             this.Text = "Escolha o Sistema";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmEscolha_FormClosed);
             this.Load += new System.EventHandler(this.FrmEscolha_Load);
+            this.Click += new System.EventHandler(this.FrmEscolha_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

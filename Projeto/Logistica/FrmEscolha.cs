@@ -169,5 +169,10 @@ namespace Projeto
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
+
+        private void FrmEscolha_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }

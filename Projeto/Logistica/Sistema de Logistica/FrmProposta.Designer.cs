@@ -103,7 +103,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
-            this.txtIdMaterial = new System.Windows.Forms.TextBox();
+            this.txtItensPropostaId = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.txtCodigoItensMaterial = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -773,7 +773,7 @@
             this.tabPage2.Controls.Add(this.label24);
             this.tabPage2.Controls.Add(this.label23);
             this.tabPage2.Controls.Add(this.txtTotal);
-            this.tabPage2.Controls.Add(this.txtIdMaterial);
+            this.tabPage2.Controls.Add(this.txtItensPropostaId);
             this.tabPage2.Controls.Add(this.label22);
             this.tabPage2.Controls.Add(this.txtCodigoItensMaterial);
             this.tabPage2.Controls.Add(this.label21);
@@ -959,14 +959,14 @@
             this.txtTotal.Size = new System.Drawing.Size(182, 38);
             this.txtTotal.TabIndex = 14;
             // 
-            // txtIdMaterial
+            // txtItensPropostaId
             // 
-            this.txtIdMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtIdMaterial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtIdMaterial.Location = new System.Drawing.Point(1355, 369);
-            this.txtIdMaterial.Name = "txtIdMaterial";
-            this.txtIdMaterial.Size = new System.Drawing.Size(62, 38);
-            this.txtIdMaterial.TabIndex = 14;
+            this.txtItensPropostaId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtItensPropostaId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtItensPropostaId.Location = new System.Drawing.Point(1355, 369);
+            this.txtItensPropostaId.Name = "txtItensPropostaId";
+            this.txtItensPropostaId.Size = new System.Drawing.Size(62, 38);
+            this.txtItensPropostaId.TabIndex = 14;
             // 
             // label22
             // 
@@ -1272,7 +1272,7 @@
         private Label label24;
         private Label label23;
         private TextBox txtTotal;
-        private TextBox txtIdMaterial;
+        private TextBox txtItensPropostaId;
         private Label label22;
         private TextBox txtCodigoItensMaterial;
         private Label label21;

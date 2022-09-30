@@ -2,6 +2,7 @@
 using DALLogistica.Repository;
 using DALSenhas.Repository;
 using Logistica.Sistema_de_Logistica;
+using Projeto.Logistica.Sistema_do_Financeiro;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,10 +33,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         private void FrmProposta_Load(object sender, EventArgs e)
         {
             try
-            {
-                tabPage1.BackColor = Color.FromArgb(0, 64, 0);
-                tabPage2.BackColor = Color.FromArgb(0, 64, 0);
-                tabPage3.BackColor = Color.FromArgb(0, 64, 0);
+            {              
                 HabilitarCampos(false);
                 #region _proposta
                 if (_proposta == null)
@@ -101,7 +99,6 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }
-
         }
 
         #region Tela Dados da Proposta
@@ -471,11 +468,11 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 if (prop != null && prop.ItenId > 0)
                 {
                     prop.M2caixa = Convert.ToDecimal(txtQtdUndCaixa.Text);
-                    prop.M2NotaFiscal = Convert.ToDecimal(txtQuantidadeCaixas.Text);
+                    prop.qtdcaixal = Convert.ToDecimal(txtQtdCaixas.Text);
                     prop.Material = txtMaterial.Text;
                     prop.Preco = Convert.ToDecimal(txtPreco.Text);
                     prop.Quantidade = Convert.ToDecimal(txtQuantidade.Text);
-                    prop.ObsMaterial = rtbObsMaterial.Text;
+                    prop.ObsMaterial = rtbObservacao.Text;
                     prop.UndMedida = txtUndMedida.Text;
                     prop.Total = Convert.ToDecimal(txtTotal.Text);
                     new DLItensProposta().Atualizar(prop);
@@ -529,7 +526,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                var itensProposta = Dgvmaterial.Rows[e.RowIndex].DataBoundItem as ItensProposta;
+                var itensProposta = dgvitensProposta.Rows[e.RowIndex].DataBoundItem as ItensProposta;
                 if (itensProposta != null)
                 {
                     txtItensPropostaId.Text = itensProposta.ItenId.ToString();
@@ -538,8 +535,8 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     txtQtdUndCaixa.Text = Convert.ToString(itensProposta.M2caixa);
                     txtQuantidade.Text = Convert.ToString(itensProposta.Quantidade);
                     txtPreco.Text = Convert.ToString(itensProposta.Preco);
-                    txtQuantidadeCaixas.Text = Convert.ToString(itensProposta.M2NotaFiscal);
-                    rtbObsMaterial.Text = itensProposta.ObsMaterial;
+                    txtQtdCaixas.Text = Convert.ToString(itensProposta.qtdcaixal);
+                    rtbObservacao.Text = itensProposta.ObsMaterial;
                     txtTotal.Text = Convert.ToString(itensProposta.Total);
                     txtCodigoItensMaterial.Text = Convert.ToString(itensProposta.CodigoMaterial);
                 }
@@ -572,7 +569,6 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             rtbComentario.Clear();
             CarregarGridHistorico();
         }
-
         private void btnDeletarComentario_Click(object sender, EventArgs e)
         {
             try
@@ -599,12 +595,11 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
-
         private void dgvHistorico_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                var historico = DgvHistorico.Rows[e.RowIndex].DataBoundItem as Historico;
+                var historico = dgvHistorico.Rows[e.RowIndex].DataBoundItem as Historico;
                 if (historico != null)
                 {
                     txtIdHistorico.Text = historico.HistoricoId.ToString();
@@ -629,9 +624,9 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             try
             {
                 var listarHistorico = new DLHistorico().Listar().Where(p => p.PropostaId == Convert.ToInt32(txtPropostId.Text)).ToList();
-                DgvHistorico.DataSource = null;
-                DgvHistorico.DataSource = listarHistorico.OrderByDescending(p => p.DataComentario).ToList();
-                DgvHistorico.Refresh();
+                dgvHistorico.DataSource = null;
+                dgvHistorico.DataSource = listarHistorico.OrderByDescending(p => p.DataComentario).ToList();
+                dgvHistorico.Refresh();
                 MontarGridHistorico();
             }
             catch (Exception ex)
@@ -643,14 +638,14 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                DgvHistorico.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 16F, GraphicsUnit.Pixel);
-                var objBlControleGrid = new ControleGrid(DgvHistorico);
+                dgvHistorico.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 16F, GraphicsUnit.Pixel);
+                var objBlControleGrid = new ControleGrid(dgvHistorico);
                 //Define quais colunas serão visíveis
                 objBlControleGrid.DefinirVisibilidade(new List<string>() { "DataComentario", "Comentario", });
                 //Define quais os cabeçalhos respectivos das colunas 
                 objBlControleGrid.DefinirCabecalhos(new List<string>() { "Data do Comentario", "Comentario", });
                 //Define quais as larguras respectivas das colunas 
-                objBlControleGrid.DefinirLarguras(new List<int>() { 20, 80 }, DgvHistorico.Width - 15); //O total tem que ficar em 100% 
+                objBlControleGrid.DefinirLarguras(new List<int>() { 20, 80 }, dgvHistorico.Width - 15); //O total tem que ficar em 100% 
                 //Define quais os alinhamentos respectivos do componentes das colunas 
                 objBlControleGrid.DefinirAlinhamento(new List<string>() { "esquerda", "centro", });
                 //Define a altura das linhas respectivas da Grid 
@@ -663,19 +658,18 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         }
         private void BloquearBotao(bool desabilitar)
         {
-            btnCriarProposta.Enabled = desabilitar;
-            btnSalvarComentario.Enabled = desabilitar;
+            btnGerarId.Enabled = desabilitar;           
         }
         private void CarregarGridItensProposta()
         {
             try
             {
                 var listaItensProposta = new DLItensProposta().Listar().Where(p => p.PropostaId == Convert.ToInt32(txtPropostId.Text)).ToList();
-                Dgvmaterial.DataSource = null;
-                Dgvmaterial.DataSource = listaItensProposta;
-                Dgvmaterial.Refresh();
-                MontarGridItensProposta(Dgvmaterial);
-                txtTotalPedido.Text = listaItensProposta.Sum(p => p.Total).ToString("C");
+                dgvitensProposta.DataSource = null;
+                dgvitensProposta.DataSource = listaItensProposta;
+                dgvitensProposta.Refresh();
+                MontarGridItensProposta(dgvitensProposta);
+                txtCustoMaterial.Text = listaItensProposta.Sum(p => p.Total).ToString("C");
             }
             catch (Exception ex)
             {
@@ -686,14 +680,14 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                Dgvmaterial.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 16F, GraphicsUnit.Pixel);
-                var objBlControleGrid = new ControleGrid(Dgvmaterial);
+                dgvitensProposta.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 16F, GraphicsUnit.Pixel);
+                var objBlControleGrid = new ControleGrid(dgvitensProposta);
                 //Define quais colunas serão visíveis
                 objBlControleGrid.DefinirVisibilidade(new List<string>() { "Material", "UndMedida", "Quantidade", "Preco", "M2NotaFiscal", "ObsMaterial", "Total", });
                 //Define quais os cabeçalhos respectivos das colunas 
                 objBlControleGrid.DefinirCabecalhos(new List<string>() { "Material", "Und Medida", "Quantidade", "Valor", "Qtd Caixa", "Obs Material", "Total" });
                 //Define quais as larguras respectivas das colunas 
-                objBlControleGrid.DefinirLarguras(new List<int>() { 51, 5, 8, 7, 5, 10, 10 }, Dgvmaterial.Width - 15); //O total tem que ficar em 100% 
+                objBlControleGrid.DefinirLarguras(new List<int>() { 51, 5, 8, 7, 5, 10, 10 }, dgvitensProposta.Width - 15); //O total tem que ficar em 100% 
                 //Define quais os alinhamentos respectivos do componentes das colunas 
                 objBlControleGrid.DefinirAlinhamento(new List<string>() { "centro", "centro", "centro", "centro", "centro", "centro", "centro", });
                 //Define a altura das linhas respectivas da Grid 
@@ -845,7 +839,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     iten.ObsMaterial = rtbObsMaterial.Text;
                     iten.Quantidade = Convert.ToDecimal(txtQuantidade.Text);
                     iten.Preco = Convert.ToDecimal(txtPreco.Text);
-                    iten.M2NotaFiscal = Convert.ToDecimal(txtQuantidadeCaixas.Text);
+                    iten.qtdcaixal = Convert.ToDecimal(txtQuantidadeCaixas.Text);
                     iten.UndMedida = txtUndMedida.Text;
                     iten.M2caixa = Convert.ToDecimal(txtQtdUndCaixa.Text);
                     iten.Total = Convert.ToDecimal(txtTotal.Text);
