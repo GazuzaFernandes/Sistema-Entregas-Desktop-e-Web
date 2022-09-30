@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRoteiro));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dtpSaida = new System.Windows.Forms.DateTimePicker();
+            this.dtpDataSaida = new System.Windows.Forms.DateTimePicker();
             this.btnLimparEntrada = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtFuncionario = new System.Windows.Forms.TextBox();
@@ -42,7 +42,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnGerarId = new System.Windows.Forms.Button();
-            this.txtGerarId = new System.Windows.Forms.TextBox();
+            this.txtIdObra = new System.Windows.Forms.TextBox();
             this.btnEstoque = new System.Windows.Forms.Button();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -56,9 +56,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.txtUndMedida = new System.Windows.Forms.TextBox();
-            this.txtMaterial = new System.Windows.Forms.TextBox();
-            this.txtSaidaObra = new System.Windows.Forms.TextBox();
-            this.txtCodigoItensMaterial = new System.Windows.Forms.TextBox();
+            this.txtMaterialSaida = new System.Windows.Forms.TextBox();
+            this.txtSaidaId = new System.Windows.Forms.TextBox();
+            this.txtCodigoInfomacao = new System.Windows.Forms.TextBox();
             this.btnPesquisarMaterial = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.dgvSaidaMaterial = new System.Windows.Forms.DataGridView();
@@ -85,7 +85,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.tabPage1.Controls.Add(this.dtpSaida);
+            this.tabPage1.Controls.Add(this.dtpDataSaida);
             this.tabPage1.Controls.Add(this.btnLimparEntrada);
             this.tabPage1.Controls.Add(this.pictureBox2);
             this.tabPage1.Controls.Add(this.txtFuncionario);
@@ -96,7 +96,7 @@
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.btnGerarId);
-            this.tabPage1.Controls.Add(this.txtGerarId);
+            this.tabPage1.Controls.Add(this.txtIdObra);
             this.tabPage1.Controls.Add(this.btnEstoque);
             this.tabPage1.Controls.Add(this.btnDeletar);
             this.tabPage1.Controls.Add(this.btnSalvar);
@@ -108,14 +108,14 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Informações da obra";
             // 
-            // dtpSaida
+            // dtpDataSaida
             // 
-            this.dtpSaida.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dtpSaida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpSaida.Location = new System.Drawing.Point(445, 18);
-            this.dtpSaida.Name = "dtpSaida";
-            this.dtpSaida.Size = new System.Drawing.Size(148, 37);
-            this.dtpSaida.TabIndex = 58;
+            this.dtpDataSaida.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dtpDataSaida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDataSaida.Location = new System.Drawing.Point(445, 18);
+            this.dtpDataSaida.Name = "dtpDataSaida";
+            this.dtpDataSaida.Size = new System.Drawing.Size(148, 37);
+            this.dtpDataSaida.TabIndex = 58;
             // 
             // btnLimparEntrada
             // 
@@ -227,14 +227,14 @@
             this.btnGerarId.UseVisualStyleBackColor = true;
             this.btnGerarId.Click += new System.EventHandler(this.btnGerarId_Click);
             // 
-            // txtGerarId
+            // txtIdObra
             // 
-            this.txtGerarId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtGerarId.Enabled = false;
-            this.txtGerarId.Location = new System.Drawing.Point(649, 19);
-            this.txtGerarId.Name = "txtGerarId";
-            this.txtGerarId.Size = new System.Drawing.Size(97, 34);
-            this.txtGerarId.TabIndex = 49;
+            this.txtIdObra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtIdObra.Enabled = false;
+            this.txtIdObra.Location = new System.Drawing.Point(649, 17);
+            this.txtIdObra.Name = "txtIdObra";
+            this.txtIdObra.Size = new System.Drawing.Size(97, 34);
+            this.txtIdObra.TabIndex = 49;
             // 
             // btnEstoque
             // 
@@ -309,9 +309,9 @@
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.txtQuantidade);
             this.tabPage2.Controls.Add(this.txtUndMedida);
-            this.tabPage2.Controls.Add(this.txtMaterial);
-            this.tabPage2.Controls.Add(this.txtSaidaObra);
-            this.tabPage2.Controls.Add(this.txtCodigoItensMaterial);
+            this.tabPage2.Controls.Add(this.txtMaterialSaida);
+            this.tabPage2.Controls.Add(this.txtSaidaId);
+            this.tabPage2.Controls.Add(this.txtCodigoInfomacao);
             this.tabPage2.Controls.Add(this.btnPesquisarMaterial);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.dgvSaidaMaterial);
@@ -410,32 +410,32 @@
             this.txtUndMedida.Size = new System.Drawing.Size(173, 34);
             this.txtUndMedida.TabIndex = 17;
             // 
-            // txtMaterial
+            // txtMaterialSaida
             // 
-            this.txtMaterial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMaterial.Enabled = false;
-            this.txtMaterial.Location = new System.Drawing.Point(208, 90);
-            this.txtMaterial.Name = "txtMaterial";
-            this.txtMaterial.Size = new System.Drawing.Size(458, 34);
-            this.txtMaterial.TabIndex = 17;
+            this.txtMaterialSaida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtMaterialSaida.Enabled = false;
+            this.txtMaterialSaida.Location = new System.Drawing.Point(208, 90);
+            this.txtMaterialSaida.Name = "txtMaterialSaida";
+            this.txtMaterialSaida.Size = new System.Drawing.Size(458, 34);
+            this.txtMaterialSaida.TabIndex = 17;
             // 
-            // txtSaidaObra
+            // txtSaidaId
             // 
-            this.txtSaidaObra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtSaidaObra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSaidaObra.Location = new System.Drawing.Point(8, 15);
-            this.txtSaidaObra.Name = "txtSaidaObra";
-            this.txtSaidaObra.Size = new System.Drawing.Size(62, 34);
-            this.txtSaidaObra.TabIndex = 18;
+            this.txtSaidaId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtSaidaId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtSaidaId.Location = new System.Drawing.Point(8, 15);
+            this.txtSaidaId.Name = "txtSaidaId";
+            this.txtSaidaId.Size = new System.Drawing.Size(62, 34);
+            this.txtSaidaId.TabIndex = 18;
             // 
-            // txtCodigoItensMaterial
+            // txtCodigoInfomacao
             // 
-            this.txtCodigoItensMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtCodigoItensMaterial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCodigoItensMaterial.Location = new System.Drawing.Point(134, 90);
-            this.txtCodigoItensMaterial.Name = "txtCodigoItensMaterial";
-            this.txtCodigoItensMaterial.Size = new System.Drawing.Size(62, 34);
-            this.txtCodigoItensMaterial.TabIndex = 19;
+            this.txtCodigoInfomacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtCodigoInfomacao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtCodigoInfomacao.Location = new System.Drawing.Point(134, 90);
+            this.txtCodigoInfomacao.Name = "txtCodigoInfomacao";
+            this.txtCodigoInfomacao.Size = new System.Drawing.Size(62, 34);
+            this.txtCodigoInfomacao.TabIndex = 19;
             // 
             // btnPesquisarMaterial
             // 
@@ -508,7 +508,7 @@
         private TabPage tabPage2;
         private DataGridView dgvRoteiroMotorista;
         private DataGridView dgvSaidaMaterial;
-        private DateTimePicker dtpSaida;
+        private DateTimePicker dtpDataSaida;
         private Button btnLimparEntrada;
         private PictureBox pictureBox2;
         private TextBox txtFuncionario;
@@ -519,14 +519,14 @@
         private Label label13;
         private Label label4;
         private Button btnGerarId;
-        private TextBox txtGerarId;
+        private TextBox txtIdObra;
         private Button btnEstoque;
         private Button btnDeletar;
         private Button btnSalvar;
         private Label label2;
-        private TextBox txtMaterial;
-        private TextBox txtSaidaObra;
-        private TextBox txtCodigoItensMaterial;
+        private TextBox txtMaterialSaida;
+        private TextBox txtSaidaId;
+        private TextBox txtCodigoInfomacao;
         private Button btnPesquisarMaterial;
         private Label label14;
         private Button btnLimpar;

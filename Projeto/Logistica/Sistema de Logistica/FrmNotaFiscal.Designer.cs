@@ -140,7 +140,6 @@
             this.tabPage6.Size = new System.Drawing.Size(1441, 680);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Emitir Nota Fiscal Mão de Obra";
-            this.tabPage6.Click += new System.EventHandler(this.tabPage6_Click);
             // 
             // label14
             // 

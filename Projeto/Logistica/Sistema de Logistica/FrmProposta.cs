@@ -3,15 +3,7 @@ using DALLogistica.Repository;
 using DALSenhas.Repository;
 using Logistica.Sistema_de_Logistica;
 using Projeto.Logistica.Sistema_do_Financeiro;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Projeto.Logistica.Sistema_de_Logistica
 {
@@ -47,10 +39,10 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     dtpDataPedido.Value = _proposta.DataPrevista;
                     dtpDataPedido.Value = _proposta.DataPedido;
                     txtEmpresa.Text = _proposta.Fabrica;
-                    txtFaturado.Text = _proposta.Faturado;
-                    txtFormaPag.Text = _proposta.FormaPag;
-                    txtEngResp.Text = _proposta.EngResp;
-                    txtTelefone.Text = Utils.FormatarCelular(_proposta.Telefone);
+                    cbEmpresaFaturar.Text = _proposta.Faturado;
+                    txtFormaPagamento.Text = _proposta.FormaPag;
+                    txtEngResponsavel.Text = _proposta.EngResp;
+                    txtTelefone.Text = _proposta.Telefone;
                     txtPdRb.Text = _proposta.PdRb;
                     txtPdVenda.Text = _proposta.PdVenda;
                     txtProposta.Text = _proposta.Propostaa;
@@ -60,7 +52,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     txtRecebido.Text = _proposta.RecebidoPor;
                     txtNotaFiscal.Text = _proposta.NotaFiscal;
                     txtCarreto.Text = _proposta.Carreto;
-                    rtbmaterial.Text = _proposta.Material;
+                    rtbMaterial.Text = _proposta.Material;
                     #endregion
                     switch (_proposta.StatusobraId)//escolha
                     {
@@ -178,7 +170,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
         private void btnPesquisarCliente_Click(object sender, EventArgs e)
         {
-            pesquisar = 3;
+            pesquisar = 2;
             PegarDados_FormCadastroEmpresa();
         }
 
@@ -612,10 +604,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 MessageBox.Show("Erro:" + ex.Message);
             }
         }
-        private void rtbComentario_TextChanged(object sender, EventArgs e)
-        {
-            LiberarSalvamentoComentario(true);
-        }
+      
         #endregion
 
         #region Campo de Metodos
@@ -701,46 +690,37 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         private void HabilitarCampos(bool Habilitar)
         {
             txtCodigoFabrica.Enabled = Habilitar;
-            txtCodigoFaturado.Enabled = Habilitar;
-            txtCodigoCliente.Enabled = Habilitar;
-            txtCodigoItensMaterial.Enabled = Habilitar;
-            dtpDataPedido.Enabled = Habilitar;
-            rtbmaterial.Enabled = Habilitar;
-            btnSalvarComentario.Enabled = Habilitar;
-            btnImpressao.Enabled = Habilitar;
-            dtpDataPedido.Enabled = Habilitar;
-            txtFormaPag.Enabled = Habilitar;
-            btnDeletar.Enabled = Habilitar;
-            txtEngResp.Enabled = Habilitar;
+            txtFormaPagamento.Enabled = Habilitar;
+            txtEngResponsavel.Enabled = Habilitar;
             txtTelefone.Enabled = Habilitar;
             txtPdRb.Enabled = Habilitar;
             txtPdVenda.Enabled = Habilitar;
+            txtCodigoCliente.Enabled = Habilitar;
             txtProposta.Enabled = Habilitar;
             txtObra.Enabled = Habilitar;
             rtbComentario.Enabled = Habilitar;
-            dtpDataEntrega.Enabled = Habilitar;
-            txtRecebido.Enabled = Habilitar;
-            txtNotaFiscal.Enabled = Habilitar;
             txtCarreto.Enabled = Habilitar;
-            btnApagar.Enabled = Habilitar;
-            btnCliente.Enabled = Habilitar;
-            btnCodigo.Enabled = Habilitar;
-            btnFabrica.Enabled = Habilitar;
-            btnFaturado.Enabled = Habilitar;
-            btnGravar.Enabled = Habilitar;
+            txtNotaFiscal.Enabled = Habilitar;
+            txtRecebido.Enabled = Habilitar;
+            txtCodigoItensMaterial.Enabled = Habilitar;
             txtQuantidade.Enabled = Habilitar;
             txtPreco.Enabled = Habilitar;
             txtUndMedida.Enabled = Habilitar;
-            rtbObsMaterial.Enabled = Habilitar;
-            btnSalvar.Enabled = Habilitar;
-            btnLimparCampos.Enabled = Habilitar;
-            btnApagar.Enabled = Habilitar;
+            txtQtdCaixas.Enabled = Habilitar;
+            rtbObservacao.Enabled = Habilitar;
+            rtbMaterial.Enabled = Habilitar;
+            btnInserir.Enabled = Habilitar;
+            btnLimpar.Enabled = Habilitar;
+            btnDeletarItens.Enabled = Habilitar;
+            btnSalvarProposta.Enabled = Habilitar;
+            btnImprimir.Enabled = Habilitar;
+            btnDeletarProposta.Enabled = Habilitar;
         }
         public void PegarDados_FormCadastroEmpresa()
         {
             try
             {
-                FrmCadastroEmpresa cadasEmpr = new FrmCadastroEmpresa();
+                FrmCadastraEmpresa cadasEmpr = new FrmCadastraEmpresa();
                 cadasEmpr.ShowDialog();
                 var id = cadasEmpr.empresaid;
                 var empresa = cadasEmpr.empresa;
@@ -751,14 +731,8 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                             txtCodigoFabrica.Text = id.ToString();
                             txtEmpresa.Text = empresa;
                         }
-                        break;
+                        break;                  
                     case 2:
-                        {
-                            txtCodigoFaturado.Text = id.ToString();
-                            txtFaturado.Text = empresa;
-                        }
-                        break;
-                    case 3:
                         {
                             txtCodigoCliente.Text = id.ToString();
                             txtEmpresa.Text = empresa;
@@ -775,24 +749,29 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         }
         private void LimparDadosProposta()
         {
-            dtpDataPedido.Value = DateTime.Now;
-            dtpDataPedido.Value = DateTime.Now;
-            txtEmpresa.Text = Convert.ToString(null);
-            txtFaturado.Text = Convert.ToString(null);
-            txtFormaPag.Text = Convert.ToString(null); ;
-            txtEngResp.Text = Convert.ToString(null);
+            txtCodigoFabrica.Text = Convert.ToString(null);
+            txtFormaPagamento.Text = Convert.ToString(null);
+            txtEngResponsavel.Text = Convert.ToString(null);
             txtTelefone.Text = Convert.ToString(null);
             txtPdRb.Text = Convert.ToString(null);
             txtPdVenda.Text = Convert.ToString(null);
+            txtCodigoCliente.Text = Convert.ToString(null);
             txtProposta.Text = Convert.ToString(null);
-            txtEmpresa.Text = Convert.ToString(null);
             txtObra.Text = Convert.ToString(null);
-            rtbComentario.Text = Convert.ToString("Nota Fiscal do material sera enviada por e-mail, qualquer duvida entrar em contato com a Rb Pisos.");
+            rtbComentario.Text = Convert.ToString(null);
+            txtCarreto.Text = Convert.ToString(null);
+            txtNotaFiscal.Text = Convert.ToString(null);
+            txtRecebido.Text = Convert.ToString(null);
+            txtCodigoItensMaterial.Text = Convert.ToString(null);
+            txtQuantidade.Text = Convert.ToString(null);
+            txtPreco.Text = Convert.ToString(null);
+            txtUndMedida.Text = Convert.ToString(null);
+            txtQtdCaixas.Text = Convert.ToString(null);
+            rtbObservacao.Text = Convert.ToString(null);
+            rtbMaterial.Text = Convert.ToString(null);
             dtpDataEntrega.Value = DateTime.Now;
-            txtRecebido.Clear();
-            txtNotaFiscal.Clear();
-            txtCarreto.Clear();
-            rtbmaterial.Text = Convert.ToString("Nota Fiscal do material sera enviada por e-mail, qualquer duvida entrar em contato com a Rb Pisos.");
+            dtpDataPedido.Value = DateTime.Now;
+            dtpDataPedido.Value = DateTime.Now;       
         }
         private bool ValidarCampos()
         {
@@ -800,7 +779,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             {
                 throw new Exception(" Informe a Proposta ");
             }
-            else if (rtbmaterial.Text == "")
+            else if (rtbMaterial.Text == "")
             {
                 throw new Exception("Informe o Material");
             }
@@ -812,13 +791,13 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             {
                 txtItensPropostaId.Text = Convert.ToString(null);
                 txtCodigoItensMaterial.Text = Convert.ToString(null);
-                txtMaterial.Text = Convert.ToString(" Informe o Material ");
+                txtMaterial.Text = Convert.ToString(null);
                 txtQuantidade.Text = Convert.ToString(1);
                 txtPreco.Text = Convert.ToString(0);
                 txtQtdUndCaixa.Text = Convert.ToString(1);
                 txtUndMedida.Text = Convert.ToString("m²");
-                txtQuantidadeCaixas.Text = Convert.ToString(1);
-                rtbObsMaterial.Text = Convert.ToString(null);
+                txtQtdCaixas.Text = Convert.ToString(1);
+                rtbObservacao.Text = Convert.ToString(null);
             }
             catch (Exception ex)
             {
@@ -836,10 +815,10 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 {
                     iten.CodigoMaterial = Convert.ToInt32(txtCodigoItensMaterial.Text);
                     iten.Material = txtMaterial.Text;
-                    iten.ObsMaterial = rtbObsMaterial.Text;
+                    iten.ObsMaterial = rtbObservacao.Text;
                     iten.Quantidade = Convert.ToDecimal(txtQuantidade.Text);
                     iten.Preco = Convert.ToDecimal(txtPreco.Text);
-                    iten.qtdcaixal = Convert.ToDecimal(txtQuantidadeCaixas.Text);
+                    iten.qtdcaixal = Convert.ToDecimal(txtQtdCaixas.Text);
                     iten.UndMedida = txtUndMedida.Text;
                     iten.M2caixa = Convert.ToDecimal(txtQtdUndCaixa.Text);
                     iten.Total = Convert.ToDecimal(txtTotal.Text);
@@ -870,7 +849,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     {
                         MessageBox.Show("Quantidade inválida");
                     }
-                    txtQuantidadeCaixas.Text = total.ToString();
+                    txtQtdCaixas.Text = total.ToString();
                 }
             }
             catch (Exception ex)
@@ -922,11 +901,6 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 throw ex;
             }
         }
-        private void LiberarSalvamentoComentario(bool verdadeiro)
-        {
-            btnSalvarComentario.Enabled = verdadeiro;
-        }
-
 
         #endregion
 

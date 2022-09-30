@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace DALLogistica.Mapping
 {
-  public  class ControleMap : ClassMap<Controle>
+  public  class RoteiroMotoristaMap : ClassMap<RoteiroMotorista>
     {
         #region Pasta - Sistema Logistica - Form Saida Estoque
-        public ControleMap()
+        public RoteiroMotoristaMap()
         {
             Id(p => p.ControleId).GeneratedBy.Sequence("controle_seq");
             Map(p => p.Proposta);

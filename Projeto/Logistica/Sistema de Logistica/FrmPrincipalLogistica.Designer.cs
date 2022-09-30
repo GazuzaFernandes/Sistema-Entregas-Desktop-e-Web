@@ -211,7 +211,7 @@ namespace Logistica.Sistema_de_Logistica
             this.menuStrip1.Location = new System.Drawing.Point(6, 6);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(157, 156);
+            this.menuStrip1.Size = new System.Drawing.Size(157, 180);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -221,7 +221,7 @@ namespace Logistica.Sistema_de_Logistica
             this.msInserir});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(153, 35);
-            this.toolStripMenuItem1.Text = "Pedidos";
+            this.toolStripMenuItem1.Text = "Proposta";
             // 
             // msInserir
             // 

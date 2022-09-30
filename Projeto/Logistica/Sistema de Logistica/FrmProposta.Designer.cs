@@ -122,6 +122,8 @@
             this.cmsSalvarConteudos = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mtSalvarProposta = new System.Windows.Forms.ToolStripMenuItem();
             this.mtSalvarComentario = new System.Windows.Forms.ToolStripMenuItem();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -192,6 +194,8 @@
             this.tabPage1.Controls.Add(this.label17);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.label31);
+            this.tabPage1.Controls.Add(this.label30);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.label29);
@@ -259,7 +263,6 @@
             this.rtbComentario.Size = new System.Drawing.Size(834, 118);
             this.rtbComentario.TabIndex = 14;
             this.rtbComentario.Text = "";
-            this.rtbComentario.TextChanged += new System.EventHandler(this.rtbComentario_TextChanged);
             // 
             // rbCancelado
             // 
@@ -963,7 +966,7 @@
             // 
             this.txtItensPropostaId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtItensPropostaId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtItensPropostaId.Location = new System.Drawing.Point(1355, 369);
+            this.txtItensPropostaId.Location = new System.Drawing.Point(1355, 349);
             this.txtItensPropostaId.Name = "txtItensPropostaId";
             this.txtItensPropostaId.Size = new System.Drawing.Size(62, 38);
             this.txtItensPropostaId.TabIndex = 14;
@@ -1033,9 +1036,9 @@
             // 
             this.panel1.Controls.Add(this.dgvitensProposta);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(3, 465);
+            this.panel1.Location = new System.Drawing.Point(3, 437);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1431, 273);
+            this.panel1.Size = new System.Drawing.Size(1431, 301);
             this.panel1.TabIndex = 0;
             // 
             // dgvitensProposta
@@ -1051,7 +1054,7 @@
             this.dgvitensProposta.RowHeadersWidth = 51;
             this.dgvitensProposta.RowTemplate.Height = 29;
             this.dgvitensProposta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvitensProposta.Size = new System.Drawing.Size(1431, 273);
+            this.dgvitensProposta.Size = new System.Drawing.Size(1431, 301);
             this.dgvitensProposta.TabIndex = 0;
             this.dgvitensProposta.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvitensProposta_CellDoubleClick);
             // 
@@ -1118,9 +1121,9 @@
             // 
             this.panel2.Controls.Add(this.dgvHistorico);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 199);
+            this.panel2.Location = new System.Drawing.Point(0, 166);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1437, 542);
+            this.panel2.Size = new System.Drawing.Size(1437, 575);
             this.panel2.TabIndex = 1;
             // 
             // dgvHistorico
@@ -1136,7 +1139,7 @@
             this.dgvHistorico.RowHeadersWidth = 51;
             this.dgvHistorico.RowTemplate.Height = 29;
             this.dgvHistorico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistorico.Size = new System.Drawing.Size(1437, 542);
+            this.dgvHistorico.Size = new System.Drawing.Size(1437, 575);
             this.dgvHistorico.TabIndex = 0;
             this.dgvHistorico.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorico_CellDoubleClick);
             // 
@@ -1166,6 +1169,28 @@
             this.mtSalvarComentario.Size = new System.Drawing.Size(206, 24);
             this.mtSalvarComentario.Text = "Salvar Comentario";
             this.mtSalvarComentario.Click += new System.EventHandler(this.mtSalvarComentario_Click);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Segoe UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label30.ForeColor = System.Drawing.Color.White;
+            this.label30.Location = new System.Drawing.Point(775, 417);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(117, 31);
+            this.label30.TabIndex = 0;
+            this.label30.Text = "Já na obra.";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Segoe UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label31.ForeColor = System.Drawing.Color.White;
+            this.label31.Location = new System.Drawing.Point(1072, 417);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(223, 31);
+            this.label31.TabIndex = 0;
+            this.label31.Text = "Cancelado na Fabrica.";
             // 
             // FrmProposta
             // 
@@ -1294,5 +1319,7 @@
         private TextBox txtEngResponsavel;
         private Label label29;
         private Label label28;
+        private Label label31;
+        private Label label30;
     }
 }

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Projeto.Logistica.Sistema_de_Logistica
+namespace Projeto.Logistica.Sistema_do_Orçamento
 {
-    public partial class FrmNotaFiscal : Form
+    public partial class FrmCadastrarValores : Form
     {
-        public FrmNotaFiscal()
+        public FrmCadastrarValores()
         {
             InitializeComponent();
         }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DALLogistica.Repository
 {
-   public class DLControle: Repository<Controle>
+    public class DLRoteiroMotorista : Repository<RoteiroMotorista>
     {
         #region Pasta - Sistema Logistica - Form Saida Estoque
 
