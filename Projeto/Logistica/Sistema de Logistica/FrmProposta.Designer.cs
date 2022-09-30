@@ -115,9 +115,9 @@
             this.txtIdHistorico = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvHistorico = new System.Windows.Forms.DataGridView();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.salvarPropostaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salvarComentarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsSalvarConteudos = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mtSalvarProposta = new System.Windows.Forms.ToolStripMenuItem();
+            this.mtSalvarComentario = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -127,7 +127,7 @@
             this.tabPage3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorico)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
+            this.cmsSalvarConteudos.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -214,6 +214,7 @@
             this.btnImprimir.Text = "Proposta";
             this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnDeletarProposta
             // 
@@ -227,6 +228,7 @@
             this.btnDeletarProposta.Text = "Proposta";
             this.btnDeletarProposta.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnDeletarProposta.UseVisualStyleBackColor = true;
+            this.btnDeletarProposta.Click += new System.EventHandler(this.btnDeletarProposta_Click);
             // 
             // btnSalvarProposta
             // 
@@ -249,6 +251,7 @@
             this.rtbComentario.Size = new System.Drawing.Size(834, 118);
             this.rtbComentario.TabIndex = 14;
             this.rtbComentario.Text = "";
+            this.rtbComentario.TextChanged += new System.EventHandler(this.rtbComentario_TextChanged);
             // 
             // rbCancelado
             // 
@@ -423,6 +426,7 @@
             this.txtCodigoCliente.Name = "txtCodigoCliente";
             this.txtCodigoCliente.Size = new System.Drawing.Size(62, 38);
             this.txtCodigoCliente.TabIndex = 10;
+            this.txtCodigoCliente.TextChanged += new System.EventHandler(this.txtCodigoCliente_TextChanged);
             // 
             // btnPesquisarCliente
             // 
@@ -433,6 +437,7 @@
             this.btnPesquisarCliente.Size = new System.Drawing.Size(38, 38);
             this.btnPesquisarCliente.TabIndex = 9;
             this.btnPesquisarCliente.UseVisualStyleBackColor = true;
+            this.btnPesquisarCliente.Click += new System.EventHandler(this.btnPesquisarCliente_Click);
             // 
             // txtCodigoFabrica
             // 
@@ -442,6 +447,7 @@
             this.txtCodigoFabrica.Name = "txtCodigoFabrica";
             this.txtCodigoFabrica.Size = new System.Drawing.Size(62, 38);
             this.txtCodigoFabrica.TabIndex = 10;
+            this.txtCodigoFabrica.TextChanged += new System.EventHandler(this.txtCodigoFabrica_TextChanged);
             // 
             // btnPesquisaFabrica
             // 
@@ -452,6 +458,7 @@
             this.btnPesquisaFabrica.Size = new System.Drawing.Size(38, 38);
             this.btnPesquisaFabrica.TabIndex = 9;
             this.btnPesquisaFabrica.UseVisualStyleBackColor = true;
+            this.btnPesquisaFabrica.Click += new System.EventHandler(this.btnPesquisaFabrica_Click);
             // 
             // dtpEntrega
             // 
@@ -509,6 +516,7 @@
             this.btnGerarId.TabIndex = 2;
             this.btnGerarId.Text = "Gerar ID";
             this.btnGerarId.UseVisualStyleBackColor = true;
+            this.btnGerarId.Click += new System.EventHandler(this.btnGerarId_Click);
             // 
             // label3
             // 
@@ -781,6 +789,7 @@
             this.btnAtualizarEstoque.TabIndex = 16;
             this.btnAtualizarEstoque.Text = "Atualizar Estoque";
             this.btnAtualizarEstoque.UseVisualStyleBackColor = true;
+            this.btnAtualizarEstoque.Click += new System.EventHandler(this.btnAtualizarEstoque_Click);
             // 
             // btnLimpar
             // 
@@ -792,6 +801,7 @@
             this.btnLimpar.TabIndex = 16;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnDeletarItens
             // 
@@ -803,6 +813,7 @@
             this.btnDeletarItens.TabIndex = 16;
             this.btnDeletarItens.Text = "Deletar";
             this.btnDeletarItens.UseVisualStyleBackColor = true;
+            this.btnDeletarItens.Click += new System.EventHandler(this.btnDeletarItens_Click);
             // 
             // btnInserir
             // 
@@ -814,6 +825,7 @@
             this.btnInserir.TabIndex = 16;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // txtQtdUndCaixa
             // 
@@ -832,6 +844,7 @@
             this.txtQtdCaixas.Size = new System.Drawing.Size(106, 38);
             this.txtQtdCaixas.TabIndex = 13;
             this.txtQtdCaixas.Text = "0";
+            this.txtQtdCaixas.TextChanged += new System.EventHandler(this.txtQtdCaixas_TextChanged);
             // 
             // txtUndMedida
             // 
@@ -850,6 +863,7 @@
             this.txtPreco.Size = new System.Drawing.Size(106, 38);
             this.txtPreco.TabIndex = 13;
             this.txtPreco.Text = "0,0";
+            this.txtPreco.TextChanged += new System.EventHandler(this.txtPreco_TextChanged);
             // 
             // txtQuantidade
             // 
@@ -859,6 +873,7 @@
             this.txtQuantidade.Size = new System.Drawing.Size(106, 38);
             this.txtQuantidade.TabIndex = 13;
             this.txtQuantidade.Text = "0";
+            this.txtQuantidade.TextChanged += new System.EventHandler(this.txtQuantidade_TextChanged);
             // 
             // txtMaterial
             // 
@@ -926,6 +941,7 @@
             this.txtCodigoItensMaterial.Name = "txtCodigoItensMaterial";
             this.txtCodigoItensMaterial.Size = new System.Drawing.Size(62, 38);
             this.txtCodigoItensMaterial.TabIndex = 14;
+            this.txtCodigoItensMaterial.TextChanged += new System.EventHandler(this.txtCodigoItensMaterial_TextChanged);
             // 
             // label21
             // 
@@ -946,6 +962,7 @@
             this.btnPesquisarMaterial.Size = new System.Drawing.Size(38, 38);
             this.btnPesquisarMaterial.TabIndex = 12;
             this.btnPesquisarMaterial.UseVisualStyleBackColor = true;
+            this.btnPesquisarMaterial.Click += new System.EventHandler(this.btnPesquisarMaterial_Click);
             // 
             // label15
             // 
@@ -991,6 +1008,7 @@
             this.dgvitensProposta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvitensProposta.Size = new System.Drawing.Size(1419, 273);
             this.dgvitensProposta.TabIndex = 0;
+            this.dgvitensProposta.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvitensProposta_CellDoubleClick);
             // 
             // tabPage3
             // 
@@ -1027,6 +1045,7 @@
             this.btnDeletarComentario.TabIndex = 19;
             this.btnDeletarComentario.Text = "Deletar";
             this.btnDeletarComentario.UseVisualStyleBackColor = true;
+            this.btnDeletarComentario.Click += new System.EventHandler(this.btnDeletarComentario_Click);
             // 
             // btnLimparComentario
             // 
@@ -1038,6 +1057,7 @@
             this.btnLimparComentario.TabIndex = 18;
             this.btnLimparComentario.Text = "Limpar";
             this.btnLimparComentario.UseVisualStyleBackColor = true;
+            this.btnLimparComentario.Click += new System.EventHandler(this.btnLimparComentario_Click);
             // 
             // txtIdHistorico
             // 
@@ -1073,31 +1093,34 @@
             this.dgvHistorico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHistorico.Size = new System.Drawing.Size(1425, 542);
             this.dgvHistorico.TabIndex = 0;
+            this.dgvHistorico.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorico_CellDoubleClick);
             // 
-            // contextMenuStrip1
+            // cmsSalvarConteudos
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salvarPropostaToolStripMenuItem,
-            this.salvarComentarioToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(207, 52);
+            this.cmsSalvarConteudos.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsSalvarConteudos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mtSalvarProposta,
+            this.mtSalvarComentario});
+            this.cmsSalvarConteudos.Name = "contextMenuStrip1";
+            this.cmsSalvarConteudos.Size = new System.Drawing.Size(207, 52);
             // 
-            // salvarPropostaToolStripMenuItem
+            // mtSalvarProposta
             // 
-            this.salvarPropostaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.salvarPropostaToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
-            this.salvarPropostaToolStripMenuItem.Name = "salvarPropostaToolStripMenuItem";
-            this.salvarPropostaToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
-            this.salvarPropostaToolStripMenuItem.Text = "Salvar Proposta";
+            this.mtSalvarProposta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.mtSalvarProposta.ForeColor = System.Drawing.Color.Red;
+            this.mtSalvarProposta.Name = "mtSalvarProposta";
+            this.mtSalvarProposta.Size = new System.Drawing.Size(206, 24);
+            this.mtSalvarProposta.Text = "Salvar Proposta";
+            this.mtSalvarProposta.Click += new System.EventHandler(this.mtSalvarProposta_Click);
             // 
-            // salvarComentarioToolStripMenuItem
+            // mtSalvarComentario
             // 
-            this.salvarComentarioToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.salvarComentarioToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
-            this.salvarComentarioToolStripMenuItem.Name = "salvarComentarioToolStripMenuItem";
-            this.salvarComentarioToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
-            this.salvarComentarioToolStripMenuItem.Text = "Salvar Comentario";
+            this.mtSalvarComentario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.mtSalvarComentario.ForeColor = System.Drawing.Color.Red;
+            this.mtSalvarComentario.Name = "mtSalvarComentario";
+            this.mtSalvarComentario.Size = new System.Drawing.Size(206, 24);
+            this.mtSalvarComentario.Text = "Salvar Comentario";
+            this.mtSalvarComentario.Click += new System.EventHandler(this.mtSalvarComentario_Click);
             // 
             // FrmProposta
             // 
@@ -1127,7 +1150,7 @@
             this.tabPage3.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorico)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.cmsSalvarConteudos.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1219,8 +1242,8 @@
         private TextBox txtIdHistorico;
         private Panel panel2;
         private DataGridView dgvHistorico;
-        private ContextMenuStrip contextMenuStrip1;
-        private ToolStripMenuItem salvarPropostaToolStripMenuItem;
-        private ToolStripMenuItem salvarComentarioToolStripMenuItem;
+        private ContextMenuStrip cmsSalvarConteudos;
+        private ToolStripMenuItem mtSalvarProposta;
+        private ToolStripMenuItem mtSalvarComentario;
     }
 }

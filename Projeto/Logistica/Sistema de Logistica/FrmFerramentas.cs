@@ -51,7 +51,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 }
                 else
                 {
-                    rbPendente.Checked = true;
+                    cbSelecionar.Sorted = true;
                 }
             }
             catch (Exception ex)
@@ -76,10 +76,20 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                         atualizar.Retirada = dtpRetirada.Value;
                         atualizar.Funcionario = txtNome.Text;
                         atualizar.Material = rtbEquipamento.Text;
-                        if (rbPendente.Checked == true)
-                            atualizar.StatusobraId = 2;
-                        else if (rbFinalizado.Checked == true)
-                            atualizar.StatusobraId = 3;
+                        switch (cbSelecionar.Text)//escolha
+                        {
+                            case "Pendente":
+                                {
+                                    cbSelecionar.Sorted = true;
+                                }
+                                break;
+                            case "Devolvido":
+                                {
+                                    cbSelecionar.Sorted = true;
+                                }
+                                break;
+                        }
+                        atualizar.StatusobraId = 3;
                         new DLFerramentas().Atualizar(atualizar);
                         MessageBox.Show("Material devolvido com Sucesso!");
                     }
@@ -90,10 +100,19 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                         novo.Retirada = dtpRetirada.Value;
                         novo.Funcionario = txtNome.Text;
                         novo.Material = rtbEquipamento.Text;
-                        if (rbPendente.Checked == true)
-                            novo.StatusobraId = 2;
-                        else if (rbFinalizado.Checked == true)
-                            novo.StatusobraId = 3;
+                        switch (cbSelecionar.Text)//escolha
+                        {
+                            case "Pendente":
+                                {
+                                    cbSelecionar.Sorted = true;
+                                }
+                                break;
+                            case "Devolvido":
+                                {
+                                    cbSelecionar.Sorted = true;
+                                }
+                                break;
+                        }
                         var idferramentas = new DLFerramentas().Inserir(novo);
                         MessageBox.Show(" Material " + idferramentas + " Retirado com Sucesso! ");
                     }
@@ -139,7 +158,24 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             var ferramenta = dgvFerramentas.Rows[e.RowIndex].DataBoundItem as Ferramentas;
             if(ferramenta != null)
             {
-
+                txtFerramentaId.Text = ferramenta.FerramentaId.ToString();
+                txtNome.Text = ferramenta.Funcionario;
+                rtbEquipamento.Text = ferramenta.Material;
+                dtpRetirada.Value = ferramenta.Retirada;
+                dtpDevolucao.Value = ferramenta.Devolucao;
+                switch (cbSelecionar.Text)//escolha
+                {
+                    case "Pendente":
+                        {
+                            cbSelecionar.Sorted = true;
+                        }
+                        break;
+                    case "Devolvido":
+                        {
+                            cbSelecionar.Sorted = true;
+                        }
+                        break;
+                }
             }
         }
 

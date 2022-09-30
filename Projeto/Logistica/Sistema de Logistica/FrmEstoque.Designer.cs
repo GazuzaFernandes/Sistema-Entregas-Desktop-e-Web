@@ -615,13 +615,13 @@
             this.msSalvarEntrada,
             this.msSalvarData});
             this.cmsSalvarConteudos.Name = "contextMenuStrip1";
-            this.cmsSalvarConteudos.Size = new System.Drawing.Size(211, 88);
+            this.cmsSalvarConteudos.Size = new System.Drawing.Size(174, 60);
             // 
             // msSalvarEntrada
             // 
             this.msSalvarEntrada.ForeColor = System.Drawing.Color.Red;
             this.msSalvarEntrada.Name = "msSalvarEntrada";
-            this.msSalvarEntrada.Size = new System.Drawing.Size(210, 28);
+            this.msSalvarEntrada.Size = new System.Drawing.Size(173, 28);
             this.msSalvarEntrada.Text = "Salvar Entrada";
             this.msSalvarEntrada.Click += new System.EventHandler(this.msSalvarEntrada_Click);
             // 
@@ -630,7 +630,7 @@
             this.msSalvarData.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.msSalvarData.ForeColor = System.Drawing.Color.Red;
             this.msSalvarData.Name = "msSalvarData";
-            this.msSalvarData.Size = new System.Drawing.Size(210, 28);
+            this.msSalvarData.Size = new System.Drawing.Size(173, 28);
             this.msSalvarData.Text = "Salvar Data";
             this.msSalvarData.Click += new System.EventHandler(this.msSalvarData_Click);
             // 
@@ -662,6 +662,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1163, 701);
             this.Controls.Add(this.tabControl1);
