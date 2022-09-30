@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProposta));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnSalvarComentario = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnDeletarProposta = new System.Windows.Forms.Button();
             this.btnSalvarProposta = new System.Windows.Forms.Button();
@@ -82,48 +82,52 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtMaterial = new System.Windows.Forms.TextBox();
-            this.txtCodigoItensMaterial = new System.Windows.Forms.TextBox();
-            this.btnPesquisarMaterial = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtQtdUndCaixa = new System.Windows.Forms.TextBox();
-            this.txtIdMaterial = new System.Windows.Forms.TextBox();
-            this.txtQuantidade = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.txtPreco = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.txtUndMedida = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.txtQtdCaixas = new System.Windows.Forms.TextBox();
-            this.txtTotal = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.btnInserir = new System.Windows.Forms.Button();
-            this.btnDeletarItens = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnAtualizarEstoque = new System.Windows.Forms.Button();
+            this.rtbMaterial = new System.Windows.Forms.RichTextBox();
+            this.label26 = new System.Windows.Forms.Label();
             this.rtbObservacao = new System.Windows.Forms.RichTextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.rtbMaterial = new System.Windows.Forms.RichTextBox();
+            this.btnAtualizarEstoque = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnDeletarItens = new System.Windows.Forms.Button();
+            this.btnInserir = new System.Windows.Forms.Button();
+            this.txtQtdUndCaixa = new System.Windows.Forms.TextBox();
+            this.txtQtdCaixas = new System.Windows.Forms.TextBox();
+            this.txtUndMedida = new System.Windows.Forms.TextBox();
+            this.txtPreco = new System.Windows.Forms.TextBox();
+            this.txtQuantidade = new System.Windows.Forms.TextBox();
+            this.txtMaterial = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.txtIdMaterial = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtCodigoItensMaterial = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.btnPesquisarMaterial = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.dgvitensProposta = new System.Windows.Forms.DataGridView();
-            this.dgvHistorico = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label27 = new System.Windows.Forms.Label();
             this.btnDeletarComentario = new System.Windows.Forms.Button();
             this.btnLimparComentario = new System.Windows.Forms.Button();
             this.txtIdHistorico = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvHistorico = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.salvarPropostaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salvarComentarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvitensProposta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorico)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorico)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -142,7 +146,6 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.tabPage1.Controls.Add(this.btnSalvarComentario);
             this.tabPage1.Controls.Add(this.btnImprimir);
             this.tabPage1.Controls.Add(this.btnDeletarProposta);
             this.tabPage1.Controls.Add(this.btnSalvarProposta);
@@ -199,19 +202,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dados da Proposta";
             // 
-            // btnSalvarComentario
-            // 
-            this.btnSalvarComentario.ForeColor = System.Drawing.Color.Red;
-            this.btnSalvarComentario.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarComentario.Image")));
-            this.btnSalvarComentario.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSalvarComentario.Location = new System.Drawing.Point(883, 452);
-            this.btnSalvarComentario.Name = "btnSalvarComentario";
-            this.btnSalvarComentario.Size = new System.Drawing.Size(159, 75);
-            this.btnSalvarComentario.TabIndex = 15;
-            this.btnSalvarComentario.Text = "Comentario";
-            this.btnSalvarComentario.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnSalvarComentario.UseVisualStyleBackColor = true;
-            // 
             // btnImprimir
             // 
             this.btnImprimir.ForeColor = System.Drawing.Color.Red;
@@ -243,13 +233,14 @@
             this.btnSalvarProposta.ForeColor = System.Drawing.Color.Red;
             this.btnSalvarProposta.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarProposta.Image")));
             this.btnSalvarProposta.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSalvarProposta.Location = new System.Drawing.Point(1080, 452);
+            this.btnSalvarProposta.Location = new System.Drawing.Point(883, 452);
             this.btnSalvarProposta.Name = "btnSalvarProposta";
             this.btnSalvarProposta.Size = new System.Drawing.Size(159, 75);
             this.btnSalvarProposta.TabIndex = 15;
-            this.btnSalvarProposta.Text = "Proposta";
+            this.btnSalvarProposta.Text = "Salvar";
             this.btnSalvarProposta.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnSalvarProposta.UseVisualStyleBackColor = true;
+            this.btnSalvarProposta.Click += new System.EventHandler(this.btnSalvarProposta_Click);
             // 
             // rtbComentario
             // 
@@ -744,224 +735,23 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Itens da Propsota";
             // 
-            // tabPage3
+            // rtbMaterial
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.tabPage3.Controls.Add(this.label27);
-            this.tabPage3.Controls.Add(this.btnDeletarComentario);
-            this.tabPage3.Controls.Add(this.btnLimparComentario);
-            this.tabPage3.Controls.Add(this.txtIdHistorico);
-            this.tabPage3.Controls.Add(this.panel2);
-            this.tabPage3.Location = new System.Drawing.Point(4, 40);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1425, 689);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Historico da Proposta";
+            this.rtbMaterial.Location = new System.Drawing.Point(675, 229);
+            this.rtbMaterial.Name = "rtbMaterial";
+            this.rtbMaterial.Size = new System.Drawing.Size(589, 157);
+            this.rtbMaterial.TabIndex = 18;
+            this.rtbMaterial.Text = "";
             // 
-            // panel1
+            // label26
             // 
-            this.panel1.Controls.Add(this.dgvitensProposta);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(3, 413);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1419, 273);
-            this.panel1.TabIndex = 0;
-            // 
-            // txtMaterial
-            // 
-            this.txtMaterial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMaterial.Enabled = false;
-            this.txtMaterial.Location = new System.Drawing.Point(205, 32);
-            this.txtMaterial.Name = "txtMaterial";
-            this.txtMaterial.Size = new System.Drawing.Size(987, 38);
-            this.txtMaterial.TabIndex = 13;
-            // 
-            // txtCodigoItensMaterial
-            // 
-            this.txtCodigoItensMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtCodigoItensMaterial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCodigoItensMaterial.Location = new System.Drawing.Point(124, 32);
-            this.txtCodigoItensMaterial.Name = "txtCodigoItensMaterial";
-            this.txtCodigoItensMaterial.Size = new System.Drawing.Size(62, 38);
-            this.txtCodigoItensMaterial.TabIndex = 14;
-            // 
-            // btnPesquisarMaterial
-            // 
-            this.btnPesquisarMaterial.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisarMaterial.Image")));
-            this.btnPesquisarMaterial.Location = new System.Drawing.Point(1317, 31);
-            this.btnPesquisarMaterial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPesquisarMaterial.Name = "btnPesquisarMaterial";
-            this.btnPesquisarMaterial.Size = new System.Drawing.Size(38, 38);
-            this.btnPesquisarMaterial.TabIndex = 12;
-            this.btnPesquisarMaterial.UseVisualStyleBackColor = true;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(8, 35);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(110, 31);
-            this.label14.TabIndex = 11;
-            this.label14.Text = "Material:";
-            // 
-            // txtQtdUndCaixa
-            // 
-            this.txtQtdUndCaixa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtQtdUndCaixa.Enabled = false;
-            this.txtQtdUndCaixa.Location = new System.Drawing.Point(1209, 32);
-            this.txtQtdUndCaixa.Name = "txtQtdUndCaixa";
-            this.txtQtdUndCaixa.Size = new System.Drawing.Size(88, 38);
-            this.txtQtdUndCaixa.TabIndex = 13;
-            // 
-            // txtIdMaterial
-            // 
-            this.txtIdMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtIdMaterial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtIdMaterial.Location = new System.Drawing.Point(1355, 369);
-            this.txtIdMaterial.Name = "txtIdMaterial";
-            this.txtIdMaterial.Size = new System.Drawing.Size(62, 38);
-            this.txtIdMaterial.TabIndex = 14;
-            // 
-            // txtQuantidade
-            // 
-            this.txtQuantidade.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtQuantidade.Location = new System.Drawing.Point(205, 99);
-            this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(106, 38);
-            this.txtQuantidade.TabIndex = 13;
-            this.txtQuantidade.Text = "0";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(139, 103);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(60, 31);
-            this.label15.TabIndex = 11;
-            this.label15.Text = "Qtd:";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(317, 103);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(42, 31);
-            this.label21.TabIndex = 11;
-            this.label21.Text = "R$";
-            // 
-            // txtPreco
-            // 
-            this.txtPreco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtPreco.Location = new System.Drawing.Point(365, 99);
-            this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(106, 38);
-            this.txtPreco.TabIndex = 13;
-            this.txtPreco.Text = "0,0";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(477, 103);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(152, 31);
-            this.label22.TabIndex = 11;
-            this.label22.Text = "Und Medida:";
-            // 
-            // txtUndMedida
-            // 
-            this.txtUndMedida.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtUndMedida.Location = new System.Drawing.Point(635, 99);
-            this.txtUndMedida.Name = "txtUndMedida";
-            this.txtUndMedida.Size = new System.Drawing.Size(106, 38);
-            this.txtUndMedida.TabIndex = 13;
-            this.txtUndMedida.Text = "m²";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(757, 103);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(134, 31);
-            this.label23.TabIndex = 11;
-            this.label23.Text = "Qtd Caixas:";
-            // 
-            // txtQtdCaixas
-            // 
-            this.txtQtdCaixas.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtQtdCaixas.Location = new System.Drawing.Point(897, 99);
-            this.txtQtdCaixas.Name = "txtQtdCaixas";
-            this.txtQtdCaixas.Size = new System.Drawing.Size(106, 38);
-            this.txtQtdCaixas.TabIndex = 13;
-            this.txtQtdCaixas.Text = "0";
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtTotal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTotal.Enabled = false;
-            this.txtTotal.Location = new System.Drawing.Point(1082, 99);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(182, 38);
-            this.txtTotal.TabIndex = 14;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(1009, 103);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(67, 31);
-            this.label24.TabIndex = 11;
-            this.label24.Text = "Total";
-            // 
-            // btnInserir
-            // 
-            this.btnInserir.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnInserir.ForeColor = System.Drawing.Color.Black;
-            this.btnInserir.Location = new System.Drawing.Point(477, 229);
-            this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(159, 43);
-            this.btnInserir.TabIndex = 16;
-            this.btnInserir.Text = "Inserir";
-            this.btnInserir.UseVisualStyleBackColor = true;
-            // 
-            // btnDeletarItens
-            // 
-            this.btnDeletarItens.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDeletarItens.ForeColor = System.Drawing.Color.Black;
-            this.btnDeletarItens.Location = new System.Drawing.Point(477, 344);
-            this.btnDeletarItens.Name = "btnDeletarItens";
-            this.btnDeletarItens.Size = new System.Drawing.Size(159, 43);
-            this.btnDeletarItens.TabIndex = 16;
-            this.btnDeletarItens.Text = "Deletar";
-            this.btnDeletarItens.UseVisualStyleBackColor = true;
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLimpar.ForeColor = System.Drawing.Color.Black;
-            this.btnLimpar.Location = new System.Drawing.Point(477, 285);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(159, 43);
-            this.btnLimpar.TabIndex = 16;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            // 
-            // btnAtualizarEstoque
-            // 
-            this.btnAtualizarEstoque.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAtualizarEstoque.ForeColor = System.Drawing.Color.Red;
-            this.btnAtualizarEstoque.Location = new System.Drawing.Point(447, 160);
-            this.btnAtualizarEstoque.Name = "btnAtualizarEstoque";
-            this.btnAtualizarEstoque.Size = new System.Drawing.Size(202, 43);
-            this.btnAtualizarEstoque.TabIndex = 16;
-            this.btnAtualizarEstoque.Text = "Atualizar Estoque";
-            this.btnAtualizarEstoque.UseVisualStyleBackColor = true;
+            this.label26.AutoSize = true;
+            this.label26.ForeColor = System.Drawing.Color.White;
+            this.label26.Location = new System.Drawing.Point(675, 195);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(222, 31);
+            this.label26.TabIndex = 17;
+            this.label26.Text = "Informe o Material:";
             // 
             // rtbObservacao
             // 
@@ -981,23 +771,210 @@
             this.label25.TabIndex = 17;
             this.label25.Text = "Observação:";
             // 
-            // label26
+            // btnAtualizarEstoque
             // 
-            this.label26.AutoSize = true;
-            this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(675, 195);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(222, 31);
-            this.label26.TabIndex = 17;
-            this.label26.Text = "Informe o Material:";
+            this.btnAtualizarEstoque.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAtualizarEstoque.ForeColor = System.Drawing.Color.Red;
+            this.btnAtualizarEstoque.Location = new System.Drawing.Point(447, 160);
+            this.btnAtualizarEstoque.Name = "btnAtualizarEstoque";
+            this.btnAtualizarEstoque.Size = new System.Drawing.Size(202, 43);
+            this.btnAtualizarEstoque.TabIndex = 16;
+            this.btnAtualizarEstoque.Text = "Atualizar Estoque";
+            this.btnAtualizarEstoque.UseVisualStyleBackColor = true;
             // 
-            // rtbMaterial
+            // btnLimpar
             // 
-            this.rtbMaterial.Location = new System.Drawing.Point(675, 229);
-            this.rtbMaterial.Name = "rtbMaterial";
-            this.rtbMaterial.Size = new System.Drawing.Size(589, 157);
-            this.rtbMaterial.TabIndex = 18;
-            this.rtbMaterial.Text = "";
+            this.btnLimpar.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLimpar.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpar.Location = new System.Drawing.Point(477, 285);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(159, 43);
+            this.btnLimpar.TabIndex = 16;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            // 
+            // btnDeletarItens
+            // 
+            this.btnDeletarItens.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDeletarItens.ForeColor = System.Drawing.Color.Black;
+            this.btnDeletarItens.Location = new System.Drawing.Point(477, 344);
+            this.btnDeletarItens.Name = "btnDeletarItens";
+            this.btnDeletarItens.Size = new System.Drawing.Size(159, 43);
+            this.btnDeletarItens.TabIndex = 16;
+            this.btnDeletarItens.Text = "Deletar";
+            this.btnDeletarItens.UseVisualStyleBackColor = true;
+            // 
+            // btnInserir
+            // 
+            this.btnInserir.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnInserir.ForeColor = System.Drawing.Color.Black;
+            this.btnInserir.Location = new System.Drawing.Point(477, 229);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.Size = new System.Drawing.Size(159, 43);
+            this.btnInserir.TabIndex = 16;
+            this.btnInserir.Text = "Inserir";
+            this.btnInserir.UseVisualStyleBackColor = true;
+            // 
+            // txtQtdUndCaixa
+            // 
+            this.txtQtdUndCaixa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtQtdUndCaixa.Enabled = false;
+            this.txtQtdUndCaixa.Location = new System.Drawing.Point(1209, 32);
+            this.txtQtdUndCaixa.Name = "txtQtdUndCaixa";
+            this.txtQtdUndCaixa.Size = new System.Drawing.Size(88, 38);
+            this.txtQtdUndCaixa.TabIndex = 13;
+            // 
+            // txtQtdCaixas
+            // 
+            this.txtQtdCaixas.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtQtdCaixas.Location = new System.Drawing.Point(897, 99);
+            this.txtQtdCaixas.Name = "txtQtdCaixas";
+            this.txtQtdCaixas.Size = new System.Drawing.Size(106, 38);
+            this.txtQtdCaixas.TabIndex = 13;
+            this.txtQtdCaixas.Text = "0";
+            // 
+            // txtUndMedida
+            // 
+            this.txtUndMedida.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtUndMedida.Location = new System.Drawing.Point(635, 99);
+            this.txtUndMedida.Name = "txtUndMedida";
+            this.txtUndMedida.Size = new System.Drawing.Size(106, 38);
+            this.txtUndMedida.TabIndex = 13;
+            this.txtUndMedida.Text = "m²";
+            // 
+            // txtPreco
+            // 
+            this.txtPreco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtPreco.Location = new System.Drawing.Point(365, 99);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(106, 38);
+            this.txtPreco.TabIndex = 13;
+            this.txtPreco.Text = "0,0";
+            // 
+            // txtQuantidade
+            // 
+            this.txtQuantidade.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtQuantidade.Location = new System.Drawing.Point(205, 99);
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(106, 38);
+            this.txtQuantidade.TabIndex = 13;
+            this.txtQuantidade.Text = "0";
+            // 
+            // txtMaterial
+            // 
+            this.txtMaterial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtMaterial.Enabled = false;
+            this.txtMaterial.Location = new System.Drawing.Point(205, 32);
+            this.txtMaterial.Name = "txtMaterial";
+            this.txtMaterial.Size = new System.Drawing.Size(987, 38);
+            this.txtMaterial.TabIndex = 13;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Location = new System.Drawing.Point(1009, 103);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(67, 31);
+            this.label24.TabIndex = 11;
+            this.label24.Text = "Total";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Location = new System.Drawing.Point(757, 103);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(134, 31);
+            this.label23.TabIndex = 11;
+            this.label23.Text = "Qtd Caixas:";
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtTotal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtTotal.Enabled = false;
+            this.txtTotal.Location = new System.Drawing.Point(1082, 99);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(182, 38);
+            this.txtTotal.TabIndex = 14;
+            // 
+            // txtIdMaterial
+            // 
+            this.txtIdMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtIdMaterial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtIdMaterial.Location = new System.Drawing.Point(1355, 369);
+            this.txtIdMaterial.Name = "txtIdMaterial";
+            this.txtIdMaterial.Size = new System.Drawing.Size(62, 38);
+            this.txtIdMaterial.TabIndex = 14;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.ForeColor = System.Drawing.Color.White;
+            this.label22.Location = new System.Drawing.Point(477, 103);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(152, 31);
+            this.label22.TabIndex = 11;
+            this.label22.Text = "Und Medida:";
+            // 
+            // txtCodigoItensMaterial
+            // 
+            this.txtCodigoItensMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtCodigoItensMaterial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtCodigoItensMaterial.Location = new System.Drawing.Point(124, 32);
+            this.txtCodigoItensMaterial.Name = "txtCodigoItensMaterial";
+            this.txtCodigoItensMaterial.Size = new System.Drawing.Size(62, 38);
+            this.txtCodigoItensMaterial.TabIndex = 14;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(317, 103);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(42, 31);
+            this.label21.TabIndex = 11;
+            this.label21.Text = "R$";
+            // 
+            // btnPesquisarMaterial
+            // 
+            this.btnPesquisarMaterial.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisarMaterial.Image")));
+            this.btnPesquisarMaterial.Location = new System.Drawing.Point(1317, 31);
+            this.btnPesquisarMaterial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPesquisarMaterial.Name = "btnPesquisarMaterial";
+            this.btnPesquisarMaterial.Size = new System.Drawing.Size(38, 38);
+            this.btnPesquisarMaterial.TabIndex = 12;
+            this.btnPesquisarMaterial.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(139, 103);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(60, 31);
+            this.label15.TabIndex = 11;
+            this.label15.Text = "Qtd:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(8, 35);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(110, 31);
+            this.label14.TabIndex = 11;
+            this.label14.Text = "Material:";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dgvitensProposta);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(3, 413);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1419, 273);
+            this.panel1.TabIndex = 0;
             // 
             // dgvitensProposta
             // 
@@ -1015,30 +992,30 @@
             this.dgvitensProposta.Size = new System.Drawing.Size(1419, 273);
             this.dgvitensProposta.TabIndex = 0;
             // 
-            // dgvHistorico
+            // tabPage3
             // 
-            this.dgvHistorico.AllowUserToAddRows = false;
-            this.dgvHistorico.AllowUserToDeleteRows = false;
-            this.dgvHistorico.BackgroundColor = System.Drawing.Color.White;
-            this.dgvHistorico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHistorico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvHistorico.Location = new System.Drawing.Point(0, 0);
-            this.dgvHistorico.Name = "dgvHistorico";
-            this.dgvHistorico.ReadOnly = true;
-            this.dgvHistorico.RowHeadersWidth = 51;
-            this.dgvHistorico.RowTemplate.Height = 29;
-            this.dgvHistorico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistorico.Size = new System.Drawing.Size(1425, 542);
-            this.dgvHistorico.TabIndex = 0;
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.tabPage3.Controls.Add(this.label27);
+            this.tabPage3.Controls.Add(this.btnDeletarComentario);
+            this.tabPage3.Controls.Add(this.btnLimparComentario);
+            this.tabPage3.Controls.Add(this.txtIdHistorico);
+            this.tabPage3.Controls.Add(this.panel2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 40);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(1425, 689);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Historico da Proposta";
             // 
-            // panel2
+            // label27
             // 
-            this.panel2.Controls.Add(this.dgvHistorico);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 147);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1425, 542);
-            this.panel2.TabIndex = 1;
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label27.ForeColor = System.Drawing.Color.White;
+            this.label27.Location = new System.Drawing.Point(444, 83);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(407, 45);
+            this.label27.TabIndex = 20;
+            this.label27.Text = "Historico de Comentario.";
             // 
             // btnDeletarComentario
             // 
@@ -1072,16 +1049,55 @@
             this.txtIdHistorico.Size = new System.Drawing.Size(62, 38);
             this.txtIdHistorico.TabIndex = 17;
             // 
-            // label27
+            // panel2
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(444, 83);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(420, 46);
-            this.label27.TabIndex = 20;
-            this.label27.Text = "Historico de Comentario.";
+            this.panel2.Controls.Add(this.dgvHistorico);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 147);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1425, 542);
+            this.panel2.TabIndex = 1;
+            // 
+            // dgvHistorico
+            // 
+            this.dgvHistorico.AllowUserToAddRows = false;
+            this.dgvHistorico.AllowUserToDeleteRows = false;
+            this.dgvHistorico.BackgroundColor = System.Drawing.Color.White;
+            this.dgvHistorico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHistorico.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvHistorico.Location = new System.Drawing.Point(0, 0);
+            this.dgvHistorico.Name = "dgvHistorico";
+            this.dgvHistorico.ReadOnly = true;
+            this.dgvHistorico.RowHeadersWidth = 51;
+            this.dgvHistorico.RowTemplate.Height = 29;
+            this.dgvHistorico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvHistorico.Size = new System.Drawing.Size(1425, 542);
+            this.dgvHistorico.TabIndex = 0;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salvarPropostaToolStripMenuItem,
+            this.salvarComentarioToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(207, 52);
+            // 
+            // salvarPropostaToolStripMenuItem
+            // 
+            this.salvarPropostaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.salvarPropostaToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
+            this.salvarPropostaToolStripMenuItem.Name = "salvarPropostaToolStripMenuItem";
+            this.salvarPropostaToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
+            this.salvarPropostaToolStripMenuItem.Text = "Salvar Proposta";
+            // 
+            // salvarComentarioToolStripMenuItem
+            // 
+            this.salvarComentarioToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.salvarComentarioToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
+            this.salvarComentarioToolStripMenuItem.Name = "salvarComentarioToolStripMenuItem";
+            this.salvarComentarioToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
+            this.salvarComentarioToolStripMenuItem.Text = "Salvar Comentario";
             // 
             // FrmProposta
             // 
@@ -1105,12 +1121,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvitensProposta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorico)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorico)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1149,7 +1166,6 @@
         private Label label9;
         private Label label8;
         private Label label7;
-        private Button btnSalvarComentario;
         private Button btnImprimir;
         private Button btnDeletarProposta;
         private Button btnSalvarProposta;
@@ -1203,5 +1219,8 @@
         private TextBox txtIdHistorico;
         private Panel panel2;
         private DataGridView dgvHistorico;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem salvarPropostaToolStripMenuItem;
+        private ToolStripMenuItem salvarComentarioToolStripMenuItem;
     }
 }

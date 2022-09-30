@@ -20,7 +20,16 @@ namespace Logistica.Sistema_de_Logistica
         }
         private void FrmPrincipalLogistica_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                var listaProposta = new DLProposta().Listar();
+                CarregarGridPrincipal();
+             
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro " + ex.Message);
+            }
         }
 
         #region Abertura de Form's
@@ -63,7 +72,8 @@ namespace Logistica.Sistema_de_Logistica
         }
         private void txtPesquisar_TextChanged(object sender, EventArgs e)
         {
-
+            CarregarGridPrincipal(true);
+            MontarGridProposta(dgvPrincipal);
         }
         private void txtLarguraMdf_TextChanged(object sender, EventArgs e)
         {
@@ -93,6 +103,34 @@ namespace Logistica.Sistema_de_Logistica
         {
             CalcularM3();
         }
+        private void txtM2Presilhas_TextChanged_1(object sender, EventArgs e)
+        {
+            CalcuparPresilha();
+        }
+        private void txtLarguraDeck_TextChanged_1(object sender, EventArgs e)
+        {
+            CalcuparPresilha();
+        }
+        private void txtTotalLinha1_TextChanged_1(object sender, EventArgs e)
+        {
+            CalcuparPresilha();
+        }
+        private void txtTotalLinha2_TextChanged_1(object sender, EventArgs e)
+        {
+            CalcuparPresilha();
+        }
+        private void txtTotal_TextChanged_1(object sender, EventArgs e)
+        {
+            CalcuparPresilha();
+        }
+        private void txtPresilhasM2_TextChanged_1(object sender, EventArgs e)
+        {
+            CalcuparPresilha();
+        }
+        private void txtPedidoM2_TextChanged_1(object sender, EventArgs e)
+        {
+            CalcuparPresilha();
+        }
         private void txtAreaVerniz_TextChanged(object sender, EventArgs e)
         {
             CalcularVerniz();
@@ -113,19 +151,11 @@ namespace Logistica.Sistema_de_Logistica
         {
             CalcularCetol();
         }
-        private void txtRendimentoCetol_TextChanged(object sender, EventArgs e)
+        private void txtRendiCetol_TextChanged(object sender, EventArgs e)
         {
             CalcularCetol();
         }
-        private void txtAreaTerreo_TextChanged(object sender, EventArgs e)
-        {
-            CalcularWakol();
-        }
-        private void txtWakolTerreo_TextChanged(object sender, EventArgs e)
-        {
-            CalcularWakol();
-        }
-        private void txtAreaSuperior_TextChanged(object sender, EventArgs e)
+        private void txtWakolAreaSuperior_TextChanged(object sender, EventArgs e)
         {
             CalcularWakol();
         }
@@ -133,75 +163,18 @@ namespace Logistica.Sistema_de_Logistica
         {
             CalcularWakol();
         }
-        private void txtM2Presilhas_TextChanged(object sender, EventArgs e)
+        private void txtWakolAreaTerreo_TextChanged(object sender, EventArgs e)
         {
-            CalcuparPresilha();
+            CalcularWakol();
         }
-        private void txtLarguraDeck_TextChanged(object sender, EventArgs e)
+        private void txtWakolTerreo_TextChanged(object sender, EventArgs e)
         {
-            CalcuparPresilha();
-        }
-        private void txtTotalLinha1_TextChanged(object sender, EventArgs e)
-        {
-            CalcuparPresilha();
-        }
-        private void txtTotalLinha2_TextChanged(object sender, EventArgs e)
-        {
-            CalcuparPresilha();
-        }
-        private void txtTotal_TextChanged(object sender, EventArgs e)
-        {
-            CalcuparPresilha();
-        }
-        private void txtPresilhasM2_TextChanged(object sender, EventArgs e)
-        {
-            CalcuparPresilha();
-        }
-        private void txtPedidoM2_TextChanged(object sender, EventArgs e)
-        {
-            CalcuparPresilha();
+            CalcularWakol();
         }
         #endregion
 
         #region Apenas Metodos
-        private void CarregarFerramenta(bool isPesquisa = false)
-        {
-            try
-            {
-                var listarFerramentas = new DLFerramentas().Listarferramenta();
-                if (isPesquisa) //isPesquisa == true
-                {
-                    var pesquisa = txtPesquisar.Text.ToLower();
-                    if (rbCliente.Checked)
-                        listarFerramentas = listarFerramentas.Where(p => p.funcionario.ToLower().Contains(pesquisa)).ToList();
-                }
-                dgvFerramenta.DataSource = listarFerramentas;
-                MontarFerramentas(dgvFerramenta);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro: " + ex.Message);
-            }
-        }
-        private void MontarFerramentas(DataGridView dgvFerramentas)
-        {
-            dgvFerramenta.DefaultCellStyle.Font = new Font("Calibri", 16F, GraphicsUnit.Pixel);
-            var objBlControleGrid = new ControleGrid(dgvFerramenta);
-            //Define quais colunas serão visíveis
-            objBlControleGrid.DefinirVisibilidade(new List<string>()
-            { "funcionario", "retirada", "devolucao", "material", });
-            //Define quais os cabeçalhos respectivos das colunas 
-            objBlControleGrid.DefinirCabecalhos(new List<string>()
-            { "FUNCIONARIO", "RETIRADA", "DEVOLUÇÃO", "MATERIAL", });
-            //Define quais as larguras respectivas das colunas 
-            objBlControleGrid.DefinirLarguras(new List<int>() { 25, 15, 10, 50, }, dgvFerramenta.Width - 15); //O total tem que ficar em 100% 
-            //Define quais os alinhamentos respectivos do componentes das colunas 
-            objBlControleGrid.DefinirAlinhamento(new List<string>()
-            { "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", });
-            //Define a altura das linhas respectivas da Grid 
-            objBlControleGrid.DefinirAlturaLinha(30);
-        }
-        private void CarregarPrincipal(bool isPesquisa = false)
+        private void CarregarGridPrincipal(bool isPesquisa = false)
         {
             try
             {
@@ -242,14 +215,14 @@ namespace Logistica.Sistema_de_Logistica
                     #endregion
                 }
                 dgvPrincipal.DataSource = listaPropostaStatus;
-                MontarProposta(dgvPrincipal);
+                MontarGridProposta(dgvPrincipal);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
-        private void MontarProposta(DataGridView dgvPrincipal)
+        private void MontarGridProposta(DataGridView dgvPrincipal)
         {
             dgvPrincipal.DefaultCellStyle.Font = new Font("Calibri", 16F, GraphicsUnit.Pixel);
             var objBlControleGrid = new ControleGrid(dgvPrincipal);
@@ -267,11 +240,9 @@ namespace Logistica.Sistema_de_Logistica
             objBlControleGrid.DefinirAlturaLinha(30);
         }
         private void ReducaoCodigoPesquisar()
-        {
-            CarregarFerramenta(true);
-            MontarFerramentas(dgvFerramenta);
-            CarregarPrincipal(true);
-            MontarProposta(dgvPrincipal);
+        {          
+            CarregarGridPrincipal(true);
+            MontarGridProposta(dgvPrincipal);
         }
         private void ReducaoCodigoLimpeza()
         {
@@ -291,8 +262,8 @@ namespace Logistica.Sistema_de_Logistica
                 cbFinalizado.Checked = false;
                 cbPendente.Checked = false;
                 cbImediato.Checked = false;
-                CarregarFerramenta();
-                CarregarPrincipal();
+              
+                CarregarGridPrincipal();
             }
             catch (Exception ex)
             {
@@ -360,7 +331,7 @@ namespace Logistica.Sistema_de_Logistica
             {
                 #region Calculo Wakol Superior
                 decimal areaSuperior = 0, superio = 0, totalSuperio = 0;
-                if (decimal.TryParse(txtAreaSuperior.Text, out areaSuperior))
+                if (decimal.TryParse(txtWakolAreaSuperior.Text, out areaSuperior))
                 {
                     if (decimal.TryParse(txtWakolSuperior.Text, out superio))
                     {
@@ -372,7 +343,7 @@ namespace Logistica.Sistema_de_Logistica
 
                 #region Calcular Wakol Terreo
                 decimal areaTerreo = 0, terreo = 0, totalTerreo = 0;
-                if (decimal.TryParse(txtAreaTerreo.Text, out areaTerreo))
+                if (decimal.TryParse(txtWakolAreaTerreo.Text, out areaTerreo))
                 {
                     if (decimal.TryParse(txtWakolTerreo.Text, out terreo))
                     {
@@ -546,18 +517,16 @@ namespace Logistica.Sistema_de_Logistica
         #endregion
 
         #region Apenas Botões
-        private void btnLimparCalculos_Click(object sender, EventArgs e)
-        {
-          //teste 
-        }
+      
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-
+            ReducaoCodigoPesquisar();
         }
         private void btnLimparPesquisa_Click(object sender, EventArgs e)
         {
-
+            ReducaoCodigoLimpeza();  
         }
         #endregion
+
     }
 }

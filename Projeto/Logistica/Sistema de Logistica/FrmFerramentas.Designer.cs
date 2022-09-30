@@ -34,15 +34,15 @@
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.txtCodigoMaterial = new System.Windows.Forms.TextBox();
-            this.txtMaterial = new System.Windows.Forms.TextBox();
+            this.txtFerramentaId = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtbEquipamento = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dtpPrevisao = new System.Windows.Forms.DateTimePicker();
+            this.dtpRetirada = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDevolucao = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.cbSelecionar = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -121,25 +121,25 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // txtCodigoMaterial
+            // txtFerramentaId
             // 
-            this.txtCodigoMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtCodigoMaterial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCodigoMaterial.Enabled = false;
-            this.txtCodigoMaterial.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCodigoMaterial.Location = new System.Drawing.Point(12, 12);
-            this.txtCodigoMaterial.Name = "txtCodigoMaterial";
-            this.txtCodigoMaterial.Size = new System.Drawing.Size(62, 38);
-            this.txtCodigoMaterial.TabIndex = 31;
+            this.txtFerramentaId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtFerramentaId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtFerramentaId.Enabled = false;
+            this.txtFerramentaId.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtFerramentaId.Location = new System.Drawing.Point(12, 12);
+            this.txtFerramentaId.Name = "txtFerramentaId";
+            this.txtFerramentaId.Size = new System.Drawing.Size(62, 38);
+            this.txtFerramentaId.TabIndex = 31;
             // 
-            // txtMaterial
+            // txtNome
             // 
-            this.txtMaterial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMaterial.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtMaterial.Location = new System.Drawing.Point(32, 180);
-            this.txtMaterial.Name = "txtMaterial";
-            this.txtMaterial.Size = new System.Drawing.Size(498, 38);
-            this.txtMaterial.TabIndex = 32;
+            this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtNome.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNome.Location = new System.Drawing.Point(32, 180);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(498, 38);
+            this.txtNome.TabIndex = 32;
             // 
             // label11
             // 
@@ -152,13 +152,13 @@
             this.label11.TabIndex = 30;
             this.label11.Text = "Nome: colocador, Raspador, Etc.";
             // 
-            // richTextBox1
+            // rtbEquipamento
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(32, 302);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(498, 120);
-            this.richTextBox1.TabIndex = 38;
-            this.richTextBox1.Text = "";
+            this.rtbEquipamento.Location = new System.Drawing.Point(32, 302);
+            this.rtbEquipamento.Name = "rtbEquipamento";
+            this.rtbEquipamento.Size = new System.Drawing.Size(498, 120);
+            this.rtbEquipamento.TabIndex = 38;
+            this.rtbEquipamento.Text = "";
             // 
             // label1
             // 
@@ -171,14 +171,14 @@
             this.label1.TabIndex = 30;
             this.label1.Text = "Equipamento:";
             // 
-            // dtpPrevisao
+            // dtpRetirada
             // 
-            this.dtpPrevisao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dtpPrevisao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpPrevisao.Location = new System.Drawing.Point(797, 24);
-            this.dtpPrevisao.Name = "dtpPrevisao";
-            this.dtpPrevisao.Size = new System.Drawing.Size(148, 34);
-            this.dtpPrevisao.TabIndex = 40;
+            this.dtpRetirada.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dtpRetirada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpRetirada.Location = new System.Drawing.Point(797, 24);
+            this.dtpRetirada.Name = "dtpRetirada";
+            this.dtpRetirada.Size = new System.Drawing.Size(148, 34);
+            this.dtpRetirada.TabIndex = 40;
             // 
             // label2
             // 
@@ -202,14 +202,14 @@
             this.label3.TabIndex = 30;
             this.label3.Text = "Devolução:";
             // 
-            // dateTimePicker1
+            // dtpDevolucao
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(797, 93);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(148, 34);
-            this.dateTimePicker1.TabIndex = 40;
+            this.dtpDevolucao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dtpDevolucao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDevolucao.Location = new System.Drawing.Point(797, 93);
+            this.dtpDevolucao.Name = "dtpDevolucao";
+            this.dtpDevolucao.Size = new System.Drawing.Size(148, 34);
+            this.dtpDevolucao.TabIndex = 40;
             // 
             // label4
             // 
@@ -244,16 +244,16 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(957, 713);
             this.Controls.Add(this.cbSelecionar);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.dtpPrevisao);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.dtpDevolucao);
+            this.Controls.Add(this.dtpRetirada);
+            this.Controls.Add(this.rtbEquipamento);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvFerramentas);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.txtCodigoMaterial);
-            this.Controls.Add(this.txtMaterial);
+            this.Controls.Add(this.txtFerramentaId);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -282,15 +282,15 @@
         private Button btnLimpar;
         private Button btnDeletar;
         private Button btnSalvar;
-        private TextBox txtCodigoMaterial;
-        private TextBox txtMaterial;
+        private TextBox txtFerramentaId;
+        private TextBox txtNome;
         private Label label11;
-        private RichTextBox richTextBox1;
+        private RichTextBox rtbEquipamento;
         private Label label1;
-        private DateTimePicker dtpPrevisao;
+        private DateTimePicker dtpRetirada;
         private Label label2;
         private Label label3;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpDevolucao;
         private Label label4;
         private ComboBox cbSelecionar;
     }

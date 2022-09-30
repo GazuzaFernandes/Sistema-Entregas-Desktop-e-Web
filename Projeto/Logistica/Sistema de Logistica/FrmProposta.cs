@@ -21,5 +21,10 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
 
         }
+
+        private void btnSalvarProposta_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -73,8 +73,8 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.txtDataId = new System.Windows.Forms.TextBox();
             this.cmsSalvarConteudos = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.sToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salvarDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.msSalvarEntrada = new System.Windows.Forms.ToolStripMenuItem();
+            this.msSalvarData = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsDeletar = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deletarDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deletarItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -612,25 +612,27 @@
             // 
             this.cmsSalvarConteudos.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cmsSalvarConteudos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sToolStripMenuItem,
-            this.salvarDataToolStripMenuItem});
+            this.msSalvarEntrada,
+            this.msSalvarData});
             this.cmsSalvarConteudos.Name = "contextMenuStrip1";
-            this.cmsSalvarConteudos.Size = new System.Drawing.Size(174, 60);
-            this.cmsSalvarConteudos.Opening += new System.ComponentModel.CancelEventHandler(this.cmsSalvarConteudos_Opening);
+            this.cmsSalvarConteudos.Size = new System.Drawing.Size(211, 88);
             // 
-            // sToolStripMenuItem
+            // msSalvarEntrada
             // 
-            this.sToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.sToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
-            this.sToolStripMenuItem.Name = "sToolStripMenuItem";
-            this.sToolStripMenuItem.Size = new System.Drawing.Size(173, 28);
-            this.sToolStripMenuItem.Text = "Salvar Data";
+            this.msSalvarEntrada.ForeColor = System.Drawing.Color.Red;
+            this.msSalvarEntrada.Name = "msSalvarEntrada";
+            this.msSalvarEntrada.Size = new System.Drawing.Size(210, 28);
+            this.msSalvarEntrada.Text = "Salvar Entrada";
+            this.msSalvarEntrada.Click += new System.EventHandler(this.msSalvarEntrada_Click);
             // 
-            // salvarDataToolStripMenuItem
+            // msSalvarData
             // 
-            this.salvarDataToolStripMenuItem.Name = "salvarDataToolStripMenuItem";
-            this.salvarDataToolStripMenuItem.Size = new System.Drawing.Size(173, 28);
-            this.salvarDataToolStripMenuItem.Text = "Salvar Entrada";
+            this.msSalvarData.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.msSalvarData.ForeColor = System.Drawing.Color.Red;
+            this.msSalvarData.Name = "msSalvarData";
+            this.msSalvarData.Size = new System.Drawing.Size(210, 28);
+            this.msSalvarData.Text = "Salvar Data";
+            this.msSalvarData.Click += new System.EventHandler(this.msSalvarData_Click);
             // 
             // cmsDeletar
             // 
@@ -730,8 +732,8 @@
         private DateTimePicker dtpData;
         private Label label13;
         private ContextMenuStrip cmsSalvarConteudos;
-        private ToolStripMenuItem sToolStripMenuItem;
-        private ToolStripMenuItem salvarDataToolStripMenuItem;
+        private ToolStripMenuItem msSalvarData;
+        private ToolStripMenuItem msSalvarEntrada;
         private ContextMenuStrip cmsDeletar;
         private ToolStripMenuItem deletarDataToolStripMenuItem;
         private ToolStripMenuItem deletarItemToolStripMenuItem;

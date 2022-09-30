@@ -1134,6 +1134,8 @@ Marcio - 11 96887-5428 ( Caminhão Grande )
 Nardo - 11 99675-1691 (Apenas Içamento )
 
 CECILIA - 11 97391-8371 ( CAMINHÃO ABERTO) 
+
+MARCOS  11 94164-4584 (CURRIE)
 </value>
   </data>
   <data name="label16.Text" xml:space="preserve">
@@ -1155,7 +1157,7 @@ Acima de 250m² negociar o valor.
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+    <value>33</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

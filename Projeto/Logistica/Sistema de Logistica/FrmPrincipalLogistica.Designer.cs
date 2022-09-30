@@ -64,8 +64,6 @@ namespace Logistica.Sistema_de_Logistica
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvPrincipal = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dgvFerramenta = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -79,61 +77,82 @@ namespace Logistica.Sistema_de_Logistica
             this.txtLarguraM2 = new System.Windows.Forms.TextBox();
             this.txtComprimentoMdf = new System.Windows.Forms.TextBox();
             this.txtAlturaMdf = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtCalcularm2 = new System.Windows.Forms.TextBox();
+            this.txtComprimentoM2 = new System.Windows.Forms.TextBox();
+            this.txtLarguraMdf = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
+            this.label81 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label71 = new System.Windows.Forms.Label();
             this.label74 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.txtLataCetol = new System.Windows.Forms.TextBox();
+            this.txtRendiCetol = new System.Windows.Forms.TextBox();
             this.txtAreaCetol = new System.Windows.Forms.TextBox();
-            this.txtAreaSuperior = new System.Windows.Forms.TextBox();
-            this.txtAreaTerreo = new System.Windows.Forms.TextBox();
+            this.txtWakolAreaSuperior = new System.Windows.Forms.TextBox();
+            this.txtWakolTerreo = new System.Windows.Forms.TextBox();
+            this.txtWakolGalaoTerreo = new System.Windows.Forms.TextBox();
+            this.txtGalaoWakolSuperior = new System.Windows.Forms.TextBox();
+            this.txtWakolSuperior = new System.Windows.Forms.TextBox();
+            this.txtWakolAreaTerreo = new System.Windows.Forms.TextBox();
             this.txtAreaBase = new System.Windows.Forms.TextBox();
+            this.txtGalaoVerniz = new System.Windows.Forms.TextBox();
+            this.txtGalaoBase = new System.Windows.Forms.TextBox();
+            this.txtBase = new System.Windows.Forms.TextBox();
+            this.txtVerniz = new System.Windows.Forms.TextBox();
             this.txtAreaVerniz = new System.Windows.Forms.TextBox();
-            this.txtCalcularm2 = new System.Windows.Forms.TextBox();
-            this.txtComprimentoM2 = new System.Windows.Forms.TextBox();
-            this.txtLarguraMdf = new System.Windows.Forms.TextBox();
             this.label69 = new System.Windows.Forms.Label();
             this.label73 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.label80 = new System.Windows.Forms.Label();
             this.label78 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
             this.txtPedidoM2 = new System.Windows.Forms.TextBox();
@@ -164,14 +183,7 @@ namespace Logistica.Sistema_de_Logistica
             this.label50 = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -179,10 +191,9 @@ namespace Logistica.Sistema_de_Logistica
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFerramenta)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -301,7 +312,7 @@ namespace Logistica.Sistema_de_Logistica
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1768, 162);
+            this.panel1.Size = new System.Drawing.Size(1820, 162);
             this.panel1.TabIndex = 5;
             // 
             // pictureBox1
@@ -438,9 +449,7 @@ namespace Logistica.Sistema_de_Logistica
             this.rbEndereco.AutoSize = true;
             this.rbEndereco.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbEndereco.ForeColor = System.Drawing.Color.White;
-
             this.rbEndereco.Location = new System.Drawing.Point(719, 106);
-
             this.rbEndereco.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbEndereco.Name = "rbEndereco";
             this.rbEndereco.Size = new System.Drawing.Size(133, 35);
@@ -577,16 +586,16 @@ namespace Logistica.Sistema_de_Logistica
             // 
             this.tabControl1.AllowDrop = true;
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tabControl1.Location = new System.Drawing.Point(0, 162);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1768, 521);
+            this.tabControl1.Size = new System.Drawing.Size(1820, 854);
             this.tabControl1.TabIndex = 6;
             // 
             // tabPage1
@@ -596,7 +605,7 @@ namespace Logistica.Sistema_de_Logistica
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1760, 477);
+            this.tabPage1.Size = new System.Drawing.Size(1812, 810);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Principal";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -613,39 +622,10 @@ namespace Logistica.Sistema_de_Logistica
             this.dgvPrincipal.Name = "dgvPrincipal";
             this.dgvPrincipal.ReadOnly = true;
             this.dgvPrincipal.RowHeadersWidth = 51;
-            this.dgvPrincipal.Size = new System.Drawing.Size(1754, 473);
+            this.dgvPrincipal.Size = new System.Drawing.Size(1806, 806);
             this.dgvPrincipal.TabIndex = 0;
             this.dgvPrincipal.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrincipal_CellDoubleClick);
             this.dgvPrincipal.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvPrincipal_DataBindingComplete);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.dgvFerramenta);
-            this.tabPage2.Location = new System.Drawing.Point(4, 40);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1760, 477);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Ferramentas Obra";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dgvFerramenta
-            // 
-            this.dgvFerramenta.AllowUserToAddRows = false;
-            this.dgvFerramenta.AllowUserToDeleteRows = false;
-            this.dgvFerramenta.BackgroundColor = System.Drawing.Color.White;
-            this.dgvFerramenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFerramenta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvFerramenta.Location = new System.Drawing.Point(3, 2);
-            this.dgvFerramenta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvFerramenta.Name = "dgvFerramenta";
-            this.dgvFerramenta.ReadOnly = true;
-            this.dgvFerramenta.RowHeadersWidth = 51;
-            this.dgvFerramenta.Size = new System.Drawing.Size(1754, 473);
-            this.dgvFerramenta.TabIndex = 1;
-            this.dgvFerramenta.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFerramenta_CellDoubleClick);
-            this.dgvFerramenta.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvFerramenta_DataBindingComplete);
             // 
             // tabPage4
             // 
@@ -658,29 +638,29 @@ namespace Logistica.Sistema_de_Logistica
             this.tabPage4.Location = new System.Drawing.Point(4, 40);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1760, 477);
+            this.tabPage4.Size = new System.Drawing.Size(1812, 810);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Tabela Carretos";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(960, 58);
+            this.label17.Location = new System.Drawing.Point(969, 67);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(570, 480);
+            this.label17.Size = new System.Drawing.Size(655, 646);
             this.label17.TabIndex = 3;
             this.label17.Text = resources.GetString("label17.Text");
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(266, 74);
+            this.label16.Location = new System.Drawing.Point(173, 41);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(407, 480);
+            this.label16.Size = new System.Drawing.Size(664, 810);
             this.label16.TabIndex = 3;
             this.label16.Text = resources.GetString("label16.Text");
             // 
@@ -716,114 +696,45 @@ namespace Logistica.Sistema_de_Logistica
             this.tabPage5.Controls.Add(this.txtLarguraM2);
             this.tabPage5.Controls.Add(this.txtComprimentoMdf);
             this.tabPage5.Controls.Add(this.txtAlturaMdf);
-            this.tabPage5.Controls.Add(this.label71);
-            this.tabPage5.Controls.Add(this.label74);
-            this.tabPage5.Controls.Add(this.label41);
-            this.tabPage5.Controls.Add(this.label46);
-            this.tabPage5.Controls.Add(this.label34);
             this.tabPage5.Controls.Add(this.label30);
             this.tabPage5.Controls.Add(this.label19);
             this.tabPage5.Controls.Add(this.label10);
-            this.tabPage5.Controls.Add(this.txtAreaCetol);
-            this.tabPage5.Controls.Add(this.txtAreaSuperior);
-            this.tabPage5.Controls.Add(this.txtAreaTerreo);
-            this.tabPage5.Controls.Add(this.txtAreaBase);
-            this.tabPage5.Controls.Add(this.txtAreaVerniz);
             this.tabPage5.Controls.Add(this.txtCalcularm2);
             this.tabPage5.Controls.Add(this.txtComprimentoM2);
             this.tabPage5.Controls.Add(this.txtLarguraMdf);
-            this.tabPage5.Controls.Add(this.label69);
-            this.tabPage5.Controls.Add(this.label73);
-            this.tabPage5.Controls.Add(this.label40);
-            this.tabPage5.Controls.Add(this.label45);
-            this.tabPage5.Controls.Add(this.label33);
             this.tabPage5.Controls.Add(this.label29);
             this.tabPage5.Controls.Add(this.label18);
             this.tabPage5.Controls.Add(this.label9);
-            this.tabPage5.Controls.Add(this.label72);
-            this.tabPage5.Controls.Add(this.label66);
-            this.tabPage5.Controls.Add(this.label39);
-            this.tabPage5.Controls.Add(this.label44);
-            this.tabPage5.Controls.Add(this.label32);
             this.tabPage5.Controls.Add(this.label23);
             this.tabPage5.Controls.Add(this.label21);
-            this.tabPage5.Controls.Add(this.label60);
-            this.tabPage5.Controls.Add(this.label65);
-            this.tabPage5.Controls.Add(this.label38);
-            this.tabPage5.Controls.Add(this.label43);
-            this.tabPage5.Controls.Add(this.label31);
             this.tabPage5.Controls.Add(this.label22);
+            this.tabPage5.Controls.Add(this.label83);
+            this.tabPage5.Controls.Add(this.label82);
+            this.tabPage5.Controls.Add(this.label81);
             this.tabPage5.Controls.Add(this.label15);
             this.tabPage5.Controls.Add(this.label11);
-            this.tabPage5.Controls.Add(this.label59);
-            this.tabPage5.Controls.Add(this.label63);
-            this.tabPage5.Controls.Add(this.label37);
-            this.tabPage5.Controls.Add(this.label42);
-            this.tabPage5.Controls.Add(this.label28);
             this.tabPage5.Controls.Add(this.label27);
             this.tabPage5.Controls.Add(this.label14);
             this.tabPage5.Controls.Add(this.label12);
-            this.tabPage5.Controls.Add(this.label80);
-            this.tabPage5.Controls.Add(this.label78);
-            this.tabPage5.Controls.Add(this.label55);
-            this.tabPage5.Controls.Add(this.label64);
-            this.tabPage5.Controls.Add(this.label62);
-            this.tabPage5.Controls.Add(this.label36);
-            this.tabPage5.Controls.Add(this.label25);
             this.tabPage5.Controls.Add(this.label20);
-            this.tabPage5.Controls.Add(this.label54);
-            this.tabPage5.Controls.Add(this.label70);
-            this.tabPage5.Controls.Add(this.txtPedidoM2);
-            this.tabPage5.Controls.Add(this.txtTotalLinha2);
-            this.tabPage5.Controls.Add(this.txtLarguraDeck);
-            this.tabPage5.Controls.Add(this.TxtTotalPresilhas);
-            this.tabPage5.Controls.Add(this.txtTotal);
-            this.tabPage5.Controls.Add(this.txtTotalDeck);
-            this.tabPage5.Controls.Add(this.txtTotalCaibro);
-            this.tabPage5.Controls.Add(this.txtPresilhasM2);
-            this.tabPage5.Controls.Add(this.txtTotalPresilha);
-            this.tabPage5.Controls.Add(this.txtTotalLinha1);
-            this.tabPage5.Controls.Add(this.txtM2Presilhas);
-            this.tabPage5.Controls.Add(this.txtEspacamentoCaibro);
-            this.tabPage5.Controls.Add(this.txtComprimentoCaibro);
-            this.tabPage5.Controls.Add(this.label57);
-            this.tabPage5.Controls.Add(this.label77);
-            this.tabPage5.Controls.Add(this.label53);
-            this.tabPage5.Controls.Add(this.label52);
-            this.tabPage5.Controls.Add(this.label51);
-            this.tabPage5.Controls.Add(this.label1);
-            this.tabPage5.Controls.Add(this.label68);
-            this.tabPage5.Controls.Add(this.label79);
-            this.tabPage5.Controls.Add(this.label76);
-            this.tabPage5.Controls.Add(this.label67);
-            this.tabPage5.Controls.Add(this.label75);
-            this.tabPage5.Controls.Add(this.label58);
-            this.tabPage5.Controls.Add(this.label50);
-            this.tabPage5.Controls.Add(this.label56);
-            this.tabPage5.Controls.Add(this.label49);
-            this.tabPage5.Controls.Add(this.label61);
-            this.tabPage5.Controls.Add(this.label48);
             this.tabPage5.Controls.Add(this.label8);
-            this.tabPage5.Controls.Add(this.label35);
-            this.tabPage5.Controls.Add(this.label24);
             this.tabPage5.Controls.Add(this.label26);
             this.tabPage5.Controls.Add(this.label13);
             this.tabPage5.Controls.Add(this.label5);
-            this.tabPage5.Controls.Add(this.label47);
             this.tabPage5.Location = new System.Drawing.Point(4, 40);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1760, 477);
+            this.tabPage5.Size = new System.Drawing.Size(1812, 810);
             this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Tipo de Calculos";
+            this.tabPage5.Text = "Calcular Mdf, m2, m3";
             // 
             // txtTotalm3
             // 
             this.txtTotalm3.Enabled = false;
             this.txtTotalm3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtTotalm3.ForeColor = System.Drawing.Color.Black;
-            this.txtTotalm3.Location = new System.Drawing.Point(331, 456);
+            this.txtTotalm3.Location = new System.Drawing.Point(1569, 646);
             this.txtTotalm3.Name = "txtTotalm3";
-            this.txtTotalm3.Size = new System.Drawing.Size(49, 34);
+            this.txtTotalm3.Size = new System.Drawing.Size(65, 34);
             this.txtTotalm3.TabIndex = 73;
             this.txtTotalm3.Text = "0";
             // 
@@ -832,9 +743,9 @@ namespace Logistica.Sistema_de_Logistica
             this.txtTotalm2.Enabled = false;
             this.txtTotalm2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtTotalm2.ForeColor = System.Drawing.Color.Black;
-            this.txtTotalm2.Location = new System.Drawing.Point(316, 315);
+            this.txtTotalm2.Location = new System.Drawing.Point(1584, 396);
             this.txtTotalm2.Name = "txtTotalm2";
-            this.txtTotalm2.Size = new System.Drawing.Size(49, 34);
+            this.txtTotalm2.Size = new System.Drawing.Size(65, 34);
             this.txtTotalm2.TabIndex = 73;
             this.txtTotalm2.Text = "0";
             // 
@@ -843,9 +754,9 @@ namespace Logistica.Sistema_de_Logistica
             this.txtTotalChapa.Enabled = false;
             this.txtTotalChapa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtTotalChapa.ForeColor = System.Drawing.Color.Black;
-            this.txtTotalChapa.Location = new System.Drawing.Point(519, 198);
+            this.txtTotalChapa.Location = new System.Drawing.Point(669, 481);
             this.txtTotalChapa.Name = "txtTotalChapa";
-            this.txtTotalChapa.Size = new System.Drawing.Size(49, 34);
+            this.txtTotalChapa.Size = new System.Drawing.Size(66, 34);
             this.txtTotalChapa.TabIndex = 73;
             this.txtTotalChapa.Text = "0";
             // 
@@ -853,9 +764,9 @@ namespace Logistica.Sistema_de_Logistica
             // 
             this.TxtEspessuraM3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtEspessuraM3.ForeColor = System.Drawing.Color.Black;
-            this.TxtEspessuraM3.Location = new System.Drawing.Point(226, 456);
+            this.TxtEspessuraM3.Location = new System.Drawing.Point(1318, 646);
             this.TxtEspessuraM3.Name = "TxtEspessuraM3";
-            this.TxtEspessuraM3.Size = new System.Drawing.Size(49, 34);
+            this.TxtEspessuraM3.Size = new System.Drawing.Size(65, 34);
             this.TxtEspessuraM3.TabIndex = 73;
             this.TxtEspessuraM3.Text = "0,0";
             this.TxtEspessuraM3.TextChanged += new System.EventHandler(this.TxtEspessuraM3_TextChanged);
@@ -864,10 +775,11 @@ namespace Logistica.Sistema_de_Logistica
             // 
             this.txtLarguraM2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtLarguraM2.ForeColor = System.Drawing.Color.Black;
-            this.txtLarguraM2.Location = new System.Drawing.Point(209, 315);
+            this.txtLarguraM2.Location = new System.Drawing.Point(1338, 396);
             this.txtLarguraM2.Name = "txtLarguraM2";
-            this.txtLarguraM2.Size = new System.Drawing.Size(49, 34);
+            this.txtLarguraM2.Size = new System.Drawing.Size(65, 34);
             this.txtLarguraM2.TabIndex = 73;
+            this.txtLarguraM2.Text = "0";
             this.txtLarguraM2.TextChanged += new System.EventHandler(this.txtLarguraM2_TextChanged);
             // 
             // txtComprimentoMdf
@@ -875,9 +787,9 @@ namespace Logistica.Sistema_de_Logistica
             this.txtComprimentoMdf.Enabled = false;
             this.txtComprimentoMdf.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtComprimentoMdf.ForeColor = System.Drawing.Color.Black;
-            this.txtComprimentoMdf.Location = new System.Drawing.Point(365, 198);
+            this.txtComprimentoMdf.Location = new System.Drawing.Point(352, 481);
             this.txtComprimentoMdf.Name = "txtComprimentoMdf";
-            this.txtComprimentoMdf.Size = new System.Drawing.Size(49, 34);
+            this.txtComprimentoMdf.Size = new System.Drawing.Size(66, 34);
             this.txtComprimentoMdf.TabIndex = 73;
             this.txtComprimentoMdf.Text = "2,75";
             this.txtComprimentoMdf.TextChanged += new System.EventHandler(this.txtComprimentoMdf_TextChanged);
@@ -886,74 +798,19 @@ namespace Logistica.Sistema_de_Logistica
             // 
             this.txtAlturaMdf.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtAlturaMdf.ForeColor = System.Drawing.Color.Red;
-            this.txtAlturaMdf.Location = new System.Drawing.Point(207, 198);
+            this.txtAlturaMdf.Location = new System.Drawing.Point(617, 396);
             this.txtAlturaMdf.Name = "txtAlturaMdf";
-            this.txtAlturaMdf.Size = new System.Drawing.Size(54, 34);
+            this.txtAlturaMdf.Size = new System.Drawing.Size(66, 34);
             this.txtAlturaMdf.TabIndex = 71;
             this.txtAlturaMdf.Text = "0,1";
             this.txtAlturaMdf.TextChanged += new System.EventHandler(this.txtAlturaMdf_TextChanged);
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label71.ForeColor = System.Drawing.Color.White;
-            this.label71.Location = new System.Drawing.Point(383, 896);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(68, 32);
-            this.label71.TabIndex = 69;
-            this.label71.Text = "Lata:";
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label74.ForeColor = System.Drawing.Color.White;
-            this.label74.Location = new System.Drawing.Point(1315, 881);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(86, 32);
-            this.label74.TabIndex = 69;
-            this.label74.Text = "Galão:";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label41.ForeColor = System.Drawing.Color.White;
-            this.label41.Location = new System.Drawing.Point(1315, 809);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(86, 32);
-            this.label41.TabIndex = 69;
-            this.label41.Text = "Galão:";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label46.ForeColor = System.Drawing.Color.White;
-            this.label46.Location = new System.Drawing.Point(361, 698);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(86, 32);
-            this.label46.TabIndex = 69;
-            this.label46.Text = "Galão:";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label34.ForeColor = System.Drawing.Color.White;
-            this.label34.Location = new System.Drawing.Point(361, 621);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(86, 32);
-            this.label34.TabIndex = 69;
-            this.label34.Text = "Galão:";
             // 
             // label30
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label30.ForeColor = System.Drawing.Color.White;
-            this.label30.Location = new System.Drawing.Point(331, 423);
+            this.label30.Location = new System.Drawing.Point(1404, 647);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(120, 32);
             this.label30.TabIndex = 69;
@@ -964,7 +821,7 @@ namespace Logistica.Sistema_de_Logistica
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(289, 287);
+            this.label19.Location = new System.Drawing.Point(1461, 397);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(117, 32);
             this.label19.TabIndex = 69;
@@ -975,149 +832,49 @@ namespace Logistica.Sistema_de_Logistica
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(490, 165);
+            this.label10.Location = new System.Drawing.Point(509, 482);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(154, 32);
             this.label10.TabIndex = 69;
             this.label10.Text = "Total Chapa:";
             // 
-            // txtAreaCetol
-            // 
-            this.txtAreaCetol.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtAreaCetol.Location = new System.Drawing.Point(137, 929);
-            this.txtAreaCetol.Name = "txtAreaCetol";
-            this.txtAreaCetol.Size = new System.Drawing.Size(65, 34);
-            this.txtAreaCetol.TabIndex = 72;
-            this.txtAreaCetol.TextChanged += new System.EventHandler(this.txtAreaCetol_TextChanged);
-            // 
-            // txtAreaSuperior
-            // 
-            this.txtAreaSuperior.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtAreaSuperior.Location = new System.Drawing.Point(1028, 919);
-            this.txtAreaSuperior.Name = "txtAreaSuperior";
-            this.txtAreaSuperior.Size = new System.Drawing.Size(65, 34);
-            this.txtAreaSuperior.TabIndex = 72;
-            this.txtAreaSuperior.Text = "0";
-            this.txtAreaSuperior.TextChanged += new System.EventHandler(this.txtAreaSuperior_TextChanged);
-            // 
-            // txtAreaTerreo
-            // 
-            this.txtAreaTerreo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtAreaTerreo.Location = new System.Drawing.Point(1024, 842);
-            this.txtAreaTerreo.Name = "txtAreaTerreo";
-            this.txtAreaTerreo.Size = new System.Drawing.Size(65, 34);
-            this.txtAreaTerreo.TabIndex = 72;
-            this.txtAreaTerreo.Text = "0";
-            this.txtAreaTerreo.TextChanged += new System.EventHandler(this.txtAreaTerreo_TextChanged);
-            // 
-            // txtAreaBase
-            // 
-            this.txtAreaBase.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtAreaBase.Location = new System.Drawing.Point(126, 731);
-            this.txtAreaBase.Name = "txtAreaBase";
-            this.txtAreaBase.Size = new System.Drawing.Size(65, 34);
-            this.txtAreaBase.TabIndex = 72;
-            this.txtAreaBase.TextChanged += new System.EventHandler(this.txtAreaBase_TextChanged);
-            // 
-            // txtAreaVerniz
-            // 
-            this.txtAreaVerniz.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtAreaVerniz.Location = new System.Drawing.Point(126, 654);
-            this.txtAreaVerniz.Name = "txtAreaVerniz";
-            this.txtAreaVerniz.Size = new System.Drawing.Size(65, 34);
-            this.txtAreaVerniz.TabIndex = 72;
-            this.txtAreaVerniz.TextChanged += new System.EventHandler(this.txtAreaVerniz_TextChanged);
-            // 
             // txtCalcularm2
             // 
             this.txtCalcularm2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtCalcularm2.Location = new System.Drawing.Point(85, 456);
+            this.txtCalcularm2.Location = new System.Drawing.Point(1065, 644);
             this.txtCalcularm2.Name = "txtCalcularm2";
             this.txtCalcularm2.Size = new System.Drawing.Size(65, 34);
             this.txtCalcularm2.TabIndex = 72;
+            this.txtCalcularm2.Text = "0";
             this.txtCalcularm2.TextChanged += new System.EventHandler(this.txtCalcularm2_TextChanged);
             // 
             // txtComprimentoM2
             // 
             this.txtComprimentoM2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtComprimentoM2.Location = new System.Drawing.Point(79, 315);
+            this.txtComprimentoM2.Location = new System.Drawing.Point(1106, 396);
             this.txtComprimentoM2.Name = "txtComprimentoM2";
             this.txtComprimentoM2.Size = new System.Drawing.Size(65, 34);
             this.txtComprimentoM2.TabIndex = 72;
+            this.txtComprimentoM2.Text = "0";
             this.txtComprimentoM2.TextChanged += new System.EventHandler(this.txtComprimentoM2_TextChanged);
             // 
             // txtLarguraMdf
             // 
             this.txtLarguraMdf.Enabled = false;
             this.txtLarguraMdf.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtLarguraMdf.Location = new System.Drawing.Point(59, 198);
+            this.txtLarguraMdf.Location = new System.Drawing.Point(304, 396);
             this.txtLarguraMdf.Name = "txtLarguraMdf";
-            this.txtLarguraMdf.Size = new System.Drawing.Size(65, 34);
+            this.txtLarguraMdf.Size = new System.Drawing.Size(66, 34);
             this.txtLarguraMdf.TabIndex = 72;
             this.txtLarguraMdf.Text = "1,84";
             this.txtLarguraMdf.TextChanged += new System.EventHandler(this.txtLarguraMdf_TextChanged);
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label69.ForeColor = System.Drawing.Color.White;
-            this.label69.Location = new System.Drawing.Point(249, 896);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(145, 32);
-            this.label69.TabIndex = 69;
-            this.label69.Text = "Rend Cetol:";
-            // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label73.ForeColor = System.Drawing.Color.White;
-            this.label73.Location = new System.Drawing.Point(1136, 881);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(180, 32);
-            this.label73.TabIndex = 69;
-            this.label73.Text = "Wakol PU 280:";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label40.ForeColor = System.Drawing.Color.White;
-            this.label40.Location = new System.Drawing.Point(1136, 809);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(180, 32);
-            this.label40.TabIndex = 69;
-            this.label40.Text = "Wakol PU 280:";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label45.ForeColor = System.Drawing.Color.White;
-            this.label45.Location = new System.Drawing.Point(259, 698);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(73, 32);
-            this.label45.TabIndex = 69;
-            this.label45.Text = "Base:";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label33.ForeColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(248, 621);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(92, 32);
-            this.label33.TabIndex = 69;
-            this.label33.Text = "Verniz:";
             // 
             // label29
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label29.ForeColor = System.Drawing.Color.White;
-            this.label29.Location = new System.Drawing.Point(197, 423);
+            this.label29.Location = new System.Drawing.Point(1179, 645);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(133, 32);
             this.label29.TabIndex = 69;
@@ -1128,7 +885,7 @@ namespace Logistica.Sistema_de_Logistica
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(37, 287);
+            this.label18.Location = new System.Drawing.Point(921, 397);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(179, 32);
             this.label18.TabIndex = 69;
@@ -1139,73 +896,18 @@ namespace Logistica.Sistema_de_Logistica
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(336, 165);
+            this.label9.Location = new System.Drawing.Point(167, 482);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(179, 32);
             this.label9.TabIndex = 69;
             this.label9.Text = "Comprimento:";
-            // 
-            // label72
-            // 
-            this.label72.AutoSize = true;
-            this.label72.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label72.ForeColor = System.Drawing.Color.White;
-            this.label72.Location = new System.Drawing.Point(1267, 921);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(31, 32);
-            this.label72.TabIndex = 75;
-            this.label72.Text = "=";
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label66.ForeColor = System.Drawing.Color.White;
-            this.label66.Location = new System.Drawing.Point(348, 931);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(31, 32);
-            this.label66.TabIndex = 75;
-            this.label66.Text = "=";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label39.ForeColor = System.Drawing.Color.White;
-            this.label39.Location = new System.Drawing.Point(1267, 844);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(31, 32);
-            this.label39.TabIndex = 75;
-            this.label39.Text = "=";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label44.ForeColor = System.Drawing.Color.White;
-            this.label44.Location = new System.Drawing.Point(337, 733);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(31, 32);
-            this.label44.TabIndex = 75;
-            this.label44.Text = "=";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label32.ForeColor = System.Drawing.Color.White;
-            this.label32.Location = new System.Drawing.Point(337, 656);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(31, 32);
-            this.label32.TabIndex = 75;
-            this.label32.Text = "=";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(296, 458);
+            this.label23.Location = new System.Drawing.Point(1534, 647);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(31, 32);
             this.label23.TabIndex = 75;
@@ -1216,89 +918,64 @@ namespace Logistica.Sistema_de_Logistica
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(279, 317);
+            this.label21.Location = new System.Drawing.Point(1424, 397);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(31, 32);
             this.label21.TabIndex = 75;
             this.label21.Text = "=";
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label60.ForeColor = System.Drawing.Color.White;
-            this.label60.Location = new System.Drawing.Point(1115, 921);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(27, 32);
-            this.label60.TabIndex = 75;
-            this.label60.Text = "x";
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label65.ForeColor = System.Drawing.Color.White;
-            this.label65.Location = new System.Drawing.Point(224, 931);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(25, 32);
-            this.label65.TabIndex = 75;
-            this.label65.Text = "/";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label38.ForeColor = System.Drawing.Color.White;
-            this.label38.Location = new System.Drawing.Point(1111, 844);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(27, 32);
-            this.label38.TabIndex = 75;
-            this.label38.Text = "x";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label43.ForeColor = System.Drawing.Color.White;
-            this.label43.Location = new System.Drawing.Point(213, 733);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(25, 32);
-            this.label43.TabIndex = 75;
-            this.label43.Text = "/";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label31.ForeColor = System.Drawing.Color.White;
-            this.label31.Location = new System.Drawing.Point(213, 656);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(25, 32);
-            this.label31.TabIndex = 75;
-            this.label31.Text = "/";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(172, 458);
+            this.label22.Location = new System.Drawing.Point(1146, 645);
             this.label22.Name = "label22";
-
             this.label22.Size = new System.Drawing.Size(27, 32);
-
             this.label22.TabIndex = 75;
             this.label22.Text = "x";
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label83.ForeColor = System.Drawing.Color.White;
+            this.label83.Location = new System.Drawing.Point(451, 482);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(31, 32);
+            this.label83.TabIndex = 75;
+            this.label83.Text = "=";
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label82.ForeColor = System.Drawing.Color.White;
+            this.label82.Location = new System.Drawing.Point(714, 397);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(27, 32);
+            this.label82.TabIndex = 75;
+            this.label82.Text = "x";
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label81.ForeColor = System.Drawing.Color.White;
+            this.label81.Location = new System.Drawing.Point(390, 397);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(25, 32);
+            this.label81.TabIndex = 75;
+            this.label81.Text = "/";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(167, 315);
-
+            this.label15.Location = new System.Drawing.Point(1190, 397);
+            this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(27, 32);
-
             this.label15.TabIndex = 75;
             this.label15.Text = "x";
             // 
@@ -1307,76 +984,20 @@ namespace Logistica.Sistema_de_Logistica
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(172, 165);
+            this.label11.Location = new System.Drawing.Point(426, 397);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(185, 32);
             this.label11.TabIndex = 75;
             this.label11.Text = "Altura Rodapé:";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label59.ForeColor = System.Drawing.Color.White;
-            this.label59.Location = new System.Drawing.Point(1013, 881);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(106, 32);
-            this.label59.TabIndex = 70;
-            this.label59.Text = "Area m²";
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label63.ForeColor = System.Drawing.Color.White;
-            this.label63.Location = new System.Drawing.Point(126, 896);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(113, 32);
-            this.label63.TabIndex = 70;
-            this.label63.Text = "Area m²:";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label37.ForeColor = System.Drawing.Color.White;
-            this.label37.Location = new System.Drawing.Point(1013, 809);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(106, 32);
-            this.label37.TabIndex = 70;
-            this.label37.Text = "Area m²";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label42.ForeColor = System.Drawing.Color.White;
-            this.label42.Location = new System.Drawing.Point(115, 698);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(106, 32);
-            this.label42.TabIndex = 70;
-            this.label42.Text = "Area m²";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.Location = new System.Drawing.Point(115, 621);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(113, 32);
-            this.label28.TabIndex = 70;
-            this.label28.Text = "Area m²:";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(74, 423);
-
+            this.label27.Location = new System.Drawing.Point(943, 645);
+            this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(116, 32);
-
             this.label27.TabIndex = 70;
             this.label27.Text = "Total m²:";
             // 
@@ -1385,10 +1006,9 @@ namespace Logistica.Sistema_de_Logistica
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(183, 287);
-
+            this.label14.Location = new System.Drawing.Point(1223, 397);
+            this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(109, 32);
-
             this.label14.TabIndex = 70;
             this.label14.Text = "Largura:";
             // 
@@ -1397,66 +1017,588 @@ namespace Logistica.Sistema_de_Logistica
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(48, 165);
+            this.label12.Location = new System.Drawing.Point(189, 397);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(109, 32);
             this.label12.TabIndex = 70;
             this.label12.Text = "Largura:";
             // 
-            // label80
+            // label20
             // 
-            this.label80.AutoSize = true;
-            this.label80.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label80.ForeColor = System.Drawing.Color.White;
-            this.label80.Location = new System.Drawing.Point(1081, 488);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(150, 32);
-            this.label80.TabIndex = 68;
-            this.label80.Text = "Presilha m²:";
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label20.ForeColor = System.Drawing.Color.Yellow;
+            this.label20.Location = new System.Drawing.Point(921, 293);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(624, 64);
+            this.label20.TabIndex = 67;
+            this.label20.Text = "Comprimento X largura = M2 - M2 X espessura = M3\r\nComprimento X largura X espessu" +
+    "ra = M3\r\n";
             // 
-            // label78
+            // label8
             // 
-            this.label78.AutoSize = true;
-            this.label78.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label78.ForeColor = System.Drawing.Color.White;
-            this.label78.Location = new System.Drawing.Point(907, 438);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(159, 32);
-            this.label78.TabIndex = 68;
-            this.label78.Text = "Total Caibro:";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.Yellow;
+            this.label8.Location = new System.Drawing.Point(122, 225);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(685, 128);
+            this.label8.TabIndex = 49;
+            this.label8.Text = "ALTURA / TAMANHO DO RODAPÉ * COMPRIMENTO \r\nEXEMPLO: 1,84 / 0,105 = 17 * 2,75 = 46" +
+    "ml \r\nCHAPA DE MDF (ALTURA 1,84) POR (COMPRIMENTO 2,75)\r\nSempre no final do Rodap" +
+    "é colocar (5) que significa perca.";
             // 
-            // label55
+            // label26
             // 
-            this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label55.ForeColor = System.Drawing.Color.White;
-            this.label55.Location = new System.Drawing.Point(1038, 287);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(46, 32);
-            this.label55.TabIndex = 68;
-            this.label55.Text = "m²";
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label26.ForeColor = System.Drawing.Color.Red;
+            this.label26.Location = new System.Drawing.Point(921, 552);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(676, 64);
+            this.label26.TabIndex = 49;
+            this.label26.Text = "CALCULAR M3 \r\n TOTAL M² * ESPESSURA  EXEMPLO: 23M² * 0,07 = 1,61M3";
             // 
-            // label64
+            // label13
             // 
-            this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label64.ForeColor = System.Drawing.Color.Yellow;
-            this.label64.Location = new System.Drawing.Point(928, 537);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(597, 96);
-            this.label64.TabIndex = 66;
-            this.label64.Text = "Para saber quanto vai de presilha por m²\r\nVamos multiplicar: Presilhas m² x area " +
-    "m² desejada\r\n (lembrando sempre colocar numero inteiro)";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.Location = new System.Drawing.Point(921, 177);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(695, 64);
+            this.label13.TabIndex = 49;
+            this.label13.Text = "CALCULAR M²\r\n COMPRIMENTO * LARGURA EXEMPLO = 10ml * 0,10 = 1m²";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(200, 164);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(377, 32);
+            this.label5.TabIndex = 49;
+            this.label5.Text = "CALCULAR MDF PARA RODAPÉ \r\n";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.AutoScroll = true;
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.tabPage2.Controls.Add(this.label71);
+            this.tabPage2.Controls.Add(this.label74);
+            this.tabPage2.Controls.Add(this.label41);
+            this.tabPage2.Controls.Add(this.label46);
+            this.tabPage2.Controls.Add(this.label34);
+            this.tabPage2.Controls.Add(this.txtLataCetol);
+            this.tabPage2.Controls.Add(this.txtRendiCetol);
+            this.tabPage2.Controls.Add(this.txtAreaCetol);
+            this.tabPage2.Controls.Add(this.txtWakolAreaSuperior);
+            this.tabPage2.Controls.Add(this.txtWakolTerreo);
+            this.tabPage2.Controls.Add(this.txtWakolGalaoTerreo);
+            this.tabPage2.Controls.Add(this.txtGalaoWakolSuperior);
+            this.tabPage2.Controls.Add(this.txtWakolSuperior);
+            this.tabPage2.Controls.Add(this.txtWakolAreaTerreo);
+            this.tabPage2.Controls.Add(this.txtAreaBase);
+            this.tabPage2.Controls.Add(this.txtGalaoVerniz);
+            this.tabPage2.Controls.Add(this.txtGalaoBase);
+            this.tabPage2.Controls.Add(this.txtBase);
+            this.tabPage2.Controls.Add(this.txtVerniz);
+            this.tabPage2.Controls.Add(this.txtAreaVerniz);
+            this.tabPage2.Controls.Add(this.label69);
+            this.tabPage2.Controls.Add(this.label73);
+            this.tabPage2.Controls.Add(this.label40);
+            this.tabPage2.Controls.Add(this.label45);
+            this.tabPage2.Controls.Add(this.label33);
+            this.tabPage2.Controls.Add(this.label72);
+            this.tabPage2.Controls.Add(this.label66);
+            this.tabPage2.Controls.Add(this.label39);
+            this.tabPage2.Controls.Add(this.label44);
+            this.tabPage2.Controls.Add(this.label32);
+            this.tabPage2.Controls.Add(this.label60);
+            this.tabPage2.Controls.Add(this.label65);
+            this.tabPage2.Controls.Add(this.label38);
+            this.tabPage2.Controls.Add(this.label43);
+            this.tabPage2.Controls.Add(this.label31);
+            this.tabPage2.Controls.Add(this.label59);
+            this.tabPage2.Controls.Add(this.label63);
+            this.tabPage2.Controls.Add(this.label37);
+            this.tabPage2.Controls.Add(this.label42);
+            this.tabPage2.Controls.Add(this.label28);
+            this.tabPage2.Controls.Add(this.label62);
+            this.tabPage2.Controls.Add(this.label36);
+            this.tabPage2.Controls.Add(this.label25);
+            this.tabPage2.Controls.Add(this.label61);
+            this.tabPage2.Controls.Add(this.label35);
+            this.tabPage2.Controls.Add(this.label24);
+            this.tabPage2.Controls.Add(this.label80);
+            this.tabPage2.Controls.Add(this.label78);
+            this.tabPage2.Controls.Add(this.label55);
+            this.tabPage2.Controls.Add(this.label64);
+            this.tabPage2.Controls.Add(this.label54);
+            this.tabPage2.Controls.Add(this.label70);
+            this.tabPage2.Controls.Add(this.txtPedidoM2);
+            this.tabPage2.Controls.Add(this.txtTotalLinha2);
+            this.tabPage2.Controls.Add(this.txtLarguraDeck);
+            this.tabPage2.Controls.Add(this.TxtTotalPresilhas);
+            this.tabPage2.Controls.Add(this.txtTotal);
+            this.tabPage2.Controls.Add(this.txtTotalDeck);
+            this.tabPage2.Controls.Add(this.txtTotalCaibro);
+            this.tabPage2.Controls.Add(this.txtPresilhasM2);
+            this.tabPage2.Controls.Add(this.txtTotalPresilha);
+            this.tabPage2.Controls.Add(this.txtTotalLinha1);
+            this.tabPage2.Controls.Add(this.txtM2Presilhas);
+            this.tabPage2.Controls.Add(this.txtEspacamentoCaibro);
+            this.tabPage2.Controls.Add(this.txtComprimentoCaibro);
+            this.tabPage2.Controls.Add(this.label57);
+            this.tabPage2.Controls.Add(this.label77);
+            this.tabPage2.Controls.Add(this.label53);
+            this.tabPage2.Controls.Add(this.label52);
+            this.tabPage2.Controls.Add(this.label51);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.label68);
+            this.tabPage2.Controls.Add(this.label79);
+            this.tabPage2.Controls.Add(this.label76);
+            this.tabPage2.Controls.Add(this.label67);
+            this.tabPage2.Controls.Add(this.label75);
+            this.tabPage2.Controls.Add(this.label58);
+            this.tabPage2.Controls.Add(this.label50);
+            this.tabPage2.Controls.Add(this.label56);
+            this.tabPage2.Controls.Add(this.label49);
+            this.tabPage2.Controls.Add(this.label48);
+            this.tabPage2.Controls.Add(this.label47);
+            this.tabPage2.Location = new System.Drawing.Point(4, 40);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(1812, 810);
+            this.tabPage2.TabIndex = 5;
+            this.tabPage2.Text = "Calcular Verniz e Presilhas";
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label71.ForeColor = System.Drawing.Color.White;
+            this.label71.Location = new System.Drawing.Point(1591, 464);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(68, 32);
+            this.label71.TabIndex = 115;
+            this.label71.Text = "Lata:";
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label74.ForeColor = System.Drawing.Color.White;
+            this.label74.Location = new System.Drawing.Point(1502, 686);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(86, 32);
+            this.label74.TabIndex = 116;
+            this.label74.Text = "Galão:";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label41.ForeColor = System.Drawing.Color.White;
+            this.label41.Location = new System.Drawing.Point(1515, 608);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(86, 32);
+            this.label41.TabIndex = 117;
+            this.label41.Text = "Galão:";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label46.ForeColor = System.Drawing.Color.White;
+            this.label46.Location = new System.Drawing.Point(1502, 253);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(86, 32);
+            this.label46.TabIndex = 118;
+            this.label46.Text = "Galão:";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label34.ForeColor = System.Drawing.Color.White;
+            this.label34.Location = new System.Drawing.Point(1499, 174);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(86, 32);
+            this.label34.TabIndex = 119;
+            this.label34.Text = "Galão:";
+            // 
+            // txtLataCetol
+            // 
+            this.txtLataCetol.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtLataCetol.Location = new System.Drawing.Point(1665, 463);
+            this.txtLataCetol.Name = "txtLataCetol";
+            this.txtLataCetol.Size = new System.Drawing.Size(65, 34);
+            this.txtLataCetol.TabIndex = 130;
+            this.txtLataCetol.Text = "0";
+            // 
+            // txtRendiCetol
+            // 
+            this.txtRendiCetol.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtRendiCetol.Location = new System.Drawing.Point(1485, 463);
+            this.txtRendiCetol.Name = "txtRendiCetol";
+            this.txtRendiCetol.Size = new System.Drawing.Size(65, 34);
+            this.txtRendiCetol.TabIndex = 130;
+            this.txtRendiCetol.Text = "54";
+            this.txtRendiCetol.TextChanged += new System.EventHandler(this.txtRendiCetol_TextChanged);
+            // 
+            // txtAreaCetol
+            // 
+            this.txtAreaCetol.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtAreaCetol.Location = new System.Drawing.Point(1206, 463);
+            this.txtAreaCetol.Name = "txtAreaCetol";
+            this.txtAreaCetol.Size = new System.Drawing.Size(65, 34);
+            this.txtAreaCetol.TabIndex = 130;
+            this.txtAreaCetol.TextChanged += new System.EventHandler(this.txtAreaCetol_TextChanged);
+            // 
+            // txtWakolAreaSuperior
+            // 
+            this.txtWakolAreaSuperior.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtWakolAreaSuperior.Location = new System.Drawing.Point(1194, 608);
+            this.txtWakolAreaSuperior.Name = "txtWakolAreaSuperior";
+            this.txtWakolAreaSuperior.Size = new System.Drawing.Size(65, 34);
+            this.txtWakolAreaSuperior.TabIndex = 129;
+            this.txtWakolAreaSuperior.Text = "0";
+            this.txtWakolAreaSuperior.TextChanged += new System.EventHandler(this.txtWakolAreaSuperior_TextChanged);
+            // 
+            // txtWakolTerreo
+            // 
+            this.txtWakolTerreo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtWakolTerreo.Location = new System.Drawing.Point(1391, 685);
+            this.txtWakolTerreo.Name = "txtWakolTerreo";
+            this.txtWakolTerreo.Size = new System.Drawing.Size(65, 34);
+            this.txtWakolTerreo.TabIndex = 128;
+            this.txtWakolTerreo.Text = "30";
+            this.txtWakolTerreo.TextChanged += new System.EventHandler(this.txtWakolTerreo_TextChanged);
+            // 
+            // txtWakolGalaoTerreo
+            // 
+            this.txtWakolGalaoTerreo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtWakolGalaoTerreo.Location = new System.Drawing.Point(1594, 685);
+            this.txtWakolGalaoTerreo.Name = "txtWakolGalaoTerreo";
+            this.txtWakolGalaoTerreo.Size = new System.Drawing.Size(65, 34);
+            this.txtWakolGalaoTerreo.TabIndex = 128;
+            this.txtWakolGalaoTerreo.Text = "0";
+            // 
+            // txtGalaoWakolSuperior
+            // 
+            this.txtGalaoWakolSuperior.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtGalaoWakolSuperior.Location = new System.Drawing.Point(1602, 607);
+            this.txtGalaoWakolSuperior.Name = "txtGalaoWakolSuperior";
+            this.txtGalaoWakolSuperior.Size = new System.Drawing.Size(65, 34);
+            this.txtGalaoWakolSuperior.TabIndex = 128;
+            this.txtGalaoWakolSuperior.Text = "0";
+            // 
+            // txtWakolSuperior
+            // 
+            this.txtWakolSuperior.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtWakolSuperior.Location = new System.Drawing.Point(1418, 607);
+            this.txtWakolSuperior.Name = "txtWakolSuperior";
+            this.txtWakolSuperior.Size = new System.Drawing.Size(65, 34);
+            this.txtWakolSuperior.TabIndex = 128;
+            this.txtWakolSuperior.Text = "15";
+            this.txtWakolSuperior.TextChanged += new System.EventHandler(this.txtWakolSuperior_TextChanged);
+            // 
+            // txtWakolAreaTerreo
+            // 
+            this.txtWakolAreaTerreo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtWakolAreaTerreo.Location = new System.Drawing.Point(1194, 684);
+            this.txtWakolAreaTerreo.Name = "txtWakolAreaTerreo";
+            this.txtWakolAreaTerreo.Size = new System.Drawing.Size(65, 34);
+            this.txtWakolAreaTerreo.TabIndex = 128;
+            this.txtWakolAreaTerreo.Text = "0";
+            this.txtWakolAreaTerreo.TextChanged += new System.EventHandler(this.txtWakolAreaTerreo_TextChanged);
+            // 
+            // txtAreaBase
+            // 
+            this.txtAreaBase.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtAreaBase.Location = new System.Drawing.Point(1187, 252);
+            this.txtAreaBase.Name = "txtAreaBase";
+            this.txtAreaBase.Size = new System.Drawing.Size(65, 34);
+            this.txtAreaBase.TabIndex = 127;
+            this.txtAreaBase.TextChanged += new System.EventHandler(this.txtAreaBase_TextChanged);
+            // 
+            // txtGalaoVerniz
+            // 
+            this.txtGalaoVerniz.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtGalaoVerniz.Location = new System.Drawing.Point(1591, 173);
+            this.txtGalaoVerniz.Name = "txtGalaoVerniz";
+            this.txtGalaoVerniz.Size = new System.Drawing.Size(65, 34);
+            this.txtGalaoVerniz.TabIndex = 126;
+            this.txtGalaoVerniz.Text = "0";
+            // 
+            // txtGalaoBase
+            // 
+            this.txtGalaoBase.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtGalaoBase.Location = new System.Drawing.Point(1591, 252);
+            this.txtGalaoBase.Name = "txtGalaoBase";
+            this.txtGalaoBase.Size = new System.Drawing.Size(65, 34);
+            this.txtGalaoBase.TabIndex = 126;
+            this.txtGalaoBase.Text = "0";
+            // 
+            // txtBase
+            // 
+            this.txtBase.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBase.Location = new System.Drawing.Point(1391, 252);
+            this.txtBase.Name = "txtBase";
+            this.txtBase.Size = new System.Drawing.Size(65, 34);
+            this.txtBase.TabIndex = 126;
+            this.txtBase.Text = "100";
+            this.txtBase.TextChanged += new System.EventHandler(this.txtBase_TextChanged);
+            // 
+            // txtVerniz
+            // 
+            this.txtVerniz.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtVerniz.Location = new System.Drawing.Point(1391, 173);
+            this.txtVerniz.Name = "txtVerniz";
+            this.txtVerniz.Size = new System.Drawing.Size(65, 34);
+            this.txtVerniz.TabIndex = 126;
+            this.txtVerniz.Text = "75";
+            this.txtVerniz.TextChanged += new System.EventHandler(this.txtVerniz_TextChanged);
+            // 
+            // txtAreaVerniz
+            // 
+            this.txtAreaVerniz.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtAreaVerniz.Location = new System.Drawing.Point(1187, 173);
+            this.txtAreaVerniz.Name = "txtAreaVerniz";
+            this.txtAreaVerniz.Size = new System.Drawing.Size(65, 34);
+            this.txtAreaVerniz.TabIndex = 126;
+            this.txtAreaVerniz.TextChanged += new System.EventHandler(this.txtAreaVerniz_TextChanged);
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label69.ForeColor = System.Drawing.Color.White;
+            this.label69.Location = new System.Drawing.Point(1327, 464);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(145, 32);
+            this.label69.TabIndex = 120;
+            this.label69.Text = "Rend Cetol:";
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label73.ForeColor = System.Drawing.Color.White;
+            this.label73.Location = new System.Drawing.Point(1292, 686);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(94, 32);
+            this.label73.TabIndex = 114;
+            this.label73.Text = "Terreo:";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label40.ForeColor = System.Drawing.Color.White;
+            this.label40.Location = new System.Drawing.Point(1292, 608);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(120, 32);
+            this.label40.TabIndex = 113;
+            this.label40.Text = "Superior:";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label45.ForeColor = System.Drawing.Color.White;
+            this.label45.Location = new System.Drawing.Point(1296, 253);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(73, 32);
+            this.label45.TabIndex = 112;
+            this.label45.Text = "Base:";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label33.ForeColor = System.Drawing.Color.White;
+            this.label33.Location = new System.Drawing.Point(1296, 174);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(92, 32);
+            this.label33.TabIndex = 111;
+            this.label33.Text = "Verniz:";
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label72.ForeColor = System.Drawing.Color.White;
+            this.label72.Location = new System.Drawing.Point(1462, 686);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(31, 32);
+            this.label72.TabIndex = 138;
+            this.label72.Text = "=";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label66.ForeColor = System.Drawing.Color.White;
+            this.label66.Location = new System.Drawing.Point(1557, 464);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(31, 32);
+            this.label66.TabIndex = 137;
+            this.label66.Text = "=";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label39.ForeColor = System.Drawing.Color.White;
+            this.label39.Location = new System.Drawing.Point(1491, 608);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(31, 32);
+            this.label39.TabIndex = 140;
+            this.label39.Text = "=";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label44.ForeColor = System.Drawing.Color.White;
+            this.label44.Location = new System.Drawing.Point(1465, 253);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(31, 32);
+            this.label44.TabIndex = 136;
+            this.label44.Text = "=";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label32.ForeColor = System.Drawing.Color.White;
+            this.label32.Location = new System.Drawing.Point(1465, 174);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(31, 32);
+            this.label32.TabIndex = 135;
+            this.label32.Text = "=";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label60.ForeColor = System.Drawing.Color.White;
+            this.label60.Location = new System.Drawing.Point(1265, 686);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(27, 32);
+            this.label60.TabIndex = 134;
+            this.label60.Text = "x";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label65.ForeColor = System.Drawing.Color.White;
+            this.label65.Location = new System.Drawing.Point(1296, 464);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(25, 32);
+            this.label65.TabIndex = 133;
+            this.label65.Text = "/";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label38.ForeColor = System.Drawing.Color.White;
+            this.label38.Location = new System.Drawing.Point(1265, 608);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(27, 32);
+            this.label38.TabIndex = 132;
+            this.label38.Text = "x";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label43.ForeColor = System.Drawing.Color.White;
+            this.label43.Location = new System.Drawing.Point(1265, 253);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(25, 32);
+            this.label43.TabIndex = 131;
+            this.label43.Text = "/";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label31.ForeColor = System.Drawing.Color.White;
+            this.label31.Location = new System.Drawing.Point(1265, 174);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(25, 32);
+            this.label31.TabIndex = 139;
+            this.label31.Text = "/";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label59.ForeColor = System.Drawing.Color.White;
+            this.label59.Location = new System.Drawing.Point(1068, 686);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(113, 32);
+            this.label59.TabIndex = 125;
+            this.label59.Text = "Area m²:";
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label63.ForeColor = System.Drawing.Color.White;
+            this.label63.Location = new System.Drawing.Point(1087, 464);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(113, 32);
+            this.label63.TabIndex = 124;
+            this.label63.Text = "Area m²:";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label37.ForeColor = System.Drawing.Color.White;
+            this.label37.Location = new System.Drawing.Point(1075, 608);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(113, 32);
+            this.label37.TabIndex = 123;
+            this.label37.Text = "Area m²:";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label42.ForeColor = System.Drawing.Color.White;
+            this.label42.Location = new System.Drawing.Point(1075, 253);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(106, 32);
+            this.label42.TabIndex = 122;
+            this.label42.Text = "Area m²";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label28.ForeColor = System.Drawing.Color.White;
+            this.label28.Location = new System.Drawing.Point(1068, 174);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(113, 32);
+            this.label28.TabIndex = 121;
+            this.label28.Text = "Area m²:";
             // 
             // label62
             // 
             this.label62.AutoSize = true;
             this.label62.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label62.ForeColor = System.Drawing.Color.Yellow;
-            this.label62.Location = new System.Drawing.Point(45, 971);
+            this.label62.Location = new System.Drawing.Point(1043, 394);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(654, 32);
-            this.label62.TabIndex = 67;
+            this.label62.TabIndex = 110;
             this.label62.Text = "Rendimento do Cetol é de 54m² considerando 1 demão.";
             // 
             // label36
@@ -1464,10 +1606,10 @@ namespace Logistica.Sistema_de_Logistica
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label36.ForeColor = System.Drawing.Color.Yellow;
-            this.label36.Location = new System.Drawing.Point(857, 1008);
+            this.label36.Location = new System.Drawing.Point(955, 795);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(833, 96);
-            this.label36.TabIndex = 67;
+            this.label36.TabIndex = 109;
             this.label36.Text = "O impermeabilizante Wakol PU 280 é utilizado da seguinte forma\r\nrendimento: 15m² " +
     "para area inferior devido a imidade que tem do solo.\r\n30m² area superior, consid" +
     "erando 2 demão.";
@@ -1477,34 +1619,100 @@ namespace Logistica.Sistema_de_Logistica
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label25.ForeColor = System.Drawing.Color.Yellow;
-            this.label25.Location = new System.Drawing.Point(74, 773);
+            this.label25.Location = new System.Drawing.Point(1098, 78);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(552, 64);
-            this.label25.TabIndex = 67;
+            this.label25.TabIndex = 108;
             this.label25.Text = "O verniz rende 75m²  já a base rende 100m²\r\nVerniz Loba, Bona, Skania, mesmo rend" +
     "imento.";
             // 
-            // label20
+            // label61
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label20.ForeColor = System.Drawing.Color.Yellow;
-            this.label20.Location = new System.Drawing.Point(23, 498);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(624, 64);
-            this.label20.TabIndex = 67;
-            this.label20.Text = "Comprimento X largura = M2 - M2 X espessura = M3\r\nComprimento X largura X espessu" +
-    "ra = M3\r\n";
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label61.ForeColor = System.Drawing.Color.Red;
+            this.label61.Location = new System.Drawing.Point(1161, 329);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(416, 32);
+            this.label61.TabIndex = 106;
+            this.label61.Text = "CALCULAR CETOL DECK - 2 DEMÃO";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label35.ForeColor = System.Drawing.Color.Red;
+            this.label35.Location = new System.Drawing.Point(1159, 544);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(467, 32);
+            this.label35.TabIndex = 107;
+            this.label35.Text = "CALCULAR WAKOL PU 280 (PLANESIAL)";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label24.ForeColor = System.Drawing.Color.Red;
+            this.label24.Location = new System.Drawing.Point(1143, 28);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(363, 32);
+            this.label24.TabIndex = 105;
+            this.label24.Text = "CALCULAR VERNIZ - 1 DEMÃO";
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label80.ForeColor = System.Drawing.Color.White;
+            this.label80.Location = new System.Drawing.Point(221, 700);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(150, 32);
+            this.label80.TabIndex = 104;
+            this.label80.Text = "Presilha m²:";
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label78.ForeColor = System.Drawing.Color.White;
+            this.label78.Location = new System.Drawing.Point(47, 650);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(159, 32);
+            this.label78.TabIndex = 102;
+            this.label78.Text = "Total Caibro:";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label55.ForeColor = System.Drawing.Color.White;
+            this.label55.Location = new System.Drawing.Point(65, 410);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(46, 32);
+            this.label55.TabIndex = 103;
+            this.label55.Text = "m²";
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label64.ForeColor = System.Drawing.Color.Yellow;
+            this.label64.Location = new System.Drawing.Point(56, 766);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(597, 96);
+            this.label64.TabIndex = 100;
+            this.label64.Text = "Para saber quanto vai de presilha por m²\r\nVamos multiplicar: Presilhas m² x area " +
+    "m² desejada\r\n (lembrando sempre colocar numero inteiro)";
             // 
             // label54
             // 
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label54.ForeColor = System.Drawing.Color.Yellow;
-            this.label54.Location = new System.Drawing.Point(924, 324);
+            this.label54.Location = new System.Drawing.Point(55, 493);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(689, 96);
-            this.label54.TabIndex = 67;
+            this.label54.TabIndex = 101;
             this.label54.Text = "Para saber quantas presilhas é utilizada vamos multiplicar \r\n(linha 1 x linhas 2 " +
     "/ 3,12). O 3,12 é uma area equivale 1 m² \r\npara saber quanto de presilha é utili" +
     "zado por m²\r\n";
@@ -1514,72 +1722,72 @@ namespace Logistica.Sistema_de_Logistica
             this.label70.AutoSize = true;
             this.label70.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label70.ForeColor = System.Drawing.Color.White;
-            this.label70.Location = new System.Drawing.Point(896, 667);
+            this.label70.Location = new System.Drawing.Point(67, 899);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(150, 32);
-            this.label70.TabIndex = 65;
+            this.label70.TabIndex = 99;
             this.label70.Text = "Presilha m²:";
             // 
             // txtPedidoM2
             // 
             this.txtPedidoM2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtPedidoM2.Location = new System.Drawing.Point(1310, 665);
+            this.txtPedidoM2.Location = new System.Drawing.Point(481, 898);
             this.txtPedidoM2.Name = "txtPedidoM2";
             this.txtPedidoM2.Size = new System.Drawing.Size(67, 34);
-            this.txtPedidoM2.TabIndex = 57;
+            this.txtPedidoM2.TabIndex = 87;
             this.txtPedidoM2.Text = "0,0";
-            this.txtPedidoM2.TextChanged += new System.EventHandler(this.txtPedidoM2_TextChanged);
+            this.txtPedidoM2.TextChanged += new System.EventHandler(this.txtPedidoM2_TextChanged_1);
             // 
             // txtTotalLinha2
             // 
             this.txtTotalLinha2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtTotalLinha2.ForeColor = System.Drawing.Color.Red;
-            this.txtTotalLinha2.Location = new System.Drawing.Point(1288, 436);
+            this.txtTotalLinha2.Location = new System.Drawing.Point(428, 649);
             this.txtTotalLinha2.Name = "txtTotalLinha2";
             this.txtTotalLinha2.Size = new System.Drawing.Size(67, 34);
-            this.txtTotalLinha2.TabIndex = 56;
+            this.txtTotalLinha2.TabIndex = 86;
             this.txtTotalLinha2.Text = "0,0";
-            this.txtTotalLinha2.TextChanged += new System.EventHandler(this.txtTotalLinha2_TextChanged);
+            this.txtTotalLinha2.TextChanged += new System.EventHandler(this.txtTotalLinha2_TextChanged_1);
             // 
             // txtLarguraDeck
             // 
             this.txtLarguraDeck.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtLarguraDeck.ForeColor = System.Drawing.Color.Red;
-            this.txtLarguraDeck.Location = new System.Drawing.Point(1326, 287);
+            this.txtLarguraDeck.Location = new System.Drawing.Point(353, 409);
             this.txtLarguraDeck.Name = "txtLarguraDeck";
             this.txtLarguraDeck.Size = new System.Drawing.Size(67, 34);
-            this.txtLarguraDeck.TabIndex = 56;
-            this.txtLarguraDeck.TextChanged += new System.EventHandler(this.txtLarguraDeck_TextChanged);
+            this.txtLarguraDeck.TabIndex = 85;
+            this.txtLarguraDeck.TextChanged += new System.EventHandler(this.txtLarguraDeck_TextChanged_1);
             // 
             // TxtTotalPresilhas
             // 
             this.TxtTotalPresilhas.Enabled = false;
             this.TxtTotalPresilhas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TxtTotalPresilhas.Location = new System.Drawing.Point(1416, 665);
+            this.TxtTotalPresilhas.Location = new System.Drawing.Point(587, 898);
             this.TxtTotalPresilhas.Name = "TxtTotalPresilhas";
             this.TxtTotalPresilhas.Size = new System.Drawing.Size(67, 34);
-            this.TxtTotalPresilhas.TabIndex = 55;
+            this.TxtTotalPresilhas.TabIndex = 84;
             this.TxtTotalPresilhas.Text = "0";
             // 
             // txtTotal
             // 
             this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtTotal.Location = new System.Drawing.Point(1390, 436);
+            this.txtTotal.Location = new System.Drawing.Point(530, 649);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(46, 34);
-            this.txtTotal.TabIndex = 54;
+            this.txtTotal.TabIndex = 83;
             this.txtTotal.Text = "3,12";
-            this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
+            this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged_1);
             // 
             // txtTotalDeck
             // 
             this.txtTotalDeck.Enabled = false;
             this.txtTotalDeck.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtTotalDeck.Location = new System.Drawing.Point(1424, 287);
+            this.txtTotalDeck.Location = new System.Drawing.Point(451, 409);
             this.txtTotalDeck.Name = "txtTotalDeck";
             this.txtTotalDeck.Size = new System.Drawing.Size(67, 34);
-            this.txtTotalDeck.TabIndex = 54;
+            this.txtTotalDeck.TabIndex = 82;
             this.txtTotalDeck.Text = "0";
             // 
             // txtTotalCaibro
@@ -1587,32 +1795,32 @@ namespace Logistica.Sistema_de_Logistica
             this.txtTotalCaibro.Enabled = false;
             this.txtTotalCaibro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtTotalCaibro.ForeColor = System.Drawing.Color.Black;
-            this.txtTotalCaibro.Location = new System.Drawing.Point(1549, 123);
+            this.txtTotalCaibro.Location = new System.Drawing.Point(598, 199);
             this.txtTotalCaibro.Name = "txtTotalCaibro";
             this.txtTotalCaibro.Size = new System.Drawing.Size(31, 34);
-            this.txtTotalCaibro.TabIndex = 53;
+            this.txtTotalCaibro.TabIndex = 81;
             this.txtTotalCaibro.Text = "9";
             // 
             // txtPresilhasM2
             // 
             this.txtPresilhasM2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtPresilhasM2.ForeColor = System.Drawing.Color.Black;
-            this.txtPresilhasM2.Location = new System.Drawing.Point(1056, 665);
+            this.txtPresilhasM2.Location = new System.Drawing.Point(227, 898);
             this.txtPresilhasM2.Name = "txtPresilhasM2";
             this.txtPresilhasM2.Size = new System.Drawing.Size(67, 34);
-            this.txtPresilhasM2.TabIndex = 58;
+            this.txtPresilhasM2.TabIndex = 88;
             this.txtPresilhasM2.Text = "0";
-            this.txtPresilhasM2.TextChanged += new System.EventHandler(this.txtPresilhasM2_TextChanged);
+            this.txtPresilhasM2.TextChanged += new System.EventHandler(this.txtPresilhasM2_TextChanged_1);
             // 
             // txtTotalPresilha
             // 
             this.txtTotalPresilha.Enabled = false;
             this.txtTotalPresilha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtTotalPresilha.ForeColor = System.Drawing.Color.Black;
-            this.txtTotalPresilha.Location = new System.Drawing.Point(1241, 488);
+            this.txtTotalPresilha.Location = new System.Drawing.Point(381, 701);
             this.txtTotalPresilha.Name = "txtTotalPresilha";
             this.txtTotalPresilha.Size = new System.Drawing.Size(53, 34);
-            this.txtTotalPresilha.TabIndex = 50;
+            this.txtTotalPresilha.TabIndex = 78;
             this.txtTotalPresilha.Text = "0";
             // 
             // txtTotalLinha1
@@ -1620,44 +1828,44 @@ namespace Logistica.Sistema_de_Logistica
             this.txtTotalLinha1.Enabled = false;
             this.txtTotalLinha1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtTotalLinha1.ForeColor = System.Drawing.Color.Black;
-            this.txtTotalLinha1.Location = new System.Drawing.Point(1087, 436);
+            this.txtTotalLinha1.Location = new System.Drawing.Point(227, 649);
             this.txtTotalLinha1.Name = "txtTotalLinha1";
             this.txtTotalLinha1.Size = new System.Drawing.Size(27, 34);
-            this.txtTotalLinha1.TabIndex = 50;
+            this.txtTotalLinha1.TabIndex = 77;
             this.txtTotalLinha1.Text = "9";
-            this.txtTotalLinha1.TextChanged += new System.EventHandler(this.txtTotalLinha1_TextChanged);
+            this.txtTotalLinha1.TextChanged += new System.EventHandler(this.txtTotalLinha1_TextChanged_1);
             // 
             // txtM2Presilhas
             // 
             this.txtM2Presilhas.Enabled = false;
             this.txtM2Presilhas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtM2Presilhas.ForeColor = System.Drawing.Color.Black;
-            this.txtM2Presilhas.Location = new System.Drawing.Point(1081, 285);
+            this.txtM2Presilhas.Location = new System.Drawing.Point(108, 409);
             this.txtM2Presilhas.Name = "txtM2Presilhas";
             this.txtM2Presilhas.Size = new System.Drawing.Size(67, 34);
-            this.txtM2Presilhas.TabIndex = 50;
+            this.txtM2Presilhas.TabIndex = 76;
             this.txtM2Presilhas.Text = "1";
-            this.txtM2Presilhas.TextChanged += new System.EventHandler(this.txtM2Presilhas_TextChanged);
+            this.txtM2Presilhas.TextChanged += new System.EventHandler(this.txtM2Presilhas_TextChanged_1);
             // 
             // txtEspacamentoCaibro
             // 
             this.txtEspacamentoCaibro.Enabled = false;
             this.txtEspacamentoCaibro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtEspacamentoCaibro.ForeColor = System.Drawing.Color.Black;
-            this.txtEspacamentoCaibro.Location = new System.Drawing.Point(1447, 123);
+            this.txtEspacamentoCaibro.Location = new System.Drawing.Point(496, 199);
             this.txtEspacamentoCaibro.Name = "txtEspacamentoCaibro";
             this.txtEspacamentoCaibro.Size = new System.Drawing.Size(54, 34);
-            this.txtEspacamentoCaibro.TabIndex = 51;
+            this.txtEspacamentoCaibro.TabIndex = 79;
             this.txtEspacamentoCaibro.Text = "0,35";
             // 
             // txtComprimentoCaibro
             // 
             this.txtComprimentoCaibro.Enabled = false;
             this.txtComprimentoCaibro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtComprimentoCaibro.Location = new System.Drawing.Point(1089, 123);
+            this.txtComprimentoCaibro.Location = new System.Drawing.Point(138, 199);
             this.txtComprimentoCaibro.Name = "txtComprimentoCaibro";
             this.txtComprimentoCaibro.Size = new System.Drawing.Size(65, 34);
-            this.txtComprimentoCaibro.TabIndex = 52;
+            this.txtComprimentoCaibro.TabIndex = 80;
             this.txtComprimentoCaibro.Text = "3,15";
             // 
             // label57
@@ -1665,10 +1873,10 @@ namespace Logistica.Sistema_de_Logistica
             this.label57.AutoSize = true;
             this.label57.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label57.ForeColor = System.Drawing.Color.Yellow;
-            this.label57.Location = new System.Drawing.Point(937, 165);
+            this.label57.Location = new System.Drawing.Point(32, 277);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(643, 96);
-            this.label57.TabIndex = 48;
+            this.label57.TabIndex = 74;
             this.label57.Text = "Vamos utilizar como base 1m² / pela Largura do Deck:\r\n45cm= 0,045mm / 65cm= 0,065" +
     "mm / 70cm=0,070mm \r\n10cm= 0,10mm / 15cm= 0,15mm";
             // 
@@ -1677,10 +1885,10 @@ namespace Logistica.Sistema_de_Logistica
             this.label77.AutoSize = true;
             this.label77.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label77.ForeColor = System.Drawing.Color.White;
-            this.label77.Location = new System.Drawing.Point(1442, 438);
+            this.label77.Location = new System.Drawing.Point(582, 650);
             this.label77.Name = "label77";
             this.label77.Size = new System.Drawing.Size(31, 32);
-            this.label77.TabIndex = 45;
+            this.label77.TabIndex = 71;
             this.label77.Text = "=";
             // 
             // label53
@@ -1688,10 +1896,10 @@ namespace Logistica.Sistema_de_Logistica
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label53.ForeColor = System.Drawing.Color.Yellow;
-            this.label53.Location = new System.Drawing.Point(924, 46);
+            this.label53.Location = new System.Drawing.Point(40, 90);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(752, 64);
-            this.label53.TabIndex = 46;
+            this.label53.TabIndex = 72;
             this.label53.Text = "Usando exemplo um caibro \r\ncom comprimento de 3,15m dividido pelo espaçamento de " +
     "0,35.";
             // 
@@ -1700,10 +1908,10 @@ namespace Logistica.Sistema_de_Logistica
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label52.ForeColor = System.Drawing.Color.White;
-            this.label52.Location = new System.Drawing.Point(1399, 289);
+            this.label52.Location = new System.Drawing.Point(426, 410);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(31, 32);
-            this.label52.TabIndex = 45;
+            this.label52.TabIndex = 70;
             this.label52.Text = "=";
             // 
             // label51
@@ -1711,10 +1919,10 @@ namespace Logistica.Sistema_de_Logistica
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label51.ForeColor = System.Drawing.Color.White;
-            this.label51.Location = new System.Drawing.Point(1518, 125);
+            this.label51.Location = new System.Drawing.Point(567, 200);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(31, 32);
-            this.label51.TabIndex = 44;
+            this.label51.TabIndex = 69;
             this.label51.Text = "=";
             // 
             // label1
@@ -1722,10 +1930,10 @@ namespace Logistica.Sistema_de_Logistica
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1383, 667);
+            this.label1.Location = new System.Drawing.Point(554, 899);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 32);
-            this.label1.TabIndex = 59;
+            this.label1.TabIndex = 90;
             this.label1.Text = "=";
             // 
             // label68
@@ -1733,10 +1941,10 @@ namespace Logistica.Sistema_de_Logistica
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label68.ForeColor = System.Drawing.Color.White;
-            this.label68.Location = new System.Drawing.Point(1136, 667);
+            this.label68.Location = new System.Drawing.Point(307, 899);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(27, 32);
-            this.label68.TabIndex = 59;
+            this.label68.TabIndex = 89;
             this.label68.Text = "x";
             // 
             // label79
@@ -1744,10 +1952,10 @@ namespace Logistica.Sistema_de_Logistica
             this.label79.AutoSize = true;
             this.label79.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label79.ForeColor = System.Drawing.Color.White;
-            this.label79.Location = new System.Drawing.Point(1364, 438);
+            this.label79.Location = new System.Drawing.Point(504, 650);
             this.label79.Name = "label79";
             this.label79.Size = new System.Drawing.Size(25, 32);
-            this.label79.TabIndex = 61;
+            this.label79.TabIndex = 93;
             this.label79.Text = "/";
             // 
             // label76
@@ -1755,10 +1963,10 @@ namespace Logistica.Sistema_de_Logistica
             this.label76.AutoSize = true;
             this.label76.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label76.ForeColor = System.Drawing.Color.White;
-            this.label76.Location = new System.Drawing.Point(1120, 438);
+            this.label76.Location = new System.Drawing.Point(260, 650);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(30, 32);
-            this.label76.TabIndex = 61;
+            this.label76.TabIndex = 94;
             this.label76.Text = "X";
             // 
             // label67
@@ -1766,10 +1974,10 @@ namespace Logistica.Sistema_de_Logistica
             this.label67.AutoSize = true;
             this.label67.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label67.ForeColor = System.Drawing.Color.White;
-            this.label67.Location = new System.Drawing.Point(1165, 667);
+            this.label67.Location = new System.Drawing.Point(336, 899);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(139, 32);
-            this.label67.TabIndex = 60;
+            this.label67.TabIndex = 91;
             this.label67.Text = "m² Pedido:";
             // 
             // label75
@@ -1777,10 +1985,10 @@ namespace Logistica.Sistema_de_Logistica
             this.label75.AutoSize = true;
             this.label75.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label75.ForeColor = System.Drawing.Color.White;
-            this.label75.Location = new System.Drawing.Point(1153, 438);
+            this.label75.Location = new System.Drawing.Point(293, 650);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(166, 32);
-            this.label75.TabIndex = 62;
+            this.label75.TabIndex = 95;
             this.label75.Text = "Total Linha 2:";
             // 
             // label58
@@ -1788,10 +1996,10 @@ namespace Logistica.Sistema_de_Logistica
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label58.ForeColor = System.Drawing.Color.White;
-            this.label58.Location = new System.Drawing.Point(1152, 287);
+            this.label58.Location = new System.Drawing.Point(179, 410);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(25, 32);
-            this.label58.TabIndex = 61;
+            this.label58.TabIndex = 92;
             this.label58.Text = "/";
             // 
             // label50
@@ -1799,10 +2007,10 @@ namespace Logistica.Sistema_de_Logistica
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label50.ForeColor = System.Drawing.Color.White;
-            this.label50.Location = new System.Drawing.Point(1178, 287);
+            this.label50.Location = new System.Drawing.Point(205, 410);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(142, 32);
-            this.label50.TabIndex = 62;
+            this.label50.TabIndex = 96;
             this.label50.Text = "Larg. Deck:";
             // 
             // label56
@@ -1810,10 +2018,10 @@ namespace Logistica.Sistema_de_Logistica
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label56.ForeColor = System.Drawing.Color.White;
-            this.label56.Location = new System.Drawing.Point(1160, 125);
+            this.label56.Location = new System.Drawing.Point(209, 200);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(25, 32);
-            this.label56.TabIndex = 63;
+            this.label56.TabIndex = 97;
             this.label56.Text = "/";
             // 
             // label49
@@ -1821,111 +2029,32 @@ namespace Logistica.Sistema_de_Logistica
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label49.ForeColor = System.Drawing.Color.White;
-            this.label49.Location = new System.Drawing.Point(1190, 125);
+            this.label49.Location = new System.Drawing.Point(239, 200);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(251, 32);
-            this.label49.TabIndex = 64;
+            this.label49.TabIndex = 98;
             this.label49.Text = "Espaçamento caibro:";
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label61.ForeColor = System.Drawing.Color.Red;
-            this.label61.Location = new System.Drawing.Point(126, 858);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(416, 32);
-            this.label61.TabIndex = 49;
-            this.label61.Text = "CALCULAR CETOL DECK - 2 DEMÃO";
             // 
             // label48
             // 
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label48.ForeColor = System.Drawing.Color.White;
-            this.label48.Location = new System.Drawing.Point(983, 123);
+            this.label48.Location = new System.Drawing.Point(32, 200);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(105, 32);
-            this.label48.TabIndex = 47;
+            this.label48.TabIndex = 73;
             this.label48.Text = "Compri:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.Color.Yellow;
-            this.label8.Location = new System.Drawing.Point(36, 44);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(685, 128);
-            this.label8.TabIndex = 49;
-            this.label8.Text = "ALTURA / TAMANHO DO RODAPÉ * COMPRIMENTO \r\nEXEMPLO: 1,84 / 0,105 = 17 * 2,75 = 46" +
-    "ml \r\nCHAPA DE MDF (ALTURA 1,84) POR (COMPRIMENTO 2,75)\r\nSempre no final do Rodap" +
-    "é colocar (5) que significa perca.";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label35.ForeColor = System.Drawing.Color.Red;
-            this.label35.Location = new System.Drawing.Point(1028, 761);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(418, 32);
-            this.label35.TabIndex = 49;
-            this.label35.Text = "CALCULAR WAKOL PU (PLANESIAL)";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label24.ForeColor = System.Drawing.Color.Red;
-            this.label24.Location = new System.Drawing.Point(137, 580);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(363, 32);
-            this.label24.TabIndex = 49;
-            this.label24.Text = "CALCULAR VERNIZ - 1 DEMÃO";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label26.ForeColor = System.Drawing.Color.Red;
-            this.label26.Location = new System.Drawing.Point(8, 381);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(848, 32);
-            this.label26.TabIndex = 49;
-            this.label26.Text = "CALCULAR M3  TOTAL M² * ESPESSURA  EXEMPLO: 23M² * 0,07 = 1,61M3";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(8, 247);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(856, 32);
-            this.label13.TabIndex = 49;
-            this.label13.Text = "CALCULAR M² COMPRIMENTO * LARGURA EXEMPLO = 10ml * 0,10 = 1m²";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(113, 14);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(377, 32);
-            this.label5.TabIndex = 49;
-            this.label5.Text = "CALCULAR MDF PARA RODAPÉ \r\n";
             // 
             // label47
             // 
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label47.ForeColor = System.Drawing.Color.Red;
-            this.label47.Location = new System.Drawing.Point(1140, 14);
+            this.label47.Location = new System.Drawing.Point(70, 28);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(446, 32);
-            this.label47.TabIndex = 49;
+            this.label47.TabIndex = 75;
             this.label47.Text = "PRESILHAS DE ALUMINIO PARA DECK";
             // 
             // FrmPrincipalLogistica
@@ -1934,7 +2063,7 @@ namespace Logistica.Sistema_de_Logistica
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1768, 683);
+            this.ClientSize = new System.Drawing.Size(1820, 1016);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -1954,12 +2083,12 @@ namespace Logistica.Sistema_de_Logistica
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFerramenta)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1996,14 +2125,12 @@ namespace Logistica.Sistema_de_Logistica
         private Button btnPesquisar;
         private TabControl tabControl1;
         private TabPage tabPage1;
-        private TabPage tabPage2;
         private TabPage tabPage4;
         private Label label4;
         private Label label2;
         private Label label3;
         private Label lbMaterialSp;
         private DataGridView dgvPrincipal;
-        private DataGridView dgvFerramenta;
         private PictureBox pictureBox1;
         private Label label7;
         private Label label6;
@@ -2016,34 +2143,8 @@ namespace Logistica.Sistema_de_Logistica
         private Label label9;
         private Label label11;
         private Label label12;
-        private Label label55;
-        private Label label64;
-        private Label label54;
-        private Label label70;
-        private TextBox txtPedidoM2;
-        private TextBox txtLarguraDeck;
-        private TextBox TxtTotalPresilhas;
-        private TextBox txtTotalDeck;
-        private TextBox txtTotalCaibro;
-        private TextBox txtPresilhasM2;
-        private TextBox txtM2Presilhas;
-        private TextBox txtEspacamentoCaibro;
-        private TextBox txtComprimentoCaibro;
-        private Label label57;
-        private Label label53;
-        private Label label52;
-        private Label label51;
-        private Label label1;
-        private Label label68;
-        private Label label67;
-        private Label label58;
-        private Label label50;
-        private Label label56;
-        private Label label49;
-        private Label label48;
         private Label label8;
         private Label label5;
-        private Label label47;
         private TextBox txtTotalChapa;
         private Label label10;
         private TextBox txtTotalm3;
@@ -2073,26 +2174,36 @@ namespace Logistica.Sistema_de_Logistica
         private TextBox txtWakolTerreo;
         private TextBox txtBase;
         private TextBox txtVerniz;
+        private TextBox txtGalaoSuperior;
+        private TextBox txtWakolSuperior;
+        private TabPage tabPage2;
         private Label label71;
+        private Label label74;
         private Label label41;
         private Label label46;
         private Label label34;
         private TextBox txtAreaCetol;
-        private TextBox txtAreaTerreo;
+        private TextBox txtWakolAreaSuperior;
+        private TextBox txtWakolAreaTerreo;
         private TextBox txtAreaBase;
+    
         private TextBox txtAreaVerniz;
         private Label label69;
+        private Label label73;
         private Label label40;
         private Label label45;
         private Label label33;
+        private Label label72;
         private Label label66;
         private Label label39;
         private Label label44;
         private Label label32;
+        private Label label60;
         private Label label65;
         private Label label38;
         private Label label43;
         private Label label31;
+        private Label label59;
         private Label label63;
         private Label label37;
         private Label label42;
@@ -2103,23 +2214,50 @@ namespace Logistica.Sistema_de_Logistica
         private Label label61;
         private Label label35;
         private Label label24;
-        private TextBox txtGalaoSuperior;
-        private TextBox txtWakolSuperior;
-        private TextBox txtAreaSuperior;
-        private Label label72;
-        private Label label60;
-        private Label label74;
-        private Label label73;
-        private Label label59;
         private Label label80;
         private Label label78;
+        private Label label55;
+        private Label label64;
+        private Label label54;
+        private Label label70;
+        private TextBox txtPedidoM2;
         private TextBox txtTotalLinha2;
+        private TextBox txtLarguraDeck;
+        private TextBox TxtTotalPresilhas;
         private TextBox txtTotal;
+        private TextBox txtTotalDeck;
+        private TextBox txtTotalCaibro;
+        private TextBox txtPresilhasM2;
         private TextBox txtTotalPresilha;
         private TextBox txtTotalLinha1;
+        private TextBox txtM2Presilhas;
+        private TextBox txtEspacamentoCaibro;
+        private TextBox txtComprimentoCaibro;
+        private Label label57;
         private Label label77;
+        private Label label53;
+        private Label label52;
+        private Label label51;
+        private Label label1;
+        private Label label68;
         private Label label79;
         private Label label76;
+        private Label label67;
         private Label label75;
+        private Label label58;
+        private Label label50;
+        private Label label56;
+        private Label label49;
+        private Label label48;
+        private Label label47;
+ 
+        private TextBox txtRendiCetol;
+ 
+        private TextBox txtWakolGalaoTerreo;
+        private TextBox txtGalaoWakolSuperior;
+ 
+        private Label label83;
+        private Label label82;
+        private Label label81;
     }
 }

@@ -52,87 +52,73 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             cmsSalvarConteudos.Show(btnSalvar, 1, btnSalvar.Height);
+
         }
-        private void cmsSalvarConteudos_Opening(object sender, CancelEventArgs e)
+        private void msSalvarEntrada_Click(object sender, EventArgs e)
         {
-            try
-            {     //arrumar não esta entrando no switch qndo clica nos campos escolhido          
-                switch (cmsSalvarConteudos.Text)
-                { 
-                    case "Salvar Data":
-                        {
-                            #region Salvar Datas
-                            var dataMaterial = LerData();
-                            int dataId = 0;
-                            if (txtDataId.Text != "")
-                            {
-                                dataId = Convert.ToInt32(txtDataId.Text);
-                                MessageBox.Show("Data Atualizado com Sucesso");
-                            }
-                            int estoqueId = 0;
-                            if (txtGerarId.Text != "")
-                            {
-                                estoqueId = Convert.ToInt32(txtGerarId.Text);
-                            }
-                            var listarmadeira = new DLDataMaterial().Listar();
-                            //Filtrando a lista "listaProposta" por propostaid e codigomaterial
-                            var prop = listarmadeira.Where(ip =>
-                                            ip.MaterialId == estoqueId //por proppostaid
-                                            && ip.DataId == dataId //por ItensPropostaId
-                                            ).FirstOrDefault();//Primeiro que encontrar
-                            if (prop != null && prop.DataId > 0)
-                            {
-                                prop.DataId = Convert.ToInt32(txtDataId.Text);
-                                prop.DataEntrada = dtpData.Value;
-                                prop.Fabrica = txtFabrica.Text;
-                                prop.Obra = txtDevolucao.Text;
-                                prop.Entrada = Convert.ToDecimal(txtEntrada.Text);
-                                new DLDataMaterial().Atualizar(prop);
-                            }
-                            else
-                            {
-                                new DLDataMaterial().Inserir(dataMaterial);
-                                MessageBox.Show("Data Cadastrado com Sucesso");
-                            }
-                            txtDataId.Text = Convert.ToString(null);
-                            CarregarGridData();
-                            #endregion
-                        }
-                        break;
-                    case "Salvar Entrada":
-                        {
-                            #region Salvar tudo e fechar
-                            bool camposSaoValidos = Validarcampos();
-                            if (camposSaoValidos == true)
-                            {
-                                int id = 0;
-                                int.TryParse(txtGerarId.Text, out id);
-                                if (id > 0)
-                                {
-                                    var madeiraAt = new DLItensMaterial().ConsultarPorId(id);
-                                    madeiraAt.MaterialId = Convert.ToInt32(txtGerarId.Text);
-                                    madeiraAt.Material = txtMaterial.Text;
-                                    madeiraAt.UnidadeMedida = txtUnidadeMedida.Text;
-                                    madeiraAt.Total = Convert.ToDecimal(txtTotalEntrada.Text);
-                                    madeiraAt.Entrada = Convert.ToDecimal(txtEntrada.Text);
-                                    madeiraAt.Quantidade = Convert.ToDecimal(txtQuantidadePct.Text);
-                                    new DLItensMaterial().Atualizar(madeiraAt);
-                                    MessageBox.Show("Material atualizado com Sucesso ");
-                                    CarregarGridSaida();
-                                    dgvData.DataSource = null;
-                                    LimparCadastro();
-                                    HabilitarCampos(false);
-                                }
-                            }
-                            #endregion
-                        }
-                        break;
+            #region Salvar tudo e fechar
+            bool camposSaoValidos = Validarcampos();
+            if (camposSaoValidos == true)
+            {
+                int id = 0;
+                int.TryParse(txtGerarId.Text, out id);
+                if (id > 0)
+                {
+                    var madeiraAt = new DLItensMaterial().ConsultarPorId(id);
+                    madeiraAt.MaterialId = Convert.ToInt32(txtGerarId.Text);
+                    madeiraAt.Material = txtMaterial.Text;
+                    madeiraAt.UnidadeMedida = txtUnidadeMedida.Text;
+                    madeiraAt.Total = Convert.ToDecimal(txtTotalEntrada.Text);
+                    madeiraAt.Entrada = Convert.ToDecimal(txtEntrada.Text);
+                    madeiraAt.Quantidade = Convert.ToDecimal(txtQuantidadePct.Text);
+                    new DLItensMaterial().Atualizar(madeiraAt);
+                    MessageBox.Show("Material atualizado com Sucesso ");
+                    CarregarGridSaida();
+                    dgvData.DataSource = null;
+                    LimparCadastro();
+                    HabilitarCampos(false);
                 }
             }
-            catch (Exception ex)
+            #endregion
+        }
+        private void msSalvarData_Click(object sender, EventArgs e)
+        {
+            #region Salvar Datas
+            var dataMaterial = LerData();
+            int dataId = 0;
+            if (txtDataId.Text != "")
             {
-                throw ex;
+                dataId = Convert.ToInt32(txtDataId.Text);
+                MessageBox.Show("Data Atualizado com Sucesso");
             }
+            int estoqueId = 0;
+            if (txtGerarId.Text != "")
+            {
+                estoqueId = Convert.ToInt32(txtGerarId.Text);
+            }
+            var listarmadeira = new DLDataMaterial().Listar();
+            //Filtrando a lista "listaProposta" por propostaid e codigomaterial
+            var prop = listarmadeira.Where(ip =>
+                            ip.MaterialId == estoqueId //por proppostaid
+                            && ip.DataId == dataId //por ItensPropostaId
+                            ).FirstOrDefault();//Primeiro que encontrar
+            if (prop != null && prop.DataId > 0)
+            {
+                prop.DataId = Convert.ToInt32(txtDataId.Text);
+                prop.DataEntrada = dtpData.Value;
+                prop.Fabrica = txtFabrica.Text;
+                prop.Obra = txtDevolucao.Text;
+                prop.Entrada = Convert.ToDecimal(txtEntrada.Text);
+                new DLDataMaterial().Atualizar(prop);
+            }
+            else
+            {
+                new DLDataMaterial().Inserir(dataMaterial);
+                MessageBox.Show("Data Cadastrado com Sucesso");
+            }
+            txtDataId.Text = Convert.ToString(null);
+            CarregarGridData();
+            #endregion
         }
         private void btnDeletar_Click(object sender, EventArgs e)
         {
@@ -460,7 +446,6 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 throw ex;
             }
         }
-
         private bool Validarcampos()
         {
             if (txtMaterial.Text == "")
