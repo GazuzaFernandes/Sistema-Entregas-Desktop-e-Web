@@ -401,13 +401,13 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             try
             {
                 int ide = 0;
-                int.TryParse(txtCodigoMaterial.Text, out ide);
+                int.TryParse(txtCodigoItensMaterial.Text, out ide);
                 if (ide > 1)
                 {
-                    _madeira = new DLCadastrarMadeira().ConsultarPorId(Convert.ToInt32(txtCodigoMaterial.Text));
-                    txtCodigoMaterial.Text = _madeira.MadeiraId.ToString();
+                    _madeira = new DLCadastrarMadeira().ConsultarPorId(Convert.ToInt32(txtCodigoItensMaterial.Text));
+                    txtCodigoItensMaterial.Text = _madeira.MadeiraId.ToString();
                     txtMaterial.Text = _madeira.PisoMadeira;
-                    txtm2Caixas.Text = Convert.ToString(_madeira.M2Caixa);
+                    txtQtdUndCaixa.Text = Convert.ToString(_madeira.M2Caixa);
                 }
                 else if (ide == 1)
                 {
@@ -430,9 +430,9 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 var material = cadastroItens.material;
                 var comprimento = cadastroItens.comprimento;
                 var qtdcaixa = cadastroItens.qtdcaixa;
-                txtCodigoMaterial.Text = id.ToString();
+                txtCodigoItensMaterial.Text = id.ToString();
                 txtMaterial.Text = material;
-                txtm2Caixas.Text = qtdcaixa;
+                txtQtdUndCaixa.Text = qtdcaixa;
                 cadastroItens.Close();
                 cadastroItens.Dispose();
             }
@@ -470,7 +470,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                                 ).FirstOrDefault();//Primeiro que encontrar
                 if (prop != null && prop.ItenId > 0)
                 {
-                    prop.M2caixa = Convert.ToDecimal(txtm2Caixas.Text);
+                    prop.M2caixa = Convert.ToDecimal(txtQtdUndCaixa.Text);
                     prop.M2NotaFiscal = Convert.ToDecimal(txtQuantidadeCaixas.Text);
                     prop.Material = txtMaterial.Text;
                     prop.Preco = Convert.ToDecimal(txtPreco.Text);
@@ -535,13 +535,13 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     txtItensPropostaId.Text = itensProposta.ItenId.ToString();
                     txtMaterial.Text = itensProposta.Material;
                     txtUndMedida.Text = itensProposta.UndMedida;
-                    txtm2Caixas.Text = Convert.ToString(itensProposta.M2caixa);
+                    txtQtdUndCaixa.Text = Convert.ToString(itensProposta.M2caixa);
                     txtQuantidade.Text = Convert.ToString(itensProposta.Quantidade);
                     txtPreco.Text = Convert.ToString(itensProposta.Preco);
                     txtQuantidadeCaixas.Text = Convert.ToString(itensProposta.M2NotaFiscal);
                     rtbObsMaterial.Text = itensProposta.ObsMaterial;
                     txtTotal.Text = Convert.ToString(itensProposta.Total);
-                    txtCodigoMaterial.Text = Convert.ToString(itensProposta.CodigoMaterial);
+                    txtCodigoItensMaterial.Text = Convert.ToString(itensProposta.CodigoMaterial);
                 }
             }
             catch (Exception ex)
@@ -709,7 +709,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             txtCodigoFabrica.Enabled = Habilitar;
             txtCodigoFaturado.Enabled = Habilitar;
             txtCodigoCliente.Enabled = Habilitar;
-            txtCodigoMaterial.Enabled = Habilitar;
+            txtCodigoItensMaterial.Enabled = Habilitar;
             dtpDataPedido.Enabled = Habilitar;
             rtbmaterial.Enabled = Habilitar;
             btnSalvarComentario.Enabled = Habilitar;
@@ -817,11 +817,11 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             try
             {
                 txtItensPropostaId.Text = Convert.ToString(null);
-                txtCodigoMaterial.Text = Convert.ToString(null);
+                txtCodigoItensMaterial.Text = Convert.ToString(null);
                 txtMaterial.Text = Convert.ToString(" Informe o Material ");
                 txtQuantidade.Text = Convert.ToString(1);
                 txtPreco.Text = Convert.ToString(0);
-                txtm2Caixas.Text = Convert.ToString(1);
+                txtQtdUndCaixa.Text = Convert.ToString(1);
                 txtUndMedida.Text = Convert.ToString("m²");
                 txtQuantidadeCaixas.Text = Convert.ToString(1);
                 rtbObsMaterial.Text = Convert.ToString(null);
@@ -840,14 +840,14 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 int.TryParse(txtItensPropostaId.Text, out id);
                 if (id == 0)
                 {
-                    iten.CodigoMaterial = Convert.ToInt32(txtCodigoMaterial.Text);
+                    iten.CodigoMaterial = Convert.ToInt32(txtCodigoItensMaterial.Text);
                     iten.Material = txtMaterial.Text;
                     iten.ObsMaterial = rtbObsMaterial.Text;
                     iten.Quantidade = Convert.ToDecimal(txtQuantidade.Text);
                     iten.Preco = Convert.ToDecimal(txtPreco.Text);
                     iten.M2NotaFiscal = Convert.ToDecimal(txtQuantidadeCaixas.Text);
                     iten.UndMedida = txtUndMedida.Text;
-                    iten.M2caixa = Convert.ToDecimal(txtm2Caixas.Text);
+                    iten.M2caixa = Convert.ToDecimal(txtQtdUndCaixa.Text);
                     iten.Total = Convert.ToDecimal(txtTotal.Text);
                     iten.PropostaId = Convert.ToInt32(txtPropostId.Text);
                 }
@@ -868,7 +868,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
                 if (decimal.TryParse(txtQuantidade.Text, out caixa))
                 {
-                    if (decimal.TryParse(txtm2Caixas.Text, out qtd))
+                    if (decimal.TryParse(txtQtdUndCaixa.Text, out qtd))
                     {
                         total = caixa / qtd;
                     }
