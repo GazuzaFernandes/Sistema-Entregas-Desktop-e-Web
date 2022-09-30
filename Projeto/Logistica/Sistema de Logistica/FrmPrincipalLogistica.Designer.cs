@@ -438,7 +438,9 @@ namespace Logistica.Sistema_de_Logistica
             this.rbEndereco.AutoSize = true;
             this.rbEndereco.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbEndereco.ForeColor = System.Drawing.Color.White;
-            this.rbEndereco.Location = new System.Drawing.Point(694, 107);
+
+            this.rbEndereco.Location = new System.Drawing.Point(719, 106);
+
             this.rbEndereco.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbEndereco.Name = "rbEndereco";
             this.rbEndereco.Size = new System.Drawing.Size(133, 35);
@@ -1282,7 +1284,9 @@ namespace Logistica.Sistema_de_Logistica
             this.label22.ForeColor = System.Drawing.Color.White;
             this.label22.Location = new System.Drawing.Point(172, 458);
             this.label22.Name = "label22";
+
             this.label22.Size = new System.Drawing.Size(27, 32);
+
             this.label22.TabIndex = 75;
             this.label22.Text = "x";
             // 
@@ -1292,8 +1296,9 @@ namespace Logistica.Sistema_de_Logistica
             this.label15.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(167, 315);
-            this.label15.Name = "label15";
+
             this.label15.Size = new System.Drawing.Size(27, 32);
+
             this.label15.TabIndex = 75;
             this.label15.Text = "x";
             // 
@@ -1369,8 +1374,9 @@ namespace Logistica.Sistema_de_Logistica
             this.label27.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label27.ForeColor = System.Drawing.Color.White;
             this.label27.Location = new System.Drawing.Point(74, 423);
-            this.label27.Name = "label27";
+
             this.label27.Size = new System.Drawing.Size(116, 32);
+
             this.label27.TabIndex = 70;
             this.label27.Text = "Total m²:";
             // 
@@ -1380,8 +1386,9 @@ namespace Logistica.Sistema_de_Logistica
             this.label14.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(183, 287);
-            this.label14.Name = "label14";
+
             this.label14.Size = new System.Drawing.Size(109, 32);
+
             this.label14.TabIndex = 70;
             this.label14.Text = "Largura:";
             // 

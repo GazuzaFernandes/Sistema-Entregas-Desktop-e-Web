@@ -159,7 +159,7 @@
             this.btnLimparSaida.ForeColor = System.Drawing.Color.Black;
             this.btnLimparSaida.Image = ((System.Drawing.Image)(resources.GetObject("btnLimparSaida.Image")));
             this.btnLimparSaida.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimparSaida.Location = new System.Drawing.Point(299, 148);
+            this.btnLimparSaida.Location = new System.Drawing.Point(614, 156);
             this.btnLimparSaida.Name = "btnLimparSaida";
             this.btnLimparSaida.Size = new System.Drawing.Size(122, 62);
             this.btnLimparSaida.TabIndex = 33;
@@ -174,7 +174,7 @@
             this.btnInserir.ForeColor = System.Drawing.Color.Black;
             this.btnInserir.Image = ((System.Drawing.Image)(resources.GetObject("btnInserir.Image")));
             this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInserir.Location = new System.Drawing.Point(114, 148);
+            this.btnInserir.Location = new System.Drawing.Point(429, 156);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(122, 62);
             this.btnInserir.TabIndex = 36;
@@ -199,7 +199,7 @@
             this.txtTotalEstoqueSaida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotalEstoqueSaida.Enabled = false;
             this.txtTotalEstoqueSaida.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTotalEstoqueSaida.Location = new System.Drawing.Point(412, 94);
+            this.txtTotalEstoqueSaida.Location = new System.Drawing.Point(703, 82);
             this.txtTotalEstoqueSaida.Name = "txtTotalEstoqueSaida";
             this.txtTotalEstoqueSaida.Size = new System.Drawing.Size(98, 38);
             this.txtTotalEstoqueSaida.TabIndex = 32;
@@ -209,7 +209,7 @@
             // 
             this.txtCalcularSaida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCalcularSaida.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCalcularSaida.Location = new System.Drawing.Point(138, 94);
+            this.txtCalcularSaida.Location = new System.Drawing.Point(429, 82);
             this.txtCalcularSaida.Name = "txtCalcularSaida";
             this.txtCalcularSaida.Size = new System.Drawing.Size(98, 38);
             this.txtCalcularSaida.TabIndex = 32;
@@ -231,7 +231,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(242, 97);
+            this.label3.Location = new System.Drawing.Point(533, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(164, 31);
             this.label3.TabIndex = 30;
@@ -242,7 +242,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(8, 97);
+            this.label2.Location = new System.Drawing.Point(299, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 31);
             this.label2.TabIndex = 30;
@@ -615,7 +615,7 @@
             this.sToolStripMenuItem,
             this.salvarDataToolStripMenuItem});
             this.cmsSalvarConteudos.Name = "contextMenuStrip1";
-            this.cmsSalvarConteudos.Size = new System.Drawing.Size(211, 88);
+            this.cmsSalvarConteudos.Size = new System.Drawing.Size(174, 60);
             this.cmsSalvarConteudos.Opening += new System.ComponentModel.CancelEventHandler(this.cmsSalvarConteudos_Opening);
             // 
             // sToolStripMenuItem
@@ -623,13 +623,13 @@
             this.sToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.sToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
             this.sToolStripMenuItem.Name = "sToolStripMenuItem";
-            this.sToolStripMenuItem.Size = new System.Drawing.Size(210, 28);
+            this.sToolStripMenuItem.Size = new System.Drawing.Size(173, 28);
             this.sToolStripMenuItem.Text = "Salvar Data";
             // 
             // salvarDataToolStripMenuItem
             // 
             this.salvarDataToolStripMenuItem.Name = "salvarDataToolStripMenuItem";
-            this.salvarDataToolStripMenuItem.Size = new System.Drawing.Size(210, 28);
+            this.salvarDataToolStripMenuItem.Size = new System.Drawing.Size(173, 28);
             this.salvarDataToolStripMenuItem.Text = "Salvar Entrada";
             // 
             // cmsDeletar
