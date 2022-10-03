@@ -40,11 +40,10 @@
             this.rbEndereço = new System.Windows.Forms.RadioButton();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnProposta = new System.Windows.Forms.Button();
             this.cbCancelado = new System.Windows.Forms.CheckBox();
             this.cbFinalizado = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.cbPendente = new System.Windows.Forms.CheckBox();
-            this.btnProposta = new System.Windows.Forms.Button();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -59,7 +58,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1356, 484);
+            this.tabPage1.Size = new System.Drawing.Size(1356, 512);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Principal";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -76,7 +75,7 @@
             this.dgvPrincipal.Name = "dgvPrincipal";
             this.dgvPrincipal.ReadOnly = true;
             this.dgvPrincipal.RowHeadersWidth = 51;
-            this.dgvPrincipal.Size = new System.Drawing.Size(1350, 480);
+            this.dgvPrincipal.Size = new System.Drawing.Size(1350, 508);
             this.dgvPrincipal.TabIndex = 0;
             this.dgvPrincipal.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrincipal_CellDoubleClick);
             this.dgvPrincipal.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvPrincipal_DataBindingComplete);
@@ -87,11 +86,11 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabControl1.Location = new System.Drawing.Point(0, 201);
+            this.tabControl1.Location = new System.Drawing.Point(0, 173);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1364, 528);
+            this.tabControl1.Size = new System.Drawing.Size(1364, 556);
             this.tabControl1.TabIndex = 8;
             // 
             // pictureBox1
@@ -185,7 +184,6 @@
             this.panel1.Controls.Add(this.btnProposta);
             this.panel1.Controls.Add(this.cbCancelado);
             this.panel1.Controls.Add(this.cbFinalizado);
-            this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.cbPendente);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnLimparPesquisa);
@@ -198,15 +196,26 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1364, 201);
+            this.panel1.Size = new System.Drawing.Size(1364, 173);
             this.panel1.TabIndex = 7;
+            // 
+            // btnProposta
+            // 
+            this.btnProposta.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnProposta.Location = new System.Drawing.Point(779, 27);
+            this.btnProposta.Name = "btnProposta";
+            this.btnProposta.Size = new System.Drawing.Size(256, 99);
+            this.btnProposta.TabIndex = 14;
+            this.btnProposta.Text = "Nova Proposta";
+            this.btnProposta.UseVisualStyleBackColor = true;
+            this.btnProposta.Click += new System.EventHandler(this.btnProposta_Click);
             // 
             // cbCancelado
             // 
             this.cbCancelado.AutoSize = true;
             this.cbCancelado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbCancelado.ForeColor = System.Drawing.Color.Red;
-            this.cbCancelado.Location = new System.Drawing.Point(1158, 84);
+            this.cbCancelado.Location = new System.Drawing.Point(1056, 111);
             this.cbCancelado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCancelado.Name = "cbCancelado";
             this.cbCancelado.Size = new System.Drawing.Size(173, 42);
@@ -219,7 +228,7 @@
             this.cbFinalizado.AutoSize = true;
             this.cbFinalizado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbFinalizado.ForeColor = System.Drawing.Color.Lime;
-            this.cbFinalizado.Location = new System.Drawing.Point(1158, 27);
+            this.cbFinalizado.Location = new System.Drawing.Point(1056, 65);
             this.cbFinalizado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbFinalizado.Name = "cbFinalizado";
             this.cbFinalizado.Size = new System.Drawing.Size(172, 42);
@@ -227,42 +236,18 @@
             this.cbFinalizado.Text = "Finalizado";
             this.cbFinalizado.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox1.ForeColor = System.Drawing.Color.Blue;
-            this.checkBox1.Location = new System.Drawing.Point(793, 26);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(311, 42);
-            this.checkBox1.TabIndex = 13;
-            this.checkBox1.Text = "Pendente de entrega";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // cbPendente
             // 
             this.cbPendente.AutoSize = true;
             this.cbPendente.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbPendente.ForeColor = System.Drawing.Color.Yellow;
-            this.cbPendente.Location = new System.Drawing.Point(793, 84);
+            this.cbPendente.Location = new System.Drawing.Point(1056, 19);
             this.cbPendente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbPendente.Name = "cbPendente";
             this.cbPendente.Size = new System.Drawing.Size(148, 42);
             this.cbPendente.TabIndex = 13;
             this.cbPendente.Text = "Em obra";
             this.cbPendente.UseVisualStyleBackColor = true;
-            // 
-            // btnProposta
-            // 
-            this.btnProposta.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnProposta.Location = new System.Drawing.Point(604, 131);
-            this.btnProposta.Name = "btnProposta";
-            this.btnProposta.Size = new System.Drawing.Size(256, 63);
-            this.btnProposta.TabIndex = 14;
-            this.btnProposta.Text = "Nova Proposta";
-            this.btnProposta.UseVisualStyleBackColor = true;
-            this.btnProposta.Click += new System.EventHandler(this.btnProposta_Click);
             // 
             // FrmPrincipalEng
             // 
@@ -306,7 +291,6 @@
         private CheckBox cbCancelado;
         private CheckBox cbFinalizado;
         private CheckBox cbPendente;
-        private CheckBox checkBox1;
         private Button btnProposta;
     }
 }

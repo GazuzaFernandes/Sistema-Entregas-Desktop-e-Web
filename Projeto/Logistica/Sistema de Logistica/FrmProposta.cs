@@ -37,7 +37,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     _proposta = new DLProposta().ConsultarPorId(_proposta.PropostaId);
                     txtPropostId.Text = _proposta.PropostaId.ToString();
                     dtpDataPedido.Value = _proposta.DataPrevista;
-                    dtpDataPedido.Value = _proposta.DataPedido;
+                    dtpDataPrevista.Value = _proposta.DataPedido;
                     txtEmpresa.Text = _proposta.Fabrica;
                     cbEmpresaFaturar.Text = _proposta.Faturado;
                     txtFormaPagamento.Text = _proposta.FormaPag;
