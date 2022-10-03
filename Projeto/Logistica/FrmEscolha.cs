@@ -167,5 +167,10 @@ namespace Projeto
         {
           this.WindowState = FormWindowState.Minimized;
         }
+
+        private void btnEntrar_MouseMove(object sender, MouseEventArgs e)
+        {
+            
+        }
     }
 }

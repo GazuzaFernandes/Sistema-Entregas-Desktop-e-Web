@@ -56,7 +56,7 @@
             // btnProduto
             // 
             this.btnProduto.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnProduto.Location = new System.Drawing.Point(344, 82);
+            this.btnProduto.Location = new System.Drawing.Point(616, 82);
             this.btnProduto.Name = "btnProduto";
             this.btnProduto.Size = new System.Drawing.Size(264, 63);
             this.btnProduto.TabIndex = 51;
@@ -67,7 +67,7 @@
             // btnLimparPesquisa
             // 
             this.btnLimparPesquisa.Image = ((System.Drawing.Image)(resources.GetObject("btnLimparPesquisa.Image")));
-            this.btnLimparPesquisa.Location = new System.Drawing.Point(635, 22);
+            this.btnLimparPesquisa.Location = new System.Drawing.Point(212, 98);
             this.btnLimparPesquisa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLimparPesquisa.Name = "btnLimparPesquisa";
             this.btnLimparPesquisa.Size = new System.Drawing.Size(38, 38);
@@ -78,7 +78,7 @@
             // btnPesquisar
             // 
             this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
-            this.btnPesquisar.Location = new System.Drawing.Point(591, 22);
+            this.btnPesquisar.Location = new System.Drawing.Point(168, 98);
             this.btnPesquisar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(38, 38);
@@ -89,7 +89,7 @@
             // txtPesquisar
             // 
             this.txtPesquisar.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPesquisar.Location = new System.Drawing.Point(165, 22);
+            this.txtPesquisar.Location = new System.Drawing.Point(165, 49);
             this.txtPesquisar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(410, 38);
