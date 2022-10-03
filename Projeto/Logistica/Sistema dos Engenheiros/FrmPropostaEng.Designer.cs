@@ -41,7 +41,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.cbEmpresaFaturar = new System.Windows.Forms.ComboBox();
+            this.cbComentado = new System.Windows.Forms.ComboBox();
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -113,7 +113,7 @@
             this.dgvitensProposta.RowHeadersWidth = 51;
             this.dgvitensProposta.RowTemplate.Height = 29;
             this.dgvitensProposta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvitensProposta.Size = new System.Drawing.Size(1419, 360);
+            this.dgvitensProposta.Size = new System.Drawing.Size(1419, 272);
             this.dgvitensProposta.TabIndex = 0;
             // 
             // label14
@@ -131,7 +131,7 @@
             this.btnDeletarProposta.ForeColor = System.Drawing.Color.Red;
             this.btnDeletarProposta.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletarProposta.Image")));
             this.btnDeletarProposta.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDeletarProposta.Location = new System.Drawing.Point(1080, 548);
+            this.btnDeletarProposta.Location = new System.Drawing.Point(1071, 521);
             this.btnDeletarProposta.Name = "btnDeletarProposta";
             this.btnDeletarProposta.Size = new System.Drawing.Size(159, 75);
             this.btnDeletarProposta.TabIndex = 15;
@@ -145,7 +145,7 @@
             this.btnSalvarProposta.ForeColor = System.Drawing.Color.Red;
             this.btnSalvarProposta.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarProposta.Image")));
             this.btnSalvarProposta.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSalvarProposta.Location = new System.Drawing.Point(1080, 417);
+            this.btnSalvarProposta.Location = new System.Drawing.Point(1071, 399);
             this.btnSalvarProposta.Name = "btnSalvarProposta";
             this.btnSalvarProposta.Size = new System.Drawing.Size(159, 75);
             this.btnSalvarProposta.TabIndex = 15;
@@ -158,7 +158,7 @@
             // 
             this.rtbComentario.Location = new System.Drawing.Point(36, 373);
             this.rtbComentario.Name = "rtbComentario";
-            this.rtbComentario.Size = new System.Drawing.Size(1013, 297);
+            this.rtbComentario.Size = new System.Drawing.Size(1013, 223);
             this.rtbComentario.TabIndex = 14;
             this.rtbComentario.Text = "";
             // 
@@ -167,7 +167,7 @@
             this.rbCancelado.AutoSize = true;
             this.rbCancelado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbCancelado.ForeColor = System.Drawing.Color.Red;
-            this.rbCancelado.Location = new System.Drawing.Point(1080, 323);
+            this.rbCancelado.Location = new System.Drawing.Point(1084, 292);
             this.rbCancelado.Name = "rbCancelado";
             this.rbCancelado.Size = new System.Drawing.Size(180, 42);
             this.rbCancelado.TabIndex = 13;
@@ -180,7 +180,7 @@
             this.rbFinalizado.AutoSize = true;
             this.rbFinalizado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbFinalizado.ForeColor = System.Drawing.Color.Lime;
-            this.rbFinalizado.Location = new System.Drawing.Point(1080, 263);
+            this.rbFinalizado.Location = new System.Drawing.Point(1084, 232);
             this.rbFinalizado.Name = "rbFinalizado";
             this.rbFinalizado.Size = new System.Drawing.Size(179, 42);
             this.rbFinalizado.TabIndex = 13;
@@ -193,7 +193,7 @@
             this.rbPendente.AutoSize = true;
             this.rbPendente.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbPendente.ForeColor = System.Drawing.Color.Yellow;
-            this.rbPendente.Location = new System.Drawing.Point(1080, 195);
+            this.rbPendente.Location = new System.Drawing.Point(1084, 164);
             this.rbPendente.Name = "rbPendente";
             this.rbPendente.Size = new System.Drawing.Size(159, 42);
             this.rbPendente.TabIndex = 13;
@@ -204,7 +204,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1255, 565);
+            this.pictureBox1.Location = new System.Drawing.Point(1262, 491);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(136, 105);
@@ -232,19 +232,19 @@
             this.label15.TabIndex = 11;
             this.label15.Text = "Qtd:";
             // 
-            // cbEmpresaFaturar
+            // cbComentado
             // 
-            this.cbEmpresaFaturar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbEmpresaFaturar.FormattingEnabled = true;
-            this.cbEmpresaFaturar.Items.AddRange(new object[] {
+            this.cbComentado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbComentado.FormattingEnabled = true;
+            this.cbComentado.Items.AddRange(new object[] {
             "Adriana",
             "Elias",
             "Rodrigo",
             "Alex"});
-            this.cbEmpresaFaturar.Location = new System.Drawing.Point(786, 307);
-            this.cbEmpresaFaturar.Name = "cbEmpresaFaturar";
-            this.cbEmpresaFaturar.Size = new System.Drawing.Size(243, 39);
-            this.cbEmpresaFaturar.TabIndex = 11;
+            this.cbComentado.Location = new System.Drawing.Point(786, 307);
+            this.cbComentado.Name = "cbComentado";
+            this.cbComentado.Size = new System.Drawing.Size(243, 39);
+            this.cbComentado.TabIndex = 11;
             // 
             // txtCliente
             // 
@@ -268,9 +268,9 @@
             // 
             this.panel1.Controls.Add(this.dgvitensProposta);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(3, 333);
+            this.panel1.Location = new System.Drawing.Point(3, 349);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1419, 360);
+            this.panel1.Size = new System.Drawing.Size(1419, 272);
             this.panel1.TabIndex = 0;
             // 
             // txtTotal
@@ -354,7 +354,7 @@
             this.tabPage3.Controls.Add(this.txtIdHistorico);
             this.tabPage3.Location = new System.Drawing.Point(4, 40);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1425, 696);
+            this.tabPage3.Size = new System.Drawing.Size(1425, 624);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Historico da Proposta";
             // 
@@ -365,7 +365,7 @@
             this.dgvHistorico.BackgroundColor = System.Drawing.Color.White;
             this.dgvHistorico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHistorico.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvHistorico.Location = new System.Drawing.Point(0, 160);
+            this.dgvHistorico.Location = new System.Drawing.Point(0, 88);
             this.dgvHistorico.Name = "dgvHistorico";
             this.dgvHistorico.ReadOnly = true;
             this.dgvHistorico.RowHeadersWidth = 51;
@@ -373,6 +373,7 @@
             this.dgvHistorico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHistorico.Size = new System.Drawing.Size(1425, 536);
             this.dgvHistorico.TabIndex = 21;
+            this.dgvHistorico.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorico_CellDoubleClick);
             // 
             // btnDeletarComentario
             // 
@@ -564,7 +565,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1433, 740);
+            this.tabControl1.Size = new System.Drawing.Size(1433, 668);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -578,7 +579,7 @@
             this.tabPage1.Controls.Add(this.radioButton1);
             this.tabPage1.Controls.Add(this.rbPendente);
             this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Controls.Add(this.cbEmpresaFaturar);
+            this.tabPage1.Controls.Add(this.cbComentado);
             this.tabPage1.Controls.Add(this.txtCliente);
             this.tabPage1.Controls.Add(this.txtObra);
             this.tabPage1.Controls.Add(this.txtProposta);
@@ -601,7 +602,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 40);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1425, 696);
+            this.tabPage1.Size = new System.Drawing.Size(1425, 624);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dados da Proposta";
             // 
@@ -610,12 +611,12 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioButton1.ForeColor = System.Drawing.Color.Blue;
-            this.radioButton1.Location = new System.Drawing.Point(1080, 133);
+            this.radioButton1.Location = new System.Drawing.Point(1084, 68);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(318, 42);
+            this.radioButton1.Size = new System.Drawing.Size(187, 80);
             this.radioButton1.TabIndex = 13;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Pendente de entrega.";
+            this.radioButton1.Text = "Pendente \r\nde entrega.";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // label29
@@ -702,14 +703,14 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 40);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1425, 696);
+            this.tabPage2.Size = new System.Drawing.Size(1425, 624);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Itens da Propsota";
             // 
             // rtbMaterial
             // 
             this.rtbMaterial.Enabled = false;
-            this.rtbMaterial.Location = new System.Drawing.Point(151, 195);
+            this.rtbMaterial.Location = new System.Drawing.Point(151, 197);
             this.rtbMaterial.Name = "rtbMaterial";
             this.rtbMaterial.Size = new System.Drawing.Size(833, 122);
             this.rtbMaterial.TabIndex = 18;
@@ -719,7 +720,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(151, 164);
+            this.label26.Location = new System.Drawing.Point(151, 152);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(222, 31);
             this.label26.TabIndex = 17;
@@ -768,7 +769,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1433, 740);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1433, 668);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmPropostaEng";
@@ -804,7 +806,7 @@
         private PictureBox pictureBox1;
         private Label label21;
         private Label label15;
-        private ComboBox cbEmpresaFaturar;
+        private ComboBox cbComentado;
         private TextBox txtCliente;
         private Label label22;
         private Panel panel1;
