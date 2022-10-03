@@ -16,5 +16,10 @@ namespace Projeto.Logistica.Sistema_do_Orçamento
         {
             InitializeComponent();
         }
+
+        private void txtPropostId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

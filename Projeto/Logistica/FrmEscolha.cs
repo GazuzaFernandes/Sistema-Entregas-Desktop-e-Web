@@ -2,7 +2,6 @@
 using Logistica.Sistema_de_Logistica;
 using Logistica.Sistema_do_Financeiro;
 using Logistica.Sistema_do_Orçamento;
-using Logistica.Sistema_do_Sergio;
 using Logistica.Sistema_dos_Engenheiros;
 
 namespace Projeto
@@ -29,46 +28,40 @@ namespace Projeto
         {
             switch (cbSelecionar.Text)
             {
-                case "Amostra":
+                case "Amostra.":
                     {
                         FrmPrincipalAmostra amostra = new FrmPrincipalAmostra();
                         amostra.Show();
                     }
                     break;
 
-                case "Engenharia":
+                case "Engenharia.":
                     {
                         FrmPrincipalEng eng = new FrmPrincipalEng();
                         eng.Show();
                     }
                     break;
 
-                case "Logistica":
+                case "Logistica.":
                     {
                         FrmPrincipalLogistica logistica = new FrmPrincipalLogistica();
                         logistica.Show();
                     }
                     break;
 
-                case "Financeiro":
+                case "Financeiro.":
                     {
                         FrmPrincipalFinanceiro fin = new FrmPrincipalFinanceiro();
                         fin.Show();
                     }
                     break;
 
-                case "Orçamento":
+                case "Orçamento.":
                     {
                         FrmOrcamentoPrincipal orc = new FrmOrcamentoPrincipal();
                         orc.Show();
                     }
-                    break;
-                case "Sergio":
-                    {
-                        FrmPrincipalSergio sergio = new FrmPrincipalSergio();
-                        sergio.Show();
-                    }
-                    break;
+                    break;             
             }
             this.WindowState = FormWindowState.Minimized;
         }
@@ -172,7 +165,7 @@ namespace Projeto
 
         private void FrmEscolha_Click(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Minimized;
+          this.WindowState = FormWindowState.Minimized;
         }
     }
 }

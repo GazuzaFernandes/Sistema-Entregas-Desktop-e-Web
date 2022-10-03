@@ -16,5 +16,10 @@ namespace Logistica.Sistema_do_Financeiro
         {
             InitializeComponent();
         }
+
+        private void FrmPrincipalFinanceiro_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }

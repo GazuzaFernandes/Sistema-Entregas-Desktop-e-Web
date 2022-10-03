@@ -42,8 +42,7 @@ namespace Logistica.Sistema_de_Amostras
             rbCliente.Checked = false;
             rbEndereco.Checked = false;
             rbAmostra.Checked = false;
-            CarregarGridAmostras();
-          
+            CarregarGridAmostras();          
         }
 
         private void btnAmostra_Click(object sender, EventArgs e)
@@ -127,5 +126,10 @@ namespace Logistica.Sistema_de_Amostras
             objBlControleGrid.DefinirAlturaLinha(30);
         }
         #endregion
+
+        private void FrmPrincipalAmostra_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }

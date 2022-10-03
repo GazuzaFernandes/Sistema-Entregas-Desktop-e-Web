@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(1432, 714);
             this.Name = "FrmPrincipalFinanceiro";
             this.Text = "FrmPrincipalFinanceiro";
+            this.Click += new System.EventHandler(this.FrmPrincipalFinanceiro_Click);
             this.ResumeLayout(false);
 
         }

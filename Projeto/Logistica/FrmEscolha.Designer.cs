@@ -47,12 +47,11 @@
             this.cbSelecionar.ForeColor = System.Drawing.Color.Red;
             this.cbSelecionar.FormattingEnabled = true;
             this.cbSelecionar.Items.AddRange(new object[] {
-            "Amostra",
-            "Engenharia",
-            "Logistica",
-            "Financeiro",
-            "Orçamento",
-            "Sergio"});
+            "Amostra.",
+            "Engenharia.",
+            "Logistica.",
+            "Financeiro.",
+            "Orçamento."});
             this.cbSelecionar.Location = new System.Drawing.Point(191, 23);
             this.cbSelecionar.Name = "cbSelecionar";
             this.cbSelecionar.Size = new System.Drawing.Size(246, 39);
@@ -115,6 +114,7 @@
             this.Controls.Add(this.cbSelecionar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmEscolha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Escolha o Sistema";

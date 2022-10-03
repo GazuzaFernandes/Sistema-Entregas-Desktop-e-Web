@@ -1,4 +1,8 @@
-﻿using System;
+﻿using DALOrcamento.Entities;
+using DALOrcamento.Repository;
+using Logistica.Sistema_de_Logistica;
+using Projeto.Logistica.Sistema_do_Orçamento;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +20,106 @@ namespace Logistica.Sistema_do_Orçamento
         {
             InitializeComponent();
         }
+
+        private void FrmOrcamentoPrincipal_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void FrmOrcamentoPrincipal_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                var listaProp = new DLProdutos().Listar();
+                CarregarGridProdutos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+        }
+
+        private void btnProduto_Click(object sender, EventArgs e)
+        {
+            FrmCadastrarValores cadastrar = new FrmCadastrarValores();
+            cadastrar.ShowDialog();
+            CarregarGridProdutos();
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            CarregarGridProdutos(true);
+            MontarGridProdutos(dgvValores);
+        }
+
+        private void btnLimparPesquisa_Click(object sender, EventArgs e)
+        {
+            txtPesquisar.Text = Convert.ToString("Digite para Pesquisar");
+            CarregarGridProdutos();
+        }
+
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+            CarregarGridProdutos(true);
+            MontarGridProdutos(dgvValores);
+        }
+
+        private void dgvValores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                var produtos = new Produtos();
+                produtos.ProdutoId = Convert.ToInt32(dgvValores.Rows[e.RowIndex].Cells[0].Value);
+                FrmCadastrarValores vaalores = new FrmCadastrarValores();
+                vaalores._produto = produtos;
+                vaalores.ShowDialog();
+                CarregarGridProdutos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro:" + ex.Message);
+            }
+        }
+
+        private void txtPesquisar_Click(object sender, EventArgs e)
+        {
+            txtPesquisar.Clear();
+        }
+
+        #region Apenas Metodos
+        private void CarregarGridProdutos(bool isPesquisa = false)
+        {
+            try
+            {
+                var listarProdutos = new DLProdutos().Listar();
+                var pesquisa = txtPesquisar.Text;
+
+                listarProdutos = listarProdutos.Where(p => p.Produto.ToLower().Contains(pesquisa)).ToList();
+
+                dgvValores.DataSource = listarProdutos.OrderBy(p => p.Fornecedor).ToList();
+                MontarGridProdutos(dgvValores);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+        }
+        private void MontarGridProdutos(DataGridView dgvValores)
+        {
+            dgvValores.DefaultCellStyle.Font = new Font("Calibri", 16F, GraphicsUnit.Pixel);
+            var objBlControleGrid = new ControleGrid(dgvValores);
+            //Define quais colunas serão visíveis
+            objBlControleGrid.DefinirVisibilidade(new List<string>() { "Fornecedor", "Produto", "Preco", "Rendimento", "Comentario" });
+            //Define quais os cabeçalhos respectivos das colunas 
+            objBlControleGrid.DefinirCabecalhos(new List<string>() { "Fornecedor", "Produto", "Preço", "Rendimento", "Descrição" });
+            //Define quais as larguras respectivas das colunas 
+            objBlControleGrid.DefinirLarguras(new List<int>() { 10, 35, 20, 10, 20 }, dgvValores.Width - 15); //O total tem que ficar em 100% 
+            //Define quais os alinhamentos respectivos do componentes das colunas 
+            objBlControleGrid.DefinirAlinhamento(new List<string>() { "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", });
+            //Define a altura das linhas respectivas da Grid 
+            objBlControleGrid.DefinirAlturaLinha(30);
+        }
+        #endregion
+
     }
 }

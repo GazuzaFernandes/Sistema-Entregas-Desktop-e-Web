@@ -200,10 +200,13 @@
             this.Controls.Add(this.dvgAmostra);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmPrincipalAmostra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Historico de amostras.";
             this.Load += new System.EventHandler(this.FrmPrincipalAmostra_Load);
+            this.Click += new System.EventHandler(this.FrmPrincipalAmostra_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dvgAmostra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
