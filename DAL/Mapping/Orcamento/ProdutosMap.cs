@@ -1,4 +1,5 @@
-﻿using DALOrcamento.Entities;
+﻿using DAL.Entities;
+using DAL.Entities.Orcamento;
 using FluentNHibernate.Mapping;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DALOrcamento.Mapping
+namespace DAL.Mapping.Orcamento
 {
     public class ProdutosMap : ClassMap<Produtos>
     {

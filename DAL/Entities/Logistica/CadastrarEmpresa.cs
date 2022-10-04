@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DALLogistica.Entities
+namespace DAL.Entities.Logistica
 {
    public class CadastrarEmpresa
-    {
-        #region Pasta - Sistema Logistica -  Form Cadastro Empresa
+    {        
         public virtual int EmpresaId { get; set; }
-        public virtual string Empresa { get; set; }
-        #endregion
+        public virtual string? Empresa { get; set; }
+      
     }
 }

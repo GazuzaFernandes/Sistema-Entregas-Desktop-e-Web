@@ -1,43 +1,46 @@
-﻿using DALLogistica.Entities;
-using DALLogistica.NHibertnate;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DAL.Entities.Amostras;
+using DAL.NHibertnate;
+using DAL.Repository.Logistica;
 
-namespace DALLogistica.Repository
+namespace DAL.Repository.Amostras
 {
-    public class DLAmostra : Repository<Amostra>
+    public class DLAmostraCliente : Repository<AmostraCliente>
     {
-        #region Pasta Sistema Amostra - Form Amostra
-        public List<AmostraclienteViewModel> ListarAmostra()
+        #region Pasta - Sistema Amostra -  Form Amostra Cliente
+        public List<AmostraclienteViewModel> ListarAmostraclienteStatus()
         {
             try
             {
                 var lstAamostracliente = new List<AmostraclienteViewModel>();
-                var listaAamostracliente = new DLAmostra().Listar();
+
+                var listaAamostracliente = new DLAmostraCliente().Listar();
                 var listaStatus = new DLStatusObra().Listar();
+
                 var resultado = listaAamostracliente
-                   .Join(listaStatus, amostra => amostra.StatusobraId, statuss => statuss.StatusObraId, (amostra, stattuss) => new { amostra, stattuss })
+                   .Join(listaStatus, amostracliente => amostracliente.StatusobraId, statuss => statuss.StatusObraId, (amostracliente, stattuss) => new { amostracliente, stattuss })
                    .Select(x => new
                    {
-                       x.amostra.AmostraId,
-                       x.amostra.Construtora,
-                       x.amostra.DataEntrega,
-                       x.amostra.Obra,
-                       x.amostra.Material,
+                       x.amostracliente.AmostraId,
+                       x.amostracliente.Construtora,
+                       x.amostracliente.DataEntrega,
+                       x.amostracliente.Obra,
+                       x.amostracliente.Material,
                        x.stattuss.Descricao,
                    }).ToList();
+
+
                 foreach (var amostracliente in resultado)
                 {
                     var amoclie = new AmostraclienteViewModel();
+
                     amoclie.amostraid = amostracliente.AmostraId;
                     amoclie.construtora = amostracliente.Construtora;
                     amoclie.dataentrega = amostracliente.DataEntrega;
                     amoclie.obra = amostracliente.Obra;
                     amoclie.material = amostracliente.Material;
+
                     amoclie.Status = amostracliente.Descricao;
+
                     switch (amoclie.Status)
                     {
                         case "Pedente":
@@ -49,9 +52,12 @@ namespace DALLogistica.Repository
                         case "Cancelado":
                             amoclie.OrdenacaoStatus = 4;
                             break;
+
                     }
+
                     lstAamostracliente.Add(amoclie);
                 }
+
                 return lstAamostracliente.OrderByDescending(p => p.Status).ToList();
             }
             catch (System.Exception)
@@ -62,14 +68,17 @@ namespace DALLogistica.Repository
         public class AmostraclienteViewModel
         {
             public virtual int amostraid { get; set; }
-            public virtual string construtora { get; set; }
+            public virtual string? construtora { get; set; }
             public virtual DateTime dataentrega { get; set; }
-            public virtual string obra { get; set; }
+            public virtual string? obra { get; set; }
             public virtual int statusobra { get; set; }
-            public virtual string material { get; set; }
+            public virtual string? material { get; set; }
             public virtual int OrdenacaoStatus { get; set; }
-            public string Status { get; set; }
+            public string? Status { get; set; }
+
+
         }
         #endregion
     }
+
 }

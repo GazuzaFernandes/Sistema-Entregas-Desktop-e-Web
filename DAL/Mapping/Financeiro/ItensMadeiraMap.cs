@@ -1,10 +1,11 @@
-﻿using DALFinanceiro.Entities;
+﻿using DAL.Entities;
+using DAL.Entities.Financeiro;
 using FluentNHibernate.Mapping;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DALFinanceiro.Mapping
+namespace DAL.Mapping.Financeiro
 {
     public class ItensmadeiraMap : ClassMap<Itensmadeira>
     {
@@ -14,8 +15,7 @@ namespace DALFinanceiro.Mapping
             Map(p => p.Codigo);
             Map(p => p.Madeiras);
             Map(p => p.Medida);
-            Map(p => p.Total);
-     
+            Map(p => p.Total);     
             Map(p => p.IdProp);            
             Table("itensmadeira");
         }

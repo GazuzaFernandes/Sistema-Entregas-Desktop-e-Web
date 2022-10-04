@@ -1,5 +1,6 @@
-﻿using DALLogistica.Entities;
-using DALLogistica.Repository;
+﻿
+using DAL.Entities.Amostras;
+using DAL.Repository.Amostras;
 using Logistica.Sistema_de_Logistica;
 using Projeto.Logistica.Sistema_de_Amostras;
 using System;

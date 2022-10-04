@@ -1,5 +1,5 @@
 using System.Collections.Generic; 
-namespace DALLogisticaNHibertnate
+namespace DAL.NHibertnate
 {
     public interface IConnectionDal<T> where T : class 
         { 

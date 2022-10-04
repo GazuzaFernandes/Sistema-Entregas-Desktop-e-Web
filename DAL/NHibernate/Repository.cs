@@ -1,11 +1,11 @@
-using DALLogisticaNHibertnate;
+using DAL.NHibertnate;
 using NHibernate;
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DALLogistica.NHibertnate
+namespace DAL.NHibertnate
 {
     public class Repository<T> : IConnectionDal<T> where T : class
     {
@@ -85,6 +85,7 @@ namespace DALLogistica.NHibertnate
         /// </summary>
         /// <param name="id"></param>
         /// <returns>Retorna o objeto de uma classe do Id informado</returns>
+        /// 
         public T ConsultarPorId(int id)
         {
             using (ISession session = SQLSessionFactory.StartSession())

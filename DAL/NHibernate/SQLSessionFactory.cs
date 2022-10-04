@@ -1,10 +1,11 @@
-using DALLogistica.Mapping;
+
+using DAL.Mapping.Logistica;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
 using System;
 
-namespace DALLogistica.NHibertnate
+namespace DAL.NHibertnate
 {
     public enum BancoDados
     {

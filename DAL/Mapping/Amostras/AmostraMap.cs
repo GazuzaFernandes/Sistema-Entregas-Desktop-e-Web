@@ -1,13 +1,8 @@
-﻿using DALLogistica.Entities;
-using DALLogistica.NHibertnate;
+﻿
+using DAL.Entities.Amostras;
 using FluentNHibernate.Mapping;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DALLogistica.Mapping
+namespace DAL.Mapping.Amostras
 {
    public class AmostraMap : ClassMap<Amostra>
     {

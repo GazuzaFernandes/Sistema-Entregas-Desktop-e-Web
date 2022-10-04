@@ -1,7 +1,8 @@
-﻿using DALLogistica.Entities;
+﻿using DAL.Entities;
+using DAL.Entities.Logistica;
 using FluentNHibernate.Mapping;
 
-namespace DALLogistica.Mapping
+namespace DAL.Mapping.Logistica
 {
     public class StatusObraMap : ClassMap<StatusObra>
     {

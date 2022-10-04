@@ -1,13 +1,11 @@
 ﻿
-using DALLogistica.Entities;
-using DALLogistica.NHibertnate;
+using DAL.Entities.Logistica;
+using DAL.NHibertnate;
 
-namespace DALLogistica.Repository
+
+namespace DAL.Repository.Logistica
 {
     public class DLItensProposta : Repository<ItensProposta>
     {
-        #region Pasta - Sistema Logistica - Form Proposta - Form Cadastro d Itens
-
-        #endregion
     }
 }

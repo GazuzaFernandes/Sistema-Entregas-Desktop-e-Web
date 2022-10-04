@@ -51,7 +51,7 @@
             this.btnLimparComentario = new System.Windows.Forms.Button();
             this.txtIdHistorico = new System.Windows.Forms.TextBox();
             this.dtpHistorico = new System.Windows.Forms.DateTimePicker();
-            this.dtpDataPedido = new System.Windows.Forms.DateTimePicker();
+            this.dtpDataIncluido = new System.Windows.Forms.DateTimePicker();
             this.btnGerarId = new System.Windows.Forms.Button();
             this.mtSalvarComentario = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsSalvarConteudos = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -81,7 +81,7 @@
             this.btnDeletarProposta.ForeColor = System.Drawing.Color.Red;
             this.btnDeletarProposta.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletarProposta.Image")));
             this.btnDeletarProposta.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDeletarProposta.Location = new System.Drawing.Point(1071, 521);
+            this.btnDeletarProposta.Location = new System.Drawing.Point(1071, 502);
             this.btnDeletarProposta.Name = "btnDeletarProposta";
             this.btnDeletarProposta.Size = new System.Drawing.Size(159, 75);
             this.btnDeletarProposta.TabIndex = 15;
@@ -95,7 +95,7 @@
             this.btnSalvarProposta.ForeColor = System.Drawing.Color.Red;
             this.btnSalvarProposta.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarProposta.Image")));
             this.btnSalvarProposta.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSalvarProposta.Location = new System.Drawing.Point(1071, 399);
+            this.btnSalvarProposta.Location = new System.Drawing.Point(1071, 373);
             this.btnSalvarProposta.Name = "btnSalvarProposta";
             this.btnSalvarProposta.Size = new System.Drawing.Size(159, 75);
             this.btnSalvarProposta.TabIndex = 15;
@@ -310,15 +310,15 @@
             this.dtpHistorico.Size = new System.Drawing.Size(148, 34);
             this.dtpHistorico.TabIndex = 3;
             // 
-            // dtpDataPedido
+            // dtpDataIncluido
             // 
-            this.dtpDataPedido.AccessibleDescription = "";
-            this.dtpDataPedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dtpDataPedido.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDataPedido.Location = new System.Drawing.Point(376, 26);
-            this.dtpDataPedido.Name = "dtpDataPedido";
-            this.dtpDataPedido.Size = new System.Drawing.Size(148, 34);
-            this.dtpDataPedido.TabIndex = 3;
+            this.dtpDataIncluido.AccessibleDescription = "";
+            this.dtpDataIncluido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dtpDataIncluido.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDataIncluido.Location = new System.Drawing.Point(376, 26);
+            this.dtpDataIncluido.Name = "dtpDataIncluido";
+            this.dtpDataIncluido.Size = new System.Drawing.Size(148, 34);
+            this.dtpDataIncluido.TabIndex = 3;
             // 
             // btnGerarId
             // 
@@ -428,7 +428,7 @@
             this.tabPage1.Controls.Add(this.txtEngResponsavel);
             this.tabPage1.Controls.Add(this.txtFuncionario);
             this.tabPage1.Controls.Add(this.dtpHistorico);
-            this.tabPage1.Controls.Add(this.dtpDataPedido);
+            this.tabPage1.Controls.Add(this.dtpDataIncluido);
             this.tabPage1.Controls.Add(this.btnGerarId);
             this.tabPage1.Controls.Add(this.label16);
             this.tabPage1.Controls.Add(this.txtPropostId);
@@ -553,7 +553,7 @@
         private Button btnLimparComentario;
         private TextBox txtIdHistorico;
         private DateTimePicker dtpHistorico;
-        private DateTimePicker dtpDataPedido;
+        private DateTimePicker dtpDataIncluido;
         private Button btnGerarId;
         private ToolStripMenuItem mtSalvarComentario;
         private ContextMenuStrip cmsSalvarConteudos;

@@ -1,7 +1,8 @@
-﻿using DALLogistica.NHibertnate;
-using DALSenhas.Entities;
+﻿using DAL.Entities.SenhaRestauracao;
+using DAL.NHibertnate;
 
-namespace DALSenhas.Repository
+
+namespace DAL.Repository.SenhaRestauracao
 {
     public class DLSenha : Repository<Senha>
     {

@@ -1,17 +1,16 @@
-﻿using DALLogistica.Entities;
+﻿using DAL.Entities.Logistica;
 using FluentNHibernate.Mapping;
 
-namespace DALLogistica.Mapping
+namespace DAL.Mapping.Logistica
 {
     public class CadastrarEmpresaMap : ClassMap<CadastrarEmpresa>
-    {
-        #region Pasta - Sistema Logistica -  Form Cadastro Empresa
+    {       
         public CadastrarEmpresaMap()
         {
             Id(p => p.EmpresaId).GeneratedBy.Sequence("cadastrarempresa_seq");
             Map(p => p.Empresa);
             Table("cadastrarempresa");
         }
-        #endregion
+        
     }
 }

@@ -1,4 +1,5 @@
-﻿using DALLogistica.Repository;
+﻿
+using DAL.Repository.Logistica;
 using Projeto.Logistica.Sistema_de_Logistica;
 using System;
 using System.Collections.Generic;

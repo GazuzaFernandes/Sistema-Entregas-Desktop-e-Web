@@ -1,12 +1,8 @@
-﻿using DALLogistica.Entities;
-using DALLogistica.NHibertnate;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DAL.Entities.Logistica;
+using DAL.NHibertnate;
 
-namespace DALLogistica.Repository
+
+namespace DAL.Repository.Logistica
 {
   public  class DLHistorico : Repository<Historico>
     {

@@ -1,10 +1,6 @@
 ﻿using DAL.Entities.Engenharia;
-using DALLogistica.NHibertnate;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DAL.NHibertnate;
+
 
 namespace DAL.Repository.Engenharia
 {

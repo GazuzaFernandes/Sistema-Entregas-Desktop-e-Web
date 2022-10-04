@@ -1,8 +1,7 @@
-﻿using DALOrcamento.Entities;
-using DALLogistica.NHibertnate;
-using System.Collections.Generic;
+﻿using DAL.NHibertnate;
+using DAL.Entities.Orcamento;
 
-namespace DALOrcamento.Repository
+namespace DAL.Repository.Orcamento
 {
     public class DLProdutos : Repository<Produtos>
     {

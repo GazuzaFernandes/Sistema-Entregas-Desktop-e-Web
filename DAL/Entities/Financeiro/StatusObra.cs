@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DALFinanceiro.Entities
+namespace DAL.Entities.Financeiro
 {
     public class Statusobra
     {

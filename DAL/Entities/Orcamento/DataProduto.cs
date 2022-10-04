@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DALOrcamento.Entities
+namespace DAL.Entities.Orcamento
 {
     public class DataProduto
     {
         public virtual int DataId { get; set; }
         public virtual DateTime Data { get; set; }
-        public virtual string Preco { get; set; }
+        public virtual string? Preco { get; set; }
         public virtual int ProdutoId { get; set; }       
     }
 }

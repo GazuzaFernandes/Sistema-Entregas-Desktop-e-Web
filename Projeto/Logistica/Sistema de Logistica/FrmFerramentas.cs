@@ -1,5 +1,6 @@
-﻿using DALLogistica.Entities;
-using DALLogistica.Repository;
+﻿
+using DAL.Entities.Logistica;
+using DAL.Repository.Logistica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

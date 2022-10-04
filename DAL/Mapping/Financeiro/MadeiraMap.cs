@@ -1,7 +1,8 @@
-﻿using DALFinanceiro.Entities;
+﻿using DAL.Entities;
+using DAL.Entities.Financeiro;
 using FluentNHibernate.Mapping;
 
-namespace DALFinanceiro.Mapping
+namespace DAL.Mapping.Financeiro
 {
     public class MadeiraMap : ClassMap<Madeira>
     {

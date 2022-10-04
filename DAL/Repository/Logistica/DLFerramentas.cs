@@ -1,10 +1,10 @@
-﻿using DALLogistica.Entities;
-using DALLogistica.NHibertnate;
+﻿using DAL.Entities.Logistica;
+using DAL.NHibertnate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DALLogistica.Repository
+namespace DAL.Repository.Logistica
 {
     public class DLFerramentas : Repository<Ferramentas>
     {

@@ -1,8 +1,7 @@
-﻿
-using DALLogistica.Entities;
-using DALLogistica.NHibertnate;
+﻿using DAL.Entities.Logistica;
+using DAL.NHibertnate;
 
-namespace DALLogistica.Repository
+namespace DAL.Repository.Logistica
 {
     public class DLStatusObra : Repository<StatusObra>
     {

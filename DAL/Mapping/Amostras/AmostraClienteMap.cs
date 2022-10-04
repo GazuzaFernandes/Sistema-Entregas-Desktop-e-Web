@@ -1,7 +1,8 @@
-﻿using DALLogistica.Entities;
+﻿using DAL.Entities;
+using DAL.Entities.Amostras;
 using FluentNHibernate.Mapping;
 
-namespace DALLogistica.Mapping
+namespace DAL.Mapping.Amostras
 {
     public class AmostraClienteMap : ClassMap<AmostraCliente>
     {

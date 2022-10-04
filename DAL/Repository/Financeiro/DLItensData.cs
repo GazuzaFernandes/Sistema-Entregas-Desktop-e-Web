@@ -1,8 +1,7 @@
-﻿using DALFinanceiro.Entities;
+﻿using DAL.Entities.Financeiro;
+using DAL.NHibertnate;
 
-using DALLogistica.NHibertnate;
-
-namespace DALFinanceiro.Repository
+namespace DAL.Repository.Financeiro
 {
     public class DLItensdata : Repository<Itensdata>
     {

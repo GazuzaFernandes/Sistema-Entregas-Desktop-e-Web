@@ -1,6 +1,7 @@
-﻿using DALLogistica.Entities;
-using DALLogistica.Repository;
-using DALSenhas.Repository;
+﻿
+using DAL.Entities.Logistica;
+using DAL.Repository.Logistica;
+using DAL.Repository.SenhaRestauracao;
 using Logistica.Sistema_de_Logistica;
 using System;
 using System.Collections.Generic;

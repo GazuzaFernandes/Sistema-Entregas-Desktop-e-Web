@@ -1,4 +1,5 @@
-﻿using DALLogistica.Entities;
+﻿using DAL.Entities;
+using DAL.Entities.Logistica;
 using FluentNHibernate.Mapping;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DALLogistica.Mapping
+namespace DAL.Mapping.Logistica
 {
    public class HistoricoMap : ClassMap<Historico>
     {

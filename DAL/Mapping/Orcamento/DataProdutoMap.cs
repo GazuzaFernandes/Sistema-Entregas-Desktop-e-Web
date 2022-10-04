@@ -1,7 +1,8 @@
-﻿using DALOrcamento.Entities;
+﻿using DAL.Entities;
+using DAL.Entities.Orcamento;
 using FluentNHibernate.Mapping;
 
-namespace DALOrcamento.Mapping
+namespace DAL.Mapping.Orcamento
 {
     class DataprodutoMap : ClassMap<DataProduto>
     {

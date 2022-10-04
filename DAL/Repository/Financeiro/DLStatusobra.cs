@@ -1,6 +1,7 @@
-﻿using DALFinanceiro.Entities;
-using DALLogistica.NHibertnate;
-namespace DALFinanceiro.Repository
+﻿using DAL.Entities.Financeiro;
+using DAL.NHibertnate;
+
+namespace DAL.Repository.Financeiro
 {
     public class DLStatusobra : Repository<Statusobra>
     {

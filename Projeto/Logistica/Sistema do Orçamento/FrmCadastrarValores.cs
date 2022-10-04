@@ -1,5 +1,6 @@
-﻿using DALOrcamento.Entities;
-using DALOrcamento.Repository;
+﻿
+using DAL.Entities.Orcamento;
+using DAL.Repository.Orcamento;
 using Logistica.Sistema_de_Logistica;
 using System;
 using System.Collections.Generic;

@@ -10,5 +10,14 @@ namespace DAL.Mapping.Engenharia
 {
     public class HistoricoEngenhariaMap : ClassMap<HistoricoEngenharia>
     {
+        public HistoricoEngenhariaMap()
+        {
+            Id(p => p.HistoricoId).GeneratedBy.Sequence("historieng_seq");
+            Map(p => p.Comentario);
+            Map(p => p.DataComentario);
+            Map(p => p.ComentadoEng);
+            Map(p => p.EngenheiroId);    
+            Table("HistoricoEngenharia");
+        }
     }
 }
