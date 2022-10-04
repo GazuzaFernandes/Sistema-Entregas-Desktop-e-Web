@@ -357,7 +357,6 @@
             this.mtSalvarProposta.Name = "mtSalvarProposta";
             this.mtSalvarProposta.Size = new System.Drawing.Size(210, 24);
             this.mtSalvarProposta.Text = "Salvar Proposta";
-            this.mtSalvarProposta.Click += new System.EventHandler(this.mtSalvarProposta_Click_1);
             // 
             // label16
             // 

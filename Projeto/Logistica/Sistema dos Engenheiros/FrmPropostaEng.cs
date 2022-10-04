@@ -144,6 +144,7 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
+
         private void mtSalvarProposta_Click(object sender, EventArgs e)
         {
             try
@@ -155,59 +156,25 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
                     int.TryParse(txtPropostId.Text, out id);
                     if (id > 0)
                     {
-                        var pAtua = new DLProposta().ConsultarPorId(id);
-                        pAtua.DataPrevista = dtpDataPedido.Value;
-                        pAtua.DataPedido = dtpDataPedido.Value;
-                        pAtua.Fabrica = txtEmpresa.Text;
-                        pAtua.FormaPag = txtFormaPagamento.Text;
-                        pAtua.EngResp = txtEngResponsavel.Text;
+                        var pAtua = new DLPropostaEngenharia().ConsultarPorId(id);
+                        pAtua.Proposta = txtProposta.Text;
+                        pAtua.Cliente = txtCliente.Text;
+                        pAtua.Funcionario = txtFuncionario.Text;
+                        pAtua.Responsavel = txtEngResponsavel.Text;
                         pAtua.Telefone = txtTelefone.Text;
-                        pAtua.PdRb = txtPdRb.Text;
-                        pAtua.PdVenda = txtPdVenda.Text;
-                        pAtua.Propostaa = txtProposta.Text;
-                        pAtua.Construtora = txtEmpresa.Text;
                         pAtua.Obra = txtObra.Text;
-                        pAtua.DataEntrega = dtpDataEntrega.Value;
-                        pAtua.RecebidoPor = txtRecebido.Text;
-                        pAtua.NotaFiscal = txtNotaFiscal.Text;
-                        pAtua.Carreto = txtCarreto.Text;
-                        pAtua.Material = rtbMaterial.Text;
-                        switch (cbComentado.Text)
-                        {
-                            case "Rb Comercio":
-                                {
-                                    cbComentado.Sorted = true;
-                                }
-                                break;
-                            case "Rb Engenharia":
-                                {
-                                    cbComentado.Sorted = true;
-                                }
-                                break;
-                            case "Rb Pisos":
-                                {
-                                    cbComentado.Sorted = true;
-                                }
-                                break;
-                            case "Nome do Cliente":
-                                {
-                                    cbComentado.Sorted = true;
-                                }
-                                break;
-                        }
-                        if (rbImediato.Checked == true)
-                            pAtua.StatusobraId = 1;
+                        pAtua.DataInclusao = dtpDataIncluido.Value;
+                        if (rbPendente.Checked == true)
+                            pAtua.StatusEng = 1;
                         else if (rbPendente.Checked == true)
-                            pAtua.StatusobraId = 2;
+                            pAtua.StatusEng = 2;
                         else if (rbFinalizado.Checked == true)
-                            pAtua.StatusobraId = 3;
-                        else if (rbCancelado.Checked == true)
-                            pAtua.StatusobraId = 4;
-                        new DLProposta().Atualizar(pAtua);
+                            pAtua.StatusEng = 3;
+                        new DLPropostaEngenharia().Atualizar(pAtua);
                         MessageBox.Show("Proposta Atualizada com Sucesso!");
                         LimparDadosProposta();
+                        Close();
                     }
-                    Close();
                 }
             }
             catch (Exception ex)
@@ -215,52 +182,30 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
-
         private void mtSalvarComentario_Click(object sender, EventArgs e)
         {
             try
             {
-                //bool validarComentario = ValidarComentario();
-                //if (validarComentario == true)
-                //{
-                //    if (rtbComentario.Text != "")
-                //    {
-                //        var comentario = LerComentario();
-                //        int historicoComentario = 0;
-                //        if (txtIdHistorico.Text != "")
-                //        {
-                //            historicoComentario = Convert.ToInt32(txtIdHistorico.Text);
-                //        }
-                //        int propostaid = 0;
-                //        if (txtPropostId.Text != "")
-                //        {
-                //            propostaid = Convert.ToInt32(txtPropostId.Text);
-                //        }
-                //        var listaHistorico = new DLHistorico().Listar();
-                //        //Filtrando a lista "listaProposta" por propostaid e codigomaterial
-                //        var prop = listaHistorico.Where(ip => ip.PropostaId == propostaid //por proppostaid
-                //                        && ip.HistoricoId == historicoComentario //por ItensPropostaId
-                //                        ).FirstOrDefault();//Primeiro que encontrar
-                //        if (prop != null && prop.HistoricoId > 0)
-                //        {
-                //            prop.Comentario = rtbComentario.Text;
-                //            prop.DataComentario = dtpHistorico.Value;
-                //            new DLHistorico().Atualizar(prop);
-                //        }
-                //        else
-                //        {
-                //            new DLHistorico().Inserir(comentario);
-                //        }
-                //        CarregarGridHistorico();
-                //        rtbComentario.Clear();
-                //        txtIdHistorico.Clear();
-                //    }
-                //}
-
-                //else
-                //{
-                //    MessageBox.Show("Insiera algum comentario para salvar");
-                //}
+                bool validarComentario = ValidarComentario();
+                if (validarComentario == true)
+                {
+                    if (rtbComentario.Text != "")
+                    {
+                        var comentario = LerComentario();
+                        int historicoComentario = 0;
+                        if (txtIdHistorico.Text != "")
+                        {
+                            historicoComentario = Convert.ToInt32(txtIdHistorico.Text);
+                        }
+                        int propostaid = 0;
+                        if (txtPropostId.Text != "")
+                        {
+                            propostaid = Convert.ToInt32(txtPropostId.Text);
+                        }
+                        var listaHistorico = new DLHistoricoEngenharia().Listar();
+                        var prop = listaHistorico.Where(ip => ip.EngenheiroId == propostaid); //por proppostaid
+                      }
+                }
             }
             catch (Exception ex)
             {
@@ -268,26 +213,8 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
             }
         }
 
-        private void dgvHistorico_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                var historico = dgvHistorico.Rows[e.RowIndex].DataBoundItem as HistoricoEngenharia;
-                if (historico != null)
-                {
-                    txtIdHistorico.Text = historico.HistoricoId.ToString();
-                    rtbComentario.Text = historico.Comentario;
-                    dtpHistorico.Value = historico.DataComentario;
-                    cbComentado.Text = Convert.ToString(historico.ComentadoEng);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro:" + ex.Message);
-            }
-        }
-
         #region Campo de Metodos
+
         private bool ValidarComentario()
         {
             if (cbComentado.Text == "")
@@ -302,6 +229,7 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
             {
                 var listarHistorico = new DLHistoricoEngenharia().Listar().Where(p => p.EngenheiroId == Convert.ToInt32(txtPropostId.Text)).ToList();
                 dgvHistorico.DataSource = null;
+                dgvHistorico.DataSource = listarHistorico.OrderByDescending(p => p.DataComentario).ToList();
                 dgvHistorico.Refresh();
                 MontarGridHistorico();
             }
@@ -337,39 +265,30 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
             btnGerarId.Enabled = desabilitar;
         }
         private void HabilitarCampos(bool Habilitar)
-        {
+        {         
             txtProposta.Enabled = Habilitar;
             txtCliente.Enabled = Habilitar;
             txtFuncionario.Enabled = Habilitar;
             txtEngResponsavel.Enabled = Habilitar;
             txtTelefone.Enabled = Habilitar;
-            txtObra.Enabled = Habilitar;
-            cbComentado.Enabled = Habilitar;
-            rtbComentario.Enabled = Habilitar;
-            btnSalvarProposta.Enabled = Habilitar;
+            txtObra.Enabled = Habilitar;         
+            btnSalvarProposta.Enabled = Habilitar;           
             btnDeletarProposta.Enabled = Habilitar;
-            btnLimparComentario.Enabled = Habilitar;
-            btnDeletarComentario.Enabled = Habilitar;
         }
         private void LimparDadosProposta()
         {
-            txtIdHistorico.Text = Convert.ToString(null);
-            txtPropostId.Text = Convert.ToString(null);
             txtProposta.Text = Convert.ToString(null);
             txtCliente.Text = Convert.ToString(null);
             txtFuncionario.Text = Convert.ToString(null);
             txtEngResponsavel.Text = Convert.ToString(null);
             txtTelefone.Text = Convert.ToString(null);
-            txtObra.Text = Convert.ToString(null);
-            cbComentado.Text = Convert.ToString(null);
-            rtbComentario.Text = Convert.ToString(null);
-            dtpDataIncluido.Value = DateTime.Now;
+            txtObra.Text = Convert.ToString(null);           
         }
         private bool ValidarCampos()
         {
-            if (txtObra.Text == "")
+            if (txtProposta.Text == "")
             {
-                throw new Exception(" Informe o endereço da obra.");
+                throw new Exception(" Informe a Proposta ");
             }
             return true;
         }
@@ -384,6 +303,7 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
                 {
                     historico.Comentario = rtbComentario.Text;
                     historico.DataComentario = dtpHistorico.Value;
+                    historico.ComentadoEng = cbComentado.Text;
                     historico.EngenheiroId = Convert.ToInt32(txtPropostId.Text);
                 }
                 return historico;
@@ -396,43 +316,23 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
 
         #endregion
 
-        private void mtSalvarProposta_Click_1(object sender, EventArgs e)
+        private void dgvHistorico_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                bool camposSaoValidos = ValidarCampos();
-                if (camposSaoValidos == true)
+                var historico = dgvHistorico.Rows[e.RowIndex].DataBoundItem as HistoricoEngenharia;
+                if (historico != null)
                 {
-                    int id = 0;
-                    int.TryParse(txtPropostId.Text, out id);
-                    if (id > 0)
-                    {
-                        var pAtua = new DLPropostaEngenharia().ConsultarPorId(id);
-                        pAtua.Proposta = txtProposta.Text;
-                        pAtua.Cliente = txtCliente.Text;
-                        pAtua.Funcionario = txtFuncionario.Text;
-                        pAtua.Responsavel = txtEngResponsavel.Text;
-                        pAtua.Telefone = txtTelefone.Text;
-                        pAtua.Obra = txtObra.Text;
-                        pAtua.DataInclusao = dtpDataIncluido.Value;
-                        if (rbPendente.Checked == true)
-                            pAtua.StatusEng = 1;
-                        else if (rbPendente.Checked == true)
-                            pAtua.StatusEng = 2;
-                        else if (rbFinalizado.Checked == true)
-                            pAtua.StatusEng = 3;
-
-                        new DLPropostaEngenharia().Atualizar(pAtua);
-                        MessageBox.Show("Proposta Atualizada com Sucesso!");
-                        LimparDadosProposta();
-                    }
-                    Close();
+                    txtIdHistorico.Text = historico.HistoricoId.ToString();
+                    rtbComentario.Text = historico.Comentario;
+                    dtpHistorico.Value = historico.DataComentario;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro: " + ex.Message);
+                MessageBox.Show("Erro:" + ex.Message);
             }
         }
     }
+    
 }

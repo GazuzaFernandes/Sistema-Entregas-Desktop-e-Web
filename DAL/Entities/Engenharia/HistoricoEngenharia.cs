@@ -11,7 +11,7 @@ namespace DAL.Entities.Engenharia
         public virtual int HistoricoId { get; set; }
         public virtual string? Comentario { get; set; }
         public virtual DateTime DataComentario { get; set; }
-        public virtual int ComentadoEng { get; set; }
+        public virtual string ComentadoEng { get; set; }
         public virtual int EngenheiroId { get; set; }
 
     }

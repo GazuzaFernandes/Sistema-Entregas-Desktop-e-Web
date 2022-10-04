@@ -14,7 +14,5 @@ namespace DAL.Entities.Engenharia
         public virtual int StatusEng { get; set; }
         public virtual DateTime DataInclusao { get; set; }
 
-
-
     }
 }
