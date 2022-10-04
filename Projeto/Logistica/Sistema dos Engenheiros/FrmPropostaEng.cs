@@ -143,6 +143,76 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }
+        private void mtSalvarProposta_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bool camposSaoValidos = ValidarCampos();
+                if (camposSaoValidos == true)
+                {
+                    int id = 0;
+                    int.TryParse(txtPropostId.Text, out id);
+                    if (id > 0)
+                    {
+                        var pAtua = new DLProposta().ConsultarPorId(id);
+                        pAtua.DataPrevista = dtpDataPedido.Value;
+                        pAtua.DataPedido = dtpDataPedido.Value;
+                        pAtua.Fabrica = txtEmpresa.Text;
+                        pAtua.FormaPag = txtFormaPagamento.Text;
+                        pAtua.EngResp = txtEngResponsavel.Text;
+                        pAtua.Telefone = txtTelefone.Text;
+                        pAtua.PdRb = txtPdRb.Text;
+                        pAtua.PdVenda = txtPdVenda.Text;
+                        pAtua.Propostaa = txtProposta.Text;
+                        pAtua.Construtora = txtEmpresa.Text;
+                        pAtua.Obra = txtObra.Text;
+                        pAtua.DataEntrega = dtpDataEntrega.Value;
+                        pAtua.RecebidoPor = txtRecebido.Text;
+                        pAtua.NotaFiscal = txtNotaFiscal.Text;
+                        pAtua.Carreto = txtCarreto.Text;
+                        pAtua.Material = rtbMaterial.Text;
+                        switch (cbComentado.Text)
+                        {
+                            case "Rb Comercio":
+                                {
+                                    cbComentado.Sorted = true;
+                                }
+                                break;
+                            case "Rb Engenharia":
+                                {
+                                    cbComentado.Sorted = true;
+                                }
+                                break;
+                            case "Rb Pisos":
+                                {
+                                    cbComentado.Sorted = true;
+                                }
+                                break;
+                            case "Nome do Cliente":
+                                {
+                                    cbComentado.Sorted = true;
+                                }
+                                break;
+                        }
+                        if (rbImediato.Checked == true)
+                            pAtua.StatusobraId = 1;
+                        else if (rbPendente.Checked == true)
+                            pAtua.StatusobraId = 2;
+                        else if (rbFinalizado.Checked == true)
+                            pAtua.StatusobraId = 3;
+                        else if (rbCancelado.Checked == true)
+                            pAtua.StatusobraId = 4;
+                        new DLProposta().Atualizar(pAtua);
+                        MessageBox.Show("Proposta Atualizada com Sucesso!");
+                        LimparDadosProposta();
+                    }
+                    Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
         }
 
         private void mtSalvarProposta_Click(object sender, EventArgs e)
@@ -183,6 +253,11 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
+        private void ValorMaterial()
+        {
+            try
+            {
+                decimal qtd = 1, valor = 1, total = 0;
 
         private void mtSalvarComentario_Click(object sender, EventArgs e)
         {
