@@ -31,8 +31,8 @@ namespace Logistica.Sistema_do_Orçamento
         {
             try
             {
-                var listaProp = new DLProdutos().Listar();
-                CarregarGridProdutos();
+               // var listaProp = new DLProdutos().Listar();
+               // CarregarGridProdutos();
             }
             catch (Exception ex)
             {

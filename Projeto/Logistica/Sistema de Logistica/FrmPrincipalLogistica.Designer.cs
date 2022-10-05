@@ -211,7 +211,7 @@ namespace Logistica.Sistema_de_Logistica
             this.menuStrip1.Location = new System.Drawing.Point(6, 6);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(157, 180);
+            this.menuStrip1.Size = new System.Drawing.Size(157, 156);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -312,13 +312,13 @@ namespace Logistica.Sistema_de_Logistica
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1820, 162);
+            this.panel1.Size = new System.Drawing.Size(1695, 162);
             this.panel1.TabIndex = 5;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1580, 17);
+            this.pictureBox1.Location = new System.Drawing.Point(1440, 32);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(174, 124);
@@ -331,7 +331,7 @@ namespace Logistica.Sistema_de_Logistica
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(1352, 116);
+            this.label4.Location = new System.Drawing.Point(1262, 116);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(180, 28);
             this.label4.TabIndex = 9;
@@ -353,7 +353,7 @@ namespace Logistica.Sistema_de_Logistica
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Lime;
-            this.label3.Location = new System.Drawing.Point(1352, 49);
+            this.label3.Location = new System.Drawing.Point(1262, 49);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 28);
             this.label3.TabIndex = 9;
@@ -397,7 +397,7 @@ namespace Logistica.Sistema_de_Logistica
             this.cbCancelado.AutoSize = true;
             this.cbCancelado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbCancelado.ForeColor = System.Drawing.Color.Red;
-            this.cbCancelado.Location = new System.Drawing.Point(1352, 78);
+            this.cbCancelado.Location = new System.Drawing.Point(1262, 78);
             this.cbCancelado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCancelado.Name = "cbCancelado";
             this.cbCancelado.Size = new System.Drawing.Size(173, 42);
@@ -410,7 +410,7 @@ namespace Logistica.Sistema_de_Logistica
             this.cbFinalizado.AutoSize = true;
             this.cbFinalizado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbFinalizado.ForeColor = System.Drawing.Color.Lime;
-            this.cbFinalizado.Location = new System.Drawing.Point(1352, 10);
+            this.cbFinalizado.Location = new System.Drawing.Point(1262, 10);
             this.cbFinalizado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbFinalizado.Name = "cbFinalizado";
             this.cbFinalizado.Size = new System.Drawing.Size(172, 42);
@@ -595,7 +595,7 @@ namespace Logistica.Sistema_de_Logistica
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1820, 854);
+            this.tabControl1.Size = new System.Drawing.Size(1695, 854);
             this.tabControl1.TabIndex = 6;
             // 
             // tabPage1
@@ -605,7 +605,7 @@ namespace Logistica.Sistema_de_Logistica
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1812, 810);
+            this.tabPage1.Size = new System.Drawing.Size(1687, 810);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Principal";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -622,7 +622,7 @@ namespace Logistica.Sistema_de_Logistica
             this.dgvPrincipal.Name = "dgvPrincipal";
             this.dgvPrincipal.ReadOnly = true;
             this.dgvPrincipal.RowHeadersWidth = 51;
-            this.dgvPrincipal.Size = new System.Drawing.Size(1806, 806);
+            this.dgvPrincipal.Size = new System.Drawing.Size(1681, 806);
             this.dgvPrincipal.TabIndex = 0;
             this.dgvPrincipal.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrincipal_CellDoubleClick);
             this.dgvPrincipal.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvPrincipal_DataBindingComplete);
@@ -2063,7 +2063,7 @@ namespace Logistica.Sistema_de_Logistica
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1820, 1016);
+            this.ClientSize = new System.Drawing.Size(1695, 1016);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;

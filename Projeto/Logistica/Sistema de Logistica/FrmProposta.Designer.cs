@@ -74,6 +74,8 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -122,8 +124,6 @@
             this.cmsSalvarConteudos = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mtSalvarProposta = new System.Windows.Forms.ToolStripMenuItem();
             this.mtSalvarComentario = new System.Windows.Forms.ToolStripMenuItem();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -329,7 +329,9 @@
             // 
             // cbEmpresaFaturar
             // 
+            this.cbEmpresaFaturar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.cbEmpresaFaturar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEmpresaFaturar.ForeColor = System.Drawing.Color.Red;
             this.cbEmpresaFaturar.FormattingEnabled = true;
             this.cbEmpresaFaturar.Items.AddRange(new object[] {
             "Rb Comercio",
@@ -643,6 +645,28 @@
             this.label5.Size = new System.Drawing.Size(133, 31);
             this.label5.TabIndex = 0;
             this.label5.Text = "Forma Pag:";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Segoe UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label31.ForeColor = System.Drawing.Color.White;
+            this.label31.Location = new System.Drawing.Point(1072, 417);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(223, 31);
+            this.label31.TabIndex = 0;
+            this.label31.Text = "Cancelado na Fabrica.";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Segoe UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label30.ForeColor = System.Drawing.Color.White;
+            this.label30.Location = new System.Drawing.Point(775, 417);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(117, 31);
+            this.label30.TabIndex = 0;
+            this.label30.Text = "Já na obra.";
             // 
             // label13
             // 
@@ -1169,28 +1193,6 @@
             this.mtSalvarComentario.Size = new System.Drawing.Size(206, 24);
             this.mtSalvarComentario.Text = "Salvar Comentario";
             this.mtSalvarComentario.Click += new System.EventHandler(this.mtSalvarComentario_Click);
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Segoe UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label30.ForeColor = System.Drawing.Color.White;
-            this.label30.Location = new System.Drawing.Point(775, 417);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(117, 31);
-            this.label30.TabIndex = 0;
-            this.label30.Text = "Já na obra.";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Segoe UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label31.ForeColor = System.Drawing.Color.White;
-            this.label31.Location = new System.Drawing.Point(1072, 417);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(223, 31);
-            this.label31.TabIndex = 0;
-            this.label31.Text = "Cancelado na Fabrica.";
             // 
             // FrmProposta
             // 

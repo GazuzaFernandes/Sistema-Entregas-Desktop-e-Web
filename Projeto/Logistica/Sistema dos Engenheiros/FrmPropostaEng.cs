@@ -1,7 +1,10 @@
 ﻿using DAL.Entities.Engenharia;
+using DAL.Entities.Logistica;
 using DAL.Repository.Engenharia;
-
+using DAL.Repository.Logistica;
+using DAL.Repository.SenhaRestauracao;
 using Logistica.Sistema_de_Logistica;
+using Projeto.Logistica.Sistema_de_Logistica;
 using System.Data;
 
 
@@ -99,13 +102,14 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
                 int ide = 0;
                 int.TryParse(txtPropostId.Text, out ide);
                 if (ide > 0)
-                {
-                    new DLPropostaEngenharia().Excluir(new PropostaEngenharia { EngenhariaId = ide });
-                    MessageBox.Show("Proposta excluída com sucesso!");
-                    Close();
+                { 
+                            new DLProposta().Excluir(new Proposta { PropostaId = ide });
+                            MessageBox.Show("Proposta excluída com sucesso!");
+                            Close();
                 }
-            }
-            catch (Exception ex)
+            }                     
+
+                catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }
@@ -156,7 +160,7 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
                     int.TryParse(txtPropostId.Text, out id);
                     if (id > 0)
                     {
-                        var pAtua = new DLPropostaEngenharia().ConsultarPorId(id);
+                                                var pAtua = new DLPropostaEngenharia().ConsultarPorId(id);
                         pAtua.Proposta = txtProposta.Text;
                         pAtua.Cliente = txtCliente.Text;
                         pAtua.Funcionario = txtFuncionario.Text;
@@ -204,14 +208,32 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
                         }
                         var listaHistorico = new DLHistoricoEngenharia().Listar();
                         var prop = listaHistorico.Where(ip => ip.EngenheiroId == propostaid); //por proppostaid
-                      }
+                    }
                 }
-            }
-            catch (Exception ex)
+            } 
+              catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
+
+        private void dgvHistorico_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                var historico = dgvHistorico.Rows[e.RowIndex].DataBoundItem as Historico;
+                if (historico != null)
+                {
+                    txtIdHistorico.Text = historico.HistoricoId.ToString();
+                    rtbComentario.Text = historico.Comentario;
+                    dtpHistorico.Value = historico.DataComentario;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro:" + ex.Message);
+            }
+        }     
 
         #region Campo de Metodos
 
@@ -314,25 +336,7 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
             }
         }
 
-        #endregion
-
-        private void dgvHistorico_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                var historico = dgvHistorico.Rows[e.RowIndex].DataBoundItem as HistoricoEngenharia;
-                if (historico != null)
-                {
-                    txtIdHistorico.Text = historico.HistoricoId.ToString();
-                    rtbComentario.Text = historico.Comentario;
-                    dtpHistorico.Value = historico.DataComentario;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro:" + ex.Message);
-            }
-        }
+        #endregion     
     }
     
 }

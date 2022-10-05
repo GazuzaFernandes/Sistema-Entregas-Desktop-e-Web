@@ -24,7 +24,7 @@ namespace Logistica.Sistema_de_Amostras
 
         private void FrmPrincipalAmostra_Load(object sender, EventArgs e)
         {
-            CarregarGridAmostras();
+            //CarregarGridAmostras();
         }
 
         private void txtPesquisar_TextChanged(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace Logistica.Sistema_de_Amostras
         {
             FrmAmostra amostra = new FrmAmostra();
             amostra.ShowDialog();
-            CarregarGridAmostras();
+         //   CarregarGridAmostras();
         }
 
         private void btnEstoque_Click(object sender, EventArgs e)

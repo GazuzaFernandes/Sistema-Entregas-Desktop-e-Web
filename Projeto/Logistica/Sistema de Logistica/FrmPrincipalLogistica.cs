@@ -23,8 +23,8 @@ namespace Logistica.Sistema_de_Logistica
         {
             try
             {
-                var listaProposta = new DLProposta().Listar();
-                CarregarGridPrincipal();
+               // var listaProposta = new DLProposta().Listar();
+              //  CarregarGridPrincipal();
              
             }
             catch (Exception ex)

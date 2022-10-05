@@ -1,6 +1,6 @@
 ﻿namespace Projeto.Logistica.Sistema_do_Financeiro
 {
-    partial class FrmEstoqueFinanceiro
+    partial class FrmNotaFiscalFinanceiro
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEstoqueFinanceiro));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNotaFiscalFinanceiro));
             this.SuspendLayout();
             // 
-            // FrmEstoqueFinanceiro
+            // FrmNotaFiscalFinanceiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -41,9 +41,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmEstoqueFinanceiro";
+            this.Name = "FrmNotaFiscalFinanceiro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Controle de estoque de Materiais";
+            this.Text = "Cadastrar saida de Notas Fiscais";
             this.ResumeLayout(false);
 
         }
