@@ -16,7 +16,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
     public partial class FrmEstoqueFinanceiro : Form
     {
         public int idmadeira;
-        public string madeirass;
+        public string material;
         public string medida;
         public decimal total;
         internal Madeira listarmadeiras;
@@ -33,6 +33,10 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         }
 
         #region Tela Entrada de Material     
+        private void bntLimparEntrada_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+        }
 
         private void btnGerarId_Click(object sender, EventArgs e)
         {
@@ -113,8 +117,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                 {
                     new DLItensdata().Inserir(itenProposta);
                     MessageBox.Show("Data Cadastrado com Sucesso");
-                }
-                LiberarBotao(true);
+                }              
                 txtEntradaEstoque.Text = Convert.ToString(0);
                 txtDataId.Text = Convert.ToString(0);
                 CarregarGridData();
@@ -339,6 +342,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         {
             btnInserir.Enabled = liberar;
         }
+
         private void CarregarGridMaterial(bool isPesquisa = false)
         {
             try
@@ -358,6 +362,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
+
         private void MontarGridMaterial(DataGridView dgvMaterial)
         {
             try
@@ -380,6 +385,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                 throw ex;
             }
         }
+
         private void HabilitarCampos(bool habilitar)
         {
            
@@ -393,6 +399,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
             bntLimparEntrada.Enabled = habilitar;          
         
         }
+
         private void CarregarGridData()
         {
             try
@@ -407,6 +414,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                 throw ex;
             }
         }
+
         private void MontarGridData(DataGridView dgvData)
         {
             try
@@ -439,10 +447,10 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                 int.TryParse(txtDataId.Text, out id);
                 if (id == 0)
                 {
-                    iten.Datas = dtpData.Value;
+                    iten.Datas = dtpDataPedido.Value;
                     iten.Fabrica = txtFabrica.Text;
-                    iten.Entrada = Convert.ToDecimal(txtEntrada.Text);
-                    iten.IdMadeiras = Convert.ToInt32(txtIdmadeira.Text);
+                    iten.Entrada = Convert.ToDecimal(txtEntradaEstoque.Text);
+                    iten.IdMadeiras = Convert.ToInt32(txtIdEntrada.Text);
                 }
                 return iten;
             }
@@ -451,26 +459,33 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                 throw ex;
             }
         }
+
         private bool Validarcampos()
         {
+            if(txtMaterialEntrada.Text == "")
+            {
+                MessageBox.Show("Informe o material");
+            }
             return true;
         }
+
         private void LimparCampos()
         {
-            txtIdmadeira.Text = Convert.ToString(null);
+            txtIdEntrada.Text = Convert.ToString(null);
             txtFabrica.Text = Convert.ToString(null);
-            txtMadeiras.Text = Convert.ToString(null);
-            txtUnidadeMedida.Text = Convert.ToString("m²");
-            txtEntrada.Text = Convert.ToString(0);
-            txtTotal.Text = Convert.ToString(null);
-            txtDataId.Text = Convert.ToString(0);
+            txtMaterialEntrada.Text = Convert.ToString(null);
+            txtUndMedidaEntrada.Text = Convert.ToString("m²");
+            txtEntradaEstoque.Text = Convert.ToString(0);
+            txtTotalEntrada.Text = Convert.ToString(null);
+            txtDataId.Text = Convert.ToString(null);
         }
+
         private void CalcularSaida()
         {
             try
             {
                 int id = 0;
-                int.TryParse(txtSaida.Text, out id);
+                int.TryParse(txtSaidaEstoque.Text, out id);
                 if (id > 0)
                 {
                     SaidadeMaterial();
@@ -481,37 +496,39 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                 throw ex;
             }
         }
+
         private void SaidadeMaterial()
         {
             try
             {
-                decimal saida = 0, saida2 = 0, total = 0;
-                if (decimal.TryParse(txtSaida.Text, out saida))
+                decimal saida = 0, subtraindo = 0, total = 0;
+                if (decimal.TryParse(txtSaidaEstoque.Text, out saida))
                 {
-                    if (decimal.TryParse(txtTotalSaida.Text, out saida2))
+                    if (decimal.TryParse(txtTotalEstoqueSaida.Text, out subtraindo))
                     {
-                        total = saida2 - saida;
+                        total = subtraindo - saida;
                     }
                 }
-                txtTotalSaida.Text = total.ToString("N2");
+                txtTotalEstoqueSaida.Text = total.ToString("N2");
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
+
         private void CalcularEntrada()
         {
             try
             {
-                decimal entrada = 0, total = 0, total2 = 0;
-                if (decimal.TryParse(txtEntrada.Text, out entrada))
+                decimal entrada = 0, adicao = 0, total2 = 0;
+                if (decimal.TryParse(txtEntradaEstoque.Text, out entrada))
                 {
-                    if (decimal.TryParse(txtTotal.Text, out total))
+                    if (decimal.TryParse(txtTotalEntrada.Text, out adicao))
                     {
-                        total2 = entrada + total;
+                        total2 = entrada + adicao;
                     }
-                    txtTotal.Text = total2.ToString("N2");
+                    txtTotalEntrada.Text = total2.ToString("N2");
                 }
             }
             catch (Exception ex)
@@ -519,13 +536,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                 throw ex;
             }
         }
-
-
         #endregion
 
-        private void bntLimparEntrada_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
