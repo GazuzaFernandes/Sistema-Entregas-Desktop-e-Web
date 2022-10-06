@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto", "Projeto.csproj",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "..\DAL\DAL.csproj", "{E4D44F46-960B-4117-8A1D-965C4538AAF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoWeb", "..\ProjetoWeb\ProjetoWeb.csproj", "{2EE47CF0-3A14-4CCE-9960-608D69A56D7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjetoWeb", "..\ProjetoWeb\ProjetoWeb.csproj", "{2EE47CF0-3A14-4CCE-9960-608D69A56D7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
