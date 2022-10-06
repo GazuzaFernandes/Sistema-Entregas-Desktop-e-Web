@@ -13,7 +13,7 @@ namespace DAL.Mapping.Financeiro
         {
             Id(p => p.IdMadeira).GeneratedBy.Sequence("itensmadeira_seq");
             Map(p => p.Codigo);
-            Map(p => p.Madeiras);
+            Map(p => p.Material);
             Map(p => p.Medida);
             Map(p => p.Total);     
             Map(p => p.IdProp);            

@@ -1,4 +1,10 @@
-﻿using System;
+﻿using DAL.Entities.Financeiro;
+using DAL.Entities.Logistica;
+using DAL.Repository.Financeiro;
+using DAL.Repository.Logistica;
+using Logistica.Sistema_de_Logistica;
+using Projeto.Logistica.Sistema_do_Financeiro;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,5 +27,155 @@ namespace Logistica.Sistema_do_Financeiro
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void FrmPrincipalFinanceiro_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                var listaProp = new DLProposta().Listar();
+                Carregargrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+        }
+
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+            Carregargrid(true);
+            MontarGrid(dgvNotaFiscais);
+        }
+
+        private void txtPesquisar_Click(object sender, EventArgs e)
+        {
+            txtPesquisar.Clear();
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            Carregargrid(true);
+            MontarGrid(dgvNotaFiscais);
+        }
+
+        private void btnLimparPesquisa_Click(object sender, EventArgs e)
+        {
+            txtPesquisar.Clear();
+            rbEndereco.Checked = false;
+            rbNotaFiscal.Checked = false;
+            rbProposta.Checked = false;
+            cbEmpresas.Text = Convert.ToString(null);
+        }
+
+        private void msInserir_Click(object sender, EventArgs e)
+        {
+            FrmNotaFiscalFinanceiro lancarNotaFiscal = new FrmNotaFiscalFinanceiro();
+            lancarNotaFiscal.ShowDialog();
+            Carregargrid();
+        }
+
+        private void msEstoque_Click(object sender, EventArgs e)
+        {
+            FrmEstoqueFinanceiro material = new FrmEstoqueFinanceiro();
+            material.ShowDialog();
+        }
+
+        private void msCliente_Click(object sender, EventArgs e)
+        {
+            FrmClienteFinanceiro cliente = new FrmClienteFinanceiro();
+            cliente.ShowDialog();
+        }
+
+        private void dgvNotaFiscais_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                var prop = new FinanceiroProposta();
+                prop.IdProp = Convert.ToInt32(dgvNotaFiscais.Rows[e.RowIndex].Cells[0].Value);
+                FrmNotaFiscalFinanceiro propFinanceiro = new FrmNotaFiscalFinanceiro();
+                propFinanceiro._notafiscal = prop;
+                propFinanceiro.ShowDialog();
+                Carregargrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro:" + ex.Message);
+            }
+        }
+
+        private void dgvNotaFiscais_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            for (int i = 0; i < dgvNotaFiscais.Rows.Count; i++)
+            {
+                var valor = Convert.ToString(dgvNotaFiscais.Rows[i].Cells[12].Value);
+                switch (valor)
+                {
+                    case "RbEngenharia": dgvNotaFiscais.Rows[i].DefaultCellStyle.BackColor = Color.Turquoise; break;
+                    case "RbComercio": dgvNotaFiscais.Rows[i].DefaultCellStyle.BackColor = Color.Lime; break;
+                    case "RbPisos": dgvNotaFiscais.Rows[i].DefaultCellStyle.BackColor = Color.Yellow; break;
+                }
+            }
+        }
+
+        #region Apenas Metodos
+        private void Carregargrid(bool isPesquisa = false)
+        {
+            try
+            {
+                var listarFinanceiro = new DLFinanceiroProposta().ListarPropostaStatus();
+                if (isPesquisa) //isPesquisa == true
+                {                 
+                    var pesquisa = txtPesquisar.Text.ToLower();
+                    if (rbEndereco.Checked)
+                        listarFinanceiro = listarFinanceiro.Where(p => p.Obra.ToLower().Contains(pesquisa)).ToList();
+                    else if (rbProposta.Checked)
+                        listarFinanceiro = listarFinanceiro.Where(p => p.Propostas.ToLower().Contains(pesquisa)).ToList();
+                    else if (rbNotaFiscal.Checked)
+                        listarFinanceiro = listarFinanceiro.Where(p => p.Notafiscal.ToLower().Contains(pesquisa)).ToList();
+                    switch (cbEmpresas.Text)
+                    {
+                        case "Rb Pisos":
+                            {
+                                cbEmpresas.Sorted = true;
+                            }
+                            break;
+
+                        case "Rb Engenharia":
+                            {
+                                cbEmpresas.Sorted = true;
+                            }
+                            break;
+
+                        case "Rb Comercio":
+                            {
+                                cbEmpresas.Sorted = true;
+                            }
+                            break;
+                    }
+                }
+                dgvNotaFiscais.DataSource = listarFinanceiro;
+                MontarGrid(dgvNotaFiscais);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+        }
+        private void MontarGrid(DataGridView dgvNotaFiscais)
+        {
+            dgvNotaFiscais.DefaultCellStyle.Font = new Font("Calibri", 16F, GraphicsUnit.Pixel);
+            var objBlControleGrid = new ControleGrid(dgvNotaFiscais);
+            //Define quais colunas serão visíveis
+            objBlControleGrid.DefinirVisibilidade(new List<string>() { "EmissaoNf", "VencimentoNf", "Cliente", "Propostas", "Notafiscal", "Obra", });
+            //Define quais os cabeçalhos respectivos das colunas 
+            objBlControleGrid.DefinirCabecalhos(new List<string>() { "Emissão da NF", "Vencimento da NF", "Cliente", "Propostas", "Nota Fiscal", "Obra", });
+            //Define quais as larguras respectivas das colunas 
+            objBlControleGrid.DefinirLarguras(new List<int>() { 10, 15, 10, 10, 10, 40, }, dgvNotaFiscais.Width - 15); //O total tem que ficar em 100% 
+            //Define quais os alinhamentos respectivos do componentes das colunas 
+            objBlControleGrid.DefinirAlinhamento(new List<string>() { "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", });
+            //Define a altura das linhas respectivas da Grid 
+            objBlControleGrid.DefinirAlturaLinha(30);
+        }
+        #endregion
     }
 }
