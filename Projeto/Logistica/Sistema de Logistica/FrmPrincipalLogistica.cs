@@ -23,8 +23,8 @@ namespace Logistica.Sistema_de_Logistica
         {
             try
             {
-               // var listaProposta = new DLProposta().Listar();
-              //  CarregarGridPrincipal();
+                var listaProposta = new DLProposta().Listar();
+               CarregarGridPrincipal();
              
             }
             catch (Exception ex)
@@ -502,19 +502,24 @@ namespace Logistica.Sistema_de_Logistica
 
         private void dgvPrincipal_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
+            for(int i =0; i < dgvPrincipal.Rows.Count; i++)
+            {
+                var valor = Convert.ToString(dgvPrincipal.Rows[i].Cells[10].Value);
+                switch (valor)
+                {
+                    case "Imediato":
+                        dgvPrincipal.Rows[i].DefaultCellStyle.BackColor = Color.Lime;
+                        break;
+                    case "Pendente":
+                        dgvPrincipal.Rows[i].DefaultCellStyle.BackColor = Color.Red; break;
+                    case "Finalizado":
+                        dgvPrincipal.Rows[i].DefaultCellStyle.BackColor = Color.Lime;
+                        break;
+                    case "Cancelado":
+                        dgvPrincipal.Rows[i].DefaultCellStyle.BackColor = Color.Red; break;
+                }
+            }
         }
-
-        private void dgvFerramenta_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dgvFerramenta_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-        {
-
-        }
-
-
         #endregion
 
         #region Apenas Botões

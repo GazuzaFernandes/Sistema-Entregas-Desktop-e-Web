@@ -36,32 +36,33 @@
             this.cmSalvarMaterial = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsSalvarDatas = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsSalvar = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.bntLimparEntrada = new System.Windows.Forms.Button();
+            this.btnLimparEntrada = new System.Windows.Forms.Button();
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.rbPendente = new System.Windows.Forms.RadioButton();
             this.btnGerarId = new System.Windows.Forms.Button();
             this.txtDataId = new System.Windows.Forms.TextBox();
             this.txtIdEntrada = new System.Windows.Forms.TextBox();
-            this.txtTotalm2Entrada = new System.Windows.Forms.TextBox();
             this.txtTotalM3Entrada = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.txtTotalM2Entrada = new System.Windows.Forms.TextBox();
             this.txtMetroEntrada = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtLarguraEntrada = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtEspessuraEntrada = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtMadeiraEntrada = new System.Windows.Forms.TextBox();
+            this.txtMaterialEntrada = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dtpEntrada = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.txtTotalM2Saida = new System.Windows.Forms.TextBox();
             this.dgvSaidaMaterial = new System.Windows.Forms.DataGridView();
             this.btnBaixarEstoque = new System.Windows.Forms.Button();
             this.btnLimparSaida = new System.Windows.Forms.Button();
@@ -69,7 +70,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.rbCancelado = new System.Windows.Forms.RadioButton();
             this.rtbSaida = new System.Windows.Forms.RichTextBox();
-            this.txtTotalM2Saida = new System.Windows.Forms.TextBox();
             this.txtTotalM3Saida = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -83,7 +83,7 @@
             this.txtMaterialSaida = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpSaida = new System.Windows.Forms.DateTimePicker();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtIdSaida = new System.Windows.Forms.TextBox();
             this.cmsDeletar.SuspendLayout();
@@ -147,27 +147,30 @@
             this.cmsSalvar.Name = "cmsSalvar";
             this.cmsSalvar.Size = new System.Drawing.Size(178, 52);
             // 
-            // bntLimparEntrada
+            // btnLimparEntrada
             // 
-            this.bntLimparEntrada.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bntLimparEntrada.ForeColor = System.Drawing.Color.Black;
-            this.bntLimparEntrada.Image = ((System.Drawing.Image)(resources.GetObject("bntLimparEntrada.Image")));
-            this.bntLimparEntrada.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.bntLimparEntrada.Location = new System.Drawing.Point(818, 530);
-            this.bntLimparEntrada.Name = "bntLimparEntrada";
-            this.bntLimparEntrada.Size = new System.Drawing.Size(159, 75);
-            this.bntLimparEntrada.TabIndex = 50;
-            this.bntLimparEntrada.Text = "Limpar";
-            this.bntLimparEntrada.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.bntLimparEntrada.UseVisualStyleBackColor = true;
-            this.bntLimparEntrada.Click += new System.EventHandler(this.bntLimparEntrada_Click);
+            this.btnLimparEntrada.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLimparEntrada.ForeColor = System.Drawing.Color.Black;
+            this.btnLimparEntrada.Image = ((System.Drawing.Image)(resources.GetObject("btnLimparEntrada.Image")));
+            this.btnLimparEntrada.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnLimparEntrada.Location = new System.Drawing.Point(818, 530);
+            this.btnLimparEntrada.Name = "btnLimparEntrada";
+            this.btnLimparEntrada.Size = new System.Drawing.Size(159, 75);
+            this.btnLimparEntrada.TabIndex = 50;
+            this.btnLimparEntrada.Text = "Limpar";
+            this.btnLimparEntrada.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnLimparEntrada.UseVisualStyleBackColor = true;
+            this.btnLimparEntrada.Click += new System.EventHandler(this.bntLimparEntrada_Click);
             // 
             // dgvData
             // 
+            this.dgvData.AllowUserToAddRows = false;
+            this.dgvData.AllowUserToDeleteRows = false;
             this.dgvData.BackgroundColor = System.Drawing.Color.White;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.Location = new System.Drawing.Point(55, 308);
             this.dgvData.Name = "dgvData";
+            this.dgvData.ReadOnly = true;
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 29;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -180,24 +183,24 @@
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.tabPage2.Controls.Add(this.rbPendente);
-            this.tabPage2.Controls.Add(this.bntLimparEntrada);
+            this.tabPage2.Controls.Add(this.btnLimparEntrada);
             this.tabPage2.Controls.Add(this.dgvData);
             this.tabPage2.Controls.Add(this.btnGerarId);
             this.tabPage2.Controls.Add(this.txtDataId);
             this.tabPage2.Controls.Add(this.txtIdEntrada);
-            this.tabPage2.Controls.Add(this.txtTotalm2Entrada);
             this.tabPage2.Controls.Add(this.txtTotalM3Entrada);
             this.tabPage2.Controls.Add(this.label17);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label13);
+            this.tabPage2.Controls.Add(this.txtTotalM2Entrada);
             this.tabPage2.Controls.Add(this.txtMetroEntrada);
             this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.txtLarguraEntrada);
             this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.txtEspessuraEntrada);
             this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.txtMadeiraEntrada);
+            this.tabPage2.Controls.Add(this.txtMaterialEntrada);
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.dtpEntrada);
@@ -214,9 +217,10 @@
             // rbPendente
             // 
             this.rbPendente.AutoSize = true;
+            this.rbPendente.Checked = true;
             this.rbPendente.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbPendente.ForeColor = System.Drawing.Color.Lime;
-            this.rbPendente.Location = new System.Drawing.Point(1005, 297);
+            this.rbPendente.Location = new System.Drawing.Point(844, 611);
             this.rbPendente.Name = "rbPendente";
             this.rbPendente.Size = new System.Drawing.Size(147, 42);
             this.rbPendente.TabIndex = 52;
@@ -232,7 +236,7 @@
             this.btnGerarId.Name = "btnGerarId";
             this.btnGerarId.Size = new System.Drawing.Size(97, 38);
             this.btnGerarId.TabIndex = 45;
-            this.btnGerarId.Text = "Gerar ID";
+            this.btnGerarId.Text = "Liberar";
             this.btnGerarId.UseVisualStyleBackColor = true;
             this.btnGerarId.Click += new System.EventHandler(this.btnGerarId_Click);
             // 
@@ -254,22 +258,12 @@
             this.txtIdEntrada.Size = new System.Drawing.Size(97, 38);
             this.txtIdEntrada.TabIndex = 44;
             // 
-            // txtTotalm2Entrada
-            // 
-            this.txtTotalm2Entrada.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTotalm2Entrada.Enabled = false;
-            this.txtTotalm2Entrada.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTotalm2Entrada.Location = new System.Drawing.Point(829, 174);
-            this.txtTotalm2Entrada.Name = "txtTotalm2Entrada";
-            this.txtTotalm2Entrada.Size = new System.Drawing.Size(118, 38);
-            this.txtTotalm2Entrada.TabIndex = 43;
-            // 
             // txtTotalM3Entrada
             // 
             this.txtTotalM3Entrada.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotalM3Entrada.Enabled = false;
             this.txtTotalM3Entrada.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTotalM3Entrada.Location = new System.Drawing.Point(1080, 174);
+            this.txtTotalM3Entrada.Location = new System.Drawing.Point(1064, 174);
             this.txtTotalM3Entrada.Name = "txtTotalM3Entrada";
             this.txtTotalM3Entrada.Size = new System.Drawing.Size(118, 38);
             this.txtTotalM3Entrada.TabIndex = 43;
@@ -279,11 +273,11 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label17.ForeColor = System.Drawing.Color.Yellow;
-            this.label17.Location = new System.Drawing.Point(714, 58);
+            this.label17.Location = new System.Drawing.Point(983, 333);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(385, 31);
+            this.label17.Size = new System.Drawing.Size(223, 155);
             this.label17.TabIndex = 42;
-            this.label17.Text = "Unidade de medida em milimitros.";
+            this.label17.Text = "Und Medida mm:\r\n1,8cm = 18mm\r\n20cm = 200mm\r\nApenas para\r\nEspessura e Largura\r\n";
             // 
             // label14
             // 
@@ -312,11 +306,22 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(963, 178);
+            this.label13.Location = new System.Drawing.Point(947, 178);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(109, 31);
             this.label13.TabIndex = 42;
             this.label13.Text = "Total m³:";
+            // 
+            // txtTotalM2Entrada
+            // 
+            this.txtTotalM2Entrada.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtTotalM2Entrada.Enabled = false;
+            this.txtTotalM2Entrada.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTotalM2Entrada.Location = new System.Drawing.Point(829, 175);
+            this.txtTotalM2Entrada.Name = "txtTotalM2Entrada";
+            this.txtTotalM2Entrada.Size = new System.Drawing.Size(88, 38);
+            this.txtTotalM2Entrada.TabIndex = 43;
+            this.txtTotalM2Entrada.TextChanged += new System.EventHandler(this.txtMetroEntrada_TextChanged);
             // 
             // txtMetroEntrada
             // 
@@ -381,14 +386,14 @@
             this.label10.TabIndex = 42;
             this.label10.Text = "Espessura:";
             // 
-            // txtMadeiraEntrada
+            // txtMaterialEntrada
             // 
-            this.txtMadeiraEntrada.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMadeiraEntrada.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtMadeiraEntrada.Location = new System.Drawing.Point(243, 104);
-            this.txtMadeiraEntrada.Name = "txtMadeiraEntrada";
-            this.txtMadeiraEntrada.Size = new System.Drawing.Size(955, 38);
-            this.txtMadeiraEntrada.TabIndex = 43;
+            this.txtMaterialEntrada.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtMaterialEntrada.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtMaterialEntrada.Location = new System.Drawing.Point(243, 104);
+            this.txtMaterialEntrada.Name = "txtMaterialEntrada";
+            this.txtMaterialEntrada.Size = new System.Drawing.Size(955, 38);
+            this.txtMaterialEntrada.TabIndex = 43;
             // 
             // label9
             // 
@@ -463,13 +468,26 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
+            // txtTotalM2Saida
+            // 
+            this.txtTotalM2Saida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtTotalM2Saida.Enabled = false;
+            this.txtTotalM2Saida.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTotalM2Saida.Location = new System.Drawing.Point(851, 85);
+            this.txtTotalM2Saida.Name = "txtTotalM2Saida";
+            this.txtTotalM2Saida.Size = new System.Drawing.Size(118, 38);
+            this.txtTotalM2Saida.TabIndex = 43;
+            // 
             // dgvSaidaMaterial
             // 
+            this.dgvSaidaMaterial.AllowUserToAddRows = false;
+            this.dgvSaidaMaterial.AllowUserToDeleteRows = false;
             this.dgvSaidaMaterial.BackgroundColor = System.Drawing.Color.White;
             this.dgvSaidaMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSaidaMaterial.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvSaidaMaterial.Location = new System.Drawing.Point(3, 282);
             this.dgvSaidaMaterial.Name = "dgvSaidaMaterial";
+            this.dgvSaidaMaterial.ReadOnly = true;
             this.dgvSaidaMaterial.RowHeadersWidth = 51;
             this.dgvSaidaMaterial.RowTemplate.Height = 29;
             this.dgvSaidaMaterial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -538,7 +556,7 @@
             this.tabPage1.Controls.Add(this.txtMaterialSaida);
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.dateTimePicker1);
+            this.tabPage1.Controls.Add(this.dtpSaida);
             this.tabPage1.Controls.Add(this.pictureBox2);
             this.tabPage1.Controls.Add(this.txtIdSaida);
             this.tabPage1.Controls.Add(this.dgvSaidaMaterial);
@@ -554,6 +572,7 @@
             // rbCancelado
             // 
             this.rbCancelado.AutoSize = true;
+            this.rbCancelado.Checked = true;
             this.rbCancelado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbCancelado.ForeColor = System.Drawing.Color.Red;
             this.rbCancelado.Location = new System.Drawing.Point(19, 128);
@@ -572,16 +591,6 @@
             this.rtbSaida.Size = new System.Drawing.Size(611, 76);
             this.rtbSaida.TabIndex = 56;
             this.rtbSaida.Text = "";
-            // 
-            // txtTotalM2Saida
-            // 
-            this.txtTotalM2Saida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTotalM2Saida.Enabled = false;
-            this.txtTotalM2Saida.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTotalM2Saida.Location = new System.Drawing.Point(846, 84);
-            this.txtTotalM2Saida.Name = "txtTotalM2Saida";
-            this.txtTotalM2Saida.Size = new System.Drawing.Size(118, 38);
-            this.txtTotalM2Saida.TabIndex = 50;
             // 
             // txtTotalM3Saida
             // 
@@ -639,6 +648,7 @@
             // txtLarguraSaida
             // 
             this.txtLarguraSaida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtLarguraSaida.Enabled = false;
             this.txtLarguraSaida.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtLarguraSaida.Location = new System.Drawing.Point(349, 84);
             this.txtLarguraSaida.Name = "txtLarguraSaida";
@@ -671,6 +681,7 @@
             // txtEspessuraSaida
             // 
             this.txtEspessuraSaida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtEspessuraSaida.Enabled = false;
             this.txtEspessuraSaida.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtEspessuraSaida.Location = new System.Drawing.Point(142, 84);
             this.txtEspessuraSaida.Name = "txtEspessuraSaida";
@@ -721,15 +732,15 @@
             this.label6.TabIndex = 43;
             this.label6.Text = "Data Saida:";
             // 
-            // dateTimePicker1
+            // dtpSaida
             // 
-            this.dateTimePicker1.AccessibleDescription = "";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1048, 22);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(148, 34);
-            this.dateTimePicker1.TabIndex = 42;
+            this.dtpSaida.AccessibleDescription = "";
+            this.dtpSaida.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dtpSaida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpSaida.Location = new System.Drawing.Point(1048, 22);
+            this.dtpSaida.Name = "dtpSaida";
+            this.dtpSaida.Size = new System.Drawing.Size(148, 34);
+            this.dtpSaida.TabIndex = 42;
             // 
             // pictureBox2
             // 
@@ -767,6 +778,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Controle de madeiras em estoque.";
             this.Load += new System.EventHandler(this.FrmEstoqueMadeira_Load);
+            this.Click += new System.EventHandler(this.FrmEstoqueMadeira_Click);
             this.cmsDeletar.ResumeLayout(false);
             this.cmsSalvar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
@@ -790,7 +802,7 @@
         private ToolStripMenuItem cmSalvarMaterial;
         private ToolStripMenuItem cmsSalvarDatas;
         private ContextMenuStrip cmsSalvar;
-        private Button bntLimparEntrada;
+        private Button btnLimparEntrada;
         private DataGridView dgvData;
         private TabPage tabPage2;
         private Button btnGerarId;
@@ -805,7 +817,7 @@
         private Label label11;
         private TextBox txtEspessuraEntrada;
         private Label label10;
-        private TextBox txtMadeiraEntrada;
+        private TextBox txtMaterialEntrada;
         private Label label9;
         private Label label8;
         private DateTimePicker dtpEntrada;
@@ -819,12 +831,12 @@
         private TabPage tabPage1;
         private PictureBox pictureBox2;
         private TextBox txtIdSaida;
-        private TextBox txtTotalm2Entrada;
+        private TextBox txtTotalM2Saida;
         private Label label5;
         private Label label6;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpSaida;
         private RichTextBox rtbSaida;
-        private TextBox txtTotalM2Saida;
+        private TextBox txtTotalM2Entrada;
         private TextBox txtTotalM3Saida;
         private Label label1;
         private Label label2;

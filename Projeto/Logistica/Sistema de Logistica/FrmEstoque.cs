@@ -92,14 +92,16 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 dataId = Convert.ToInt32(txtDataId.Text);
                 MessageBox.Show("Data Atualizado com Sucesso");
             }
+
             int estoqueId = 0;
             if (txtGerarId.Text != "")
             {
                 estoqueId = Convert.ToInt32(txtGerarId.Text);
             }
-            var listarmadeira = new DLDataMaterial().Listar();
+
+            var listaDataMaterial = new DLDataMaterial().Listar();
             //Filtrando a lista "listaProposta" por propostaid e codigomaterial
-            var prop = listarmadeira.Where(ip =>
+            var prop = listaDataMaterial.Where(ip =>
                             ip.MaterialId == estoqueId //por proppostaid
                             && ip.DataId == dataId //por ItensPropostaId
                             ).FirstOrDefault();//Primeiro que encontrar
@@ -403,7 +405,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 decimal entradaa = 0, total = 0;
                 if (decimal.TryParse(txtEntrada.Text, out entradaa))
                 {
-                    total = entradaa + total;                    
+                    total = entradaa + total;
                 }
                 txtTotalEntrada.Text = total.ToString("N2");
                 #endregion
