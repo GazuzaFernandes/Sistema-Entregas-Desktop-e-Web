@@ -331,7 +331,7 @@ namespace Logistica.Sistema_de_Logistica
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(1262, 116);
+            this.label4.Location = new System.Drawing.Point(1220, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(180, 28);
             this.label4.TabIndex = 9;
@@ -342,7 +342,7 @@ namespace Logistica.Sistema_de_Logistica
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(1040, 114);
+            this.label2.Location = new System.Drawing.Point(998, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 28);
             this.label2.TabIndex = 9;
@@ -353,7 +353,7 @@ namespace Logistica.Sistema_de_Logistica
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Lime;
-            this.label3.Location = new System.Drawing.Point(1262, 49);
+            this.label3.Location = new System.Drawing.Point(1220, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 28);
             this.label3.TabIndex = 9;
@@ -364,7 +364,7 @@ namespace Logistica.Sistema_de_Logistica
             this.lbMaterialSp.AutoSize = true;
             this.lbMaterialSp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbMaterialSp.ForeColor = System.Drawing.Color.Blue;
-            this.lbMaterialSp.Location = new System.Drawing.Point(1040, 49);
+            this.lbMaterialSp.Location = new System.Drawing.Point(998, 53);
             this.lbMaterialSp.Name = "lbMaterialSp";
             this.lbMaterialSp.Size = new System.Drawing.Size(143, 28);
             this.lbMaterialSp.TabIndex = 9;
@@ -397,7 +397,7 @@ namespace Logistica.Sistema_de_Logistica
             this.cbCancelado.AutoSize = true;
             this.cbCancelado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbCancelado.ForeColor = System.Drawing.Color.Red;
-            this.cbCancelado.Location = new System.Drawing.Point(1262, 78);
+            this.cbCancelado.Location = new System.Drawing.Point(1220, 82);
             this.cbCancelado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCancelado.Name = "cbCancelado";
             this.cbCancelado.Size = new System.Drawing.Size(173, 42);
@@ -410,7 +410,7 @@ namespace Logistica.Sistema_de_Logistica
             this.cbFinalizado.AutoSize = true;
             this.cbFinalizado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbFinalizado.ForeColor = System.Drawing.Color.Lime;
-            this.cbFinalizado.Location = new System.Drawing.Point(1262, 10);
+            this.cbFinalizado.Location = new System.Drawing.Point(1220, 14);
             this.cbFinalizado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbFinalizado.Name = "cbFinalizado";
             this.cbFinalizado.Size = new System.Drawing.Size(172, 42);
@@ -423,7 +423,7 @@ namespace Logistica.Sistema_de_Logistica
             this.cbPendente.AutoSize = true;
             this.cbPendente.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbPendente.ForeColor = System.Drawing.Color.Yellow;
-            this.cbPendente.Location = new System.Drawing.Point(1040, 80);
+            this.cbPendente.Location = new System.Drawing.Point(998, 84);
             this.cbPendente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbPendente.Name = "cbPendente";
             this.cbPendente.Size = new System.Drawing.Size(162, 42);
@@ -436,7 +436,7 @@ namespace Logistica.Sistema_de_Logistica
             this.cbImediato.AutoSize = true;
             this.cbImediato.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbImediato.ForeColor = System.Drawing.Color.Blue;
-            this.cbImediato.Location = new System.Drawing.Point(1045, 6);
+            this.cbImediato.Location = new System.Drawing.Point(1003, 10);
             this.cbImediato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbImediato.Name = "cbImediato";
             this.cbImediato.Size = new System.Drawing.Size(157, 42);
@@ -638,7 +638,7 @@ namespace Logistica.Sistema_de_Logistica
             this.tabPage4.Location = new System.Drawing.Point(4, 40);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1812, 810);
+            this.tabPage4.Size = new System.Drawing.Size(1687, 810);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Tabela Carretos";
             // 
@@ -723,7 +723,7 @@ namespace Logistica.Sistema_de_Logistica
             this.tabPage5.Controls.Add(this.label5);
             this.tabPage5.Location = new System.Drawing.Point(4, 40);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1812, 810);
+            this.tabPage5.Size = new System.Drawing.Size(1687, 810);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Calcular Mdf, m2, m3";
             // 
@@ -1169,7 +1169,7 @@ namespace Logistica.Sistema_de_Logistica
             this.tabPage2.Controls.Add(this.label47);
             this.tabPage2.Location = new System.Drawing.Point(4, 40);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1812, 810);
+            this.tabPage2.Size = new System.Drawing.Size(1687, 810);
             this.tabPage2.TabIndex = 5;
             this.tabPage2.Text = "Calcular Verniz e Presilhas";
             // 

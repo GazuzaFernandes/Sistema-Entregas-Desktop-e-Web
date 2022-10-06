@@ -78,7 +78,7 @@
             // 
             // btnDeletarProposta
             // 
-            this.btnDeletarProposta.ForeColor = System.Drawing.Color.Red;
+            this.btnDeletarProposta.ForeColor = System.Drawing.Color.Black;
             this.btnDeletarProposta.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletarProposta.Image")));
             this.btnDeletarProposta.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnDeletarProposta.Location = new System.Drawing.Point(1071, 502);
@@ -92,7 +92,7 @@
             // 
             // btnSalvarProposta
             // 
-            this.btnSalvarProposta.ForeColor = System.Drawing.Color.Red;
+            this.btnSalvarProposta.ForeColor = System.Drawing.Color.Black;
             this.btnSalvarProposta.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarProposta.Image")));
             this.btnSalvarProposta.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnSalvarProposta.Location = new System.Drawing.Point(1071, 373);

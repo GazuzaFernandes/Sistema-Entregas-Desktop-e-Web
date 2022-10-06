@@ -61,11 +61,11 @@
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSalvar.ForeColor = System.Drawing.Color.Red;
+            this.btnSalvar.ForeColor = System.Drawing.Color.Black;
             this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.Location = new System.Drawing.Point(126, 635);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(165, 66);
             this.btnSalvar.TabIndex = 47;
@@ -77,7 +77,7 @@
             // rtbComentario
             // 
             this.rtbComentario.Location = new System.Drawing.Point(44, 412);
-            this.rtbComentario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rtbComentario.Margin = new System.Windows.Forms.Padding(4);
             this.rtbComentario.Name = "rtbComentario";
             this.rtbComentario.Size = new System.Drawing.Size(713, 212);
             this.rtbComentario.TabIndex = 46;
@@ -89,7 +89,7 @@
             this.rbFinalizado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbFinalizado.ForeColor = System.Drawing.Color.Lime;
             this.rbFinalizado.Location = new System.Drawing.Point(311, 302);
-            this.rbFinalizado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbFinalizado.Margin = new System.Windows.Forms.Padding(4);
             this.rbFinalizado.Name = "rbFinalizado";
             this.rbFinalizado.Size = new System.Drawing.Size(171, 42);
             this.rbFinalizado.TabIndex = 43;
@@ -103,7 +103,7 @@
             this.rbCancelado.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbCancelado.ForeColor = System.Drawing.Color.Red;
             this.rbCancelado.Location = new System.Drawing.Point(573, 302);
-            this.rbCancelado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbCancelado.Margin = new System.Windows.Forms.Padding(4);
             this.rbCancelado.Name = "rbCancelado";
             this.rbCancelado.Size = new System.Drawing.Size(184, 45);
             this.rbCancelado.TabIndex = 44;
@@ -117,7 +117,7 @@
             this.rbPendente.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbPendente.ForeColor = System.Drawing.Color.Yellow;
             this.rbPendente.Location = new System.Drawing.Point(53, 302);
-            this.rbPendente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbPendente.Margin = new System.Windows.Forms.Padding(4);
             this.rbPendente.Name = "rbPendente";
             this.rbPendente.Size = new System.Drawing.Size(161, 42);
             this.rbPendente.TabIndex = 45;
@@ -130,7 +130,7 @@
             this.txtConstrutora.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtConstrutora.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtConstrutora.Location = new System.Drawing.Point(53, 131);
-            this.txtConstrutora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConstrutora.Margin = new System.Windows.Forms.Padding(4);
             this.txtConstrutora.Name = "txtConstrutora";
             this.txtConstrutora.Size = new System.Drawing.Size(704, 34);
             this.txtConstrutora.TabIndex = 42;
@@ -141,7 +141,7 @@
             this.txtAmostraId.Enabled = false;
             this.txtAmostraId.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtAmostraId.Location = new System.Drawing.Point(13, 22);
-            this.txtAmostraId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAmostraId.Margin = new System.Windows.Forms.Padding(4);
             this.txtAmostraId.Name = "txtAmostraId";
             this.txtAmostraId.Size = new System.Drawing.Size(82, 34);
             this.txtAmostraId.TabIndex = 40;
@@ -181,7 +181,7 @@
             // btnDeletar
             // 
             this.btnDeletar.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDeletar.ForeColor = System.Drawing.Color.Red;
+            this.btnDeletar.ForeColor = System.Drawing.Color.Black;
             this.btnDeletar.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletar.Image")));
             this.btnDeletar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeletar.Location = new System.Drawing.Point(437, 636);
@@ -249,7 +249,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmAmostra";

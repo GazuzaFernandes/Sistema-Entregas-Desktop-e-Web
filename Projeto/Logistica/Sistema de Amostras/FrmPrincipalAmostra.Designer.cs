@@ -29,11 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipalAmostra));
-            Retaguarda.iTalk.ControlRenderer controlRenderer1 = new Retaguarda.iTalk.ControlRenderer();
-            Retaguarda.iTalk.MSColorTable msColorTable1 = new Retaguarda.iTalk.MSColorTable();
             this.dvgAmostra = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.iTalk_ContextMenuStrip1 = new Retaguarda.iTalk.iTalk_ContextMenuStrip();
             this.btnLimparPesquisa = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.rbAmostra = new System.Windows.Forms.RadioButton();
@@ -74,15 +71,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
-            // 
-            // iTalk_ContextMenuStrip1
-            // 
-            this.iTalk_ContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.iTalk_ContextMenuStrip1.Name = "iTalk_ContextMenuStrip1";
-            controlRenderer1.ColorTable = msColorTable1;
-            controlRenderer1.RoundedEdges = true;
-            this.iTalk_ContextMenuStrip1.Renderer = controlRenderer1;
-            this.iTalk_ContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // btnLimparPesquisa
             // 
@@ -217,7 +205,6 @@
         #endregion
         private DataGridView dvgAmostra;
         private PictureBox pictureBox1;
-        private Retaguarda.iTalk.iTalk_ContextMenuStrip iTalk_ContextMenuStrip1;
         private Button btnLimparPesquisa;
         private Button btnPesquisar;
         private RadioButton rbAmostra;

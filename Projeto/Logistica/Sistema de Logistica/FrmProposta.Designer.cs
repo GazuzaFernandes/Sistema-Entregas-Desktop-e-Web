@@ -216,7 +216,8 @@
             // 
             // btnImprimir
             // 
-            this.btnImprimir.ForeColor = System.Drawing.Color.Red;
+            this.btnImprimir.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnImprimir.ForeColor = System.Drawing.Color.Black;
             this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnImprimir.Location = new System.Drawing.Point(875, 632);
@@ -230,7 +231,8 @@
             // 
             // btnDeletarProposta
             // 
-            this.btnDeletarProposta.ForeColor = System.Drawing.Color.Red;
+            this.btnDeletarProposta.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDeletarProposta.ForeColor = System.Drawing.Color.Black;
             this.btnDeletarProposta.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletarProposta.Image")));
             this.btnDeletarProposta.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnDeletarProposta.Location = new System.Drawing.Point(1072, 632);
@@ -244,7 +246,8 @@
             // 
             // btnSalvarProposta
             // 
-            this.btnSalvarProposta.ForeColor = System.Drawing.Color.Red;
+            this.btnSalvarProposta.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSalvarProposta.ForeColor = System.Drawing.Color.Black;
             this.btnSalvarProposta.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarProposta.Image")));
             this.btnSalvarProposta.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnSalvarProposta.Location = new System.Drawing.Point(875, 523);

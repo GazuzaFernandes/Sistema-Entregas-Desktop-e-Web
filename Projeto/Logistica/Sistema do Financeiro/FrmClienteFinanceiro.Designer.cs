@@ -46,7 +46,7 @@
             // 
             this.txtCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCliente.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCliente.Location = new System.Drawing.Point(217, 71);
+            this.txtCliente.Location = new System.Drawing.Point(168, 72);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(654, 38);
             this.txtCliente.TabIndex = 28;
@@ -57,7 +57,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(268, 27);
+            this.label4.Location = new System.Drawing.Point(219, 28);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(523, 31);
             this.label4.TabIndex = 26;
@@ -93,7 +93,7 @@
             this.btnLimpar.ForeColor = System.Drawing.Color.Black;
             this.btnLimpar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpar.Image")));
             this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnLimpar.Location = new System.Drawing.Point(712, 146);
+            this.btnLimpar.Location = new System.Drawing.Point(663, 147);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(159, 75);
             this.btnLimpar.TabIndex = 22;
@@ -108,7 +108,7 @@
             this.btnDeletar.ForeColor = System.Drawing.Color.Black;
             this.btnDeletar.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletar.Image")));
             this.btnDeletar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDeletar.Location = new System.Drawing.Point(547, 146);
+            this.btnDeletar.Location = new System.Drawing.Point(498, 147);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(159, 75);
             this.btnDeletar.TabIndex = 23;
@@ -123,7 +123,7 @@
             this.btnSalvar.ForeColor = System.Drawing.Color.Black;
             this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(382, 146);
+            this.btnSalvar.Location = new System.Drawing.Point(333, 147);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(159, 75);
             this.btnSalvar.TabIndex = 24;
@@ -138,7 +138,7 @@
             this.btnInserir.ForeColor = System.Drawing.Color.Black;
             this.btnInserir.Image = ((System.Drawing.Image)(resources.GetObject("btnInserir.Image")));
             this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnInserir.Location = new System.Drawing.Point(217, 146);
+            this.btnInserir.Location = new System.Drawing.Point(168, 147);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(159, 75);
             this.btnInserir.TabIndex = 22;
