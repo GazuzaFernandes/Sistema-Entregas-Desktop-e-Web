@@ -164,10 +164,13 @@
             // 
             // dgvData
             // 
+            this.dgvData.AllowUserToAddRows = false;
+            this.dgvData.AllowUserToDeleteRows = false;
             this.dgvData.BackgroundColor = System.Drawing.Color.White;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.Location = new System.Drawing.Point(55, 308);
             this.dgvData.Name = "dgvData";
+            this.dgvData.ReadOnly = true;
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 29;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -214,9 +217,10 @@
             // rbPendente
             // 
             this.rbPendente.AutoSize = true;
+            this.rbPendente.Checked = true;
             this.rbPendente.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbPendente.ForeColor = System.Drawing.Color.Lime;
-            this.rbPendente.Location = new System.Drawing.Point(1005, 297);
+            this.rbPendente.Location = new System.Drawing.Point(818, 237);
             this.rbPendente.Name = "rbPendente";
             this.rbPendente.Size = new System.Drawing.Size(147, 42);
             this.rbPendente.TabIndex = 52;
@@ -232,7 +236,7 @@
             this.btnGerarId.Name = "btnGerarId";
             this.btnGerarId.Size = new System.Drawing.Size(97, 38);
             this.btnGerarId.TabIndex = 45;
-            this.btnGerarId.Text = "Gerar ID";
+            this.btnGerarId.Text = "Liberar";
             this.btnGerarId.UseVisualStyleBackColor = true;
             this.btnGerarId.Click += new System.EventHandler(this.btnGerarId_Click);
             // 
@@ -279,11 +283,11 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label17.ForeColor = System.Drawing.Color.Yellow;
-            this.label17.Location = new System.Drawing.Point(714, 58);
+            this.label17.Location = new System.Drawing.Point(983, 333);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(385, 31);
+            this.label17.Size = new System.Drawing.Size(223, 155);
             this.label17.TabIndex = 42;
-            this.label17.Text = "Unidade de medida em milimitros.";
+            this.label17.Text = "Und Medida mm:\r\n1,8cm = 18mm\r\n20cm = 200mm\r\nApenas para\r\nEspessura e Largura\r\n";
             // 
             // label14
             // 
@@ -465,11 +469,14 @@
             // 
             // dgvSaidaMaterial
             // 
+            this.dgvSaidaMaterial.AllowUserToAddRows = false;
+            this.dgvSaidaMaterial.AllowUserToDeleteRows = false;
             this.dgvSaidaMaterial.BackgroundColor = System.Drawing.Color.White;
             this.dgvSaidaMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSaidaMaterial.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvSaidaMaterial.Location = new System.Drawing.Point(3, 282);
             this.dgvSaidaMaterial.Name = "dgvSaidaMaterial";
+            this.dgvSaidaMaterial.ReadOnly = true;
             this.dgvSaidaMaterial.RowHeadersWidth = 51;
             this.dgvSaidaMaterial.RowTemplate.Height = 29;
             this.dgvSaidaMaterial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -554,6 +561,7 @@
             // rbCancelado
             // 
             this.rbCancelado.AutoSize = true;
+            this.rbCancelado.Checked = true;
             this.rbCancelado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbCancelado.ForeColor = System.Drawing.Color.Red;
             this.rbCancelado.Location = new System.Drawing.Point(19, 128);

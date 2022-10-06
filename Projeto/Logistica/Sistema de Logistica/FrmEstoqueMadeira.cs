@@ -64,18 +64,20 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
         private void txtEspessuraEntrada_TextChanged(object sender, EventArgs e)
         {
-
+            CalcularEntradaM2();
         }
 
         private void txtLarguraEntrada_TextChanged(object sender, EventArgs e)
         {
-
+            CalcularEntradaM2();
         }
 
         private void txtMetroEntrada_TextChanged(object sender, EventArgs e)
         {
-
+            CalcularEntradaM2();
         }
+
+     
 
         private void dgvData_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
@@ -92,23 +94,25 @@ namespace Projeto.Logistica.Sistema_de_Logistica
            
         private void txtMaterialSaida_TextChanged(object sender, EventArgs e)
         {
-
+            CalcularSaidaM2();
         }
 
         private void txtEspessuraSaida_TextChanged(object sender, EventArgs e)
         {
-
+            CalcularSaidaM2();
         }
 
         private void txtLarguraSaida_TextChanged(object sender, EventArgs e)
         {
-
+            CalcularSaidaM2();
         }
 
         private void txtMetroSaida_TextChanged(object sender, EventArgs e)
         {
-
+            CalcularSaidaM2();
         }
+
+       
 
         private void btnBaixarEstoque_Click(object sender, EventArgs e)
         {
@@ -128,8 +132,14 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
         #region Apenas Metodos
 
-
-
+        private void CalcularEntradaM2()
+        {
+            throw new NotImplementedException();
+        }
+        private void CalcularSaidaM2()
+        {
+            throw new NotImplementedException();
+        }
         #endregion
     }
 }
