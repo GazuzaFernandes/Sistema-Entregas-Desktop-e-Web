@@ -53,7 +53,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
         private void bntLimparEntrada_Click(object sender, EventArgs e)
         {
-            LimparCampos();
+            LimparCamposEntrada();
         }
 
         private void cmsSalvarDatas_Click(object sender, EventArgs e)
@@ -125,7 +125,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                         MessageBox.Show("Entrada atualizado co sucesso !!");
                         CarregarGridEstoque();
                         dgvData.DataSource = null;
-                        LimparCampos();
+                        LimparCamposEntrada();
                         HabilitarCampos(false);
                     }
                 }
@@ -145,7 +145,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             {
                 new DLDataEstoque().Excluir(new DataEstoque { DataId = id });
                 MessageBox.Show("Data excluida com sucesso");
-                LimparCampos();
+                LimparCamposEntrada();
                 txtDataId.Clear();
             }
         }
@@ -158,7 +158,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             {
                 new DLEstoqueMadeira().Excluir(new EstoqueMadeira { EstoqueId = id });
                 MessageBox.Show("Material excluido com sucesso");
-                LimparCampos();
+                LimparCamposEntrada();
                 txtIdEntrada.Clear();
             }
         }
@@ -177,6 +177,8 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             CalcularEntradaM2();
         }
+
+     
 
         private void dgvData_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
@@ -230,6 +232,8 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             CalcularSaidaM2();
         }
 
+       
+
         private void btnBaixarEstoque_Click(object sender, EventArgs e)
         {
             try
@@ -254,7 +258,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                         MessageBox.Show("Saida atualizado co sucesso !!");
                         CarregarGridEstoque();
                         dgvData.DataSource = null;
-                        LimparCampos();
+                        LimparCamposEntrada();
                         HabilitarCampos(false);
                     }
                 }
@@ -303,7 +307,15 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         #region Apenas Metodos
         private void LimparCamposSaida()
         {
-            throw new NotImplementedException();
+            #region Saida Material
+            txtIdSaida.Clear();
+            txtEspessuraSaida.Clear();
+            txtLarguraSaida.Clear();
+            txtMaterialSaida.Clear();
+            txtMetroSaida.Clear();
+            txtTotalM3Saida.Clear();
+            txtTotalM2Saida.Clear();
+            #endregion
         }
 
         private void CarregarGridData()
@@ -353,7 +365,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             throw new NotImplementedException();
         }
 
-        private void LimparCampos()
+        private void LimparCamposEntrada()
         {
             #region Entrada Material
             txtIdEntrada.Clear();
@@ -363,17 +375,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             txtMetroEntrada.Clear();
             txtTotalM2Entrada.Clear();
             txtTotalM3Entrada.Clear();
-            #endregion
-
-            #region Saida Material
-            txtIdSaida.Clear();
-            txtEspessuraSaida.Clear();
-            txtLarguraSaida.Clear();
-            txtMaterialSaida.Clear();
-            txtMetroSaida.Clear();
-            txtTotalM3Saida.Clear();
-            txtTotalM2Saida.Clear();
-            #endregion
+            #endregion           
         }
 
         private bool ValidarCampo()
