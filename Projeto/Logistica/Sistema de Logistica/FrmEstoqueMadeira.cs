@@ -1,4 +1,6 @@
-﻿using DAL.Entities.Logistica;
+﻿using DAL.Entities.Financeiro;
+using DAL.Entities.Logistica;
+using DAL.Repository.Financeiro;
 using DAL.Repository.Logistica;
 using System;
 using System.Collections.Generic;
@@ -214,7 +216,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
         private void txtMaterialSaida_TextChanged(object sender, EventArgs e)
         {
-            CalcularSaidaM2();
+            CarregarGridEstoque(true);
         }
 
         private void txtEspessuraSaida_TextChanged(object sender, EventArgs e)
@@ -320,11 +322,45 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
         private void CarregarGridData()
         {
-            throw new NotImplementedException();
+            try
+            {
+                var listarData = new DLDataEstoque().Listar().Where(p => p.EstoqueId == Convert.ToInt32(txtIdEntrada.Text)).ToList();
+                dgvData.DataSource = null;
+                dgvData.DataSource = listarData.OrderByDescending(p => p.Entrada).ToList();
+                dgvData.Refresh();
+                MontarGridData(dgvData);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
-        private DataEstoque LerData()
+
+        private void MontarGridData(DataGridView dgvData)
         {
             throw new NotImplementedException();
+        }
+
+        private DataEstoque LerData()
+        {
+            try
+            {
+                var iten = new DataEstoque();
+                int id = 0;
+                int.TryParse(txtDataId.Text, out id);
+                if (id == 0)
+                {
+                    iten.Datas = dtpDataPedido.Value;
+                    iten.Fabrica = txtFabrica.Text;
+                    iten.Entrada = Convert.ToDecimal(txtEntradaEstoque.Text);
+                    iten.IdMadeiras = Convert.ToInt32(txtIdEntrada.Text);
+                }
+                return iten;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         private void HabilitarCampos(bool habilitar)
@@ -351,7 +387,27 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
         }
 
-        private void CarregarGridEstoque()
+        private void CarregarGridEstoque(bool isPesquisa = false)
+        {
+            try
+            {
+                var listarMadeira = new DLEstoqueMadeira().Listar();
+                if (isPesquisa) //isPesquisa == true
+                {
+                    var pesquisa = txtMaterialSaida.Text.ToLower();
+                    listarMadeira = listarMadeira.Where(p => p.Madeira.ToLower().Contains(pesquisa)).ToList();
+                }
+                dgvSaidaMaterial.DataSource = listarMadeira;
+                MontarGridMaterial(dgvSaidaMaterial);
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+        }
+
+        private void MontarGridMaterial(DataGridView dgvSaidaMaterial)
         {
             throw new NotImplementedException();
         }

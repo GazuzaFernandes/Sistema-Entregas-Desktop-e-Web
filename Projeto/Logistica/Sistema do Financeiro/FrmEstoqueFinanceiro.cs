@@ -87,7 +87,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         {
             try
             {
-                var itenProposta = lerdata();
+                var itenProposta = LerData();
                 int ItensPropostaId = 0;
                 if (txtDataId.Text != "")
                 {
@@ -438,7 +438,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
             }
         }
       
-        private Itensdata lerdata()
+        private Itensdata LerData()
         {
             try
             {
