@@ -220,7 +220,7 @@
             this.rbPendente.Checked = true;
             this.rbPendente.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbPendente.ForeColor = System.Drawing.Color.Lime;
-            this.rbPendente.Location = new System.Drawing.Point(844, 611);
+            this.rbPendente.Location = new System.Drawing.Point(818, 237);
             this.rbPendente.Name = "rbPendente";
             this.rbPendente.Size = new System.Drawing.Size(147, 42);
             this.rbPendente.TabIndex = 52;

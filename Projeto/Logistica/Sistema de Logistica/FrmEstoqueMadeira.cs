@@ -178,6 +178,8 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             CalcularEntradaM2();
         }
 
+     
+
         private void dgvData_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             for (int i = 0; i < dgvData.Rows.Count; i++)
@@ -229,6 +231,8 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             CalcularSaidaM2();
         }
+
+       
 
         private void btnBaixarEstoque_Click(object sender, EventArgs e)
         {
