@@ -13,9 +13,7 @@ namespace DAL.Mapping.Logistica
         public EstoqueMadeiraMap()
         {
             Id(p=> p.EstoqueId).GeneratedBy.Sequence("estoquemadeira_seq");
-            Map(p => p.Madeira);
-            Map(p => p.Saida);
-            Map(p => p.Entrada);
+            Map(p => p.Madeira);          
             Map(p => p.Espessura);
             Map(p => p.Largura);
             Map(p => p.MetroLinear);

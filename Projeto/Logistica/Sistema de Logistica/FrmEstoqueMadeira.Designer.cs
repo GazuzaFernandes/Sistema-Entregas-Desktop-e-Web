@@ -321,7 +321,7 @@
             this.txtTotalM2Entrada.Name = "txtTotalM2Entrada";
             this.txtTotalM2Entrada.Size = new System.Drawing.Size(88, 38);
             this.txtTotalM2Entrada.TabIndex = 43;
-            this.txtTotalM2Entrada.TextChanged += new System.EventHandler(this.txtMetroEntrada_TextChanged);
+            this.txtTotalM2Entrada.TextChanged += new System.EventHandler(this.txtTotalM2Entrada_TextChanged);
             // 
             // txtMetroEntrada
             // 

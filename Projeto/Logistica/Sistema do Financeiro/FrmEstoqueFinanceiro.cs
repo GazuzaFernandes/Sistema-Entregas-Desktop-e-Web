@@ -231,9 +231,9 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
             try
             {
                 idmadeira = Convert.ToInt32(txtIdSaida.Text);
-                madeirass = txtMaterialSaida.Text;
+                material = txtMaterialSaida.Text;
                 medida = txtUndMedidaSaida.Text;
-                total = Convert.ToDecimal(txtSaidaEstoque.Text);
+               total = Convert.ToDecimal(txtSaidaEstoque.Text);
                 int id = 0;
                 int.TryParse(txtIdSaida.Text, out id);
                 if (id > 0)
@@ -382,7 +382,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show("Erro: " + ex.Message);
             }
         }
 
@@ -411,7 +411,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show("Erro: " + ex.Message);
             }
         }
 

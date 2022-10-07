@@ -102,14 +102,14 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
                 int ide = 0;
                 int.TryParse(txtPropostId.Text, out ide);
                 if (ide > 0)
-                { 
-                            new DLProposta().Excluir(new Proposta { PropostaId = ide });
-                            MessageBox.Show("Proposta excluída com sucesso!");
-                            Close();
+                {
+                    new DLProposta().Excluir(new Proposta { PropostaId = ide });
+                    MessageBox.Show("Proposta excluída com sucesso!");
+                    Close();
                 }
-            }                     
+            }
 
-                catch (Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }
@@ -160,7 +160,7 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
                     int.TryParse(txtPropostId.Text, out id);
                     if (id > 0)
                     {
-                                                var pAtua = new DLPropostaEngenharia().ConsultarPorId(id);
+                        var pAtua = new DLPropostaEngenharia().ConsultarPorId(id);
                         pAtua.Proposta = txtProposta.Text;
                         pAtua.Cliente = txtCliente.Text;
                         pAtua.Funcionario = txtFuncionario.Text;
@@ -210,8 +210,8 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
                         var prop = listaHistorico.Where(ip => ip.EngenheiroId == propostaid); //por proppostaid
                     }
                 }
-            } 
-              catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }
@@ -233,7 +233,7 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
             {
                 MessageBox.Show("Erro:" + ex.Message);
             }
-        }     
+        }
 
         #region Campo de Metodos
 
@@ -257,7 +257,7 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show("Erro: " + ex.Message);
             }
         }
         private void MontarGridHistorico()
@@ -287,14 +287,14 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
             btnGerarId.Enabled = desabilitar;
         }
         private void HabilitarCampos(bool Habilitar)
-        {         
+        {
             txtProposta.Enabled = Habilitar;
             txtCliente.Enabled = Habilitar;
             txtFuncionario.Enabled = Habilitar;
             txtEngResponsavel.Enabled = Habilitar;
             txtTelefone.Enabled = Habilitar;
-            txtObra.Enabled = Habilitar;         
-            btnSalvarProposta.Enabled = Habilitar;           
+            txtObra.Enabled = Habilitar;
+            btnSalvarProposta.Enabled = Habilitar;
             btnDeletarProposta.Enabled = Habilitar;
         }
         private void LimparDadosProposta()
@@ -304,7 +304,7 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
             txtFuncionario.Text = Convert.ToString(null);
             txtEngResponsavel.Text = Convert.ToString(null);
             txtTelefone.Text = Convert.ToString(null);
-            txtObra.Text = Convert.ToString(null);           
+            txtObra.Text = Convert.ToString(null);
         }
         private bool ValidarCampos()
         {
@@ -338,5 +338,5 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
 
         #endregion     
     }
-    
+
 }

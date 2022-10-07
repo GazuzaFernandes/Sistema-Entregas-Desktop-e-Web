@@ -29,7 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmImpressaoProposta));
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.SuspendLayout();
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // FrmImpressaoProposta
             // 
@@ -37,7 +42,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1101, 689);
+            this.ClientSize = new System.Drawing.Size(1053, 735);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmImpressaoProposta";
@@ -47,5 +52,7 @@
         }
 
         #endregion
+
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

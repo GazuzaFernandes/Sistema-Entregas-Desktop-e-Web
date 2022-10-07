@@ -81,7 +81,7 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.labelProposta = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -124,6 +124,7 @@
             this.cmsSalvarConteudos = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mtSalvarProposta = new System.Windows.Forms.ToolStripMenuItem();
             this.mtSalvarComentario = new System.Windows.Forms.ToolStripMenuItem();
+            this.imprimir = new System.Drawing.Printing.PrintDocument();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -201,7 +202,7 @@
             this.tabPage1.Controls.Add(this.label29);
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.label28);
-            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.labelProposta);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label7);
@@ -723,15 +724,15 @@
             this.label28.TabIndex = 0;
             this.label28.Text = "Responsavel:";
             // 
-            // label10
+            // labelProposta
             // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(26, 308);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(116, 31);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Proposta:";
+            this.labelProposta.AutoSize = true;
+            this.labelProposta.ForeColor = System.Drawing.Color.White;
+            this.labelProposta.Location = new System.Drawing.Point(26, 308);
+            this.labelProposta.Name = "labelProposta";
+            this.labelProposta.Size = new System.Drawing.Size(116, 31);
+            this.labelProposta.TabIndex = 0;
+            this.labelProposta.Text = "Proposta:";
             // 
             // label9
             // 
@@ -1197,6 +1198,10 @@
             this.mtSalvarComentario.Text = "Salvar Comentario";
             this.mtSalvarComentario.Click += new System.EventHandler(this.mtSalvarComentario_Click);
             // 
+            // imprimir
+            // 
+            this.imprimir.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.imprimir_PrintPage);
+            // 
             // FrmProposta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -1255,12 +1260,11 @@
         private Label label5;
         private TextBox txtCliente;
         private TextBox txtObra;
-        private TextBox txtProposta;
         private TextBox txtPdVenda;
         private TextBox txtPdRb;
         private TextBox txtCodigoCliente;
         private Label label11;
-        private Label label10;
+        private Label labelProposta;
         private Label label9;
         private Label label8;
         private Label label7;
@@ -1326,5 +1330,7 @@
         private Label label28;
         private Label label31;
         private Label label30;
+        public TextBox txtProposta;
+        private System.Drawing.Printing.PrintDocument imprimir;
     }
 }

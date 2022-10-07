@@ -16,5 +16,18 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             InitializeComponent();
         }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            try
+            {
+              
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

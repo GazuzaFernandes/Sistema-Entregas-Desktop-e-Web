@@ -184,7 +184,6 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         }
         #endregion
 
-
         #region Tela Material nota fiscal
 
         private void btnPesquisarMaterial_Click(object sender, EventArgs e)
@@ -324,7 +323,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show("Erro: " + ex.Message);
             }
         }
 
@@ -411,7 +410,6 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
             {
                 throw ex;
             }
-
         }
 
         private void LimparMadeira()

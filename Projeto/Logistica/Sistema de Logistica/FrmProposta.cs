@@ -178,47 +178,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                //#region Tabela Itens Proposta
-                //ReportDataSource iP = new ReportDataSource();
-                //List<ItensProposta> lst = new List<ItensProposta>();
-                //lst.Clear();
-                //for (int i = 0; i < Dgvmaterial.Rows.Count - 0; i++)
-                //{
-                //    lst.Add(new ItensProposta
-                //    {
-                //        ItenId = int.Parse(Dgvmaterial.Rows[i].Cells[0].Value.ToString()),
-                //        Material = Dgvmaterial.Rows[i].Cells[1].Value.ToString(),
-                //        UndMedida = Dgvmaterial.Rows[i].Cells[2].Value.ToString(),
-                //        Quantidade = Convert.ToDecimal(Dgvmaterial.Rows[i].Cells[4].Value.ToString()),
-                //        M2NotaFiscal = Convert.ToDecimal(Dgvmaterial.Rows[i].Cells[6].Value.ToString()),
-                //    });
-                //}
-                //iP.Name = "DataSet";
-                //iP.Value = lst;
-                //#endregion
-
-                //#region Tabela Historico de Comentario
-                //ReportDataSource hS = new ReportDataSource();
-                //List<Historico> histo = new List<Historico>();
-                //histo.Clear();
-                //for (int i = 0; i < DgvHistorico.Rows.Count - 0; i++)
-                //{
-                //    histo.Add(new Historico
-                //    {
-                //        HistoricoId = int.Parse(DgvHistorico.Rows[i].Cells[0].Value.ToString()),
-                //        Comentario = DgvHistorico.Rows[i].Cells[2].Value.ToString(),
-                //        DataComentario = Convert.ToDateTime(DgvHistorico.Rows[i].Cells[1].Value.ToString()),
-                //    });
-                //}
-                //hS.Name = "Historico";
-                //hS.Value = histo;
-                //#endregion
-                //FrmImpressaoProposta frmImpressao = new FrmImpressaoProposta(dtpDataEntrega.Value, txtProposta.Text, txtEmpresa.Text, txtObra.Text, iP, txtNotaFiscal.Text, rtbComentario.Text, hS);
-                //frmImpressao.reportViewer1.LocalReport.DataSources.Clear();
-                //frmImpressao.reportViewer1.LocalReport.DataSources.Add(iP);
-                //frmImpressao.reportViewer1.LocalReport.DataSources.Add(hS);
-                //frmImpressao.reportViewer1.LocalReport.ReportEmbeddedResource = "Logistica.RelatorioPDF.rdlc";
-                //frmImpressao.ShowDialog();
+                imprimir.Print();
             }
             catch (Exception ex)
             {
@@ -904,5 +864,13 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
         #endregion
 
+        private void imprimir_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            string proposta = txtProposta.Text;      
+            Font tipoLetra = new Font("Arial", 16, FontStyle.Regular, GraphicsUnit.Pixel);
+            SolidBrush cor = new SolidBrush(Color.Black);
+            Point localizacaoFolha = new Point(50, 50);
+            e.Graphics.DrawString(proposta, tipoLetra, cor, localizacaoFolha);
+        }
     }
 }

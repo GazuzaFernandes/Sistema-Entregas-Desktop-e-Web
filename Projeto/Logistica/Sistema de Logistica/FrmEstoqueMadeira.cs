@@ -2,6 +2,7 @@
 using DAL.Entities.Logistica;
 using DAL.Repository.Financeiro;
 using DAL.Repository.Logistica;
+using Logistica.Sistema_de_Logistica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,7 +40,6 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
-
             }
         }
 
@@ -167,20 +167,23 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
         private void txtEspessuraEntrada_TextChanged(object sender, EventArgs e)
         {
-            CalcularEntradaM2();
+            CalcularEntrada();
         }
 
         private void txtLarguraEntrada_TextChanged(object sender, EventArgs e)
         {
-            CalcularEntradaM2();
+            CalcularEntrada();
         }
 
         private void txtMetroEntrada_TextChanged(object sender, EventArgs e)
         {
-            CalcularEntradaM2();
+            CalcularEntrada();
         }
 
-     
+        private void txtTotalM2Entrada_TextChanged(object sender, EventArgs e)
+        {
+            CalcularEntrada();
+        }
 
         private void dgvData_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
@@ -232,9 +235,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         private void txtMetroSaida_TextChanged(object sender, EventArgs e)
         {
             CalcularSaidaM2();
-        }
-
-       
+        }       
 
         private void btnBaixarEstoque_Click(object sender, EventArgs e)
         {
@@ -338,7 +339,18 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
         private void MontarGridData(DataGridView dgvData)
         {
-            throw new NotImplementedException();
+            dgvSaidaMaterial.DefaultCellStyle.Font = new Font("Calibri", 16F, GraphicsUnit.Pixel);
+            var objBlControleGrid = new ControleGrid(dgvSaidaMaterial);
+            //Define quais colunas serão visíveis
+            objBlControleGrid.DefinirVisibilidade(new List<string>() { "Madeiras", "UnidadeMedida", "Total", });
+            //Define quais os cabeçalhos respectivos das colunas 
+            objBlControleGrid.DefinirCabecalhos(new List<string>() { "Madeiras", "Unid Medida", "Total" });
+            //Define quais as larguras respectivas das colunas 
+            objBlControleGrid.DefinirLarguras(new List<int>() { 70, 10, 15 }, dgvSaidaMaterial.Width - 15); //O total tem que ficar em 100% 
+                                                                                                            //Define quais os alinhamentos respectivos do componentes das colunas 
+            objBlControleGrid.DefinirAlinhamento(new List<string>() { "centro", "centro", "centro", "centro", "centro", });
+            //Define a altura das linhas respectivas da Grid 
+            objBlControleGrid.DefinirAlturaLinha(30);
         }
 
         private DataEstoque LerData()
@@ -350,10 +362,11 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 int.TryParse(txtDataId.Text, out id);
                 if (id == 0)
                 {
-                    iten.Datas = dtpDataPedido.Value;
-                    iten.Fabrica = txtFabrica.Text;
-                    iten.Entrada = Convert.ToDecimal(txtEntradaEstoque.Text);
-                    iten.IdMadeiras = Convert.ToInt32(txtIdEntrada.Text);
+                    iten.Entrada = dtpEntrada.Value;
+                    iten.Saida = dtpSaida.Value;
+                    iten.MetroQuadrado = Convert.ToDecimal(txtTotalM2Entrada.Text);
+                    iten.MetroQuadrado = Convert.ToDecimal(txtTotalM2Saida.Text);
+                    iten.EstoqueId = Convert.ToInt32(txtIdEntrada.Text);
                 }
                 return iten;
             }
@@ -409,16 +422,74 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
         private void MontarGridMaterial(DataGridView dgvSaidaMaterial)
         {
-            throw new NotImplementedException();
+            dgvSaidaMaterial.DefaultCellStyle.Font = new Font("Calibri", 16F, GraphicsUnit.Pixel);
+            var objBlControleGrid = new ControleGrid(dgvSaidaMaterial);
+            //Define quais colunas serão visíveis
+            objBlControleGrid.DefinirVisibilidade(new List<string>() { "Madeiras", "UnidadeMedida", "Total", });
+            //Define quais os cabeçalhos respectivos das colunas 
+            objBlControleGrid.DefinirCabecalhos(new List<string>() { "Madeiras", "Unid Medida", "Total" });
+            //Define quais as larguras respectivas das colunas 
+            objBlControleGrid.DefinirLarguras(new List<int>() { 70, 10, 15 }, dgvSaidaMaterial.Width - 15); //O total tem que ficar em 100% 
+                                                                                                            //Define quais os alinhamentos respectivos do componentes das colunas 
+            objBlControleGrid.DefinirAlinhamento(new List<string>() { "centro", "centro", "centro", "centro", "centro", });
+            //Define a altura das linhas respectivas da Grid 
+            objBlControleGrid.DefinirAlturaLinha(30);
         }
 
-        private void CalcularEntradaM2()
+        private void CalcularEntrada()
         {
-            throw new NotImplementedException();
+            #region Calcular Metro Quadrado
+            decimal largura = 0, comprimento = 0, totalm2 = 0;
+
+            if (decimal.TryParse(txtLarguraEntrada.Text, out largura))
+            {
+                if (decimal.TryParse(txtMetroEntrada.Text, out comprimento))
+                {
+                    totalm2 = comprimento * largura;
+                }
+            }
+            txtTotalM2Entrada.Text = totalm2.ToString("N2");
+            #endregion
+
+            #region Calcular Metro Cubico
+            decimal espessura = 0, metroQuadrado = 0, totalm3 = 0;
+            if (decimal.TryParse(txtEspessuraEntrada.Text, out espessura))
+            {
+                if (decimal.TryParse(txtTotalM2Entrada.Text, out metroQuadrado))
+                {
+                    totalm3 = metroQuadrado * espessura;
+                }
+            }
+            txtTotalM3Entrada.Text = totalm3.ToString("N2");
+            #endregion
         }
+
         private void CalcularSaidaM2()
         {
-            throw new NotImplementedException();
+            #region Calcular Metro Quadrado
+            decimal largura = 0, comprimento = 0, totalm2 = 0;
+
+            if (decimal.TryParse(txtLarguraSaida.Text, out largura))
+            {
+                if (decimal.TryParse(txtMetroSaida.Text, out comprimento))
+                {
+                    totalm2 = comprimento * largura;
+                }
+            }
+            txtTotalM2Saida.Text = totalm2.ToString("N2");
+            #endregion
+
+            #region Calcular Metro Cubico
+            decimal espessura = 0, metroQuadrado = 0, totalm3 = 0;
+            if (decimal.TryParse(txtEspessuraSaida.Text, out espessura))
+            {
+                if (decimal.TryParse(txtTotalM2Saida.Text, out metroQuadrado))
+                {
+                    totalm3 = metroQuadrado * espessura;
+                }
+            }
+            txtTotalM3Saida.Text = totalm3.ToString("N2");
+            #endregion
         }
 
         private void LimparCamposEntrada()
@@ -447,7 +518,9 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
         private void FrmEstoqueMadeira_Click(object sender, EventArgs e)
         {
-
+            WindowState = FormWindowState.Minimized;
         }
+
+      
     }
 }
