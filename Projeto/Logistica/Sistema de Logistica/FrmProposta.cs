@@ -494,9 +494,9 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     txtCodigoItensMaterial.Text = Convert.ToString(itensProposta.CodigoMaterial);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
         }
 
@@ -867,11 +867,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
         private void imprimir_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            string proposta = txtProposta.Text;      
-            Font tipoLetra = new Font("Arial", 16, FontStyle.Regular, GraphicsUnit.Pixel);
-            SolidBrush cor = new SolidBrush(Color.Black);
-            Point localizacaoFolha = new Point(50, 50);
-            e.Graphics.DrawString(proposta, tipoLetra, cor, localizacaoFolha);
+           
         }
     }
 }

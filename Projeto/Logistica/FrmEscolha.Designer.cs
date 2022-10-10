@@ -36,6 +36,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblMessageLoad = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             "Logistica.",
             "Financeiro.",
             "Orçamento."});
-            this.cbSelecionar.Location = new System.Drawing.Point(191, 23);
+            this.cbSelecionar.Location = new System.Drawing.Point(191, 63);
             this.cbSelecionar.Name = "cbSelecionar";
             this.cbSelecionar.Size = new System.Drawing.Size(246, 39);
             this.cbSelecionar.TabIndex = 0;
@@ -60,7 +61,7 @@
             // btnEntrar
             // 
             this.btnEntrar.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnEntrar.Location = new System.Drawing.Point(191, 91);
+            this.btnEntrar.Location = new System.Drawing.Point(191, 131);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(246, 51);
             this.btnEntrar.TabIndex = 1;
@@ -71,7 +72,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(22, 164);
+            this.progressBar1.Location = new System.Drawing.Point(12, 199);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(415, 48);
             this.progressBar1.TabIndex = 3;
@@ -79,9 +80,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(11, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(173, 147);
+            this.pictureBox1.Size = new System.Drawing.Size(173, 181);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -91,7 +92,7 @@
             this.lblMessageLoad.AutoSize = true;
             this.lblMessageLoad.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblMessageLoad.ForeColor = System.Drawing.Color.White;
-            this.lblMessageLoad.Location = new System.Drawing.Point(22, 216);
+            this.lblMessageLoad.Location = new System.Drawing.Point(12, 251);
             this.lblMessageLoad.Name = "lblMessageLoad";
             this.lblMessageLoad.Size = new System.Drawing.Size(42, 32);
             this.lblMessageLoad.TabIndex = 5;
@@ -102,12 +103,24 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(206, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(221, 32);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Escolha o sistema:";
+            // 
             // FrmEscolha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(471, 261);
+            this.ClientSize = new System.Drawing.Size(473, 297);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblMessageLoad);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.progressBar1);
@@ -136,5 +149,6 @@
         private PictureBox pictureBox1;
         private Label lblMessageLoad;
         private System.Windows.Forms.Timer timer1;
+        private Label label1;
     }
 }
