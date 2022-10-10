@@ -178,7 +178,8 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                imprimir.Print();
+                FrmImpressaoProposta impressao = new FrmImpressaoProposta();
+                impressao.Show();
             }
             catch (Exception ex)
             {

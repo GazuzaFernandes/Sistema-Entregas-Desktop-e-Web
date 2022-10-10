@@ -62,14 +62,14 @@
             this.dtpDataPrevista = new System.Windows.Forms.DateTimePicker();
             this.dtpHistorico = new System.Windows.Forms.DateTimePicker();
             this.dtpDataPedido = new System.Windows.Forms.DateTimePicker();
-            this.label20 = new System.Windows.Forms.Label();
+            this.labelEntrega = new System.Windows.Forms.Label();
             this.btnGerarId = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCustoMaterial = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.txtPropostId = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
+            this.laberNotaFiscal = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.labelObra = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.labelProposta = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -183,14 +183,14 @@
             this.tabPage1.Controls.Add(this.dtpDataPrevista);
             this.tabPage1.Controls.Add(this.dtpHistorico);
             this.tabPage1.Controls.Add(this.dtpDataPedido);
-            this.tabPage1.Controls.Add(this.label20);
+            this.tabPage1.Controls.Add(this.labelEntrega);
             this.tabPage1.Controls.Add(this.btnGerarId);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.txtCustoMaterial);
             this.tabPage1.Controls.Add(this.label16);
             this.tabPage1.Controls.Add(this.label19);
             this.tabPage1.Controls.Add(this.txtPropostId);
-            this.tabPage1.Controls.Add(this.label18);
+            this.tabPage1.Controls.Add(this.laberNotaFiscal);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label17);
             this.tabPage1.Controls.Add(this.label6);
@@ -200,7 +200,7 @@
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.label29);
-            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.labelObra);
             this.tabPage1.Controls.Add(this.label28);
             this.tabPage1.Controls.Add(this.labelProposta);
             this.tabPage1.Controls.Add(this.label9);
@@ -530,15 +530,15 @@
             this.dtpDataPedido.Size = new System.Drawing.Size(148, 34);
             this.dtpDataPedido.TabIndex = 3;
             // 
-            // label20
+            // labelEntrega
             // 
-            this.label20.AutoSize = true;
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(651, 649);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(102, 31);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Entrega:";
+            this.labelEntrega.AutoSize = true;
+            this.labelEntrega.ForeColor = System.Drawing.Color.White;
+            this.labelEntrega.Location = new System.Drawing.Point(651, 649);
+            this.labelEntrega.Name = "labelEntrega";
+            this.labelEntrega.Size = new System.Drawing.Size(102, 31);
+            this.labelEntrega.TabIndex = 0;
+            this.labelEntrega.Text = "Entrega:";
             // 
             // btnGerarId
             // 
@@ -600,15 +600,15 @@
             this.txtPropostId.Size = new System.Drawing.Size(97, 38);
             this.txtPropostId.TabIndex = 1;
             // 
-            // label18
+            // laberNotaFiscal
             // 
-            this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(224, 649);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(138, 31);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Nota Fiscal:";
+            this.laberNotaFiscal.AutoSize = true;
+            this.laberNotaFiscal.ForeColor = System.Drawing.Color.White;
+            this.laberNotaFiscal.Location = new System.Drawing.Point(224, 649);
+            this.laberNotaFiscal.Name = "laberNotaFiscal";
+            this.laberNotaFiscal.Size = new System.Drawing.Size(138, 31);
+            this.laberNotaFiscal.TabIndex = 0;
+            this.laberNotaFiscal.Text = "Nota Fiscal:";
             // 
             // label2
             // 
@@ -704,15 +704,15 @@
             this.label29.TabIndex = 0;
             this.label29.Text = "Telefone:";
             // 
-            // label11
+            // labelObra
             // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(386, 308);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(72, 31);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Obra:";
+            this.labelObra.AutoSize = true;
+            this.labelObra.ForeColor = System.Drawing.Color.White;
+            this.labelObra.Location = new System.Drawing.Point(386, 308);
+            this.labelObra.Name = "labelObra";
+            this.labelObra.Size = new System.Drawing.Size(72, 31);
+            this.labelObra.TabIndex = 0;
+            this.labelObra.Text = "Obra:";
             // 
             // label28
             // 
@@ -1258,12 +1258,10 @@
         private Button btnPesquisaFabrica;
         private Label label6;
         private Label label5;
-        private TextBox txtCliente;
-        private TextBox txtObra;
         private TextBox txtPdVenda;
         private TextBox txtPdRb;
         private TextBox txtCodigoCliente;
-        private Label label11;
+        private Label labelObra;
         private Label labelProposta;
         private Label label9;
         private Label label8;
@@ -1278,14 +1276,10 @@
         private RadioButton rbPendente;
         private PictureBox pictureBox1;
         private TextBox txtCarreto;
-        private TextBox txtNotaFiscal;
         private TextBox txtRecebido;
-        private DateTimePicker dtpDataEntrega;
         private DateTimePicker dtpHistorico;
-        private Label label20;
         private Label label16;
         private Label label19;
-        private Label label18;
         private Label label17;
         private Label label13;
         private Label label12;
@@ -1332,5 +1326,11 @@
         private Label label30;
         public TextBox txtProposta;
         private System.Drawing.Printing.PrintDocument imprimir;
+        public TextBox txtCliente;
+        public TextBox txtObra;
+        public TextBox txtNotaFiscal;
+        public Label laberNotaFiscal;
+        public DateTimePicker dtpDataEntrega;
+        public Label labelEntrega;
     }
 }
