@@ -5,8 +5,7 @@ using FluentNHibernate.Mapping;
 namespace DAL.Mapping.Logistica
 {
     public class ItensPropostaMap : ClassMap<ItensProposta>
-    {
-        #region Pasta - Sistema Logistica - Form Proposta - Form Cadastro d Itens
+    {      
         public ItensPropostaMap()
         {
             Id(p => p.ItenId).GeneratedBy.Sequence("itenproposta_seq");
@@ -15,13 +14,13 @@ namespace DAL.Mapping.Logistica
             Map(p => p.Quantidade);
             Map(p => p.Preco);
             Map(p => p.Total);
-            Map(p => p.qtdcaixal);
+            Map(p => p.qtdcaixa);
             Map(p => p.UndMedida);            
             Map(p => p.M2caixa);
             Map(p => p.PropostaId);
             Map(p => p.CodigoMaterial);
             Table("itensproposta");
         }
-        #endregion
+        
     }
 }

@@ -4,13 +4,13 @@ using FluentNHibernate.Mapping;
 
 namespace DAL.Mapping.Financeiro
 {
-    public class ClientesMap : ClassMap<Clientes>
+    public class ClientesFInanceiroMap : ClassMap<ClientesFInanceiro>
     {
-        public ClientesMap()
+        public ClientesFInanceiroMap()
         {
-            Id(p => p.IdCliente).GeneratedBy.Sequence("cliente_seq");
+            Id(p => p.IdCliente).GeneratedBy.Sequence("clientefinanceiro_seq");
             Map(p => p.Nome);                  
-            Table("clientes");
+            Table("clientefinanceiro");
         }
 
     }

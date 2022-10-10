@@ -14,7 +14,7 @@ namespace DAL.Repository.Financeiro
                 var listaStatus = new DLStatusobra().Listar();
 
                 var resultado = listaProposta
-                   .Join(listaStatus, proposta => proposta.StatusobraId, statuss => statuss.StatusObraId, (proposta, stattuss) => new { proposta, stattuss })
+                   .Join(listaStatus, proposta => proposta.StatusObraId, statuss => statuss.StatusObraId, (proposta, stattuss) => new { proposta, stattuss })
                    .Select(x => new PropostaViewModel()
                    {
                        IdProp = x.proposta.IdProp,
@@ -22,10 +22,9 @@ namespace DAL.Repository.Financeiro
                        VencimentoNf = x.proposta.VencimentoNf,
                        Cliente = x.proposta.Cliente,                       
                        Propostas = x.proposta.Proposta,
-                       Notafiscal = x.proposta.Notafiscal,
-                       Obra = x.proposta.Obra,
-                       Email = x.proposta.Email,
-                       Cometario = x.proposta.Cometario,
+                       Notafiscal = x.proposta.NotaFiscal,
+                       Obra = x.proposta.Obra,                      
+                       Cometario = x.proposta.Comentario,
                        Status = x.stattuss.Descricao,                     
 
                    }).ToList();
@@ -64,7 +63,6 @@ namespace DAL.Repository.Financeiro
         public virtual string? Propostas { get; set; }
         public virtual string? Notafiscal { get; set; }
         public virtual string? Obra { get; set; }
-        public virtual string? Email { get; set; }
         public virtual string? Cometario { get; set; }
         public virtual int StatusobraId { get; set; }
         public virtual int StatusObra { get; set; }

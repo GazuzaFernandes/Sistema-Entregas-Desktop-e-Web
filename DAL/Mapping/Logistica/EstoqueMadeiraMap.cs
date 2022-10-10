@@ -19,7 +19,7 @@ namespace DAL.Mapping.Logistica
             Map(p => p.MetroLinear);
             Map(p => p.MetroQuadrado);
             Map(p => p.MetroCubico);
-            Table("EstoqueMadeira");
+            Table("estoquemadeira");
         }
     }
 }

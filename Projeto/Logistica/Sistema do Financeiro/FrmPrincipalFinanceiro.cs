@@ -32,7 +32,7 @@ namespace Logistica.Sistema_do_Financeiro
         {
             try
             {
-                var listaProp = new DLProposta().Listar();
+                var listaProp = new DLDadosProposta().Listar();
                 Carregargrid();
             }
             catch (Exception ex)

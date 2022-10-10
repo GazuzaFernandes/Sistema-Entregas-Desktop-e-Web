@@ -39,9 +39,9 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                     txtEndereco.Text = _notafiscal.Obra;
                     txtCliente.Text = _notafiscal.Cliente;
                     txtProposta.Text = _notafiscal.Proposta;
-                    txtNotaFiscal.Text = _notafiscal.Notafiscal;
-                    rtbObeservacao.Text = _notafiscal.Cometario;
-                    switch (_notafiscal.StatusobraId)//escolha
+                    txtNotaFiscal.Text = _notafiscal.NotaFiscal;
+                    rtbObeservacao.Text = _notafiscal.Comentario;
+                    switch (_notafiscal.StatusObraId)//escolha
                     {
                         case 1:
                             {
@@ -81,7 +81,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
             {
                 HabilitarCampos(true);
                 var proposta = new FinanceiroProposta();
-                proposta.StatusobraId = 2;//Pendente
+                proposta.StatusObraId = 2;//Pendente
                 var id = new DLFinanceiroProposta().Inserir(proposta);//inserir
                 txtGerarId.Text = id.ToString();
                 Bloquear(false);
@@ -108,16 +108,16 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                         atualizar.VencimentoNf = dtpDataVencimento.Value;
                         atualizar.Cliente = txtCliente.Text;
                         atualizar.Proposta = txtProposta.Text;
-                        atualizar.Notafiscal = txtNotaFiscal.Text;
+                        atualizar.NotaFiscal = txtNotaFiscal.Text;
                         atualizar.Obra = txtEndereco.Text;
-                        atualizar.Cometario = rtbObeservacao.Text;
+                        atualizar.Comentario = rtbObeservacao.Text;
 
                         if (rbEngenharia.Checked == true)
-                            atualizar.StatusobraId = 1;
+                            atualizar.StatusObraId = 1;
                         else if (rbComercio.Checked == true)
-                            atualizar.StatusobraId = 2;
+                            atualizar.StatusObraId = 2;
                         else if (rbPisos.Checked == true)
-                            atualizar.StatusobraId = 3;
+                            atualizar.StatusObraId = 3;
 
                         new DLFinanceiroProposta().Atualizar(atualizar);
                         MessageBox.Show("Informações Atualizada com Sucesso!");
@@ -225,7 +225,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                 {
                     propostaid = Convert.ToInt32(txtGerarId.Text);
                 }
-                var listarmadeira = new DLItensmadeira().Listar();
+                var listarmadeira = new DLItensMadeiraFinanceiro().Listar();
                 var prop = listarmadeira.Where(ip =>
                                 ip.IdProp == propostaid //por proppostaid
                                 && ip.IdMadeira == itensMaterialAtualizar //por ItensPropostaId
@@ -236,11 +236,11 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                     prop.Material = txtMaterial.Text;
                     prop.Medida = txtUndMedida.Text;
                     prop.Total = Convert.ToDecimal(txtQuantidade.Text);
-                    new DLItensmadeira().Atualizar(prop);
+                    new DLItensMadeiraFinanceiro().Atualizar(prop);
                 }
                 else
                 {
-                    new DLItensmadeira().Inserir(itensMaterialNovo);
+                    new DLItensMadeiraFinanceiro().Inserir(itensMaterialNovo);
                 }
                 LimparMadeira();
                 CarregarMadeira();
@@ -267,10 +267,10 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                     int.TryParse(txtIdMaterial.Text, out id);
                     if (id > 0)
                     {
-                        var prop = new DLItensmadeira().ConsultarPorId(id);
+                        var prop = new DLItensMadeiraFinanceiro().ConsultarPorId(id);
                         if (prop.IdMadeira > 0)
                         {
-                            new DLItensmadeira().Excluir(prop);
+                            new DLItensMadeiraFinanceiro().Excluir(prop);
                             CarregarMadeira();
                             LimparMadeira();
                         }
@@ -290,7 +290,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         {
             try
             {
-                var listarMadeira = dgvMaterial.Rows[e.RowIndex].DataBoundItem as Itensmadeira;
+                var listarMadeira = dgvMaterial.Rows[e.RowIndex].DataBoundItem as ItensmadeiraFinanceiro;
                 if (listarMadeira != null)
                 {
                     txtIdMaterial.Text = listarMadeira.IdMadeira.ToString();
@@ -315,7 +315,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         {
             try
             {
-                var listarMadeira = new DLItensmadeira().Listar().Where(p => p.IdProp == Convert.ToInt32(txtGerarId.Text)).ToList();
+                var listarMadeira = new DLItensMadeiraFinanceiro().Listar().Where(p => p.IdProp == Convert.ToInt32(txtGerarId.Text)).ToList();
                 dgvMaterial.DataSource = null;
                 dgvMaterial.DataSource = listarMadeira;
                 dgvMaterial.Refresh();
@@ -390,11 +390,11 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
             return true;
         }
 
-        private Itensmadeira LerCamposMaterial()
+        private ItensmadeiraFinanceiro LerCamposMaterial()
         {
             try
             {
-                var iten = new Itensmadeira();
+                var iten = new ItensmadeiraFinanceiro();
                 int id = 0;
                 int.TryParse(txtIdMaterial.Text, out id);
                 if (id == 0)

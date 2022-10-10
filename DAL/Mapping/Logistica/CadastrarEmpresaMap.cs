@@ -10,7 +10,6 @@ namespace DAL.Mapping.Logistica
             Id(p => p.EmpresaId).GeneratedBy.Sequence("cadastrarempresa_seq");
             Map(p => p.Empresa);
             Table("cadastrarempresa");
-        }
-        
+        }        
     }
 }

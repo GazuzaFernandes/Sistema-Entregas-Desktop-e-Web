@@ -24,7 +24,7 @@ namespace Logistica.Sistema_de_Amostras
 
         private void FrmPrincipalAmostra_Load(object sender, EventArgs e)
         {
-            //CarregarGridAmostras();
+            CarregarGridAmostras();
         }
 
         private void txtPesquisar_TextChanged(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace Logistica.Sistema_de_Amostras
         {
             FrmAmostra amostra = new FrmAmostra();
             amostra.ShowDialog();
-         //   CarregarGridAmostras();
+            CarregarGridAmostras();
         }
 
         private void btnEstoque_Click(object sender, EventArgs e)
@@ -92,18 +92,18 @@ namespace Logistica.Sistema_de_Amostras
         {
             try
             {
-                var listaAmostra = new DLAmostra().ListarAmostra();
+                var listaAmostra = new DLAmostraCliente().Listar();
                 if (isPesquisa) //isPesquisa == true
                 {
                     var pesquisa = txtPesquisar.Text.ToLower();
                     if (rbCliente.Checked)
-                        listaAmostra = listaAmostra.Where(p => p.construtora.ToLower().Contains(pesquisa)).ToList();
+                        listaAmostra = listaAmostra.Where(p => p.Construtora.ToLower().Contains(pesquisa)).ToList();
                     else if (rbEndereco.Checked)
-                        listaAmostra = listaAmostra.Where(p => p.obra.ToLower().Contains(pesquisa)).ToList();
+                        listaAmostra = listaAmostra.Where(p => p.Obra.ToLower().Contains(pesquisa)).ToList();
                     else if (rbAmostra.Checked)
-                        listaAmostra = listaAmostra.Where(p => p.material.ToLower().Contains(pesquisa)).ToList();
+                        listaAmostra = listaAmostra.Where(p => p.Material.ToLower().Contains(pesquisa)).ToList();
                 }
-                dvgAmostra.DataSource = listaAmostra.OrderByDescending(p => p.dataentrega).ToList();
+                dvgAmostra.DataSource = listaAmostra.OrderByDescending(p => p.DataEntrega).ToList();
                 MontarGridAmostra(dvgAmostra);
             }
             catch (Exception ex)

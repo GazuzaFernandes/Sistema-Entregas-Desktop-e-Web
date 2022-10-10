@@ -5,7 +5,7 @@ using DAL.NHibertnate;
 
 namespace DAL.Repository.Orcamento
 {
-    public  class DLDataProduto : Repository<DataProduto>
+    public  class DLDataProdutoOrcamento : Repository<DataProdutoOrcamento>
     {
     }
 }

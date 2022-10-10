@@ -23,7 +23,7 @@ namespace Logistica.Sistema_de_Logistica
         {
             try
             {
-                var listaProposta = new DLProposta().Listar();
+                var listaProposta = new DLDadosProposta().Listar();
                CarregarGridPrincipal();
              
             }
@@ -179,29 +179,29 @@ namespace Logistica.Sistema_de_Logistica
         {
             try
             {
-                var listaPropostaStatus = new DLProposta().ListarPropostaStatus();
+                var listaPropostaStatus = new DLDadosProposta().ListarPropostaStatus();
                 if (isPesquisa) //isPesquisa == true
                 {
                     #region Pesquisa
                     var pesquisa = txtPesquisar.Text.ToLower();
                     if (rbFabrica.Checked)
-                        listaPropostaStatus = listaPropostaStatus.Where(p => p.fabrica.ToLower().Contains(pesquisa)).ToList();
+                        listaPropostaStatus = listaPropostaStatus.Where(p => p.Fabrica.ToLower().Contains(pesquisa)).ToList();
                     else if (rbMaterial.Checked)
-                        listaPropostaStatus = listaPropostaStatus.Where(x => x.material.ToLower().Contains(pesquisa)).ToList();
+                        listaPropostaStatus = listaPropostaStatus.Where(x => x.Material.ToLower().Contains(pesquisa)).ToList();
                     else if (rbEng.Checked)
-                        listaPropostaStatus = listaPropostaStatus.Where(p => p.engresp.ToLower().Contains(pesquisa)).ToList();
+                        listaPropostaStatus = listaPropostaStatus.Where(p => p.EngResp.ToLower().Contains(pesquisa)).ToList();
                     else if (rbPedidoRb.Checked)
-                        listaPropostaStatus = listaPropostaStatus.Where(p => p.pdrb.ToLower().Contains(pesquisa)).ToList();
+                        listaPropostaStatus = listaPropostaStatus.Where(p => p.PdRb.ToLower().Contains(pesquisa)).ToList();
                     else if (rbPedidoVenda.Checked)
-                        listaPropostaStatus = listaPropostaStatus.Where(p => p.pdvenda.ToLower().Contains(pesquisa)).ToList();
+                        listaPropostaStatus = listaPropostaStatus.Where(p => p.PdVenda.ToLower().Contains(pesquisa)).ToList();
                     else if (rbProposta.Checked)
-                        listaPropostaStatus = listaPropostaStatus.Where(p => p.propostaa.ToLower().Contains(pesquisa)).ToList();
+                        listaPropostaStatus = listaPropostaStatus.Where(p => p.Proposta.ToLower().Contains(pesquisa)).ToList();
                     else if (rbCliente.Checked)
-                        listaPropostaStatus = listaPropostaStatus.Where(p => p.construtora.ToLower().Contains(pesquisa)).ToList();
+                        listaPropostaStatus = listaPropostaStatus.Where(p => p.Construtora.ToLower().Contains(pesquisa)).ToList();
                     else if (rbEndereco.Checked)
-                        listaPropostaStatus = listaPropostaStatus.Where(p => p.obra.ToLower().Contains(pesquisa)).ToList();
+                        listaPropostaStatus = listaPropostaStatus.Where(p => p.Obra.ToLower().Contains(pesquisa)).ToList();
                     else if (rbNotaFiscal.Checked)
-                        listaPropostaStatus = listaPropostaStatus.Where(p => p.notafiscal.ToLower().Contains(pesquisa)).ToList();
+                        listaPropostaStatus = listaPropostaStatus.Where(p => p.NotaFiscal.ToLower().Contains(pesquisa)).ToList();
                     #endregion
 
                     #region Status

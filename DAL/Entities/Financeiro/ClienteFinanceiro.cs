@@ -4,11 +4,10 @@ using System.Text;
 
 namespace DAL.Entities.Financeiro
 {
-   public class Clientes
+   public class ClientesFInanceiro
     {
         public virtual int IdCliente { get; set; }
-        public virtual string? Nome { get; set; }
-       
+        public virtual string? Nome { get; set; }       
       
     }
 }

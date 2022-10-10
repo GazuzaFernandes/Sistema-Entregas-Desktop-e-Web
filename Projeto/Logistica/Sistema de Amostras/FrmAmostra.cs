@@ -6,7 +6,7 @@ namespace Projeto.Logistica.Sistema_de_Amostras
 {
     public partial class FrmAmostra : Form
     {
-        internal Amostra _amostracliente;
+        internal AmostraCliente _amostracliente;
         public FrmAmostra()
         {
             InitializeComponent();
@@ -17,10 +17,10 @@ namespace Projeto.Logistica.Sistema_de_Amostras
             try
             {               
                 if (_amostracliente == null)
-                    _amostracliente = new Amostra();
+                    _amostracliente = new AmostraCliente();
                 if (_amostracliente.AmostraId > 0)
                 {                   
-                    _amostracliente = new DLAmostra().ConsultarPorId(_amostracliente.AmostraId);
+                    _amostracliente = new DLAmostraCliente().ConsultarPorId(_amostracliente.AmostraId);
                     txtAmostraId.Text = _amostracliente.AmostraId.ToString();
                     dtpDataEntrega.Value = _amostracliente.DataEntrega;
                     rtbComentario.Text = _amostracliente.Material;
@@ -67,7 +67,7 @@ namespace Projeto.Logistica.Sistema_de_Amostras
                     int.TryParse(txtAmostraId.Text, out id);
                     if (id > 0)
                     {
-                        var atualizar = new DLAmostra().ConsultarPorId(id);
+                        var atualizar = new DLAmostraCliente().ConsultarPorId(id);
                         atualizar.DataEntrega = dtpDataEntrega.Value;
                         atualizar.Construtora = txtConstrutora.Text;
                         atualizar.Obra = txtObra.Text;
@@ -78,7 +78,7 @@ namespace Projeto.Logistica.Sistema_de_Amostras
                             atualizar.StatusobraId = 3;
                         else if (rbCancelado.Checked == true)
                             atualizar.StatusobraId = 4;
-                        new DLAmostra().Atualizar(atualizar);
+                        new DLAmostraCliente().Atualizar(atualizar);
                         MessageBox.Show("Amostra Atualizada com Sucesso!");
                         LimparAmostra();
                     }
@@ -102,7 +102,7 @@ namespace Projeto.Logistica.Sistema_de_Amostras
                     int.TryParse(txtAmostraId.Text, out id);
                     if (id > 0)
                     {
-                        new DLAmostra().Excluir(new Amostra { AmostraId = id });
+                        new DLAmostraCliente().Excluir(new AmostraCliente { AmostraId = id });
                         MessageBox.Show("Amostra excluída com sucesso!");
                         Close();
                     }

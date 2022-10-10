@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Entities.Orcamento
 {
-    public class DataProduto
+    public class DataProdutoOrcamento
     {
         public virtual int DataId { get; set; }
         public virtual DateTime Data { get; set; }

@@ -8,17 +8,16 @@ namespace DAL.Mapping.Financeiro
     {
         public FinanceiroPropostaMap()
         {
-            Id(p => p.IdProp).GeneratedBy.Sequence("proposta_seq");
+            Id(p => p.IdProp).GeneratedBy.Sequence("financeiroproposta_seq");
             Map(p => p.EmissaoNf);
             Map(p => p.VencimentoNf);
             Map(p => p.Cliente);           
             Map(p => p.Proposta);
-            Map(p => p.Notafiscal);
-            Map(p => p.Obra);
-            Map(p => p.Email);
-            Map(p => p.Cometario);
-            Map(p => p.StatusobraId);       
-            Table("FinanceiroProposta");
+            Map(p => p.NotaFiscal);
+            Map(p => p.Obra);           
+            Map(p => p.Comentario);
+            Map(p => p.StatusObraId);       
+            Table("financeiroproposta");
         }
     }
 }

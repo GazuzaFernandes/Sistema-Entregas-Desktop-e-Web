@@ -2,7 +2,8 @@
 using DAL.Repository.Logistica;
 using DAL.Repository.SenhaRestauracao;
 using Logistica.Sistema_de_Logistica;
-using Microsoft.Reporting.NETCore;
+
+using Microsoft.Reporting.WinForms;
 using Projeto.Logistica.Sistema_do_Financeiro;
 using System.Data;
 
@@ -12,7 +13,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
     {
         #region Classes para Form
         static int pesquisar = 1;
-        internal Proposta _proposta;
+        internal DadosProposta _proposta;
         internal ItensProposta _itensProposta;
         internal CadastrarEmpresa _fabrica;
         internal CadastrarMadeira _madeira;
@@ -30,12 +31,12 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 HabilitarCampos(false);
                 #region _proposta
                 if (_proposta == null)
-                    _proposta = new Proposta();
+                    _proposta = new DadosProposta();
                 if (_proposta.PropostaId > 0)
                 {
                     HabilitarCampos(true);
                     #region Codigos
-                    _proposta = new DLProposta().ConsultarPorId(_proposta.PropostaId);
+                    _proposta = new DLDadosProposta().ConsultarPorId(_proposta.PropostaId);
                     txtPropostId.Text = _proposta.PropostaId.ToString();
                     dtpDataPedido.Value = _proposta.DataPrevista;
                     dtpDataPrevista.Value = _proposta.DataPedido;
@@ -46,7 +47,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     txtTelefone.Text = _proposta.Telefone;
                     txtPdRb.Text = _proposta.PdRb;
                     txtPdVenda.Text = _proposta.PdVenda;
-                    txtProposta.Text = _proposta.Propostaa;
+                    txtProposta.Text = _proposta.Proposta;
                     txtEmpresa.Text = _proposta.Construtora;
                     txtObra.Text = _proposta.Obra;
                     dtpDataEntrega.Value = _proposta.DataEntrega;
@@ -55,7 +56,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     txtCarreto.Text = _proposta.Carreto;
                     rtbMaterial.Text = _proposta.Material;
                     #endregion
-                    switch (_proposta.StatusobraId)//escolha
+                    switch (_proposta.StatusObraId)//escolha
                     {
                         case 1:
                             {
@@ -105,9 +106,9 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             try
             {
                 HabilitarCampos(true);
-                var proposta = new Proposta();
-                proposta.StatusobraId = 2;//Pendente
-                var id = new DLProposta().Inserir(proposta);//inserir
+                var proposta = new DadosProposta();
+                proposta.StatusObraId = 2;//Pendente
+                var id = new DLDadosProposta().Inserir(proposta);//inserir
                 txtPropostId.Text = id.ToString();
                 BloquearBotao(false);
             }
@@ -179,9 +180,48 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                FrmImpressaoProposta impressao = new FrmImpressaoProposta();
-                impressao.Show();
-               
+                #region Tabela Itens Proposta
+                ReportDataSource iP = new ReportDataSource();
+                List<ItensProposta> lst = new List<ItensProposta>();
+                lst.Clear();
+                for (int i = 0; i < dgvitensProposta.Rows.Count - 0; i++)
+                {
+                    lst.Add(new ItensProposta
+                    {
+                        ItenId = int.Parse(dgvitensProposta.Rows[i].Cells[0].Value.ToString()),
+                        Material = dgvitensProposta.Rows[i].Cells[1].Value.ToString(),
+                        UndMedida = dgvitensProposta.Rows[i].Cells[2].Value.ToString(),
+                        Quantidade = Convert.ToDecimal(dgvitensProposta.Rows[i].Cells[4].Value.ToString()),
+                        M2caixa = Convert.ToDecimal(dgvitensProposta.Rows[i].Cells[6].Value.ToString()),
+                    });
+                }
+                iP.Name = "DataSet";
+                iP.Value = lst;
+                #endregion
+
+                #region Tabela Historico de Comentario
+                ReportDataSource hS = new ReportDataSource();
+                List<Historico> histo = new List<Historico>();
+                histo.Clear();
+                for (int i = 0; i < dgvHistorico.Rows.Count - 0; i++)
+                {
+                    histo.Add(new Historico
+                    {
+                        HistoricoId = int.Parse(dgvHistorico.Rows[i].Cells[0].Value.ToString()),
+                        Comentario = dgvHistorico.Rows[i].Cells[2].Value.ToString(),
+                        DataComentario = Convert.ToDateTime(dgvHistorico.Rows[i].Cells[1].Value.ToString()),
+                    });
+                }
+                hS.Name = "Historico";
+                hS.Value = histo;
+                #endregion
+
+                FrmImpressaoProposta frmImpressao = new FrmImpressaoProposta(dtpDataEntrega.Value, txtProposta.Text, txtEmpresa.Text, txtObra.Text, iP, txtNotaFiscal.Text, rtbComentario.Text, hS);
+                frmImpressao.reportViewer1.LocalReport.DataSources.Clear();
+                frmImpressao.reportViewer1.LocalReport.DataSources.Add(iP);
+                frmImpressao.reportViewer1.LocalReport.DataSources.Add(hS);
+                frmImpressao.reportViewer1.LocalReport.ReportEmbeddedResource = "Logistica.RelatorioPDF.rdlc";
+                frmImpressao.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -213,7 +253,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                         int.TryParse(txtPropostId.Text, out ide);
                         if (ide > 0)
                         {
-                            new DLProposta().Excluir(new Proposta { PropostaId = ide });
+                            new DLDadosProposta().Excluir(new DadosProposta { PropostaId = ide });
                             MessageBox.Show("Proposta excluída com sucesso!");
                             Close();
                         }
@@ -237,7 +277,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     int.TryParse(txtPropostId.Text, out id);
                     if (id > 0)
                     {
-                        var pAtua = new DLProposta().ConsultarPorId(id);
+                        var pAtua = new DLDadosProposta().ConsultarPorId(id);
                         pAtua.DataPrevista = dtpDataPedido.Value;
                         pAtua.DataPedido = dtpDataPedido.Value;
                         pAtua.Fabrica = txtEmpresa.Text;                       
@@ -246,7 +286,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                         pAtua.Telefone = txtTelefone.Text;
                         pAtua.PdRb = txtPdRb.Text;
                         pAtua.PdVenda = txtPdVenda.Text;
-                        pAtua.Propostaa = txtProposta.Text;
+                        pAtua.Proposta = txtProposta.Text;
                         pAtua.Construtora = txtEmpresa.Text;
                         pAtua.Obra = txtObra.Text;
                         pAtua.DataEntrega = dtpDataEntrega.Value;
@@ -278,14 +318,14 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                                 break;
                         }
                         if (rbImediato.Checked == true)
-                            pAtua.StatusobraId = 1;
+                            pAtua.StatusObraId = 1;
                         else if (rbPendente.Checked == true)
-                            pAtua.StatusobraId = 2;
+                            pAtua.StatusObraId = 2;
                         else if (rbFinalizado.Checked == true)
-                            pAtua.StatusobraId = 3;
+                            pAtua.StatusObraId = 3;
                         else if (rbCancelado.Checked == true)
-                            pAtua.StatusobraId = 4;
-                        new DLProposta().Atualizar(pAtua);
+                            pAtua.StatusObraId = 4;
+                        new DLDadosProposta().Atualizar(pAtua);
                         MessageBox.Show("Proposta Atualizada com Sucesso!");
                         LimparDadosProposta();
                     }
@@ -423,7 +463,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 if (prop != null && prop.ItenId > 0)
                 {
                     prop.M2caixa = Convert.ToDecimal(txtQtdUndCaixa.Text);
-                    prop.qtdcaixal = Convert.ToDecimal(txtQtdCaixas.Text);
+                    prop.qtdcaixa = Convert.ToDecimal(txtQtdCaixas.Text);
                     prop.Material = txtMaterial.Text;
                     prop.Preco = Convert.ToDecimal(txtPreco.Text);
                     prop.Quantidade = Convert.ToDecimal(txtQuantidade.Text);
@@ -490,7 +530,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     txtQtdUndCaixa.Text = Convert.ToString(itensProposta.M2caixa);
                     txtQuantidade.Text = Convert.ToString(itensProposta.Quantidade);
                     txtPreco.Text = Convert.ToString(itensProposta.Preco);
-                    txtQtdCaixas.Text = Convert.ToString(itensProposta.qtdcaixal);
+                    txtQtdCaixas.Text = Convert.ToString(itensProposta.qtdcaixa);
                     rtbObservacao.Text = itensProposta.ObsMaterial;
                     txtTotal.Text = Convert.ToString(itensProposta.Total);
                     txtCodigoItensMaterial.Text = Convert.ToString(itensProposta.CodigoMaterial);
@@ -781,7 +821,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     iten.ObsMaterial = rtbObservacao.Text;
                     iten.Quantidade = Convert.ToDecimal(txtQuantidade.Text);
                     iten.Preco = Convert.ToDecimal(txtPreco.Text);
-                    iten.qtdcaixal = Convert.ToDecimal(txtQtdCaixas.Text);
+                    iten.qtdcaixa = Convert.ToDecimal(txtQtdCaixas.Text);
                     iten.UndMedida = txtUndMedida.Text;
                     iten.M2caixa = Convert.ToDecimal(txtQtdUndCaixa.Text);
                     iten.Total = Convert.ToDecimal(txtTotal.Text);

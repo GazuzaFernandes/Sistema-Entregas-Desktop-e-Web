@@ -9,20 +9,19 @@ using System.Threading.Tasks;
 
 namespace DAL.Mapping.Logistica
 {
-    public class ItenControleMap : ClassMap<ItenControle>
-    {
-        #region Pasta - Sistema Logistica -  Form Saida Estoque
+    public class ItenControleMap : ClassMap<ItenRoteiro>
+    {        
         public ItenControleMap()
         {
-            Id(p => p.ItencontroleId).GeneratedBy.Sequence("itencontrole_seq");
+            Id(p => p.ItensRoteiroId).GeneratedBy.Sequence("itenroteiro_seq");
             Map(p => p.Codigo);
             Map(p => p.Material);
             Map(p => p.UndMedida);
             Map(p => p.QtdCaixas);
             Map(p => p.QtdSaida);
-            Map(p => p.ControleId);
-            Table("itencontrole");
+            Map(p => p.RoteiroId);
+            Table("itenroteiro");
         }
-        #endregion
+        
     }
 }

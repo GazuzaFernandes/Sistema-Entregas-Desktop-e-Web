@@ -3,7 +3,7 @@ using DAL.NHibertnate;
 
 namespace DAL.Repository.Financeiro
 {
-    public class DLItensdata : Repository<Itensdata>
+    public class DLItensMadeiraFinanceiro : Repository<ItensmadeiraFinanceiro>
     {
     }
 }

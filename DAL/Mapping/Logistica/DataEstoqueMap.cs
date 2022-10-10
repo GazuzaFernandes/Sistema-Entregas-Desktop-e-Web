@@ -18,7 +18,7 @@ namespace DAL.Mapping.Logistica
             Map(p => p.EstoqueId);
             Map(p => p.MetroQuadrado);
             Map(p => p.StatusObraId);
-            Table("DataEstoque");
+            Table("dataestoque");
         }
     }
 }

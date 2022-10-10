@@ -11,7 +11,7 @@ namespace DAL.Entities.Engenharia
         public virtual string? Responsavel { get; set; }
         public virtual string? Telefone { get; set; }
         public virtual string? Obra { get; set; }
-        public virtual int StatusEng { get; set; }
+        public virtual int StatusObraId { get; set; }
         public virtual DateTime DataInclusao { get; set; }
 
     }

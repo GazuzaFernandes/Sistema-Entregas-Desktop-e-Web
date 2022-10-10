@@ -4,18 +4,18 @@ using FluentNHibernate.Mapping;
 
 namespace DAL.Mapping.Financeiro
 {
-    public class MadeiraMap : ClassMap<Madeira>
+    public class MadeiraFinanceiroMap : ClassMap<MadeiraFinanceiro>
     {
-        public MadeiraMap()
+        public MadeiraFinanceiroMap()
         {
-            Id(p => p.IdMadeiras).GeneratedBy.Sequence("madeira_seq");            
+            Id(p => p.IdMadeiras).GeneratedBy.Sequence("madeirafinanceiro_seq");            
             Map(p => p.Madeiras);
             Map(p => p.UnidadeMedida);
             Map(p => p.Total);
             Map(p => p.Fabrica);           
             Map(p => p.Entrada);
             Map(p => p.StatusObraId);
-            Table("madeira");
+            Table("madeirafinanceiro");
         }
     }
 }

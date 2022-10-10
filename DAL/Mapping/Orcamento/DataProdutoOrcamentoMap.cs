@@ -4,15 +4,15 @@ using FluentNHibernate.Mapping;
 
 namespace DAL.Mapping.Orcamento
 {
-    class DataprodutoMap : ClassMap<DataProduto>
+    class DataProdutoOrcamentoMap : ClassMap<DataProdutoOrcamento>
     {
-        public DataprodutoMap()
+        public DataProdutoOrcamentoMap()
         {
-            Id(p => p.DataId).GeneratedBy.Sequence("dataproduto_seq");
+            Id(p => p.DataId).GeneratedBy.Sequence("dataprodutoorcamento_seq");
             Map(p => p.Data);
             Map(p => p.Preco);           
             Map(p => p.ProdutoId);            
-            Table("dataproduto");
+            Table("dataprodutoorcamento");
         }
     }
 }

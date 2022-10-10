@@ -8,16 +8,16 @@ namespace DAL.Mapping.Engenharia
     {       
         public PropostaEngenhariaMap()
         {
-            Id(p => p.EngenhariaId).GeneratedBy.Sequence("eng_seq");
+            Id(p => p.EngenhariaId).GeneratedBy.Sequence("propostaengenharia_seq");
             Map(p => p.Proposta);
             Map(p => p.Cliente);
             Map(p => p.Funcionario);
             Map(p => p.Responsavel);
             Map(p => p.Telefone);
             Map(p => p.Obra);
-            Map(p => p.StatusEng);
+            Map(p => p.StatusObraId);
             Map(p => p.DataInclusao);
-            Table("PropostaEngenharia");
+            Table("propostaengenharia");
         }    
 
     }

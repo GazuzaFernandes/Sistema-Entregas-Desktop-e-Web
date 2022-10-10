@@ -10,8 +10,7 @@ using System.Threading.Tasks;
 namespace DAL.Mapping.Logistica
 {
   public  class DataMaterialMap : ClassMap<DataMaterial>
-    {
-        #region Pasta Sistema Logistica - Form Estoque
+    {     
         public DataMaterialMap()
         {
             Id(p => p.DataId).GeneratedBy.Sequence("datamaterial_seq");
@@ -22,6 +21,6 @@ namespace DAL.Mapping.Logistica
             Map(p => p.MaterialId);
             Table("datamaterial");
         }
-        #endregion
+      
     }
 }

@@ -5,8 +5,7 @@ using FluentNHibernate.Mapping;
 namespace DAL.Mapping.Logistica
 {
     public class CadastrarMadeiraMap : ClassMap<CadastrarMadeira>
-    {
-        #region Pasta - Sistema Logistica -  Form Cadastro Intens
+    {        
         public CadastrarMadeiraMap()
         {
             Id(p => p.MadeiraId).GeneratedBy.Sequence("cadastromadeira_seq");
@@ -14,7 +13,7 @@ namespace DAL.Mapping.Logistica
             Map(p => p.M2Caixa);
             Table("cadastrarmadeira");
         }
-        #endregion
+        
     }
 }
 

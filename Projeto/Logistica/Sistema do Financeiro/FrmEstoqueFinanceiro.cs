@@ -19,7 +19,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         public string material;
         public string medida;
         public decimal total;
-        internal Madeira listarmadeiras;
+        internal MadeiraFinanceiro listarmadeiras;
         public FrmEstoqueFinanceiro()
         {
             InitializeComponent();
@@ -43,9 +43,9 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
             try
             {
                 HabilitarCampos(true);
-                var madeiras = new Madeira();
+                var madeiras = new MadeiraFinanceiro();
                 madeiras.StatusObraId = 2;//Pendente
-                var id = new DLMadeira().Inserir(madeiras);//inserir
+                var id = new DLMadeiraFinanceiro().Inserir(madeiras);//inserir
                 txtIdEntrada.Text = id.ToString();
             }
             catch (Exception ex)
@@ -74,7 +74,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
 
         private void dgvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            var datas = dgvData.Rows[e.RowIndex].DataBoundItem as Itensdata;
+            var datas = dgvData.Rows[e.RowIndex].DataBoundItem as ItensDataFinanceiro;
             if (datas != null)
             {
                 txtDataId.Text = datas.IdDatas.ToString();
@@ -87,7 +87,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         {
             try
             {
-                var itenProposta = LerData();
+                var itenProposta = lerdata();
                 int ItensPropostaId = 0;
                 if (txtDataId.Text != "")
                 {
@@ -99,7 +99,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                 {
                     propostaid = Convert.ToInt32(txtIdEntrada.Text);
                 }
-                var listarmadeira = new DLItensdata().Listar();
+                var listarmadeira = new DLItensDataFinanceiro().Listar();
                 //Filtrando a lista "listaProposta" por propostaid e codigomaterial
                 var prop = listarmadeira.Where(ip =>
                                 ip.IdMadeiras == propostaid //por proppostaid
@@ -111,11 +111,11 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                     prop.Datas = dtpDataPedido.Value;
                     prop.Fabrica = txtFabrica.Text;
                     prop.Entrada = Convert.ToDecimal(txtEntradaEstoque.Text);
-                    new DLItensdata().Atualizar(prop);
+                    new DLItensDataFinanceiro().Atualizar(prop);
                 }
                 else
                 {
-                    new DLItensdata().Inserir(itenProposta);
+                    new DLItensDataFinanceiro().Inserir(itenProposta);
                     MessageBox.Show("Data Cadastrado com Sucesso");
                 }              
                 txtEntradaEstoque.Text = Convert.ToString(0);
@@ -139,7 +139,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                     int.TryParse(txtIdEntrada.Text, out id);
                     if (id > 0)
                     {
-                        var entrada = new DLMadeira().ConsultarPorId(id);
+                        var entrada = new DLMadeiraFinanceiro().ConsultarPorId(id);
                         entrada.IdMadeiras = Convert.ToInt32(txtIdEntrada.Text);
                         entrada.Fabrica = txtFabrica.Text;
                         entrada.Madeiras = txtMaterialEntrada.Text;
@@ -152,7 +152,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                             entrada.StatusObraId = 2;
                         else if (rbPisos.Checked == true)
                             entrada.StatusObraId = 3;
-                        new DLMadeira().Atualizar(entrada);
+                        new DLMadeiraFinanceiro().Atualizar(entrada);
                         MessageBox.Show("Material atualizado com Sucesso ");
                         LimparCampos();
                         CarregarGridMaterial();
@@ -177,7 +177,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                     int.TryParse(txtDataId.Text, out id);
                     if (id > 0)
                     {
-                        new DLItensdata().Excluir(new Itensdata { IdDatas = id });
+                        new DLItensDataFinanceiro().Excluir(new ItensDataFinanceiro { IdDatas = id });
                         MessageBox.Show("Data excluída com sucesso!");
                         txtDataId.Text = Convert.ToString(null);
                         CarregarGridData();
@@ -205,7 +205,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                     int.TryParse(txtIdEntrada.Text, out id);
                     if (id > 0)
                     {
-                        new DLMadeira().Excluir(new Madeira { IdMadeiras = id });
+                        new DLMadeiraFinanceiro().Excluir(new MadeiraFinanceiro { IdMadeiras = id });
                         MessageBox.Show("Madeira excluída com sucesso!");
                         CarregarGridMaterial();
                         LimparCampos();
@@ -233,14 +233,14 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                 idmadeira = Convert.ToInt32(txtIdSaida.Text);
                 material = txtMaterialSaida.Text;
                 medida = txtUndMedidaSaida.Text;
-               total = Convert.ToDecimal(txtSaidaEstoque.Text);
+                total = Convert.ToDecimal(txtSaidaEstoque.Text);
                 int id = 0;
                 int.TryParse(txtIdSaida.Text, out id);
                 if (id > 0)
                 {
-                    var madeiraAt = new DLMadeira().ConsultarPorId(id);
+                    var madeiraAt = new DLMadeiraFinanceiro().ConsultarPorId(id);
                     madeiraAt.Total = Convert.ToDecimal(txtTotalEstoqueSaida.Text);
-                    new DLMadeira().Atualizar(madeiraAt);
+                    new DLMadeiraFinanceiro().Atualizar(madeiraAt);
                 }
                 Hide();
             }
@@ -287,7 +287,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         {
             try
             {
-                var ListarMadeiraStatus = dgvSaidaMaterial.Rows[e.RowIndex].DataBoundItem as Madeira;
+                var ListarMadeiraStatus = dgvSaidaMaterial.Rows[e.RowIndex].DataBoundItem as MadeiraFinanceiro;
                 if (ListarMadeiraStatus != null)
                 {
                     #region Cadastro Estoque
@@ -347,7 +347,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         {
             try
             {
-                var listarMadeira = new DLMadeira().Listar();
+                var listarMadeira = new DLMadeiraFinanceiro().Listar();
                 if (isPesquisa) //isPesquisa == true
                 {
                     var pesquisa = txtMaterialSaida.Text.ToLower();
@@ -382,7 +382,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro: " + ex.Message);
+                throw ex;
             }
         }
 
@@ -404,14 +404,14 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         {
             try
             {
-                var listarData = new DLItensdata().Listar().Where(p => p.IdMadeiras == Convert.ToInt32(txtIdEntrada.Text)).ToList();
+                var listarData = new DLItensDataFinanceiro().Listar().Where(p => p.IdMadeiras == Convert.ToInt32(txtIdEntrada.Text)).ToList();
                 dgvData.DataSource = null;
                 dgvData.DataSource = listarData.OrderByDescending(p => p.Datas).ToList();
                 dgvData.Refresh(); MontarGridData(dgvData);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro: " + ex.Message);
+                throw ex;
             }
         }
 
@@ -438,11 +438,11 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
             }
         }
       
-        private Itensdata LerData()
+        private ItensDataFinanceiro lerdata()
         {
             try
             {
-                var iten = new Itensdata();
+                var iten = new ItensDataFinanceiro();
                 int id = 0;
                 int.TryParse(txtDataId.Text, out id);
                 if (id == 0)

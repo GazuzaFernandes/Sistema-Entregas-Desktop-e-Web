@@ -2,7 +2,7 @@
 
 namespace DAL.Entities.Orcamento
 {
-    public class Produtos
+    public class ProdutosOrcamento
     {
         public virtual int ProdutoId { get; set; }
         public virtual string? Fornecedor { get; set; }

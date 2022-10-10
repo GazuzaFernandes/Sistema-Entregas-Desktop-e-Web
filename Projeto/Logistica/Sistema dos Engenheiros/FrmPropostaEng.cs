@@ -40,7 +40,7 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
                     txtTelefone.Text = _propostaEng.Telefone;
                     txtObra.Text = _propostaEng.Obra;
                     #endregion
-                    switch (_propostaEng.StatusEng)//escolha
+                    switch (_propostaEng.StatusObraId)//escolha
                     {
                         case 1:
                             {
@@ -79,7 +79,7 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
             {
                 HabilitarCampos(true);
                 var proposta = new PropostaEngenharia();
-                proposta.StatusEng = 2;//Pendente
+                proposta.StatusObraId = 2;//Pendente
                 var id = new DLPropostaEngenharia().Inserir(proposta);//inserir
                 txtPropostId.Text = id.ToString();
                 BloquearBotao(false);
@@ -103,7 +103,7 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
                 int.TryParse(txtPropostId.Text, out ide);
                 if (ide > 0)
                 {
-                    new DLProposta().Excluir(new Proposta { PropostaId = ide });
+                    new DLDadosProposta().Excluir(new DadosProposta { PropostaId = ide });
                     MessageBox.Show("Proposta excluída com sucesso!");
                     Close();
                 }
@@ -169,11 +169,11 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
                         pAtua.Obra = txtObra.Text;
                         pAtua.DataInclusao = dtpDataIncluido.Value;
                         if (rbPendente.Checked == true)
-                            pAtua.StatusEng = 1;
+                            pAtua.StatusObraId = 1;
                         else if (rbPendente.Checked == true)
-                            pAtua.StatusEng = 2;
+                            pAtua.StatusObraId = 2;
                         else if (rbFinalizado.Checked == true)
-                            pAtua.StatusEng = 3;
+                            pAtua.StatusObraId = 3;
                         new DLPropostaEngenharia().Atualizar(pAtua);
                         MessageBox.Show("Proposta Atualizada com Sucesso!");
                         LimparDadosProposta();

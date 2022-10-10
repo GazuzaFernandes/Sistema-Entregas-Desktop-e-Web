@@ -5,8 +5,7 @@ using FluentNHibernate.Mapping;
 namespace DAL.Mapping.Amostras
 {
     public class AmostraClienteMap : ClassMap<AmostraCliente>
-    {
-        #region  Pasta - Sistema Amostra -  Form Amostra Cliente
+    {        
         public AmostraClienteMap()
         {
             Id(p => p.AmostraId).GeneratedBy.Sequence("amostracliente_seq");
@@ -16,7 +15,6 @@ namespace DAL.Mapping.Amostras
             Map(p => p.Material);
             Map(p => p.StatusobraId);
             Table("amostracliente");
-        }
-        #endregion
+        }      
     }
 }

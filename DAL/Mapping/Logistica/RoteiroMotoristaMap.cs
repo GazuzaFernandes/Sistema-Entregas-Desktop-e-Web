@@ -10,17 +10,16 @@ using System.Threading.Tasks;
 namespace DAL.Mapping.Logistica
 {
   public  class RoteiroMotoristaMap : ClassMap<RoteiroMotorista>
-    {
-        #region Pasta - Sistema Logistica - Form Saida Estoque
+    {        
         public RoteiroMotoristaMap()
         {
-            Id(p => p.ControleId).GeneratedBy.Sequence("controle_seq");
+            Id(p => p.RoteiroId).GeneratedBy.Sequence("roteiromotorista_seq");
             Map(p => p.Proposta);
             Map(p => p.Obra);
             Map(p => p.DataEntrada);
             Map(p => p.Funcionario);
-            Table("controle");
+            Table("roteiromotorista");
         }
-        #endregion
+   
     }
 }

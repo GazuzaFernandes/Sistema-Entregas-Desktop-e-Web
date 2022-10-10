@@ -108,7 +108,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                         int.TryParse(txtIdObra.Text, out id);
                         if (id > 0)
                         {
-                            new DLRoteiroMotorista().Excluir(new RoteiroMotorista { ControleId = id });
+                            new DLRoteiroMotorista().Excluir(new RoteiroMotorista { RoteiroId = id });
                             MessageBox.Show("Iten deletado com sucesso!");
                             LimparInformacaoObra();
                             HabilitarBotao(false);
@@ -136,7 +136,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 var saidaRoteiro = dgvRoteiroMotorista.Rows[e.RowIndex].DataBoundItem as RoteiroMotorista;
                 if (saidaRoteiro != null)
                 {
-                    txtIdObra.Text = saidaRoteiro.ControleId.ToString();
+                    txtIdObra.Text = saidaRoteiro.RoteiroId.ToString();
                     txtProposta.Text = saidaRoteiro.Proposta;
                     txtObra.Text = saidaRoteiro.Obra;
                     txtFuncionario.Text = saidaRoteiro.Funcionario;
@@ -195,10 +195,10 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 }
                 var listaProposta = new DLItenControle().Listar();
                 //Filtrando a lista "listaProposta" por propostaid e codigomaterial
-                var prop = listaProposta.Where(ip => ip.ControleId == propostaid //por proppostaid
-                                && ip.ItencontroleId == itensControleId //por ItensPropostaId
+                var prop = listaProposta.Where(ip => ip.RoteiroId == propostaid //por proppostaid
+                                && ip.ItensRoteiroId == itensControleId //por ItensPropostaId
                                 ).FirstOrDefault();//Primeiro que encontrar
-                if (prop != null && prop.ItencontroleId > 0)
+                if (prop != null && prop.ItensRoteiroId > 0)
                 {
                     prop.Codigo = Convert.ToInt32(txtCodigoInfomacao.Text);
                     prop.Material = txtMaterialSaida.Text;
@@ -234,7 +234,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 if (id > 0)
                 {
                     var prop = new DLItenControle().ConsultarPorId(id);
-                    if (prop.ItencontroleId > 0)
+                    if (prop.ItensRoteiroId > 0)
                     {
                         new DLItenControle().Excluir(prop);
                         CarregarGridMaterial();
@@ -255,10 +255,10 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                var itensControle = dgvSaidaMaterial.Rows[e.RowIndex].DataBoundItem as ItenControle;
+                var itensControle = dgvSaidaMaterial.Rows[e.RowIndex].DataBoundItem as ItenRoteiro;
                 if (itensControle != null)
                 {
-                    txtSaidaId.Text = itensControle.ControleId.ToString();
+                    txtSaidaId.Text = itensControle.RoteiroId.ToString();
                     txtCodigoInfomacao.Text = itensControle.Codigo.ToString();
                     txtMaterialSaida.Text = itensControle.Material;
                     txtUndMedida.Text = itensControle.UndMedida;
@@ -283,7 +283,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                var lstitensproposta = new DLItenControle().Listar().Where(p => p.ControleId == Convert.ToInt32(txtIdObra.Text)).ToList();
+                var lstitensproposta = new DLItenControle().Listar().Where(p => p.RoteiroId == Convert.ToInt32(txtIdObra.Text)).ToList();
                 dgvSaidaMaterial.DataSource = null;
                 dgvSaidaMaterial.DataSource = lstitensproposta;
                 dgvSaidaMaterial.Refresh();
@@ -369,11 +369,11 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             return true;
         }
 
-        private ItenControle LerCampos()
+        private ItenRoteiro LerCampos()
         {
             try
             {
-                var iten = new ItenControle();
+                var iten = new ItenRoteiro();
                 int id = 0;
                 int.TryParse(txtSaidaId.Text, out id);
                 if (id == 0)
@@ -382,7 +382,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     iten.Material = txtMaterialSaida.Text;
                     iten.UndMedida = txtUndMedida.Text;
                     iten.QtdCaixas = Convert.ToDecimal(txtQuantidade.Text);               
-                    iten.ControleId = Convert.ToInt32(txtIdObra.Text);
+                    iten.RoteiroId = Convert.ToInt32(txtIdObra.Text);
                 }
                 return iten;
             }

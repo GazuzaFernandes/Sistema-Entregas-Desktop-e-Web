@@ -31,7 +31,7 @@ namespace Logistica.Sistema_do_Orçamento
         {
             try
             {
-                var listaProp = new DLProdutos().Listar();
+                var listaProp = new DLProdutosOrcamento().Listar();
                 CarregarGridProdutos();
             }
             catch (Exception ex)
@@ -69,7 +69,7 @@ namespace Logistica.Sistema_do_Orçamento
         {
             try
             {
-                var produtos = new Produtos();
+                var produtos = new ProdutosOrcamento();
                 produtos.ProdutoId = Convert.ToInt32(dgvValores.Rows[e.RowIndex].Cells[0].Value);
                 FrmCadastrarValores vaalores = new FrmCadastrarValores();
                 vaalores._produto = produtos;
@@ -92,7 +92,7 @@ namespace Logistica.Sistema_do_Orçamento
         {
             try
             {
-                var listarProdutos = new DLProdutos().Listar();
+                var listarProdutos = new DLProdutosOrcamento().Listar();
                 var pesquisa = txtPesquisar.Text;
 
                 listarProdutos = listarProdutos.Where(p => p.Produto.ToLower().Contains(pesquisa)).ToList();

@@ -3,19 +3,19 @@ using DAL.NHibertnate;
 
 namespace DAL.Repository.Financeiro
 {
-    public class DLMadeira : Repository<Madeira>
+    public class DLMadeiraFinanceiro : Repository<MadeiraFinanceiro>
     {
-        public List<PropostaViewModel> ListarMadeiraStatus()
+        public List<MadeiraFinanceiroViewModel> ListarMadeiraStatus()
         {
             try
             {
-                var lstmadeira = new List<PropostaViewModel>();
-                var listarmadeiras = new DLMadeira().Listar();
+                var lstmadeira = new List<MadeiraFinanceiroViewModel>();
+                var listarmadeiras = new DLMadeiraFinanceiro().Listar();
                 var listaStatus = new DLStatusobra().Listar();
 
                 var resultado = listarmadeiras
                .Join(listaStatus, madeira => madeira.StatusObraId, statuss => statuss.StatusObraId, (madeira, stattuss) => new { madeira, stattuss })
-                .Select(x => new PropostaViewModel()
+                .Select(x => new MadeiraFinanceiroViewModel()
                 {
                     IdMadeiras = x.madeira.IdMadeiras,
                     Madeiras = x.madeira.Madeiras,
@@ -48,12 +48,12 @@ namespace DAL.Repository.Financeiro
                 throw;
             }
         }
-        public class PropostaViewModel
+        public class MadeiraFinanceiroViewModel
         {
             public virtual int IdMadeiras { get; set; }
-            public virtual string Fabrica { get; set; }
-            public virtual string Madeiras { get; set; }
-            public virtual string UnidadeMedida { get; set; }
+            public virtual string? Fabrica { get; set; }
+            public virtual string? Madeiras { get; set; }
+            public virtual string? UnidadeMedida { get; set; }
             public virtual decimal Entrada { get; set; }
             public virtual decimal Total { get; set; }
             public string Status { get; set; }

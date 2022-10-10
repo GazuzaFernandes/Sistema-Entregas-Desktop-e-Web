@@ -10,17 +10,15 @@ using System.Threading.Tasks;
 namespace DAL.Mapping.Logistica
 {
    public class HistoricoMap : ClassMap<Historico>
-    {
-        #region  Pasta - Sistema Logistica -  Form Logistica
+    {     
         public HistoricoMap()
         {
             Id(p => p.HistoricoId).GeneratedBy.Sequence("historico_seq");
             Map(p => p.DataComentario);
-            Map(p => p.Comentario);
-           
+            Map(p => p.Comentario);           
             Map(p => p.PropostaId);         
             Table("historico");
         }
-        #endregion
+        
     }
 }

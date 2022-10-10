@@ -63,7 +63,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                     }
                     else
                     {
-                        var clieBranco = new Clientes();
+                        var clieBranco = new ClientesFInanceiro();
                         clieBranco.Nome = txtCliente.Text;
                         var idCliente = new DLClientes().Inserir(clieBranco);
                         MessageBox.Show(" Cliente " + idCliente + " Criado com Sucesso");
@@ -89,7 +89,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                     int.TryParse(txtClienteId.Text, out id);
                     if (id > 0)
                     {
-                        new DLClientes().Excluir(new Clientes { IdCliente = id });
+                        new DLClientes().Excluir(new ClientesFInanceiro { IdCliente = id });
                         MessageBox.Show("Cliente ou Empresa excluída com sucesso!");
                         CarregarGridCliente();
                         txtClienteId.Text = Convert.ToString(null);
@@ -115,7 +115,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         {
             try
             {
-                var cliente = dgvCliente.Rows[e.RowIndex].DataBoundItem as Clientes;
+                var cliente = dgvCliente.Rows[e.RowIndex].DataBoundItem as ClientesFInanceiro;
                 if (cliente != null)
                 {
                     txtClienteId.Text = cliente.IdCliente.ToString();

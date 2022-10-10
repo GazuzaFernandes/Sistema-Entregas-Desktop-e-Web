@@ -16,7 +16,7 @@ namespace Projeto.Logistica.Sistema_do_Orçamento
 {
     public partial class FrmCadastrarValores : Form
     {
-        internal Produtos _produto;
+        internal ProdutosOrcamento _produto;
         public FrmCadastrarValores()
         {
             InitializeComponent();
@@ -28,11 +28,11 @@ namespace Projeto.Logistica.Sistema_do_Orçamento
             {
                 HabilitarCampos(false);
                 if (_produto == null)
-                    _produto = new Produtos();
+                    _produto = new ProdutosOrcamento();
                 if (_produto.ProdutoId > 0)
                 {
                     HabilitarCampos(true);
-                    _produto = new DLProdutos().ConsultarPorId(_produto.ProdutoId);
+                    _produto = new DLProdutosOrcamento().ConsultarPorId(_produto.ProdutoId);
                     txtIdProduto.Text = _produto.ProdutoId.ToString();
                     txtFornecedor.Text = _produto.Fornecedor;
                     txtPreco.Text = _produto.Preco;
@@ -53,8 +53,8 @@ namespace Projeto.Logistica.Sistema_do_Orçamento
             try
             {
                 HabilitarCampos(true);
-                var produtos = new Produtos();
-                var id = new DLProdutos().Inserir(produtos);//inserir
+                var produtos = new ProdutosOrcamento();
+                var id = new DLProdutosOrcamento().Inserir(produtos);//inserir
                 txtIdProduto.Text = id.ToString();
                 BloquearGeradorId(false);
             }
@@ -75,7 +75,7 @@ namespace Projeto.Logistica.Sistema_do_Orçamento
 
         private void dgvDatas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            var datas = dgvData.Rows[e.RowIndex].DataBoundItem as DataProduto;
+            var datas = dgvData.Rows[e.RowIndex].DataBoundItem as DataProdutoOrcamento;
             if (datas != null)
             {
                 txtDataId.Text = datas.ProdutoId.ToString();
@@ -95,13 +95,13 @@ namespace Projeto.Logistica.Sistema_do_Orçamento
                     int.TryParse(txtIdProduto.Text, out id);
                     if (id > 0)
                     {
-                        var valorNovo = new DLProdutos().ConsultarPorId(id);
+                        var valorNovo = new DLProdutosOrcamento().ConsultarPorId(id);
                         valorNovo.Produto = txtProduto.Text;
                         valorNovo.Fornecedor = txtFornecedor.Text;
                         valorNovo.Preco = txtPreco.Text;
                         valorNovo.Rendimento = txtRendimento.Text;
                         valorNovo.Comentario = rtbComentario.Text;
-                        new DLProdutos().Atualizar(valorNovo);
+                        new DLProdutosOrcamento().Atualizar(valorNovo);
                         MessageBox.Show("Material atualizado com Sucesso ");
                         LimparCampos();
                         Close();
@@ -131,7 +131,7 @@ namespace Projeto.Logistica.Sistema_do_Orçamento
                 {
                     propostaid = Convert.ToInt32(txtIdProduto.Text);
                 }
-                var listarmadeira = new DLDataProduto().Listar();
+                var listarmadeira = new DLDataProdutoOrcamento().Listar();
                 //Filtrando a lista "listaProposta" por propostaid e codigomaterial
                 var prop = listarmadeira.Where(ip =>
                                 ip.ProdutoId == propostaid //por proppostaid
@@ -142,11 +142,11 @@ namespace Projeto.Logistica.Sistema_do_Orçamento
                     prop.DataId = Convert.ToInt32(txtDataId.Text);
                     prop.Data = dtpDataAtualizada.Value;
                     prop.Preco = txtPreco.Text;
-                    new DLDataProduto().Atualizar(prop);
+                    new DLDataProdutoOrcamento().Atualizar(prop);
                 }
                 else
                 {
-                    new DLDataProduto().Inserir(dataproduto);
+                    new DLDataProdutoOrcamento().Inserir(dataproduto);
                     MessageBox.Show("Data Cadastrado com Sucesso");
                 }                
                 CarregarGrid();
@@ -169,7 +169,7 @@ namespace Projeto.Logistica.Sistema_do_Orçamento
                     int.TryParse(txtDataId.Text, out id);
                     if (id > 0)
                     {
-                        new DLDataProduto().Excluir(new DataProduto { DataId = id });
+                        new DLDataProdutoOrcamento().Excluir(new DataProdutoOrcamento { DataId = id });
                         MessageBox.Show("Data excluída com sucesso!");
                         CarregarGrid();
                         LimparCampos();
@@ -199,7 +199,7 @@ namespace Projeto.Logistica.Sistema_do_Orçamento
                     int.TryParse(txtIdProduto.Text, out id);
                     if (id > 0)
                     {
-                        new DLProdutos().Excluir(new Produtos { ProdutoId = id });
+                        new DLProdutosOrcamento().Excluir(new ProdutosOrcamento { ProdutoId = id });
                         MessageBox.Show("Material excluído com sucesso!");
                         CarregarGrid();
                         LimparCampos();
@@ -228,7 +228,7 @@ namespace Projeto.Logistica.Sistema_do_Orçamento
         {
             try
             {
-                var listar = new DLDataProduto().Listar().Where(p => p.ProdutoId == Convert.ToInt32(txtIdProduto.Text)).ToList();
+                var listar = new DLDataProdutoOrcamento().Listar().Where(p => p.ProdutoId == Convert.ToInt32(txtIdProduto.Text)).ToList();
                 dgvData.DataSource = null;
                 dgvData.DataSource = listar.OrderByDescending(p => p.Data).ToList();
                 dgvData.Refresh();
@@ -254,11 +254,11 @@ namespace Projeto.Logistica.Sistema_do_Orçamento
             //Define a altura das linhas respectivas da Grid 
             objBlControleGrid.DefinirAlturaLinha(30);
         }
-        private DataProduto LerData()
+        private DataProdutoOrcamento LerData()
         {
             try
             {
-                var data = new DataProduto();
+                var data = new DataProdutoOrcamento();
                 int id = 0;
                 int.TryParse(txtDataId.Text, out id);
                 if (id == 0)

@@ -4,12 +4,11 @@ using FluentNHibernate.Mapping;
 
 namespace DAL.Mapping.Logistica
 {
-    public class PropostaMap : ClassMap<Proposta>
-    {
-        #region Pasta Sistema Logistica - Form Proposta
-        public PropostaMap()
+    public class DadosPropostaMap : ClassMap<DadosProposta>
+    {       
+        public DadosPropostaMap()
         {
-            Id(p => p.PropostaId).GeneratedBy.Sequence("proposta_seq");
+            Id(p => p.PropostaId).GeneratedBy.Sequence("dadosproposta_seq");
             Map(p => p.DataPrevista);
             Map(p => p.Fabrica);
             Map(p => p.DataPedido);
@@ -19,18 +18,16 @@ namespace DAL.Mapping.Logistica
             Map(p => p.Telefone);
             Map(p => p.PdRb);
             Map(p => p.PdVenda);
-            Map(p => p.Propostaa);
+            Map(p => p.Proposta);
             Map(p => p.Construtora);
             Map(p => p.Material);
-            Map(p => p.Obra);
-            Map(p => p.Comentario);
+            Map(p => p.Obra);      
             Map(p => p.DataEntrega);
             Map(p => p.RecebidoPor);
             Map(p => p.NotaFiscal);
             Map(p => p.Carreto);
-            Map(p => p.StatusobraId);
-            Table("proposta");
-        }
-        #endregion
+            Map(p => p.StatusObraId);
+            Table("dadosproposta");
+        }      
     }
 }

@@ -5,8 +5,7 @@ using FluentNHibernate.Mapping;
 namespace DAL.Mapping.Logistica
 {
     public class FerramentasMap : ClassMap<Ferramentas>
-    {
-        #region Pasta - Sistema Logistica - Form Ferramentas
+    {      
         public FerramentasMap()
         {
             Id(p => p.FerramentaId).GeneratedBy.Sequence("ferramentas_seq");
@@ -15,8 +14,8 @@ namespace DAL.Mapping.Logistica
             Map(p => p.Devolucao);
             Map(p => p.Material);
             Map(p => p.StatusobraId);
-            Table("Ferramentas");
+            Table("ferramentas");
         }
-        #endregion
+       
     }
 }

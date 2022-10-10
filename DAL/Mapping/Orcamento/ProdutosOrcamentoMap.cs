@@ -9,17 +9,17 @@ using System.Threading.Tasks;
 
 namespace DAL.Mapping.Orcamento
 {
-    public class ProdutosMap : ClassMap<Produtos>
+    public class ProdutosOrcamentoMap : ClassMap<ProdutosOrcamento>
     {
-        public ProdutosMap()
+        public ProdutosOrcamentoMap()
         {
-            Id(p => p.ProdutoId).GeneratedBy.Sequence("produtos_seq");
+            Id(p => p.ProdutoId).GeneratedBy.Sequence("produtosorcamento_seq");
             Map(p => p.Fornecedor);
             Map(p => p.Produto);
             Map(p => p.Preco);
             Map(p => p.Rendimento);
             Map(p => p.Comentario);
-            Table("produtos");
+            Table("produtosorcamento");
         }
     }
 }
