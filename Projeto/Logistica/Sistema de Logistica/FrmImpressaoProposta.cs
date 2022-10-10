@@ -52,24 +52,19 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         documento a ser impresso. A classe Graphis possui metodos para desenhar linhas, texto, curvas etc. A classe  
         */
         #endregion
-        private void printDocument1_PrintPage_1(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        private void FrmImpressaoProposta_Load(object sender, EventArgs e)
         {
-          
+
         }
 
-        private void printPreviewDialog1_Load(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void printPreviewControl1_Click(object sender, EventArgs e)
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             
         }
 
-        private void printPreviewDialog2_Load(object sender, EventArgs e)
+        private void printPreviewControl1_Click(object sender, EventArgs e)
         {
-
+          var oi =   label1.Text;
         }
     }
 }

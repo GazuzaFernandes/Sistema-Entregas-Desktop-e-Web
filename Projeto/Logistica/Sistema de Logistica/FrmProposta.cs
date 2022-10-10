@@ -2,6 +2,7 @@
 using DAL.Repository.Logistica;
 using DAL.Repository.SenhaRestauracao;
 using Logistica.Sistema_de_Logistica;
+using Microsoft.Reporting.NETCore;
 using Projeto.Logistica.Sistema_do_Financeiro;
 using System.Data;
 
@@ -180,6 +181,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             {
                 FrmImpressaoProposta impressao = new FrmImpressaoProposta();
                 impressao.Show();
+               
             }
             catch (Exception ex)
             {
@@ -494,9 +496,9 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     txtCodigoItensMaterial.Text = Convert.ToString(itensProposta.CodigoMaterial);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
         }
 
@@ -867,11 +869,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
         private void imprimir_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            string proposta = txtProposta.Text;      
-            Font tipoLetra = new Font("Arial", 16, FontStyle.Regular, GraphicsUnit.Pixel);
-            SolidBrush cor = new SolidBrush(Color.Black);
-            Point localizacaoFolha = new Point(50, 50);
-            e.Graphics.DrawString(proposta, tipoLetra, cor, localizacaoFolha);
+           
         }
     }
 }
