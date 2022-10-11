@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "..\DAL\DAL.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjetoWeb", "..\ProjetoWeb\ProjetoWeb.csproj", "{2EE47CF0-3A14-4CCE-9960-608D69A56D7E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restauracao", "..\Restauracao\Restauracao.csproj", "{12747B82-6455-4CD9-8A26-1E2CC41D2B61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2EE47CF0-3A14-4CCE-9960-608D69A56D7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EE47CF0-3A14-4CCE-9960-608D69A56D7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EE47CF0-3A14-4CCE-9960-608D69A56D7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12747B82-6455-4CD9-8A26-1E2CC41D2B61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12747B82-6455-4CD9-8A26-1E2CC41D2B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12747B82-6455-4CD9-8A26-1E2CC41D2B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12747B82-6455-4CD9-8A26-1E2CC41D2B61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
