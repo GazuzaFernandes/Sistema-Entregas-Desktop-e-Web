@@ -14,9 +14,9 @@ namespace DAL.Mapping.Logistica
             Map(p => p.Quantidade);
             Map(p => p.Preco);
             Map(p => p.Total);
-            Map(p => p.qtdcaixa);
+            Map(p => p.QtdCaixa);
             Map(p => p.UndMedida);            
-            Map(p => p.M2caixa);
+            Map(p => p.M2Caixa);
             Map(p => p.PropostaId);
             Map(p => p.CodigoMaterial);
             Table("itensproposta");

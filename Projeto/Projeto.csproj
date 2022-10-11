@@ -15,9 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Npgsql" Version="6.0.6" />
+    <PackageReference Include="Microsoft.ReportViewer.Common" Version="10.0.40219.1" />
+    <PackageReference Include="Npgsql" Version="6.0.7" />
     <PackageReference Include="ReportViewerCore.NETCore" Version="15.1.17" />
-    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.16" />
+    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.17" />
     <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
     <PackageReference Include="System.Text.Encoding.CodePages" Version="6.0.0" />
   </ItemGroup>
