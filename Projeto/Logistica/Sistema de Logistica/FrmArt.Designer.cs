@@ -88,7 +88,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1422, 735);
+            this.ClientSize = new System.Drawing.Size(1285, 697);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

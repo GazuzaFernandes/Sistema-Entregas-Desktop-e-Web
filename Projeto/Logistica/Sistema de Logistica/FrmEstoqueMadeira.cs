@@ -383,6 +383,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             btnLimparSaida.Enabled = habilitar;
             btnLimparEntrada.Enabled = habilitar;
             btnSalvar.Enabled = habilitar;
+            rtbSaida.Enabled = habilitar;
 
             #region Entrada Material          
             txtEspessuraEntrada.Enabled = habilitar;

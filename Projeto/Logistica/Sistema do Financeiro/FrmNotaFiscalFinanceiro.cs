@@ -365,6 +365,9 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
             bntLimparDados.Enabled = habilitar;
             btnPesquisarCliente.Enabled = habilitar;
             btnPesquisarMaterial.Enabled = habilitar;
+            btnDeletarMaterial.Enabled = habilitar;
+            txtCodigoCliente.Enabled = habilitar;
+
         }
 
         private void Bloquear(bool desabilitar)

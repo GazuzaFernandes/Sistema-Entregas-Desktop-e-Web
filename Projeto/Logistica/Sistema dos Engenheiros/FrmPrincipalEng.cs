@@ -68,7 +68,7 @@ namespace Logistica.Sistema_dos_Engenheiros
 
         private void btnProposta_Click(object sender, EventArgs e)
         {
-            FrmPrincipalEng principalEng = new FrmPrincipalEng();
+            FrmPropostaEng principalEng = new FrmPropostaEng();
             principalEng.Show();
             CarregarGrid();
         }

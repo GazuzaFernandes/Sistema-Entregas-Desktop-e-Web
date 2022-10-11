@@ -692,6 +692,12 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         }
         private void HabilitarCampos(bool Habilitar)
         {
+            dtpDataEntrega.Enabled = Habilitar;
+            dtpDataPedido.Enabled = Habilitar;
+            dtpDataPrevista.Enabled = Habilitar;
+            btnLimparComentario.Enabled = Habilitar;
+            btnDeletarComentario.Enabled = Habilitar;
+            dtpHistorico.Enabled = Habilitar;
             txtCodigoFabrica.Enabled = Habilitar;
             txtFormaPagamento.Enabled = Habilitar;
             txtEngResponsavel.Enabled = Habilitar;

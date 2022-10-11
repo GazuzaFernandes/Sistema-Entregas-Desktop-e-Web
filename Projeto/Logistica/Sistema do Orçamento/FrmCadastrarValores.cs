@@ -301,6 +301,7 @@ namespace Projeto.Logistica.Sistema_do_Orçamento
             btnSalvar.Enabled = habilitar;
             btnDeletar.Enabled = habilitar;
             btnLimpar.Enabled = habilitar;
+            rtbComentario.Enabled = habilitar;
         }
         #endregion
     }

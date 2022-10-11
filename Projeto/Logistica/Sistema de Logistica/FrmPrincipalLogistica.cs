@@ -534,5 +534,10 @@ namespace Logistica.Sistema_de_Logistica
         }
         #endregion
 
+        private void entradaEstoqueMadeirasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEstoqueMadeira madeira = new FrmEstoqueMadeira();
+            madeira.Show();
+        }
     }
 }

@@ -296,6 +296,12 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
             txtObra.Enabled = Habilitar;
             btnSalvarProposta.Enabled = Habilitar;
             btnDeletarProposta.Enabled = Habilitar;
+            cbComentado.Enabled = Habilitar;
+            rtbComentario.Enabled = Habilitar;
+            dtpDataIncluido.Enabled = Habilitar;
+            dtpHistorico.Enabled = Habilitar;
+            btnLimparComentario.Enabled = Habilitar;
+            btnDeletarComentario.Enabled = Habilitar;
         }
         private void LimparDadosProposta()
         {

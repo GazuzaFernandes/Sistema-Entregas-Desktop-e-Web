@@ -185,6 +185,7 @@ namespace Logistica.Sistema_de_Logistica
             this.label49 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
+            this.entradaEstoqueMadeirasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -211,7 +212,7 @@ namespace Logistica.Sistema_de_Logistica
             this.menuStrip1.Location = new System.Drawing.Point(6, 6);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(157, 156);
+            this.menuStrip1.Size = new System.Drawing.Size(157, 180);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -271,7 +272,8 @@ namespace Logistica.Sistema_de_Logistica
             // roteiroToolStripMenuItem
             // 
             this.roteiroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.msRoteiro});
+            this.msRoteiro,
+            this.entradaEstoqueMadeirasToolStripMenuItem});
             this.roteiroToolStripMenuItem.Name = "roteiroToolStripMenuItem";
             this.roteiroToolStripMenuItem.Size = new System.Drawing.Size(153, 35);
             this.roteiroToolStripMenuItem.Text = "Roteiro";
@@ -2057,6 +2059,13 @@ namespace Logistica.Sistema_de_Logistica
             this.label47.TabIndex = 75;
             this.label47.Text = "PRESILHAS DE ALUMINIO PARA DECK";
             // 
+            // entradaEstoqueMadeirasToolStripMenuItem
+            // 
+            this.entradaEstoqueMadeirasToolStripMenuItem.Name = "entradaEstoqueMadeirasToolStripMenuItem";
+            this.entradaEstoqueMadeirasToolStripMenuItem.Size = new System.Drawing.Size(375, 36);
+            this.entradaEstoqueMadeirasToolStripMenuItem.Text = "Entrada Estoque Madeiras";
+            this.entradaEstoqueMadeirasToolStripMenuItem.Click += new System.EventHandler(this.entradaEstoqueMadeirasToolStripMenuItem_Click);
+            // 
             // FrmPrincipalLogistica
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2259,5 +2268,6 @@ namespace Logistica.Sistema_de_Logistica
         private Label label83;
         private Label label82;
         private Label label81;
+        private ToolStripMenuItem entradaEstoqueMadeirasToolStripMenuItem;
     }
 }
