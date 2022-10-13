@@ -1,6 +1,8 @@
 ﻿
 using DAL.Entities.Amostras;
+using DAL.Entities.Financeiro;
 using DAL.Repository.Amostras;
+using DAL.Repository.Financeiro;
 
 namespace Projeto.Logistica.Sistema_de_Amostras
 {
@@ -15,11 +17,11 @@ namespace Projeto.Logistica.Sistema_de_Amostras
         private void FrmAmostra_Load(object sender, EventArgs e)
         {
             try
-            {               
+            {
                 if (_amostracliente == null)
                     _amostracliente = new AmostraCliente();
                 if (_amostracliente.AmostraId > 0)
-                {                   
+                {
                     _amostracliente = new DLAmostraCliente().ConsultarPorId(_amostracliente.AmostraId);
                     txtAmostraId.Text = _amostracliente.AmostraId.ToString();
                     dtpDataEntrega.Value = _amostracliente.DataEntrega;
@@ -43,7 +45,7 @@ namespace Projeto.Logistica.Sistema_de_Amostras
                                 rbCancelado.Checked = true;
                             }
                             break;
-                    }                    
+                    }
                 }
                 else
                 {
@@ -60,6 +62,7 @@ namespace Projeto.Logistica.Sistema_de_Amostras
         {
             try
             {
+
                 bool camposSaoValidos = ValidarCampos();
                 if (camposSaoValidos == true)
                 {
@@ -68,6 +71,7 @@ namespace Projeto.Logistica.Sistema_de_Amostras
                     if (id > 0)
                     {
                         var atualizar = new DLAmostraCliente().ConsultarPorId(id);
+                        atualizar.AmostraId = Convert.ToInt32(txtAmostraId.Text);
                         atualizar.DataEntrega = dtpDataEntrega.Value;
                         atualizar.Construtora = txtConstrutora.Text;
                         atualizar.Obra = txtObra.Text;
@@ -79,11 +83,28 @@ namespace Projeto.Logistica.Sistema_de_Amostras
                         else if (rbCancelado.Checked == true)
                             atualizar.StatusobraId = 4;
                         new DLAmostraCliente().Atualizar(atualizar);
-                        MessageBox.Show("Amostra Atualizada com Sucesso!");
-                        LimparAmostra();
+                        MessageBox.Show("Edereço atualizado com sucesso");
                     }
-                    Close();
+                    else
+                    {
+                        var novo = new AmostraCliente();                        
+                        novo.Construtora = txtConstrutora.Text;
+                        novo.DataEntrega = dtpDataEntrega.Value;
+                        novo.Obra = txtObra.Text;
+                        novo.Material = rtbComentario.Text;
+                        if (rbPendente.Checked == true)
+                            novo.StatusobraId = 2;
+                        else if (rbFinalizado.Checked == true)
+                            novo.StatusobraId = 3;
+                        else if (rbCancelado.Checked == true)
+                            novo.StatusobraId = 4;
+                        var idAmostra = new DLAmostraCliente().Inserir(novo);
+                        MessageBox.Show(" Entrega de amostra " + idAmostra + " Criado com Sucesso");
+                    }
                 }
+                LimparAmostra();
+                Close();
+
             }
             catch (Exception ex)
             {

@@ -48,7 +48,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     txtPdRb.Text = _proposta.PdRb;
                     txtPdVenda.Text = _proposta.PdVenda;
                     txtProposta.Text = _proposta.Proposta;
-                    txtEmpresa.Text = _proposta.Construtora;
+                    txtCliente.Text = _proposta.Construtora;
                     txtObra.Text = _proposta.Obra;
                     dtpDataEntrega.Value = _proposta.DataEntrega;
                     txtRecebido.Text = _proposta.RecebidoPor;
@@ -192,7 +192,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                         Material = dgvitensProposta.Rows[i].Cells[1].Value.ToString(),
                         UndMedida = dgvitensProposta.Rows[i].Cells[2].Value.ToString(),
                         Quantidade = Convert.ToDecimal(dgvitensProposta.Rows[i].Cells[4].Value.ToString()),
-                        M2Caixa = Convert.ToDecimal(dgvitensProposta.Rows[i].Cells[6].Value.ToString()),
+                        QtdCaixa = Convert.ToDecimal(dgvitensProposta.Rows[i].Cells[5].Value.ToString()),
                     });
                 }
                 itensProposta.Name = "DsItensProposta";
@@ -217,7 +217,9 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 #endregion
 
                 FrmImpressaoProposta frmImpressao = new FrmImpressaoProposta
-                    (dtpDataEntrega.Value, txtProposta.Text, txtEmpresa.Text, txtObra.Text, itensProposta, txtNotaFiscal.Text, historico);
+                    (dtpDataEntrega.Value, txtProposta.Text, txtEmpresa.Text, 
+                    txtObra.Text, itensProposta, txtNotaFiscal.Text, historico);
+
                 frmImpressao.reportViewer1.LocalReport.DataSources.Clear();
                 frmImpressao.reportViewer1.LocalReport.DataSources.Add(itensProposta);
                 frmImpressao.reportViewer1.LocalReport.DataSources.Add(historico);
@@ -673,14 +675,17 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                dgvitensProposta.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 16F, GraphicsUnit.Pixel);
+                dgvitensProposta.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 19F, GraphicsUnit.Pixel);
                 var objBlControleGrid = new ControleGrid(dgvitensProposta);
                 //Define quais colunas serão visíveis
-                objBlControleGrid.DefinirVisibilidade(new List<string>() { "Material", "UndMedida", "Quantidade", "Preco", "M2NotaFiscal", "ObsMaterial", "Total", });
+                objBlControleGrid.DefinirVisibilidade(new List<string>()
+                { "Material", "UndMedida", "Quantidade", "Preco", "QtdCaixa", "ObsMaterial", "Total", });
                 //Define quais os cabeçalhos respectivos das colunas 
-                objBlControleGrid.DefinirCabecalhos(new List<string>() { "Material", "Und Medida", "Quantidade", "Valor", "Qtd Caixa", "Obs Material", "Total" });
+                objBlControleGrid.DefinirCabecalhos(new List<string>() 
+                { "Material", "Und Medida", "Qtd", "Valor", "Qtd Caixa", "Obs Material", "Total" });
                 //Define quais as larguras respectivas das colunas 
-                objBlControleGrid.DefinirLarguras(new List<int>() { 51, 5, 8, 7, 5, 10, 10 }, dgvitensProposta.Width - 15); //O total tem que ficar em 100% 
+                objBlControleGrid.DefinirLarguras(new List<int>() 
+                { 41, 10, 8, 7, 5, 15, 10 }, dgvitensProposta.Width - 15); //O total tem que ficar em 100% 
                 //Define quais os alinhamentos respectivos do componentes das colunas 
                 objBlControleGrid.DefinirAlinhamento(new List<string>() { "centro", "centro", "centro", "centro", "centro", "centro", "centro", });
                 //Define a altura das linhas respectivas da Grid 
@@ -802,12 +807,13 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 txtItensPropostaId.Text = Convert.ToString(null);
                 txtCodigoItensMaterial.Text = Convert.ToString(null);
                 txtMaterial.Text = Convert.ToString(null);
-                txtQuantidade.Text = Convert.ToString(1);
+                txtQuantidade.Text = Convert.ToString(0);
                 txtPreco.Text = Convert.ToString(0);
                 txtQtdUndCaixa.Text = Convert.ToString(1);
                 txtUndMedida.Text = Convert.ToString("m²");
-                txtQtdCaixas.Text = Convert.ToString(1);
+                txtQtdCaixas.Text = Convert.ToString(0);
                 rtbObservacao.Text = Convert.ToString(null);
+                CarregarGridItensProposta();
             }
             catch (Exception ex)
             {

@@ -116,7 +116,7 @@ namespace Logistica.Sistema_de_Amostras
         }
         private void MontarGridAmostra(DataGridView dvgAmostra)
         {
-            dvgAmostra.DefaultCellStyle.Font = new Font("Calibri", 16F, GraphicsUnit.Pixel);
+            dvgAmostra.DefaultCellStyle.Font = new Font("Calibri", 20F, GraphicsUnit.Pixel);
             var objBlControleGrid = new ControleGrid(dvgAmostra);
             //Define quais colunas serão visíveis
             objBlControleGrid.DefinirVisibilidade(new List<string>() { "Construtora", "DataEntrega", "Obra", });

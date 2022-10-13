@@ -39,6 +39,7 @@ namespace Logistica.Sistema_de_Logistica
             this.msArt = new System.Windows.Forms.ToolStripMenuItem();
             this.roteiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msRoteiro = new System.Windows.Forms.ToolStripMenuItem();
+            this.entradaEstoqueMadeirasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -185,7 +186,6 @@ namespace Logistica.Sistema_de_Logistica
             this.label49 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
-            this.entradaEstoqueMadeirasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -212,7 +212,7 @@ namespace Logistica.Sistema_de_Logistica
             this.menuStrip1.Location = new System.Drawing.Point(6, 6);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(157, 180);
+            this.menuStrip1.Size = new System.Drawing.Size(157, 156);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -285,6 +285,13 @@ namespace Logistica.Sistema_de_Logistica
             this.msRoteiro.Text = "Saida do Roteiro Motorista";
             this.msRoteiro.Click += new System.EventHandler(this.msRoteiro_Click);
             // 
+            // entradaEstoqueMadeirasToolStripMenuItem
+            // 
+            this.entradaEstoqueMadeirasToolStripMenuItem.Name = "entradaEstoqueMadeirasToolStripMenuItem";
+            this.entradaEstoqueMadeirasToolStripMenuItem.Size = new System.Drawing.Size(375, 36);
+            this.entradaEstoqueMadeirasToolStripMenuItem.Text = "Entrada Estoque Madeiras";
+            this.entradaEstoqueMadeirasToolStripMenuItem.Click += new System.EventHandler(this.entradaEstoqueMadeirasToolStripMenuItem_Click);
+            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -344,7 +351,7 @@ namespace Logistica.Sistema_de_Logistica
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(998, 118);
+            this.label2.Location = new System.Drawing.Point(1003, 53);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 28);
             this.label2.TabIndex = 9;
@@ -366,7 +373,7 @@ namespace Logistica.Sistema_de_Logistica
             this.lbMaterialSp.AutoSize = true;
             this.lbMaterialSp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbMaterialSp.ForeColor = System.Drawing.Color.Blue;
-            this.lbMaterialSp.Location = new System.Drawing.Point(998, 53);
+            this.lbMaterialSp.Location = new System.Drawing.Point(1003, 128);
             this.lbMaterialSp.Name = "lbMaterialSp";
             this.lbMaterialSp.Size = new System.Drawing.Size(143, 28);
             this.lbMaterialSp.TabIndex = 9;
@@ -424,26 +431,26 @@ namespace Logistica.Sistema_de_Logistica
             // 
             this.cbPendente.AutoSize = true;
             this.cbPendente.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbPendente.ForeColor = System.Drawing.Color.Yellow;
+            this.cbPendente.ForeColor = System.Drawing.Color.Blue;
             this.cbPendente.Location = new System.Drawing.Point(998, 84);
             this.cbPendente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbPendente.Name = "cbPendente";
-            this.cbPendente.Size = new System.Drawing.Size(162, 42);
+            this.cbPendente.Size = new System.Drawing.Size(157, 42);
             this.cbPendente.TabIndex = 7;
-            this.cbPendente.Text = "Pendente";
+            this.cbPendente.Text = "Imediato";
             this.cbPendente.UseVisualStyleBackColor = true;
             // 
             // cbImediato
             // 
             this.cbImediato.AutoSize = true;
             this.cbImediato.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbImediato.ForeColor = System.Drawing.Color.Blue;
+            this.cbImediato.ForeColor = System.Drawing.Color.Yellow;
             this.cbImediato.Location = new System.Drawing.Point(1003, 10);
             this.cbImediato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbImediato.Name = "cbImediato";
-            this.cbImediato.Size = new System.Drawing.Size(157, 42);
+            this.cbImediato.Size = new System.Drawing.Size(162, 42);
             this.cbImediato.TabIndex = 7;
-            this.cbImediato.Text = "Imediato";
+            this.cbImediato.Text = "Pendente";
             this.cbImediato.UseVisualStyleBackColor = true;
             // 
             // rbEndereco
@@ -624,6 +631,7 @@ namespace Logistica.Sistema_de_Logistica
             this.dgvPrincipal.Name = "dgvPrincipal";
             this.dgvPrincipal.ReadOnly = true;
             this.dgvPrincipal.RowHeadersWidth = 51;
+            this.dgvPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPrincipal.Size = new System.Drawing.Size(1681, 806);
             this.dgvPrincipal.TabIndex = 0;
             this.dgvPrincipal.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrincipal_CellDoubleClick);
@@ -2058,13 +2066,6 @@ namespace Logistica.Sistema_de_Logistica
             this.label47.Size = new System.Drawing.Size(446, 32);
             this.label47.TabIndex = 75;
             this.label47.Text = "PRESILHAS DE ALUMINIO PARA DECK";
-            // 
-            // entradaEstoqueMadeirasToolStripMenuItem
-            // 
-            this.entradaEstoqueMadeirasToolStripMenuItem.Name = "entradaEstoqueMadeirasToolStripMenuItem";
-            this.entradaEstoqueMadeirasToolStripMenuItem.Size = new System.Drawing.Size(375, 36);
-            this.entradaEstoqueMadeirasToolStripMenuItem.Text = "Entrada Estoque Madeiras";
-            this.entradaEstoqueMadeirasToolStripMenuItem.Click += new System.EventHandler(this.entradaEstoqueMadeirasToolStripMenuItem_Click);
             // 
             // FrmPrincipalLogistica
             // 

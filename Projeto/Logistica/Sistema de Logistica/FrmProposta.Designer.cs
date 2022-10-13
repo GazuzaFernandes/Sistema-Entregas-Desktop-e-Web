@@ -821,9 +821,10 @@
             // 
             // rtbMaterial
             // 
-            this.rtbMaterial.Location = new System.Drawing.Point(675, 229);
+            this.rtbMaterial.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rtbMaterial.Location = new System.Drawing.Point(666, 194);
             this.rtbMaterial.Name = "rtbMaterial";
-            this.rtbMaterial.Size = new System.Drawing.Size(589, 157);
+            this.rtbMaterial.Size = new System.Drawing.Size(607, 193);
             this.rtbMaterial.TabIndex = 18;
             this.rtbMaterial.Text = "";
             // 
@@ -831,7 +832,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(675, 195);
+            this.label26.Location = new System.Drawing.Point(666, 160);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(222, 31);
             this.label26.TabIndex = 17;
@@ -839,9 +840,9 @@
             // 
             // rtbObservacao
             // 
-            this.rtbObservacao.Location = new System.Drawing.Point(42, 229);
+            this.rtbObservacao.Location = new System.Drawing.Point(28, 192);
             this.rtbObservacao.Name = "rtbObservacao";
-            this.rtbObservacao.Size = new System.Drawing.Size(401, 157);
+            this.rtbObservacao.Size = new System.Drawing.Size(401, 195);
             this.rtbObservacao.TabIndex = 18;
             this.rtbObservacao.Text = "";
             // 
@@ -849,7 +850,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(42, 195);
+            this.label25.Location = new System.Drawing.Point(28, 158);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(144, 31);
             this.label25.TabIndex = 17;
@@ -915,6 +916,7 @@
             // txtQtdCaixas
             // 
             this.txtQtdCaixas.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtQtdCaixas.Enabled = false;
             this.txtQtdCaixas.Location = new System.Drawing.Point(897, 99);
             this.txtQtdCaixas.Name = "txtQtdCaixas";
             this.txtQtdCaixas.Size = new System.Drawing.Size(106, 38);
@@ -994,7 +996,7 @@
             // 
             this.txtItensPropostaId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtItensPropostaId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtItensPropostaId.Location = new System.Drawing.Point(1355, 349);
+            this.txtItensPropostaId.Location = new System.Drawing.Point(1367, 393);
             this.txtItensPropostaId.Name = "txtItensPropostaId";
             this.txtItensPropostaId.Size = new System.Drawing.Size(62, 38);
             this.txtItensPropostaId.TabIndex = 14;

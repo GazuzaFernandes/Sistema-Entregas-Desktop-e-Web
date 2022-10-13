@@ -1,6 +1,4 @@
-﻿
-using DAL.Entities.Logistica;
-using Microsoft.Reporting.WinForms;
+﻿using Microsoft.Reporting.WinForms;
 
 
 namespace Projeto.Logistica.Sistema_de_Logistica
@@ -14,13 +12,17 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             {
                 InitializeComponent();
                 reportViewer1.LocalReport.DataSources.Clear();
+
                 reportViewer1.LocalReport.ReportEmbeddedResource = "Projeto.Impressao.rdlc";
+
                 ReportParameter[] p = new ReportParameter[5];
+
                 p[0] = new ReportParameter("Proposta", Proposta);
-                p[1] = new ReportParameter("Cliente", Cliente);
-                p[2] = new ReportParameter("Obra", Obra);
-                p[3] = new ReportParameter("NotaFiscal", NotaFiscal);
-                p[4] = new ReportParameter("DataEntrega", DataEntrega.ToString());             
+                p[1] = new ReportParameter("DataEntrega", DataEntrega.ToString());
+                p[2] = new ReportParameter("Cliente", Cliente);
+                p[3] = new ReportParameter("Obra", Obra);
+                p[4] = new ReportParameter("NotaFiscal", NotaFiscal);
+
                 reportViewer1.LocalReport.SetParameters(p);
                 reportViewer1.LocalReport.DataSources.Add(itensProposta);
                 reportViewer1.LocalReport.DataSources.Add(historico);
@@ -30,9 +32,9 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
-            }          
+            }
         }
-       
+
         private void FrmImpressaoProposta_Load(object sender, EventArgs e)
         {
             this.reportViewer1.RefreshReport();

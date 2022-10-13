@@ -98,6 +98,7 @@
             this.Name = "FrmArt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Como montar Art.";
+            this.Load += new System.EventHandler(this.FrmArt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

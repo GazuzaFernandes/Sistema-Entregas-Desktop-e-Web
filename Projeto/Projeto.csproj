@@ -11,12 +11,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Logistica\Sistema de Logistica\Impressao.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="fa1e9ad2-31c5-4aae-9885-75b57e26db21.ico" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.ReportViewer.Common" Version="10.0.40219.1" />
-    <PackageReference Include="Npgsql" Version="6.0.7" />
+    <EmbeddedResource Include="Logistica\Sistema de Logistica\Impressao.rdlc">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="4.1.4" />
     <PackageReference Include="ReportViewerCore.NETCore" Version="15.1.17" />
     <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.17" />
     <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
@@ -25,12 +34,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Logistica\Sistema de Logistica\Impressao.rdlc">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>

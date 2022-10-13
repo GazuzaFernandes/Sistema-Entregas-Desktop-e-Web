@@ -3,6 +3,7 @@ using Logistica.Sistema_de_Logistica;
 using Logistica.Sistema_do_Financeiro;
 using Logistica.Sistema_do_Orçamento;
 using Logistica.Sistema_dos_Engenheiros;
+using static Logistica.BackupAutomatico.SystemRetaguarda;
 
 namespace Projeto
 {
@@ -147,15 +148,14 @@ namespace Projeto
         {
             try
             {
-                /*  FunctionsDataBase.BackupDatabase(
-                                                    "IP DA MAQUINA",
+                  FunctionsDataBase.BackupDatabase(
+                                                    "192.168.0.202",
                                                     "5432",
                                                     "postgres",
                                                     "q1s2e3f4t5",
-                                                    "PASTA",
-                                                    caminho de onde vai ser salvo
-                                                 $@"F:\_LOGISTICA\Restauração\SistemaControle\{DateTime.Now.ToShortDateString().Replace(":", "").Replace("/", "_").Replace(" ", "")}\",
-                                                    @"SistemaControle"); */
+                                                    "Restaurar",                                             
+                                                 $@"F:\_LOGISTICA\Restaurar\Rb\{DateTime.Now.ToShortDateString().Replace(":", "").Replace("/", "_").Replace(" ", "")}\",
+                                                   @"RbPisos"); 
             }
             catch (Exception ex)
             {

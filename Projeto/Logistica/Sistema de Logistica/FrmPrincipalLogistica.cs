@@ -1,4 +1,6 @@
 ﻿
+using DAL.Entities.Amostras;
+using DAL.Entities.Logistica;
 using DAL.Repository.Logistica;
 using Projeto.Logistica.Sistema_de_Logistica;
 using System;
@@ -225,16 +227,16 @@ namespace Logistica.Sistema_de_Logistica
         }
         private void MontarGridProposta(DataGridView dgvPrincipal)
         {
-            dgvPrincipal.DefaultCellStyle.Font = new Font("Calibri", 16F, GraphicsUnit.Pixel);
+            dgvPrincipal.DefaultCellStyle.Font = new Font("Calibri", 20F, GraphicsUnit.Pixel);
             var objBlControleGrid = new ControleGrid(dgvPrincipal);
             //Define quais colunas serão visíveis
             objBlControleGrid.DefinirVisibilidade(new List<string>()
-            { "dataprevista", "fabrica", "engresp", "pdrb", "pdvenda", "propostaa", "construtora", "obra", "notafiscal", });
+            { "DataPrevista", "Fabrica", "EngResp", "PdRb", "PdVenda", "Proposta", "Construtora", "Obra", "NotaFiscal", });
             //Define quais os cabeçalhos respectivos das colunas 
             objBlControleGrid.DefinirCabecalhos(new List<string>()
             { "DATA PREVISTA", "FABRICA", "RESP.", "PD RB", "PD VENDA", "PROPOSTA", "CLIENTE", "OBRA", "NF", });
             //Define quais as larguras respectivas das colunas 
-            objBlControleGrid.DefinirLarguras(new List<int>() { 9, 9, 7, 8, 8, 8, 12, 27, 7, }, dgvPrincipal.Width - 15); //O total tem que ficar em 100% 
+            objBlControleGrid.DefinirLarguras(new List<int>() { 9, 9, 7, 8, 8, 8, 12, 27,10, }, dgvPrincipal.Width - 15); //O total tem que ficar em 100% 
             objBlControleGrid.DefinirAlinhamento(new List<string>()
             { "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", });
             //Define a altura das linhas respectivas da Grid 
@@ -498,20 +500,32 @@ namespace Logistica.Sistema_de_Logistica
         #region Apenas Grid
         private void dgvPrincipal_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                var prop = new DadosProposta();
+                prop.PropostaId = Convert.ToInt32(dgvPrincipal.Rows[e.RowIndex].Cells[0].Value);
+                FrmProposta proposta = new FrmProposta();
+                proposta._proposta = prop;
+                proposta.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro:" + ex.Message);
+            }
         }
 
         private void dgvPrincipal_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             for(int i =0; i < dgvPrincipal.Rows.Count; i++)
             {
-                var valor = Convert.ToString(dgvPrincipal.Rows[i].Cells[10].Value);
+                var valor = Convert.ToString(dgvPrincipal.Rows[i].Cells[19].Value);
                 switch (valor)
                 {
                     case "Imediato":
-                        dgvPrincipal.Rows[i].DefaultCellStyle.BackColor = Color.Lime;
+                        dgvPrincipal.Rows[i].DefaultCellStyle.BackColor = Color.Yellow;
                         break;
                     case "Pendente":
-                        dgvPrincipal.Rows[i].DefaultCellStyle.BackColor = Color.Red; break;
+                        dgvPrincipal.Rows[i].DefaultCellStyle.BackColor = Color.LightCyan; break;
                     case "Finalizado":
                         dgvPrincipal.Rows[i].DefaultCellStyle.BackColor = Color.Lime;
                         break;
