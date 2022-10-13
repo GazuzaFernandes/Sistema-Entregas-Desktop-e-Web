@@ -4,7 +4,7 @@ using DAL.NHibertnate;
 
 namespace DAL.Repository.Financeiro
 {
-    public class DLClientes :Repository<ClientesFInanceiro>
+    public class DLCLienteFinanceiro :Repository<ClientesFinanceiro>
     {
     }
 }

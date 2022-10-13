@@ -25,8 +25,15 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
 
         private void FrmClienteFinanceiro_Load(object sender, EventArgs e)
         {
-            CarregarGridCliente();
-            BloquearInserir(false);
+            try
+            {
+                CarregarGridCliente();
+                BloquearInserir(false);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro " + ex.Message);                
+            }          
         }    
 
         private void btnInserir_Click(object sender, EventArgs e)
@@ -55,17 +62,17 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                     int.TryParse(txtClienteId.Text, out id);
                     if (id > 0)
                     {
-                        var clieAtualizar = new DLClientes().ConsultarPorId(id);
+                        var clieAtualizar = new DLCLienteFinanceiro().ConsultarPorId(id);
                         clieAtualizar.IdCliente = Convert.ToInt32(txtClienteId.Text);
                         clieAtualizar.Nome = txtCliente.Text;
-                        new DLClientes().Atualizar(clieAtualizar);
+                        new DLCLienteFinanceiro().Atualizar(clieAtualizar);
                         MessageBox.Show("Cliente atualizado com Sucesso ");
                     }
                     else
                     {
-                        var clieBranco = new ClientesFInanceiro();
+                        var clieBranco = new ClientesFinanceiro();
                         clieBranco.Nome = txtCliente.Text;
-                        var idCliente = new DLClientes().Inserir(clieBranco);
+                        var idCliente = new DLCLienteFinanceiro().Inserir(clieBranco);
                         MessageBox.Show(" Cliente " + idCliente + " Criado com Sucesso");
                     }
                 }
@@ -89,7 +96,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                     int.TryParse(txtClienteId.Text, out id);
                     if (id > 0)
                     {
-                        new DLClientes().Excluir(new ClientesFInanceiro { IdCliente = id });
+                        new DLCLienteFinanceiro().Excluir(new ClientesFinanceiro { IdCliente = id });
                         MessageBox.Show("Cliente ou Empresa excluída com sucesso!");
                         CarregarGridCliente();
                         txtClienteId.Text = Convert.ToString(null);
@@ -115,7 +122,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         {
             try
             {
-                var cliente = dgvCliente.Rows[e.RowIndex].DataBoundItem as ClientesFInanceiro;
+                var cliente = dgvCliente.Rows[e.RowIndex].DataBoundItem as ClientesFinanceiro;
                 if (cliente != null)
                 {
                     txtClienteId.Text = cliente.IdCliente.ToString();
@@ -141,7 +148,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         {
             try
             {
-                var listarCliente = new DLClientes().Listar();
+                var listarCliente = new DLCLienteFinanceiro().Listar();
                 if (isPesquisa) //isPesquisa == true
                 {
                     var pesquisa = txtCliente.Text.ToLower();

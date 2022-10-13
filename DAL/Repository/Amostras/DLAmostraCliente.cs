@@ -34,13 +34,11 @@ namespace DAL.Repository.Amostras
                     var amoclie = new AmostraclienteViewModel();
 
                     amoclie.amostraid = amostracliente.AmostraId;
-                    amoclie.construtora = amostracliente.Construtora;
-                    amoclie.dataentrega = amostracliente.DataEntrega;
-                    amoclie.obra = amostracliente.Obra;
-                    amoclie.material = amostracliente.Material;
-
+                    amoclie.Construtora = amostracliente.Construtora;
+                    amoclie.DataEntrega = amostracliente.DataEntrega;
+                    amoclie.Obra = amostracliente.Obra;
+                    amoclie.Material = amostracliente.Material;
                     amoclie.Status = amostracliente.Descricao;
-
                     switch (amoclie.Status)
                     {
                         case "Pedente":
@@ -68,11 +66,11 @@ namespace DAL.Repository.Amostras
         public class AmostraclienteViewModel
         {
             public virtual int amostraid { get; set; }
-            public virtual string? construtora { get; set; }
-            public virtual DateTime dataentrega { get; set; }
-            public virtual string? obra { get; set; }
-            public virtual int statusobra { get; set; }
-            public virtual string? material { get; set; }
+            public virtual string? Construtora { get; set; }
+            public virtual DateTime DataEntrega { get; set; }
+            public virtual string? Obra { get; set; }
+            public virtual int StatusObra { get; set; }
+            public virtual string? Material { get; set; }
             public virtual int OrdenacaoStatus { get; set; }
             public string? Status { get; set; }
 

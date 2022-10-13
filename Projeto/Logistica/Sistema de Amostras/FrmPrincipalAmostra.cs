@@ -63,8 +63,11 @@ namespace Logistica.Sistema_de_Amostras
         {
             try
             {
-                var prop = new AmostraCliente();
-                prop.AmostraId = Convert.ToInt32(dvgAmostra.Rows[e.RowIndex].Cells[0].Value);
+                var amos = new AmostraCliente();
+                amos.AmostraId = Convert.ToInt32(dvgAmostra.Rows[e.RowIndex].Cells[0].Value);
+                FrmAmostra amostra = new FrmAmostra();
+                amostra._amostracliente = amos;
+                amostra.ShowDialog();                
                 CarregarGridAmostras();
             }
             catch (Exception ex)
@@ -92,7 +95,7 @@ namespace Logistica.Sistema_de_Amostras
         {
             try
             {
-                var listaAmostra = new DLAmostraCliente().Listar();
+                var listaAmostra = new DLAmostraCliente().ListarAmostraclienteStatus();
                 if (isPesquisa) //isPesquisa == true
                 {
                     var pesquisa = txtPesquisar.Text.ToLower();
@@ -116,7 +119,7 @@ namespace Logistica.Sistema_de_Amostras
             dvgAmostra.DefaultCellStyle.Font = new Font("Calibri", 16F, GraphicsUnit.Pixel);
             var objBlControleGrid = new ControleGrid(dvgAmostra);
             //Define quais colunas serão visíveis
-            objBlControleGrid.DefinirVisibilidade(new List<string>() { "construtora", "dataentrega", "obra", });
+            objBlControleGrid.DefinirVisibilidade(new List<string>() { "Construtora", "DataEntrega", "Obra", });
             //Define quais os cabeçalhos respectivos das colunas 
             objBlControleGrid.DefinirCabecalhos(new List<string>() { "Cliente / Arqt", "Data da Entrega", "Endereço", });
             //Define quais as larguras respectivas das colunas 

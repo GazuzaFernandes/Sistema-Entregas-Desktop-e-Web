@@ -4,9 +4,9 @@ using FluentNHibernate.Mapping;
 
 namespace DAL.Mapping.Financeiro
 {
-    public class ClientesFInanceiroMap : ClassMap<ClientesFInanceiro>
+    public class ClientesFinanceiroMap : ClassMap<ClientesFinanceiro>
     {
-        public ClientesFInanceiroMap()
+        public ClientesFinanceiroMap()
         {
             Id(p => p.IdCliente).GeneratedBy.Sequence("clientefinanceiro_seq");
             Map(p => p.Nome);                  
