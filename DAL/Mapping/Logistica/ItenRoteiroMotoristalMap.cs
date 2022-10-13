@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Mapping.Logistica
 {
-    public class ItenControleMap : ClassMap<ItenRoteiro>
+    public class ItenControleMap : ClassMap<ItenRoteiroMotorista>
     {        
         public ItenControleMap()
         {

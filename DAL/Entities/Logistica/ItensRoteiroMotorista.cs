@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Entities.Logistica
 {
-    public class ItenRoteiro
+    public class ItenRoteiroMotorista
     {
         public virtual int ItensRoteiroId { get; set; }
         public virtual int Codigo { get; set; }

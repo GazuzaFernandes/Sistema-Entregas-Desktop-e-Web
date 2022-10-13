@@ -255,7 +255,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                var itensControle = dgvSaidaMaterial.Rows[e.RowIndex].DataBoundItem as ItenRoteiro;
+                var itensControle = dgvSaidaMaterial.Rows[e.RowIndex].DataBoundItem as ItenRoteiroMotorista;
                 if (itensControle != null)
                 {
                     txtSaidaId.Text = itensControle.RoteiroId.ToString();
@@ -369,11 +369,11 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             return true;
         }
 
-        private ItenRoteiro LerCampos()
+        private ItenRoteiroMotorista LerCampos()
         {
             try
             {
-                var iten = new ItenRoteiro();
+                var iten = new ItenRoteiroMotorista();
                 int id = 0;
                 int.TryParse(txtSaidaId.Text, out id);
                 if (id == 0)
