@@ -10,7 +10,7 @@ namespace DAL.Entities.Financeiro
         public virtual DateTime EmissaoNf { get; set; }
         public virtual DateTime VencimentoNf { get; set; }
         public virtual string? Cliente { get; set; }    
-        public virtual string? Proposta { get; set; }
+        public virtual string? Propostas { get; set; }
         public virtual string? NotaFiscal { get; set; }
         public virtual string? Obra { get; set; } 
         public virtual string? Comentario { get; set; }

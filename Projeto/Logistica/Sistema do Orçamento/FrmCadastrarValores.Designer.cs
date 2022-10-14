@@ -304,6 +304,7 @@
             // 
             // rtbComentario
             // 
+            this.rtbComentario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rtbComentario.Location = new System.Drawing.Point(704, 444);
             this.rtbComentario.Name = "rtbComentario";
             this.rtbComentario.Size = new System.Drawing.Size(455, 209);

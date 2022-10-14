@@ -12,7 +12,7 @@ namespace DAL.Mapping.Financeiro
             Map(p => p.EmissaoNf);
             Map(p => p.VencimentoNf);
             Map(p => p.Cliente);           
-            Map(p => p.Proposta);
+            Map(p => p.Propostas);
             Map(p => p.NotaFiscal);
             Map(p => p.Obra);           
             Map(p => p.Comentario);

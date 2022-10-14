@@ -298,26 +298,26 @@
             // 
             this.rbImediato.AutoSize = true;
             this.rbImediato.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rbImediato.ForeColor = System.Drawing.Color.Blue;
+            this.rbImediato.ForeColor = System.Drawing.Color.Yellow;
             this.rbImediato.Location = new System.Drawing.Point(155, 372);
             this.rbImediato.Name = "rbImediato";
-            this.rbImediato.Size = new System.Drawing.Size(156, 42);
+            this.rbImediato.Size = new System.Drawing.Size(161, 42);
             this.rbImediato.TabIndex = 13;
             this.rbImediato.TabStop = true;
-            this.rbImediato.Text = "Imediato";
+            this.rbImediato.Text = "Pendente";
             this.rbImediato.UseVisualStyleBackColor = true;
             // 
             // rbPendente
             // 
             this.rbPendente.AutoSize = true;
             this.rbPendente.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rbPendente.ForeColor = System.Drawing.Color.Yellow;
-            this.rbPendente.Location = new System.Drawing.Point(441, 372);
+            this.rbPendente.ForeColor = System.Drawing.Color.Blue;
+            this.rbPendente.Location = new System.Drawing.Point(481, 372);
             this.rbPendente.Name = "rbPendente";
-            this.rbPendente.Size = new System.Drawing.Size(161, 42);
+            this.rbPendente.Size = new System.Drawing.Size(156, 42);
             this.rbPendente.TabIndex = 13;
             this.rbPendente.TabStop = true;
-            this.rbPendente.Text = "Pendente";
+            this.rbPendente.Text = "Imediato";
             this.rbPendente.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
@@ -677,7 +677,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(441, 417);
+            this.label13.Location = new System.Drawing.Point(155, 417);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(231, 31);
             this.label13.TabIndex = 0;
@@ -688,7 +688,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(155, 417);
+            this.label12.Location = new System.Drawing.Point(481, 417);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(150, 31);
             this.label12.TabIndex = 0;
@@ -1175,28 +1175,29 @@
             // 
             // cmsSalvarConteudos
             // 
+            this.cmsSalvarConteudos.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmsSalvarConteudos.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cmsSalvarConteudos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mtSalvarProposta,
             this.mtSalvarComentario});
             this.cmsSalvarConteudos.Name = "contextMenuStrip1";
-            this.cmsSalvarConteudos.Size = new System.Drawing.Size(207, 52);
+            this.cmsSalvarConteudos.Size = new System.Drawing.Size(267, 68);
             // 
             // mtSalvarProposta
             // 
-            this.mtSalvarProposta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.mtSalvarProposta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.mtSalvarProposta.ForeColor = System.Drawing.Color.Red;
             this.mtSalvarProposta.Name = "mtSalvarProposta";
-            this.mtSalvarProposta.Size = new System.Drawing.Size(206, 24);
+            this.mtSalvarProposta.Size = new System.Drawing.Size(266, 32);
             this.mtSalvarProposta.Text = "Salvar Proposta";
             this.mtSalvarProposta.Click += new System.EventHandler(this.mtSalvarProposta_Click);
             // 
             // mtSalvarComentario
             // 
-            this.mtSalvarComentario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.mtSalvarComentario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.mtSalvarComentario.ForeColor = System.Drawing.Color.Red;
             this.mtSalvarComentario.Name = "mtSalvarComentario";
-            this.mtSalvarComentario.Size = new System.Drawing.Size(206, 24);
+            this.mtSalvarComentario.Size = new System.Drawing.Size(266, 32);
             this.mtSalvarComentario.Text = "Salvar Comentario";
             this.mtSalvarComentario.Click += new System.EventHandler(this.mtSalvarComentario_Click);
             // 

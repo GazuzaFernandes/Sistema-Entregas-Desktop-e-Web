@@ -58,17 +58,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnPesquisarMaterial.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAU5JREFUOE+V
-        ksFOwkAQhj35BELi2XJQTsYAib4EB/EhjA+BrXKSJ1AvPoqJyTZRIBr1piZy81C7211ujDPbaS10AZ3k
-        Tygz3z87u7NWjP07VW2G+qwpzBCVWIVm0BI6oByXuQMLOwhIFCyQbAlzyOWzwfB0DnBpWjKxxy50PhoZ
-        6L8lcP2ZwMV7Ah38znKpdLx7qyqMU3c7cw7fjJMZnbzoOQMDeCc+42ggzChLUGeCjp81HIQG2oMybIUX
-        y7g1UFmCjk0GBOfFbknGrUE+f3aC9nBB51w6Ztwa0JvbBN2Ba+aSiiPQkjiLlqgh9Cnj5WdcrUm8dy83
-        GE+DlgOTf1kkqF/K8fb51yajv5Ga6NgFpZrEO1fyoxZEUPO/X50mtGG0JA1hHhCi51X0m2amY3s9VfGC
-        6HGpyarY6qoqGjyRiedHff77f0EmBNe7sP4DhnQSiupo3jwAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="btnImprimir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAcNJREFUaEPt
@@ -1160,6 +1149,17 @@
 </value>
   </data>
   <data name="btnPesquisaFabrica.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAU5JREFUOE+V
+        ksFOwkAQhj35BELi2XJQTsYAib4EB/EhjA+BrXKSJ1AvPoqJyTZRIBr1piZy81C7211ujDPbaS10AZ3k
+        Tygz3z87u7NWjP07VW2G+qwpzBCVWIVm0BI6oByXuQMLOwhIFCyQbAlzyOWzwfB0DnBpWjKxxy50PhoZ
+        6L8lcP2ZwMV7Ah38znKpdLx7qyqMU3c7cw7fjJMZnbzoOQMDeCc+42ggzChLUGeCjp81HIQG2oMybIUX
+        y7g1UFmCjk0GBOfFbknGrUE+f3aC9nBB51w6Ztwa0JvbBN2Ba+aSiiPQkjiLlqgh9Cnj5WdcrUm8dy83
+        GE+DlgOTf1kkqF/K8fb51yajv5Ga6NgFpZrEO1fyoxZEUPO/X50mtGG0JA1hHhCi51X0m2amY3s9VfGC
+        6HGpyarY6qoqGjyRiedHff77f0EmBNe7sP4DhnQSiupo3jwAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnPesquisarMaterial.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAU5JREFUOE+V
         ksFOwkAQhj35BELi2XJQTsYAib4EB/EhjA+BrXKSJ1AvPoqJyTZRIBr1piZy81C7211ujDPbaS10AZ3k

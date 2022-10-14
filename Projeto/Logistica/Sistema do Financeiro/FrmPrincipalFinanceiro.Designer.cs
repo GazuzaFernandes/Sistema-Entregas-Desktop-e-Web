@@ -134,7 +134,6 @@
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(431, 38);
             this.txtPesquisar.TabIndex = 15;
-            this.txtPesquisar.Text = "Digite para pesquisar:";
             this.txtPesquisar.Click += new System.EventHandler(this.txtPesquisar_Click);
             this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
             // 
@@ -150,6 +149,7 @@
             this.dgvNotaFiscais.ReadOnly = true;
             this.dgvNotaFiscais.RowHeadersWidth = 51;
             this.dgvNotaFiscais.RowTemplate.Height = 29;
+            this.dgvNotaFiscais.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNotaFiscais.Size = new System.Drawing.Size(1280, 570);
             this.dgvNotaFiscais.TabIndex = 26;
             this.dgvNotaFiscais.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNotaFiscais_CellDoubleClick);

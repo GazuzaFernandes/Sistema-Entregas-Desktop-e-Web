@@ -55,7 +55,7 @@ namespace Logistica.Sistema_do_Orçamento
 
         private void btnLimparPesquisa_Click(object sender, EventArgs e)
         {
-            txtPesquisar.Text = Convert.ToString("Digite para Pesquisar");
+            txtPesquisar.Text = Convert.ToString(null);
             CarregarGridProdutos();
         }
 
@@ -121,6 +121,5 @@ namespace Logistica.Sistema_do_Orçamento
             objBlControleGrid.DefinirAlturaLinha(30);
         }
         #endregion
-
     }
 }

@@ -2270,5 +2270,6 @@ namespace Logistica.Sistema_de_Logistica
         private Label label82;
         private Label label81;
         private ToolStripMenuItem entradaEstoqueMadeirasToolStripMenuItem;
+        private ToolStripMenuItem toolStripMenuItem2;
     }
 }

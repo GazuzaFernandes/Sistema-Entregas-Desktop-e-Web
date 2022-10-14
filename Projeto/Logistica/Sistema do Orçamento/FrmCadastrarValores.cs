@@ -239,16 +239,16 @@ namespace Projeto.Logistica.Sistema_do_Orçamento
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
-        private void MontarGridData(object dgvDatas)
+        private void MontarGridData(object DgvData)
         {
             dgvData.DefaultCellStyle.Font = new Font("Calibri", 16F, GraphicsUnit.Pixel);
-            var objBlControleGrid = new ControleGrid(dgvDatas);
+            var objBlControleGrid = new ControleGrid(dgvData);
             //Define quais colunas serão visíveis
             objBlControleGrid.DefinirVisibilidade(new List<string>() { "Data", "Preco" });
             //Define quais os cabeçalhos respectivos das colunas 
             objBlControleGrid.DefinirCabecalhos(new List<string>() { "Data da Atualização", "Valor" });
             //Define quais as larguras respectivas das colunas 
-            objBlControleGrid.DefinirLarguras(new List<int>() { 40, 40, }, dgvData.Width - 15); //O total tem que ficar em 100% 
+            objBlControleGrid.DefinirLarguras(new List<int>() { 40, 50, }, dgvData.Width - 15); //O total tem que ficar em 100% 
             //Define quais os alinhamentos respectivos do componentes das colunas 
             objBlControleGrid.DefinirAlinhamento(new List<string>() { "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", });
             //Define a altura das linhas respectivas da Grid 

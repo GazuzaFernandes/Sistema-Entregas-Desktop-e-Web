@@ -41,11 +41,14 @@
             // 
             // dgvValores
             // 
+            this.dgvValores.AllowUserToAddRows = false;
+            this.dgvValores.AllowUserToDeleteRows = false;
             this.dgvValores.BackgroundColor = System.Drawing.Color.White;
             this.dgvValores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvValores.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvValores.Location = new System.Drawing.Point(0, 171);
             this.dgvValores.Name = "dgvValores";
+            this.dgvValores.ReadOnly = true;
             this.dgvValores.RowHeadersWidth = 51;
             this.dgvValores.RowTemplate.Height = 29;
             this.dgvValores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -94,7 +97,6 @@
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(410, 38);
             this.txtPesquisar.TabIndex = 48;
-            this.txtPesquisar.Text = "Digite para pesquisar:";
             this.txtPesquisar.Click += new System.EventHandler(this.txtPesquisar_Click);
             this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
             // 

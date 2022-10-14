@@ -117,13 +117,11 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
-
         private void btnPesquisaFabrica_Click(object sender, EventArgs e)
         {
             pesquisar = 1;
             PegarDados_FormCadastroEmpresa();
         }
-
         private void txtCodigoFabrica_TextChanged(object sender, EventArgs e)
         {
             try
@@ -146,7 +144,6 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
-
         private void txtCodigoCliente_TextChanged(object sender, EventArgs e)
         {
             try
@@ -290,36 +287,14 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                         pAtua.PdRb = txtPdRb.Text;
                         pAtua.PdVenda = txtPdVenda.Text;
                         pAtua.Proposta = txtProposta.Text;
-                        pAtua.Construtora = txtEmpresa.Text;
+                        pAtua.Construtora = txtCliente.Text;
                         pAtua.Obra = txtObra.Text;
                         pAtua.DataEntrega = dtpDataEntrega.Value;
                         pAtua.RecebidoPor = txtRecebido.Text;
                         pAtua.NotaFiscal = txtNotaFiscal.Text;
                         pAtua.Carreto = txtCarreto.Text;
                         pAtua.Material = rtbMaterial.Text;
-                        switch (cbEmpresaFaturar.Text)
-                        {
-                            case "Rb Comercio":
-                                {
-                                    cbEmpresaFaturar.Sorted = true;
-                                }
-                                break;
-                            case "Rb Engenharia":
-                                {
-                                    cbEmpresaFaturar.Sorted = true;
-                                }
-                                break;
-                            case "Rb Pisos":
-                                {
-                                    cbEmpresaFaturar.Sorted = true;
-                                }
-                                break;
-                            case "Nome do Cliente":
-                                {
-                                    cbEmpresaFaturar.Sorted = true;
-                                }
-                                break;
-                        }
+                        pAtua.Faturado = cbEmpresaFaturar.Text;
                         if (rbImediato.Checked == true)
                             pAtua.StatusObraId = 1;
                         else if (rbPendente.Checked == true)
@@ -633,7 +608,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                dgvHistorico.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 16F, GraphicsUnit.Pixel);
+                dgvHistorico.DefaultCellStyle.Font = new System.Drawing.Font("Calibri",20F, GraphicsUnit.Pixel);
                 var objBlControleGrid = new ControleGrid(dgvHistorico);
                 //Define quais colunas serão visíveis
                 objBlControleGrid.DefinirVisibilidade(new List<string>() { "DataComentario", "Comentario", });
@@ -720,8 +695,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             txtCodigoItensMaterial.Enabled = Habilitar;
             txtQuantidade.Enabled = Habilitar;
             txtPreco.Enabled = Habilitar;
-            txtUndMedida.Enabled = Habilitar;
-            txtQtdCaixas.Enabled = Habilitar;
+            txtUndMedida.Enabled = Habilitar;          
             rtbObservacao.Enabled = Habilitar;
             rtbMaterial.Enabled = Habilitar;
             btnInserir.Enabled = Habilitar;
@@ -739,6 +713,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 cadasEmpr.ShowDialog();
                 var id = cadasEmpr.empresaid;
                 var empresa = cadasEmpr.empresa;
+                var cliente = cadasEmpr.empresa;
                 switch (pesquisar)
                 {
                     case 1:
@@ -750,7 +725,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     case 2:
                         {
                             txtCodigoCliente.Text = id.ToString();
-                            txtEmpresa.Text = empresa;
+                            txtCliente.Text = cliente;
                         }
                         break;
                 }
@@ -797,6 +772,10 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             else if (rtbMaterial.Text == "")
             {
                 throw new Exception("Informe o Material");
+            }
+            else if (cbEmpresaFaturar.Text == "")
+            {
+                throw new Exception("Informe a empresa de faturamento");
             }
             return true;
         }

@@ -38,7 +38,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                     dtpDataVencimento.Value = _notafiscal.VencimentoNf;
                     txtEndereco.Text = _notafiscal.Obra;
                     txtCliente.Text = _notafiscal.Cliente;
-                    txtProposta.Text = _notafiscal.Proposta;
+                    txtProposta.Text = _notafiscal.Propostas;
                     txtNotaFiscal.Text = _notafiscal.NotaFiscal;
                     rtbObeservacao.Text = _notafiscal.Comentario;
                     switch (_notafiscal.StatusObraId)//escolha
@@ -107,7 +107,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                         atualizar.EmissaoNf = dtpDataEmissao.Value;
                         atualizar.VencimentoNf = dtpDataVencimento.Value;
                         atualizar.Cliente = txtCliente.Text;
-                        atualizar.Proposta = txtProposta.Text;
+                        atualizar.Propostas = txtProposta.Text;
                         atualizar.NotaFiscal = txtNotaFiscal.Text;
                         atualizar.Obra = txtEndereco.Text;
                         atualizar.Comentario = rtbObeservacao.Text;

@@ -26,8 +26,7 @@ namespace Logistica.Sistema_de_Logistica
             try
             {
                 var listaProposta = new DLDadosProposta().Listar();
-               CarregarGridPrincipal();
-             
+               CarregarGridPrincipal();             
             }
             catch (Exception ex)
             {
@@ -40,6 +39,7 @@ namespace Logistica.Sistema_de_Logistica
         {
             FrmProposta proposta = new FrmProposta();
             proposta.Show();
+            CarregarGridPrincipal();
         }
 
         private void msFerramentas_Click(object sender, EventArgs e)
@@ -236,7 +236,7 @@ namespace Logistica.Sistema_de_Logistica
             objBlControleGrid.DefinirCabecalhos(new List<string>()
             { "DATA PREVISTA", "FABRICA", "RESP.", "PD RB", "PD VENDA", "PROPOSTA", "CLIENTE", "OBRA", "NF", });
             //Define quais as larguras respectivas das colunas 
-            objBlControleGrid.DefinirLarguras(new List<int>() { 9, 9, 7, 8, 8, 8, 12, 27,10, }, dgvPrincipal.Width - 15); //O total tem que ficar em 100% 
+            objBlControleGrid.DefinirLarguras(new List<int>() { 7, 9, 7, 8, 9, 8, 12, 27,10, }, dgvPrincipal.Width - 15); //O total tem que ficar em 100% 
             objBlControleGrid.DefinirAlinhamento(new List<string>()
             { "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", });
             //Define a altura das linhas respectivas da Grid 
