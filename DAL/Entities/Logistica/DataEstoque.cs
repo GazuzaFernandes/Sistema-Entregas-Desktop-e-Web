@@ -11,8 +11,9 @@ namespace DAL.Entities.Logistica
         public virtual int DataId { get; set; }
         public virtual DateTime? Saida { get; set; }
         public virtual DateTime? Entrada { get; set; }
-        public virtual int EstoqueId { get; set; }
         public virtual decimal MetroQuadrado { get; set; }
+        public virtual int EstoqueId { get; set; }
+
         public virtual int StatusObraId { get; set; }
     }
 }

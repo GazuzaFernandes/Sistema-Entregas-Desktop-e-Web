@@ -188,7 +188,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                         ItenId = int.Parse(dgvitensProposta.Rows[i].Cells[0].Value.ToString()),
                         Material = dgvitensProposta.Rows[i].Cells[1].Value.ToString(),
                         UndMedida = dgvitensProposta.Rows[i].Cells[2].Value.ToString(),
-                        Quantidade = Convert.ToDecimal(dgvitensProposta.Rows[i].Cells[4].Value.ToString()),
+                        Quantidade = Convert.ToDecimal(dgvitensProposta.Rows[i].Cells[3].Value.ToString()),
                         QtdCaixa = Convert.ToDecimal(dgvitensProposta.Rows[i].Cells[5].Value.ToString()),
                     });
                 }

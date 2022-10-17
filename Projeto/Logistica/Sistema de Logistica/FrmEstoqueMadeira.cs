@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +29,25 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             MontarGridData(dgvData);
         }
 
-        #region Tela Entrada Material
+        #region Tela Entrada Material 
+        private void txtEntradaMetroLinear_TextChanged(object sender, EventArgs e)
+        {
+            if (txtEntradaMetroLinear.Text != null)
+            {
+                rbEntrada.Checked = true;
+            }
+            CalcularEntradaEstoque();
+        }
+
+        private void txtConversorTotalM2_TextChanged(object sender, EventArgs e)
+        {
+            ConverterM2ParaM();
+        }
+
+        private void txtConversorLargura_TextChanged(object sender, EventArgs e)
+        {
+            ConverterM2ParaM();
+        }
         private void txtConverterM2_TextChanged(object sender, EventArgs e)
         {
             ConversorDeMetragem();
@@ -83,7 +102,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         private void bntLimparEntrada_Click(object sender, EventArgs e)
         {
             LimparCamposEntrada();
-        }      
+        }
 
         private void cmsSalvarDatas_Click(object sender, EventArgs e)
         {
@@ -97,11 +116,11 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     MessageBox.Show("Data atualizada com sucesso !!");
                 }
 
-                    int estoqueId = 0;
-                    if (txtIdEntrada.Text != "")
-                    {
-                        estoqueId = Convert.ToInt32(txtIdEntrada.Text);
-                    }
+                int estoqueId = 0;
+                if (txtIdEntrada.Text != "")
+                {
+                    estoqueId = Convert.ToInt32(txtIdEntrada.Text);
+                }
 
                 var listaDataMadeira = new DLDataEstoque().Listar();
                 var data = listaDataMadeira.Where(ip => ip.EstoqueId == estoqueId && ip.DataId == dataId).FirstOrDefault();
@@ -111,6 +130,8 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     data.Entrada = dtpEntrada.Value;
                     data.Saida = dtpSaida.Value;
                     data.MetroQuadrado = Convert.ToDecimal(txtTotalM3Saida.Text);
+                     if (rbEntrada.Checked == true)
+                        data.StatusObraId = 8;
                     new DLDataEstoque().Atualizar(data);
                 }
                 else
@@ -120,7 +141,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 }
                 txtDataId.Clear();
                 CarregarGridData();
-            }           
+            }
 
             catch (Exception ex)
             {
@@ -140,7 +161,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
                 MessageBox.Show("Erro " + ex.Message);
             }
-        }     
+        }
 
         private void cmsDeletarData_Click(object sender, EventArgs e)
         {
@@ -192,13 +213,13 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             for (int i = 0; i < dgvData.Rows.Count; i++)
             {
-                var valor = Convert.ToString(dgvData.Rows[i].Cells[4].Value);
+                var valor = Convert.ToString(dgvData.Rows[i].Cells[5].Value);
                 switch (valor)
                 {
-                    case "Finalizado":
+                    case "8":
                         dgvData.Rows[i].DefaultCellStyle.BackColor = Color.Lime;
                         break;
-                    case "Pendente":
+                    case "9":
                         dgvData.Rows[i].DefaultCellStyle.BackColor = Color.Red; break;
                 }
             }
@@ -215,12 +236,12 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 txtTotalM2Entrada.Text = Convert.ToString(data.MetroQuadrado);
                 txtTotalM2Saida.Text = Convert.ToString(data.MetroQuadrado);
             }
-        }    
+        }
 
         #endregion
 
         #region Tela Saida Material
-  
+
 
         private void txtMaterialSaida_TextChanged(object sender, EventArgs e)
         {
@@ -230,7 +251,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         private void txtEspessuraSaida_TextChanged(object sender, EventArgs e)
         {
             CalcularSaidaM2();
-        }      
+        }
 
         private void txtLarguraSaida_TextChanged(object sender, EventArgs e)
         {
@@ -240,7 +261,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         private void txtMetroSaida_TextChanged(object sender, EventArgs e)
         {
             CalcularSaidaM2();
-        }       
+        }
 
         private void btnBaixarEstoque_Click(object sender, EventArgs e)
         {
@@ -267,7 +288,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     dataSaida.DataId = Convert.ToInt32(txtDataId.Text);
                     dataSaida.Saida = dtpSaida.Value;
                     dataSaida.MetroQuadrado = Convert.ToDecimal(txtTotalM3Saida.Text);
-                     if (rbSaida.Checked == true)
+                    if (rbSaida.Checked == true)
                         dataSaida.StatusObraId = 9;
                     new DLDataEstoque().Atualizar(dataSaida);
                 }
@@ -285,7 +306,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
                 MessageBox.Show("Erro " + ex.Message);
             }
-        }     
+        }
 
         private void btnLimparSaida_Click(object sender, EventArgs e)
         {
@@ -319,6 +340,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 #endregion
                 HabilitarCampos(true);
                 BloquearBotao(false);
+                CarregarGridData();
             }
         }
 
@@ -365,15 +387,16 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 if (decimal.TryParse(txtMetroSaida.Text, out SaidaMetro))
                 {
                     totalM = SaidaMetro - saidaEstoque;
-                    
+
                 }
             }
             txtMetroSaida.Text = totalM.ToString("N2");
             #endregion
         }
+
         private void CalcularSaidaM2()
         {
-            #region Calcular Entrada
+            #region Calcular Saida
             decimal totalm2 = 0, largura = 0, totalM = 0;
 
             if (decimal.TryParse(txtConverterM2.Text, out totalm2))
@@ -389,6 +412,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             txtTotalM.Text = totalM.ToString("N2");
             #endregion
         }
+
         private bool ValidarCampo()
         {
             if (txtMaterialEntrada.Text == "")
@@ -402,13 +426,13 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             #region Entrada Material
             txtIdEntrada.Clear();
-            txtEspessuraEntrada.Clear();
-            txtLarguraEntrada.Clear();
+            txtEspessuraEntrada.Text = Convert.ToString("0,");
+            txtLarguraEntrada.Text = Convert.ToString("0,");
             txtMaterialEntrada.Clear();
             txtMetroEntrada.Clear();
             txtTotalM2Entrada.Clear();
             txtTotalM3Entrada.Clear();
-            #endregion           
+            #endregion          
 
         }
 
@@ -446,12 +470,12 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             dgvData.DefaultCellStyle.Font = new Font("Calibri", 20F, GraphicsUnit.Pixel);
             var objBlControleGrid = new ControleGrid(dgvData);
             //Define quais colunas serão visíveis
-            objBlControleGrid.DefinirVisibilidade(new List<string>() { "Madeiras", "UnidadeMedida", "Total", });
+            objBlControleGrid.DefinirVisibilidade(new List<string>() { "Saida", "Entrada", "MetroQuadrado" });
             //Define quais os cabeçalhos respectivos das colunas 
-            objBlControleGrid.DefinirCabecalhos(new List<string>() { "Madeiras", "Unid Medida", "Total" });
+            objBlControleGrid.DefinirCabecalhos(new List<string>() { "Data Saida", "Data Entrada", "M2" });
             //Define quais as larguras respectivas das colunas 
-            objBlControleGrid.DefinirLarguras(new List<int>() { 70, 10, 15 }, dgvSaidaMaterial.Width - 15); //O total tem que ficar em 100% 
-                                                                                                            //Define quais os alinhamentos respectivos do componentes das colunas 
+            objBlControleGrid.DefinirLarguras(new List<int>() { 35, 38, 19 }, dgvData.Width - 20); //O total tem que ficar em 100% 
+                                                                                                   //Define quais os alinhamentos respectivos do componentes das colunas 
             objBlControleGrid.DefinirAlinhamento(new List<string>() { "centro", "centro", "centro", "centro", "centro", });
             //Define a altura das linhas respectivas da Grid 
             objBlControleGrid.DefinirAlturaLinha(30);
@@ -489,9 +513,12 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 int.TryParse(txtDataId.Text, out id);
                 if (id == 0)
                 {
-                    entrada.Entrada = dtpEntrada.Value;  
-                    entrada.MetroQuadrado = Convert.ToDecimal(txtTotalM2Entrada.Text);                  
+                    entrada.Entrada = dtpEntrada.Value;
+                    entrada.MetroQuadrado = Convert.ToDecimal(txtTotalM2Entrada.Text);
                     entrada.EstoqueId = Convert.ToInt32(txtIdEntrada.Text);
+                    if (rbEntrada.Checked == true)
+                        entrada.StatusObraId = 8;
+                    
                 }
                 return entrada;
             }
@@ -514,7 +541,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             txtEspessuraEntrada.Enabled = habilitar;
             txtLarguraEntrada.Enabled = habilitar;
             txtMaterialEntrada.Enabled = habilitar;
-            txtMetroEntrada.Enabled = habilitar;          
+            txtMetroEntrada.Enabled = habilitar;
             dtpEntrada.Enabled = habilitar;
             #endregion
 
@@ -546,16 +573,16 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
         private void MontarGridMaterial(DataGridView dgvSaidaMaterial)
         {
-            dgvSaidaMaterial.DefaultCellStyle.Font = new Font("Calibri", 16F, GraphicsUnit.Pixel);
+            dgvSaidaMaterial.DefaultCellStyle.Font = new Font("Calibri", 20F, GraphicsUnit.Pixel);
             var objBlControleGrid = new ControleGrid(dgvSaidaMaterial);
             //Define quais colunas serão visíveis
-            objBlControleGrid.DefinirVisibilidade(new List<string>() { "Madeiras", "UnidadeMedida", "Total", });
+            objBlControleGrid.DefinirVisibilidade(new List<string>() { "Madeira", "Espessura", "Largura", "MetroLinear", "MetroQuadrado", "MetroCubico", });
             //Define quais os cabeçalhos respectivos das colunas 
-            objBlControleGrid.DefinirCabecalhos(new List<string>() { "Madeiras", "Unid Medida", "Total" });
+            objBlControleGrid.DefinirCabecalhos(new List<string>() { "Madeira", "Espessura", "Largura", "Metro Linear", "M2", "M3", });
             //Define quais as larguras respectivas das colunas 
-            objBlControleGrid.DefinirLarguras(new List<int>() { 70, 10, 15 }, dgvSaidaMaterial.Width - 15); //O total tem que ficar em 100% 
-                                                                                                            //Define quais os alinhamentos respectivos do componentes das colunas 
-            objBlControleGrid.DefinirAlinhamento(new List<string>() { "centro", "centro", "centro", "centro", "centro", });
+            objBlControleGrid.DefinirLarguras(new List<int>() { 45, 10, 10, 10, 10, 10, }, dgvSaidaMaterial.Width - 15); //O total tem que ficar em 100% 
+                                                                                                                         //Define quais os alinhamentos respectivos do componentes das colunas 
+            objBlControleGrid.DefinirAlinhamento(new List<string>() { "esquerda", "centro", "centro", "centro", "centro", });
             //Define a altura das linhas respectivas da Grid 
             objBlControleGrid.DefinirAlturaLinha(30);
         }
@@ -572,14 +599,51 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     if (largura > 0)
                     {
                         totalM = totalm2 / largura;
-                    }               
-                }             
+                    }
+                }
             }
             txtTotalM.Text = totalM.ToString("N2");
             #endregion
         }
 
         private void CalcularEntrada()
+        {
+            try
+            {
+                #region Calcular Metro Quadrado
+                decimal largura = 0, comprimento = 0, totalm2 = 0;
+
+                if (decimal.TryParse(txtLarguraEntrada.Text, out largura))
+                {
+                    if (decimal.TryParse(txtMetroEntrada.Text, out comprimento))
+                    {
+                        totalm2 = comprimento * largura;
+                    }
+                }
+                txtTotalM2Entrada.Text = totalm2.ToString("N2");
+                #endregion
+
+                #region Calcular Metro Cubico
+                decimal espessura = 0, metroQuadrado = 0, totalm3 = 0;
+                if (decimal.TryParse(txtEspessuraEntrada.Text, out espessura))
+                {
+                    if (decimal.TryParse(txtTotalM2Entrada.Text, out metroQuadrado))
+                    {
+                        totalm3 = metroQuadrado * espessura;
+                    }
+                }
+                txtTotalM3Entrada.Text = totalm3.ToString("N2");
+                #endregion
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+        private void CalcularEntradaEstoque()
         {
             #region Calcular Entrada
             decimal entradaEstoque = 0, comprimentoEstoque = 0, totalM = 0;
@@ -593,47 +657,34 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             }
             txtMetroEntrada.Text = totalM.ToString("N2");
             #endregion
-
-            #region Calcular Metro Quadrado
-            decimal largura = 0, comprimento = 0, totalm2 = 0;
-
-            if (decimal.TryParse(txtLarguraEntrada.Text, out largura))
-            {
-                if (decimal.TryParse(txtMetroEntrada.Text, out comprimento))
-                {
-                    totalm2 = comprimento * largura;
-                }
-            }
-            txtTotalM2Entrada.Text = totalm2.ToString("N2");
-            #endregion
-
-            #region Calcular Metro Cubico
-            decimal espessura = 0, metroQuadrado = 0, totalm3 = 0;
-            if (decimal.TryParse(txtEspessuraEntrada.Text, out espessura))
-            {
-                if (decimal.TryParse(txtTotalM2Entrada.Text, out metroQuadrado))
-                {
-                    totalm3 = metroQuadrado * espessura;
-                }
-            }
-            txtTotalM3Entrada.Text = totalm3.ToString("N2");
-            #endregion
+            CalcularEntrada();
         }
 
+        private void ConverterM2ParaM()
+        {
+            #region Converter M2 para M.
+            decimal metroQuadrado = 0, Largura = 0, totalM = 0;
+
+            if (decimal.TryParse(txtConversorTotalM2.Text, out metroQuadrado))
+            {
+                if (decimal.TryParse(txtConversorLargura.Text, out Largura))
+                {
+                    if (Largura > 0)
+                    {
+                        totalM = metroQuadrado / +Largura;
+                    }
+                }
+            }
+            txtConversorTotalM.Text = totalM.ToString("N2");
+            #endregion
+        }
+        #endregion
         private void FrmEstoqueMadeira_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
 
-        private void txtEntradaMetroLinear_TextChanged(object sender, EventArgs e)
-        {
-            if(txtEntradaMetroLinear.Text != null)
-            {
-                rbEntrada.Checked = true;
-            }
-            CalcularEntrada();
-        }
 
-        #endregion
+
     }
 }

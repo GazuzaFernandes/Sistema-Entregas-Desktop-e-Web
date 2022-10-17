@@ -553,5 +553,10 @@ namespace Logistica.Sistema_de_Logistica
             FrmEstoqueMadeira madeira = new FrmEstoqueMadeira();
             madeira.Show();
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CarregarGridPrincipal();
+        }
     }
 }

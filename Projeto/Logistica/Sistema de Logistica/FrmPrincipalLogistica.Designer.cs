@@ -37,6 +37,7 @@ namespace Logistica.Sistema_de_Logistica
             this.tutorialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msNotaFiscal = new System.Windows.Forms.ToolStripMenuItem();
             this.msArt = new System.Windows.Forms.ToolStripMenuItem();
+            this.telefonesUteisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.roteiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msRoteiro = new System.Windows.Forms.ToolStripMenuItem();
             this.estoqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -187,7 +188,6 @@ namespace Logistica.Sistema_de_Logistica
             this.label49 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
-            this.telefonesUteisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -215,7 +215,7 @@ namespace Logistica.Sistema_de_Logistica
             this.menuStrip1.Location = new System.Drawing.Point(6, 6);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(157, 215);
+            this.menuStrip1.Size = new System.Drawing.Size(157, 191);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -226,6 +226,7 @@ namespace Logistica.Sistema_de_Logistica
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(153, 35);
             this.toolStripMenuItem1.Text = "Proposta";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // msInserir
             // 
@@ -272,6 +273,12 @@ namespace Logistica.Sistema_de_Logistica
             this.msArt.Size = new System.Drawing.Size(344, 36);
             this.msArt.Text = "Como emitir ART";
             this.msArt.Click += new System.EventHandler(this.msArt_Click);
+            // 
+            // telefonesUteisToolStripMenuItem
+            // 
+            this.telefonesUteisToolStripMenuItem.Name = "telefonesUteisToolStripMenuItem";
+            this.telefonesUteisToolStripMenuItem.Size = new System.Drawing.Size(344, 36);
+            this.telefonesUteisToolStripMenuItem.Text = "Telefones Uteis";
             // 
             // roteiroToolStripMenuItem
             // 
@@ -332,7 +339,7 @@ namespace Logistica.Sistema_de_Logistica
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1695, 210);
+            this.panel1.Size = new System.Drawing.Size(1695, 221);
             this.panel1.TabIndex = 5;
             // 
             // pictureBox1
@@ -611,11 +618,11 @@ namespace Logistica.Sistema_de_Logistica
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabControl1.Location = new System.Drawing.Point(0, 210);
+            this.tabControl1.Location = new System.Drawing.Point(0, 221);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1695, 806);
+            this.tabControl1.Size = new System.Drawing.Size(1695, 795);
             this.tabControl1.TabIndex = 6;
             // 
             // tabPage1
@@ -625,7 +632,7 @@ namespace Logistica.Sistema_de_Logistica
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1687, 762);
+            this.tabPage1.Size = new System.Drawing.Size(1687, 751);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Principal";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -643,7 +650,7 @@ namespace Logistica.Sistema_de_Logistica
             this.dgvPrincipal.ReadOnly = true;
             this.dgvPrincipal.RowHeadersWidth = 51;
             this.dgvPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPrincipal.Size = new System.Drawing.Size(1681, 758);
+            this.dgvPrincipal.Size = new System.Drawing.Size(1681, 747);
             this.dgvPrincipal.TabIndex = 0;
             this.dgvPrincipal.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrincipal_CellDoubleClick);
             this.dgvPrincipal.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvPrincipal_DataBindingComplete);
@@ -659,7 +666,7 @@ namespace Logistica.Sistema_de_Logistica
             this.tabPage4.Location = new System.Drawing.Point(4, 40);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1687, 762);
+            this.tabPage4.Size = new System.Drawing.Size(1687, 751);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Tabela Carretos";
             // 
@@ -2077,12 +2084,6 @@ namespace Logistica.Sistema_de_Logistica
             this.label47.Size = new System.Drawing.Size(446, 32);
             this.label47.TabIndex = 75;
             this.label47.Text = "PRESILHAS DE ALUMINIO PARA DECK";
-            // 
-            // telefonesUteisToolStripMenuItem
-            // 
-            this.telefonesUteisToolStripMenuItem.Name = "telefonesUteisToolStripMenuItem";
-            this.telefonesUteisToolStripMenuItem.Size = new System.Drawing.Size(344, 36);
-            this.telefonesUteisToolStripMenuItem.Text = "Telefones Uteis";
             // 
             // FrmPrincipalLogistica
             // 
