@@ -18,24 +18,28 @@ namespace DAL.Repository.Logistica
                 var listarData = new DLDataEstoque().Listar();
                 var listarStatus = new DLStatusObra().Listar();
                 var resultado = listarData
-                    .Join(listarStatus, dataEstoque => 
+                    .Join(listarStatus, dataEstoque =>
                     dataEstoque.StatusObraId, statuss => statuss.StatusObraId, (dataEstoque, statuss) => new { dataEstoque, statuss })
                     .Select(x => new DataViewModel()
                     {
                         DataId = x.dataEstoque.DataId,
-
+                        Saida = x.dataEstoque.Saida,
+                        Entrada = x.dataEstoque.Entrada,
+                        EstoqueId = x.dataEstoque.EstoqueId,
+                        MetroQuadrado = x.dataEstoque.MetroQuadrado,
+                        Status = x.statuss.Descricao,
                     }).ToList();
                 foreach(var dataEstoque in resultado)
                 {
                     switch (dataEstoque.Status)
                     {
-                        case "Finalizado": //informando que a madeira deu entrada no estoque na Cor Verde
+                        case "Entrada": //informando que a madeira deu entrada no estoque na Cor Verde
                             {
-                                dataEstoque.OrdenacaoStatus = 3;
+                                dataEstoque.OrdenacaoStatus = 8;
                             }break;
-                        case "Cancelado": // Informando que o material deu Saida do estoque na cor Vermelha
+                        case "Saida": // Informando que o material deu Saida do estoque na cor Vermelha
                             {
-                                dataEstoque.OrdenacaoStatus = 4;
+                                dataEstoque.OrdenacaoStatus = 9;
                             }break;
                             lstData.Add(dataEstoque);
                     }

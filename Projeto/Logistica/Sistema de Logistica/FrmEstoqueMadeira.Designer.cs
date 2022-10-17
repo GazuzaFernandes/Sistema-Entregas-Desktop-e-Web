@@ -39,7 +39,15 @@
             this.btnLimparEntrada = new System.Windows.Forms.Button();
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.rbPendente = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtConverterTotalML = new System.Windows.Forms.TextBox();
+            this.txtLarguraPiso = new System.Windows.Forms.TextBox();
+            this.txtMetragemCaixa = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.rbEntrada = new System.Windows.Forms.RadioButton();
             this.btnGerarId = new System.Windows.Forms.Button();
             this.txtDataId = new System.Windows.Forms.TextBox();
             this.txtIdEntrada = new System.Windows.Forms.TextBox();
@@ -68,7 +76,7 @@
             this.btnLimparSaida = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.rbCancelado = new System.Windows.Forms.RadioButton();
+            this.rbSaida = new System.Windows.Forms.RadioButton();
             this.rtbSaida = new System.Windows.Forms.RichTextBox();
             this.txtTotalM3Saida = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -90,6 +98,7 @@
             this.cmsSalvar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSaidaMaterial)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -153,7 +162,7 @@
             this.btnLimparEntrada.ForeColor = System.Drawing.Color.Black;
             this.btnLimparEntrada.Image = ((System.Drawing.Image)(resources.GetObject("btnLimparEntrada.Image")));
             this.btnLimparEntrada.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnLimparEntrada.Location = new System.Drawing.Point(818, 530);
+            this.btnLimparEntrada.Location = new System.Drawing.Point(791, 566);
             this.btnLimparEntrada.Name = "btnLimparEntrada";
             this.btnLimparEntrada.Size = new System.Drawing.Size(159, 75);
             this.btnLimparEntrada.TabIndex = 50;
@@ -168,13 +177,13 @@
             this.dgvData.AllowUserToDeleteRows = false;
             this.dgvData.BackgroundColor = System.Drawing.Color.White;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Location = new System.Drawing.Point(55, 308);
+            this.dgvData.Location = new System.Drawing.Point(46, 368);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 29;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData.Size = new System.Drawing.Size(730, 341);
+            this.dgvData.Size = new System.Drawing.Size(730, 273);
             this.dgvData.TabIndex = 49;
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             this.dgvData.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvData_DataBindingComplete);
@@ -182,7 +191,8 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.tabPage2.Controls.Add(this.rbPendente);
+            this.tabPage2.Controls.Add(this.panel1);
+            this.tabPage2.Controls.Add(this.rbEntrada);
             this.tabPage2.Controls.Add(this.btnLimparEntrada);
             this.tabPage2.Controls.Add(this.dgvData);
             this.tabPage2.Controls.Add(this.btnGerarId);
@@ -214,19 +224,111 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Entrada Material";
             // 
-            // rbPendente
+            // panel1
             // 
-            this.rbPendente.AutoSize = true;
-            this.rbPendente.Checked = true;
-            this.rbPendente.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rbPendente.ForeColor = System.Drawing.Color.Lime;
-            this.rbPendente.Location = new System.Drawing.Point(818, 237);
-            this.rbPendente.Name = "rbPendente";
-            this.rbPendente.Size = new System.Drawing.Size(147, 42);
-            this.rbPendente.TabIndex = 52;
-            this.rbPendente.TabStop = true;
-            this.rbPendente.Text = "Entrada.";
-            this.rbPendente.UseVisualStyleBackColor = true;
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.label20);
+            this.panel1.Controls.Add(this.label19);
+            this.panel1.Controls.Add(this.txtConverterTotalML);
+            this.panel1.Controls.Add(this.txtLarguraPiso);
+            this.panel1.Controls.Add(this.txtMetragemCaixa);
+            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.label21);
+            this.panel1.Location = new System.Drawing.Point(838, 21);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(368, 273);
+            this.panel1.TabIndex = 53;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(34, 204);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(159, 31);
+            this.label20.TabIndex = 44;
+            this.label20.Text = "Metro Linear:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(49, 135);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(153, 31);
+            this.label19.TabIndex = 45;
+            this.label19.Text = "Largura Piso:";
+            // 
+            // txtConverterTotalML
+            // 
+            this.txtConverterTotalML.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtConverterTotalML.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtConverterTotalML.Enabled = false;
+            this.txtConverterTotalML.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtConverterTotalML.Location = new System.Drawing.Point(208, 200);
+            this.txtConverterTotalML.Name = "txtConverterTotalML";
+            this.txtConverterTotalML.Size = new System.Drawing.Size(73, 38);
+            this.txtConverterTotalML.TabIndex = 47;
+            // 
+            // txtLarguraPiso
+            // 
+            this.txtLarguraPiso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtLarguraPiso.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtLarguraPiso.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtLarguraPiso.ForeColor = System.Drawing.Color.Red;
+            this.txtLarguraPiso.Location = new System.Drawing.Point(208, 132);
+            this.txtLarguraPiso.Name = "txtLarguraPiso";
+            this.txtLarguraPiso.Size = new System.Drawing.Size(73, 38);
+            this.txtLarguraPiso.TabIndex = 48;
+            this.txtLarguraPiso.TextChanged += new System.EventHandler(this.txtConverterTotalM2_TextChanged);
+            // 
+            // txtMetragemCaixa
+            // 
+            this.txtMetragemCaixa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtMetragemCaixa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtMetragemCaixa.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtMetragemCaixa.ForeColor = System.Drawing.Color.Red;
+            this.txtMetragemCaixa.Location = new System.Drawing.Point(208, 69);
+            this.txtMetragemCaixa.Name = "txtMetragemCaixa";
+            this.txtMetragemCaixa.Size = new System.Drawing.Size(73, 38);
+            this.txtMetragemCaixa.TabIndex = 49;
+            this.txtMetragemCaixa.TextChanged += new System.EventHandler(this.txtConverterM2_TextChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(55, 73);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(147, 31);
+            this.label18.TabIndex = 46;
+            this.label18.Text = "M² na Caixa:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label21.ForeColor = System.Drawing.Color.Yellow;
+            this.label21.Location = new System.Drawing.Point(3, 10);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(354, 31);
+            this.label21.TabIndex = 42;
+            this.label21.Text = "Converter M² para Metro Linear";
+            // 
+            // rbEntrada
+            // 
+            this.rbEntrada.AutoSize = true;
+            this.rbEntrada.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbEntrada.ForeColor = System.Drawing.Color.Lime;
+            this.rbEntrada.Location = new System.Drawing.Point(413, 316);
+            this.rbEntrada.Name = "rbEntrada";
+            this.rbEntrada.Size = new System.Drawing.Size(147, 42);
+            this.rbEntrada.TabIndex = 52;
+            this.rbEntrada.Text = "Entrada.";
+            this.rbEntrada.UseVisualStyleBackColor = true;
             // 
             // btnGerarId
             // 
@@ -244,7 +346,7 @@
             // 
             this.txtDataId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtDataId.Enabled = false;
-            this.txtDataId.Location = new System.Drawing.Point(791, 611);
+            this.txtDataId.Location = new System.Drawing.Point(3, 611);
             this.txtDataId.Name = "txtDataId";
             this.txtDataId.Size = new System.Drawing.Size(47, 38);
             this.txtDataId.TabIndex = 44;
@@ -263,7 +365,7 @@
             this.txtTotalM3Entrada.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotalM3Entrada.Enabled = false;
             this.txtTotalM3Entrada.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTotalM3Entrada.Location = new System.Drawing.Point(1064, 174);
+            this.txtTotalM3Entrada.Location = new System.Drawing.Point(388, 239);
             this.txtTotalM3Entrada.Name = "txtTotalM3Entrada";
             this.txtTotalM3Entrada.Size = new System.Drawing.Size(118, 38);
             this.txtTotalM3Entrada.TabIndex = 43;
@@ -273,7 +375,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label17.ForeColor = System.Drawing.Color.Yellow;
-            this.label17.Location = new System.Drawing.Point(983, 333);
+            this.label17.Location = new System.Drawing.Point(983, 350);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(223, 155);
             this.label17.TabIndex = 42;
@@ -284,7 +386,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(55, 262);
+            this.label14.Location = new System.Drawing.Point(46, 324);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(344, 31);
             this.label14.TabIndex = 42;
@@ -295,7 +397,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(714, 178);
+            this.label5.Location = new System.Drawing.Point(38, 243);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(109, 31);
             this.label5.TabIndex = 42;
@@ -306,7 +408,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(947, 178);
+            this.label13.Location = new System.Drawing.Point(271, 243);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(109, 31);
             this.label13.TabIndex = 42;
@@ -317,7 +419,7 @@
             this.txtTotalM2Entrada.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotalM2Entrada.Enabled = false;
             this.txtTotalM2Entrada.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTotalM2Entrada.Location = new System.Drawing.Point(829, 175);
+            this.txtTotalM2Entrada.Location = new System.Drawing.Point(153, 240);
             this.txtTotalM2Entrada.Name = "txtTotalM2Entrada";
             this.txtTotalM2Entrada.Size = new System.Drawing.Size(88, 38);
             this.txtTotalM2Entrada.TabIndex = 43;
@@ -352,6 +454,7 @@
             this.txtLarguraEntrada.Name = "txtLarguraEntrada";
             this.txtLarguraEntrada.Size = new System.Drawing.Size(89, 38);
             this.txtLarguraEntrada.TabIndex = 43;
+            this.txtLarguraEntrada.Text = "0,";
             this.txtLarguraEntrada.TextChanged += new System.EventHandler(this.txtLarguraEntrada_TextChanged);
             // 
             // label11
@@ -392,7 +495,7 @@
             this.txtMaterialEntrada.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtMaterialEntrada.Location = new System.Drawing.Point(243, 104);
             this.txtMaterialEntrada.Name = "txtMaterialEntrada";
-            this.txtMaterialEntrada.Size = new System.Drawing.Size(955, 38);
+            this.txtMaterialEntrada.Size = new System.Drawing.Size(580, 38);
             this.txtMaterialEntrada.TabIndex = 43;
             // 
             // label9
@@ -444,7 +547,7 @@
             this.btnDeletar.ForeColor = System.Drawing.Color.Black;
             this.btnDeletar.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletar.Image")));
             this.btnDeletar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDeletar.Location = new System.Drawing.Point(818, 413);
+            this.btnDeletar.Location = new System.Drawing.Point(791, 449);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(159, 75);
             this.btnDeletar.TabIndex = 33;
@@ -459,7 +562,7 @@
             this.btnSalvar.ForeColor = System.Drawing.Color.Black;
             this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(818, 297);
+            this.btnSalvar.Location = new System.Drawing.Point(791, 333);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(159, 75);
             this.btnSalvar.TabIndex = 34;
@@ -540,7 +643,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.tabPage1.Controls.Add(this.rbCancelado);
+            this.tabPage1.Controls.Add(this.rbSaida);
             this.tabPage1.Controls.Add(this.rtbSaida);
             this.tabPage1.Controls.Add(this.txtTotalM2Saida);
             this.tabPage1.Controls.Add(this.txtTotalM3Saida);
@@ -569,19 +672,18 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Saida Material";
             // 
-            // rbCancelado
+            // rbSaida
             // 
-            this.rbCancelado.AutoSize = true;
-            this.rbCancelado.Checked = true;
-            this.rbCancelado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rbCancelado.ForeColor = System.Drawing.Color.Red;
-            this.rbCancelado.Location = new System.Drawing.Point(19, 128);
-            this.rbCancelado.Name = "rbCancelado";
-            this.rbCancelado.Size = new System.Drawing.Size(117, 42);
-            this.rbCancelado.TabIndex = 57;
-            this.rbCancelado.TabStop = true;
-            this.rbCancelado.Text = "Saida.";
-            this.rbCancelado.UseVisualStyleBackColor = true;
+            this.rbSaida.AutoSize = true;
+            this.rbSaida.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rbSaida.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbSaida.ForeColor = System.Drawing.Color.Red;
+            this.rbSaida.Location = new System.Drawing.Point(19, 128);
+            this.rbSaida.Name = "rbSaida";
+            this.rbSaida.Size = new System.Drawing.Size(117, 42);
+            this.rbSaida.TabIndex = 57;
+            this.rbSaida.Text = "Saida.";
+            this.rbSaida.UseVisualStyleBackColor = true;
             // 
             // rtbSaida
             // 
@@ -784,6 +886,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSaidaMaterial)).EndInit();
             this.tabControl1.ResumeLayout(false);
@@ -852,5 +956,15 @@
         private Label label17;
         private RadioButton rbPendente;
         private RadioButton rbCancelado;
+        private Panel panel1;
+        private Label label20;
+        private Label label19;
+        private TextBox txtConverterTotalML;
+        private TextBox txtLarguraPiso;
+        private TextBox txtMetragemCaixa;
+        private Label label18;
+        private Label label21;
+        private RadioButton rbEntrada;
+        private RadioButton rbSaida;
     }
 }
