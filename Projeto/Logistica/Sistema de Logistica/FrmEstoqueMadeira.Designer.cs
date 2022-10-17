@@ -40,13 +40,13 @@
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.txtConverterTotalML = new System.Windows.Forms.TextBox();
-            this.txtLarguraPiso = new System.Windows.Forms.TextBox();
-            this.txtMetragemCaixa = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
+            this.txtTotalM = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtConverterLargura = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
+            this.txtConverterM2 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.rbEntrada = new System.Windows.Forms.RadioButton();
             this.btnGerarId = new System.Windows.Forms.Button();
             this.txtDataId = new System.Windows.Forms.TextBox();
@@ -54,11 +54,11 @@
             this.txtTotalM3Entrada = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.txtEntradaMetroLinear = new System.Windows.Forms.TextBox();
             this.txtTotalM2Entrada = new System.Windows.Forms.TextBox();
-            this.txtCalcularEntrada = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.txtMetroEntrada = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtLarguraEntrada = new System.Windows.Forms.TextBox();
@@ -78,13 +78,13 @@
             this.btnLimparSaida = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label23 = new System.Windows.Forms.Label();
             this.txtCalcularSaida = new System.Windows.Forms.TextBox();
             this.rbSaida = new System.Windows.Forms.RadioButton();
             this.rtbSaida = new System.Windows.Forms.RichTextBox();
             this.txtTotalM3Saida = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.txtMetroSaida = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtLarguraSaida = new System.Windows.Forms.TextBox();
@@ -170,7 +170,7 @@
             this.btnLimparEntrada.ForeColor = System.Drawing.Color.Black;
             this.btnLimparEntrada.Image = ((System.Drawing.Image)(resources.GetObject("btnLimparEntrada.Image")));
             this.btnLimparEntrada.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnLimparEntrada.Location = new System.Drawing.Point(575, 556);
+            this.btnLimparEntrada.Location = new System.Drawing.Point(596, 546);
             this.btnLimparEntrada.Name = "btnLimparEntrada";
             this.btnLimparEntrada.Size = new System.Drawing.Size(159, 75);
             this.btnLimparEntrada.TabIndex = 50;
@@ -185,13 +185,13 @@
             this.dgvData.AllowUserToDeleteRows = false;
             this.dgvData.BackgroundColor = System.Drawing.Color.White;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Location = new System.Drawing.Point(46, 368);
+            this.dgvData.Location = new System.Drawing.Point(55, 333);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 29;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData.Size = new System.Drawing.Size(514, 263);
+            this.dgvData.Size = new System.Drawing.Size(535, 316);
             this.dgvData.TabIndex = 49;
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             this.dgvData.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvData_DataBindingComplete);
@@ -209,11 +209,11 @@
             this.tabPage2.Controls.Add(this.txtTotalM3Entrada);
             this.tabPage2.Controls.Add(this.label17);
             this.tabPage2.Controls.Add(this.label14);
+            this.tabPage2.Controls.Add(this.label18);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label13);
+            this.tabPage2.Controls.Add(this.txtEntradaMetroLinear);
             this.tabPage2.Controls.Add(this.txtTotalM2Entrada);
-            this.tabPage2.Controls.Add(this.txtCalcularEntrada);
-            this.tabPage2.Controls.Add(this.label22);
             this.tabPage2.Controls.Add(this.txtMetroEntrada);
             this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.txtLarguraEntrada);
@@ -237,106 +237,109 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.txtConverterTotalML);
-            this.panel1.Controls.Add(this.txtLarguraPiso);
-            this.panel1.Controls.Add(this.txtMetragemCaixa);
-            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.txtTotalM);
+            this.panel1.Controls.Add(this.label22);
+            this.panel1.Controls.Add(this.txtConverterLargura);
             this.panel1.Controls.Add(this.label21);
-            this.panel1.Location = new System.Drawing.Point(842, 104);
+            this.panel1.Controls.Add(this.txtConverterM2);
+            this.panel1.Controls.Add(this.label20);
+            this.panel1.Location = new System.Drawing.Point(810, 108);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(368, 273);
+            this.panel1.Size = new System.Drawing.Size(385, 300);
             this.panel1.TabIndex = 53;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label19.ForeColor = System.Drawing.Color.Yellow;
+            this.label19.Location = new System.Drawing.Point(66, 29);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(244, 31);
+            this.label19.TabIndex = 42;
+            this.label19.Text = "Converter M² para M:";
+            // 
+            // txtTotalM
+            // 
+            this.txtTotalM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtTotalM.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtTotalM.Enabled = false;
+            this.txtTotalM.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTotalM.Location = new System.Drawing.Point(218, 222);
+            this.txtTotalM.Name = "txtTotalM";
+            this.txtTotalM.Size = new System.Drawing.Size(89, 38);
+            this.txtTotalM.TabIndex = 43;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label22.ForeColor = System.Drawing.Color.White;
+            this.label22.Location = new System.Drawing.Point(102, 226);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(101, 31);
+            this.label22.TabIndex = 42;
+            this.label22.Text = "Total M:";
+            // 
+            // txtConverterLargura
+            // 
+            this.txtConverterLargura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtConverterLargura.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtConverterLargura.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtConverterLargura.ForeColor = System.Drawing.Color.Red;
+            this.txtConverterLargura.Location = new System.Drawing.Point(218, 148);
+            this.txtConverterLargura.Name = "txtConverterLargura";
+            this.txtConverterLargura.Size = new System.Drawing.Size(89, 38);
+            this.txtConverterLargura.TabIndex = 43;
+            this.txtConverterLargura.Text = "0";
+            this.txtConverterLargura.TextChanged += new System.EventHandler(this.txtConverterLargura_TextChanged);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(101, 152);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(102, 31);
+            this.label21.TabIndex = 42;
+            this.label21.Text = "Largura:";
+            // 
+            // txtConverterM2
+            // 
+            this.txtConverterM2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtConverterM2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtConverterM2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtConverterM2.ForeColor = System.Drawing.Color.Red;
+            this.txtConverterM2.Location = new System.Drawing.Point(218, 71);
+            this.txtConverterM2.Name = "txtConverterM2";
+            this.txtConverterM2.Size = new System.Drawing.Size(89, 38);
+            this.txtConverterM2.TabIndex = 43;
+            this.txtConverterM2.TextChanged += new System.EventHandler(this.txtConverterM2_TextChanged);
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(34, 204);
+            this.label20.Location = new System.Drawing.Point(93, 75);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(159, 31);
-            this.label20.TabIndex = 44;
-            this.label20.Text = "Metro Linear:";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(49, 135);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(153, 31);
-            this.label19.TabIndex = 45;
-            this.label19.Text = "Largura Piso:";
-            // 
-            // txtConverterTotalML
-            // 
-            this.txtConverterTotalML.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtConverterTotalML.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtConverterTotalML.Enabled = false;
-            this.txtConverterTotalML.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtConverterTotalML.Location = new System.Drawing.Point(208, 200);
-            this.txtConverterTotalML.Name = "txtConverterTotalML";
-            this.txtConverterTotalML.Size = new System.Drawing.Size(73, 38);
-            this.txtConverterTotalML.TabIndex = 47;
-            // 
-            // txtLarguraPiso
-            // 
-            this.txtLarguraPiso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtLarguraPiso.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtLarguraPiso.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtLarguraPiso.ForeColor = System.Drawing.Color.Red;
-            this.txtLarguraPiso.Location = new System.Drawing.Point(208, 132);
-            this.txtLarguraPiso.Name = "txtLarguraPiso";
-            this.txtLarguraPiso.Size = new System.Drawing.Size(73, 38);
-            this.txtLarguraPiso.TabIndex = 48;
-            this.txtLarguraPiso.TextChanged += new System.EventHandler(this.txtConverterTotalM2_TextChanged);
-            // 
-            // txtMetragemCaixa
-            // 
-            this.txtMetragemCaixa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtMetragemCaixa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMetragemCaixa.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtMetragemCaixa.ForeColor = System.Drawing.Color.Red;
-            this.txtMetragemCaixa.Location = new System.Drawing.Point(208, 69);
-            this.txtMetragemCaixa.Name = "txtMetragemCaixa";
-            this.txtMetragemCaixa.Size = new System.Drawing.Size(73, 38);
-            this.txtMetragemCaixa.TabIndex = 49;
-            this.txtMetragemCaixa.TextChanged += new System.EventHandler(this.txtConverterM2_TextChanged);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(55, 73);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(147, 31);
-            this.label18.TabIndex = 46;
-            this.label18.Text = "M² na Caixa:";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label21.ForeColor = System.Drawing.Color.Yellow;
-            this.label21.Location = new System.Drawing.Point(3, 10);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(354, 31);
-            this.label21.TabIndex = 42;
-            this.label21.Text = "Converter M² para Metro Linear";
+            this.label20.Size = new System.Drawing.Size(110, 31);
+            this.label20.TabIndex = 42;
+            this.label20.Text = "M² Total:";
             // 
             // rbEntrada
             // 
             this.rbEntrada.AutoSize = true;
+            this.rbEntrada.Checked = true;
             this.rbEntrada.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbEntrada.ForeColor = System.Drawing.Color.Lime;
-            this.rbEntrada.Location = new System.Drawing.Point(987, 19);
+            this.rbEntrada.Location = new System.Drawing.Point(983, 21);
             this.rbEntrada.Name = "rbEntrada";
             this.rbEntrada.Size = new System.Drawing.Size(147, 42);
             this.rbEntrada.TabIndex = 52;
+            this.rbEntrada.TabStop = true;
             this.rbEntrada.Text = "Entrada.";
             this.rbEntrada.UseVisualStyleBackColor = true;
             // 
@@ -356,7 +359,7 @@
             // 
             this.txtDataId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtDataId.Enabled = false;
-            this.txtDataId.Location = new System.Drawing.Point(3, 368);
+            this.txtDataId.Location = new System.Drawing.Point(6, 294);
             this.txtDataId.Name = "txtDataId";
             this.txtDataId.Size = new System.Drawing.Size(36, 38);
             this.txtDataId.TabIndex = 44;
@@ -375,7 +378,7 @@
             this.txtTotalM3Entrada.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotalM3Entrada.Enabled = false;
             this.txtTotalM3Entrada.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTotalM3Entrada.Location = new System.Drawing.Point(500, 248);
+            this.txtTotalM3Entrada.Location = new System.Drawing.Point(451, 235);
             this.txtTotalM3Entrada.Name = "txtTotalM3Entrada";
             this.txtTotalM3Entrada.Size = new System.Drawing.Size(118, 38);
             this.txtTotalM3Entrada.TabIndex = 43;
@@ -385,7 +388,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label17.ForeColor = System.Drawing.Color.Yellow;
-            this.label17.Location = new System.Drawing.Point(765, 407);
+            this.label17.Location = new System.Drawing.Point(774, 424);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(223, 217);
             this.label17.TabIndex = 42;
@@ -397,18 +400,29 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(46, 324);
+            this.label14.Location = new System.Drawing.Point(55, 297);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(344, 31);
             this.label14.TabIndex = 42;
             this.label14.Text = "Tabela de Entrada de Madeiras.";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(774, 29);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(102, 31);
+            this.label18.TabIndex = 42;
+            this.label18.Text = "Entrada:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(150, 252);
+            this.label5.Location = new System.Drawing.Point(101, 239);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(109, 31);
             this.label5.TabIndex = 42;
@@ -419,46 +433,35 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(383, 252);
+            this.label13.Location = new System.Drawing.Point(334, 239);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(109, 31);
             this.label13.TabIndex = 42;
             this.label13.Text = "Total m³:";
+            // 
+            // txtEntradaMetroLinear
+            // 
+            this.txtEntradaMetroLinear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtEntradaMetroLinear.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtEntradaMetroLinear.Enabled = false;
+            this.txtEntradaMetroLinear.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtEntradaMetroLinear.ForeColor = System.Drawing.Color.Red;
+            this.txtEntradaMetroLinear.Location = new System.Drawing.Point(882, 26);
+            this.txtEntradaMetroLinear.Name = "txtEntradaMetroLinear";
+            this.txtEntradaMetroLinear.Size = new System.Drawing.Size(88, 38);
+            this.txtEntradaMetroLinear.TabIndex = 43;
+            this.txtEntradaMetroLinear.TextChanged += new System.EventHandler(this.txtEntradaMetroLinear_TextChanged);
             // 
             // txtTotalM2Entrada
             // 
             this.txtTotalM2Entrada.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotalM2Entrada.Enabled = false;
             this.txtTotalM2Entrada.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTotalM2Entrada.Location = new System.Drawing.Point(265, 249);
+            this.txtTotalM2Entrada.Location = new System.Drawing.Point(216, 236);
             this.txtTotalM2Entrada.Name = "txtTotalM2Entrada";
             this.txtTotalM2Entrada.Size = new System.Drawing.Size(88, 38);
             this.txtTotalM2Entrada.TabIndex = 43;
             this.txtTotalM2Entrada.TextChanged += new System.EventHandler(this.txtTotalM2Entrada_TextChanged);
-            // 
-            // txtCalcularEntrada
-            // 
-            this.txtCalcularEntrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtCalcularEntrada.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCalcularEntrada.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtCalcularEntrada.ForeColor = System.Drawing.Color.Red;
-            this.txtCalcularEntrada.Location = new System.Drawing.Point(897, 20);
-            this.txtCalcularEntrada.Name = "txtCalcularEntrada";
-            this.txtCalcularEntrada.Size = new System.Drawing.Size(73, 38);
-            this.txtCalcularEntrada.TabIndex = 43;
-            this.txtCalcularEntrada.Text = "0";
-            this.txtCalcularEntrada.TextChanged += new System.EventHandler(this.txtCalcularEntrada_TextChanged);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(723, 24);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(168, 31);
-            this.label22.TabIndex = 42;
-            this.label22.Text = "Entrada em m:";
             // 
             // txtMetroEntrada
             // 
@@ -484,13 +487,13 @@
             // 
             // txtLarguraEntrada
             // 
+            this.txtLarguraEntrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtLarguraEntrada.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtLarguraEntrada.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtLarguraEntrada.Location = new System.Drawing.Point(359, 174);
             this.txtLarguraEntrada.Name = "txtLarguraEntrada";
             this.txtLarguraEntrada.Size = new System.Drawing.Size(89, 38);
             this.txtLarguraEntrada.TabIndex = 43;
-            this.txtLarguraEntrada.Text = "0";
             this.txtLarguraEntrada.TextChanged += new System.EventHandler(this.txtLarguraEntrada_TextChanged);
             // 
             // label11
@@ -506,6 +509,7 @@
             // 
             // txtEspessuraEntrada
             // 
+            this.txtEspessuraEntrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtEspessuraEntrada.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEspessuraEntrada.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtEspessuraEntrada.Location = new System.Drawing.Point(153, 174);
@@ -532,7 +536,7 @@
             this.txtMaterialEntrada.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtMaterialEntrada.Location = new System.Drawing.Point(243, 104);
             this.txtMaterialEntrada.Name = "txtMaterialEntrada";
-            this.txtMaterialEntrada.Size = new System.Drawing.Size(580, 38);
+            this.txtMaterialEntrada.Size = new System.Drawing.Size(536, 38);
             this.txtMaterialEntrada.TabIndex = 43;
             // 
             // label9
@@ -584,7 +588,7 @@
             this.btnDeletar.ForeColor = System.Drawing.Color.Black;
             this.btnDeletar.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletar.Image")));
             this.btnDeletar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDeletar.Location = new System.Drawing.Point(575, 461);
+            this.btnDeletar.Location = new System.Drawing.Point(596, 442);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(159, 75);
             this.btnDeletar.TabIndex = 33;
@@ -599,7 +603,7 @@
             this.btnSalvar.ForeColor = System.Drawing.Color.Black;
             this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(575, 368);
+            this.btnSalvar.Location = new System.Drawing.Point(596, 333);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(159, 75);
             this.btnSalvar.TabIndex = 34;
@@ -680,6 +684,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.tabPage1.Controls.Add(this.label23);
             this.tabPage1.Controls.Add(this.txtCalcularSaida);
             this.tabPage1.Controls.Add(this.rbSaida);
             this.tabPage1.Controls.Add(this.rtbSaida);
@@ -687,7 +692,6 @@
             this.tabPage1.Controls.Add(this.txtTotalM3Saida);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.label23);
             this.tabPage1.Controls.Add(this.txtMetroSaida);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.txtLarguraSaida);
@@ -711,28 +715,41 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Saida Material";
             // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Location = new System.Drawing.Point(519, 72);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(78, 31);
+            this.label23.TabIndex = 58;
+            this.label23.Text = "Saida:";
+            // 
             // txtCalcularSaida
             // 
             this.txtCalcularSaida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtCalcularSaida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtCalcularSaida.Enabled = false;
             this.txtCalcularSaida.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtCalcularSaida.ForeColor = System.Drawing.Color.Red;
-            this.txtCalcularSaida.Location = new System.Drawing.Point(551, 65);
+            this.txtCalcularSaida.Location = new System.Drawing.Point(603, 68);
             this.txtCalcularSaida.Name = "txtCalcularSaida";
-            this.txtCalcularSaida.Size = new System.Drawing.Size(73, 38);
-            this.txtCalcularSaida.TabIndex = 58;
-            this.txtCalcularSaida.Text = "0";
-            this.txtCalcularSaida.TextChanged += new System.EventHandler(this.txtCalcularSaida_TextChanged);
+            this.txtCalcularSaida.Size = new System.Drawing.Size(88, 38);
+            this.txtCalcularSaida.TabIndex = 59;
+            this.txtCalcularSaida.TextChanged += new System.EventHandler(this.txtCalcularSaida_TextChanged_1);
             // 
             // rbSaida
             // 
             this.rbSaida.AutoSize = true;
+            this.rbSaida.Checked = true;
             this.rbSaida.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbSaida.ForeColor = System.Drawing.Color.Red;
-            this.rbSaida.Location = new System.Drawing.Point(641, 63);
+            this.rbSaida.Location = new System.Drawing.Point(697, 66);
             this.rbSaida.Name = "rbSaida";
             this.rbSaida.Size = new System.Drawing.Size(117, 42);
             this.rbSaida.TabIndex = 57;
+            this.rbSaida.TabStop = true;
             this.rbSaida.Text = "Saida.";
             this.rbSaida.UseVisualStyleBackColor = true;
             // 
@@ -776,17 +793,6 @@
             this.label2.Size = new System.Drawing.Size(109, 31);
             this.label2.TabIndex = 45;
             this.label2.Text = "Total m³:";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(401, 69);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(144, 31);
-            this.label23.TabIndex = 46;
-            this.label23.Text = "Saida em m:";
             // 
             // txtMetroSaida
             // 
@@ -1017,21 +1023,19 @@
         private TextBox txtMaterialSaida;
         private Label label15;
         private Label label17;
-        private RadioButton rbPendente;
-        private RadioButton rbCancelado;
-        private Panel panel1;
-        private Label label20;
-        private Label label19;
-        private TextBox txtConverterTotalML;
-        private TextBox txtLarguraPiso;
-        private TextBox txtMetragemCaixa;
-        private Label label18;
-        private Label label21;
         private RadioButton rbEntrada;
         private RadioButton rbSaida;
-        private TextBox txtCalcularEntrada;
+        private Label label18;
+        private TextBox txtEntradaMetroLinear;
+        private Panel panel1;
+        private Label label19;
+        private TextBox txtTotalM;
         private Label label22;
-        private TextBox txtCalcularSaida;
+        private TextBox txtConverterLargura;
+        private Label label21;
+        private TextBox txtConverterM2;
+        private Label label20;
         private Label label23;
+        private TextBox txtCalcularSaida;
     }
 }
