@@ -102,7 +102,6 @@
             this.cmsSalvar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSaidaMaterial)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -199,7 +198,6 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.tabPage2.Controls.Add(this.panel1);
             this.tabPage2.Controls.Add(this.rbEntrada);
             this.tabPage2.Controls.Add(this.btnLimparEntrada);
             this.tabPage2.Controls.Add(this.dgvData);
@@ -234,7 +232,7 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Entrada Material";
             // 
-            // panel1
+            // rbPendente
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.label19);
@@ -955,8 +953,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSaidaMaterial)).EndInit();
             this.tabControl1.ResumeLayout(false);
