@@ -52,10 +52,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(798, 312);
+            this.pictureBox1.Location = new System.Drawing.Point(797, 253);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 110);
+            this.pictureBox1.Size = new System.Drawing.Size(147, 120);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 37;
             this.pictureBox1.TabStop = false;
@@ -67,15 +67,16 @@
             this.dgvFerramentas.BackgroundColor = System.Drawing.Color.White;
             this.dgvFerramentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFerramentas.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvFerramentas.Location = new System.Drawing.Point(0, 454);
+            this.dgvFerramentas.Location = new System.Drawing.Point(0, 404);
             this.dgvFerramentas.Name = "dgvFerramentas";
             this.dgvFerramentas.ReadOnly = true;
             this.dgvFerramentas.RowHeadersWidth = 51;
             this.dgvFerramentas.RowTemplate.Height = 29;
             this.dgvFerramentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFerramentas.Size = new System.Drawing.Size(957, 259);
+            this.dgvFerramentas.Size = new System.Drawing.Size(957, 309);
             this.dgvFerramentas.TabIndex = 36;
             this.dgvFerramentas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFerramentas_CellDoubleClick);
+            this.dgvFerramentas.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvFerramentas_DataBindingComplete);
             // 
             // btnLimpar
             // 
@@ -83,13 +84,14 @@
             this.btnLimpar.ForeColor = System.Drawing.Color.Black;
             this.btnLimpar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpar.Image")));
             this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpar.Location = new System.Drawing.Point(568, 156);
+            this.btnLimpar.Location = new System.Drawing.Point(543, 141);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(122, 62);
             this.btnLimpar.TabIndex = 33;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnDeletar
             // 
@@ -97,7 +99,7 @@
             this.btnDeletar.ForeColor = System.Drawing.Color.Black;
             this.btnDeletar.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletar.Image")));
             this.btnDeletar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeletar.Location = new System.Drawing.Point(568, 360);
+            this.btnDeletar.Location = new System.Drawing.Point(543, 311);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(122, 62);
             this.btnDeletar.TabIndex = 34;
@@ -112,7 +114,7 @@
             this.btnSalvar.ForeColor = System.Drawing.Color.Black;
             this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(568, 259);
+            this.btnSalvar.Location = new System.Drawing.Point(543, 219);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(122, 62);
             this.btnSalvar.TabIndex = 35;
@@ -136,7 +138,7 @@
             // 
             this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNome.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNome.Location = new System.Drawing.Point(32, 180);
+            this.txtNome.Location = new System.Drawing.Point(32, 165);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(498, 38);
             this.txtNome.TabIndex = 32;
@@ -154,7 +156,7 @@
             // 
             // rtbEquipamento
             // 
-            this.rtbEquipamento.Location = new System.Drawing.Point(32, 302);
+            this.rtbEquipamento.Location = new System.Drawing.Point(32, 253);
             this.rtbEquipamento.Name = "rtbEquipamento";
             this.rtbEquipamento.Size = new System.Drawing.Size(498, 120);
             this.rtbEquipamento.TabIndex = 38;
@@ -165,7 +167,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(32, 250);
+            this.label1.Location = new System.Drawing.Point(32, 219);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(163, 31);
             this.label1.TabIndex = 30;
@@ -216,7 +218,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(272, 24);
+            this.label4.Location = new System.Drawing.Point(309, 14);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 31);
             this.label4.TabIndex = 30;
@@ -232,7 +234,7 @@
             this.cbSelecionar.Items.AddRange(new object[] {
             "Pendente",
             "Devolvido"});
-            this.cbSelecionar.Location = new System.Drawing.Point(203, 61);
+            this.cbSelecionar.Location = new System.Drawing.Point(238, 48);
             this.cbSelecionar.Name = "cbSelecionar";
             this.cbSelecionar.Size = new System.Drawing.Size(246, 39);
             this.cbSelecionar.TabIndex = 41;

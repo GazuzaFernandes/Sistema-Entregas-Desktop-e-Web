@@ -13,7 +13,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 InitializeComponent();
                 reportViewer1.LocalReport.DataSources.Clear();
 
-                reportViewer1.LocalReport.ReportEmbeddedResource = "Projeto.Impressao.rdlc";
+                reportViewer1.LocalReport.ReportEmbeddedResource = "Projeto.Logistica.Sistema_de_Logistica.Impressao.rdlc";
 
                 ReportParameter[] p = new ReportParameter[5];
 

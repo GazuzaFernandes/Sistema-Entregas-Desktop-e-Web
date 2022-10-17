@@ -196,18 +196,33 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
                     if (rtbComentario.Text != "")
                     {
                         var comentario = LerComentario();
-                        int historicoComentario = 0;
+                        int historicoId = 0;
                         if (txtIdHistorico.Text != "")
                         {
-                            historicoComentario = Convert.ToInt32(txtIdHistorico.Text);
+                            historicoId = Convert.ToInt32(txtIdHistorico.Text);
                         }
-                        int propostaid = 0;
+                        int engId = 0;
                         if (txtPropostId.Text != "")
                         {
-                            propostaid = Convert.ToInt32(txtPropostId.Text);
+                            engId = Convert.ToInt32(txtPropostId.Text);
                         }
-                        var listaHistorico = new DLHistoricoEngenharia().Listar();
-                        var prop = listaHistorico.Where(ip => ip.EngenheiroId == propostaid); //por proppostaid
+                        var listaProposta = new DLHistoricoEngenharia().Listar();             
+                        var prop = listaProposta.Where(ip => ip.EngenheiroId == engId 
+                                        && ip.HistoricoId == historicoId
+                                        ).FirstOrDefault();
+                        if (prop != null && prop.HistoricoId > 0)
+                        {
+                            prop.Comentario = rtbComentario.Text;
+                            prop.DataComentario = dtpHistorico.Value;
+                            prop.ComentadoEng = cbComentado.Text;
+                            prop.EngenheiroId = Convert.ToInt32(txtPropostId.Text);
+                            new DLHistoricoEngenharia().Atualizar(prop);
+                        }
+                        else
+                        {
+                            new DLHistoricoEngenharia().Inserir(comentario);
+                        }
+                        CarregarGridHistorico();
                     }
                 }
             }
@@ -221,12 +236,13 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
         {
             try
             {
-                var historico = dgvHistorico.Rows[e.RowIndex].DataBoundItem as Historico;
+                var historico = dgvHistorico.Rows[e.RowIndex].DataBoundItem as HistoricoEngenharia;
                 if (historico != null)
                 {
                     txtIdHistorico.Text = historico.HistoricoId.ToString();
                     rtbComentario.Text = historico.Comentario;
                     dtpHistorico.Value = historico.DataComentario;
+                    cbComentado.Text = historico.ComentadoEng;
                 }
             }
             catch (Exception ex)
@@ -264,14 +280,14 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
         {
             try
             {
-                dgvHistorico.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 16F, GraphicsUnit.Pixel);
+                dgvHistorico.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 22F, GraphicsUnit.Pixel);
                 var objBlControleGrid = new ControleGrid(dgvHistorico);
                 //Define quais colunas serão visíveis
-                objBlControleGrid.DefinirVisibilidade(new List<string>() { "DataComentario", "Comentario", });
+                objBlControleGrid.DefinirVisibilidade(new List<string>() { "Comentario", "DataComentario", "ComentadoEng" });
                 //Define quais os cabeçalhos respectivos das colunas 
-                objBlControleGrid.DefinirCabecalhos(new List<string>() { "Data do Comentario", "Comentario", });
+                objBlControleGrid.DefinirCabecalhos(new List<string>() { "Comentario", "Data do Comentario","Responsavel Rb" });
                 //Define quais as larguras respectivas das colunas 
-                objBlControleGrid.DefinirLarguras(new List<int>() { 20, 80 }, dgvHistorico.Width - 15); //O total tem que ficar em 100% 
+                objBlControleGrid.DefinirLarguras(new List<int>() { 77, 10, 10 }, dgvHistorico.Width - 15); //O total tem que ficar em 100% 
                 //Define quais os alinhamentos respectivos do componentes das colunas 
                 objBlControleGrid.DefinirAlinhamento(new List<string>() { "esquerda", "centro", });
                 //Define a altura das linhas respectivas da Grid 
@@ -342,7 +358,45 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
             }
         }
 
-        #endregion     
+        #endregion
+
+        private void mtSalvarProposta_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                bool camposSaoValidos = ValidarCampos();
+                if (camposSaoValidos == true)
+                {
+                    int id = 0;
+                    int.TryParse(txtPropostId.Text, out id);
+                    if (id > 0)
+                    {
+                        var pAtua = new DLPropostaEngenharia().ConsultarPorId(id);
+                        pAtua.Proposta = txtProposta.Text;
+                        pAtua.Cliente = txtCliente.Text;
+                        pAtua.Funcionario = txtFuncionario.Text;
+                        pAtua.Responsavel = txtEngResponsavel.Text;
+                        pAtua.Telefone = txtTelefone.Text;
+                        pAtua.Obra = txtObra.Text;
+                        pAtua.DataInclusao = dtpDataIncluido.Value;
+                        if (rbPendente.Checked == true)
+                            pAtua.StatusObraId = 1;
+                        else if (rbPendente.Checked == true)
+                            pAtua.StatusObraId = 2;
+                        else if (rbFinalizado.Checked == true)
+                            pAtua.StatusObraId = 3;
+                        new DLPropostaEngenharia().Atualizar(pAtua);
+                        MessageBox.Show("Proposta Atualizada com Sucesso!");
+                        LimparDadosProposta();
+                        Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+        }
     }
 
 }

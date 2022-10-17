@@ -2,7 +2,7 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="DAL.Entities.Logistica">
+    <DataSource Name="DALEntitiesLogistica">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
@@ -13,7 +13,7 @@
   <DataSets>
     <DataSet Name="DsItensProposta">
       <Query>
-        <DataSourceName>DAL.Entities.Logistica</DataSourceName>
+        <DataSourceName>DALEntitiesLogistica</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -63,14 +63,14 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DALLogistica.Entities</rd:DataSetName>
+        <rd:DataSetName>DAL.Entities.Logistica</rd:DataSetName>
         <rd:TableName>itensproposta</rd:TableName>
-        <rd:ObjectDataSourceType>DALLogistica.Entities.itensproposta, DALLogistica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:ObjectDataSourceType>DALEntitiesLogistica.ItensProposta, DALEntitiesLogistica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="DsHistorico">
       <Query>
-        <DataSourceName>DAL.Entities.Logistica</DataSourceName>
+        <DataSourceName>DALEntitiesLogistica</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -94,7 +94,7 @@
       <rd:DataSetInfo>
         <rd:DataSetName>DALLogistica.Entities</rd:DataSetName>
         <rd:TableName>historico</rd:TableName>
-        <rd:ObjectDataSourceType>DALLogistica.Entities.historico, DALLogistica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:ObjectDataSourceType>DALEntitiesLogistica.HistoricoComentario, DALEntitiesLogistica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -107,9 +107,9 @@
             <Value>RBPISOS1</Value>
             <Sizing>Fit</Sizing>
             <Top>0.33459cm</Top>
-            <Left>9.19903cm</Left>
-            <Height>2.17733cm</Height>
-            <Width>3.04517cm</Width>
+            <Left>8.13102cm</Left>
+            <Height>1.73283cm</Height>
+            <Width>3.63783cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -154,9 +154,9 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>0.49953cm</Top>
-            <Left>0.6477cm</Left>
-            <Height>0.74817cm</Height>
+            <Top>0.33459cm</Top>
+            <Left>0.80502cm</Left>
+            <Height>0.6635cm</Height>
             <Width>7.05083cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
@@ -205,8 +205,8 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>1.76375cm</Top>
-            <Left>0.6477cm</Left>
+            <Top>1.03337cm</Top>
+            <Left>0.80502cm</Left>
             <Height>0.74817cm</Height>
             <Width>7.05083cm</Width>
             <ZIndex>2</ZIndex>
@@ -264,8 +264,8 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>3.03375cm</Top>
-            <Left>0.6477cm</Left>
+            <Top>2.06742cm</Top>
+            <Left>0.80502cm</Left>
             <Height>0.74817cm</Height>
             <Width>11.25783cm</Width>
             <ZIndex>3</ZIndex>
@@ -315,8 +315,8 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>4.28259cm</Top>
-            <Left>0.6477cm</Left>
+            <Top>2.88615cm</Top>
+            <Left>0.80502cm</Left>
             <Height>0.74817cm</Height>
             <Width>11.25783cm</Width>
             <ZIndex>4</ZIndex>
@@ -367,6 +367,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <BackgroundColor>Yellow</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -396,7 +397,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Material</rd:DefaultName>
@@ -405,6 +408,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -433,7 +437,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DsItensProposta</DataSetName>
-            <Top>5.17187cm</Top>
+            <Top>3.74015cm</Top>
             <Left>0.6477cm</Left>
             <Height>1.2cm</Height>
             <Width>11.25783cm</Width>
@@ -488,6 +492,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <BackgroundColor>Yellow</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -522,6 +527,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <BackgroundColor>Yellow</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -555,6 +561,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <BackgroundColor>Yellow</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -581,7 +588,9 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>UndMedida</rd:DefaultName>
@@ -590,6 +599,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -608,10 +618,14 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Quantidade.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Quantidade</rd:DefaultName>
@@ -640,11 +654,14 @@
                                   <Value>=Fields!QtdCaixa.Value</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
                                     <Color>Red</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>QtdCaixa</rd:DefaultName>
@@ -653,6 +670,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -683,8 +701,8 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DsItensProposta</DataSetName>
-            <Top>6.8587cm</Top>
-            <Left>2.54068cm</Left>
+            <Top>5.04598cm</Top>
+            <Left>2.26551cm</Left>
             <Height>1.2cm</Height>
             <Width>8.32317cm</Width>
             <ZIndex>6</ZIndex>
@@ -730,56 +748,11 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>8.23509cm</Top>
-            <Left>0.6477cm</Left>
+            <Top>6.35182cm</Top>
+            <Left>3.4348cm</Left>
             <Height>0.74817cm</Height>
-            <Width>11.25783cm</Width>
+            <Width>6.40313cm</Width>
             <ZIndex>7</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="txtObra3">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Prestar Atenção na Data do Comentario Considerar o Ultimo Comentario: </Value>
-                    <Style>
-                      <FontSize>16pt</FontSize>
-                      <Color>Red</Color>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value />
-                    <Style>
-                      <FontSize>14pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                      <Color>Red</Color>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <Top>9.51087cm</Top>
-            <Left>0.6477cm</Left>
-            <Height>1.57367cm</Height>
-            <Width>11.41515cm</Width>
-            <ZIndex>8</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -794,10 +767,10 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.8544cm</Width>
+                  <Width>2.94442cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>9.56075cm</Width>
+                  <Width>8.62805cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -821,7 +794,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox27</rd:DefaultName>
@@ -830,6 +805,8 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <BackgroundColor>Yellow</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -848,7 +825,11 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Comentario</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>11pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>Red</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -862,6 +843,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <BackgroundColor>Yellow</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -892,7 +874,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>DataComentario</rd:DefaultName>
@@ -901,6 +885,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -922,7 +907,9 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Comentario</rd:DefaultName>
@@ -931,6 +918,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -960,11 +948,11 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DsHistorico</DataSetName>
-            <Top>11.65437cm</Top>
-            <Left>0.6477cm</Left>
+            <Top>7.4422cm</Top>
+            <Left>0.49038cm</Left>
             <Height>1.2cm</Height>
-            <Width>11.41515cm</Width>
-            <ZIndex>9</ZIndex>
+            <Width>11.57247cm</Width>
+            <ZIndex>8</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -973,9 +961,13 @@
           </Tablix>
         </ReportItems>
         <Height>5.5in</Height>
-        <Style />
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
       </Body>
-      <Width>5.06609in</Width>
+      <Width>4.87442in</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>

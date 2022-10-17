@@ -43,17 +43,17 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                     rtbObeservacao.Text = _notafiscal.Comentario;
                     switch (_notafiscal.StatusObraId)//escolha
                     {
-                        case 1:
+                        case 5:
                             {
                                 rbEngenharia.Checked = true;
                             }
                             break;
-                        case 2:
+                        case 6:
                             {
                                 rbComercio.Checked = true;
                             }
                             break;
-                        case 3:
+                        case 7:
                             {
                                 rbPisos.Checked = true;
                             }
@@ -315,7 +315,8 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         {
             try
             {
-                var listarMadeira = new DLItensMadeiraFinanceiro().Listar().Where(p => p.IdProp == Convert.ToInt32(txtGerarId.Text)).ToList();
+                var listarMadeira = new DLItensMadeiraFinanceiro().Listar().Where
+                    (p => p.IdProp == Convert.ToInt32(txtGerarId.Text)).ToList();
                 dgvMaterial.DataSource = null;
                 dgvMaterial.DataSource = listarMadeira;
                 dgvMaterial.Refresh();
@@ -331,12 +332,12 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         {
             try
             {
-                dgvMaterial.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 16F, GraphicsUnit.Pixel);
+                dgvMaterial.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 20F, GraphicsUnit.Pixel);
                 var objBlControleGrid = new ControleGrid(dgvMaterial);
                 //Define quais colunas serão visíveis
-                objBlControleGrid.DefinirVisibilidade(new List<string>() { "Madeiras", "Medida", "Total", });
+                objBlControleGrid.DefinirVisibilidade(new List<string>() { "Material", "Medida", "Total", });
                 //Define quais os cabeçalhos respectivos das colunas 
-                objBlControleGrid.DefinirCabecalhos(new List<string>() { "Madeiras", "Unidade de Medida", "Saida Total", });
+                objBlControleGrid.DefinirCabecalhos(new List<string>() { "Material", "Unidade de Medida", "Saida Total", });
                 //Define quais as larguras respectivas das colunas 
                 objBlControleGrid.DefinirLarguras(new List<int>() { 60, 20, 20, }, dgvMaterial.Width - 15); //O total tem que ficar em 100% 
                 //Define quais os alinhamentos respectivos do componentes das colunas 

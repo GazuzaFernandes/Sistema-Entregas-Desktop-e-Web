@@ -1,6 +1,7 @@
 ﻿
 using DAL.Entities.Logistica;
 using DAL.Repository.Logistica;
+using Logistica.Sistema_de_Logistica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,41 +26,16 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
+                CarregarGrid();
 
-                if (_ferramentas == null)
-                    _ferramentas = new Ferramentas();
-                if (_ferramentas.FerramentaId > 0)
-                {
-                    _ferramentas = new DLFerramentas().ConsultarPorId(_ferramentas.FerramentaId);
-                    txtFerramentaId.Text = _ferramentas.FerramentaId.ToString();
-                    dtpRetirada.Value = _ferramentas.Retirada;
-                    dtpDevolucao.Value = _ferramentas.Devolucao;
-                    txtNome.Text = _ferramentas.Funcionario;
-                    rtbEquipamento.Text = _ferramentas.Material;
-                    switch (cbSelecionar.Text)//escolha
-                    {
-                        case "Pendente":
-                            {
-                                cbSelecionar.Sorted = true;
-                            }
-                            break;
-                        case "Devolvido":
-                            {
-                                cbSelecionar.Sorted = true;
-                            }
-                            break;
-                    }
-                }
-                else
-                {
-                    cbSelecionar.Sorted = true;
-                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
+
+
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -82,15 +58,17 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                             case "Pendente":
                                 {
                                     cbSelecionar.Sorted = true;
+                                    atualizar.StatusobraId = 1;
                                 }
                                 break;
                             case "Devolvido":
                                 {
                                     cbSelecionar.Sorted = true;
+                                    atualizar.StatusobraId = 10;
                                 }
                                 break;
                         }
-                        atualizar.StatusobraId = 3;
+
                         new DLFerramentas().Atualizar(atualizar);
                         MessageBox.Show("Material devolvido com Sucesso!");
                     }
@@ -106,11 +84,13 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                             case "Pendente":
                                 {
                                     cbSelecionar.Sorted = true;
+                                    novo.StatusobraId = 1;
                                 }
                                 break;
                             case "Devolvido":
                                 {
                                     cbSelecionar.Sorted = true;
+                                    novo.StatusobraId = 10;
                                 }
                                 break;
                         }
@@ -118,7 +98,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                         MessageBox.Show(" Material " + idferramentas + " Retirado com Sucesso! ");
                     }
                     LimparCampos();
-                    Close();
+                    
                 }
             }
             catch (Exception ex)
@@ -157,23 +137,23 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         private void dgvFerramentas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             var ferramenta = dgvFerramentas.Rows[e.RowIndex].DataBoundItem as Ferramentas;
-            if(ferramenta != null)
+            if (ferramenta != null)
             {
                 txtFerramentaId.Text = ferramenta.FerramentaId.ToString();
                 txtNome.Text = ferramenta.Funcionario;
                 rtbEquipamento.Text = ferramenta.Material;
                 dtpRetirada.Value = ferramenta.Retirada;
                 dtpDevolucao.Value = ferramenta.Devolucao;
-                switch (cbSelecionar.Text)//escolha
+                switch (ferramenta.StatusobraId)//escolha
                 {
-                    case "Pendente":
+                    case 3:
                         {
-                            cbSelecionar.Sorted = true;
+                            cbSelecionar.Text = "Pendente";
                         }
                         break;
-                    case "Devolvido":
+                    case 10:
                         {
-                            cbSelecionar.Sorted = true;
+                            cbSelecionar.Text = "Devolvido";
                         }
                         break;
                 }
@@ -185,9 +165,13 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             dtpRetirada.Value = DateTime.Now;
             dtpDevolucao.Value = DateTime.Now;
-            txtNome.Text = Convert.ToString(null);
-            rtbEquipamento.Text = Convert.ToString(null);
+            txtNome.Clear();
+            rtbEquipamento.Clear();
+            cbSelecionar.Text = Convert.ToString(null);
+            txtFerramentaId.Clear();
+            CarregarGrid();
         }
+
         private bool ValidarCampos()
         {
             if (txtNome.Text == "")
@@ -197,7 +181,67 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             return true;
         }
 
+        private void CarregarGrid()
+        {
+            try
+            {
+                var listarFerramentas = new DLFerramentas().Listar();
+                dgvFerramentas.DataSource = listarFerramentas;
+                MontarGrid(dgvFerramentas);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+        }
+
+        private void MontarGrid(DataGridView dgvFerramentas)
+        {
+            try
+            {
+                dgvFerramentas.DefaultCellStyle.Font = new Font("Calibri", 20F, GraphicsUnit.Pixel);
+                var objBlControleGrid = new ControleGrid(dgvFerramentas);
+                //Define quais colunas serão visíveis
+                objBlControleGrid.DefinirVisibilidade(new List<string>()
+                { "Funcionario", "Retirada", "Devolucao", "Material"});
+                //Define quais os cabeçalhos respectivos das colunas 
+                objBlControleGrid.DefinirCabecalhos(new List<string>()
+                {  "Funcionario", "Data retirada", "Data Devolução", "Material" });
+                //Define quais as larguras respectivas das colunas 
+                objBlControleGrid.DefinirLarguras(new List<int>() { 15, 15, 20,45 }, dgvFerramentas.Width - 25); //O total tem que ficar em 100% 
+                //Define quais os alinhamentos respectivos do componentes das colunas 
+                objBlControleGrid.DefinirAlinhamento(new List<string>()
+                { "centro", "centro", "centro", "centro", "centro", });
+                //Define a altura das linhas respectivas da Grid 
+                objBlControleGrid.DefinirAlturaLinha(30);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+        }
         #endregion
 
+        private void dgvFerramentas_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            for (int i = 0; i < dgvFerramentas.Rows.Count; i++)
+            {
+                var valor = Convert.ToString(dgvFerramentas.Rows[i].Cells[5].Value);
+                switch (valor)
+                {
+                    case "10":
+                        dgvFerramentas.Rows[i].DefaultCellStyle.BackColor = Color.Lime;
+                        break;
+                    case "3":
+                        dgvFerramentas.Rows[i].DefaultCellStyle.BackColor = Color.Yellow; break;
+
+                }
+            }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+        }
     }
 }

@@ -39,7 +39,8 @@ namespace Logistica.Sistema_de_Logistica
             this.msArt = new System.Windows.Forms.ToolStripMenuItem();
             this.roteiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msRoteiro = new System.Windows.Forms.ToolStripMenuItem();
-            this.entradaEstoqueMadeirasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estoqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entradaEstoqueMadeirasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -186,6 +187,7 @@ namespace Logistica.Sistema_de_Logistica
             this.label49 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
+            this.telefonesUteisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -207,12 +209,13 @@ namespace Logistica.Sistema_de_Logistica
             this.toolStripMenuItem1,
             this.ferramentasToolStripMenuItem,
             this.tutorialToolStripMenuItem,
-            this.roteiroToolStripMenuItem});
+            this.roteiroToolStripMenuItem,
+            this.estoqueToolStripMenuItem});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(6, 6);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(157, 156);
+            this.menuStrip1.Size = new System.Drawing.Size(157, 215);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -250,7 +253,8 @@ namespace Logistica.Sistema_de_Logistica
             // 
             this.tutorialToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.msNotaFiscal,
-            this.msArt});
+            this.msArt,
+            this.telefonesUteisToolStripMenuItem});
             this.tutorialToolStripMenuItem.Name = "tutorialToolStripMenuItem";
             this.tutorialToolStripMenuItem.Size = new System.Drawing.Size(153, 35);
             this.tutorialToolStripMenuItem.Text = "Ajuda";
@@ -272,8 +276,7 @@ namespace Logistica.Sistema_de_Logistica
             // roteiroToolStripMenuItem
             // 
             this.roteiroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.msRoteiro,
-            this.entradaEstoqueMadeirasToolStripMenuItem});
+            this.msRoteiro});
             this.roteiroToolStripMenuItem.Name = "roteiroToolStripMenuItem";
             this.roteiroToolStripMenuItem.Size = new System.Drawing.Size(153, 35);
             this.roteiroToolStripMenuItem.Text = "Roteiro";
@@ -285,12 +288,20 @@ namespace Logistica.Sistema_de_Logistica
             this.msRoteiro.Text = "Saida do Roteiro Motorista";
             this.msRoteiro.Click += new System.EventHandler(this.msRoteiro_Click);
             // 
-            // entradaEstoqueMadeirasToolStripMenuItem
+            // estoqueToolStripMenuItem
             // 
-            this.entradaEstoqueMadeirasToolStripMenuItem.Name = "entradaEstoqueMadeirasToolStripMenuItem";
-            this.entradaEstoqueMadeirasToolStripMenuItem.Size = new System.Drawing.Size(375, 36);
-            this.entradaEstoqueMadeirasToolStripMenuItem.Text = "Entrada Estoque Madeiras";
-            this.entradaEstoqueMadeirasToolStripMenuItem.Click += new System.EventHandler(this.entradaEstoqueMadeirasToolStripMenuItem_Click);
+            this.estoqueToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.entradaEstoqueMadeirasToolStripMenuItem1});
+            this.estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
+            this.estoqueToolStripMenuItem.Size = new System.Drawing.Size(153, 35);
+            this.estoqueToolStripMenuItem.Text = "Estoque";
+            // 
+            // entradaEstoqueMadeirasToolStripMenuItem1
+            // 
+            this.entradaEstoqueMadeirasToolStripMenuItem1.Name = "entradaEstoqueMadeirasToolStripMenuItem1";
+            this.entradaEstoqueMadeirasToolStripMenuItem1.Size = new System.Drawing.Size(370, 36);
+            this.entradaEstoqueMadeirasToolStripMenuItem1.Text = "Entrada Estoque Madeiras";
+            this.entradaEstoqueMadeirasToolStripMenuItem1.Click += new System.EventHandler(this.entradaEstoqueMadeirasToolStripMenuItem1_Click);
             // 
             // panel1
             // 
@@ -321,16 +332,16 @@ namespace Logistica.Sistema_de_Logistica
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1695, 162);
+            this.panel1.Size = new System.Drawing.Size(1695, 210);
             this.panel1.TabIndex = 5;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1440, 32);
+            this.pictureBox1.Location = new System.Drawing.Point(1421, 24);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 124);
+            this.pictureBox1.Size = new System.Drawing.Size(196, 164);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -340,7 +351,7 @@ namespace Logistica.Sistema_de_Logistica
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(1220, 120);
+            this.label4.Location = new System.Drawing.Point(1220, 160);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(180, 28);
             this.label4.TabIndex = 9;
@@ -351,7 +362,7 @@ namespace Logistica.Sistema_de_Logistica
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(1003, 53);
+            this.label2.Location = new System.Drawing.Point(1003, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 28);
             this.label2.TabIndex = 9;
@@ -362,7 +373,7 @@ namespace Logistica.Sistema_de_Logistica
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Lime;
-            this.label3.Location = new System.Drawing.Point(1220, 53);
+            this.label3.Location = new System.Drawing.Point(1220, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 28);
             this.label3.TabIndex = 9;
@@ -373,7 +384,7 @@ namespace Logistica.Sistema_de_Logistica
             this.lbMaterialSp.AutoSize = true;
             this.lbMaterialSp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbMaterialSp.ForeColor = System.Drawing.Color.Blue;
-            this.lbMaterialSp.Location = new System.Drawing.Point(1003, 128);
+            this.lbMaterialSp.Location = new System.Drawing.Point(1003, 160);
             this.lbMaterialSp.Name = "lbMaterialSp";
             this.lbMaterialSp.Size = new System.Drawing.Size(143, 28);
             this.lbMaterialSp.TabIndex = 9;
@@ -406,7 +417,7 @@ namespace Logistica.Sistema_de_Logistica
             this.cbCancelado.AutoSize = true;
             this.cbCancelado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbCancelado.ForeColor = System.Drawing.Color.Red;
-            this.cbCancelado.Location = new System.Drawing.Point(1220, 82);
+            this.cbCancelado.Location = new System.Drawing.Point(1227, 107);
             this.cbCancelado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCancelado.Name = "cbCancelado";
             this.cbCancelado.Size = new System.Drawing.Size(173, 42);
@@ -432,7 +443,7 @@ namespace Logistica.Sistema_de_Logistica
             this.cbPendente.AutoSize = true;
             this.cbPendente.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbPendente.ForeColor = System.Drawing.Color.Blue;
-            this.cbPendente.Location = new System.Drawing.Point(998, 84);
+            this.cbPendente.Location = new System.Drawing.Point(1003, 107);
             this.cbPendente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbPendente.Name = "cbPendente";
             this.cbPendente.Size = new System.Drawing.Size(157, 42);
@@ -458,7 +469,7 @@ namespace Logistica.Sistema_de_Logistica
             this.rbEndereco.AutoSize = true;
             this.rbEndereco.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbEndereco.ForeColor = System.Drawing.Color.White;
-            this.rbEndereco.Location = new System.Drawing.Point(719, 106);
+            this.rbEndereco.Location = new System.Drawing.Point(737, 113);
             this.rbEndereco.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbEndereco.Name = "rbEndereco";
             this.rbEndereco.Size = new System.Drawing.Size(133, 35);
@@ -500,7 +511,7 @@ namespace Logistica.Sistema_de_Logistica
             this.rbNotaFiscal.AutoSize = true;
             this.rbNotaFiscal.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbNotaFiscal.ForeColor = System.Drawing.Color.White;
-            this.rbNotaFiscal.Location = new System.Drawing.Point(502, 107);
+            this.rbNotaFiscal.Location = new System.Drawing.Point(542, 113);
             this.rbNotaFiscal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbNotaFiscal.Name = "rbNotaFiscal";
             this.rbNotaFiscal.Size = new System.Drawing.Size(153, 35);
@@ -528,7 +539,7 @@ namespace Logistica.Sistema_de_Logistica
             this.rbPedidoVenda.AutoSize = true;
             this.rbPedidoVenda.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbPedidoVenda.ForeColor = System.Drawing.Color.White;
-            this.rbPedidoVenda.Location = new System.Drawing.Point(352, 107);
+            this.rbPedidoVenda.Location = new System.Drawing.Point(370, 114);
             this.rbPedidoVenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbPedidoVenda.Name = "rbPedidoVenda";
             this.rbPedidoVenda.Size = new System.Drawing.Size(134, 35);
@@ -556,7 +567,7 @@ namespace Logistica.Sistema_de_Logistica
             this.rbPedidoRb.AutoSize = true;
             this.rbPedidoRb.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbPedidoRb.ForeColor = System.Drawing.Color.White;
-            this.rbPedidoRb.Location = new System.Drawing.Point(202, 107);
+            this.rbPedidoRb.Location = new System.Drawing.Point(220, 114);
             this.rbPedidoRb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbPedidoRb.Name = "rbPedidoRb";
             this.rbPedidoRb.Size = new System.Drawing.Size(144, 35);
@@ -600,11 +611,11 @@ namespace Logistica.Sistema_de_Logistica
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabControl1.Location = new System.Drawing.Point(0, 162);
+            this.tabControl1.Location = new System.Drawing.Point(0, 210);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1695, 854);
+            this.tabControl1.Size = new System.Drawing.Size(1695, 806);
             this.tabControl1.TabIndex = 6;
             // 
             // tabPage1
@@ -614,7 +625,7 @@ namespace Logistica.Sistema_de_Logistica
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1687, 810);
+            this.tabPage1.Size = new System.Drawing.Size(1687, 762);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Principal";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -632,7 +643,7 @@ namespace Logistica.Sistema_de_Logistica
             this.dgvPrincipal.ReadOnly = true;
             this.dgvPrincipal.RowHeadersWidth = 51;
             this.dgvPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPrincipal.Size = new System.Drawing.Size(1681, 806);
+            this.dgvPrincipal.Size = new System.Drawing.Size(1681, 758);
             this.dgvPrincipal.TabIndex = 0;
             this.dgvPrincipal.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrincipal_CellDoubleClick);
             this.dgvPrincipal.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvPrincipal_DataBindingComplete);
@@ -648,7 +659,7 @@ namespace Logistica.Sistema_de_Logistica
             this.tabPage4.Location = new System.Drawing.Point(4, 40);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1687, 810);
+            this.tabPage4.Size = new System.Drawing.Size(1687, 762);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Tabela Carretos";
             // 
@@ -733,7 +744,7 @@ namespace Logistica.Sistema_de_Logistica
             this.tabPage5.Controls.Add(this.label5);
             this.tabPage5.Location = new System.Drawing.Point(4, 40);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1687, 810);
+            this.tabPage5.Size = new System.Drawing.Size(1687, 762);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Calcular Mdf, m2, m3";
             // 
@@ -1179,7 +1190,7 @@ namespace Logistica.Sistema_de_Logistica
             this.tabPage2.Controls.Add(this.label47);
             this.tabPage2.Location = new System.Drawing.Point(4, 40);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1687, 810);
+            this.tabPage2.Size = new System.Drawing.Size(1687, 762);
             this.tabPage2.TabIndex = 5;
             this.tabPage2.Text = "Calcular Verniz e Presilhas";
             // 
@@ -2067,6 +2078,12 @@ namespace Logistica.Sistema_de_Logistica
             this.label47.TabIndex = 75;
             this.label47.Text = "PRESILHAS DE ALUMINIO PARA DECK";
             // 
+            // telefonesUteisToolStripMenuItem
+            // 
+            this.telefonesUteisToolStripMenuItem.Name = "telefonesUteisToolStripMenuItem";
+            this.telefonesUteisToolStripMenuItem.Size = new System.Drawing.Size(344, 36);
+            this.telefonesUteisToolStripMenuItem.Text = "Telefones Uteis";
+            // 
             // FrmPrincipalLogistica
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2269,7 +2286,9 @@ namespace Logistica.Sistema_de_Logistica
         private Label label83;
         private Label label82;
         private Label label81;
-        private ToolStripMenuItem entradaEstoqueMadeirasToolStripMenuItem;
         private ToolStripMenuItem toolStripMenuItem2;
+        private ToolStripMenuItem estoqueToolStripMenuItem;
+        private ToolStripMenuItem entradaEstoqueMadeirasToolStripMenuItem1;
+        private ToolStripMenuItem telefonesUteisToolStripMenuItem;
     }
 }

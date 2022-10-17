@@ -31,7 +31,7 @@ namespace Logistica.Sistema_do_Financeiro
         private void FrmPrincipalFinanceiro_Load(object sender, EventArgs e)
         {
             try
-            {              
+            {
                 Carregargrid();
             }
             catch (Exception ex)
@@ -123,7 +123,7 @@ namespace Logistica.Sistema_do_Financeiro
             {
                 var listarFinanceiro = new DLFinanceiroProposta().Listar();
                 if (isPesquisa) //isPesquisa == true
-                {                 
+                {
                     var pesquisa = txtPesquisar.Text.ToLower();
                     if (rbEndereco.Checked)
                         listarFinanceiro = listarFinanceiro.Where(p => p.Obra.ToLower().Contains(pesquisa)).ToList();
@@ -131,26 +131,26 @@ namespace Logistica.Sistema_do_Financeiro
                         listarFinanceiro = listarFinanceiro.Where(p => p.Propostas.ToLower().Contains(pesquisa)).ToList();
                     else if (rbNotaFiscal.Checked)
                         listarFinanceiro = listarFinanceiro.Where(p => p.NotaFiscal.ToLower().Contains(pesquisa)).ToList();
-                    switch (cbEmpresas.Text)
-                    {
-                        case "Rb Pisos":
-                            {
-                                cbEmpresas.Sorted = true;
-                            }
-                            break;
+                    //switch (cbEmpresas.Text)
+                    //{
+                    //    case "Rb Pisos":
+                    //        {
+                    //            cbEmpresas.Sorted = true;
+                    //        }
+                    //        break;
 
-                        case "Rb Engenharia":
-                            {
-                                cbEmpresas.Sorted = true;
-                            }
-                            break;
+                    //    case "Rb Engenharia":
+                    //        {
+                    //            cbEmpresas.Sorted = true;
+                    //        }
+                    //        break;
 
-                        case "Rb Comercio":
-                            {
-                                cbEmpresas.Sorted = true;
-                            }
-                            break;
-                    }
+                    //    case "Rb Comercio":
+                    //        {                      
+                    //            
+                    //        }
+                    //        break;
+                    //}
                 }
                 dgvNotaFiscais.DataSource = listarFinanceiro;
                 MontarGrid(dgvNotaFiscais);
@@ -165,7 +165,7 @@ namespace Logistica.Sistema_do_Financeiro
             dgvNotaFiscais.DefaultCellStyle.Font = new Font("Calibri", 16F, GraphicsUnit.Pixel);
             var objBlControleGrid = new ControleGrid(dgvNotaFiscais);
             //Define quais colunas serão visíveis
-            objBlControleGrid.DefinirVisibilidade(new List<string>() 
+            objBlControleGrid.DefinirVisibilidade(new List<string>()
             { "EmissaoNf", "VencimentoNf", "Cliente", "Propostas", "NotaFiscal", "Obra", });
             //Define quais os cabeçalhos respectivos das colunas 
             objBlControleGrid.DefinirCabecalhos(new List<string>() { "Emissão da NF", "Vencimento da NF", "Cliente", "Propostas", "Nota Fiscal", "Obra", });

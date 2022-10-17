@@ -177,6 +177,8 @@
             this.txtPesquisar.Size = new System.Drawing.Size(431, 38);
             this.txtPesquisar.TabIndex = 5;
             this.txtPesquisar.Text = "Digite para pesquisar:";
+            this.txtPesquisar.Click += new System.EventHandler(this.txtPesquisar_Click);
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
             // 
             // panel1
             // 

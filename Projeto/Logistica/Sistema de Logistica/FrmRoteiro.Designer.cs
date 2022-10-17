@@ -36,6 +36,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtFuncionario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtObra = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtProposta = new System.Windows.Forms.TextBox();
@@ -90,6 +92,8 @@
             this.tabPage1.Controls.Add(this.pictureBox2);
             this.tabPage1.Controls.Add(this.txtFuncionario);
             this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.txtPesquisar);
+            this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.txtObra);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.txtProposta);
@@ -123,7 +127,7 @@
             this.btnLimparEntrada.ForeColor = System.Drawing.Color.Black;
             this.btnLimparEntrada.Image = ((System.Drawing.Image)(resources.GetObject("btnLimparEntrada.Image")));
             this.btnLimparEntrada.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimparEntrada.Location = new System.Drawing.Point(211, 207);
+            this.btnLimparEntrada.Location = new System.Drawing.Point(363, 197);
             this.btnLimparEntrada.Name = "btnLimparEntrada";
             this.btnLimparEntrada.Size = new System.Drawing.Size(129, 68);
             this.btnLimparEntrada.TabIndex = 57;
@@ -135,7 +139,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(702, 165);
+            this.pictureBox2.Location = new System.Drawing.Point(712, 93);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(147, 110);
@@ -163,22 +167,42 @@
             this.label1.TabIndex = 51;
             this.label1.Text = "Funcionario:";
             // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtPesquisar.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPesquisar.Location = new System.Drawing.Point(248, 294);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(394, 38);
+            this.txtPesquisar.TabIndex = 54;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(120, 298);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(122, 31);
+            this.label7.TabIndex = 51;
+            this.label7.Text = "Pesquisar:";
+            // 
             // txtObra
             // 
             this.txtObra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtObra.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtObra.Location = new System.Drawing.Point(106, 86);
+            this.txtObra.Location = new System.Drawing.Point(106, 81);
             this.txtObra.Name = "txtObra";
             this.txtObra.Size = new System.Drawing.Size(573, 38);
             this.txtObra.TabIndex = 54;
-            this.txtObra.TextChanged += new System.EventHandler(this.txtObra_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(28, 93);
+            this.label5.Location = new System.Drawing.Point(28, 85);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 31);
             this.label5.TabIndex = 51;
@@ -242,7 +266,7 @@
             this.btnEstoque.ForeColor = System.Drawing.Color.Black;
             this.btnEstoque.Image = ((System.Drawing.Image)(resources.GetObject("btnEstoque.Image")));
             this.btnEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEstoque.Location = new System.Drawing.Point(526, 207);
+            this.btnEstoque.Location = new System.Drawing.Point(527, 197);
             this.btnEstoque.Name = "btnEstoque";
             this.btnEstoque.Size = new System.Drawing.Size(129, 68);
             this.btnEstoque.TabIndex = 47;
@@ -257,7 +281,7 @@
             this.btnDeletar.ForeColor = System.Drawing.Color.Black;
             this.btnDeletar.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletar.Image")));
             this.btnDeletar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeletar.Location = new System.Drawing.Point(377, 207);
+            this.btnDeletar.Location = new System.Drawing.Point(195, 197);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(129, 68);
             this.btnDeletar.TabIndex = 47;
@@ -272,7 +296,7 @@
             this.btnSalvar.ForeColor = System.Drawing.Color.Black;
             this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(47, 207);
+            this.btnSalvar.Location = new System.Drawing.Point(17, 197);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(129, 68);
             this.btnSalvar.TabIndex = 48;
@@ -288,13 +312,13 @@
             this.dgvRoteiroMotorista.BackgroundColor = System.Drawing.Color.White;
             this.dgvRoteiroMotorista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRoteiroMotorista.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvRoteiroMotorista.Location = new System.Drawing.Point(3, 317);
+            this.dgvRoteiroMotorista.Location = new System.Drawing.Point(3, 365);
             this.dgvRoteiroMotorista.Name = "dgvRoteiroMotorista";
             this.dgvRoteiroMotorista.ReadOnly = true;
             this.dgvRoteiroMotorista.RowHeadersWidth = 51;
             this.dgvRoteiroMotorista.RowTemplate.Height = 29;
             this.dgvRoteiroMotorista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRoteiroMotorista.Size = new System.Drawing.Size(909, 343);
+            this.dgvRoteiroMotorista.Size = new System.Drawing.Size(909, 295);
             this.dgvRoteiroMotorista.TabIndex = 0;
             this.dgvRoteiroMotorista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRoteiroMotorista_CellDoubleClick);
             // 
@@ -536,5 +560,7 @@
         private Label label3;
         private TextBox txtQuantidade;
         private TextBox txtUndMedida;
+        private TextBox txtPesquisar;
+        private Label label7;
     }
 }

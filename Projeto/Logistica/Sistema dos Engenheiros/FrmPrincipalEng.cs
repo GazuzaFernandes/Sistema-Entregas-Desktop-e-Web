@@ -56,12 +56,12 @@ namespace Logistica.Sistema_dos_Engenheiros
         {
             for (int i = 0; i < dgvPrincipal.Rows.Count; i++)
             {
-                var valor = Convert.ToString(dgvPrincipal.Rows[i].Cells[21].Value);
+                var valor = Convert.ToString(dgvPrincipal.Rows[i].Cells[7].Value);
                 switch (valor)
                 {
-                    case "Imediato": dgvPrincipal.Rows[i].DefaultCellStyle.BackColor = Color.Yellow; break;
-                    case "Pendente": dgvPrincipal.Rows[i].DefaultCellStyle.BackColor = Color.LightBlue; break;
-                    case "Finalizado": dgvPrincipal.Rows[i].DefaultCellStyle.BackColor = Color.LightGreen; break;                    
+                    case "1" : dgvPrincipal.Rows[i].DefaultCellStyle.BackColor = Color.Yellow; break;
+                    case "2": dgvPrincipal.Rows[i].DefaultCellStyle.BackColor = Color.LightBlue; break;
+                    case "3": dgvPrincipal.Rows[i].DefaultCellStyle.BackColor = Color.Lime; break;                    
                 }
             }
         }
@@ -72,6 +72,16 @@ namespace Logistica.Sistema_dos_Engenheiros
             principalEng.Show();
             CarregarGrid();
         }
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+            CarregarGrid(true);
+        }
+
+        private void txtPesquisar_Click(object sender, EventArgs e)
+        {
+            txtPesquisar.Clear();
+        }
+
 
         #region Apenas Metodos
 
@@ -111,17 +121,18 @@ namespace Logistica.Sistema_dos_Engenheiros
             var objBlControleGrid = new ControleGrid(dgvPrincipal);
             //Define quais colunas serão visíveis
             objBlControleGrid.DefinirVisibilidade(new List<string>()
-            { "dataprevista", "fabrica", "engresp", "pdrb", "pdvenda", "propostaa", "construtora", "obra", "notafiscal", });
+            { "Proposta", "Cliente", "Funcionario", "Responsavel", "Telefone", });
             //Define quais os cabeçalhos respectivos das colunas 
             objBlControleGrid.DefinirCabecalhos(new List<string>() 
-            { "DATA PREVISTA", "FABRICA", "RESP.", "PD RB", "PD VENDA", "PROPOSTA", "CLIENTE", "OBRA", "NF", });
+            { "Proposta", "Cliente", "Funcionario", "Resp.", "Telefone",});
             //Define quais as larguras respectivas das colunas 
-            objBlControleGrid.DefinirLarguras(new List<int>() { 9, 9, 7, 8, 8, 8, 12, 27, 7, }, dgvPrincipal.Width - 15); //O total tem que ficar em 100% 
+            objBlControleGrid.DefinirLarguras(new List<int>() { 20, 20,20,20,20 }, dgvPrincipal.Width - 15); //O total tem que ficar em 100% 
             objBlControleGrid.DefinirAlinhamento(new List<string>()
             { "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", });
             //Define a altura das linhas respectivas da Grid 
             objBlControleGrid.DefinirAlturaLinha(30);
         }
         #endregion
+
     }
 }

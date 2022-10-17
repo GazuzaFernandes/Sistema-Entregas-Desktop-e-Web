@@ -106,7 +106,7 @@ namespace Logistica.Sistema_de_Amostras
                     else if (rbAmostra.Checked)
                         listaAmostra = listaAmostra.Where(p => p.Material.ToLower().Contains(pesquisa)).ToList();
                 }
-                dvgAmostra.DataSource = listaAmostra.OrderByDescending(p => p.DataEntrega).ToList();
+                dvgAmostra.DataSource = listaAmostra;
                 MontarGridAmostra(dvgAmostra);
             }
             catch (Exception ex)

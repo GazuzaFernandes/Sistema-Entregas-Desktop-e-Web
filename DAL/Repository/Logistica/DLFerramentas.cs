@@ -47,8 +47,8 @@ namespace DAL.Repository.Logistica
                         case "Pedente":
                             ferra.OrdenacaoStatus = 2;
                             break;
-                        case "Finalizado":
-                            ferra.OrdenacaoStatus = 3;
+                        case "Devolvido":
+                            ferra.OrdenacaoStatus = 10;
                             break;
                     }
 

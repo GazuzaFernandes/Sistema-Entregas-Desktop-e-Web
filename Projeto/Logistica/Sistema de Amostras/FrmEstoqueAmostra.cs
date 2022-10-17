@@ -140,7 +140,7 @@ namespace Projeto.Logistica.Sistema_de_Amostras
         {
             try
             {
-                dgvEstoqueAmostra.DefaultCellStyle.Font = new Font("Calibri", 16F, GraphicsUnit.Pixel);
+                dgvEstoqueAmostra.DefaultCellStyle.Font = new Font("Calibri", 20F, GraphicsUnit.Pixel);
                 var objBlControleGrid = new ControleGrid(dgvEstoqueAmostra);
                 //Define quais colunas serão visíveis
                 objBlControleGrid.DefinirVisibilidade(new List<string>() { "Amostra", "Total", });

@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace DAL.Mapping.Logistica
 {
-    public class ItenControleMap : ClassMap<ItenRoteiroMotorista>
+    public class ItenRoteiroMotoristaMap : ClassMap<ItenRoteiroMotorista>
     {        
-        public ItenControleMap()
+        public ItenRoteiroMotoristaMap()
         {
             Id(p => p.ItensRoteiroId).GeneratedBy.Sequence("itenroteiro_seq");
             Map(p => p.Codigo);
@@ -20,7 +20,7 @@ namespace DAL.Mapping.Logistica
             Map(p => p.QtdCaixas);
             Map(p => p.QtdSaida);
             Map(p => p.RoteiroId);
-            Table("itenroteiro");
+            Table("itenroteiromotorista");
         }
         
     }

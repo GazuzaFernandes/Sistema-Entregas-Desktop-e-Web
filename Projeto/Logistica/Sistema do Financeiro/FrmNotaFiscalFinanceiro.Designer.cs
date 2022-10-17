@@ -151,7 +151,7 @@
             // 
             // rtbObeservacao
             // 
-            this.rtbObeservacao.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rtbObeservacao.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rtbObeservacao.Location = new System.Drawing.Point(49, 494);
             this.rtbObeservacao.Name = "rtbObeservacao";
             this.rtbObeservacao.Size = new System.Drawing.Size(765, 158);

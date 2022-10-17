@@ -30,10 +30,6 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         }
 
         #region Tela de Informações da obra
-        private void txtObra_TextChanged(object sender, EventArgs e)
-        {
-            CarregarGridRoteiro(true);
-        }
         private void btnGerarId_Click(object sender, EventArgs e)
         {
             try
@@ -193,7 +189,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 {
                     propostaid = Convert.ToInt32(txtIdObra.Text);
                 }
-                var listaProposta = new DLItenControle().Listar();
+                var listaProposta = new DLItenRoteiroMotorista().Listar();
                 //Filtrando a lista "listaProposta" por propostaid e codigomaterial
                 var prop = listaProposta.Where(ip => ip.RoteiroId == propostaid //por proppostaid
                                 && ip.ItensRoteiroId == itensControleId //por ItensPropostaId
@@ -204,11 +200,11 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     prop.Material = txtMaterialSaida.Text;
                     prop.UndMedida = txtUndMedida.Text;
                     prop.QtdCaixas = Convert.ToDecimal(txtQuantidade.Text);
-                    new DLItenControle().Atualizar(prop);
+                    new DLItenRoteiroMotorista().Atualizar(prop);
                 }
                 else
                 {
-                    new DLItenControle().Inserir(itencontrole);
+                    new DLItenRoteiroMotorista().Inserir(itencontrole);
                     MessageBox.Show("Item Cadastrado com Sucesso");
                 }
                 LimparCamposItens();
@@ -233,10 +229,10 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 int.TryParse(txtSaidaId.Text, out id);
                 if (id > 0)
                 {
-                    var prop = new DLItenControle().ConsultarPorId(id);
+                    var prop = new DLItenRoteiroMotorista().ConsultarPorId(id);
                     if (prop.ItensRoteiroId > 0)
                     {
-                        new DLItenControle().Excluir(prop);
+                        new DLItenRoteiroMotorista().Excluir(prop);
                         CarregarGridMaterial();
                         LimparCamposItens();
                     }
@@ -283,7 +279,8 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                var lstitensproposta = new DLItenControle().Listar().Where(p => p.RoteiroId == Convert.ToInt32(txtIdObra.Text)).ToList();
+                var lstitensproposta = new DLItenRoteiroMotorista().Listar().Where
+                    (p => p.RoteiroId == Convert.ToInt32(txtIdObra.Text)).ToList();
                 dgvSaidaMaterial.DataSource = null;
                 dgvSaidaMaterial.DataSource = lstitensproposta;
                 dgvSaidaMaterial.Refresh();
@@ -299,7 +296,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                dgvSaidaMaterial.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 16F, GraphicsUnit.Pixel);
+                dgvSaidaMaterial.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 20F, GraphicsUnit.Pixel);
                 var objBlControleGrid = new ControleGrid(dgvSaidaMaterial);
                 //Define quais colunas serão visíveis
                 objBlControleGrid.DefinirVisibilidade(new List<string>() { "Material", "UndMedida", "QtdCaixas", "QtdSaida", });
@@ -325,11 +322,11 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 var controleEstoque = new DLRoteiroMotorista().Listar();
                 if (isPesquisa) //isPesquisa == true
                 {
-                    var pesquisa = txtObra.Text.ToLower();
+                    var pesquisa = txtPesquisar.Text.ToLower();
                     controleEstoque = controleEstoque.Where(p => p.Obra.ToLower().Contains(pesquisa)).ToList();
                 }
                 dgvRoteiroMotorista.DataSource = controleEstoque.OrderByDescending(p => p.DataEntrada).ToList();
-                MontarGridControle(dgvRoteiroMotorista);
+                MontarGridRoteiro(dgvRoteiroMotorista);
             }
             catch (Exception ex)
             {
@@ -337,11 +334,11 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             }
         }
 
-        private void MontarGridControle(DataGridView dgvRoteiroMotorista)
+        private void MontarGridRoteiro(DataGridView dgvRoteiroMotorista)
         {
             try
             {
-                dgvRoteiroMotorista.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 16F, GraphicsUnit.Pixel);
+                dgvRoteiroMotorista.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 20F, GraphicsUnit.Pixel);
                 var objBlControleGrid = new ControleGrid(dgvRoteiroMotorista);
                 //Define quais colunas serão visíveis
                 objBlControleGrid.DefinirVisibilidade(new List<string>() { "DataEntrada", "Proposta", "Obra", "Funcionario" });
@@ -414,8 +411,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             txtFuncionario.Enabled = hab;
             btnSalvar.Enabled = hab;
             btnLimparEntrada.Enabled = hab;
-            btnDeletar.Enabled = hab;
-            btnEstoque.Enabled = hab;
+            btnDeletar.Enabled = hab;         
             txtCodigoInfomacao.Enabled = hab;
             btnPesquisarMaterial.Enabled = hab;
             txtUndMedida.Enabled = hab;
@@ -437,5 +433,10 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
         #endregion
 
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+            CarregarGridRoteiro(true);
+            MontarGridRoteiro(dgvRoteiroMotorista);
+        }
     }
 }

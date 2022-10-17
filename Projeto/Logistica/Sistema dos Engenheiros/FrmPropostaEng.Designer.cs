@@ -334,10 +334,10 @@
             // 
             // mtSalvarComentario
             // 
-            this.mtSalvarComentario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.mtSalvarComentario.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.mtSalvarComentario.ForeColor = System.Drawing.Color.Red;
             this.mtSalvarComentario.Name = "mtSalvarComentario";
-            this.mtSalvarComentario.Size = new System.Drawing.Size(206, 24);
+            this.mtSalvarComentario.Size = new System.Drawing.Size(280, 36);
             this.mtSalvarComentario.Text = "Salvar Comentario";
             this.mtSalvarComentario.Click += new System.EventHandler(this.mtSalvarComentario_Click);
             // 
@@ -348,15 +348,16 @@
             this.mtSalvarProposta,
             this.mtSalvarComentario});
             this.cmsSalvarConteudos.Name = "contextMenuStrip1";
-            this.cmsSalvarConteudos.Size = new System.Drawing.Size(207, 52);
+            this.cmsSalvarConteudos.Size = new System.Drawing.Size(281, 104);
             // 
             // mtSalvarProposta
             // 
-            this.mtSalvarProposta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.mtSalvarProposta.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.mtSalvarProposta.ForeColor = System.Drawing.Color.Red;
             this.mtSalvarProposta.Name = "mtSalvarProposta";
-            this.mtSalvarProposta.Size = new System.Drawing.Size(206, 24);
+            this.mtSalvarProposta.Size = new System.Drawing.Size(280, 36);
             this.mtSalvarProposta.Text = "Salvar Proposta";
+            this.mtSalvarProposta.Click += new System.EventHandler(this.mtSalvarProposta_Click_1);
             // 
             // label16
             // 

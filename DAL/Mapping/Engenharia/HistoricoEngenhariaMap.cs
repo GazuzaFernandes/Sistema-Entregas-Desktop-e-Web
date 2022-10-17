@@ -12,12 +12,12 @@ namespace DAL.Mapping.Engenharia
     {
         public HistoricoEngenhariaMap()
         {
-            Id(p => p.HistoricoId).GeneratedBy.Sequence("historiengenharia_seq");
+            Id(p => p.HistoricoId).GeneratedBy.Sequence("historicoengenharia_seq");
             Map(p => p.Comentario);
             Map(p => p.DataComentario);
             Map(p => p.ComentadoEng);
             Map(p => p.EngenheiroId);    
-            Table("historiengenharia");
+            Table("historicoengenharia");
         }
     }
 }
