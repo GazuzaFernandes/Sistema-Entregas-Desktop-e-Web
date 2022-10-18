@@ -341,14 +341,12 @@
             // rbEntrada
             // 
             this.rbEntrada.AutoSize = true;
-            this.rbEntrada.Checked = true;
             this.rbEntrada.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbEntrada.ForeColor = System.Drawing.Color.Lime;
             this.rbEntrada.Location = new System.Drawing.Point(983, 21);
             this.rbEntrada.Name = "rbEntrada";
             this.rbEntrada.Size = new System.Drawing.Size(147, 42);
             this.rbEntrada.TabIndex = 52;
-            this.rbEntrada.TabStop = true;
             this.rbEntrada.Text = "Entrada.";
             this.rbEntrada.UseVisualStyleBackColor = true;
             // 
@@ -411,9 +409,9 @@
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(55, 297);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(344, 31);
+            this.label14.Size = new System.Drawing.Size(414, 31);
             this.label14.TabIndex = 42;
-            this.label14.Text = "Tabela de Entrada de Madeiras.";
+            this.label14.Text = "Datas de entrada e saida de madeiras.";
             // 
             // label18
             // 
@@ -820,7 +818,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1229, 670);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Saida Material";
+            this.tabPage1.Text = "Estoque e Saida Material";
             // 
             // label23
             // 
@@ -849,14 +847,12 @@
             // rbSaida
             // 
             this.rbSaida.AutoSize = true;
-            this.rbSaida.Checked = true;
             this.rbSaida.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbSaida.ForeColor = System.Drawing.Color.Red;
             this.rbSaida.Location = new System.Drawing.Point(697, 66);
             this.rbSaida.Name = "rbSaida";
             this.rbSaida.Size = new System.Drawing.Size(117, 42);
             this.rbSaida.TabIndex = 57;
-            this.rbSaida.TabStop = true;
             this.rbSaida.Text = "Saida.";
             this.rbSaida.UseVisualStyleBackColor = true;
             // 

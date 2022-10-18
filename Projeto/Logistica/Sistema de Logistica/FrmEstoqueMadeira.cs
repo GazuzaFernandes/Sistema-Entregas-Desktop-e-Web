@@ -24,7 +24,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         }
         private void FrmEstoqueMadeira_Load(object sender, EventArgs e)
         {
-            CarregarGridEstoque();
+            CarregarGridEstoque();        
             HabilitarCampos(false);
             MontarGridData(dgvData);
         }
