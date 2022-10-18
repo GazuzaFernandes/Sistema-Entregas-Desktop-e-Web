@@ -1083,6 +1083,60 @@
         RK5CYII=
 </value>
   </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>
+17º Observação: Informe proposta, 
+endereço, tipo  de material, cliente,
+ quem ira  realizar o içamento
+
+18º Entidade da Classe: Clicar na lupa e ao 
+abrir a próxima tela, clicar na lupa de
+ novo. Selecionar não destinado. 
+Clicar em Sim e Sim.
+
+19º Enviar, aí gera o boleto para pagamento e 
+vai dar uma opção para imprimir a ART.
+ Lembrando que após enviado
+ não altera mais.
+
+20º Passar o boleto para Shi realizar o pagamento.
+
+21º Esperar a liberação da ART no site para 
+recolher a assinatura do Sérgio
+
+
+</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>
+10º  Dados da Obra: Informar o
+ CEP de onde está sendo a execução da obra
+
+11º Data de início: colocar o dia que será 
+iniciado o içamento. 
+
+12º Previsão de término:
+ Contar 10 dias corridos da data 
+do início do içamento.
+
+13º Depois de informar o início e o término,
+ a próxima tela pular (não preencher nada) 
+
+14º Atividade Profissional: 
+- dia da atuação: Construção Civil
+- Nível da atuação: Coordenação
+- Sub Área da atuação: Edificação
+- Atividade: Direção
+
+15º Obra / Serviço: Edificação 
+- Complemento: Madeira
+- Unidade: Metro Quadrado
+- Quantificação: Informar a quantidade de
+ material que será içado (ex: 115 não colocar m²)
+
+16º Após terminar de preencher, a próxima tela pular
+ (não preencher nada)</value>
+  </data>
   <data name="label1.Text" xml:space="preserve">
     <value>1º Acessar o CREA NET 
 ir em acesso de profissionais 
@@ -1113,57 +1167,6 @@ O nº de contrato preencher de acordo com o
 Valor do contrato: - Informar um valor 
 simbólico de R$ 10,00 reais.
 
-10º  Dados da Obra: Informar o
- CEP de onde está sendo a execução da obra
-
-11º Data de início: colocar o dia que será 
-iniciado o içamento. 
-
-12º Previsão de término:
- Contar 10 dias corridos da data 
-do início do içamento.
-
-
-
-</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>13º Depois de informar o início e o término,
- a próxima tela pular (não preencher nada) 
-
-14º Atividade Profissional: 
-- dia da atuação: Construção Civil
-- Nível da atuação: Coordenação
-- Sub Área da atuação: Edificação
-- Atividade: Direção
-
-15º Obra / Serviço: Edificação 
-- Complemento: Madeira
-- Unidade: Metro Quadrado
-- Quantificação: Informar a quantidade de
- material que será içado (ex: 115 não colocar m²)
-
-16º Após terminar de preencher, a próxima tela pular
- (não preencher nada)
-
-17º Observação: Informe proposta, 
-endereço, tipo  de material, cliente,
- quem ira  realizar o içamento
-
-18º Entidade da Classe: Clicar na lupa e ao 
-abrir a próxima tela, clicar na lupa de
- novo. Selecionar não destinado. 
-Clicar em Sim e Sim.
-
-19º Enviar, aí gera o boleto para pagamento e 
-vai dar uma opção para imprimir a ART.
- Lembrando que após enviado
- não altera mais.
-
-20º Passar o boleto para Shi realizar o pagamento.
-
-21º Esperar a liberação da ART no site para 
-recolher a assinatura do Sérgio
 
 
 </value>

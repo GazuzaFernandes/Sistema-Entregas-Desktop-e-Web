@@ -345,7 +345,7 @@ namespace Logistica.Sistema_de_Logistica
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1421, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(1485, 24);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(196, 164);
@@ -474,12 +474,12 @@ namespace Logistica.Sistema_de_Logistica
             // rbEndereco
             // 
             this.rbEndereco.AutoSize = true;
-            this.rbEndereco.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbEndereco.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbEndereco.ForeColor = System.Drawing.Color.White;
-            this.rbEndereco.Location = new System.Drawing.Point(737, 113);
+            this.rbEndereco.Location = new System.Drawing.Point(739, 128);
             this.rbEndereco.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbEndereco.Name = "rbEndereco";
-            this.rbEndereco.Size = new System.Drawing.Size(133, 35);
+            this.rbEndereco.Size = new System.Drawing.Size(158, 42);
             this.rbEndereco.TabIndex = 6;
             this.rbEndereco.TabStop = true;
             this.rbEndereco.Text = "Endereço";
@@ -488,12 +488,12 @@ namespace Logistica.Sistema_de_Logistica
             // rbMaterial
             // 
             this.rbMaterial.AutoSize = true;
-            this.rbMaterial.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbMaterial.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbMaterial.ForeColor = System.Drawing.Color.White;
-            this.rbMaterial.Location = new System.Drawing.Point(736, 63);
+            this.rbMaterial.Location = new System.Drawing.Point(739, 63);
             this.rbMaterial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbMaterial.Name = "rbMaterial";
-            this.rbMaterial.Size = new System.Drawing.Size(125, 35);
+            this.rbMaterial.Size = new System.Drawing.Size(148, 42);
             this.rbMaterial.TabIndex = 6;
             this.rbMaterial.TabStop = true;
             this.rbMaterial.Text = "Material";
@@ -502,12 +502,12 @@ namespace Logistica.Sistema_de_Logistica
             // rbEng
             // 
             this.rbEng.AutoSize = true;
-            this.rbEng.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbEng.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbEng.ForeColor = System.Drawing.Color.White;
-            this.rbEng.Location = new System.Drawing.Point(590, 63);
+            this.rbEng.Location = new System.Drawing.Point(536, 63);
             this.rbEng.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbEng.Name = "rbEng";
-            this.rbEng.Size = new System.Drawing.Size(143, 35);
+            this.rbEng.Size = new System.Drawing.Size(172, 42);
             this.rbEng.TabIndex = 6;
             this.rbEng.TabStop = true;
             this.rbEng.Text = "Eng. Resp.";
@@ -516,12 +516,12 @@ namespace Logistica.Sistema_de_Logistica
             // rbNotaFiscal
             // 
             this.rbNotaFiscal.AutoSize = true;
-            this.rbNotaFiscal.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbNotaFiscal.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbNotaFiscal.ForeColor = System.Drawing.Color.White;
-            this.rbNotaFiscal.Location = new System.Drawing.Point(542, 113);
+            this.rbNotaFiscal.Location = new System.Drawing.Point(536, 128);
             this.rbNotaFiscal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbNotaFiscal.Name = "rbNotaFiscal";
-            this.rbNotaFiscal.Size = new System.Drawing.Size(153, 35);
+            this.rbNotaFiscal.Size = new System.Drawing.Size(182, 42);
             this.rbNotaFiscal.TabIndex = 6;
             this.rbNotaFiscal.TabStop = true;
             this.rbNotaFiscal.Text = "Nota Fiscal";
@@ -530,12 +530,12 @@ namespace Logistica.Sistema_de_Logistica
             // rbCliente
             // 
             this.rbCliente.AutoSize = true;
-            this.rbCliente.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbCliente.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbCliente.ForeColor = System.Drawing.Color.White;
-            this.rbCliente.Location = new System.Drawing.Point(448, 63);
+            this.rbCliente.Location = new System.Drawing.Point(456, 173);
             this.rbCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbCliente.Name = "rbCliente";
-            this.rbCliente.Size = new System.Drawing.Size(120, 35);
+            this.rbCliente.Size = new System.Drawing.Size(141, 42);
             this.rbCliente.TabIndex = 6;
             this.rbCliente.TabStop = true;
             this.rbCliente.Text = "Clientes";
@@ -544,12 +544,12 @@ namespace Logistica.Sistema_de_Logistica
             // rbPedidoVenda
             // 
             this.rbPedidoVenda.AutoSize = true;
-            this.rbPedidoVenda.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbPedidoVenda.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbPedidoVenda.ForeColor = System.Drawing.Color.White;
-            this.rbPedidoVenda.Location = new System.Drawing.Point(370, 114);
+            this.rbPedidoVenda.Location = new System.Drawing.Point(351, 128);
             this.rbPedidoVenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbPedidoVenda.Name = "rbPedidoVenda";
-            this.rbPedidoVenda.Size = new System.Drawing.Size(134, 35);
+            this.rbPedidoVenda.Size = new System.Drawing.Size(160, 42);
             this.rbPedidoVenda.TabIndex = 6;
             this.rbPedidoVenda.TabStop = true;
             this.rbPedidoVenda.Text = "Pd Venda";
@@ -558,12 +558,12 @@ namespace Logistica.Sistema_de_Logistica
             // rbProposta
             // 
             this.rbProposta.AutoSize = true;
-            this.rbProposta.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbProposta.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbProposta.ForeColor = System.Drawing.Color.White;
-            this.rbProposta.Location = new System.Drawing.Point(316, 63);
+            this.rbProposta.Location = new System.Drawing.Point(351, 63);
             this.rbProposta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbProposta.Name = "rbProposta";
-            this.rbProposta.Size = new System.Drawing.Size(131, 35);
+            this.rbProposta.Size = new System.Drawing.Size(155, 42);
             this.rbProposta.TabIndex = 6;
             this.rbProposta.TabStop = true;
             this.rbProposta.Text = "Proposta";
@@ -572,12 +572,12 @@ namespace Logistica.Sistema_de_Logistica
             // rbPedidoRb
             // 
             this.rbPedidoRb.AutoSize = true;
-            this.rbPedidoRb.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbPedidoRb.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbPedidoRb.ForeColor = System.Drawing.Color.White;
-            this.rbPedidoRb.Location = new System.Drawing.Point(220, 114);
+            this.rbPedidoRb.Location = new System.Drawing.Point(174, 128);
             this.rbPedidoRb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbPedidoRb.Name = "rbPedidoRb";
-            this.rbPedidoRb.Size = new System.Drawing.Size(144, 35);
+            this.rbPedidoRb.Size = new System.Drawing.Size(171, 42);
             this.rbPedidoRb.TabIndex = 6;
             this.rbPedidoRb.TabStop = true;
             this.rbPedidoRb.Text = "Pedido Rb";
@@ -586,12 +586,12 @@ namespace Logistica.Sistema_de_Logistica
             // rbFabrica
             // 
             this.rbFabrica.AutoSize = true;
-            this.rbFabrica.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbFabrica.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbFabrica.ForeColor = System.Drawing.Color.White;
             this.rbFabrica.Location = new System.Drawing.Point(174, 63);
             this.rbFabrica.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbFabrica.Name = "rbFabrica";
-            this.rbFabrica.Size = new System.Drawing.Size(111, 35);
+            this.rbFabrica.Size = new System.Drawing.Size(131, 42);
             this.rbFabrica.TabIndex = 6;
             this.rbFabrica.TabStop = true;
             this.rbFabrica.Text = "Fabrica";
@@ -751,7 +751,7 @@ namespace Logistica.Sistema_de_Logistica
             this.tabPage5.Controls.Add(this.label5);
             this.tabPage5.Location = new System.Drawing.Point(4, 40);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1687, 762);
+            this.tabPage5.Size = new System.Drawing.Size(1687, 751);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Calcular Mdf, m2, m3";
             // 
@@ -1197,7 +1197,7 @@ namespace Logistica.Sistema_de_Logistica
             this.tabPage2.Controls.Add(this.label47);
             this.tabPage2.Location = new System.Drawing.Point(4, 40);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1687, 762);
+            this.tabPage2.Size = new System.Drawing.Size(1687, 751);
             this.tabPage2.TabIndex = 5;
             this.tabPage2.Text = "Calcular Verniz e Presilhas";
             // 

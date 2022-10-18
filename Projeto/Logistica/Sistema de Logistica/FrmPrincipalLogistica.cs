@@ -39,7 +39,6 @@ namespace Logistica.Sistema_de_Logistica
         {
             FrmProposta proposta = new FrmProposta();
             proposta.Show();
-            CarregarGridPrincipal();
         }
 
         private void msFerramentas_Click(object sender, EventArgs e)
@@ -264,8 +263,7 @@ namespace Logistica.Sistema_de_Logistica
                 cbCancelado.Checked = false;
                 cbFinalizado.Checked = false;
                 cbPendente.Checked = false;
-                cbImediato.Checked = false;
-              
+                cbImediato.Checked = false;              
                 CarregarGridPrincipal();
             }
             catch (Exception ex)
@@ -507,6 +505,7 @@ namespace Logistica.Sistema_de_Logistica
                 FrmProposta proposta = new FrmProposta();
                 proposta._proposta = prop;
                 proposta.ShowDialog();
+                ReducaoCodigoLimpeza();
             }
             catch (Exception ex)
             {
