@@ -288,6 +288,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     dataSaida.DataId = Convert.ToInt32(txtDataId.Text);
                     dataSaida.Saida = dtpSaida.Value;
                     dataSaida.MetroQuadrado = Convert.ToDecimal(txtTotalM3Saida.Text);
+                    dataSaida.observacao = rtbSaida.Text;
                     if (rbSaida.Checked == true)
                         dataSaida.StatusObraId = 9;
                     new DLDataEstoque().Atualizar(dataSaida);
@@ -493,6 +494,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     saida.Saida = dtpSaida.Value;
                     saida.MetroQuadrado = Convert.ToDecimal(txtTotalM2Saida.Text);
                     saida.EstoqueId = Convert.ToInt32(txtIdSaida.Text);
+                    saida.observacao = rtbSaida.Text;
                     if (rbSaida.Checked == true)
                         saida.StatusObraId = 9;
                 }
@@ -580,7 +582,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             //Define quais os cabeçalhos respectivos das colunas 
             objBlControleGrid.DefinirCabecalhos(new List<string>() { "Madeira", "Espessura", "Largura", "Metro Linear", "M2", "M3", });
             //Define quais as larguras respectivas das colunas 
-            objBlControleGrid.DefinirLarguras(new List<int>() { 45, 10, 10, 10, 10, 10, }, dgvSaidaMaterial.Width - 15); //O total tem que ficar em 100% 
+            objBlControleGrid.DefinirLarguras(new List<int>() { 45, 10, 10, 10, 10, 10, }, dgvSaidaMaterial.Width - 25); //O total tem que ficar em 100% 
                                                                                                                          //Define quais os alinhamentos respectivos do componentes das colunas 
             objBlControleGrid.DefinirAlinhamento(new List<string>() { "esquerda", "centro", "centro", "centro", "centro", });
             //Define a altura das linhas respectivas da Grid 

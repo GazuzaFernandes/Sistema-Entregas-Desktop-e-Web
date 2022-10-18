@@ -295,7 +295,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                     txtFabrica.Text = ListarMadeiraStatus.Fabrica;
                     txtMaterialEntrada.Text = ListarMadeiraStatus.Madeiras;
                     txtTotalEntrada.Text = ListarMadeiraStatus.Total.ToString();
-                    txtMaterialEntrada.Text = ListarMadeiraStatus.UnidadeMedida;
+                    txtUndMedidaEntrada.Text = ListarMadeiraStatus.UnidadeMedida;
                     #endregion
 
                     #region Saida Estoque
@@ -353,7 +353,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                     var pesquisa = txtMaterialSaida.Text.ToLower();
                     listarMadeira = listarMadeira.Where(p => p.Madeiras.ToLower().Contains(pesquisa)).ToList();
                 }
-                dgvSaidaMaterial.DataSource = listarMadeira;
+                dgvSaidaMaterial.DataSource = listarMadeira.OrderByDescending(p => p.StatusObraId).ToList(); 
                 MontarGridMaterial(dgvSaidaMaterial);
             }
 
@@ -367,7 +367,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         {
             try
             {
-                dgvSaidaMaterial.DefaultCellStyle.Font = new Font("Calibri", 16F, GraphicsUnit.Pixel);
+                dgvSaidaMaterial.DefaultCellStyle.Font = new Font("Calibri", 20F, GraphicsUnit.Pixel);
                 var objBlControleGrid = new ControleGrid(dgvSaidaMaterial);
                 //Define quais colunas serão visíveis
                 objBlControleGrid.DefinirVisibilidade(new List<string>() { "Madeiras", "UnidadeMedida", "Total", });
@@ -407,7 +407,8 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                 var listarData = new DLItensDataFinanceiro().Listar().Where(p => p.IdMadeiras == Convert.ToInt32(txtIdEntrada.Text)).ToList();
                 dgvData.DataSource = null;
                 dgvData.DataSource = listarData.OrderByDescending(p => p.Datas).ToList();
-                dgvData.Refresh(); MontarGridData(dgvData);
+                dgvData.Refresh(); 
+                MontarGridData(dgvData);
             }
             catch (Exception ex)
             {
@@ -419,14 +420,14 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         {
             try
             {
-                dgvData.DefaultCellStyle.Font = new Font("Calibri", 16F, GraphicsUnit.Pixel);
+                dgvData.DefaultCellStyle.Font = new Font("Calibri", 20F, GraphicsUnit.Pixel);
                 var objBlControleGrid = new ControleGrid(dgvData);
                 //Define quais colunas serão visíveis
                 objBlControleGrid.DefinirVisibilidade(new List<string>() { "Fabrica", "Datas", "Entrada", });
                 //Define quais os cabeçalhos respectivos das colunas 
                 objBlControleGrid.DefinirCabecalhos(new List<string>() { "Fabrica", "Data", "Entrada" });
                 //Define quais as larguras respectivas das colunas 
-                objBlControleGrid.DefinirLarguras(new List<int>() { 25, 25, 50 }, dgvData.Width - 15); //O total tem que ficar em 100% 
+                objBlControleGrid.DefinirLarguras(new List<int>() { 25, 25, 50 }, dgvData.Width - 25); //O total tem que ficar em 100% 
                 //Define quais os alinhamentos respectivos do componentes das colunas 
                 objBlControleGrid.DefinirAlinhamento(new List<string>() { "centro", "centro", "centro", "centro", "centro", });
                 //Define a altura das linhas respectivas da Grid 
@@ -538,5 +539,9 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         }
         #endregion
 
+        private void txtEntradaEstoque_TextChanged(object sender, EventArgs e)
+        {
+            CalcularEntrada();
+        }
     }
 }

@@ -35,6 +35,7 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvValores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,22 +47,22 @@
             this.dgvValores.BackgroundColor = System.Drawing.Color.White;
             this.dgvValores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvValores.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvValores.Location = new System.Drawing.Point(0, 171);
+            this.dgvValores.Location = new System.Drawing.Point(0, 137);
             this.dgvValores.Name = "dgvValores";
             this.dgvValores.ReadOnly = true;
             this.dgvValores.RowHeadersWidth = 51;
             this.dgvValores.RowTemplate.Height = 29;
             this.dgvValores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvValores.Size = new System.Drawing.Size(1121, 553);
+            this.dgvValores.Size = new System.Drawing.Size(1121, 587);
             this.dgvValores.TabIndex = 0;
             this.dgvValores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvValores_CellDoubleClick);
             // 
             // btnProduto
             // 
             this.btnProduto.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnProduto.Location = new System.Drawing.Point(616, 82);
+            this.btnProduto.Location = new System.Drawing.Point(680, 30);
             this.btnProduto.Name = "btnProduto";
-            this.btnProduto.Size = new System.Drawing.Size(264, 63);
+            this.btnProduto.Size = new System.Drawing.Size(264, 57);
             this.btnProduto.TabIndex = 51;
             this.btnProduto.Text = "Cadastrar Produto";
             this.btnProduto.UseVisualStyleBackColor = true;
@@ -70,7 +71,7 @@
             // btnLimparPesquisa
             // 
             this.btnLimparPesquisa.Image = ((System.Drawing.Image)(resources.GetObject("btnLimparPesquisa.Image")));
-            this.btnLimparPesquisa.Location = new System.Drawing.Point(212, 98);
+            this.btnLimparPesquisa.Location = new System.Drawing.Point(636, 49);
             this.btnLimparPesquisa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLimparPesquisa.Name = "btnLimparPesquisa";
             this.btnLimparPesquisa.Size = new System.Drawing.Size(38, 38);
@@ -81,7 +82,7 @@
             // btnPesquisar
             // 
             this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
-            this.btnPesquisar.Location = new System.Drawing.Point(168, 98);
+            this.btnPesquisar.Location = new System.Drawing.Point(592, 49);
             this.btnPesquisar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(38, 38);
@@ -103,13 +104,24 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 22);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 123);
+            this.pictureBox1.Size = new System.Drawing.Size(147, 88);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 47;
             this.pictureBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(165, 11);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(122, 31);
+            this.label4.TabIndex = 52;
+            this.label4.Text = "Pesquisar:";
             // 
             // FrmOrcamentoPrincipal
             // 
@@ -118,6 +130,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1121, 724);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnProduto);
             this.Controls.Add(this.btnLimparPesquisa);
             this.Controls.Add(this.btnPesquisar);
@@ -148,5 +161,6 @@
         private Button btnPesquisar;
         private TextBox txtPesquisar;
         private PictureBox pictureBox1;
+        private Label label4;
     }
 }

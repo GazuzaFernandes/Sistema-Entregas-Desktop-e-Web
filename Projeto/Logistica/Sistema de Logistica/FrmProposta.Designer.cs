@@ -139,6 +139,7 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
@@ -208,10 +209,10 @@
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 40);
+            this.tabPage1.Location = new System.Drawing.Point(4, 43);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1437, 741);
+            this.tabPage1.Size = new System.Drawing.Size(1437, 738);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dados da Proposta";
             // 
@@ -812,10 +813,10 @@
             this.tabPage2.Controls.Add(this.label15);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.panel1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 40);
+            this.tabPage2.Location = new System.Drawing.Point(4, 43);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1437, 741);
+            this.tabPage2.Size = new System.Drawing.Size(1437, 738);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Itens da Propsota";
             // 
@@ -996,6 +997,7 @@
             // 
             this.txtItensPropostaId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtItensPropostaId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtItensPropostaId.Enabled = false;
             this.txtItensPropostaId.Location = new System.Drawing.Point(1367, 393);
             this.txtItensPropostaId.Name = "txtItensPropostaId";
             this.txtItensPropostaId.Size = new System.Drawing.Size(62, 38);
@@ -1066,7 +1068,7 @@
             // 
             this.panel1.Controls.Add(this.dgvitensProposta);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(3, 437);
+            this.panel1.Location = new System.Drawing.Point(3, 434);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1431, 301);
             this.panel1.TabIndex = 0;
@@ -1096,9 +1098,9 @@
             this.tabPage3.Controls.Add(this.btnLimparComentario);
             this.tabPage3.Controls.Add(this.txtIdHistorico);
             this.tabPage3.Controls.Add(this.panel2);
-            this.tabPage3.Location = new System.Drawing.Point(4, 40);
+            this.tabPage3.Location = new System.Drawing.Point(4, 43);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1437, 741);
+            this.tabPage3.Size = new System.Drawing.Size(1437, 738);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Historico da Proposta";
             // 
@@ -1151,7 +1153,7 @@
             // 
             this.panel2.Controls.Add(this.dgvHistorico);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 166);
+            this.panel2.Location = new System.Drawing.Point(0, 163);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1437, 575);
             this.panel2.TabIndex = 1;
@@ -1200,10 +1202,6 @@
             this.mtSalvarComentario.Size = new System.Drawing.Size(266, 32);
             this.mtSalvarComentario.Text = "Salvar Comentario";
             this.mtSalvarComentario.Click += new System.EventHandler(this.mtSalvarComentario_Click);
-            // 
-            // imprimir
-            // 
-            this.imprimir.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.imprimir_PrintPage);
             // 
             // FrmProposta
             // 

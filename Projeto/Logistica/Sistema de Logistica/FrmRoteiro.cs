@@ -303,7 +303,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 //Define quais os cabeçalhos respectivos das colunas 
                 objBlControleGrid.DefinirCabecalhos(new List<string>() { "Material", "Unidade Medida", "Qtd Saida", "Qtd Caixa" });
                 //Define quais as larguras respectivas das colunas 
-                objBlControleGrid.DefinirLarguras(new List<int>() { 35, 20, 20, 20 }, dgvSaidaMaterial.Width - 15); //O total tem que ficar em 100% 
+                objBlControleGrid.DefinirLarguras(new List<int>() { 35, 20, 20, 20 }, dgvSaidaMaterial.Width - 25); //O total tem que ficar em 100% 
                 //Define quais os alinhamentos respectivos do componentes das colunas 
                 objBlControleGrid.DefinirAlinhamento(new List<string>() { "centro", "centro", "centro", "centro", "centro", "centro", "centro", });
                 //Define a altura das linhas respectivas da Grid 

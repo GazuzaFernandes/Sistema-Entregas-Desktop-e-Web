@@ -92,6 +92,7 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -99,7 +100,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1227, 718);
+            this.tabControl1.Size = new System.Drawing.Size(1227, 693);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -121,17 +122,17 @@
             this.tabPage1.Controls.Add(this.dgvSaidaMaterial);
             this.tabPage1.Controls.Add(this.btnInserir);
             this.tabPage1.Controls.Add(this.btnLimparSaida);
-            this.tabPage1.Location = new System.Drawing.Point(4, 40);
+            this.tabPage1.Location = new System.Drawing.Point(4, 43);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1219, 674);
+            this.tabPage1.Size = new System.Drawing.Size(1219, 646);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Saida Material";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1064, 118);
+            this.pictureBox2.Location = new System.Drawing.Point(1001, 74);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(147, 110);
@@ -209,7 +210,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.Yellow;
-            this.label7.Location = new System.Drawing.Point(794, 153);
+            this.label7.Location = new System.Drawing.Point(852, 166);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(104, 31);
             this.label7.TabIndex = 34;
@@ -220,7 +221,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.Lime;
-            this.label6.Location = new System.Drawing.Point(679, 197);
+            this.label6.Location = new System.Drawing.Point(683, 166);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(151, 31);
             this.label6.TabIndex = 34;
@@ -231,7 +232,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.Cyan;
-            this.label5.Location = new System.Drawing.Point(513, 153);
+            this.label5.Location = new System.Drawing.Point(490, 166);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(169, 31);
             this.label5.TabIndex = 34;
@@ -275,12 +276,12 @@
             this.dgvSaidaMaterial.BackgroundColor = System.Drawing.Color.White;
             this.dgvSaidaMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSaidaMaterial.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvSaidaMaterial.Location = new System.Drawing.Point(3, 243);
+            this.dgvSaidaMaterial.Location = new System.Drawing.Point(3, 238);
             this.dgvSaidaMaterial.Name = "dgvSaidaMaterial";
             this.dgvSaidaMaterial.RowHeadersWidth = 51;
             this.dgvSaidaMaterial.RowTemplate.Height = 29;
             this.dgvSaidaMaterial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSaidaMaterial.Size = new System.Drawing.Size(1213, 428);
+            this.dgvSaidaMaterial.Size = new System.Drawing.Size(1213, 405);
             this.dgvSaidaMaterial.TabIndex = 33;
             this.dgvSaidaMaterial.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSaidaMaterial_CellDoubleClick);
             this.dgvSaidaMaterial.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvSaidaMaterial_DataBindingComplete);
@@ -290,13 +291,13 @@
             this.btnInserir.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnInserir.ForeColor = System.Drawing.Color.Black;
             this.btnInserir.Image = ((System.Drawing.Image)(resources.GetObject("btnInserir.Image")));
-            this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInserir.Location = new System.Drawing.Point(90, 153);
             this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(159, 75);
+            this.btnInserir.Size = new System.Drawing.Size(159, 52);
             this.btnInserir.TabIndex = 29;
             this.btnInserir.Text = "Inserir";
-            this.btnInserir.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnInserir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInserir.UseVisualStyleBackColor = true;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
@@ -305,13 +306,13 @@
             this.btnLimparSaida.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLimparSaida.ForeColor = System.Drawing.Color.Black;
             this.btnLimparSaida.Image = ((System.Drawing.Image)(resources.GetObject("btnLimparSaida.Image")));
-            this.btnLimparSaida.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnLimparSaida.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLimparSaida.Location = new System.Drawing.Point(299, 153);
             this.btnLimparSaida.Name = "btnLimparSaida";
-            this.btnLimparSaida.Size = new System.Drawing.Size(159, 75);
+            this.btnLimparSaida.Size = new System.Drawing.Size(159, 52);
             this.btnLimparSaida.TabIndex = 30;
             this.btnLimparSaida.Text = "Limpar";
-            this.btnLimparSaida.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnLimparSaida.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimparSaida.UseVisualStyleBackColor = true;
             this.btnLimparSaida.Click += new System.EventHandler(this.btnLimparSaida_Click);
             // 
@@ -342,10 +343,10 @@
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.btnDeletar);
             this.tabPage2.Controls.Add(this.btnSalvar);
-            this.tabPage2.Location = new System.Drawing.Point(4, 40);
+            this.tabPage2.Location = new System.Drawing.Point(4, 43);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1219, 674);
+            this.tabPage2.Size = new System.Drawing.Size(1219, 646);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Entrada Material";
             // 
@@ -355,7 +356,7 @@
             this.bntLimparEntrada.ForeColor = System.Drawing.Color.Black;
             this.bntLimparEntrada.Image = ((System.Drawing.Image)(resources.GetObject("bntLimparEntrada.Image")));
             this.bntLimparEntrada.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.bntLimparEntrada.Location = new System.Drawing.Point(829, 574);
+            this.bntLimparEntrada.Location = new System.Drawing.Point(803, 483);
             this.bntLimparEntrada.Name = "bntLimparEntrada";
             this.bntLimparEntrada.Size = new System.Drawing.Size(159, 75);
             this.bntLimparEntrada.TabIndex = 50;
@@ -368,12 +369,12 @@
             // 
             this.dgvData.BackgroundColor = System.Drawing.Color.White;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Location = new System.Drawing.Point(55, 267);
+            this.dgvData.Location = new System.Drawing.Point(55, 266);
             this.dgvData.Name = "dgvData";
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 29;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData.Size = new System.Drawing.Size(730, 382);
+            this.dgvData.Size = new System.Drawing.Size(730, 292);
             this.dgvData.TabIndex = 49;
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             // 
@@ -382,7 +383,7 @@
             this.rbComercio.AutoSize = true;
             this.rbComercio.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbComercio.ForeColor = System.Drawing.Color.Lime;
-            this.rbComercio.Location = new System.Drawing.Point(899, 267);
+            this.rbComercio.Location = new System.Drawing.Point(530, 147);
             this.rbComercio.Name = "rbComercio";
             this.rbComercio.Size = new System.Drawing.Size(213, 42);
             this.rbComercio.TabIndex = 46;
@@ -395,7 +396,7 @@
             this.rbEngenharia.AutoSize = true;
             this.rbEngenharia.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbEngenharia.ForeColor = System.Drawing.Color.Cyan;
-            this.rbEngenharia.Location = new System.Drawing.Point(899, 87);
+            this.rbEngenharia.Location = new System.Drawing.Point(277, 144);
             this.rbEngenharia.Name = "rbEngenharia";
             this.rbEngenharia.Size = new System.Drawing.Size(236, 42);
             this.rbEngenharia.TabIndex = 47;
@@ -408,7 +409,7 @@
             this.rbPisos.AutoSize = true;
             this.rbPisos.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbPisos.ForeColor = System.Drawing.Color.Yellow;
-            this.rbPisos.Location = new System.Drawing.Point(899, 174);
+            this.rbPisos.Location = new System.Drawing.Point(762, 147);
             this.rbPisos.Name = "rbPisos";
             this.rbPisos.Size = new System.Drawing.Size(155, 42);
             this.rbPisos.TabIndex = 48;
@@ -432,7 +433,7 @@
             // 
             this.txtDataId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtDataId.Enabled = false;
-            this.txtDataId.Location = new System.Drawing.Point(738, 223);
+            this.txtDataId.Location = new System.Drawing.Point(55, 222);
             this.txtDataId.Name = "txtDataId";
             this.txtDataId.Size = new System.Drawing.Size(47, 38);
             this.txtDataId.TabIndex = 44;
@@ -448,10 +449,11 @@
             // 
             // txtTotalEntrada
             // 
+            this.txtTotalEntrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtTotalEntrada.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotalEntrada.Enabled = false;
             this.txtTotalEntrada.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTotalEntrada.Location = new System.Drawing.Point(586, 155);
+            this.txtTotalEntrada.Location = new System.Drawing.Point(141, 144);
             this.txtTotalEntrada.Name = "txtTotalEntrada";
             this.txtTotalEntrada.Size = new System.Drawing.Size(118, 38);
             this.txtTotalEntrada.TabIndex = 43;
@@ -461,7 +463,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(257, 216);
+            this.label14.Location = new System.Drawing.Point(239, 229);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(314, 31);
             this.label14.TabIndex = 42;
@@ -472,7 +474,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(484, 159);
+            this.label13.Location = new System.Drawing.Point(55, 147);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(73, 31);
             this.label13.TabIndex = 42;
@@ -482,17 +484,18 @@
             // 
             this.txtEntradaEstoque.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEntradaEstoque.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtEntradaEstoque.Location = new System.Drawing.Point(266, 155);
+            this.txtEntradaEstoque.Location = new System.Drawing.Point(951, 84);
             this.txtEntradaEstoque.Name = "txtEntradaEstoque";
-            this.txtEntradaEstoque.Size = new System.Drawing.Size(131, 38);
+            this.txtEntradaEstoque.Size = new System.Drawing.Size(106, 38);
             this.txtEntradaEstoque.TabIndex = 43;
+            this.txtEntradaEstoque.TextChanged += new System.EventHandler(this.txtEntradaEstoque_TextChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(164, 159);
+            this.label12.Location = new System.Drawing.Point(849, 88);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(102, 31);
             this.label12.TabIndex = 42;
@@ -502,7 +505,7 @@
             // 
             this.txtUndMedidaEntrada.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUndMedidaEntrada.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtUndMedidaEntrada.Location = new System.Drawing.Point(738, 87);
+            this.txtUndMedidaEntrada.Location = new System.Drawing.Point(738, 84);
             this.txtUndMedidaEntrada.Name = "txtUndMedidaEntrada";
             this.txtUndMedidaEntrada.Size = new System.Drawing.Size(89, 38);
             this.txtUndMedidaEntrada.TabIndex = 43;
@@ -512,7 +515,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(580, 91);
+            this.label11.Location = new System.Drawing.Point(580, 88);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(152, 31);
             this.label11.TabIndex = 42;
@@ -522,7 +525,7 @@
             // 
             this.txtMaterialEntrada.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMaterialEntrada.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtMaterialEntrada.Location = new System.Drawing.Point(145, 87);
+            this.txtMaterialEntrada.Location = new System.Drawing.Point(145, 84);
             this.txtMaterialEntrada.Name = "txtMaterialEntrada";
             this.txtMaterialEntrada.Size = new System.Drawing.Size(408, 38);
             this.txtMaterialEntrada.TabIndex = 43;
@@ -532,7 +535,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(29, 91);
+            this.label10.Location = new System.Drawing.Point(29, 88);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(110, 31);
             this.label10.TabIndex = 42;
@@ -544,7 +547,7 @@
             this.txtFabrica.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtFabrica.Location = new System.Drawing.Point(335, 21);
             this.txtFabrica.Name = "txtFabrica";
-            this.txtFabrica.Size = new System.Drawing.Size(408, 38);
+            this.txtFabrica.Size = new System.Drawing.Size(218, 38);
             this.txtFabrica.TabIndex = 43;
             // 
             // label9
@@ -554,16 +557,16 @@
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(233, 25);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(211, 31);
+            this.label9.Size = new System.Drawing.Size(96, 31);
             this.label9.TabIndex = 42;
-            this.label9.Text = "Nome da Madeira:";
+            this.label9.Text = "Fabrica:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(782, 25);
+            this.label8.Location = new System.Drawing.Point(603, 25);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(94, 31);
             this.label8.TabIndex = 41;
@@ -574,7 +577,7 @@
             this.dtpDataPedido.AccessibleDescription = "";
             this.dtpDataPedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.dtpDataPedido.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDataPedido.Location = new System.Drawing.Point(882, 23);
+            this.dtpDataPedido.Location = new System.Drawing.Point(703, 23);
             this.dtpDataPedido.Name = "dtpDataPedido";
             this.dtpDataPedido.Size = new System.Drawing.Size(148, 34);
             this.dtpDataPedido.TabIndex = 40;
@@ -582,7 +585,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1051, 539);
+            this.pictureBox1.Location = new System.Drawing.Point(1044, 448);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(147, 110);
@@ -596,7 +599,7 @@
             this.btnDeletar.ForeColor = System.Drawing.Color.Black;
             this.btnDeletar.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletar.Image")));
             this.btnDeletar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDeletar.Location = new System.Drawing.Point(829, 461);
+            this.btnDeletar.Location = new System.Drawing.Point(803, 370);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(159, 75);
             this.btnDeletar.TabIndex = 33;
@@ -611,7 +614,7 @@
             this.btnSalvar.ForeColor = System.Drawing.Color.Black;
             this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(825, 352);
+            this.btnSalvar.Location = new System.Drawing.Point(799, 261);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(159, 75);
             this.btnSalvar.TabIndex = 34;
@@ -627,21 +630,23 @@
             this.cmsSalvarDatas,
             this.cmSalvarMaterial});
             this.cmsSalvar.Name = "cmsSalvar";
-            this.cmsSalvar.Size = new System.Drawing.Size(178, 52);
+            this.cmsSalvar.Size = new System.Drawing.Size(212, 68);
             // 
             // cmsSalvarDatas
             // 
+            this.cmsSalvarDatas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmsSalvarDatas.ForeColor = System.Drawing.Color.Red;
             this.cmsSalvarDatas.Name = "cmsSalvarDatas";
-            this.cmsSalvarDatas.Size = new System.Drawing.Size(177, 24);
+            this.cmsSalvarDatas.Size = new System.Drawing.Size(211, 32);
             this.cmsSalvarDatas.Text = "Salvar Datas";
             this.cmsSalvarDatas.Click += new System.EventHandler(this.cmsSalvarDatas_Click);
             // 
             // cmSalvarMaterial
             // 
+            this.cmSalvarMaterial.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmSalvarMaterial.ForeColor = System.Drawing.Color.Red;
             this.cmSalvarMaterial.Name = "cmSalvarMaterial";
-            this.cmSalvarMaterial.Size = new System.Drawing.Size(177, 24);
+            this.cmSalvarMaterial.Size = new System.Drawing.Size(211, 32);
             this.cmSalvarMaterial.Text = "Salvar Material";
             this.cmSalvarMaterial.Click += new System.EventHandler(this.cmSalvarMaterial_Click);
             // 
@@ -675,7 +680,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1227, 718);
+            this.ClientSize = new System.Drawing.Size(1227, 693);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

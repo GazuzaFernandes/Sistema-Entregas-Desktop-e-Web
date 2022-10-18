@@ -236,10 +236,10 @@
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.btnDeletar);
             this.tabPage2.Controls.Add(this.btnSalvar);
-            this.tabPage2.Location = new System.Drawing.Point(4, 40);
+            this.tabPage2.Location = new System.Drawing.Point(4, 43);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1229, 670);
+            this.tabPage2.Size = new System.Drawing.Size(1229, 667);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Entrada Material";
             // 
@@ -734,7 +734,7 @@
             this.dgvSaidaMaterial.BackgroundColor = System.Drawing.Color.White;
             this.dgvSaidaMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSaidaMaterial.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvSaidaMaterial.Location = new System.Drawing.Point(3, 337);
+            this.dgvSaidaMaterial.Location = new System.Drawing.Point(3, 334);
             this.dgvSaidaMaterial.Name = "dgvSaidaMaterial";
             this.dgvSaidaMaterial.ReadOnly = true;
             this.dgvSaidaMaterial.RowHeadersWidth = 51;
@@ -776,6 +776,7 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -813,10 +814,10 @@
             this.tabPage1.Controls.Add(this.dgvSaidaMaterial);
             this.tabPage1.Controls.Add(this.btnBaixarEstoque);
             this.tabPage1.Controls.Add(this.btnLimparSaida);
-            this.tabPage1.Location = new System.Drawing.Point(4, 40);
+            this.tabPage1.Location = new System.Drawing.Point(4, 43);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1229, 670);
+            this.tabPage1.Size = new System.Drawing.Size(1229, 667);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Estoque e Saida Material";
             // 

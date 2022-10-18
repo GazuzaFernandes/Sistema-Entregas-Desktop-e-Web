@@ -74,6 +74,7 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -105,10 +106,10 @@
             this.tabPage1.Controls.Add(this.btnDeletar);
             this.tabPage1.Controls.Add(this.btnSalvar);
             this.tabPage1.Controls.Add(this.dgvRoteiroMotorista);
-            this.tabPage1.Location = new System.Drawing.Point(4, 37);
+            this.tabPage1.Location = new System.Drawing.Point(4, 40);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(915, 663);
+            this.tabPage1.Size = new System.Drawing.Size(915, 660);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Informações da obra";
             // 
@@ -312,7 +313,7 @@
             this.dgvRoteiroMotorista.BackgroundColor = System.Drawing.Color.White;
             this.dgvRoteiroMotorista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRoteiroMotorista.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvRoteiroMotorista.Location = new System.Drawing.Point(3, 365);
+            this.dgvRoteiroMotorista.Location = new System.Drawing.Point(3, 362);
             this.dgvRoteiroMotorista.Name = "dgvRoteiroMotorista";
             this.dgvRoteiroMotorista.ReadOnly = true;
             this.dgvRoteiroMotorista.RowHeadersWidth = 51;
@@ -339,10 +340,10 @@
             this.tabPage2.Controls.Add(this.btnPesquisarMaterial);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.dgvSaidaMaterial);
-            this.tabPage2.Location = new System.Drawing.Point(4, 37);
+            this.tabPage2.Location = new System.Drawing.Point(4, 40);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(915, 663);
+            this.tabPage2.Size = new System.Drawing.Size(915, 660);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Saida de material para obra.";
             // 
@@ -489,7 +490,7 @@
             this.dgvSaidaMaterial.BackgroundColor = System.Drawing.Color.White;
             this.dgvSaidaMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSaidaMaterial.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvSaidaMaterial.Location = new System.Drawing.Point(3, 316);
+            this.dgvSaidaMaterial.Location = new System.Drawing.Point(3, 313);
             this.dgvSaidaMaterial.Name = "dgvSaidaMaterial";
             this.dgvSaidaMaterial.ReadOnly = true;
             this.dgvSaidaMaterial.RowHeadersWidth = 51;

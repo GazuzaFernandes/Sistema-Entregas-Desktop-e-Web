@@ -107,7 +107,7 @@ namespace Logistica.Sistema_do_Orçamento
         }
         private void MontarGridProdutos(DataGridView dgvValores)
         {
-            dgvValores.DefaultCellStyle.Font = new Font("Calibri", 16F, GraphicsUnit.Pixel);
+            dgvValores.DefaultCellStyle.Font = new Font("Calibri", 20F, GraphicsUnit.Pixel);
             var objBlControleGrid = new ControleGrid(dgvValores);
             //Define quais colunas serão visíveis
             objBlControleGrid.DefinirVisibilidade(new List<string>() { "Fornecedor", "Produto", "Preco", "Rendimento", "Comentario" });

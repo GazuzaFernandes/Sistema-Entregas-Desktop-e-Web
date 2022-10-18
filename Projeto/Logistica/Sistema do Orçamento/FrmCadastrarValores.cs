@@ -241,7 +241,7 @@ namespace Projeto.Logistica.Sistema_do_Orçamento
         }
         private void MontarGridData(object DgvData)
         {
-            dgvData.DefaultCellStyle.Font = new Font("Calibri", 16F, GraphicsUnit.Pixel);
+            dgvData.DefaultCellStyle.Font = new Font("Calibri", 20F, GraphicsUnit.Pixel);
             var objBlControleGrid = new ControleGrid(dgvData);
             //Define quais colunas serão visíveis
             objBlControleGrid.DefinirVisibilidade(new List<string>() { "Data", "Preco" });

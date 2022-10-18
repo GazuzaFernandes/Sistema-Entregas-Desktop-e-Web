@@ -11,4 +11,8 @@
     <Content Include="fa1e9ad2-31c5-4aae-9885-75b57e26db21.ico" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj" />
+  </ItemGroup>
+
 </Project>

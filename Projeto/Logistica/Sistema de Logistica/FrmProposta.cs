@@ -27,7 +27,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         private void FrmProposta_Load(object sender, EventArgs e)
         {
             try
-            {              
+            {
                 HabilitarCampos(false);
                 #region _proposta
                 if (_proposta == null)
@@ -150,11 +150,11 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             {
                 int ide = 1;
                 int.TryParse(txtCodigoCliente.Text, out ide);
-                if (ide > 1)
+                if (ide != 1)
                 {
                     _fabrica = new DLCadastrarEmpresa().ConsultarPorId(Convert.ToInt32(txtCodigoCliente.Text));
                     txtCodigoCliente.Text = _fabrica.EmpresaId.ToString();
-                    txtEmpresa.Text = _fabrica.Empresa;
+                    txtCliente.Text = _fabrica.Empresa;
                 }
                 else if (ide == 1)
                 {
@@ -214,7 +214,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 #endregion
 
                 FrmImpressaoProposta frmImpressao = new FrmImpressaoProposta
-                    (dtpDataEntrega.Value, txtProposta.Text, txtCliente.Text, 
+                    (dtpDataEntrega.Value, txtProposta.Text, txtCliente.Text,
                     txtObra.Text, itensProposta, txtNotaFiscal.Text, historico);
 
                 frmImpressao.reportViewer1.LocalReport.DataSources.Clear();
@@ -280,7 +280,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                         var pAtua = new DLDadosProposta().ConsultarPorId(id);
                         pAtua.DataPrevista = dtpDataPedido.Value;
                         pAtua.DataPedido = dtpDataPedido.Value;
-                        pAtua.Fabrica = txtEmpresa.Text;                       
+                        pAtua.Fabrica = txtEmpresa.Text;
                         pAtua.FormaPag = txtFormaPagamento.Text;
                         pAtua.EngResp = txtEngResponsavel.Text;
                         pAtua.Telefone = txtTelefone.Text;
@@ -585,10 +585,10 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 MessageBox.Show("Erro:" + ex.Message);
             }
         }
-      
+
         #endregion
 
-        #region Campo de Metodos
+        #region Apenas Metodos
         private void CarregarGridHistorico()
         {
             try
@@ -608,14 +608,14 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                dgvHistorico.DefaultCellStyle.Font = new System.Drawing.Font("Calibri",20F, GraphicsUnit.Pixel);
+                dgvHistorico.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 20F, GraphicsUnit.Pixel);
                 var objBlControleGrid = new ControleGrid(dgvHistorico);
                 //Define quais colunas serão visíveis
                 objBlControleGrid.DefinirVisibilidade(new List<string>() { "DataComentario", "Comentario", });
                 //Define quais os cabeçalhos respectivos das colunas 
                 objBlControleGrid.DefinirCabecalhos(new List<string>() { "Data do Comentario", "Comentario", });
                 //Define quais as larguras respectivas das colunas 
-                objBlControleGrid.DefinirLarguras(new List<int>() { 20, 80 }, dgvHistorico.Width - 15); //O total tem que ficar em 100% 
+                objBlControleGrid.DefinirLarguras(new List<int>() { 20, 80 }, dgvHistorico.Width - 25); //O total tem que ficar em 100% 
                 //Define quais os alinhamentos respectivos do componentes das colunas 
                 objBlControleGrid.DefinirAlinhamento(new List<string>() { "esquerda", "centro", });
                 //Define a altura das linhas respectivas da Grid 
@@ -628,7 +628,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         }
         private void BloquearBotao(bool desabilitar)
         {
-            btnGerarId.Enabled = desabilitar;           
+            btnGerarId.Enabled = desabilitar;
         }
         private void CarregarGridItensProposta()
         {
@@ -650,17 +650,17 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                dgvitensProposta.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 19F, GraphicsUnit.Pixel);
+                dgvitensProposta.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 20F, GraphicsUnit.Pixel);
                 var objBlControleGrid = new ControleGrid(dgvitensProposta);
                 //Define quais colunas serão visíveis
                 objBlControleGrid.DefinirVisibilidade(new List<string>()
                 { "Material", "UndMedida", "Quantidade", "Preco", "QtdCaixa", "ObsMaterial", "Total", });
                 //Define quais os cabeçalhos respectivos das colunas 
-                objBlControleGrid.DefinirCabecalhos(new List<string>() 
+                objBlControleGrid.DefinirCabecalhos(new List<string>()
                 { "Material", "Und Medida", "Qtd", "Valor", "Qtd Caixa", "Obs Material", "Total" });
                 //Define quais as larguras respectivas das colunas 
-                objBlControleGrid.DefinirLarguras(new List<int>() 
-                { 41, 10, 8, 7, 5, 15, 10 }, dgvitensProposta.Width - 15); //O total tem que ficar em 100% 
+                objBlControleGrid.DefinirLarguras(new List<int>()
+                { 41, 10, 8, 7, 5, 15, 10 }, dgvitensProposta.Width - 35); //O total tem que ficar em 100% 
                 //Define quais os alinhamentos respectivos do componentes das colunas 
                 objBlControleGrid.DefinirAlinhamento(new List<string>() { "centro", "centro", "centro", "centro", "centro", "centro", "centro", });
                 //Define a altura das linhas respectivas da Grid 
@@ -695,7 +695,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             txtCodigoItensMaterial.Enabled = Habilitar;
             txtQuantidade.Enabled = Habilitar;
             txtPreco.Enabled = Habilitar;
-            txtUndMedida.Enabled = Habilitar;          
+            txtUndMedida.Enabled = Habilitar;
             rtbObservacao.Enabled = Habilitar;
             rtbMaterial.Enabled = Habilitar;
             btnInserir.Enabled = Habilitar;
@@ -713,7 +713,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 cadasEmpr.ShowDialog();
                 var id = cadasEmpr.empresaid;
                 var empresa = cadasEmpr.empresa;
-                var cliente = cadasEmpr.empresa;
+                var cliente = cadasEmpr.construtora;
                 switch (pesquisar)
                 {
                     case 1:
@@ -721,7 +721,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                             txtCodigoFabrica.Text = id.ToString();
                             txtEmpresa.Text = empresa;
                         }
-                        break;                  
+                        break;
                     case 2:
                         {
                             txtCodigoCliente.Text = id.ToString();
@@ -761,7 +761,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             rtbMaterial.Text = Convert.ToString(null);
             dtpDataEntrega.Value = DateTime.Now;
             dtpDataPedido.Value = DateTime.Now;
-            dtpDataPedido.Value = DateTime.Now;       
+            dtpDataPedido.Value = DateTime.Now;
         }
         private bool ValidarCampos()
         {
@@ -830,15 +830,18 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                decimal qtd = 1;
-                decimal caixa = 1;
+                decimal qtd = 0;
+                decimal caixa = 0;
                 decimal total = 0;
 
                 if (decimal.TryParse(txtQuantidade.Text, out caixa))
                 {
                     if (decimal.TryParse(txtQtdUndCaixa.Text, out qtd))
                     {
-                        total = caixa / qtd;
+                        if (qtd > 0)
+                        {
+                            total = caixa / qtd;
+                        }
                     }
                     else
                     {
@@ -856,7 +859,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                decimal qtd = 1, valor = 1, total = 0;
+                decimal qtd = 0, valor = 0, total = 0;
 
                 if (decimal.TryParse(txtPreco.Text, out valor))
                 {
@@ -899,9 +902,6 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
         #endregion
 
-        private void imprimir_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-           
-        }
+     
     }
 }

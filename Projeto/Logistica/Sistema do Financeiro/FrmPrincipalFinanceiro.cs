@@ -130,27 +130,7 @@ namespace Logistica.Sistema_do_Financeiro
                     else if (rbProposta.Checked)
                         listarFinanceiro = listarFinanceiro.Where(p => p.Propostas.ToLower().Contains(pesquisa)).ToList();
                     else if (rbNotaFiscal.Checked)
-                        listarFinanceiro = listarFinanceiro.Where(p => p.NotaFiscal.ToLower().Contains(pesquisa)).ToList();
-                    //switch (cbEmpresas.Text)
-                    //{
-                    //    case "Rb Pisos":
-                    //        {
-                    //            cbEmpresas.Sorted = true;
-                    //        }
-                    //        break;
-
-                    //    case "Rb Engenharia":
-                    //        {
-                    //            cbEmpresas.Sorted = true;
-                    //        }
-                    //        break;
-
-                    //    case "Rb Comercio":
-                    //        {                      
-                    //            
-                    //        }
-                    //        break;
-                    //}
+                        listarFinanceiro = listarFinanceiro.Where(p => p.NotaFiscal.ToLower().Contains(pesquisa)).ToList();               
                 }
                 dgvNotaFiscais.DataSource = listarFinanceiro;
                 MontarGrid(dgvNotaFiscais);
@@ -162,7 +142,7 @@ namespace Logistica.Sistema_do_Financeiro
         }
         private void MontarGrid(DataGridView dgvNotaFiscais)
         {
-            dgvNotaFiscais.DefaultCellStyle.Font = new Font("Calibri", 16F, GraphicsUnit.Pixel);
+            dgvNotaFiscais.DefaultCellStyle.Font = new Font("Calibri", 20F, GraphicsUnit.Pixel);
             var objBlControleGrid = new ControleGrid(dgvNotaFiscais);
             //Define quais colunas serão visíveis
             objBlControleGrid.DefinirVisibilidade(new List<string>()
@@ -170,7 +150,7 @@ namespace Logistica.Sistema_do_Financeiro
             //Define quais os cabeçalhos respectivos das colunas 
             objBlControleGrid.DefinirCabecalhos(new List<string>() { "Emissão da NF", "Vencimento da NF", "Cliente", "Propostas", "Nota Fiscal", "Obra", });
             //Define quais as larguras respectivas das colunas 
-            objBlControleGrid.DefinirLarguras(new List<int>() { 10, 15, 10, 10, 10, 40, }, dgvNotaFiscais.Width - 15); //O total tem que ficar em 100% 
+            objBlControleGrid.DefinirLarguras(new List<int>() { 10, 15, 10, 10, 10, 40, }, dgvNotaFiscais.Width - 25); //O total tem que ficar em 100% 
             //Define quais os alinhamentos respectivos do componentes das colunas 
             objBlControleGrid.DefinirAlinhamento(new List<string>() { "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", });
             //Define a altura das linhas respectivas da Grid 

@@ -151,6 +151,7 @@
             this.rtbObs.Size = new System.Drawing.Size(497, 101);
             this.rtbObs.TabIndex = 20;
             this.rtbObs.Text = "";
+            this.rtbObs.TextChanged += new System.EventHandler(this.rtbObs_TextChanged);
             // 
             // label2
             // 
@@ -159,9 +160,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(127, 170);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 28);
+            this.label2.Size = new System.Drawing.Size(549, 28);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Observação:";
+            this.label2.Text = "Informação extra ou Digite para pesquisar a informação.";
             // 
             // FrmTelefone
             // 

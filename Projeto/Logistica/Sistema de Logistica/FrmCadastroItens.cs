@@ -166,7 +166,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                dgvMaterial.DefaultCellStyle.Font = new Font("Calibri", 16F, GraphicsUnit.Pixel);
+                dgvMaterial.DefaultCellStyle.Font = new Font("Calibri", 20F, GraphicsUnit.Pixel);
                 var objBlControleGrid = new ControleGrid(dgvMaterial);
                 //Define quais colunas serão visíveis
                 objBlControleGrid.DefinirVisibilidade(new List<string>()
@@ -175,7 +175,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 objBlControleGrid.DefinirCabecalhos(new List<string>()
                 { "CODIGO", "PISO", "UND. MEDIDA" });
                 //Define quais as larguras respectivas das colunas 
-                objBlControleGrid.DefinirLarguras(new List<int>() { 5, 80, 8, }, dgvMaterial.Width - 15); //O total tem que ficar em 100% 
+                objBlControleGrid.DefinirLarguras(new List<int>() { 5, 80, 8, }, dgvMaterial.Width - 25); //O total tem que ficar em 100% 
                 //Define quais os alinhamentos respectivos do componentes das colunas 
                 objBlControleGrid.DefinirAlinhamento(new List<string>()
                 { "centro", "centro", "centro", "centro", "centro", });

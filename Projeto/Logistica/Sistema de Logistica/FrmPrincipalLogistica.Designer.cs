@@ -279,6 +279,7 @@ namespace Logistica.Sistema_de_Logistica
             this.telefonesUteisToolStripMenuItem.Name = "telefonesUteisToolStripMenuItem";
             this.telefonesUteisToolStripMenuItem.Size = new System.Drawing.Size(344, 36);
             this.telefonesUteisToolStripMenuItem.Text = "Telefones Uteis";
+            this.telefonesUteisToolStripMenuItem.Click += new System.EventHandler(this.telefonesUteisToolStripMenuItem_Click);
             // 
             // roteiroToolStripMenuItem
             // 

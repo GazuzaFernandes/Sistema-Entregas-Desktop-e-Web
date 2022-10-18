@@ -280,14 +280,14 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
         {
             try
             {
-                dgvHistorico.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 22F, GraphicsUnit.Pixel);
+                dgvHistorico.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 20F, GraphicsUnit.Pixel);
                 var objBlControleGrid = new ControleGrid(dgvHistorico);
                 //Define quais colunas serão visíveis
                 objBlControleGrid.DefinirVisibilidade(new List<string>() { "Comentario", "DataComentario", "ComentadoEng" });
                 //Define quais os cabeçalhos respectivos das colunas 
                 objBlControleGrid.DefinirCabecalhos(new List<string>() { "Comentario", "Data do Comentario","Responsavel Rb" });
                 //Define quais as larguras respectivas das colunas 
-                objBlControleGrid.DefinirLarguras(new List<int>() { 77, 10, 10 }, dgvHistorico.Width - 15); //O total tem que ficar em 100% 
+                objBlControleGrid.DefinirLarguras(new List<int>() { 77, 10, 10 }, dgvHistorico.Width - 25); //O total tem que ficar em 100% 
                 //Define quais os alinhamentos respectivos do componentes das colunas 
                 objBlControleGrid.DefinirAlinhamento(new List<string>() { "esquerda", "centro", });
                 //Define a altura das linhas respectivas da Grid 

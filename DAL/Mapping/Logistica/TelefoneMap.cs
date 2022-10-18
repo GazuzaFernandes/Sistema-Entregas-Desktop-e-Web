@@ -13,8 +13,8 @@ namespace DAL.Mapping.Logistica
         public TelefoneMap()
         {
             Id(p => p.TelefoneId).GeneratedBy.Sequence("telefone_seq");
-            Map(p => p.Contato);
             Map(p => p.Nome);
+            Map(p => p.Contato);           
             Map(p => p.Observacao);
             Table("telefone");
         }

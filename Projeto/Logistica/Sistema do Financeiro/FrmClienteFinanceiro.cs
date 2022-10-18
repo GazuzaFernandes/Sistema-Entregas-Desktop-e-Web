@@ -166,7 +166,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         {
             try
             {
-                dgvCliente.DefaultCellStyle.Font = new Font("Calibri", 16F, GraphicsUnit.Pixel);
+                dgvCliente.DefaultCellStyle.Font = new Font("Calibri", 20F, GraphicsUnit.Pixel);
                 var objBlControleGrid = new ControleGrid(dgvCliente);
                 //Define quais colunas serão visíveis
                 objBlControleGrid.DefinirVisibilidade(new List<string>() { "Nome", });

@@ -302,7 +302,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                dgvSaidaMaterial.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 16F, GraphicsUnit.Pixel);
+                dgvSaidaMaterial.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 20F, GraphicsUnit.Pixel);
                 var objBlControleGrid = new ControleGrid(dgvSaidaMaterial);
                 //Define quais colunas serão visíveis
                 objBlControleGrid.DefinirVisibilidade(new List<string>()
@@ -311,7 +311,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 objBlControleGrid.DefinirCabecalhos(new List<string>()
                 { "Material", "Unidade de Medida", "Estoque", });
                 //Define quais as larguras respectivas das colunas 
-                objBlControleGrid.DefinirLarguras(new List<int>() { 30, 30, 33 }, dgvSaidaMaterial.Width - 15); //O total tem que ficar em 100% 
+                objBlControleGrid.DefinirLarguras(new List<int>() { 30, 30, 33 }, dgvSaidaMaterial.Width - 25); //O total tem que ficar em 100% 
                 //Define quais os alinhamentos respectivos do componentes das colunas 
                 objBlControleGrid.DefinirAlinhamento(new List<string>()
                 { "centro", "centro", "centro", "centro", "centro", "centro", "centro", });

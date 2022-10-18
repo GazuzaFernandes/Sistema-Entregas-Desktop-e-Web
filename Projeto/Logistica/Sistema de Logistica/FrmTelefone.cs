@@ -97,8 +97,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     txtNome.Text = telefones.Nome;
                     txtTelefone.Text = telefones.Contato;
                     rtbObs.Text = telefones.Observacao;
-                }
-                CarregarGrid();
+                }                
             }
             catch (Exception ex)
             {
@@ -116,8 +115,10 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             try
             {
                 var listarTelefone = new DLTelefone().Listar();
-                var pesquisa = txtNome.Text.ToLower();
-                listarTelefone = listarTelefone.Where(p => p.Nome.ToLower().Contains(pesquisa)).ToList();
+                var pesquisaNome = txtNome.Text.ToLower();
+                listarTelefone = listarTelefone.Where(p => p.Nome.ToLower().Contains(pesquisaNome)).ToList();
+                var pesquisarObs = rtbObs.Text.ToLower();
+                listarTelefone = listarTelefone.Where(p => p.Observacao.ToLower().Contains(pesquisarObs)).ToList();
                 dgvTelefone.DataSource = listarTelefone.OrderBy(p => p.Nome).ToList();
                 MontarGrid(dgvTelefone);
             }
@@ -131,7 +132,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                dvgTelefone.DefaultCellStyle.Font = new Font("Calibri", 16F, GraphicsUnit.Pixel);
+                dvgTelefone.DefaultCellStyle.Font = new Font("Calibri", 20F, GraphicsUnit.Pixel);
                 var objBlControleGrid = new ControleGrid(dvgTelefone);
                 //Define quais colunas serão visíveis
                 objBlControleGrid.DefinirVisibilidade(new List<string>()
@@ -140,7 +141,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 objBlControleGrid.DefinirCabecalhos(new List<string>()
                 { "Nome", "Telefone","Observação" });
                 //Define quais as larguras respectivas das colunas 
-                objBlControleGrid.DefinirLarguras(new List<int>() { 15, 15, 70 }, dvgTelefone.Width - 25); //O total tem que ficar em 100% 
+                objBlControleGrid.DefinirLarguras(new List<int>() { 20, 20, 55 }, dvgTelefone.Width - 25); //O total tem que ficar em 100% 
                 //Define quais os alinhamentos respectivos do componentes das colunas 
                 objBlControleGrid.DefinirAlinhamento(new List<string>()
                 { "centro", "centro", "centro", "centro", "centro", });
@@ -160,6 +161,11 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 MessageBox.Show("Informe o nome");
             }
             return true;
+        }
+
+        private void rtbObs_TextChanged(object sender, EventArgs e)
+        {
+            CarregarGrid(true);
         }
     }
 }

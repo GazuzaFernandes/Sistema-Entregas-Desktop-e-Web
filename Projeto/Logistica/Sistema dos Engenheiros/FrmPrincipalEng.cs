@@ -117,7 +117,7 @@ namespace Logistica.Sistema_dos_Engenheiros
 
         private void MontarGrid(DataGridView dgvPrincipal)
         {
-            dgvPrincipal.DefaultCellStyle.Font = new Font("Calibri", 16F, GraphicsUnit.Pixel);
+            dgvPrincipal.DefaultCellStyle.Font = new Font("Calibri", 20F, GraphicsUnit.Pixel);
             var objBlControleGrid = new ControleGrid(dgvPrincipal);
             //Define quais colunas serão visíveis
             objBlControleGrid.DefinirVisibilidade(new List<string>()
@@ -126,7 +126,7 @@ namespace Logistica.Sistema_dos_Engenheiros
             objBlControleGrid.DefinirCabecalhos(new List<string>() 
             { "Proposta", "Cliente", "Funcionario", "Resp.", "Telefone",});
             //Define quais as larguras respectivas das colunas 
-            objBlControleGrid.DefinirLarguras(new List<int>() { 20, 20,20,20,20 }, dgvPrincipal.Width - 15); //O total tem que ficar em 100% 
+            objBlControleGrid.DefinirLarguras(new List<int>() { 20, 20,20,20,20 }, dgvPrincipal.Width - 25); //O total tem que ficar em 100% 
             objBlControleGrid.DefinirAlinhamento(new List<string>()
             { "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", "esquerda", });
             //Define a altura das linhas respectivas da Grid 

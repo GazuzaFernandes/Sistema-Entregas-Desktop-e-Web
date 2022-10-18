@@ -99,6 +99,7 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -124,20 +125,20 @@
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabPage1.Location = new System.Drawing.Point(4, 40);
+            this.tabPage1.Location = new System.Drawing.Point(4, 43);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1106, 673);
+            this.tabPage1.Size = new System.Drawing.Size(1106, 670);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Material";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(938, 115);
+            this.pictureBox1.Location = new System.Drawing.Point(938, 146);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 110);
+            this.pictureBox1.Size = new System.Drawing.Size(147, 79);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
@@ -149,7 +150,7 @@
             this.dgvMaterial.BackgroundColor = System.Drawing.Color.White;
             this.dgvMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMaterial.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvMaterial.Location = new System.Drawing.Point(3, 239);
+            this.dgvMaterial.Location = new System.Drawing.Point(3, 236);
             this.dgvMaterial.Name = "dgvMaterial";
             this.dgvMaterial.ReadOnly = true;
             this.dgvMaterial.RowHeadersWidth = 51;
@@ -233,9 +234,8 @@
             // txtQuantidadeCaixas
             // 
             this.txtQuantidadeCaixas.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtQuantidadeCaixas.Enabled = false;
             this.txtQuantidadeCaixas.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtQuantidadeCaixas.Location = new System.Drawing.Point(736, 79);
+            this.txtQuantidadeCaixas.Location = new System.Drawing.Point(1000, 79);
             this.txtQuantidadeCaixas.Name = "txtQuantidadeCaixas";
             this.txtQuantidadeCaixas.Size = new System.Drawing.Size(85, 38);
             this.txtQuantidadeCaixas.TabIndex = 23;
@@ -247,7 +247,7 @@
             this.txtMaterial.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtMaterial.Location = new System.Drawing.Point(23, 79);
             this.txtMaterial.Name = "txtMaterial";
-            this.txtMaterial.Size = new System.Drawing.Size(632, 38);
+            this.txtMaterial.Size = new System.Drawing.Size(909, 38);
             this.txtMaterial.TabIndex = 23;
             this.txtMaterial.TextChanged += new System.EventHandler(this.txtMaterial_TextChanged);
             // 
@@ -256,7 +256,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(670, 83);
+            this.label1.Location = new System.Drawing.Point(934, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 31);
             this.label1.TabIndex = 21;
@@ -278,10 +278,10 @@
             this.tabPage2.BackColor = System.Drawing.Color.White;
             this.tabPage2.Controls.Add(this.tabControl2);
             this.tabPage2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabPage2.Location = new System.Drawing.Point(4, 40);
+            this.tabPage2.Location = new System.Drawing.Point(4, 43);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1106, 673);
+            this.tabPage2.Size = new System.Drawing.Size(1106, 670);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Metragens";
             // 
@@ -295,7 +295,7 @@
             this.tabControl2.Location = new System.Drawing.Point(3, 3);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1100, 667);
+            this.tabControl2.Size = new System.Drawing.Size(1100, 664);
             this.tabControl2.TabIndex = 0;
             // 
             // tabPage3
@@ -313,7 +313,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 37);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1092, 626);
+            this.tabPage3.Size = new System.Drawing.Size(1092, 623);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Indusparquet";
             // 
