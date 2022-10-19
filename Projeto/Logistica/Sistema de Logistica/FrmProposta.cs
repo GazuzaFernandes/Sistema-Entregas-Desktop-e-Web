@@ -126,18 +126,24 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                int ide = 1;
-                int.TryParse(txtCodigoFabrica.Text, out ide);
-                if (ide > 1)
+                int cod = 0;
+                int.TryParse(txtCodigoFabrica.Text, out cod);
+                if (cod > 0)
                 {
-                    _fabrica = new DLCadastrarEmpresa().ConsultarPorId(Convert.ToInt32(txtCodigoFabrica.Text));
-                    txtCodigoFabrica.Text = _fabrica.EmpresaId.ToString();
-                    txtEmpresa.Text = _fabrica.Empresa;
+                    int ide = 1;
+                    int.TryParse(txtCodigoFabrica.Text, out ide);
+                    if (ide > 1)
+                    {
+                        _fabrica = new DLCadastrarEmpresa().ConsultarPorId(Convert.ToInt32(txtCodigoFabrica.Text));
+                        txtCodigoFabrica.Text = _fabrica.EmpresaId.ToString();
+                        txtEmpresa.Text = _fabrica.Empresa;
+                    }
+                    else if (ide == 1)
+                    {
+                        MessageBox.Show("Cliente não cadastrado, use a lupa para pesquisar o cliente.");
+                    }
                 }
-                else if (ide == 1)
-                {
-                    MessageBox.Show("Cliente não cadastrado, use a lupa para pesquisar o cliente.");
-                }
+
             }
             catch (Exception ex)
             {
@@ -148,18 +154,24 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                int ide = 1;
-                int.TryParse(txtCodigoCliente.Text, out ide);
-                if (ide != 1)
+                int cod = 0;
+                int.TryParse(txtCodigoCliente.Text, out cod);
+                if (cod > 0)
                 {
-                    _fabrica = new DLCadastrarEmpresa().ConsultarPorId(Convert.ToInt32(txtCodigoCliente.Text));
-                    txtCodigoCliente.Text = _fabrica.EmpresaId.ToString();
-                    txtCliente.Text = _fabrica.Empresa;
+                    int ide = 1;
+                    int.TryParse(txtCodigoCliente.Text, out ide);
+                    if (ide != 1)
+                    {
+                        _fabrica = new DLCadastrarEmpresa().ConsultarPorId(Convert.ToInt32(txtCodigoCliente.Text));
+                        txtCodigoCliente.Text = _fabrica.EmpresaId.ToString();
+                        _fabrica.Empresa = txtCliente.Text;
+                    }
+                    else if (ide == 1)
+                    {
+                        MessageBox.Show("Cliente não cadastrado, use a lupa para pesquisar o cliente.");
+                    }
                 }
-                else if (ide == 1)
-                {
-                    MessageBox.Show("Cliente não cadastrado, use a lupa para pesquisar o cliente.");
-                }
+
             }
             catch (Exception ex)
             {
@@ -370,19 +382,25 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                int ide = 0;
-                int.TryParse(txtCodigoItensMaterial.Text, out ide);
-                if (ide > 1)
+                int cod = 0;
+                int.TryParse(txtCodigoItensMaterial.Text, out cod);
+                if (cod > 0)
                 {
-                    _madeira = new DLCadastrarMadeira().ConsultarPorId(Convert.ToInt32(txtCodigoItensMaterial.Text));
-                    txtCodigoItensMaterial.Text = _madeira.MadeiraId.ToString();
-                    txtMaterial.Text = _madeira.PisoMadeira;
-                    txtQtdUndCaixa.Text = Convert.ToString(_madeira.M2Caixa);
+                    int ide = 0;
+                    int.TryParse(txtCodigoItensMaterial.Text, out ide);
+                    if (ide > 1)
+                    {
+                        _madeira = new DLCadastrarMadeira().ConsultarPorId(Convert.ToInt32(txtCodigoItensMaterial.Text));
+                        txtCodigoItensMaterial.Text = _madeira.MadeiraId.ToString();
+                        txtMaterial.Text = _madeira.PisoMadeira;
+                        txtQtdUndCaixa.Text = Convert.ToString(_madeira.M2Caixa);
+                    }
+                    else if (ide == 1)
+                    {
+                        MessageBox.Show("Material não cadastrado, use a lupa para pesquisar o material.");
+                    }
                 }
-                else if (ide == 1)
-                {
-                    MessageBox.Show("Material não cadastrado, use a lupa para pesquisar o material.");
-                }
+               
             }
             catch (Exception ex)
             {
@@ -725,7 +743,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     case 2:
                         {
                             txtCodigoCliente.Text = id.ToString();
-                            txtCliente.Text = cliente;
+                            txtCliente.Text = empresa;
                         }
                         break;
                 }
@@ -739,26 +757,26 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         }
         private void LimparDadosProposta()
         {
-            txtCodigoFabrica.Text = Convert.ToString(null);
-            txtFormaPagamento.Text = Convert.ToString(null);
-            txtEngResponsavel.Text = Convert.ToString(null);
-            txtTelefone.Text = Convert.ToString(null);
-            txtPdRb.Text = Convert.ToString(null);
-            txtPdVenda.Text = Convert.ToString(null);
-            txtCodigoCliente.Text = Convert.ToString(null);
-            txtProposta.Text = Convert.ToString(null);
-            txtObra.Text = Convert.ToString(null);
-            rtbComentario.Text = Convert.ToString(null);
-            txtCarreto.Text = Convert.ToString(null);
-            txtNotaFiscal.Text = Convert.ToString(null);
-            txtRecebido.Text = Convert.ToString(null);
-            txtCodigoItensMaterial.Text = Convert.ToString(null);
-            txtQuantidade.Text = Convert.ToString(null);
-            txtPreco.Text = Convert.ToString(null);
-            txtUndMedida.Text = Convert.ToString(null);
-            txtQtdCaixas.Text = Convert.ToString(null);
-            rtbObservacao.Text = Convert.ToString(null);
-            rtbMaterial.Text = Convert.ToString(null);
+            txtCodigoFabrica.Clear();
+            txtFormaPagamento.Clear();
+            txtEngResponsavel.Clear();
+            txtTelefone.Clear();
+            txtPdRb.Clear();
+            txtPdVenda.Clear();
+            txtCodigoCliente.Clear();
+            txtProposta.Clear();
+            txtObra.Clear();
+            rtbComentario.Clear();
+            txtCarreto.Clear();
+            txtNotaFiscal.Clear();
+            txtRecebido.Clear();
+            txtCodigoItensMaterial.Clear();
+            txtQuantidade.Clear();
+            txtPreco.Clear();
+            txtUndMedida.Clear();
+            txtQtdCaixas.Clear();
+            rtbObservacao.Clear();
+            rtbMaterial.Clear();
             dtpDataEntrega.Value = DateTime.Now;
             dtpDataPedido.Value = DateTime.Now;
             dtpDataPedido.Value = DateTime.Now;
@@ -902,6 +920,6 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
         #endregion
 
-     
+
     }
 }
