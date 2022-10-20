@@ -229,10 +229,10 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     (dtpDataEntrega.Value, txtProposta.Text, txtCliente.Text,
                     txtObra.Text, itensProposta, txtNotaFiscal.Text, historico);
 
-                frmImpressao.reportViewer1.LocalReport.DataSources.Clear();
-                frmImpressao.reportViewer1.LocalReport.DataSources.Add(itensProposta);
-                frmImpressao.reportViewer1.LocalReport.DataSources.Add(historico);
-                frmImpressao.reportViewer1.LocalReport.ReportEmbeddedResource = "Projeto.Logistica.Sistema_de_Logistica.Impressao.rdlc";
+                frmImpressao.rvProposta.LocalReport.DataSources.Clear();
+                frmImpressao.rvProposta.LocalReport.DataSources.Add(itensProposta);
+                frmImpressao.rvProposta.LocalReport.DataSources.Add(historico);
+                frmImpressao.rvProposta.LocalReport.ReportEmbeddedResource = "Projeto.Logistica.Sistema_de_Logistica.Impressao.rdlc";
                 frmImpressao.ShowDialog();
             }
             catch (Exception ex)

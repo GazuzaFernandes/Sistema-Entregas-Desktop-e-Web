@@ -18,6 +18,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
 {
     public partial class FrmNotaFiscalFinanceiro : Form
     {
+        internal ClientesFinanceiro _cliente;
         internal FinanceiroProposta _notafiscal;
         public FrmNotaFiscalFinanceiro()
         {
@@ -169,15 +170,25 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         {
             try
             {
-                FrmClienteFinanceiro cliente = new FrmClienteFinanceiro();
-                cliente.ShowDialog();
-                var idcliente = cliente.idcliente;
-                var nome = cliente.nome;
-                txtCodigoCliente.Text = idcliente.ToString();
-                txtCliente.Text = nome.ToString();
-                cliente.Close();
-                cliente.Dispose();
+                int cod = 0;
+                int.TryParse(txtCodigoCliente.Text, out cod);
+                if (cod > 0)
+                {
+                    int ide = 0;
+                    int.TryParse(txtCodigoCliente.Text, out ide);
+                    if (ide > 1)
+                    {
+                        _cliente = new DLClientesFinanceiro().ConsultarPorId(Convert.ToInt32(txtCodigoCliente.Text));
+                        txtCodigoCliente.Text = _cliente.IdCliente.ToString();
+                        txtCliente.Text = _cliente.Nome;
+                    }
+                    else if (ide == 1)
+                    {
+                        MessageBox.Show("Material não cadastrado, use a lupa para pesquisar o material.");
+                    }
+                }
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);

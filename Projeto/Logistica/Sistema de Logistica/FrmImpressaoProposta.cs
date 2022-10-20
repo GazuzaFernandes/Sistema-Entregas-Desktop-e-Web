@@ -11,9 +11,9 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             try
             {
                 InitializeComponent();
-                reportViewer1.LocalReport.DataSources.Clear();
+                rvProposta.LocalReport.DataSources.Clear();
 
-                reportViewer1.LocalReport.ReportEmbeddedResource = "Projeto.Logistica.Sistema_de_Logistica.Impressao.rdlc";
+                rvProposta.LocalReport.ReportEmbeddedResource = "Projeto.Logistica.Sistema_de_Logistica.Impressao.rdlc";
 
                 ReportParameter[] p = new ReportParameter[5];
 
@@ -23,11 +23,11 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 p[3] = new ReportParameter("Obra", Obra);
                 p[4] = new ReportParameter("NotaFiscal", NotaFiscal);
 
-                reportViewer1.LocalReport.SetParameters(p);
-                reportViewer1.LocalReport.DataSources.Add(itensProposta);
-                reportViewer1.LocalReport.DataSources.Add(historico);
-                reportViewer1.LocalReport.Refresh();
-                reportViewer1.RefreshReport();
+                rvProposta.LocalReport.SetParameters(p);
+                rvProposta.LocalReport.DataSources.Add(itensProposta);
+                rvProposta.LocalReport.DataSources.Add(historico);
+                rvProposta.LocalReport.Refresh();
+                rvProposta.RefreshReport();
             }
             catch (Exception ex)
             {
@@ -37,7 +37,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
         private void FrmImpressaoProposta_Load(object sender, EventArgs e)
         {
-            this.reportViewer1.RefreshReport();
+            this.rvProposta.RefreshReport();
 
         }
     }
