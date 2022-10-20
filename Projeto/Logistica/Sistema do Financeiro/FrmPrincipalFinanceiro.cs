@@ -130,9 +130,28 @@ namespace Logistica.Sistema_do_Financeiro
                     else if (rbProposta.Checked)
                         listarFinanceiro = listarFinanceiro.Where(p => p.Propostas.ToLower().Contains(pesquisa)).ToList();
                     else if (rbNotaFiscal.Checked)
-                        listarFinanceiro = listarFinanceiro.Where(p => p.NotaFiscal.ToLower().Contains(pesquisa)).ToList();               
+                        listarFinanceiro = listarFinanceiro.Where(p => p.NotaFiscal.ToLower().Contains(pesquisa)).ToList();
+                    switch (cbEmpresas.Text)
+                    {
+                        case "Rb Engenharia":
+                            {
+                                listarFinanceiro = listarFinanceiro.Where(p => p.StatusObraId.Equals(5)).ToList();
+                            }
+                            break;
+                        case "Rb Pisos":
+                            {
+                                listarFinanceiro = listarFinanceiro.Where(p => p.StatusObraId.Equals(7)).ToList();
+                            }
+                            break;
+                        case "Rb Comercio":
+                            {
+                                listarFinanceiro = listarFinanceiro.Where(p => p.StatusObraId.Equals(6)).ToList();
+                            }
+                            break;
+                    }
+
                 }
-                dgvNotaFiscais.DataSource = listarFinanceiro;
+                dgvNotaFiscais.DataSource = listarFinanceiro.OrderByDescending(p => p.StatusObraId).ToList();
                 MontarGrid(dgvNotaFiscais);
             }
             catch (Exception ex)
