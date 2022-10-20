@@ -61,7 +61,7 @@
             // btnEntrar
             // 
             this.btnEntrar.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnEntrar.Location = new System.Drawing.Point(191, 131);
+            this.btnEntrar.Location = new System.Drawing.Point(191, 128);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(246, 51);
             this.btnEntrar.TabIndex = 1;
@@ -74,7 +74,7 @@
             // 
             this.progressBar1.Location = new System.Drawing.Point(12, 199);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(415, 48);
+            this.progressBar1.Size = new System.Drawing.Size(425, 48);
             this.progressBar1.TabIndex = 3;
             // 
             // pictureBox1
@@ -119,7 +119,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(473, 297);
+            this.ClientSize = new System.Drawing.Size(464, 301);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblMessageLoad);
             this.Controls.Add(this.pictureBox1);

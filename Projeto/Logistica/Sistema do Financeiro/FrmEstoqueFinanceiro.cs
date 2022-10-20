@@ -1,6 +1,10 @@
 ﻿using DAL.Entities.Financeiro;
+using DAL.Entities.Logistica;
 using DAL.Repository.Financeiro;
+using DAL.Repository.Logistica;
 using Logistica.Sistema_de_Logistica;
+using Microsoft.Reporting.WinForms;
+using Projeto.Logistica.Sistema_de_Logistica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -117,7 +121,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                 {
                     new DLItensDataFinanceiro().Inserir(itenProposta);
                     MessageBox.Show("Data Cadastrado com Sucesso");
-                }              
+                }
                 txtEntradaEstoque.Text = Convert.ToString(0);
                 txtDataId.Text = Convert.ToString(0);
                 CarregarGridData();
@@ -256,7 +260,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
             txtMaterialEntrada.Text = Convert.ToString(null);
             txtUndMedidaSaida.Text = Convert.ToString(null);
             txtSaidaEstoque.Text = Convert.ToString(null);
-            txtTotalEstoqueSaida.Text = Convert.ToString(null);           
+            txtTotalEstoqueSaida.Text = Convert.ToString(null);
             CarregarGridMaterial();
         }
 
@@ -270,6 +274,12 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
             CalcularSaida();
         }
         private void dgvSaidaMaterial_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            PintarLinhas();
+
+        }
+
+        private void PintarLinhas()
         {
             for (int i = 0; i < dgvSaidaMaterial.Rows.Count; i++)
             {
@@ -353,7 +363,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                     var pesquisa = txtMaterialSaida.Text.ToLower();
                     listarMadeira = listarMadeira.Where(p => p.Madeiras.ToLower().Contains(pesquisa)).ToList();
                 }
-                dgvSaidaMaterial.DataSource = listarMadeira.OrderByDescending(p => p.StatusObraId).ToList(); 
+                dgvSaidaMaterial.DataSource = listarMadeira.OrderByDescending(p => p.StatusObraId).ToList();
                 MontarGridMaterial(dgvSaidaMaterial);
             }
 
@@ -388,7 +398,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
 
         private void HabilitarCampos(bool habilitar)
         {
-           
+
             txtFabrica.Enabled = habilitar;
             txtMaterialEntrada.Enabled = habilitar;
             txtEntradaEstoque.Enabled = habilitar;
@@ -396,8 +406,8 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
             btnSalvar.Enabled = habilitar;
             btnDeletar.Enabled = habilitar;
             btnLimparSaida.Enabled = habilitar;
-            bntLimparEntrada.Enabled = habilitar;          
-        
+            bntLimparEntrada.Enabled = habilitar;
+
         }
 
         private void CarregarGridData()
@@ -407,7 +417,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                 var listarData = new DLItensDataFinanceiro().Listar().Where(p => p.IdMadeiras == Convert.ToInt32(txtIdEntrada.Text)).ToList();
                 dgvData.DataSource = null;
                 dgvData.DataSource = listarData.OrderByDescending(p => p.Datas).ToList();
-                dgvData.Refresh(); 
+                dgvData.Refresh();
                 MontarGridData(dgvData);
             }
             catch (Exception ex)
@@ -438,7 +448,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
-      
+
         private ItensDataFinanceiro lerdata()
         {
             try
@@ -463,7 +473,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
 
         private bool Validarcampos()
         {
-            if(txtMaterialEntrada.Text == "")
+            if (txtMaterialEntrada.Text == "")
             {
                 MessageBox.Show("Informe o material");
             }
@@ -542,6 +552,43 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         private void txtEntradaEstoque_TextChanged(object sender, EventArgs e)
         {
             CalcularEntrada();
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                #region Tabela Estoque
+                ReportDataSource eF = new ReportDataSource();
+                List<MadeiraFinanceiro> lst = new List<MadeiraFinanceiro>();
+                lst.Clear();
+                for (int i = 0; i < dgvSaidaMaterial.Rows.Count - 0; i++)
+                {
+                    lst.Add(new MadeiraFinanceiro
+                    {
+                        IdMadeiras = int.Parse(dgvSaidaMaterial.Rows[i].Cells[0].Value.ToString()),
+                        Madeiras = dgvSaidaMaterial.Rows[i].Cells[1].Value.ToString(),
+                        UnidadeMedida = dgvSaidaMaterial.Rows[i].Cells[2].Value.ToString(),
+                        Total = Convert.ToDecimal(dgvSaidaMaterial.Rows[i].Cells[3].Value.ToString()),
+                    });
+                    PintarLinhas();
+                }
+                eF.Name = "BDMadeiraFinanceiro";
+                eF.Value = lst;
+                #endregion
+
+                FrmImpressaoEstoqueFinanceiro frmImpressao = new FrmImpressaoEstoqueFinanceiro
+                    (dtpDataPedido.Value, eF);
+                frmImpressao.rvFinanceiro.LocalReport.DataSources.Clear();
+                frmImpressao.rvFinanceiro.LocalReport.DataSources.Add(eF);
+                frmImpressao.rvFinanceiro.LocalReport.ReportEmbeddedResource =
+                    "Projeto.Logistica.Sistema_do_Financeiro.Report1.rdlc";
+                frmImpressao.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
         }
     }
 }

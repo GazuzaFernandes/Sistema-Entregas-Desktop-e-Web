@@ -18,6 +18,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         public int idcliente;
         public string nome;
         public string email;
+ 
         public FrmClienteFinanceiro()
         {
             InitializeComponent();
