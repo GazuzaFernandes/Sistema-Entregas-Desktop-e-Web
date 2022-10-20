@@ -62,17 +62,17 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                     int.TryParse(txtClienteId.Text, out id);
                     if (id > 0)
                     {
-                        var clieAtualizar = new DLCLienteFinanceiro().ConsultarPorId(id);
+                        var clieAtualizar = new DLClientesFinanceiro().ConsultarPorId(id);
                         clieAtualizar.IdCliente = Convert.ToInt32(txtClienteId.Text);
                         clieAtualizar.Nome = txtCliente.Text;
-                        new DLCLienteFinanceiro().Atualizar(clieAtualizar);
+                        new DLClientesFinanceiro().Atualizar(clieAtualizar);
                         MessageBox.Show("Cliente atualizado com Sucesso ");
                     }
                     else
                     {
                         var clieBranco = new ClientesFinanceiro();
                         clieBranco.Nome = txtCliente.Text;
-                        var idCliente = new DLCLienteFinanceiro().Inserir(clieBranco);
+                        var idCliente = new DLClientesFinanceiro().Inserir(clieBranco);
                         MessageBox.Show(" Cliente " + idCliente + " Criado com Sucesso");
                     }
                 }
@@ -96,7 +96,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                     int.TryParse(txtClienteId.Text, out id);
                     if (id > 0)
                     {
-                        new DLCLienteFinanceiro().Excluir(new ClientesFinanceiro { IdCliente = id });
+                        new DLClientesFinanceiro().Excluir(new ClientesFinanceiro { IdCliente = id });
                         MessageBox.Show("Cliente ou Empresa excluída com sucesso!");
                         CarregarGridCliente();
                         txtClienteId.Text = Convert.ToString(null);
@@ -148,7 +148,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         {
             try
             {
-                var listarCliente = new DLCLienteFinanceiro().Listar();
+                var listarCliente = new DLClientesFinanceiro().Listar();
                 if (isPesquisa) //isPesquisa == true
                 {
                     var pesquisa = txtCliente.Text.ToLower();

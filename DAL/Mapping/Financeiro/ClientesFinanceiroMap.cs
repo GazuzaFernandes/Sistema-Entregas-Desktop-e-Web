@@ -10,7 +10,7 @@ namespace DAL.Mapping.Financeiro
         {
             Id(p => p.IdCliente).GeneratedBy.Sequence("clientefinanceiro_seq");
             Map(p => p.Nome);                  
-            Table("clientefinanceiro");
+            Table("clientesfinanceiro");
         }
 
     }

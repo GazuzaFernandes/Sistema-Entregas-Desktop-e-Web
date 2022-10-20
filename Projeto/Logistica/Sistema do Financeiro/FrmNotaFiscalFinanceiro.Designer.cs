@@ -137,6 +137,7 @@
             this.btnPesquisarCliente.Size = new System.Drawing.Size(38, 38);
             this.btnPesquisarCliente.TabIndex = 63;
             this.btnPesquisarCliente.UseVisualStyleBackColor = true;
+            this.btnPesquisarCliente.Click += new System.EventHandler(this.btnPesquisarCliente_Click);
             // 
             // pictureBox1
             // 

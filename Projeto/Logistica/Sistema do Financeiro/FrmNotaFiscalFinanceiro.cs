@@ -3,6 +3,7 @@ using DAL.Entities.Logistica;
 using DAL.Repository.Financeiro;
 using DAL.Repository.Logistica;
 using Logistica.Sistema_de_Logistica;
+using Projeto.Logistica.Sistema_de_Logistica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -113,11 +114,11 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                         atualizar.Comentario = rtbObeservacao.Text;
 
                         if (rbEngenharia.Checked == true)
-                            atualizar.StatusObraId = 1;
+                            atualizar.StatusObraId = 5;
                         else if (rbComercio.Checked == true)
-                            atualizar.StatusObraId = 2;
+                            atualizar.StatusObraId =6;
                         else if (rbPisos.Checked == true)
-                            atualizar.StatusObraId = 3;
+                            atualizar.StatusObraId = 7;
 
                         new DLFinanceiroProposta().Atualizar(atualizar);
                         MessageBox.Show("Informações Atualizada com Sucesso!");
@@ -427,5 +428,24 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
 
         #endregion
 
+        private void btnPesquisarCliente_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FrmClienteFinanceiro clientes = new FrmClienteFinanceiro();
+                clientes.ShowDialog();
+                var id = clientes.idcliente;
+                var nome = clientes.nome;         
+                txtCodigoCliente.Text = id.ToString();
+                txtCliente.Text = nome;
+               
+                clientes.Close();
+                clientes.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+        }
     }
 }
