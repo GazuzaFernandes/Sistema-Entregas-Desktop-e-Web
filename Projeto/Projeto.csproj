@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <None Remove="Logistica\Sistema de Logistica\Impressao.rdlc" />
+    <None Remove="Logistica\Sistema do Financeiro\RelatorioEstoque.rdlc" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,12 +23,13 @@
     <EmbeddedResource Include="Logistica\Sistema de Logistica\Impressao.rdlc">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Logistica\Sistema do Financeiro\RelatorioEstoque.rdlc" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Npgsql" Version="4.1.4" />
-    <PackageReference Include="ReportViewerCore.NETCore" Version="15.1.17" />
-    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.17" />
+    <PackageReference Include="ReportViewerCore.NETCore" Version="15.1.16" />
+    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.16" />
     <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
     <PackageReference Include="System.Text.Encoding.CodePages" Version="6.0.0" />
   </ItemGroup>

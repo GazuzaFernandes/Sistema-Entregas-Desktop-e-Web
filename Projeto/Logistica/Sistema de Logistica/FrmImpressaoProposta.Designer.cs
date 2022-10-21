@@ -34,8 +34,8 @@
             // 
             // rvProposta
             // 
-            this.rvProposta.AutoScroll = true;
-            this.rvProposta.AutoSize = true;
+            this.rvProposta.AutoScroll = false;
+            this.rvProposta.AutoSize = false;
             this.rvProposta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rvProposta.Location = new System.Drawing.Point(0, 0);
             this.rvProposta.Name = "ReportViewer";

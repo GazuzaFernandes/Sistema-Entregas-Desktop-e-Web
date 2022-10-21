@@ -61,7 +61,7 @@
             <Source>Embedded</Source>
             <Value>RBPISOS</Value>
             <Sizing>FitProportional</Sizing>
-            <Top>0.07931cm</Top>
+            <Top>0.2667cm</Top>
             <Left>7.82787cm</Left>
             <Height>2.15617cm</Height>
             <Width>2.77cm</Width>
@@ -95,7 +95,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>1.48731cm</Top>
-            <Left>0.91626cm</Left>
+            <Left>0.67102cm</Left>
             <Height>0.74817cm</Height>
             <Width>6.35963cm</Width>
             <ZIndex>1</ZIndex>
@@ -131,7 +131,7 @@
             <Top>0.2667cm</Top>
             <Left>0.91626cm</Left>
             <Height>0.74817cm</Height>
-            <Width>7.55883cm</Width>
+            <Width>5.294cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -164,7 +164,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>2.65175cm</Top>
+            <Top>3.01158cm</Top>
             <Left>3.80883cm</Left>
             <Height>0.89633cm</Height>
             <Width>3.008cm</Width>
@@ -202,7 +202,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>2.65175cm</Top>
+            <Top>3.01158cm</Top>
             <Left>7.74583cm</Left>
             <Height>0.89633cm</Height>
             <Width>2.77517cm</Width>
@@ -240,7 +240,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>2.65175cm</Top>
+            <Top>3.01158cm</Top>
             <Left>0.4572cm</Left>
             <Height>0.89633cm</Height>
             <Width>2.52117cm</Width>
@@ -261,18 +261,18 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>7.27195cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>1.90758cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>1.58278cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.6cm</Height>
+                  <Height>0.854cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -284,10 +284,16 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Madeiras</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>14pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>Red</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox6</rd:DefaultName>
@@ -296,6 +302,8 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <BackgroundColor>Yellow</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -313,11 +321,17 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Unidade Medida</Value>
-                                  <Style />
+                                  <Value>Medida</Value>
+                                  <Style>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>Red</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox8</rd:DefaultName>
@@ -326,6 +340,8 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <BackgroundColor>Yellow</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -344,7 +360,11 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Total</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>Red</Color>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -356,6 +376,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <BackgroundColor>Yellow</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -367,7 +388,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.6cm</Height>
+                  <Height>0.727cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -481,10 +502,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>BDMadeiraFinanceiro</DataSetName>
-            <Top>4.88103cm</Top>
-            <Left>1.30883cm</Left>
-            <Height>1.2cm</Height>
-            <Width>7.5cm</Width>
+            <Top>4.47886cm</Top>
+            <Left>0.4572cm</Left>
+            <Height>1.581cm</Height>
+            <Width>10.76231cm</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -493,10 +514,10 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>5.10834in</Height>
+        <Height>3.80001in</Height>
         <Style />
       </Body>
-      <Width>4.44109in</Width>
+      <Width>4.62638in</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>

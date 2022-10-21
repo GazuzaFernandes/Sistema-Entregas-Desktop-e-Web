@@ -46,6 +46,9 @@
             this.tutorialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.label11 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNotaFiscais)).BeginInit();
             this.msNotasFiscais.SuspendLayout();
@@ -65,7 +68,7 @@
             // btnLimparPesquisa
             // 
             this.btnLimparPesquisa.Image = ((System.Drawing.Image)(resources.GetObject("btnLimparPesquisa.Image")));
-            this.btnLimparPesquisa.Location = new System.Drawing.Point(709, 28);
+            this.btnLimparPesquisa.Location = new System.Drawing.Point(663, 54);
             this.btnLimparPesquisa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLimparPesquisa.Name = "btnLimparPesquisa";
             this.btnLimparPesquisa.Size = new System.Drawing.Size(38, 38);
@@ -76,7 +79,7 @@
             // btnPesquisar
             // 
             this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
-            this.btnPesquisar.Location = new System.Drawing.Point(655, 28);
+            this.btnPesquisar.Location = new System.Drawing.Point(619, 54);
             this.btnPesquisar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(38, 38);
@@ -89,7 +92,7 @@
             this.rbNotaFiscal.AutoSize = true;
             this.rbNotaFiscal.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbNotaFiscal.ForeColor = System.Drawing.Color.White;
-            this.rbNotaFiscal.Location = new System.Drawing.Point(365, 81);
+            this.rbNotaFiscal.Location = new System.Drawing.Point(345, 97);
             this.rbNotaFiscal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbNotaFiscal.Name = "rbNotaFiscal";
             this.rbNotaFiscal.Size = new System.Drawing.Size(153, 35);
@@ -103,7 +106,7 @@
             this.rbProposta.AutoSize = true;
             this.rbProposta.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbProposta.ForeColor = System.Drawing.Color.White;
-            this.rbProposta.Location = new System.Drawing.Point(541, 81);
+            this.rbProposta.Location = new System.Drawing.Point(521, 97);
             this.rbProposta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbProposta.Name = "rbProposta";
             this.rbProposta.Size = new System.Drawing.Size(131, 35);
@@ -117,7 +120,7 @@
             this.rbEndereco.AutoSize = true;
             this.rbEndereco.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbEndereco.ForeColor = System.Drawing.Color.White;
-            this.rbEndereco.Location = new System.Drawing.Point(202, 81);
+            this.rbEndereco.Location = new System.Drawing.Point(182, 97);
             this.rbEndereco.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbEndereco.Name = "rbEndereco";
             this.rbEndereco.Size = new System.Drawing.Size(133, 35);
@@ -129,7 +132,7 @@
             // txtPesquisar
             // 
             this.txtPesquisar.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPesquisar.Location = new System.Drawing.Point(202, 28);
+            this.txtPesquisar.Location = new System.Drawing.Point(182, 54);
             this.txtPesquisar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(431, 38);
@@ -144,13 +147,13 @@
             this.dgvNotaFiscais.BackgroundColor = System.Drawing.Color.White;
             this.dgvNotaFiscais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNotaFiscais.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvNotaFiscais.Location = new System.Drawing.Point(0, 144);
+            this.dgvNotaFiscais.Location = new System.Drawing.Point(0, 149);
             this.dgvNotaFiscais.Name = "dgvNotaFiscais";
             this.dgvNotaFiscais.ReadOnly = true;
             this.dgvNotaFiscais.RowHeadersWidth = 51;
             this.dgvNotaFiscais.RowTemplate.Height = 29;
             this.dgvNotaFiscais.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNotaFiscais.Size = new System.Drawing.Size(1280, 570);
+            this.dgvNotaFiscais.Size = new System.Drawing.Size(1280, 565);
             this.dgvNotaFiscais.TabIndex = 26;
             this.dgvNotaFiscais.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNotaFiscais_CellDoubleClick);
             this.dgvNotaFiscais.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvNotaFiscais_DataBindingComplete);
@@ -166,7 +169,7 @@
             "Rb Pisos",
             "Rb Engenharia",
             "Rb Comercio"});
-            this.cbEmpresas.Location = new System.Drawing.Point(806, 77);
+            this.cbEmpresas.Location = new System.Drawing.Point(806, 54);
             this.cbEmpresas.Name = "cbEmpresas";
             this.cbEmpresas.Size = new System.Drawing.Size(224, 39);
             this.cbEmpresas.TabIndex = 27;
@@ -182,7 +185,7 @@
             this.ferramentasToolStripMenuItem,
             this.tutorialToolStripMenuItem});
             this.msNotasFiscais.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.msNotasFiscais.Location = new System.Drawing.Point(9, 9);
+            this.msNotasFiscais.Location = new System.Drawing.Point(9, 11);
             this.msNotasFiscais.Name = "msNotasFiscais";
             this.msNotasFiscais.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.msNotasFiscais.Size = new System.Drawing.Size(143, 121);
@@ -239,11 +242,44 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(806, 28);
+            this.label11.Location = new System.Drawing.Point(806, 11);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(220, 31);
             this.label11.TabIndex = 29;
             this.label11.Text = "Informe a empresa:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Cyan;
+            this.label1.Location = new System.Drawing.Point(182, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 31);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Engenharia:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Yellow;
+            this.label2.Location = new System.Drawing.Point(355, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 31);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Pisos:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.Lime;
+            this.label3.Location = new System.Drawing.Point(472, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(122, 31);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Comercio:";
             // 
             // FrmPrincipalFinanceiro
             // 
@@ -252,6 +288,9 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1280, 714);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.msNotasFiscais);
             this.Controls.Add(this.cbEmpresas);
@@ -299,5 +338,8 @@
         private ToolStripMenuItem tutorialToolStripMenuItem;
         private ToolStripMenuItem msCliente;
         private Label label11;
+        private Label label1;
+        private Label label2;
+        private Label label3;
     }
 }

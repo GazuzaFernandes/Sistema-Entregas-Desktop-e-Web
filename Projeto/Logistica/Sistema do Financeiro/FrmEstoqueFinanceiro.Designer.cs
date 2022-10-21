@@ -731,7 +731,6 @@
         private TabPage tabPage2;
         private TextBox txtMaterialSaida;
         private Label label4;
-        private DataGridView dgvSaidaMaterial;
         private Button btnInserir;
         private Button btnLimparSaida;
         private TextBox txtIdSaida;
@@ -776,5 +775,6 @@
         private ToolStripMenuItem cmsDeletarMaterial;
         private TextBox txtDataId;
         private Button btnImprimir;
+        private DataGridView dgvSaidaMaterial;
     }
 }

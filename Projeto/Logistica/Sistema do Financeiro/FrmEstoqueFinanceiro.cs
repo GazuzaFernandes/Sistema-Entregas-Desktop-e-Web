@@ -570,8 +570,9 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                         Madeiras = dgvSaidaMaterial.Rows[i].Cells[1].Value.ToString(),
                         UnidadeMedida = dgvSaidaMaterial.Rows[i].Cells[2].Value.ToString(),
                         Total = Convert.ToDecimal(dgvSaidaMaterial.Rows[i].Cells[3].Value.ToString()),
+                  
                     });
-                    PintarLinhas();
+                 
                 }
                 eF.Name = "BDMadeiraFinanceiro";
                 eF.Value = lst;
@@ -582,7 +583,8 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                 frmImpressao.rvFinanceiro.LocalReport.DataSources.Clear();
                 frmImpressao.rvFinanceiro.LocalReport.DataSources.Add(eF);
                 frmImpressao.rvFinanceiro.LocalReport.ReportEmbeddedResource =
-                    "Projeto.Logistica.Sistema_do_Financeiro.Report1.rdlc";
+                     "Projeto.Logistica.Sistema_do_Financeiro.RelatorioEstoque.rdlc";
+                PintarLinhas();
                 frmImpressao.ShowDialog();
             }
             catch (Exception ex)
