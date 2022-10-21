@@ -417,7 +417,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 37);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1092, 626);
+            this.tabPage4.Size = new System.Drawing.Size(1092, 623);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Indusparquet";
             // 
@@ -531,7 +531,7 @@
             this.tabPage5.Controls.Add(this.label20);
             this.tabPage5.Location = new System.Drawing.Point(4, 37);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1092, 626);
+            this.tabPage5.Size = new System.Drawing.Size(1092, 623);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Master Pisos";
             // 
@@ -737,7 +737,7 @@
             this.tabPage6.Controls.Add(this.label38);
             this.tabPage6.Location = new System.Drawing.Point(4, 37);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1092, 626);
+            this.tabPage6.Size = new System.Drawing.Size(1092, 623);
             this.tabPage6.TabIndex = 3;
             this.tabPage6.Text = "Akafloor";
             // 
@@ -774,8 +774,9 @@
             // 
             // FrmCadastroItens
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1114, 717);

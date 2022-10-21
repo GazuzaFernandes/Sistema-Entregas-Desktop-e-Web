@@ -223,6 +223,7 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
                             new DLHistoricoEngenharia().Inserir(comentario);
                         }
                         CarregarGridHistorico();
+                        rtbComentario.Clear();
                     }
                 }
             }
@@ -381,9 +382,9 @@ namespace Projeto.Logistica.Sistema_dos_Engenheiros
                         pAtua.DataInclusao = dtpDataIncluido.Value;
                         if (rbPendente.Checked == true)
                             pAtua.StatusObraId = 1;
-                        else if (rbPendente.Checked == true)
-                            pAtua.StatusObraId = 2;
                         else if (rbFinalizado.Checked == true)
+                            pAtua.StatusObraId = 2;
+                        else if (rbCancelado.Checked == true)
                             pAtua.StatusObraId = 3;
                         new DLPropostaEngenharia().Atualizar(pAtua);
                         MessageBox.Show("Proposta Atualizada com Sucesso!");

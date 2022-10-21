@@ -3,7 +3,7 @@ using DAL.NHibertnate;
 
 namespace DAL.Repository.Financeiro
 {
-    public class DLStatusobra : Repository<Statusobra>
+    public class DLStatusobra : Repository<StatusObra>
     {
     }
 }
