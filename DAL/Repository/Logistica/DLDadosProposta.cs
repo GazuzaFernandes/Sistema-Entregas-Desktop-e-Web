@@ -6,7 +6,6 @@ namespace DAL.Repository.Logistica
 {
     public class DLDadosProposta : Repository<DadosProposta>
     {
-        #region Pasta - Sistema Logistica - Forme Proposta e Principal
         public List<PropostaViewModel> ListarPropostaStatus()
         {
             try
@@ -91,7 +90,7 @@ namespace DAL.Repository.Logistica
             public int OrdenacaoStatus { get; set; }
             public string? Status { get; set; }
         }
-        #endregion
+        
     }
 
 }

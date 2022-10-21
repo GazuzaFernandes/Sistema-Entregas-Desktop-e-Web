@@ -348,7 +348,7 @@
             this.mtSalvarProposta,
             this.mtSalvarComentario});
             this.cmsSalvarConteudos.Name = "contextMenuStrip1";
-            this.cmsSalvarConteudos.Size = new System.Drawing.Size(281, 104);
+            this.cmsSalvarConteudos.Size = new System.Drawing.Size(281, 76);
             // 
             // mtSalvarProposta
             // 
@@ -509,8 +509,9 @@
             // 
             // FrmPropostaEng
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1433, 668);
             this.Controls.Add(this.tabControl1);

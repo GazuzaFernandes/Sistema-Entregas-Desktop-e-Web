@@ -39,6 +39,7 @@ namespace Logistica.Sistema_dos_Engenheiros
             rbCliente.Checked = false;
             rbEndereço.Checked = false;
             rbProposta.Checked = false;
+            cbEmpresas.Text = Convert.ToString(null);
             CarregarGrid();
         }
 
@@ -60,8 +61,8 @@ namespace Logistica.Sistema_dos_Engenheiros
                 switch (valor)
                 {
                     case "1" : dgvPrincipal.Rows[i].DefaultCellStyle.BackColor = Color.Yellow; break;
-                    case "2": dgvPrincipal.Rows[i].DefaultCellStyle.BackColor = Color.LightBlue; break;
-                    case "3": dgvPrincipal.Rows[i].DefaultCellStyle.BackColor = Color.Lime; break;                    
+                    case "2": dgvPrincipal.Rows[i].DefaultCellStyle.BackColor = Color.Lime; break;
+                    case "3": dgvPrincipal.Rows[i].DefaultCellStyle.BackColor = Color.Red; break;                    
                 }
             }
         }
@@ -93,20 +94,33 @@ namespace Logistica.Sistema_dos_Engenheiros
                 if (isPesquisa)
                 {
                     var pesquisar = txtPesquisar.Text.ToLower();
-                    if (rbCliente.Checked)
+                    if (rbCliente.Checked)                    
+                        listarEng = listarEng.Where(p => p.Cliente.ToLower().Contains(pesquisar)).ToList();                   
+                    else if (rbEndereço.Checked)                    
+                        listarEng = listarEng.Where(p => p.Obra.ToLower().Contains(pesquisar)).ToList();                   
+                    else if (rbProposta.Checked)                    
+                      listarEng = listarEng.Where(p => p.Proposta.ToLower().Contains(pesquisar)).ToList();
+                    switch (cbEmpresas.Text)
                     {
-                        listarEng = listarEng.Where(p => p.Cliente.ToLower().Contains(pesquisar)).ToList();
-                    }
-                    else if (rbEndereço.Checked)
-                    {
-                        listarEng = listarEng.Where(p => p.Obra.ToLower().Contains(pesquisar)).ToList();
-                    }
-                    else if (rbProposta.Checked)
-                    {
-                        listarEng = listarEng.Where(p => p.Proposta.ToLower().Contains(pesquisar)).ToList();
+                        case "Em Obra.":
+                            {
+
+                                listarEng = listarEng.Where(p => p.StatusObraId.Equals(1)).ToList();
+                            }
+                            break;
+                        case "Finalizado.":
+                            {
+                                listarEng = listarEng.Where(p => p.StatusObraId.Equals(2)).ToList();
+                            }
+                            break;
+                        case "Cancelado.":
+                            {
+                                listarEng = listarEng.Where(p => p.StatusObraId.Equals(3)).ToList();
+                            }
+                            break;
                     }
                 }
-                dgvPrincipal.DataSource = listarEng;
+                dgvPrincipal.DataSource = listarEng.OrderBy(p => p.StatusObraId).ToList(); ;
                 MontarGrid(dgvPrincipal);
             }
             catch (Exception ex)

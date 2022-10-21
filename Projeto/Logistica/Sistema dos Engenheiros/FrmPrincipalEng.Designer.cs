@@ -40,10 +40,9 @@
             this.rbEndereço = new System.Windows.Forms.RadioButton();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cbEmpresas = new System.Windows.Forms.ComboBox();
             this.btnProposta = new System.Windows.Forms.Button();
-            this.cbCancelado = new System.Windows.Forms.CheckBox();
-            this.cbFinalizado = new System.Windows.Forms.CheckBox();
-            this.cbPendente = new System.Windows.Forms.CheckBox();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -184,10 +183,9 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.cbEmpresas);
             this.panel1.Controls.Add(this.btnProposta);
-            this.panel1.Controls.Add(this.cbCancelado);
-            this.panel1.Controls.Add(this.cbFinalizado);
-            this.panel1.Controls.Add(this.cbPendente);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnLimparPesquisa);
             this.panel1.Controls.Add(this.btnPesquisar);
@@ -202,60 +200,48 @@
             this.panel1.Size = new System.Drawing.Size(1364, 173);
             this.panel1.TabIndex = 7;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(829, 26);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(173, 31);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "Status da obra:";
+            // 
+            // cbEmpresas
+            // 
+            this.cbEmpresas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cbEmpresas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEmpresas.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbEmpresas.ForeColor = System.Drawing.Color.Red;
+            this.cbEmpresas.FormattingEnabled = true;
+            this.cbEmpresas.Items.AddRange(new object[] {
+            "Em Obra.",
+            "Finalizado.",
+            "Cancelado."});
+            this.cbEmpresas.Location = new System.Drawing.Point(803, 74);
+            this.cbEmpresas.Name = "cbEmpresas";
+            this.cbEmpresas.Size = new System.Drawing.Size(224, 39);
+            this.cbEmpresas.TabIndex = 30;
+            // 
             // btnProposta
             // 
             this.btnProposta.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnProposta.Location = new System.Drawing.Point(779, 27);
+            this.btnProposta.Location = new System.Drawing.Point(1094, 91);
             this.btnProposta.Name = "btnProposta";
-            this.btnProposta.Size = new System.Drawing.Size(256, 99);
+            this.btnProposta.Size = new System.Drawing.Size(256, 61);
             this.btnProposta.TabIndex = 14;
             this.btnProposta.Text = "Nova Proposta";
             this.btnProposta.UseVisualStyleBackColor = true;
             this.btnProposta.Click += new System.EventHandler(this.btnProposta_Click);
             // 
-            // cbCancelado
-            // 
-            this.cbCancelado.AutoSize = true;
-            this.cbCancelado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbCancelado.ForeColor = System.Drawing.Color.Red;
-            this.cbCancelado.Location = new System.Drawing.Point(1056, 111);
-            this.cbCancelado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbCancelado.Name = "cbCancelado";
-            this.cbCancelado.Size = new System.Drawing.Size(173, 42);
-            this.cbCancelado.TabIndex = 11;
-            this.cbCancelado.Text = "Cancelado";
-            this.cbCancelado.UseVisualStyleBackColor = true;
-            // 
-            // cbFinalizado
-            // 
-            this.cbFinalizado.AutoSize = true;
-            this.cbFinalizado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbFinalizado.ForeColor = System.Drawing.Color.Lime;
-            this.cbFinalizado.Location = new System.Drawing.Point(1056, 65);
-            this.cbFinalizado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbFinalizado.Name = "cbFinalizado";
-            this.cbFinalizado.Size = new System.Drawing.Size(172, 42);
-            this.cbFinalizado.TabIndex = 12;
-            this.cbFinalizado.Text = "Finalizado";
-            this.cbFinalizado.UseVisualStyleBackColor = true;
-            // 
-            // cbPendente
-            // 
-            this.cbPendente.AutoSize = true;
-            this.cbPendente.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbPendente.ForeColor = System.Drawing.Color.Yellow;
-            this.cbPendente.Location = new System.Drawing.Point(1056, 19);
-            this.cbPendente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbPendente.Name = "cbPendente";
-            this.cbPendente.Size = new System.Drawing.Size(148, 42);
-            this.cbPendente.TabIndex = 13;
-            this.cbPendente.Text = "Em obra";
-            this.cbPendente.UseVisualStyleBackColor = true;
-            // 
             // FrmPrincipalEng
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -291,9 +277,8 @@
         private RadioButton rbEndereço;
         private TextBox txtPesquisar;
         private Panel panel1;
-        private CheckBox cbCancelado;
-        private CheckBox cbFinalizado;
-        private CheckBox cbPendente;
         private Button btnProposta;
+        private Label label11;
+        private ComboBox cbEmpresas;
     }
 }
