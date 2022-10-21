@@ -1,4 +1,4 @@
-﻿using Microsoft.Reporting.WinForms;
+using Microsoft.Reporting.WinForms;
 
 namespace Projeto.Logistica.Sistema_do_Financeiro
 {

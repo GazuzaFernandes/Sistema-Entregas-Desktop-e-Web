@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Entities.Financeiro
 {
-    public class Statusobra
+    public class StatusObra
     {
         public virtual int StatusObraId { get; set; }
         public virtual string Descricao { get; set; }

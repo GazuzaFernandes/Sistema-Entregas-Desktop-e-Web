@@ -570,7 +570,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                         Madeiras = dgvSaidaMaterial.Rows[i].Cells[1].Value.ToString(),
                         UnidadeMedida = dgvSaidaMaterial.Rows[i].Cells[2].Value.ToString(),
                         Total = Convert.ToDecimal(dgvSaidaMaterial.Rows[i].Cells[3].Value.ToString()),
-                  
+                        StatusObraId = int.Parse(dgvSaidaMaterial.Rows[i].Cells[6].Value.ToString()),
                     });
                  
                 }

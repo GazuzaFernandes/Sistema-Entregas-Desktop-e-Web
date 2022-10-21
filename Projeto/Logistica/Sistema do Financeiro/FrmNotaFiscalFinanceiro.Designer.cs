@@ -552,11 +552,14 @@
             // 
             // dgvMaterial
             // 
+            this.dgvMaterial.AllowUserToAddRows = false;
+            this.dgvMaterial.AllowUserToDeleteRows = false;
             this.dgvMaterial.BackgroundColor = System.Drawing.Color.White;
             this.dgvMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMaterial.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvMaterial.Location = new System.Drawing.Point(3, 263);
             this.dgvMaterial.Name = "dgvMaterial";
+            this.dgvMaterial.ReadOnly = true;
             this.dgvMaterial.RowHeadersWidth = 51;
             this.dgvMaterial.RowTemplate.Height = 29;
             this.dgvMaterial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
