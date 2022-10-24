@@ -563,5 +563,11 @@ namespace Logistica.Sistema_de_Logistica
             FrmTelefone telefone = new FrmTelefone();
             telefone.Show();
         }
+
+        private void msEstoqueProduto_Click(object sender, EventArgs e)
+        {
+            FrmEstoque estoque = new FrmEstoque();
+            estoque.Show();
+        }
     }
 }

@@ -188,6 +188,7 @@ namespace Logistica.Sistema_de_Logistica
             this.label49 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
+            this.msEstoqueProduto = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -215,7 +216,7 @@ namespace Logistica.Sistema_de_Logistica
             this.menuStrip1.Location = new System.Drawing.Point(6, 6);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(157, 191);
+            this.menuStrip1.Size = new System.Drawing.Size(157, 208);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -299,7 +300,8 @@ namespace Logistica.Sistema_de_Logistica
             // estoqueToolStripMenuItem
             // 
             this.estoqueToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.entradaEstoqueMadeirasToolStripMenuItem1});
+            this.entradaEstoqueMadeirasToolStripMenuItem1,
+            this.msEstoqueProduto});
             this.estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
             this.estoqueToolStripMenuItem.Size = new System.Drawing.Size(153, 35);
             this.estoqueToolStripMenuItem.Text = "Estoque";
@@ -307,8 +309,8 @@ namespace Logistica.Sistema_de_Logistica
             // entradaEstoqueMadeirasToolStripMenuItem1
             // 
             this.entradaEstoqueMadeirasToolStripMenuItem1.Name = "entradaEstoqueMadeirasToolStripMenuItem1";
-            this.entradaEstoqueMadeirasToolStripMenuItem1.Size = new System.Drawing.Size(370, 36);
-            this.entradaEstoqueMadeirasToolStripMenuItem1.Text = "Entrada Estoque Madeiras";
+            this.entradaEstoqueMadeirasToolStripMenuItem1.Size = new System.Drawing.Size(285, 36);
+            this.entradaEstoqueMadeirasToolStripMenuItem1.Text = "Estoque Madeiras";
             this.entradaEstoqueMadeirasToolStripMenuItem1.Click += new System.EventHandler(this.entradaEstoqueMadeirasToolStripMenuItem1_Click);
             // 
             // panel1
@@ -2086,6 +2088,13 @@ namespace Logistica.Sistema_de_Logistica
             this.label47.TabIndex = 75;
             this.label47.Text = "PRESILHAS DE ALUMINIO PARA DECK";
             // 
+            // msEstoqueProduto
+            // 
+            this.msEstoqueProduto.Name = "msEstoqueProduto";
+            this.msEstoqueProduto.Size = new System.Drawing.Size(285, 36);
+            this.msEstoqueProduto.Text = "Estoque Produtos";
+            this.msEstoqueProduto.Click += new System.EventHandler(this.msEstoqueProduto_Click);
+            // 
             // FrmPrincipalLogistica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -2293,5 +2302,6 @@ namespace Logistica.Sistema_de_Logistica
         private ToolStripMenuItem estoqueToolStripMenuItem;
         private ToolStripMenuItem entradaEstoqueMadeirasToolStripMenuItem1;
         private ToolStripMenuItem telefonesUteisToolStripMenuItem;
+        private ToolStripMenuItem msEstoqueProduto;
     }
 }
