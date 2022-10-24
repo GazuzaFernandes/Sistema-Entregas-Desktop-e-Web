@@ -39,8 +39,8 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 if (txtEntradaMetroLinear.Text != null)
                 {
                     rbEntrada.Checked = true;
-                }
-                CalcularEntradaEstoque();
+                    CalcularEntradaEstoque();
+                }               
             }
         }
 
@@ -232,43 +232,50 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 txtTotalM2Saida.Text = Convert.ToString(data.MetroQuadrado);
             }
         }
-        private void btnImprimir_Click(object sender, EventArgs e)
-        {
-            #region Tabela Estoque
-            ReportDataSource eF = new ReportDataSource();
-            List<EstoqueMadeira> lst = new List<EstoqueMadeira>();
-            lst.Clear();
-            for (int i = 0; i < dgvSaidaMaterial.Rows.Count - 0; i++)
-            {
-                lst.Add(new EstoqueMadeira
-                {
-                    EstoqueId = int.Parse(dgvSaidaMaterial.Rows[i].Cells[0].Value.ToString()),
-                    Madeira = dgvSaidaMaterial.Rows[i].Cells[1].Value.ToString(),
-                    Espessura = Convert.ToDecimal(dgvSaidaMaterial.Rows[i].Cells[2].Value.ToString()),
-                    Largura = Convert.ToDecimal(dgvSaidaMaterial.Rows[i].Cells[3].Value.ToString()),
-                    MetroLinear = Convert.ToDecimal(dgvSaidaMaterial.Rows[i].Cells[4].Value.ToString()),
-                    MetroQuadrado = Convert.ToDecimal(dgvSaidaMaterial.Rows[i].Cells[5].Value.ToString()),
-                    MetroCubico = Convert.ToDecimal(dgvSaidaMaterial.Rows[i].Cells[6].Value.ToString()),
-
-                });
-            }
-            eF.Name = "BDEstoqueMadeira";
-            eF.Value = lst;
-            #endregion
-
-            FrmImpressaoMaterial estoqueMaterial = new FrmImpressaoMaterial
-                (dtpEntrada.Value, eF);
-            estoqueMaterial.rvMaterial.LocalReport.DataSources.Clear();
-            estoqueMaterial.rvMaterial.LocalReport.DataSources.Add(eF);
-            estoqueMaterial.rvMaterial.LocalReport.ReportEmbeddedResource =
-                  "Projeto.Logistica.Sistema_de_Logistica.ImpressaoMadeira.rdlc";
-            estoqueMaterial.ShowDialog();
-
-        }
 
         #endregion
 
         #region Tela Saida Material
+        private void btnImprimir_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                #region Tabela Estoque
+                ReportDataSource eF = new ReportDataSource();
+                List<EstoqueMadeira> lst = new List<EstoqueMadeira>();
+                lst.Clear();
+                for (int i = 0; i < dgvSaidaMaterial.Rows.Count - 0; i++)
+                {
+                    lst.Add(new EstoqueMadeira
+                    {
+                        EstoqueId = int.Parse(dgvSaidaMaterial.Rows[i].Cells[0].Value.ToString()),
+                        Madeira = dgvSaidaMaterial.Rows[i].Cells[1].Value.ToString(),
+                        Espessura = Convert.ToDecimal(dgvSaidaMaterial.Rows[i].Cells[2].Value.ToString()),
+                        Largura = Convert.ToDecimal(dgvSaidaMaterial.Rows[i].Cells[3].Value.ToString()),
+                        MetroLinear = Convert.ToDecimal(dgvSaidaMaterial.Rows[i].Cells[4].Value.ToString()),
+                        MetroQuadrado = Convert.ToDecimal(dgvSaidaMaterial.Rows[i].Cells[5].Value.ToString()),
+                        MetroCubico = Convert.ToDecimal(dgvSaidaMaterial.Rows[i].Cells[6].Value.ToString()),
+
+                    });
+                }
+                eF.Name = "BDEstoqueMadeira";
+                eF.Value = lst;
+                #endregion
+
+                FrmImpressaoMaterial estoqueMaterial = new FrmImpressaoMaterial
+                    (dtpEntrada.Value, eF);
+                estoqueMaterial.rvMaterial.LocalReport.DataSources.Clear();
+                estoqueMaterial.rvMaterial.LocalReport.DataSources.Add(eF);
+                estoqueMaterial.rvMaterial.LocalReport.ReportEmbeddedResource =
+                      "Projeto.Logistica.Sistema_de_Logistica.ImpressaoMadeira.rdlc";
+                estoqueMaterial.ShowDialog();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro " + ex.Message);
+            }
+        }
 
         private void txtPesquisar_TextChanged(object sender, EventArgs e)
         {
@@ -423,6 +430,8 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                         LimparCamposEntrada();
                         dgvData.DataSource = null;
                         CarregarGridEstoque();
+                        BloquearBotao(true);
+                        HabilitarCampos(false);                            
 
                     }
                 }
@@ -483,6 +492,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             #region Entrada Material
             txtIdEntrada.Clear();
+            txtEntradaMetroLinear.Clear();
             txtEspessuraEntrada.Text = Convert.ToString("0,");
             txtLarguraEntrada.Text = Convert.ToString("0,");
             txtMaterialEntrada.Clear();
@@ -604,8 +614,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             #region Entrada Material          
             txtEspessuraEntrada.Enabled = habilitar;
             txtLarguraEntrada.Enabled = habilitar;
-            txtMaterialEntrada.Enabled = habilitar;
-            txtMetroEntrada.Enabled = habilitar;
+            txtMaterialEntrada.Enabled = habilitar;            
             dtpEntrada.Enabled = habilitar;
             #endregion
 
@@ -625,7 +634,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     var pesquisa = txtPesquisar.Text.ToLower();
                     listarMadeira = listarMadeira.Where(p => p.Madeira.ToLower().Contains(pesquisa)).ToList();
                 }
-                dgvSaidaMaterial.DataSource = listarMadeira;
+                dgvSaidaMaterial.DataSource = listarMadeira.OrderBy(p => p.Madeira).ToList();
                 MontarGridMaterial(dgvSaidaMaterial);
             }
 
@@ -642,7 +651,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             //Define quais colunas serão visíveis
             objBlControleGrid.DefinirVisibilidade(new List<string>() { "Madeira", "Espessura", "Largura", "MetroLinear", "MetroQuadrado", "MetroCubico", });
             //Define quais os cabeçalhos respectivos das colunas 
-            objBlControleGrid.DefinirCabecalhos(new List<string>() { "Madeira", "Espessura", "Largura", "Metro Linear", "M2", "M3", });
+            objBlControleGrid.DefinirCabecalhos(new List<string>() { "Madeira", "Espessura", "Largura", "ML", "M2", "M3", });
             //Define quais as larguras respectivas das colunas 
             objBlControleGrid.DefinirLarguras(new List<int>() { 45, 10, 10, 10, 10, 10, }, dgvSaidaMaterial.Width - 25); //O total tem que ficar em 100% 
                                                                                                                          //Define quais os alinhamentos respectivos do componentes das colunas 
@@ -748,7 +757,6 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             WindowState = FormWindowState.Minimized;
         }
-
 
     }
 }

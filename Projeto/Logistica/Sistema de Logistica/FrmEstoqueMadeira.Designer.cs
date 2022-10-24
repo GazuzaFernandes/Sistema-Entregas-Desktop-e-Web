@@ -39,7 +39,6 @@
             this.btnLimparEntrada = new System.Windows.Forms.Button();
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnImprimir = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
             this.txtConversorTotalM = new System.Windows.Forms.TextBox();
@@ -48,12 +47,13 @@
             this.label26 = new System.Windows.Forms.Label();
             this.txtConversorTotalM2 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rbEntrada = new System.Windows.Forms.RadioButton();
             this.btnGerarId = new System.Windows.Forms.Button();
             this.txtDataId = new System.Windows.Forms.TextBox();
             this.txtIdEntrada = new System.Windows.Forms.TextBox();
             this.txtTotalM3Entrada = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -70,7 +70,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dtpEntrada = new System.Windows.Forms.DateTimePicker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -87,6 +86,7 @@
             this.btnLimparSaida = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.txtCalcularSaida = new System.Windows.Forms.TextBox();
             this.rbSaida = new System.Windows.Forms.RadioButton();
@@ -212,7 +212,6 @@
             // 
             this.tabPage2.AutoScroll = true;
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.tabPage2.Controls.Add(this.btnImprimir);
             this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Controls.Add(this.rbEntrada);
             this.tabPage2.Controls.Add(this.btnLimparEntrada);
@@ -245,21 +244,6 @@
             this.tabPage2.Size = new System.Drawing.Size(1234, 758);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Entrada Material";
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnImprimir.ForeColor = System.Drawing.Color.Black;
-            this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
-            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(574, 330);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(159, 75);
-            this.btnImprimir.TabIndex = 61;
-            this.btnImprimir.Text = "Impressão";
-            this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // panel2
             // 
@@ -358,6 +342,29 @@
             this.label25.TabIndex = 42;
             this.label25.Text = "Total m²:";
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label17.ForeColor = System.Drawing.Color.Yellow;
+            this.label17.Location = new System.Drawing.Point(12, 216);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(223, 217);
+            this.label17.TabIndex = 42;
+            this.label17.Text = "Und Medida mm:\r\n1,8cm = 0,18mm\r\n20cm = 0,200mm\r\nApenas para\r\nEspessura e Largura\r" +
+    "\nLargura utilizar \r\n0 , ....\r\n";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(280, 323);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 110);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 38;
+            this.pictureBox1.TabStop = false;
+            // 
             // rbEntrada
             // 
             this.rbEntrada.AutoSize = true;
@@ -410,18 +417,6 @@
             this.txtTotalM3Entrada.Name = "txtTotalM3Entrada";
             this.txtTotalM3Entrada.Size = new System.Drawing.Size(118, 38);
             this.txtTotalM3Entrada.TabIndex = 43;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label17.ForeColor = System.Drawing.Color.Yellow;
-            this.label17.Location = new System.Drawing.Point(12, 216);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(223, 217);
-            this.label17.TabIndex = 42;
-            this.label17.Text = "Und Medida mm:\r\n1,8cm = 0,18mm\r\n20cm = 0,200mm\r\nApenas para\r\nEspessura e Largura\r" +
-    "\nLargura utilizar \r\n0 , ....\r\n";
             // 
             // label14
             // 
@@ -602,17 +597,6 @@
             this.dtpEntrada.Size = new System.Drawing.Size(148, 34);
             this.dtpEntrada.TabIndex = 40;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(280, 323);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 110);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 38;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnDeletar
             // 
             this.btnDeletar.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -743,9 +727,9 @@
             this.txtTotalM2Saida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotalM2Saida.Enabled = false;
             this.txtTotalM2Saida.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTotalM2Saida.Location = new System.Drawing.Point(780, 86);
+            this.txtTotalM2Saida.Location = new System.Drawing.Point(817, 87);
             this.txtTotalM2Saida.Name = "txtTotalM2Saida";
-            this.txtTotalM2Saida.Size = new System.Drawing.Size(118, 38);
+            this.txtTotalM2Saida.Size = new System.Drawing.Size(92, 38);
             this.txtTotalM2Saida.TabIndex = 43;
             // 
             // dgvSaidaMaterial
@@ -812,6 +796,7 @@
             // 
             this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.tabPage1.Controls.Add(this.btnImprimir);
             this.tabPage1.Controls.Add(this.label23);
             this.tabPage1.Controls.Add(this.txtCalcularSaida);
             this.tabPage1.Controls.Add(this.rbSaida);
@@ -845,12 +830,27 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Estoque e Saida Material";
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnImprimir.ForeColor = System.Drawing.Color.Black;
+            this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
+            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnImprimir.Location = new System.Drawing.Point(1037, 296);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(159, 75);
+            this.btnImprimir.TabIndex = 62;
+            this.btnImprimir.Text = "Relatorio";
+            this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click_1);
+            // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(697, 156);
+            this.label23.Location = new System.Drawing.Point(697, 153);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(329, 31);
             this.label23.TabIndex = 61;
@@ -875,7 +875,7 @@
             this.rbSaida.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.rbSaida.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbSaida.ForeColor = System.Drawing.Color.Red;
-            this.rbSaida.Location = new System.Drawing.Point(480, 145);
+            this.rbSaida.Location = new System.Drawing.Point(471, 150);
             this.rbSaida.Name = "rbSaida";
             this.rbSaida.Size = new System.Drawing.Size(117, 42);
             this.rbSaida.TabIndex = 57;
@@ -896,9 +896,9 @@
             this.txtTotalM3Saida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotalM3Saida.Enabled = false;
             this.txtTotalM3Saida.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTotalM3Saida.Location = new System.Drawing.Point(1034, 86);
+            this.txtTotalM3Saida.Location = new System.Drawing.Point(1071, 87);
             this.txtTotalM3Saida.Name = "txtTotalM3Saida";
-            this.txtTotalM3Saida.Size = new System.Drawing.Size(118, 38);
+            this.txtTotalM3Saida.Size = new System.Drawing.Size(69, 38);
             this.txtTotalM3Saida.TabIndex = 51;
             // 
             // label1
@@ -906,7 +906,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(660, 90);
+            this.label1.Location = new System.Drawing.Point(697, 91);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 31);
             this.label1.TabIndex = 44;
@@ -917,7 +917,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(917, 90);
+            this.label2.Location = new System.Drawing.Point(954, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 31);
             this.label2.TabIndex = 45;
@@ -930,7 +930,7 @@
             this.txtMetroSaida.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtMetroSaida.Location = new System.Drawing.Point(563, 86);
             this.txtMetroSaida.Name = "txtMetroSaida";
-            this.txtMetroSaida.Size = new System.Drawing.Size(73, 38);
+            this.txtMetroSaida.Size = new System.Drawing.Size(107, 38);
             this.txtMetroSaida.TabIndex = 52;
             this.txtMetroSaida.TextChanged += new System.EventHandler(this.txtMetroSaida_TextChanged);
             // 
@@ -1004,7 +1004,7 @@
             // 
             this.txtPesquisar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPesquisar.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPesquisar.Location = new System.Drawing.Point(706, 307);
+            this.txtPesquisar.Location = new System.Drawing.Point(717, 333);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(257, 38);
             this.txtPesquisar.TabIndex = 55;
@@ -1015,7 +1015,7 @@
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.Location = new System.Drawing.Point(563, 307);
+            this.label28.Location = new System.Drawing.Point(574, 333);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(122, 31);
             this.label28.TabIndex = 49;
@@ -1198,7 +1198,7 @@
         private TextBox txtPesquisar;
         private Label label28;
         private Label label18;
-        private Button btnImprimir;
         private Label label23;
+        private Button btnImprimir;
     }
 }
