@@ -31,20 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEstoque));
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dgvSaidaMaterial = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnLimparSaida = new System.Windows.Forms.Button();
-            this.btnInserir = new System.Windows.Forms.Button();
-            this.txtCodigoMaterial = new System.Windows.Forms.TextBox();
-            this.txtTotalEstoqueSaida = new System.Windows.Forms.TextBox();
-            this.txtCalcularSaida = new System.Windows.Forms.TextBox();
-            this.txtMedidaSaida = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtSaidaMaterial = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dtpData = new System.Windows.Forms.DateTimePicker();
             this.btnLimparEntrada = new System.Windows.Forms.Button();
@@ -72,6 +58,21 @@
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.txtDataId = new System.Windows.Forms.TextBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.dgvSaidaMaterial = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnLimparSaida = new System.Windows.Forms.Button();
+            this.btnInserir = new System.Windows.Forms.Button();
+            this.txtCodigoMaterial = new System.Windows.Forms.TextBox();
+            this.txtTotalEstoqueSaida = new System.Windows.Forms.TextBox();
+            this.txtCalcularSaida = new System.Windows.Forms.TextBox();
+            this.txtMedidaSaida = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtSaidaMaterial = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.cmsSalvarConteudos = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.msSalvarEntrada = new System.Windows.Forms.ToolStripMenuItem();
             this.msSalvarData = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,12 +80,12 @@
             this.deletarDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deletarItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSaidaMaterial)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSaidaMaterial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.cmsSalvarConteudos.SuspendLayout();
             this.cmsDeletar.SuspendLayout();
             this.SuspendLayout();
@@ -92,194 +93,15 @@
             // tabControl1
             // 
             this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1163, 701);
+            this.tabControl1.Size = new System.Drawing.Size(1163, 645);
             this.tabControl1.TabIndex = 0;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.AutoScroll = true;
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.tabPage1.Controls.Add(this.dgvSaidaMaterial);
-            this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Controls.Add(this.btnLimparSaida);
-            this.tabPage1.Controls.Add(this.btnInserir);
-            this.tabPage1.Controls.Add(this.txtCodigoMaterial);
-            this.tabPage1.Controls.Add(this.txtTotalEstoqueSaida);
-            this.tabPage1.Controls.Add(this.txtCalcularSaida);
-            this.tabPage1.Controls.Add(this.txtMedidaSaida);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.txtSaidaMaterial);
-            this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Location = new System.Drawing.Point(4, 43);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1155, 654);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Saida de Material";
-            // 
-            // dgvSaidaMaterial
-            // 
-            this.dgvSaidaMaterial.AllowUserToAddRows = false;
-            this.dgvSaidaMaterial.AllowUserToDeleteRows = false;
-            this.dgvSaidaMaterial.BackgroundColor = System.Drawing.Color.White;
-            this.dgvSaidaMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSaidaMaterial.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvSaidaMaterial.Location = new System.Drawing.Point(3, 247);
-            this.dgvSaidaMaterial.Name = "dgvSaidaMaterial";
-            this.dgvSaidaMaterial.ReadOnly = true;
-            this.dgvSaidaMaterial.RowHeadersWidth = 51;
-            this.dgvSaidaMaterial.RowTemplate.Height = 29;
-            this.dgvSaidaMaterial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSaidaMaterial.Size = new System.Drawing.Size(1149, 404);
-            this.dgvSaidaMaterial.TabIndex = 38;
-            this.dgvSaidaMaterial.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSaidaMaterial_CellDoubleClick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1002, 94);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 110);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 37;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnLimparSaida
-            // 
-            this.btnLimparSaida.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnLimparSaida.ForeColor = System.Drawing.Color.Black;
-            this.btnLimparSaida.Image = ((System.Drawing.Image)(resources.GetObject("btnLimparSaida.Image")));
-            this.btnLimparSaida.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimparSaida.Location = new System.Drawing.Point(614, 156);
-            this.btnLimparSaida.Name = "btnLimparSaida";
-            this.btnLimparSaida.Size = new System.Drawing.Size(122, 62);
-            this.btnLimparSaida.TabIndex = 33;
-            this.btnLimparSaida.Text = "Limpar";
-            this.btnLimparSaida.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimparSaida.UseVisualStyleBackColor = true;
-            this.btnLimparSaida.Click += new System.EventHandler(this.btnLimparSaida_Click);
-            // 
-            // btnInserir
-            // 
-            this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnInserir.ForeColor = System.Drawing.Color.Black;
-            this.btnInserir.Image = ((System.Drawing.Image)(resources.GetObject("btnInserir.Image")));
-            this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInserir.Location = new System.Drawing.Point(429, 156);
-            this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(122, 62);
-            this.btnInserir.TabIndex = 36;
-            this.btnInserir.Text = "Inserir";
-            this.btnInserir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnInserir.UseVisualStyleBackColor = true;
-            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
-            // 
-            // txtCodigoMaterial
-            // 
-            this.txtCodigoMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtCodigoMaterial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCodigoMaterial.Enabled = false;
-            this.txtCodigoMaterial.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCodigoMaterial.Location = new System.Drawing.Point(8, 25);
-            this.txtCodigoMaterial.Name = "txtCodigoMaterial";
-            this.txtCodigoMaterial.Size = new System.Drawing.Size(62, 38);
-            this.txtCodigoMaterial.TabIndex = 31;
-            // 
-            // txtTotalEstoqueSaida
-            // 
-            this.txtTotalEstoqueSaida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTotalEstoqueSaida.Enabled = false;
-            this.txtTotalEstoqueSaida.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTotalEstoqueSaida.Location = new System.Drawing.Point(703, 82);
-            this.txtTotalEstoqueSaida.Name = "txtTotalEstoqueSaida";
-            this.txtTotalEstoqueSaida.Size = new System.Drawing.Size(98, 38);
-            this.txtTotalEstoqueSaida.TabIndex = 32;
-            this.txtTotalEstoqueSaida.Text = "0";
-            // 
-            // txtCalcularSaida
-            // 
-            this.txtCalcularSaida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCalcularSaida.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCalcularSaida.Location = new System.Drawing.Point(429, 82);
-            this.txtCalcularSaida.Name = "txtCalcularSaida";
-            this.txtCalcularSaida.Size = new System.Drawing.Size(98, 38);
-            this.txtCalcularSaida.TabIndex = 32;
-            this.txtCalcularSaida.Text = "0";
-            this.txtCalcularSaida.TextChanged += new System.EventHandler(this.txtCalcularSaida_TextChanged);
-            // 
-            // txtMedidaSaida
-            // 
-            this.txtMedidaSaida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMedidaSaida.Enabled = false;
-            this.txtMedidaSaida.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtMedidaSaida.Location = new System.Drawing.Point(1030, 22);
-            this.txtMedidaSaida.Name = "txtMedidaSaida";
-            this.txtMedidaSaida.Size = new System.Drawing.Size(98, 38);
-            this.txtMedidaSaida.TabIndex = 32;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(533, 85);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 31);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "Total Estoque:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(299, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 31);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Qtd Saida:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(872, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 31);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Und Medida:";
-            // 
-            // txtSaidaMaterial
-            // 
-            this.txtSaidaMaterial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSaidaMaterial.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSaidaMaterial.Location = new System.Drawing.Point(299, 25);
-            this.txtSaidaMaterial.Name = "txtSaidaMaterial";
-            this.txtSaidaMaterial.Size = new System.Drawing.Size(563, 38);
-            this.txtSaidaMaterial.TabIndex = 32;
-            this.txtSaidaMaterial.TextChanged += new System.EventHandler(this.txtSaidaMaterial_TextChanged);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(76, 29);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(217, 31);
-            this.label11.TabIndex = 30;
-            this.label11.Text = "Pesquisar Material:";
             // 
             // tabPage2
             // 
@@ -314,7 +136,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 43);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1155, 654);
+            this.tabPage2.Size = new System.Drawing.Size(1155, 598);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Entrada de Material";
             // 
@@ -345,7 +167,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(972, 524);
+            this.pictureBox2.Location = new System.Drawing.Point(985, 452);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(162, 116);
@@ -365,7 +187,7 @@
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 29;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData.Size = new System.Drawing.Size(645, 359);
+            this.dgvData.Size = new System.Drawing.Size(645, 287);
             this.dgvData.TabIndex = 42;
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             // 
@@ -410,6 +232,7 @@
             this.txtEntrada.TabIndex = 41;
             this.txtEntrada.Text = "0";
             this.txtEntrada.TextChanged += new System.EventHandler(this.txtEntrada_TextChanged);
+            this.txtEntrada.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEntrada_KeyPress);
             // 
             // txtQuantidadePct
             // 
@@ -609,6 +432,201 @@
             this.txtDataId.TabIndex = 38;
             this.txtDataId.Visible = false;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.AutoScroll = true;
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.tabPage1.Controls.Add(this.btnImprimir);
+            this.tabPage1.Controls.Add(this.dgvSaidaMaterial);
+            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.btnLimparSaida);
+            this.tabPage1.Controls.Add(this.btnInserir);
+            this.tabPage1.Controls.Add(this.txtCodigoMaterial);
+            this.tabPage1.Controls.Add(this.txtTotalEstoqueSaida);
+            this.tabPage1.Controls.Add(this.txtCalcularSaida);
+            this.tabPage1.Controls.Add(this.txtMedidaSaida);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.txtSaidaMaterial);
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Location = new System.Drawing.Point(4, 43);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1155, 598);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Saida de Material";
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnImprimir.ForeColor = System.Drawing.Color.Black;
+            this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
+            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnImprimir.Location = new System.Drawing.Point(299, 156);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(174, 62);
+            this.btnImprimir.TabIndex = 48;
+            this.btnImprimir.Text = "Impressão";
+            this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click_1);
+            // 
+            // dgvSaidaMaterial
+            // 
+            this.dgvSaidaMaterial.AllowUserToAddRows = false;
+            this.dgvSaidaMaterial.AllowUserToDeleteRows = false;
+            this.dgvSaidaMaterial.BackgroundColor = System.Drawing.Color.White;
+            this.dgvSaidaMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSaidaMaterial.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvSaidaMaterial.Location = new System.Drawing.Point(3, 260);
+            this.dgvSaidaMaterial.Name = "dgvSaidaMaterial";
+            this.dgvSaidaMaterial.ReadOnly = true;
+            this.dgvSaidaMaterial.RowHeadersWidth = 51;
+            this.dgvSaidaMaterial.RowTemplate.Height = 29;
+            this.dgvSaidaMaterial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSaidaMaterial.Size = new System.Drawing.Size(1149, 335);
+            this.dgvSaidaMaterial.TabIndex = 38;
+            this.dgvSaidaMaterial.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSaidaMaterial_CellDoubleClick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1002, 94);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 110);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnLimparSaida
+            // 
+            this.btnLimparSaida.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLimparSaida.ForeColor = System.Drawing.Color.Black;
+            this.btnLimparSaida.Image = ((System.Drawing.Image)(resources.GetObject("btnLimparSaida.Image")));
+            this.btnLimparSaida.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimparSaida.Location = new System.Drawing.Point(703, 156);
+            this.btnLimparSaida.Name = "btnLimparSaida";
+            this.btnLimparSaida.Size = new System.Drawing.Size(130, 62);
+            this.btnLimparSaida.TabIndex = 33;
+            this.btnLimparSaida.Text = "Limpar";
+            this.btnLimparSaida.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimparSaida.UseVisualStyleBackColor = true;
+            this.btnLimparSaida.Click += new System.EventHandler(this.btnLimparSaida_Click);
+            // 
+            // btnInserir
+            // 
+            this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnInserir.ForeColor = System.Drawing.Color.Black;
+            this.btnInserir.Image = ((System.Drawing.Image)(resources.GetObject("btnInserir.Image")));
+            this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInserir.Location = new System.Drawing.Point(518, 156);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.Size = new System.Drawing.Size(122, 62);
+            this.btnInserir.TabIndex = 36;
+            this.btnInserir.Text = "Inserir";
+            this.btnInserir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
+            // 
+            // txtCodigoMaterial
+            // 
+            this.txtCodigoMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtCodigoMaterial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtCodigoMaterial.Enabled = false;
+            this.txtCodigoMaterial.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCodigoMaterial.Location = new System.Drawing.Point(8, 25);
+            this.txtCodigoMaterial.Name = "txtCodigoMaterial";
+            this.txtCodigoMaterial.Size = new System.Drawing.Size(62, 38);
+            this.txtCodigoMaterial.TabIndex = 31;
+            // 
+            // txtTotalEstoqueSaida
+            // 
+            this.txtTotalEstoqueSaida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtTotalEstoqueSaida.Enabled = false;
+            this.txtTotalEstoqueSaida.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTotalEstoqueSaida.Location = new System.Drawing.Point(703, 82);
+            this.txtTotalEstoqueSaida.Name = "txtTotalEstoqueSaida";
+            this.txtTotalEstoqueSaida.Size = new System.Drawing.Size(98, 38);
+            this.txtTotalEstoqueSaida.TabIndex = 32;
+            this.txtTotalEstoqueSaida.Text = "0";
+            // 
+            // txtCalcularSaida
+            // 
+            this.txtCalcularSaida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtCalcularSaida.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCalcularSaida.Location = new System.Drawing.Point(429, 82);
+            this.txtCalcularSaida.Name = "txtCalcularSaida";
+            this.txtCalcularSaida.Size = new System.Drawing.Size(98, 38);
+            this.txtCalcularSaida.TabIndex = 32;
+            this.txtCalcularSaida.Text = "0";
+            this.txtCalcularSaida.TextChanged += new System.EventHandler(this.txtCalcularSaida_TextChanged);
+            // 
+            // txtMedidaSaida
+            // 
+            this.txtMedidaSaida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtMedidaSaida.Enabled = false;
+            this.txtMedidaSaida.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtMedidaSaida.Location = new System.Drawing.Point(1030, 22);
+            this.txtMedidaSaida.Name = "txtMedidaSaida";
+            this.txtMedidaSaida.Size = new System.Drawing.Size(98, 38);
+            this.txtMedidaSaida.TabIndex = 32;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(533, 85);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(164, 31);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Total Estoque:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(299, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(124, 31);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Qtd Saida:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(872, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(152, 31);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Und Medida:";
+            // 
+            // txtSaidaMaterial
+            // 
+            this.txtSaidaMaterial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtSaidaMaterial.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSaidaMaterial.Location = new System.Drawing.Point(299, 25);
+            this.txtSaidaMaterial.Name = "txtSaidaMaterial";
+            this.txtSaidaMaterial.Size = new System.Drawing.Size(563, 38);
+            this.txtSaidaMaterial.TabIndex = 32;
+            this.txtSaidaMaterial.TextChanged += new System.EventHandler(this.txtSaidaMaterial_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(76, 29);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(217, 31);
+            this.label11.TabIndex = 30;
+            this.label11.Text = "Pesquisar Material:";
+            // 
             // cmsSalvarConteudos
             // 
             this.cmsSalvarConteudos.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -666,7 +684,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1163, 701);
+            this.ClientSize = new System.Drawing.Size(1163, 645);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -676,14 +694,14 @@
             this.Text = "Controle de Estoque";
             this.Load += new System.EventHandler(this.FrmEstoque_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSaidaMaterial)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSaidaMaterial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.cmsSalvarConteudos.ResumeLayout(false);
             this.cmsDeletar.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -740,5 +758,6 @@
         private ContextMenuStrip cmsDeletar;
         private ToolStripMenuItem deletarDataToolStripMenuItem;
         private ToolStripMenuItem deletarItemToolStripMenuItem;
+        private Button btnImprimir;
     }
 }

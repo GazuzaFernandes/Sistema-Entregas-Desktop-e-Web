@@ -12,17 +12,21 @@
 
   <ItemGroup>
     <None Remove="Logistica\Sistema de Logistica\Impressao.rdlc" />
+    <None Remove="Logistica\Sistema de Logistica\ImpressaoMadeira.rdlc" />
+    <None Remove="Logistica\Sistema de Logistica\ImpressaoProduto.rdlc" />
     <None Remove="Logistica\Sistema do Financeiro\RelatorioEstoque.rdlc" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="fa1e9ad2-31c5-4aae-9885-75b57e26db21.ico" />
+    <EmbeddedResource Include="Logistica\Sistema de Logistica\ImpressaoProduto.rdlc" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Logistica\Sistema de Logistica\Impressao.rdlc">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Logistica\Sistema de Logistica\ImpressaoMadeira.rdlc" />
     <EmbeddedResource Include="Logistica\Sistema do Financeiro\RelatorioEstoque.rdlc" />
   </ItemGroup>
 

@@ -1,7 +1,10 @@
 ﻿
+using DAL.Entities.Financeiro;
 using DAL.Entities.Logistica;
 using DAL.Repository.Logistica;
 using Logistica.Sistema_de_Logistica;
+using Microsoft.Reporting.WinForms;
+using Projeto.Logistica.Sistema_do_Financeiro;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -190,6 +193,37 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         #endregion
 
         #region Saida de Material
+        private void btnImprimir_Click_1(object sender, EventArgs e)
+        {
+            #region Tabela Estoque
+            ReportDataSource eF = new ReportDataSource();
+            List<ItensMaterial> lst = new List<ItensMaterial>();
+            lst.Clear();
+            for (int i = 0; i < dgvSaidaMaterial.Rows.Count - 0; i++)
+            {
+                lst.Add(new ItensMaterial
+                {
+                    MaterialId = int.Parse(dgvSaidaMaterial.Rows[i].Cells[0].Value.ToString()),
+                    Material = dgvSaidaMaterial.Rows[i].Cells[1].Value.ToString(),
+                    UnidadeMedida = dgvSaidaMaterial.Rows[i].Cells[2].Value.ToString(),
+                    Total = Convert.ToDecimal(dgvSaidaMaterial.Rows[i].Cells[3].Value.ToString()),
+                 
+                });
+
+            }
+            eF.Name = "BDEstoqueProduto";
+            eF.Value = lst;
+            #endregion
+
+            FrmImpressaoEstoqueFinanceiro frmImpressao = new FrmImpressaoEstoqueFinanceiro
+                (dtpData.Value, eF);
+            frmImpressao.rvFinanceiro.LocalReport.DataSources.Clear();
+            frmImpressao.rvFinanceiro.LocalReport.DataSources.Add(eF);
+            frmImpressao.rvFinanceiro.LocalReport.ReportEmbeddedResource =
+                   "Projeto.Logistica.Sistema_de_Logistica.ImpressaoProduto.rdlc";
+            frmImpressao.ShowDialog();
+
+        }
         private void btnInserir_Click(object sender, EventArgs e)
         {
             try
@@ -449,6 +483,15 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 throw ex;
             }
         }
+
+        private void txtEntrada_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                CalcularCadastro();
+            }
+        }
+
         private bool Validarcampos()
         {
             if (txtMaterial.Text == "")

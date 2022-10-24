@@ -3,6 +3,8 @@ using DAL.Entities.Logistica;
 using DAL.Repository.Financeiro;
 using DAL.Repository.Logistica;
 using Logistica.Sistema_de_Logistica;
+using Microsoft.Reporting.WinForms;
+using Projeto.Logistica.Sistema_do_Financeiro;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,13 +32,16 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         }
 
         #region Tela Entrada Material 
-        private void txtEntradaMetroLinear_TextChanged(object sender, EventArgs e)
+        private void txtEntradaMetroLinear_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txtEntradaMetroLinear.Text != null)
+            if (e.KeyChar == 13)
             {
-                rbEntrada.Checked = true;
+                if (txtEntradaMetroLinear.Text != null)
+                {
+                    rbEntrada.Checked = true;
+                }
+                CalcularEntradaEstoque();
             }
-            CalcularEntradaEstoque();
         }
 
         private void txtConversorTotalM2_TextChanged(object sender, EventArgs e)
@@ -57,17 +62,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             ConversorDeMetragem();
         }
-
-        private void txtCalcularSaida_TextChanged_1(object sender, EventArgs e)
-        {
-            if (txtCalcularSaida.Text != null)
-            {
-                rbSaida.Checked = true;
-            }
-            CalcularSaidaMaterial();
-
-        }
-
+   
         private void btnGerarId_Click(object sender, EventArgs e)
         {
             try
@@ -237,11 +232,62 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 txtTotalM2Saida.Text = Convert.ToString(data.MetroQuadrado);
             }
         }
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            #region Tabela Estoque
+            ReportDataSource eF = new ReportDataSource();
+            List<EstoqueMadeira> lst = new List<EstoqueMadeira>();
+            lst.Clear();
+            for (int i = 0; i < dgvSaidaMaterial.Rows.Count - 0; i++)
+            {
+                lst.Add(new EstoqueMadeira
+                {
+                    EstoqueId = int.Parse(dgvSaidaMaterial.Rows[i].Cells[0].Value.ToString()),
+                    Madeira = dgvSaidaMaterial.Rows[i].Cells[1].Value.ToString(),
+                    Espessura = Convert.ToDecimal(dgvSaidaMaterial.Rows[i].Cells[2].Value.ToString()),
+                    Largura = Convert.ToDecimal(dgvSaidaMaterial.Rows[i].Cells[3].Value.ToString()),
+                    MetroLinear = Convert.ToDecimal(dgvSaidaMaterial.Rows[i].Cells[4].Value.ToString()),
+                    MetroQuadrado = Convert.ToDecimal(dgvSaidaMaterial.Rows[i].Cells[5].Value.ToString()),
+                    MetroCubico = Convert.ToDecimal(dgvSaidaMaterial.Rows[i].Cells[6].Value.ToString()),
+
+                });
+            }
+            eF.Name = "BDEstoqueMadeira";
+            eF.Value = lst;
+            #endregion
+
+            FrmImpressaoMaterial estoqueMaterial = new FrmImpressaoMaterial
+                (dtpEntrada.Value, eF);
+            estoqueMaterial.rvMaterial.LocalReport.DataSources.Clear();
+            estoqueMaterial.rvMaterial.LocalReport.DataSources.Add(eF);
+            estoqueMaterial.rvMaterial.LocalReport.ReportEmbeddedResource =
+                  "Projeto.Logistica.Sistema_de_Logistica.ImpressaoMadeira.rdlc";
+            estoqueMaterial.ShowDialog();
+
+        }
 
         #endregion
 
         #region Tela Saida Material
 
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+            CarregarGridEstoque(true);
+        }
+
+
+        private void txtCalcularSaida_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                if (txtCalcularSaida.Text != null)
+                {
+                    rbSaida.Checked = true;
+                }
+                CalcularSaidaMaterial();
+            }
+
+        }
 
         private void txtMaterialSaida_TextChanged(object sender, EventArgs e)
         {
@@ -329,7 +375,6 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 txtTotalM2Entrada.Text = Convert.ToString(saida.MetroQuadrado);
                 txtTotalM3Entrada.Text = Convert.ToString(saida.MetroCubico);
                 #endregion
-
                 #region Saida Material
                 txtIdSaida.Text = saida.EstoqueId.ToString();
                 txtEspessuraSaida.Text = Convert.ToString(saida.Espessura);
@@ -342,7 +387,14 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 HabilitarCampos(true);
                 BloquearBotao(false);
                 CarregarGridData();
+                BloququearMetro(false);
             }
+        }
+
+        private void BloququearMetro(bool habilitar)
+        {
+            txtMetroEntrada.Enabled = habilitar;
+            txtMetroSaida.Enabled = habilitar;
         }
 
         #endregion
@@ -359,14 +411,18 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     int.TryParse(txtIdEntrada.Text, out id);
                     if (id > 0)
                     {
-                        var entrada = new DLEstoqueMadeira().ConsultarPorId(id);
-                        entrada.EstoqueId = Convert.ToInt32(txtIdEntrada);
+                        var entrada = new DLEstoqueMadeira().ConsultarPorId(id);      
                         entrada.Madeira = txtMaterialEntrada.Text;
                         entrada.Espessura = Convert.ToDecimal(txtEspessuraEntrada.Text);
                         entrada.Largura = Convert.ToDecimal(txtLarguraEntrada.Text);
                         entrada.MetroLinear = Convert.ToDecimal(txtMetroEntrada.Text);
                         entrada.MetroQuadrado = Convert.ToDecimal(txtTotalM2Entrada.Text);
-                        entrada.MetroCubico = Convert.ToDecimal(txtTotalM3Entrada.Text);
+                        entrada.MetroCubico = Convert.ToDecimal(txtTotalM3Entrada.Text);                                       
+                        new DLEstoqueMadeira().Atualizar(entrada);
+                        MessageBox.Show("Proposta Atualizada com Sucesso!");
+                        LimparCamposEntrada();
+                        dgvData.DataSource = null;
+                        CarregarGridEstoque();
 
                     }
                 }
@@ -433,6 +489,9 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             txtMetroEntrada.Clear();
             txtTotalM2Entrada.Clear();
             txtTotalM3Entrada.Clear();
+            txtIdSaida.Clear();
+            dgvData.DataSource = null;
+        
             #endregion          
 
         }
@@ -447,6 +506,8 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             txtMetroSaida.Clear();
             txtTotalM3Saida.Clear();
             txtTotalM2Saida.Clear();
+            txtIdEntrada.Clear();
+           
             #endregion
         }
 
@@ -517,6 +578,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 {
                     entrada.Entrada = dtpEntrada.Value;
                     entrada.MetroQuadrado = Convert.ToDecimal(txtTotalM2Entrada.Text);
+                    entrada.Saida = dtpSaida.Value;
                     entrada.EstoqueId = Convert.ToInt32(txtIdEntrada.Text);
                     if (rbEntrada.Checked == true)
                         entrada.StatusObraId = 8;
@@ -560,7 +622,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 var listarMadeira = new DLEstoqueMadeira().Listar();
                 if (isPesquisa) //isPesquisa == true
                 {
-                    var pesquisa = txtMaterialSaida.Text.ToLower();
+                    var pesquisa = txtPesquisar.Text.ToLower();
                     listarMadeira = listarMadeira.Where(p => p.Madeira.ToLower().Contains(pesquisa)).ToList();
                 }
                 dgvSaidaMaterial.DataSource = listarMadeira;
@@ -654,11 +716,12 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             {
                 if (decimal.TryParse(txtMetroEntrada.Text, out comprimentoEstoque))
                 {
-                    totalM = entradaEstoque + comprimentoEstoque;
+                    totalM = comprimentoEstoque + entradaEstoque;
                 }
             }
             txtMetroEntrada.Text = totalM.ToString("N2");
             #endregion
+
             CalcularEntrada();
         }
 
@@ -685,7 +748,6 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             WindowState = FormWindowState.Minimized;
         }
-
 
 
     }
