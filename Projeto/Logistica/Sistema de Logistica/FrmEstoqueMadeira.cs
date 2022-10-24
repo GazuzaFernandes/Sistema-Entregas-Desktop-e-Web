@@ -39,8 +39,8 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 if (txtEntradaMetroLinear.Text != null)
                 {
                     rbEntrada.Checked = true;
-                }
-                CalcularEntradaEstoque();
+                    CalcularEntradaEstoque();
+                }               
             }
         }
 
@@ -423,6 +423,8 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                         LimparCamposEntrada();
                         dgvData.DataSource = null;
                         CarregarGridEstoque();
+                        BloquearBotao(true);
+                        HabilitarCampos(false);                            
 
                     }
                 }
@@ -483,6 +485,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             #region Entrada Material
             txtIdEntrada.Clear();
+            txtEntradaMetroLinear.Clear();
             txtEspessuraEntrada.Text = Convert.ToString("0,");
             txtLarguraEntrada.Text = Convert.ToString("0,");
             txtMaterialEntrada.Clear();
@@ -604,8 +607,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             #region Entrada Material          
             txtEspessuraEntrada.Enabled = habilitar;
             txtLarguraEntrada.Enabled = habilitar;
-            txtMaterialEntrada.Enabled = habilitar;
-            txtMetroEntrada.Enabled = habilitar;
+            txtMaterialEntrada.Enabled = habilitar;            
             dtpEntrada.Enabled = habilitar;
             #endregion
 
@@ -625,7 +627,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     var pesquisa = txtPesquisar.Text.ToLower();
                     listarMadeira = listarMadeira.Where(p => p.Madeira.ToLower().Contains(pesquisa)).ToList();
                 }
-                dgvSaidaMaterial.DataSource = listarMadeira;
+                dgvSaidaMaterial.DataSource = listarMadeira.OrderBy(p => p.Madeira).ToList();
                 MontarGridMaterial(dgvSaidaMaterial);
             }
 
@@ -642,7 +644,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             //Define quais colunas serão visíveis
             objBlControleGrid.DefinirVisibilidade(new List<string>() { "Madeira", "Espessura", "Largura", "MetroLinear", "MetroQuadrado", "MetroCubico", });
             //Define quais os cabeçalhos respectivos das colunas 
-            objBlControleGrid.DefinirCabecalhos(new List<string>() { "Madeira", "Espessura", "Largura", "Metro Linear", "M2", "M3", });
+            objBlControleGrid.DefinirCabecalhos(new List<string>() { "Madeira", "Espessura", "Largura", "ML", "M2", "M3", });
             //Define quais as larguras respectivas das colunas 
             objBlControleGrid.DefinirLarguras(new List<int>() { 45, 10, 10, 10, 10, 10, }, dgvSaidaMaterial.Width - 25); //O total tem que ficar em 100% 
                                                                                                                          //Define quais os alinhamentos respectivos do componentes das colunas 
@@ -748,7 +750,5 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             WindowState = FormWindowState.Minimized;
         }
-
-
     }
 }
