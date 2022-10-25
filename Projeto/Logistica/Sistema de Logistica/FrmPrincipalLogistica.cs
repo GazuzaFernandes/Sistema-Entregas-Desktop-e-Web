@@ -38,7 +38,7 @@ namespace Logistica.Sistema_de_Logistica
         private void msInserir_Click(object sender, EventArgs e)
         {
             FrmProposta proposta = new FrmProposta();
-            proposta.Show();
+            proposta.ShowDialog();
         }
 
         private void msFerramentas_Click(object sender, EventArgs e)

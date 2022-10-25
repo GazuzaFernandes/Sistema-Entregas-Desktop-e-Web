@@ -117,11 +117,13 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
+
         private void btnPesquisaFabrica_Click(object sender, EventArgs e)
         {
             pesquisar = 1;
             PegarDados_FormCadastroEmpresa();
         }
+
         private void txtCodigoFabrica_TextChanged(object sender, EventArgs e)
         {
             try
@@ -150,6 +152,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
+
         private void txtCodigoCliente_TextChanged(object sender, EventArgs e)
         {
             try
@@ -240,7 +243,6 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
-
         private void btnDeletarProposta_Click(object sender, EventArgs e)
         {
             try
@@ -633,7 +635,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 //Define quais os cabeçalhos respectivos das colunas 
                 objBlControleGrid.DefinirCabecalhos(new List<string>() { "Data do Comentario", "Comentario", });
                 //Define quais as larguras respectivas das colunas 
-                objBlControleGrid.DefinirLarguras(new List<int>() { 20, 80 }, dgvHistorico.Width - 25); //O total tem que ficar em 100% 
+                objBlControleGrid.DefinirLarguras(new List<int>() { 20, 77 }, dgvHistorico.Width - 25); //O total tem que ficar em 100% 
                 //Define quais os alinhamentos respectivos do componentes das colunas 
                 objBlControleGrid.DefinirAlinhamento(new List<string>() { "esquerda", "centro", });
                 //Define a altura das linhas respectivas da Grid 

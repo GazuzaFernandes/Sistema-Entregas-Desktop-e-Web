@@ -97,6 +97,8 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         private void bntLimparEntrada_Click(object sender, EventArgs e)
         {
             LimparCamposEntrada();
+            HabilitarCampos(false);
+            BloquearBotao(true);
         }
 
         private void cmsSalvarDatas_Click(object sender, EventArgs e)
@@ -208,7 +210,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             for (int i = 0; i < dgvData.Rows.Count; i++)
             {
-                var valor = Convert.ToString(dgvData.Rows[i].Cells[5].Value);
+                var valor = Convert.ToString(dgvData.Rows[i].Cells[6].Value);
                 switch (valor)
                 {
                     case "8":
@@ -620,6 +622,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
             #region Saida Material         
             dtpSaida.Enabled = habilitar;
+            txtMaterialSaida.Enabled = habilitar;
             #endregion
 
         }
@@ -757,6 +760,5 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             WindowState = FormWindowState.Minimized;
         }
-
     }
 }
