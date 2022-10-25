@@ -757,6 +757,5 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             WindowState = FormWindowState.Minimized;
         }
-
     }
 }
