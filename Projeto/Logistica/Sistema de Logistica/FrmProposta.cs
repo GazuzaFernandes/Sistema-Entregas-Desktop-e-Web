@@ -243,6 +243,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
+
         private void btnDeletarProposta_Click(object sender, EventArgs e)
         {
             try
@@ -544,10 +545,12 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             MetragemCaixas();
         }
+
         private void txtPreco_TextChanged(object sender, EventArgs e)
         {
             ValorMaterial();
         }
+
         private void txtQtdCaixas_TextChanged(object sender, EventArgs e)
         {
             ValorMaterial();
@@ -562,6 +565,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             rtbComentario.Clear();
             CarregarGridHistorico();
         }
+
         private void btnDeletarComentario_Click(object sender, EventArgs e)
         {
             try
@@ -588,6 +592,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
+
         private void dgvHistorico_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -624,6 +629,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 throw ex;
             }
         }
+
         private void MontarGridHistorico()
         {
             try
@@ -646,10 +652,12 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 throw ex;
             }
         }
+
         private void BloquearBotao(bool desabilitar)
         {
             btnGerarId.Enabled = desabilitar;
         }
+
         private void CarregarGridItensProposta()
         {
             try
@@ -666,6 +674,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 throw ex;
             }
         }
+
         private void MontarGridItensProposta(DataGridView dgvmaterial)
         {
             try
@@ -691,6 +700,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 throw ex;
             }
         }
+
         private void HabilitarCampos(bool Habilitar)
         {
             dtpDataEntrega.Enabled = Habilitar;
@@ -725,6 +735,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             btnImprimir.Enabled = Habilitar;
             btnDeletarProposta.Enabled = Habilitar;
         }
+
         public void PegarDados_FormCadastroEmpresa()
         {
             try
@@ -757,6 +768,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 throw ex;
             }
         }
+
         private void LimparDadosProposta()
         {
             txtCodigoFabrica.Clear();
@@ -783,6 +795,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             dtpDataPedido.Value = DateTime.Now;
             dtpDataPedido.Value = DateTime.Now;
         }
+
         private bool ValidarCampos()
         {
             if (txtProposta.Text == "")
@@ -799,6 +812,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             }
             return true;
         }
+
         private void LimparCamposItens()
         {
             try
@@ -819,6 +833,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 throw ex;
             }
         }
+
         private ItensProposta LerCampos()
         {
             try
@@ -846,6 +861,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 throw ex;
             }
         }
+
         private void MetragemCaixas()
         {
             try
@@ -875,6 +891,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 throw ex;
             }
         }
+
         private void ValorMaterial()
         {
             try
@@ -899,6 +916,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 throw ex;
             }
         }
+
         private Historico LerComentario()
         {
             try
@@ -921,7 +939,6 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         }
 
         #endregion
-
 
     }
 }

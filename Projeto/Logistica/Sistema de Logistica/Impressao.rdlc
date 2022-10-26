@@ -205,7 +205,7 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>1.03337cm</Top>
+            <Top>1.06865cm</Top>
             <Left>0.80502cm</Left>
             <Height>0.74817cm</Height>
             <Width>7.05083cm</Width>
@@ -315,7 +315,7 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>2.88615cm</Top>
+            <Top>2.99198cm</Top>
             <Left>0.80502cm</Left>
             <Height>0.74817cm</Height>
             <Width>11.25783cm</Width>
@@ -437,7 +437,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DsItensProposta</DataSetName>
-            <Top>3.74015cm</Top>
+            <Top>4.00826cm</Top>
             <Left>0.6477cm</Left>
             <Height>1.2cm</Height>
             <Width>11.25783cm</Width>
@@ -701,7 +701,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DsItensProposta</DataSetName>
-            <Top>5.04598cm</Top>
+            <Top>5.38465cm</Top>
             <Left>2.26551cm</Left>
             <Height>1.2cm</Height>
             <Width>8.32317cm</Width>
@@ -748,7 +748,7 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>6.35182cm</Top>
+            <Top>6.88099cm</Top>
             <Left>3.4348cm</Left>
             <Height>0.74817cm</Height>
             <Width>6.40313cm</Width>
@@ -948,7 +948,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DsHistorico</DataSetName>
-            <Top>7.4422cm</Top>
+            <Top>8.37353cm</Top>
             <Left>0.49038cm</Left>
             <Height>1.2cm</Height>
             <Width>11.57247cm</Width>
@@ -963,7 +963,7 @@
         <Height>5.5in</Height>
         <Style>
           <Border>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
         </Style>
       </Body>
