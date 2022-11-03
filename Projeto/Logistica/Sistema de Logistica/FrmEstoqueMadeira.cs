@@ -620,7 +620,8 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             dtpEntrada.Enabled = habilitar;
             #endregion
 
-            #region Saida Material         
+            #region Saida Material      
+            txtCalcularSaida.Enabled = habilitar;
             dtpSaida.Enabled = habilitar;
             txtMaterialSaida.Enabled = habilitar;
             #endregion

@@ -505,7 +505,7 @@ namespace Logistica.Sistema_de_Logistica
                 FrmProposta proposta = new FrmProposta();
                 proposta._proposta = prop;
                 proposta.ShowDialog();
-                ReducaoCodigoLimpeza();
+                ReducaoCodigoPesquisar();
             }
             catch (Exception ex)
             {
