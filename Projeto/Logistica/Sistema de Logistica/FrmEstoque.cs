@@ -74,7 +74,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     madeiraAt.UnidadeMedida = txtUnidadeMedida.Text;
                     madeiraAt.Total = Convert.ToDecimal(txtTotalEntrada.Text);
                     madeiraAt.Entrada = Convert.ToDecimal(txtEntrada.Text);
-                    madeiraAt.Quantidade = Convert.ToDecimal(txtQuantidadePct.Text);
+     
                     new DLItensMaterial().Atualizar(madeiraAt);
                     MessageBox.Show("Material atualizado com Sucesso ");
                     CarregarGridSaida();
@@ -113,7 +113,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 prop.DataId = Convert.ToInt32(txtDataId.Text);
                 prop.DataEntrada = dtpData.Value;
                 prop.Fabrica = txtFabrica.Text;
-                prop.Obra = txtDevolucao.Text;
+      
                 prop.Entrada = Convert.ToDecimal(txtEntrada.Text);
                 new DLDataMaterial().Atualizar(prop);
             }
@@ -182,7 +182,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 dtpData.Value = data.DataEntrada;
                 txtFabrica.Text = data.Fabrica;
                 txtEntrada.Text = Convert.ToString(data.Entrada);
-                txtDevolucao.Text = data.Obra;
+
             }
         }
         private void txtEntrada_TextChanged(object sender, EventArgs e)
@@ -215,11 +215,11 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             eF.Value = lst;
             #endregion
 
-            FrmImpressaoEstoqueFinanceiro frmImpressao = new FrmImpressaoEstoqueFinanceiro
+            FrmImpressaoProduto frmImpressao = new FrmImpressaoProduto
                 (dtpData.Value, eF);
-            frmImpressao.rvFinanceiro.LocalReport.DataSources.Clear();
-            frmImpressao.rvFinanceiro.LocalReport.DataSources.Add(eF);
-            frmImpressao.rvFinanceiro.LocalReport.ReportEmbeddedResource =
+            frmImpressao.rvProduto.LocalReport.DataSources.Clear();
+            frmImpressao.rvProduto.LocalReport.DataSources.Add(eF);
+            frmImpressao.rvProduto.LocalReport.ReportEmbeddedResource =
                    "Projeto.Logistica.Sistema_de_Logistica.ImpressaoProduto.rdlc";
             frmImpressao.ShowDialog();
 
@@ -273,8 +273,8 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     txtGerarId.Text = material.MaterialId.ToString();
                     txtMaterial.Text = material.Material;
                     txtUnidadeMedida.Text = material.UnidadeMedida;
-                    txtQuantidadePct.Text = Convert.ToString(material.Quantidade);
-                    txtEntrada.Text = Convert.ToString(material.Entrada);
+  
+                  
                     txtTotalEntrada.Text = Convert.ToString(material.Total);
                     #endregion
 
@@ -287,6 +287,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 }
                 HabilitarCampos(true);
                 CarregarGridData();
+                
             }
             catch (Exception ex)
             {
@@ -304,7 +305,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             txtFabrica.Enabled = habilitar;
             txtMaterial.Enabled = habilitar;
-            txtQuantidadePct.Enabled = habilitar;
+
             txtEntrada.Enabled = habilitar;
             txtUnidadeMedida.Enabled = habilitar;
             txtCalcularSaida.Enabled = habilitar;
@@ -408,7 +409,6 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 {
                     data.DataEntrada = dtpData.Value;
                     data.Fabrica = txtFabrica.Text;
-                    data.Obra = txtDevolucao.Text;
                     data.Entrada = Convert.ToDecimal(txtEntrada.Text);
                     data.MaterialId = Convert.ToInt32(txtGerarId.Text);
                 }
@@ -423,18 +423,6 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                #region Calcular Quantidade de Caixa no pedido
-                decimal pacote = 0, entrada = 0, caixas = 0;
-                if (decimal.TryParse(txtQuantidadePct.Text, out pacote))
-                {
-                    if (decimal.TryParse(txtEntrada.Text, out entrada))
-                    {
-                        caixas = entrada / pacote;
-                    }
-                    txtTotalCaixas.Text = caixas.ToString("N2");
-                }
-                #endregion
-
                 #region Calcular Entrada de Estoque
                 decimal entradaa = 0, total = 0;
                 if (decimal.TryParse(txtEntrada.Text, out entradaa))
@@ -443,18 +431,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 }
                 txtTotalEntrada.Text = total.ToString("N2");
                 #endregion
-
-                #region Calcular Quantidade no Pacote
-                decimal pacotee = 0, somaa = 0, totall = 0;
-                if (decimal.TryParse(txtQuantidadePct.Text, out pacotee))
-                {
-                    if (decimal.TryParse(txtTotalEntrada.Text, out somaa))
-                    {
-                        totall = somaa / pacotee;
-                    }
-                    txtTotalCaixas.Text = total.ToString("N2");
-                }
-                #endregion
+          
             }
             catch (Exception ex)
             {
@@ -466,13 +443,10 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             try
             {
                 txtFabrica.Clear();
-                txtMaterial.Clear();
-                txtQuantidadePct.Text = Convert.ToString(0);
-                txtTotalCaixas.Text = Convert.ToString(0);
-                txtEntrada.Text = Convert.ToString(0);
-                txtTotalEntrada.Text = Convert.ToString(0);
-                txtUnidadeMedida.Text = Convert.ToString("M²");
-                txtDevolucao.Clear();
+                txtMaterial.Clear();            
+                txtEntrada.Clear();
+                txtTotalEntrada.Clear();
+                txtUnidadeMedida.Clear();                
                 txtGerarId.Clear();
                 dgvData.DataSource = null;
                 HabilitarCampos(false);
@@ -490,6 +464,16 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             {
                 CalcularCadastro();
             }
+        }
+
+        private void txtQuantidadePct_TextChanged(object sender, EventArgs e)
+        {
+            CalcularCadastro();
+        }
+
+        private void txtTotalCaixas_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private bool Validarcampos()
