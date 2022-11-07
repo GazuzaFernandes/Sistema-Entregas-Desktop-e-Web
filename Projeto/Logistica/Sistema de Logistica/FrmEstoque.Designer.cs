@@ -143,7 +143,7 @@
             this.btnLimparEntrada.ForeColor = System.Drawing.Color.Black;
             this.btnLimparEntrada.Image = ((System.Drawing.Image)(resources.GetObject("btnLimparEntrada.Image")));
             this.btnLimparEntrada.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimparEntrada.Location = new System.Drawing.Point(709, 394);
+            this.btnLimparEntrada.Location = new System.Drawing.Point(584, 390);
             this.btnLimparEntrada.Name = "btnLimparEntrada";
             this.btnLimparEntrada.Size = new System.Drawing.Size(129, 68);
             this.btnLimparEntrada.TabIndex = 44;
@@ -175,8 +175,9 @@
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 29;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData.Size = new System.Drawing.Size(645, 287);
+            this.dgvData.Size = new System.Drawing.Size(519, 284);
             this.dgvData.TabIndex = 42;
+            this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick);
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             // 
             // txtTotalEntrada
@@ -208,7 +209,6 @@
             this.txtEntrada.Size = new System.Drawing.Size(150, 38);
             this.txtEntrada.TabIndex = 41;
             this.txtEntrada.Text = "0";
-            this.txtEntrada.TextChanged += new System.EventHandler(this.txtEntrada_TextChanged);
             this.txtEntrada.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEntrada_KeyPress);
             // 
             // label9
@@ -322,7 +322,7 @@
             this.btnDeletar.ForeColor = System.Drawing.Color.Black;
             this.btnDeletar.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletar.Image")));
             this.btnDeletar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeletar.Location = new System.Drawing.Point(709, 500);
+            this.btnDeletar.Location = new System.Drawing.Point(584, 500);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(129, 68);
             this.btnDeletar.TabIndex = 36;
@@ -337,7 +337,7 @@
             this.btnSalvar.ForeColor = System.Drawing.Color.Black;
             this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(709, 281);
+            this.btnSalvar.Location = new System.Drawing.Point(584, 281);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(129, 68);
             this.btnSalvar.TabIndex = 37;
@@ -351,9 +351,9 @@
             this.txtDataId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtDataId.Enabled = false;
             this.txtDataId.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDataId.Location = new System.Drawing.Point(6, 281);
+            this.txtDataId.Location = new System.Drawing.Point(51, 571);
             this.txtDataId.Name = "txtDataId";
-            this.txtDataId.Size = new System.Drawing.Size(39, 27);
+            this.txtDataId.Size = new System.Drawing.Size(51, 27);
             this.txtDataId.TabIndex = 38;
             this.txtDataId.Visible = false;
             // 
@@ -486,7 +486,7 @@
             this.txtCalcularSaida.Size = new System.Drawing.Size(98, 38);
             this.txtCalcularSaida.TabIndex = 32;
             this.txtCalcularSaida.Text = "0";
-            this.txtCalcularSaida.TextChanged += new System.EventHandler(this.txtCalcularSaida_TextChanged);
+            this.txtCalcularSaida.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCalcularSaida_KeyPress);
             // 
             // txtMedidaSaida
             // 
@@ -586,22 +586,26 @@
             this.deletarDataToolStripMenuItem,
             this.deletarItemToolStripMenuItem});
             this.cmsDeletar.Name = "cmsDeletar";
-            this.cmsDeletar.Size = new System.Drawing.Size(164, 52);
+            this.cmsDeletar.Size = new System.Drawing.Size(191, 68);
             this.cmsDeletar.Opening += new System.ComponentModel.CancelEventHandler(this.cmsDeletar_Opening);
             // 
             // deletarDataToolStripMenuItem
             // 
+            this.deletarDataToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.deletarDataToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
             this.deletarDataToolStripMenuItem.Name = "deletarDataToolStripMenuItem";
-            this.deletarDataToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.deletarDataToolStripMenuItem.Size = new System.Drawing.Size(190, 32);
             this.deletarDataToolStripMenuItem.Text = "Deletar Data";
+            this.deletarDataToolStripMenuItem.Click += new System.EventHandler(this.deletarDataToolStripMenuItem_Click);
             // 
             // deletarItemToolStripMenuItem
             // 
+            this.deletarItemToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.deletarItemToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
             this.deletarItemToolStripMenuItem.Name = "deletarItemToolStripMenuItem";
-            this.deletarItemToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.deletarItemToolStripMenuItem.Size = new System.Drawing.Size(190, 32);
             this.deletarItemToolStripMenuItem.Text = "Deletar Item";
+            this.deletarItemToolStripMenuItem.Click += new System.EventHandler(this.deletarItemToolStripMenuItem_Click);
             // 
             // FrmEstoque
             // 
@@ -617,6 +621,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmEstoque";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Controle de Estoque";
             this.Load += new System.EventHandler(this.FrmEstoque_Load);
             this.tabControl1.ResumeLayout(false);

@@ -300,7 +300,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         }
         private void txtCalcularSaida_TextChanged(object sender, EventArgs e)
         {
-            CadastrarSaida();
+            CalcularSaida();
         }
         #endregion
 
@@ -348,12 +348,12 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 { "Material", "UnidadeMedida", "Total", });
                 //Define quais os cabeçalhos respectivos das colunas 
                 objBlControleGrid.DefinirCabecalhos(new List<string>()
-                { "Material", "Unidade de Medida", "Estoque", });
+                { "Material", "Medida", "Estoque", });
                 //Define quais as larguras respectivas das colunas 
-                objBlControleGrid.DefinirLarguras(new List<int>() { 30, 30, 33 }, dgvSaidaMaterial.Width - 25); //O total tem que ficar em 100% 
+                objBlControleGrid.DefinirLarguras(new List<int>() { 60, 15, 15 }, dgvSaidaMaterial.Width - 25); //O total tem que ficar em 100% 
                 //Define quais os alinhamentos respectivos do componentes das colunas 
                 objBlControleGrid.DefinirAlinhamento(new List<string>()
-                { "centro", "centro", "centro", "centro", "centro", "centro", "centro", });
+                { "direita", "esquerda", "esquerda", });
                 //Define a altura das linhas respectivas da Grid 
                 objBlControleGrid.DefinirAlturaLinha(30);
             }
@@ -385,12 +385,12 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 var objBlControleGrid = new ControleGrid(dgvData);
                 //Define quais colunas serão visíveis
                 objBlControleGrid.DefinirVisibilidade(new List<string>()
-                { "DataEntrada", "Entrada", "Fabrica", "Obra", });
+                { "DataEntrada", "Entrada", "Fabrica"});
                 //Define quais os cabeçalhos respectivos das colunas 
                 objBlControleGrid.DefinirCabecalhos(new List<string>()
-                { "Data de Entrada", "Quantidade de Entrada", "Fabrica", "Devolução" });
+                { "Data de Entrada", "Entrada", "Fabrica"});
                 //Define quais as larguras respectivas das colunas 
-                objBlControleGrid.DefinirLarguras(new List<int>() { 20, 20, 20, 30 }, dgvData.Width - 25); //O total tem que ficar em 100% 
+                objBlControleGrid.DefinirLarguras(new List<int>() { 30, 30, 32}, dgvData.Width - 25); //O total tem que ficar em 100% 
                 //Define quais os alinhamentos respectivos do componentes das colunas 
                 objBlControleGrid.DefinirAlinhamento(new List<string>()
                 { "centro", "centro", "centro", "centro", "centro", "centro", "centro", });
@@ -428,10 +428,14 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             try
             {
                 #region Calcular Entrada de Estoque
-                decimal entradaa = 0, total = 0;
-                if (decimal.TryParse(txtEntrada.Text, out entradaa))
+                decimal entrada = 0, total = 0;
+                if (decimal.TryParse(txtEntrada.Text, out entrada))
                 {
-                    total = entradaa + total;
+                    if (decimal.TryParse(txtTotalEntrada.Text, out total))
+                    {
+                        total = total + entrada;
+                    }
+
                 }
                 txtTotalEntrada.Text = total.ToString("N2");
                 #endregion
@@ -448,8 +452,8 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             {
                 txtFabrica.Clear();
                 txtMaterial.Clear();
-                txtEntrada.Clear();
-                txtTotalEntrada.Clear();
+                txtEntrada.Text = Convert.ToString(0);
+                txtTotalEntrada.Text = Convert.ToString(0);
                 txtUnidadeMedida.Clear();
                 txtGerarId.Clear();
                 dgvData.DataSource = null;
@@ -470,12 +474,76 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             }
         }
 
-        private void txtQuantidadePct_TextChanged(object sender, EventArgs e)
+
+        private void txtCalcularSaida_KeyPress(object sender, KeyPressEventArgs e)
         {
-            CalcularCadastro();
+            if (e.KeyChar == 13)
+            {
+                CalcularSaida();
+            }
         }
 
-        private void txtTotalCaixas_TextChanged(object sender, EventArgs e)
+        private void deletarDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = 0;
+                int.TryParse(txtDataId.Text, out id);
+                if (id > 0)
+                {
+                    new DLDataMaterial().Excluir(new DataMaterial { MaterialId = id });
+                    MessageBox.Show("Data excluido com sucesso!");
+                    CarregarGridData();
+                    txtDataId.Text = Convert.ToString(null);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+        }
+
+        private void deletarItemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var pergunta = "Deseja Realmente excluir esse Item ? ";
+                if (MessageBox.Show(pergunta, "ATENÇÂO", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    FrmLogin login = new FrmLogin();
+                    login.ShowDialog();
+                    Boolean temUsuario = false;
+                    var listaUsuarios = new DLUsuario().Listar();
+                    for (int i = 0; i < listaUsuarios.Count; i++)
+                    {
+                        if (listaUsuarios[i].Senha == login.txtSenha.Text)
+                        {
+                            temUsuario = true;
+                        }
+                    }
+                    if (temUsuario == true)
+                    {
+                        int id = 0;
+                        int.TryParse(txtGerarId.Text, out id);
+                        if (id > 0)
+                        {
+                            new DLItensMaterial().Excluir(new ItensMaterial { MaterialId = id });
+                            MessageBox.Show("Item excluído com sucesso!");
+                            CarregarGridSaida();
+                            txtGerarId.Text = Convert.ToString(null);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+        }
+
+        private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -485,6 +553,11 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             if (txtMaterial.Text == "")
             {
                 MessageBox.Show("Informe o material");
+            }
+
+            if (txtUnidadeMedida.Text == "")
+            {
+                MessageBox.Show("Informe a unidade de medida");
             }
             return true;
         }
@@ -498,7 +571,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             txtGerarId.Clear();
             CarregarGridSaida();
         }
-        private void CadastrarSaida()
+        private void CalcularSaida()
         {
             try
             {
