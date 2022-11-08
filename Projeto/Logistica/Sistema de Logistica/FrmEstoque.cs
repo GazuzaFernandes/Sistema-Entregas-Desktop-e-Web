@@ -548,6 +548,11 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
         }
 
+        private void txtCalcularSaida_TextChanged_1(object sender, EventArgs e)
+        {
+            CalcularSaida();
+        }
+
         private bool Validarcampos()
         {
             if (txtMaterial.Text == "")
@@ -579,9 +584,9 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 decimal subtracaoo = 0, totall = 0;
                 if (decimal.TryParse(txtCalcularSaida.Text, out subtracaoo))
                 {
-                    if (decimal.TryParse(txtTotalEstoqueSaida.Text, out subtracaoo))
+                    if (decimal.TryParse(txtTotalEstoqueSaida.Text, out totall))
                     {
-                        totall = subtracaoo - totall;
+                        totall = totall - subtracaoo;
                     }
                     txtTotalEstoqueSaida.Text = totall.ToString("N2");
                 }

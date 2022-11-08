@@ -388,7 +388,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(500, 159);
+            this.label6.Location = new System.Drawing.Point(414, 161);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 31);
             this.label6.TabIndex = 52;
@@ -399,7 +399,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(134, 159);
+            this.label3.Location = new System.Drawing.Point(134, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 31);
             this.label3.TabIndex = 52;
@@ -420,7 +420,7 @@
             // 
             this.txtQuantidade.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtQuantidade.Enabled = false;
-            this.txtQuantidade.Location = new System.Drawing.Point(566, 157);
+            this.txtQuantidade.Location = new System.Drawing.Point(480, 159);
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(100, 34);
             this.txtQuantidade.TabIndex = 17;
@@ -430,9 +430,9 @@
             // 
             this.txtUndMedida.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUndMedida.Enabled = false;
-            this.txtUndMedida.Location = new System.Drawing.Point(292, 157);
+            this.txtUndMedida.Location = new System.Drawing.Point(292, 159);
             this.txtUndMedida.Name = "txtUndMedida";
-            this.txtUndMedida.Size = new System.Drawing.Size(173, 34);
+            this.txtUndMedida.Size = new System.Drawing.Size(101, 34);
             this.txtUndMedida.TabIndex = 17;
             // 
             // txtMaterialSaida
@@ -441,7 +441,7 @@
             this.txtMaterialSaida.Enabled = false;
             this.txtMaterialSaida.Location = new System.Drawing.Point(208, 90);
             this.txtMaterialSaida.Name = "txtMaterialSaida";
-            this.txtMaterialSaida.Size = new System.Drawing.Size(458, 34);
+            this.txtMaterialSaida.Size = new System.Drawing.Size(525, 34);
             this.txtMaterialSaida.TabIndex = 17;
             // 
             // txtSaidaId
@@ -465,7 +465,7 @@
             // btnPesquisarMaterial
             // 
             this.btnPesquisarMaterial.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisarMaterial.Image")));
-            this.btnPesquisarMaterial.Location = new System.Drawing.Point(672, 88);
+            this.btnPesquisarMaterial.Location = new System.Drawing.Point(739, 88);
             this.btnPesquisarMaterial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPesquisarMaterial.Name = "btnPesquisarMaterial";
             this.btnPesquisarMaterial.Size = new System.Drawing.Size(38, 38);

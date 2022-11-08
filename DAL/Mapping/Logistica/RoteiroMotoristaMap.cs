@@ -14,9 +14,9 @@ namespace DAL.Mapping.Logistica
         public RoteiroMotoristaMap()
         {
             Id(p => p.RoteiroId).GeneratedBy.Sequence("roteiromotorista_seq");
-            Map(p => p.Proposta);
-            Map(p => p.Obra);
             Map(p => p.DataEntrada);
+            Map(p => p.Proposta);
+            Map(p => p.Obra);         
             Map(p => p.Funcionario);
             Table("roteiromotorista");
         }
