@@ -591,6 +591,24 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }
+        } 
+  
+        private void txtSaidaEstoque_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                CalcularSaida();
+                txtSaidaEstoque.Enabled = false;
+            }
+        }
+
+        private void txtEntradaEstoque_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                CalcularEntrada();
+                txtEntradaEstoque.Enabled = false;
+            }
         }
     }
 }

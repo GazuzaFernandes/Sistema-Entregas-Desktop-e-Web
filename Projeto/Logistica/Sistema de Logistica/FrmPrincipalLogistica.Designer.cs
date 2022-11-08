@@ -42,6 +42,7 @@ namespace Logistica.Sistema_de_Logistica
             this.msRoteiro = new System.Windows.Forms.ToolStripMenuItem();
             this.estoqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entradaEstoqueMadeirasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.msEstoqueProduto = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -188,7 +189,6 @@ namespace Logistica.Sistema_de_Logistica
             this.label49 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
-            this.msEstoqueProduto = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -216,7 +216,7 @@ namespace Logistica.Sistema_de_Logistica
             this.menuStrip1.Location = new System.Drawing.Point(6, 6);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(157, 208);
+            this.menuStrip1.Size = new System.Drawing.Size(157, 215);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -293,8 +293,8 @@ namespace Logistica.Sistema_de_Logistica
             // msRoteiro
             // 
             this.msRoteiro.Name = "msRoteiro";
-            this.msRoteiro.Size = new System.Drawing.Size(375, 36);
-            this.msRoteiro.Text = "Saida do Roteiro Motorista";
+            this.msRoteiro.Size = new System.Drawing.Size(280, 36);
+            this.msRoteiro.Text = "Roteiro Motorista";
             this.msRoteiro.Click += new System.EventHandler(this.msRoteiro_Click);
             // 
             // estoqueToolStripMenuItem
@@ -312,6 +312,13 @@ namespace Logistica.Sistema_de_Logistica
             this.entradaEstoqueMadeirasToolStripMenuItem1.Size = new System.Drawing.Size(285, 36);
             this.entradaEstoqueMadeirasToolStripMenuItem1.Text = "Estoque Madeiras";
             this.entradaEstoqueMadeirasToolStripMenuItem1.Click += new System.EventHandler(this.entradaEstoqueMadeirasToolStripMenuItem1_Click);
+            // 
+            // msEstoqueProduto
+            // 
+            this.msEstoqueProduto.Name = "msEstoqueProduto";
+            this.msEstoqueProduto.Size = new System.Drawing.Size(285, 36);
+            this.msEstoqueProduto.Text = "Estoque Produtos";
+            this.msEstoqueProduto.Click += new System.EventHandler(this.msEstoqueProduto_Click);
             // 
             // panel1
             // 
@@ -2087,13 +2094,6 @@ namespace Logistica.Sistema_de_Logistica
             this.label47.Size = new System.Drawing.Size(446, 32);
             this.label47.TabIndex = 75;
             this.label47.Text = "PRESILHAS DE ALUMINIO PARA DECK";
-            // 
-            // msEstoqueProduto
-            // 
-            this.msEstoqueProduto.Name = "msEstoqueProduto";
-            this.msEstoqueProduto.Size = new System.Drawing.Size(285, 36);
-            this.msEstoqueProduto.Text = "Estoque Produtos";
-            this.msEstoqueProduto.Click += new System.EventHandler(this.msEstoqueProduto_Click);
             // 
             // FrmPrincipalLogistica
             // 

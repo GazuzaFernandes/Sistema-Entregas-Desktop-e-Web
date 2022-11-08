@@ -198,7 +198,7 @@
             this.txtSaidaEstoque.Size = new System.Drawing.Size(67, 38);
             this.txtSaidaEstoque.TabIndex = 35;
             this.txtSaidaEstoque.Text = "0";
-            this.txtSaidaEstoque.TextChanged += new System.EventHandler(this.txtSaidaEstoque_TextChanged);
+            this.txtSaidaEstoque.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSaidaEstoque_KeyPress);
             // 
             // txtMaterialSaida
             // 
@@ -501,13 +501,15 @@
             // 
             // txtEntradaEstoque
             // 
+            this.txtEntradaEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtEntradaEstoque.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEntradaEstoque.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtEntradaEstoque.ForeColor = System.Drawing.Color.Red;
             this.txtEntradaEstoque.Location = new System.Drawing.Point(951, 84);
             this.txtEntradaEstoque.Name = "txtEntradaEstoque";
             this.txtEntradaEstoque.Size = new System.Drawing.Size(106, 38);
             this.txtEntradaEstoque.TabIndex = 43;
-            this.txtEntradaEstoque.TextChanged += new System.EventHandler(this.txtEntradaEstoque_TextChanged);
+            this.txtEntradaEstoque.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEntradaEstoque_KeyPress_1);
             // 
             // label12
             // 

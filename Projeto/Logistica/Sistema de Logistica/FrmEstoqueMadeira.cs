@@ -40,6 +40,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 {
                     rbEntrada.Checked = true;
                     CalcularEntradaEstoque();
+                    txtEntradaMetroLinear.Enabled = false;
                 }               
             }
         }
@@ -292,10 +293,10 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 if (txtCalcularSaida.Text != null)
                 {
                     rbSaida.Checked = true;
-                }
-                CalcularSaidaMaterial();
+                    CalcularSaidaMaterial();
+                    txtCalcularSaida.Enabled = false;
+                }              
             }
-
         }
 
         private void txtMaterialSaida_TextChanged(object sender, EventArgs e)

@@ -219,6 +219,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             LimparCamposItens();
+            CarregarGridMaterial();
         }
 
         private void btnDeletarItens_Click(object sender, EventArgs e)
@@ -299,11 +300,11 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 dgvSaidaMaterial.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 20F, GraphicsUnit.Pixel);
                 var objBlControleGrid = new ControleGrid(dgvSaidaMaterial);
                 //Define quais colunas serão visíveis
-                objBlControleGrid.DefinirVisibilidade(new List<string>() { "Material", "UndMedida", "QtdCaixas", "QtdSaida", });
+                objBlControleGrid.DefinirVisibilidade(new List<string>() { "Material", "UndMedida", "QtdCaixas"});
                 //Define quais os cabeçalhos respectivos das colunas 
-                objBlControleGrid.DefinirCabecalhos(new List<string>() { "Material", "Unidade Medida", "Qtd Saida", "Qtd Caixa" });
+                objBlControleGrid.DefinirCabecalhos(new List<string>() { "Material", "Unidade Medida", "Qtd Saida" });
                 //Define quais as larguras respectivas das colunas 
-                objBlControleGrid.DefinirLarguras(new List<int>() { 35, 20, 20, 20 }, dgvSaidaMaterial.Width - 25); //O total tem que ficar em 100% 
+                objBlControleGrid.DefinirLarguras(new List<int>() { 55, 20, 20 }, dgvSaidaMaterial.Width - 25); //O total tem que ficar em 100% 
                 //Define quais os alinhamentos respectivos do componentes das colunas 
                 objBlControleGrid.DefinirAlinhamento(new List<string>() { "centro", "centro", "centro", "centro", "centro", "centro", "centro", });
                 //Define a altura das linhas respectivas da Grid 
@@ -413,9 +414,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             btnLimparEntrada.Enabled = hab;
             btnDeletar.Enabled = hab;         
             txtCodigoInfomacao.Enabled = hab;
-            btnPesquisarMaterial.Enabled = hab;
-            txtUndMedida.Enabled = hab;
-            txtQuantidade.Enabled = hab;
+            btnPesquisarMaterial.Enabled = hab;          
             btnInserir.Enabled = hab;
             btnLimpar.Enabled = hab;
             btnDeletarItens.Enabled = hab;
