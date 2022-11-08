@@ -486,6 +486,7 @@
             this.txtCalcularSaida.Size = new System.Drawing.Size(98, 38);
             this.txtCalcularSaida.TabIndex = 32;
             this.txtCalcularSaida.Text = "0";
+            this.txtCalcularSaida.TextChanged += new System.EventHandler(this.txtCalcularSaida_TextChanged_1);
             this.txtCalcularSaida.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCalcularSaida_KeyPress);
             // 
             // txtMedidaSaida
