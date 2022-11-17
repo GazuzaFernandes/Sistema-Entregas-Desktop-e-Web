@@ -314,7 +314,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             txtUnidadeMedida.Enabled = habilitar;
             txtCalcularSaida.Enabled = habilitar;
             btnDeletar.Enabled = habilitar;
-            btnInserir.Enabled = habilitar;
+            
             btnLimparEntrada.Enabled = habilitar;
             btnLimparSaida.Enabled = habilitar;
             btnSalvar.Enabled = habilitar;
@@ -480,6 +480,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             {
                 CalcularSaida();
                 txtCalcularSaida.Enabled = false;
+                btnInserir.Enabled = true;
             }
         }
 

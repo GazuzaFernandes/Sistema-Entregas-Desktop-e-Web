@@ -599,6 +599,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
             {
                 CalcularSaida();
                 txtSaidaEstoque.Enabled = false;
+                btnInserir.Enabled = true;
             }
         }
 

@@ -398,6 +398,7 @@
             this.txtDataId.Name = "txtDataId";
             this.txtDataId.Size = new System.Drawing.Size(40, 38);
             this.txtDataId.TabIndex = 44;
+            this.txtDataId.Visible = false;
             // 
             // txtIdEntrada
             // 
@@ -495,6 +496,7 @@
             this.txtMetroEntrada.Name = "txtMetroEntrada";
             this.txtMetroEntrada.Size = new System.Drawing.Size(73, 38);
             this.txtMetroEntrada.TabIndex = 43;
+            this.txtMetroEntrada.Text = "0";
             this.txtMetroEntrada.TextChanged += new System.EventHandler(this.txtMetroEntrada_TextChanged);
             // 
             // label12
@@ -731,6 +733,7 @@
             this.txtTotalM2Saida.Name = "txtTotalM2Saida";
             this.txtTotalM2Saida.Size = new System.Drawing.Size(92, 38);
             this.txtTotalM2Saida.TabIndex = 43;
+            this.txtTotalM2Saida.TextChanged += new System.EventHandler(this.txtTotalM2Saida_TextChanged);
             // 
             // dgvSaidaMaterial
             // 
@@ -751,6 +754,7 @@
             // 
             // btnBaixarEstoque
             // 
+            this.btnBaixarEstoque.Enabled = false;
             this.btnBaixarEstoque.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnBaixarEstoque.ForeColor = System.Drawing.Color.Black;
             this.btnBaixarEstoque.Image = ((System.Drawing.Image)(resources.GetObject("btnBaixarEstoque.Image")));
@@ -867,6 +871,7 @@
             this.txtCalcularSaida.Name = "txtCalcularSaida";
             this.txtCalcularSaida.Size = new System.Drawing.Size(88, 38);
             this.txtCalcularSaida.TabIndex = 59;
+            this.txtCalcularSaida.Text = "0";
             this.txtCalcularSaida.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCalcularSaida_KeyPress);
             // 
             // rbSaida
@@ -1029,6 +1034,7 @@
             this.txtMaterialSaida.Name = "txtMaterialSaida";
             this.txtMaterialSaida.Size = new System.Drawing.Size(612, 38);
             this.txtMaterialSaida.TabIndex = 55;
+            this.txtMaterialSaida.TextChanged += new System.EventHandler(this.txtMaterialSaida_TextChanged_1);
             // 
             // label15
             // 

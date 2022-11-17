@@ -442,6 +442,7 @@
             // 
             // btnInserir
             // 
+            this.btnInserir.Enabled = false;
             this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnInserir.ForeColor = System.Drawing.Color.Black;
             this.btnInserir.Image = ((System.Drawing.Image)(resources.GetObject("btnInserir.Image")));
@@ -486,7 +487,6 @@
             this.txtCalcularSaida.Size = new System.Drawing.Size(98, 38);
             this.txtCalcularSaida.TabIndex = 32;
             this.txtCalcularSaida.Text = "0";
-            this.txtCalcularSaida.TextChanged += new System.EventHandler(this.txtCalcularSaida_TextChanged_1);
             this.txtCalcularSaida.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCalcularSaida_KeyPress);
             // 
             // txtMedidaSaida

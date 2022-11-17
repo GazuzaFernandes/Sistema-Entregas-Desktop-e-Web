@@ -190,6 +190,7 @@
             // 
             // txtSaidaEstoque
             // 
+            this.txtSaidaEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtSaidaEstoque.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSaidaEstoque.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtSaidaEstoque.ForeColor = System.Drawing.Color.Red;

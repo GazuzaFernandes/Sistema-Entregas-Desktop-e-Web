@@ -82,7 +82,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(923, 704);
+            this.tabControl1.Size = new System.Drawing.Size(972, 818);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -109,7 +109,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 40);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(915, 660);
+            this.tabPage1.Size = new System.Drawing.Size(964, 774);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Informações da obra";
             // 
@@ -313,13 +313,13 @@
             this.dgvRoteiroMotorista.BackgroundColor = System.Drawing.Color.White;
             this.dgvRoteiroMotorista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRoteiroMotorista.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvRoteiroMotorista.Location = new System.Drawing.Point(3, 362);
+            this.dgvRoteiroMotorista.Location = new System.Drawing.Point(3, 364);
             this.dgvRoteiroMotorista.Name = "dgvRoteiroMotorista";
             this.dgvRoteiroMotorista.ReadOnly = true;
             this.dgvRoteiroMotorista.RowHeadersWidth = 51;
             this.dgvRoteiroMotorista.RowTemplate.Height = 29;
             this.dgvRoteiroMotorista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRoteiroMotorista.Size = new System.Drawing.Size(909, 295);
+            this.dgvRoteiroMotorista.Size = new System.Drawing.Size(958, 407);
             this.dgvRoteiroMotorista.TabIndex = 0;
             this.dgvRoteiroMotorista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRoteiroMotorista_CellDoubleClick);
             // 
@@ -343,7 +343,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 40);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(915, 660);
+            this.tabPage2.Size = new System.Drawing.Size(964, 774);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Saida de material para obra.";
             // 
@@ -448,6 +448,7 @@
             // 
             this.txtSaidaId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtSaidaId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtSaidaId.Enabled = false;
             this.txtSaidaId.Location = new System.Drawing.Point(8, 15);
             this.txtSaidaId.Name = "txtSaidaId";
             this.txtSaidaId.Size = new System.Drawing.Size(62, 34);
@@ -490,13 +491,13 @@
             this.dgvSaidaMaterial.BackgroundColor = System.Drawing.Color.White;
             this.dgvSaidaMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSaidaMaterial.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvSaidaMaterial.Location = new System.Drawing.Point(3, 313);
+            this.dgvSaidaMaterial.Location = new System.Drawing.Point(3, 318);
             this.dgvSaidaMaterial.Name = "dgvSaidaMaterial";
             this.dgvSaidaMaterial.ReadOnly = true;
             this.dgvSaidaMaterial.RowHeadersWidth = 51;
             this.dgvSaidaMaterial.RowTemplate.Height = 29;
             this.dgvSaidaMaterial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSaidaMaterial.Size = new System.Drawing.Size(909, 344);
+            this.dgvSaidaMaterial.Size = new System.Drawing.Size(958, 453);
             this.dgvSaidaMaterial.TabIndex = 1;
             this.dgvSaidaMaterial.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSaidaMaterial_CellDoubleClick);
             // 
@@ -507,7 +508,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(923, 704);
+            this.ClientSize = new System.Drawing.Size(972, 818);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

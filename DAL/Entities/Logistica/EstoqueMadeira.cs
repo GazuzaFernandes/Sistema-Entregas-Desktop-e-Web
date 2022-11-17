@@ -15,6 +15,7 @@ namespace DAL.Entities.Logistica
         public virtual decimal MetroLinear { get; set; }
         public virtual decimal MetroQuadrado { get; set; }
         public virtual decimal MetroCubico { get; set; }
+        public virtual string? observacao { get; set; }
 
     }
 }

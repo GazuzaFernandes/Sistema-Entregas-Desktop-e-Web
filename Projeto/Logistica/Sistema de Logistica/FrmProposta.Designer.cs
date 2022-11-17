@@ -546,11 +546,11 @@
             // 
             this.btnGerarId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGerarId.ForeColor = System.Drawing.Color.Red;
-            this.btnGerarId.Location = new System.Drawing.Point(134, 26);
+            this.btnGerarId.Location = new System.Drawing.Point(23, 29);
             this.btnGerarId.Name = "btnGerarId";
-            this.btnGerarId.Size = new System.Drawing.Size(97, 38);
+            this.btnGerarId.Size = new System.Drawing.Size(233, 38);
             this.btnGerarId.TabIndex = 2;
-            this.btnGerarId.Text = "Gerar ID";
+            this.btnGerarId.Text = "Gerar Proposta";
             this.btnGerarId.UseVisualStyleBackColor = true;
             this.btnGerarId.Click += new System.EventHandler(this.btnGerarId_Click);
             // 
@@ -597,10 +597,11 @@
             // 
             this.txtPropostId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtPropostId.Enabled = false;
-            this.txtPropostId.Location = new System.Drawing.Point(31, 26);
+            this.txtPropostId.Location = new System.Drawing.Point(1306, 470);
             this.txtPropostId.Name = "txtPropostId";
             this.txtPropostId.Size = new System.Drawing.Size(97, 38);
             this.txtPropostId.TabIndex = 1;
+            this.txtPropostId.Visible = false;
             // 
             // laberNotaFiscal
             // 
@@ -1004,6 +1005,7 @@
             this.txtItensPropostaId.Name = "txtItensPropostaId";
             this.txtItensPropostaId.Size = new System.Drawing.Size(62, 38);
             this.txtItensPropostaId.TabIndex = 14;
+            this.txtItensPropostaId.Visible = false;
             // 
             // label22
             // 

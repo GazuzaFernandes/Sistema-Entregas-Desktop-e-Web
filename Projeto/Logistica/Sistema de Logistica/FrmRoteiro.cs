@@ -255,11 +255,11 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 var itensControle = dgvSaidaMaterial.Rows[e.RowIndex].DataBoundItem as ItenRoteiroMotorista;
                 if (itensControle != null)
                 {
-                    txtSaidaId.Text = itensControle.RoteiroId.ToString();
+                    txtSaidaId.Text = itensControle.ItensRoteiroId.ToString();
                     txtCodigoInfomacao.Text = itensControle.Codigo.ToString();
                     txtMaterialSaida.Text = itensControle.Material;
                     txtUndMedida.Text = itensControle.UndMedida;
-                    txtQuantidade.Text = Convert.ToString(itensControle.QtdSaida);
+                    txtQuantidade.Text = Convert.ToString(itensControle.QtdCaixas);
                 }
                 HabilitarBotao(true);
             }

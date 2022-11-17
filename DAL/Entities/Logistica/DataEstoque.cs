@@ -13,7 +13,7 @@ namespace DAL.Entities.Logistica
         public virtual DateTime? Entrada { get; set; }
         public virtual decimal MetroQuadrado { get; set; }
         public virtual int EstoqueId { get; set; }
-        public virtual string? observacao { get; set; }
+        public virtual string? Observacao { get; set; }
         public virtual int StatusObraId { get; set; }
     }
 }

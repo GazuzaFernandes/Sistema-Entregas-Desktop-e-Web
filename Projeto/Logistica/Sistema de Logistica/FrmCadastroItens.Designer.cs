@@ -715,7 +715,7 @@
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(244, 168);
             this.label19.TabIndex = 5;
-            this.label19.Text = "7X160X305-1220 - 2,73m²\r\n\r\n7X76X305-1220 - 3,06m²\r\n\r\n7X127X305-1220 - 2,63m²\r\n\r\n";
+            this.label19.Text = "7X160X305-1220 - 3,51m²\r\n\r\n7X76X305-1220 - 3,06m²\r\n\r\n7X127X305-1220 - 2,63m²\r\n\r\n";
             // 
             // label20
             // 
