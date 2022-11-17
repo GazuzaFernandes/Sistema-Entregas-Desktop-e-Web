@@ -51,7 +51,7 @@
             this.btnDeletar.ForeColor = System.Drawing.Color.Black;
             this.btnDeletar.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletar.Image")));
             this.btnDeletar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeletar.Location = new System.Drawing.Point(318, 202);
+            this.btnDeletar.Location = new System.Drawing.Point(395, 184);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(165, 66);
             this.btnDeletar.TabIndex = 55;
@@ -65,7 +65,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(72, 127);
+            this.label1.Location = new System.Drawing.Point(149, 109);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 38);
             this.label1.TabIndex = 53;
@@ -76,7 +76,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(65, 32);
+            this.label2.Location = new System.Drawing.Point(142, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(478, 38);
             this.label2.TabIndex = 54;
@@ -88,7 +88,7 @@
             this.btnSalvar.ForeColor = System.Drawing.Color.Black;
             this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(74, 202);
+            this.btnSalvar.Location = new System.Drawing.Point(151, 184);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(165, 66);
@@ -102,7 +102,7 @@
             // 
             this.txtTotal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTotal.Location = new System.Drawing.Point(455, 129);
+            this.txtTotal.Location = new System.Drawing.Point(532, 111);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(117, 34);
@@ -112,7 +112,7 @@
             // 
             this.txtAmostra.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAmostra.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtAmostra.Location = new System.Drawing.Point(74, 74);
+            this.txtAmostra.Location = new System.Drawing.Point(151, 56);
             this.txtAmostra.Margin = new System.Windows.Forms.Padding(4);
             this.txtAmostra.Name = "txtAmostra";
             this.txtAmostra.Size = new System.Drawing.Size(704, 34);
@@ -124,7 +124,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(359, 127);
+            this.label3.Location = new System.Drawing.Point(436, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 38);
             this.label3.TabIndex = 53;
@@ -134,7 +134,7 @@
             // 
             this.txtEntrada.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEntrada.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtEntrada.Location = new System.Drawing.Point(205, 129);
+            this.txtEntrada.Location = new System.Drawing.Point(282, 111);
             this.txtEntrada.Margin = new System.Windows.Forms.Padding(4);
             this.txtEntrada.Name = "txtEntrada";
             this.txtEntrada.Size = new System.Drawing.Size(117, 34);
@@ -151,6 +151,7 @@
             this.txtEstoqueId.Name = "txtEstoqueId";
             this.txtEstoqueId.Size = new System.Drawing.Size(42, 34);
             this.txtEstoqueId.TabIndex = 56;
+            this.txtEstoqueId.Visible = false;
             // 
             // btnLimpar
             // 
@@ -158,7 +159,7 @@
             this.btnLimpar.ForeColor = System.Drawing.Color.Black;
             this.btnLimpar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpar.Image")));
             this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpar.Location = new System.Drawing.Point(537, 202);
+            this.btnLimpar.Location = new System.Drawing.Point(614, 184);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(165, 66);
             this.btnLimpar.TabIndex = 55;
@@ -174,20 +175,20 @@
             this.dgvEstoqueAmostra.BackgroundColor = System.Drawing.Color.White;
             this.dgvEstoqueAmostra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEstoqueAmostra.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvEstoqueAmostra.Location = new System.Drawing.Point(0, 324);
+            this.dgvEstoqueAmostra.Location = new System.Drawing.Point(0, 294);
             this.dgvEstoqueAmostra.Name = "dgvEstoqueAmostra";
             this.dgvEstoqueAmostra.ReadOnly = true;
             this.dgvEstoqueAmostra.RowHeadersWidth = 51;
             this.dgvEstoqueAmostra.RowTemplate.Height = 29;
             this.dgvEstoqueAmostra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEstoqueAmostra.Size = new System.Drawing.Size(1032, 402);
+            this.dgvEstoqueAmostra.Size = new System.Drawing.Size(1032, 432);
             this.dgvEstoqueAmostra.TabIndex = 57;
             this.dgvEstoqueAmostra.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstoqueAmostra_CellDoubleClick);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(894, 148);
+            this.pictureBox1.Location = new System.Drawing.Point(894, 130);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(125, 120);

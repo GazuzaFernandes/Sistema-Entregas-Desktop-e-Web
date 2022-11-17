@@ -299,11 +299,11 @@
             // 
             this.btnGerarId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGerarId.ForeColor = System.Drawing.Color.Red;
-            this.btnGerarId.Location = new System.Drawing.Point(916, 15);
+            this.btnGerarId.Location = new System.Drawing.Point(870, 15);
             this.btnGerarId.Name = "btnGerarId";
-            this.btnGerarId.Size = new System.Drawing.Size(97, 38);
+            this.btnGerarId.Size = new System.Drawing.Size(143, 73);
             this.btnGerarId.TabIndex = 39;
-            this.btnGerarId.Text = "Gerar ID";
+            this.btnGerarId.Text = "Entrada de Material";
             this.btnGerarId.UseVisualStyleBackColor = true;
             this.btnGerarId.Click += new System.EventHandler(this.btnGerarId_Click);
             // 
@@ -311,10 +311,11 @@
             // 
             this.txtGerarId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtGerarId.Enabled = false;
-            this.txtGerarId.Location = new System.Drawing.Point(813, 15);
+            this.txtGerarId.Location = new System.Drawing.Point(736, 539);
             this.txtGerarId.Name = "txtGerarId";
             this.txtGerarId.Size = new System.Drawing.Size(97, 38);
             this.txtGerarId.TabIndex = 38;
+            this.txtGerarId.Visible = false;
             // 
             // btnDeletar
             // 
@@ -351,9 +352,9 @@
             this.txtDataId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtDataId.Enabled = false;
             this.txtDataId.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDataId.Location = new System.Drawing.Point(51, 571);
+            this.txtDataId.Location = new System.Drawing.Point(736, 281);
             this.txtDataId.Name = "txtDataId";
-            this.txtDataId.Size = new System.Drawing.Size(51, 27);
+            this.txtDataId.Size = new System.Drawing.Size(72, 27);
             this.txtDataId.TabIndex = 38;
             this.txtDataId.Visible = false;
             // 
@@ -431,7 +432,7 @@
             this.btnLimparSaida.ForeColor = System.Drawing.Color.Black;
             this.btnLimparSaida.Image = ((System.Drawing.Image)(resources.GetObject("btnLimparSaida.Image")));
             this.btnLimparSaida.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimparSaida.Location = new System.Drawing.Point(452, 165);
+            this.btnLimparSaida.Location = new System.Drawing.Point(617, 165);
             this.btnLimparSaida.Name = "btnLimparSaida";
             this.btnLimparSaida.Size = new System.Drawing.Size(130, 62);
             this.btnLimparSaida.TabIndex = 33;
@@ -447,7 +448,7 @@
             this.btnInserir.ForeColor = System.Drawing.Color.Black;
             this.btnInserir.Image = ((System.Drawing.Image)(resources.GetObject("btnInserir.Image")));
             this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInserir.Location = new System.Drawing.Point(267, 165);
+            this.btnInserir.Location = new System.Drawing.Point(432, 165);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(122, 62);
             this.btnInserir.TabIndex = 36;
@@ -466,6 +467,7 @@
             this.txtCodigoMaterial.Name = "txtCodigoMaterial";
             this.txtCodigoMaterial.Size = new System.Drawing.Size(62, 38);
             this.txtCodigoMaterial.TabIndex = 31;
+            this.txtCodigoMaterial.Visible = false;
             // 
             // txtTotalEstoqueSaida
             // 

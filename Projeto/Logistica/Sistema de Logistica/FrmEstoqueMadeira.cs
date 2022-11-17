@@ -609,7 +609,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             //Define quais colunas serão visíveis
             objBlControleGrid.DefinirVisibilidade(new List<string>() { "Saida", "Entrada", "MetroQuadrado" });
             //Define quais os cabeçalhos respectivos das colunas 
-            objBlControleGrid.DefinirCabecalhos(new List<string>() { "Data Saida", "Data Entrada", "M2" });
+            objBlControleGrid.DefinirCabecalhos(new List<string>() { "Data Saida", "Data Entrada", "ML" });
             //Define quais as larguras respectivas das colunas 
             objBlControleGrid.DefinirLarguras(new List<int>() { 35, 38, 19 }, dgvData.Width - 20); //O total tem que ficar em 100% 
                                                                                                    //Define quais os alinhamentos respectivos do componentes das colunas 
@@ -628,7 +628,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 if (id == 0)
                 {
                     saida.Saida = dtpSaida.Value;
-                    saida.MetroQuadrado = Convert.ToDecimal(txtTotalM2Saida.Text);
+                    saida.MetroQuadrado = Convert.ToDecimal(txtMetroSaida.Text);
                     saida.EstoqueId = Convert.ToInt32(txtIdSaida.Text);
                     saida.Observacao = rtbSaida.Text;
                     if (rbSaida.Checked == true)

@@ -72,6 +72,7 @@
             this.txtClienteId.Name = "txtClienteId";
             this.txtClienteId.Size = new System.Drawing.Size(59, 38);
             this.txtClienteId.TabIndex = 27;
+            this.txtClienteId.Visible = false;
             // 
             // dgvCliente
             // 

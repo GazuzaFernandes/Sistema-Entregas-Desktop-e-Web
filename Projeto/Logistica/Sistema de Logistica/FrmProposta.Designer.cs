@@ -1149,10 +1149,11 @@
             this.txtIdHistorico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtIdHistorico.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIdHistorico.Enabled = false;
-            this.txtIdHistorico.Location = new System.Drawing.Point(444, 22);
+            this.txtIdHistorico.Location = new System.Drawing.Point(8, 21);
             this.txtIdHistorico.Name = "txtIdHistorico";
             this.txtIdHistorico.Size = new System.Drawing.Size(62, 38);
             this.txtIdHistorico.TabIndex = 17;
+            this.txtIdHistorico.Visible = false;
             // 
             // panel2
             // 
