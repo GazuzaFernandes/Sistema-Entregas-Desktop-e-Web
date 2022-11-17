@@ -150,6 +150,7 @@
             this.txtCodigoId.Name = "txtCodigoId";
             this.txtCodigoId.Size = new System.Drawing.Size(62, 38);
             this.txtCodigoId.TabIndex = 17;
+            this.txtCodigoId.Visible = false;
             // 
             // pictureBox1
             // 

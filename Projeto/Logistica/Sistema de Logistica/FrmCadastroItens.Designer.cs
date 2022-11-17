@@ -230,6 +230,7 @@
             this.txtCodigoMaterial.Name = "txtCodigoMaterial";
             this.txtCodigoMaterial.Size = new System.Drawing.Size(62, 38);
             this.txtCodigoMaterial.TabIndex = 22;
+            this.txtCodigoMaterial.Visible = false;
             // 
             // txtQuantidadeCaixas
             // 

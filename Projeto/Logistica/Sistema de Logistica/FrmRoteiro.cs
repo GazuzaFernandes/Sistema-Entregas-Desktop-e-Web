@@ -136,6 +136,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     txtProposta.Text = saidaRoteiro.Proposta;
                     txtObra.Text = saidaRoteiro.Obra;
                     txtFuncionario.Text = saidaRoteiro.Funcionario;
+                    dtpDataSaida.Value = saidaRoteiro.DataEntrada;
                 }
                 HabilitarBotao(true);
                 ListarGridData();
@@ -344,7 +345,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                 //Define quais colunas serão visíveis
                 objBlControleGrid.DefinirVisibilidade(new List<string>() { "DataEntrada", "Proposta", "Obra", "Funcionario" });
                 //Define quais os cabeçalhos respectivos das colunas 
-                objBlControleGrid.DefinirCabecalhos(new List<string>() { "Data de Saida", "Proposta", "Obra", "Funcionario na Obra" });
+                objBlControleGrid.DefinirCabecalhos(new List<string>() { "Data de Saida", "Proposta", "Obra", "Solicitado" });
                 //Define quais as larguras respectivas das colunas 
                 objBlControleGrid.DefinirLarguras(new List<int>() { 20, 20, 35, 20 }, dgvRoteiroMotorista.Width - 15); //O total tem que ficar em 100% 
                 //Define quais os alinhamentos respectivos do componentes das colunas 

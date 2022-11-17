@@ -133,6 +133,7 @@
             this.txtFerramentaId.Name = "txtFerramentaId";
             this.txtFerramentaId.Size = new System.Drawing.Size(62, 38);
             this.txtFerramentaId.TabIndex = 31;
+            this.txtFerramentaId.Visible = false;
             // 
             // txtNome
             // 

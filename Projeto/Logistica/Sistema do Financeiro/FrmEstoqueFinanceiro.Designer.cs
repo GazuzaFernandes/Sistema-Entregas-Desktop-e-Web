@@ -165,6 +165,7 @@
             this.txtIdSaida.Name = "txtIdSaida";
             this.txtIdSaida.Size = new System.Drawing.Size(59, 38);
             this.txtIdSaida.TabIndex = 36;
+            this.txtIdSaida.Visible = false;
             // 
             // txtTotalEstoqueSaida
             // 
@@ -441,11 +442,11 @@
             // 
             this.btnGerarId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGerarId.ForeColor = System.Drawing.Color.Red;
-            this.btnGerarId.Location = new System.Drawing.Point(118, 21);
+            this.btnGerarId.Location = new System.Drawing.Point(8, 23);
             this.btnGerarId.Name = "btnGerarId";
-            this.btnGerarId.Size = new System.Drawing.Size(97, 38);
+            this.btnGerarId.Size = new System.Drawing.Size(205, 38);
             this.btnGerarId.TabIndex = 45;
-            this.btnGerarId.Text = "Gerar ID";
+            this.btnGerarId.Text = "Adicionar Entrada";
             this.btnGerarId.UseVisualStyleBackColor = true;
             this.btnGerarId.Click += new System.EventHandler(this.btnGerarId_Click);
             // 
@@ -453,19 +454,21 @@
             // 
             this.txtDataId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtDataId.Enabled = false;
-            this.txtDataId.Location = new System.Drawing.Point(55, 222);
+            this.txtDataId.Location = new System.Drawing.Point(8, 506);
             this.txtDataId.Name = "txtDataId";
             this.txtDataId.Size = new System.Drawing.Size(47, 38);
             this.txtDataId.TabIndex = 44;
+            this.txtDataId.Visible = false;
             // 
             // txtIdEntrada
             // 
             this.txtIdEntrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtIdEntrada.Enabled = false;
-            this.txtIdEntrada.Location = new System.Drawing.Point(15, 21);
+            this.txtIdEntrada.Location = new System.Drawing.Point(8, 564);
             this.txtIdEntrada.Name = "txtIdEntrada";
-            this.txtIdEntrada.Size = new System.Drawing.Size(97, 38);
+            this.txtIdEntrada.Size = new System.Drawing.Size(50, 38);
             this.txtIdEntrada.TabIndex = 44;
+            this.txtIdEntrada.Visible = false;
             // 
             // txtTotalEntrada
             // 

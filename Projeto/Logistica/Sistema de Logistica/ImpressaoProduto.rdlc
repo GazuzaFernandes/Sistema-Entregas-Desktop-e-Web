@@ -122,6 +122,12 @@
                       <FontSize>16pt</FontSize>
                     </Style>
                   </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontSize>16pt</FontSize>
+                    </Style>
+                  </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
@@ -339,7 +345,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -409,7 +414,7 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>2.85in</Height>
+        <Height>4.61667in</Height>
         <Style />
       </Body>
       <Width>6.44759in</Width>

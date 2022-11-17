@@ -145,6 +145,7 @@
             this.txtAmostraId.Name = "txtAmostraId";
             this.txtAmostraId.Size = new System.Drawing.Size(82, 34);
             this.txtAmostraId.TabIndex = 40;
+            this.txtAmostraId.Visible = false;
             // 
             // label2
             // 

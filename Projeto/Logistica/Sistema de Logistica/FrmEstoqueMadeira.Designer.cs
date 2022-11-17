@@ -382,11 +382,11 @@
             // 
             this.btnGerarId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGerarId.ForeColor = System.Drawing.Color.Red;
-            this.btnGerarId.Location = new System.Drawing.Point(118, 21);
+            this.btnGerarId.Location = new System.Drawing.Point(24, 20);
             this.btnGerarId.Name = "btnGerarId";
-            this.btnGerarId.Size = new System.Drawing.Size(97, 38);
+            this.btnGerarId.Size = new System.Drawing.Size(215, 60);
             this.btnGerarId.TabIndex = 45;
-            this.btnGerarId.Text = "Liberar";
+            this.btnGerarId.Text = "Cadastrar Material";
             this.btnGerarId.UseVisualStyleBackColor = true;
             this.btnGerarId.Click += new System.EventHandler(this.btnGerarId_Click);
             // 
@@ -396,7 +396,7 @@
             this.txtDataId.Enabled = false;
             this.txtDataId.Location = new System.Drawing.Point(8, 330);
             this.txtDataId.Name = "txtDataId";
-            this.txtDataId.Size = new System.Drawing.Size(40, 38);
+            this.txtDataId.Size = new System.Drawing.Size(44, 38);
             this.txtDataId.TabIndex = 44;
             this.txtDataId.Visible = false;
             // 
@@ -404,10 +404,11 @@
             // 
             this.txtIdEntrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtIdEntrada.Enabled = false;
-            this.txtIdEntrada.Location = new System.Drawing.Point(15, 21);
+            this.txtIdEntrada.Location = new System.Drawing.Point(8, 386);
             this.txtIdEntrada.Name = "txtIdEntrada";
-            this.txtIdEntrada.Size = new System.Drawing.Size(97, 38);
+            this.txtIdEntrada.Size = new System.Drawing.Size(44, 38);
             this.txtIdEntrada.TabIndex = 44;
+            this.txtIdEntrada.Visible = false;
             // 
             // txtTotalM3Entrada
             // 
@@ -1088,6 +1089,7 @@
             this.txtIdSaida.Name = "txtIdSaida";
             this.txtIdSaida.Size = new System.Drawing.Size(59, 38);
             this.txtIdSaida.TabIndex = 36;
+            this.txtIdSaida.Visible = false;
             // 
             // FrmEstoqueMadeira
             // 

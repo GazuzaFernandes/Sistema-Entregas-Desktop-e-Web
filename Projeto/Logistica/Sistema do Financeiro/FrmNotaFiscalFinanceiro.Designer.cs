@@ -247,11 +247,11 @@
             // 
             this.btnGerarId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGerarId.ForeColor = System.Drawing.Color.Red;
-            this.btnGerarId.Location = new System.Drawing.Point(136, 19);
+            this.btnGerarId.Location = new System.Drawing.Point(49, 18);
             this.btnGerarId.Name = "btnGerarId";
-            this.btnGerarId.Size = new System.Drawing.Size(97, 38);
+            this.btnGerarId.Size = new System.Drawing.Size(185, 60);
             this.btnGerarId.TabIndex = 54;
-            this.btnGerarId.Text = "Gerar ID";
+            this.btnGerarId.Text = "Gerar Nota Fiscal";
             this.btnGerarId.UseVisualStyleBackColor = true;
             this.btnGerarId.Click += new System.EventHandler(this.btnGerarId_Click);
             // 
@@ -268,10 +268,11 @@
             // 
             this.txtGerarId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtGerarId.Enabled = false;
-            this.txtGerarId.Location = new System.Drawing.Point(24, 21);
+            this.txtGerarId.Location = new System.Drawing.Point(690, 441);
             this.txtGerarId.Name = "txtGerarId";
             this.txtGerarId.Size = new System.Drawing.Size(97, 34);
             this.txtGerarId.TabIndex = 53;
+            this.txtGerarId.Visible = false;
             // 
             // txtNotaFiscal
             // 
@@ -498,10 +499,11 @@
             this.txtIdMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtIdMaterial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIdMaterial.Enabled = false;
-            this.txtIdMaterial.Location = new System.Drawing.Point(8, 6);
+            this.txtIdMaterial.Location = new System.Drawing.Point(17, 219);
             this.txtIdMaterial.Name = "txtIdMaterial";
             this.txtIdMaterial.Size = new System.Drawing.Size(62, 38);
             this.txtIdMaterial.TabIndex = 63;
+            this.txtIdMaterial.Visible = false;
             // 
             // txtCodigoMaterial
             // 

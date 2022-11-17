@@ -158,11 +158,11 @@
             // 
             this.btnGerarId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGerarId.ForeColor = System.Drawing.Color.Red;
-            this.btnGerarId.Location = new System.Drawing.Point(115, 21);
+            this.btnGerarId.Location = new System.Drawing.Point(33, 8);
             this.btnGerarId.Name = "btnGerarId";
-            this.btnGerarId.Size = new System.Drawing.Size(97, 38);
+            this.btnGerarId.Size = new System.Drawing.Size(150, 67);
             this.btnGerarId.TabIndex = 20;
-            this.btnGerarId.Text = "Gerar ID";
+            this.btnGerarId.Text = "Adicionar Produto";
             this.btnGerarId.UseVisualStyleBackColor = true;
             this.btnGerarId.Click += new System.EventHandler(this.btnGerarId_Click);
             // 
@@ -171,10 +171,11 @@
             this.txtIdProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtIdProduto.Enabled = false;
             this.txtIdProduto.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtIdProduto.Location = new System.Drawing.Point(12, 21);
+            this.txtIdProduto.Location = new System.Drawing.Point(753, 14);
             this.txtIdProduto.Name = "txtIdProduto";
             this.txtIdProduto.Size = new System.Drawing.Size(97, 38);
             this.txtIdProduto.TabIndex = 19;
+            this.txtIdProduto.Visible = false;
             // 
             // label10
             // 
@@ -196,6 +197,7 @@
             this.txtDataId.Name = "txtDataId";
             this.txtDataId.Size = new System.Drawing.Size(49, 38);
             this.txtDataId.TabIndex = 19;
+            this.txtDataId.Visible = false;
             // 
             // dtpDataAtualizada
             // 

@@ -940,5 +940,16 @@ namespace Projeto.Logistica.Sistema_de_Logistica
 
         #endregion
 
+        private void dtpDataPedido_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpDataEntrega_ValueChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+     
     }
 }

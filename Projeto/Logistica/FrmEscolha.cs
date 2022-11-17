@@ -149,7 +149,7 @@ namespace Projeto
             try
             {
                   FunctionsDataBase.BackupDatabase(
-                                                    "192.168.0.202",
+                                                    "192.168.0.114",
                                                     "5432",
                                                     "postgres",
                                                     "q1s2e3f4t5",

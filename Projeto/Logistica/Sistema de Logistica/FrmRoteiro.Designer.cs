@@ -162,11 +162,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(28, 147);
+            this.label1.Location = new System.Drawing.Point(48, 143);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 31);
+            this.label1.Size = new System.Drawing.Size(128, 31);
             this.label1.TabIndex = 51;
-            this.label1.Text = "Funcionario:";
+            this.label1.Text = "Solicitado:";
             // 
             // txtPesquisar
             // 
@@ -244,11 +244,11 @@
             // 
             this.btnGerarId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGerarId.ForeColor = System.Drawing.Color.Red;
-            this.btnGerarId.Location = new System.Drawing.Point(752, 17);
+            this.btnGerarId.Location = new System.Drawing.Point(712, 17);
             this.btnGerarId.Name = "btnGerarId";
-            this.btnGerarId.Size = new System.Drawing.Size(97, 38);
+            this.btnGerarId.Size = new System.Drawing.Size(137, 52);
             this.btnGerarId.TabIndex = 50;
-            this.btnGerarId.Text = "Gerar ID";
+            this.btnGerarId.Text = "Gerar Roteiro";
             this.btnGerarId.UseVisualStyleBackColor = true;
             this.btnGerarId.Click += new System.EventHandler(this.btnGerarId_Click);
             // 
@@ -256,10 +256,11 @@
             // 
             this.txtIdObra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtIdObra.Enabled = false;
-            this.txtIdObra.Location = new System.Drawing.Point(649, 17);
+            this.txtIdObra.Location = new System.Drawing.Point(892, 324);
             this.txtIdObra.Name = "txtIdObra";
-            this.txtIdObra.Size = new System.Drawing.Size(97, 34);
+            this.txtIdObra.Size = new System.Drawing.Size(52, 34);
             this.txtIdObra.TabIndex = 49;
+            this.txtIdObra.Visible = false;
             // 
             // btnEstoque
             // 
@@ -453,6 +454,7 @@
             this.txtSaidaId.Name = "txtSaidaId";
             this.txtSaidaId.Size = new System.Drawing.Size(62, 34);
             this.txtSaidaId.TabIndex = 18;
+            this.txtSaidaId.Visible = false;
             // 
             // txtCodigoInfomacao
             // 

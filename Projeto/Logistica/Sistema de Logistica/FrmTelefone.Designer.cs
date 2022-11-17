@@ -126,6 +126,7 @@
             this.txtTelefoneId.Name = "txtTelefoneId";
             this.txtTelefoneId.Size = new System.Drawing.Size(44, 34);
             this.txtTelefoneId.TabIndex = 16;
+            this.txtTelefoneId.Visible = false;
             // 
             // dgvTelefone
             // 

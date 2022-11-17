@@ -300,6 +300,7 @@
             this.txtIdHistorico.Name = "txtIdHistorico";
             this.txtIdHistorico.Size = new System.Drawing.Size(62, 38);
             this.txtIdHistorico.TabIndex = 17;
+            this.txtIdHistorico.Visible = false;
             // 
             // dtpHistorico
             // 
@@ -324,11 +325,11 @@
             // 
             this.btnGerarId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGerarId.ForeColor = System.Drawing.Color.Red;
-            this.btnGerarId.Location = new System.Drawing.Point(134, 26);
+            this.btnGerarId.Location = new System.Drawing.Point(36, 26);
             this.btnGerarId.Name = "btnGerarId";
-            this.btnGerarId.Size = new System.Drawing.Size(97, 38);
+            this.btnGerarId.Size = new System.Drawing.Size(195, 38);
             this.btnGerarId.TabIndex = 2;
-            this.btnGerarId.Text = "Gerar ID";
+            this.btnGerarId.Text = "Gerar Proposta";
             this.btnGerarId.UseVisualStyleBackColor = true;
             this.btnGerarId.Click += new System.EventHandler(this.btnGerarId_Click);
             // 
@@ -373,10 +374,11 @@
             // 
             this.txtPropostId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtPropostId.Enabled = false;
-            this.txtPropostId.Location = new System.Drawing.Point(31, 26);
+            this.txtPropostId.Location = new System.Drawing.Point(11, 100);
             this.txtPropostId.Name = "txtPropostId";
-            this.txtPropostId.Size = new System.Drawing.Size(97, 38);
+            this.txtPropostId.Size = new System.Drawing.Size(25, 38);
             this.txtPropostId.TabIndex = 1;
+            this.txtPropostId.Visible = false;
             // 
             // label2
             // 

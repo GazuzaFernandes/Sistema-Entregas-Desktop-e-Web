@@ -16,7 +16,8 @@ namespace DAL.NHibertnate
     {
         public static BancoDados banco { get; set; }
         //POSTGRES
-        private static string ConexaoPostgressSql = @"Server=192.168.0.154;Port=5432;User Id=postgres;Password=q1s2e3f4t5;Database=RbDesktop;";
+        private static string ConexaoPostgressSql = @"Server= 192.168.0.114;Port=5432;User Id=postgres;Password=q1s2e3f4t5;Database=RbDesktop;";
+        
         //MS SQL SERVER
         private static string ConexaoSqlServer = @"Data Source=.\SQLExpress;Initial Catalog=RB;Persist Security Info=True;User ID=RBCOMERCIO;Password=gazuza;";
 
