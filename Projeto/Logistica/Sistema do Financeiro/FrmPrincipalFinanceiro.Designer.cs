@@ -90,6 +90,7 @@
             // rbNotaFiscal
             // 
             this.rbNotaFiscal.AutoSize = true;
+            this.rbNotaFiscal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbNotaFiscal.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbNotaFiscal.ForeColor = System.Drawing.Color.White;
             this.rbNotaFiscal.Location = new System.Drawing.Point(345, 97);
@@ -104,6 +105,7 @@
             // rbProposta
             // 
             this.rbProposta.AutoSize = true;
+            this.rbProposta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbProposta.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbProposta.ForeColor = System.Drawing.Color.White;
             this.rbProposta.Location = new System.Drawing.Point(521, 97);
@@ -118,6 +120,7 @@
             // rbEndereco
             // 
             this.rbEndereco.AutoSize = true;
+            this.rbEndereco.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbEndereco.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbEndereco.ForeColor = System.Drawing.Color.White;
             this.rbEndereco.Location = new System.Drawing.Point(182, 97);
@@ -303,6 +306,7 @@
             this.Controls.Add(this.rbProposta);
             this.Controls.Add(this.rbEndereco);
             this.Controls.Add(this.txtPesquisar);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

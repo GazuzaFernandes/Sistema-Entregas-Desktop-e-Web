@@ -96,6 +96,7 @@
             // 
             // btnDeletarProposta
             // 
+            this.btnDeletarProposta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeletarProposta.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDeletarProposta.ForeColor = System.Drawing.Color.Black;
             this.btnDeletarProposta.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletarProposta.Image")));
@@ -108,6 +109,7 @@
             // 
             // btnSalvarProposta
             // 
+            this.btnSalvarProposta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvarProposta.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSalvarProposta.ForeColor = System.Drawing.Color.Black;
             this.btnSalvarProposta.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarProposta.Image")));

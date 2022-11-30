@@ -124,6 +124,7 @@
             // 
             // btnLimparEntrada
             // 
+            this.btnLimparEntrada.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimparEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLimparEntrada.ForeColor = System.Drawing.Color.Black;
             this.btnLimparEntrada.Image = ((System.Drawing.Image)(resources.GetObject("btnLimparEntrada.Image")));
@@ -242,6 +243,7 @@
             // 
             // btnGerarId
             // 
+            this.btnGerarId.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGerarId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGerarId.ForeColor = System.Drawing.Color.Red;
             this.btnGerarId.Location = new System.Drawing.Point(712, 17);
@@ -264,6 +266,7 @@
             // 
             // btnEstoque
             // 
+            this.btnEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEstoque.ForeColor = System.Drawing.Color.Black;
             this.btnEstoque.Image = ((System.Drawing.Image)(resources.GetObject("btnEstoque.Image")));
@@ -279,6 +282,7 @@
             // 
             // btnDeletar
             // 
+            this.btnDeletar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDeletar.ForeColor = System.Drawing.Color.Black;
             this.btnDeletar.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletar.Image")));
@@ -294,6 +298,7 @@
             // 
             // btnSalvar
             // 
+            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSalvar.ForeColor = System.Drawing.Color.Black;
             this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
@@ -350,9 +355,10 @@
             // 
             // btnLimpar
             // 
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpar.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLimpar.ForeColor = System.Drawing.Color.Black;
-            this.btnLimpar.Location = new System.Drawing.Point(334, 234);
+            this.btnLimpar.Location = new System.Drawing.Point(597, 234);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(159, 43);
             this.btnLimpar.TabIndex = 53;
@@ -362,9 +368,10 @@
             // 
             // btnDeletarItens
             // 
+            this.btnDeletarItens.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeletarItens.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDeletarItens.ForeColor = System.Drawing.Color.Black;
-            this.btnDeletarItens.Location = new System.Drawing.Point(520, 234);
+            this.btnDeletarItens.Location = new System.Drawing.Point(374, 234);
             this.btnDeletarItens.Name = "btnDeletarItens";
             this.btnDeletarItens.Size = new System.Drawing.Size(159, 43);
             this.btnDeletarItens.TabIndex = 54;
@@ -374,6 +381,7 @@
             // 
             // btnInserir
             // 
+            this.btnInserir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInserir.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnInserir.ForeColor = System.Drawing.Color.Black;
             this.btnInserir.Location = new System.Drawing.Point(143, 234);
@@ -467,6 +475,7 @@
             // 
             // btnPesquisarMaterial
             // 
+            this.btnPesquisarMaterial.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPesquisarMaterial.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisarMaterial.Image")));
             this.btnPesquisarMaterial.Location = new System.Drawing.Point(739, 88);
             this.btnPesquisarMaterial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

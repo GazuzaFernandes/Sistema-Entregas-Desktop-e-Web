@@ -60,6 +60,7 @@
             // 
             // btnSalvar
             // 
+            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvar.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSalvar.ForeColor = System.Drawing.Color.Black;
             this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
@@ -86,6 +87,7 @@
             // rbFinalizado
             // 
             this.rbFinalizado.AutoSize = true;
+            this.rbFinalizado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbFinalizado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbFinalizado.ForeColor = System.Drawing.Color.Lime;
             this.rbFinalizado.Location = new System.Drawing.Point(311, 302);
@@ -100,6 +102,7 @@
             // rbCancelado
             // 
             this.rbCancelado.AutoSize = true;
+            this.rbCancelado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbCancelado.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbCancelado.ForeColor = System.Drawing.Color.Red;
             this.rbCancelado.Location = new System.Drawing.Point(573, 302);
@@ -114,6 +117,7 @@
             // rbPendente
             // 
             this.rbPendente.AutoSize = true;
+            this.rbPendente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbPendente.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbPendente.ForeColor = System.Drawing.Color.Yellow;
             this.rbPendente.Location = new System.Drawing.Point(53, 302);
@@ -181,6 +185,7 @@
             // 
             // btnDeletar
             // 
+            this.btnDeletar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeletar.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDeletar.ForeColor = System.Drawing.Color.Black;
             this.btnDeletar.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletar.Image")));

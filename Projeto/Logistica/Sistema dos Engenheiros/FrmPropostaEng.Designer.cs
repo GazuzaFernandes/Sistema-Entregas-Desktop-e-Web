@@ -78,6 +78,7 @@
             // 
             // btnDeletarProposta
             // 
+            this.btnDeletarProposta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeletarProposta.ForeColor = System.Drawing.Color.Black;
             this.btnDeletarProposta.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletarProposta.Image")));
             this.btnDeletarProposta.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -92,6 +93,7 @@
             // 
             // btnSalvarProposta
             // 
+            this.btnSalvarProposta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvarProposta.ForeColor = System.Drawing.Color.Black;
             this.btnSalvarProposta.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarProposta.Image")));
             this.btnSalvarProposta.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -115,6 +117,7 @@
             // rbCancelado
             // 
             this.rbCancelado.AutoSize = true;
+            this.rbCancelado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbCancelado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbCancelado.ForeColor = System.Drawing.Color.Red;
             this.rbCancelado.Location = new System.Drawing.Point(1071, 311);
@@ -128,6 +131,7 @@
             // rbFinalizado
             // 
             this.rbFinalizado.AutoSize = true;
+            this.rbFinalizado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbFinalizado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbFinalizado.ForeColor = System.Drawing.Color.Lime;
             this.rbFinalizado.Location = new System.Drawing.Point(1071, 241);
@@ -141,6 +145,7 @@
             // rbPendente
             // 
             this.rbPendente.AutoSize = true;
+            this.rbPendente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbPendente.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbPendente.ForeColor = System.Drawing.Color.Yellow;
             this.rbPendente.Location = new System.Drawing.Point(1071, 172);
@@ -164,6 +169,7 @@
             // 
             // cbComentado
             // 
+            this.cbComentado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbComentado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbComentado.FormattingEnabled = true;
             this.cbComentado.Items.AddRange(new object[] {
@@ -269,6 +275,7 @@
             // 
             // btnDeletarComentario
             // 
+            this.btnDeletarComentario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeletarComentario.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDeletarComentario.ForeColor = System.Drawing.Color.Black;
             this.btnDeletarComentario.Location = new System.Drawing.Point(700, 22);
@@ -281,6 +288,7 @@
             // 
             // btnLimparComentario
             // 
+            this.btnLimparComentario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimparComentario.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLimparComentario.ForeColor = System.Drawing.Color.Black;
             this.btnLimparComentario.Location = new System.Drawing.Point(523, 22);
@@ -323,6 +331,7 @@
             // 
             // btnGerarId
             // 
+            this.btnGerarId.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGerarId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGerarId.ForeColor = System.Drawing.Color.Red;
             this.btnGerarId.Location = new System.Drawing.Point(36, 26);

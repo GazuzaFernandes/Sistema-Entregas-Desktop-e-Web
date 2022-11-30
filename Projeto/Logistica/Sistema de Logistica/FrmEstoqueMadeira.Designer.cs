@@ -178,6 +178,7 @@
             // 
             // btnLimparEntrada
             // 
+            this.btnLimparEntrada.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimparEntrada.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLimparEntrada.ForeColor = System.Drawing.Color.Black;
             this.btnLimparEntrada.Image = ((System.Drawing.Image)(resources.GetObject("btnLimparEntrada.Image")));
@@ -380,6 +381,7 @@
             // 
             // btnGerarId
             // 
+            this.btnGerarId.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGerarId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGerarId.ForeColor = System.Drawing.Color.Red;
             this.btnGerarId.Location = new System.Drawing.Point(24, 20);
@@ -602,6 +604,7 @@
             // 
             // btnDeletar
             // 
+            this.btnDeletar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeletar.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDeletar.ForeColor = System.Drawing.Color.Black;
             this.btnDeletar.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletar.Image")));
@@ -617,6 +620,7 @@
             // 
             // btnSalvar
             // 
+            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSalvar.ForeColor = System.Drawing.Color.Black;
             this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
@@ -755,6 +759,7 @@
             // 
             // btnBaixarEstoque
             // 
+            this.btnBaixarEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBaixarEstoque.Enabled = false;
             this.btnBaixarEstoque.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnBaixarEstoque.ForeColor = System.Drawing.Color.Black;
@@ -771,6 +776,7 @@
             // 
             // btnLimparSaida
             // 
+            this.btnLimparSaida.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimparSaida.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLimparSaida.ForeColor = System.Drawing.Color.Black;
             this.btnLimparSaida.Image = ((System.Drawing.Image)(resources.GetObject("btnLimparSaida.Image")));
@@ -837,6 +843,7 @@
             // 
             // btnImprimir
             // 
+            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImprimir.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnImprimir.ForeColor = System.Drawing.Color.Black;
             this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));

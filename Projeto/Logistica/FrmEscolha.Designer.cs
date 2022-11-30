@@ -43,6 +43,7 @@
             // cbSelecionar
             // 
             this.cbSelecionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cbSelecionar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbSelecionar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSelecionar.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbSelecionar.ForeColor = System.Drawing.Color.Red;
@@ -60,6 +61,7 @@
             // 
             // btnEntrar
             // 
+            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEntrar.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEntrar.Location = new System.Drawing.Point(191, 128);
             this.btnEntrar.Name = "btnEntrar";

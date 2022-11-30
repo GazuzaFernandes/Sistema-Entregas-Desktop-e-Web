@@ -72,6 +72,7 @@
             // 
             // btnValidar
             // 
+            this.btnValidar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnValidar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnValidar.ForeColor = System.Drawing.Color.Black;
             this.btnValidar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -85,6 +86,7 @@
             // 
             // btnFechar
             // 
+            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnFechar.ForeColor = System.Drawing.Color.Black;
             this.btnFechar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

@@ -216,7 +216,7 @@ namespace Logistica.Sistema_de_Logistica
             this.menuStrip1.Location = new System.Drawing.Point(6, 6);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(157, 215);
+            this.menuStrip1.Size = new System.Drawing.Size(157, 191);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -409,6 +409,7 @@ namespace Logistica.Sistema_de_Logistica
             // 
             // btnLimparPesquisa
             // 
+            this.btnLimparPesquisa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimparPesquisa.Image = ((System.Drawing.Image)(resources.GetObject("btnLimparPesquisa.Image")));
             this.btnLimparPesquisa.Location = new System.Drawing.Point(801, 12);
             this.btnLimparPesquisa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -420,6 +421,7 @@ namespace Logistica.Sistema_de_Logistica
             // 
             // btnPesquisar
             // 
+            this.btnPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
             this.btnPesquisar.Location = new System.Drawing.Point(756, 11);
             this.btnPesquisar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -445,6 +447,7 @@ namespace Logistica.Sistema_de_Logistica
             // cbFinalizado
             // 
             this.cbFinalizado.AutoSize = true;
+            this.cbFinalizado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbFinalizado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbFinalizado.ForeColor = System.Drawing.Color.Lime;
             this.cbFinalizado.Location = new System.Drawing.Point(1220, 14);
@@ -458,6 +461,7 @@ namespace Logistica.Sistema_de_Logistica
             // cbPendente
             // 
             this.cbPendente.AutoSize = true;
+            this.cbPendente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbPendente.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbPendente.ForeColor = System.Drawing.Color.Blue;
             this.cbPendente.Location = new System.Drawing.Point(1003, 107);
@@ -471,6 +475,7 @@ namespace Logistica.Sistema_de_Logistica
             // cbImediato
             // 
             this.cbImediato.AutoSize = true;
+            this.cbImediato.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbImediato.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbImediato.ForeColor = System.Drawing.Color.Yellow;
             this.cbImediato.Location = new System.Drawing.Point(1003, 10);
@@ -484,6 +489,7 @@ namespace Logistica.Sistema_de_Logistica
             // rbEndereco
             // 
             this.rbEndereco.AutoSize = true;
+            this.rbEndereco.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbEndereco.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbEndereco.ForeColor = System.Drawing.Color.White;
             this.rbEndereco.Location = new System.Drawing.Point(739, 128);
@@ -498,6 +504,7 @@ namespace Logistica.Sistema_de_Logistica
             // rbMaterial
             // 
             this.rbMaterial.AutoSize = true;
+            this.rbMaterial.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbMaterial.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbMaterial.ForeColor = System.Drawing.Color.White;
             this.rbMaterial.Location = new System.Drawing.Point(739, 63);
@@ -512,6 +519,7 @@ namespace Logistica.Sistema_de_Logistica
             // rbEng
             // 
             this.rbEng.AutoSize = true;
+            this.rbEng.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbEng.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbEng.ForeColor = System.Drawing.Color.White;
             this.rbEng.Location = new System.Drawing.Point(536, 63);
@@ -526,6 +534,7 @@ namespace Logistica.Sistema_de_Logistica
             // rbNotaFiscal
             // 
             this.rbNotaFiscal.AutoSize = true;
+            this.rbNotaFiscal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbNotaFiscal.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbNotaFiscal.ForeColor = System.Drawing.Color.White;
             this.rbNotaFiscal.Location = new System.Drawing.Point(536, 128);
@@ -540,6 +549,7 @@ namespace Logistica.Sistema_de_Logistica
             // rbCliente
             // 
             this.rbCliente.AutoSize = true;
+            this.rbCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbCliente.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbCliente.ForeColor = System.Drawing.Color.White;
             this.rbCliente.Location = new System.Drawing.Point(456, 173);
@@ -554,6 +564,7 @@ namespace Logistica.Sistema_de_Logistica
             // rbPedidoVenda
             // 
             this.rbPedidoVenda.AutoSize = true;
+            this.rbPedidoVenda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbPedidoVenda.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbPedidoVenda.ForeColor = System.Drawing.Color.White;
             this.rbPedidoVenda.Location = new System.Drawing.Point(351, 128);
@@ -568,6 +579,7 @@ namespace Logistica.Sistema_de_Logistica
             // rbProposta
             // 
             this.rbProposta.AutoSize = true;
+            this.rbProposta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbProposta.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbProposta.ForeColor = System.Drawing.Color.White;
             this.rbProposta.Location = new System.Drawing.Point(351, 63);
@@ -582,6 +594,7 @@ namespace Logistica.Sistema_de_Logistica
             // rbPedidoRb
             // 
             this.rbPedidoRb.AutoSize = true;
+            this.rbPedidoRb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbPedidoRb.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbPedidoRb.ForeColor = System.Drawing.Color.White;
             this.rbPedidoRb.Location = new System.Drawing.Point(174, 128);
@@ -596,6 +609,7 @@ namespace Logistica.Sistema_de_Logistica
             // rbFabrica
             // 
             this.rbFabrica.AutoSize = true;
+            this.rbFabrica.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbFabrica.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbFabrica.ForeColor = System.Drawing.Color.White;
             this.rbFabrica.Location = new System.Drawing.Point(174, 63);

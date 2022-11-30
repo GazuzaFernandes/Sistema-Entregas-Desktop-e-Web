@@ -120,6 +120,7 @@
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.dtpDataVencimento);
             this.tabPage1.Controls.Add(this.dtpDataEmissao);
+            this.tabPage1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabPage1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tabPage1.Location = new System.Drawing.Point(4, 40);
             this.tabPage1.Name = "tabPage1";
@@ -161,6 +162,7 @@
             // 
             // bntLimparDados
             // 
+            this.bntLimparDados.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bntLimparDados.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bntLimparDados.ForeColor = System.Drawing.Color.Black;
             this.bntLimparDados.Image = ((System.Drawing.Image)(resources.GetObject("bntLimparDados.Image")));
@@ -176,6 +178,7 @@
             // 
             // btnDeletarDados
             // 
+            this.btnDeletarDados.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeletarDados.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDeletarDados.ForeColor = System.Drawing.Color.Black;
             this.btnDeletarDados.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletarDados.Image")));
@@ -191,6 +194,7 @@
             // 
             // btnSalvar
             // 
+            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSalvar.ForeColor = System.Drawing.Color.Black;
             this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
@@ -207,6 +211,7 @@
             // rbComercio
             // 
             this.rbComercio.AutoSize = true;
+            this.rbComercio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbComercio.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbComercio.ForeColor = System.Drawing.Color.Lime;
             this.rbComercio.Location = new System.Drawing.Point(342, 393);
@@ -220,6 +225,7 @@
             // rbEngenharia
             // 
             this.rbEngenharia.AutoSize = true;
+            this.rbEngenharia.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbEngenharia.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbEngenharia.ForeColor = System.Drawing.Color.Cyan;
             this.rbEngenharia.Location = new System.Drawing.Point(80, 393);
@@ -233,6 +239,7 @@
             // rbPisos
             // 
             this.rbPisos.AutoSize = true;
+            this.rbPisos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbPisos.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbPisos.ForeColor = System.Drawing.Color.Yellow;
             this.rbPisos.Location = new System.Drawing.Point(576, 393);
@@ -245,6 +252,7 @@
             // 
             // btnGerarId
             // 
+            this.btnGerarId.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGerarId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGerarId.ForeColor = System.Drawing.Color.Red;
             this.btnGerarId.Location = new System.Drawing.Point(49, 18);

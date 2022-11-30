@@ -106,6 +106,7 @@
             // 
             // btnLimparPesquisa
             // 
+            this.btnLimparPesquisa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimparPesquisa.Image = ((System.Drawing.Image)(resources.GetObject("btnLimparPesquisa.Image")));
             this.btnLimparPesquisa.Location = new System.Drawing.Point(718, 27);
             this.btnLimparPesquisa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -117,6 +118,7 @@
             // 
             // btnPesquisar
             // 
+            this.btnPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
             this.btnPesquisar.Location = new System.Drawing.Point(673, 26);
             this.btnPesquisar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -129,6 +131,7 @@
             // rbCliente
             // 
             this.rbCliente.AutoSize = true;
+            this.rbCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbCliente.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbCliente.ForeColor = System.Drawing.Color.White;
             this.rbCliente.Location = new System.Drawing.Point(379, 91);
@@ -143,6 +146,7 @@
             // rbProposta
             // 
             this.rbProposta.AutoSize = true;
+            this.rbProposta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbProposta.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbProposta.ForeColor = System.Drawing.Color.White;
             this.rbProposta.Location = new System.Drawing.Point(526, 91);
@@ -157,6 +161,7 @@
             // rbEndereço
             // 
             this.rbEndereço.AutoSize = true;
+            this.rbEndereço.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbEndereço.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbEndereço.ForeColor = System.Drawing.Color.White;
             this.rbEndereço.Location = new System.Drawing.Point(226, 91);
@@ -214,6 +219,7 @@
             // cbEmpresas
             // 
             this.cbEmpresas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cbEmpresas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbEmpresas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEmpresas.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbEmpresas.ForeColor = System.Drawing.Color.Red;
@@ -229,6 +235,7 @@
             // 
             // btnProposta
             // 
+            this.btnProposta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProposta.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnProposta.Location = new System.Drawing.Point(1094, 91);
             this.btnProposta.Name = "btnProposta";

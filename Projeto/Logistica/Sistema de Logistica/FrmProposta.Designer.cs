@@ -219,6 +219,7 @@
             // 
             // btnImprimir
             // 
+            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImprimir.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnImprimir.ForeColor = System.Drawing.Color.Black;
             this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
@@ -234,6 +235,7 @@
             // 
             // btnDeletarProposta
             // 
+            this.btnDeletarProposta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeletarProposta.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDeletarProposta.ForeColor = System.Drawing.Color.Black;
             this.btnDeletarProposta.Image = ((System.Drawing.Image)(resources.GetObject("btnDeletarProposta.Image")));
@@ -249,6 +251,7 @@
             // 
             // btnSalvarProposta
             // 
+            this.btnSalvarProposta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvarProposta.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSalvarProposta.ForeColor = System.Drawing.Color.Black;
             this.btnSalvarProposta.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvarProposta.Image")));
@@ -273,6 +276,7 @@
             // rbCancelado
             // 
             this.rbCancelado.AutoSize = true;
+            this.rbCancelado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbCancelado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbCancelado.ForeColor = System.Drawing.Color.Red;
             this.rbCancelado.Location = new System.Drawing.Point(1071, 372);
@@ -286,6 +290,7 @@
             // rbFinalizado
             // 
             this.rbFinalizado.AutoSize = true;
+            this.rbFinalizado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbFinalizado.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbFinalizado.ForeColor = System.Drawing.Color.Lime;
             this.rbFinalizado.Location = new System.Drawing.Point(775, 372);
@@ -299,6 +304,7 @@
             // rbImediato
             // 
             this.rbImediato.AutoSize = true;
+            this.rbImediato.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbImediato.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbImediato.ForeColor = System.Drawing.Color.Yellow;
             this.rbImediato.Location = new System.Drawing.Point(155, 372);
@@ -312,6 +318,7 @@
             // rbPendente
             // 
             this.rbPendente.AutoSize = true;
+            this.rbPendente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbPendente.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbPendente.ForeColor = System.Drawing.Color.Blue;
             this.rbPendente.Location = new System.Drawing.Point(481, 372);
@@ -336,6 +343,7 @@
             // cbEmpresaFaturar
             // 
             this.cbEmpresaFaturar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.cbEmpresaFaturar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbEmpresaFaturar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEmpresaFaturar.ForeColor = System.Drawing.Color.Red;
             this.cbEmpresaFaturar.FormattingEnabled = true;
@@ -465,6 +473,7 @@
             // 
             // btnPesquisarCliente
             // 
+            this.btnPesquisarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPesquisarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisarCliente.Image")));
             this.btnPesquisarCliente.Location = new System.Drawing.Point(1278, 235);
             this.btnPesquisarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -486,6 +495,7 @@
             // 
             // btnPesquisaFabrica
             // 
+            this.btnPesquisaFabrica.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPesquisaFabrica.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisaFabrica.Image")));
             this.btnPesquisaFabrica.Location = new System.Drawing.Point(471, 100);
             this.btnPesquisaFabrica.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -546,6 +556,7 @@
             // 
             // btnGerarId
             // 
+            this.btnGerarId.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGerarId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGerarId.ForeColor = System.Drawing.Color.Red;
             this.btnGerarId.Location = new System.Drawing.Point(23, 29);
@@ -864,6 +875,7 @@
             // 
             // btnAtualizarEstoque
             // 
+            this.btnAtualizarEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtualizarEstoque.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAtualizarEstoque.ForeColor = System.Drawing.Color.Red;
             this.btnAtualizarEstoque.Location = new System.Drawing.Point(447, 160);
@@ -876,6 +888,7 @@
             // 
             // btnLimpar
             // 
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpar.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLimpar.ForeColor = System.Drawing.Color.Black;
             this.btnLimpar.Location = new System.Drawing.Point(477, 285);
@@ -888,6 +901,7 @@
             // 
             // btnDeletarItens
             // 
+            this.btnDeletarItens.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeletarItens.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDeletarItens.ForeColor = System.Drawing.Color.Black;
             this.btnDeletarItens.Location = new System.Drawing.Point(477, 344);
@@ -900,6 +914,7 @@
             // 
             // btnInserir
             // 
+            this.btnInserir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInserir.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnInserir.ForeColor = System.Drawing.Color.Black;
             this.btnInserir.Location = new System.Drawing.Point(477, 229);
@@ -1124,6 +1139,7 @@
             // 
             // btnDeletarComentario
             // 
+            this.btnDeletarComentario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeletarComentario.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDeletarComentario.ForeColor = System.Drawing.Color.Black;
             this.btnDeletarComentario.Location = new System.Drawing.Point(700, 22);
@@ -1136,6 +1152,7 @@
             // 
             // btnLimparComentario
             // 
+            this.btnLimparComentario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimparComentario.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLimparComentario.ForeColor = System.Drawing.Color.Black;
             this.btnLimparComentario.Location = new System.Drawing.Point(523, 22);
