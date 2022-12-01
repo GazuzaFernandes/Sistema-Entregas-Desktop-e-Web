@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "..\DAL\DAL.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjetoWeb", "..\ProjetoWeb\ProjetoWeb.csproj", "{2EE47CF0-3A14-4CCE-9960-608D69A56D7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restauracao", "..\Restauracao\Restauracao.csproj", "{12747B82-6455-4CD9-8A26-1E2CC41D2B61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restauracao", "..\Restauracao\Restauracao.csproj", "{12747B82-6455-4CD9-8A26-1E2CC41D2B61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

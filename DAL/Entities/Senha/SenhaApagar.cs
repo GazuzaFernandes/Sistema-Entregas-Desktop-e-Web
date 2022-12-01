@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Entities.SenhaRestauracao
 {
-    public class Senha
+    public class SenhaApagar
     {
         public virtual int UsuarioId { get; set; }    
         public virtual string Senhas { get; set; }
