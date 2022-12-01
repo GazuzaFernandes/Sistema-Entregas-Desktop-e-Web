@@ -90,7 +90,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
                     FrmLogin login = new FrmLogin();
                     login.ShowDialog();
                     Boolean temUsuario = false;
-                    var listaUsuarios = new DLSenha().Listar();
+                    var listaUsuarios = new DLSenhaApagar().Listar();
                     for (int i = 0; i < listaUsuarios.Count; i++)
                     {
                         if (listaUsuarios[i].Senhas == login.txtSenha.Text)

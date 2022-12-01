@@ -1,13 +1,11 @@
 
-
-
-using DAL.Entities.Logistica;
+using DALRestauracao.Repository.SenhaRestauracao;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
 using System;
 
-namespace DAL.NHibertnate
+namespace DALRestauracao.NHibertnate
 {
     public enum BancoDados
     {
@@ -34,7 +32,7 @@ namespace DAL.NHibertnate
                 if (banco == BancoDados.PostgressSql)
                     dbConfig = PostgreSQLConfiguration.Standard.ConnectionString(ConexaoPostgressSql);
                 var mapConfig = Fluently.Configure().Database(dbConfig).Mappings(c =>
-                    c.FluentMappings.AddFromAssemblyOf<Usuario>());
+                    c.FluentMappings.AddFromAssemblyOf<DLSenhas>());
 
                 session = mapConfig.BuildSessionFactory();
             }

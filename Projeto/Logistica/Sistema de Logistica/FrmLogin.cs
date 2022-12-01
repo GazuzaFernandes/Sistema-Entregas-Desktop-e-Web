@@ -1,5 +1,6 @@
 ﻿
 using DAL.Repository.Logistica;
+using DAL.Repository.SenhaRestauracao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,10 +28,10 @@ namespace Projeto.Logistica.Sistema_de_Logistica
             try
             {
                 Boolean temUsuario = false;
-                var listaUsuarios = new DLUsuario().Listar();
+                var listaUsuarios = new DLSenhaApagar().Listar();
                 for (int i = 0; i < listaUsuarios.Count; i++)
                 {
-                    if (listaUsuarios[i].Senha == txtSenha.Text)
+                    if (listaUsuarios[i].Senhas == txtSenha.Text)
                     {
                         temUsuario = true;
                     }
