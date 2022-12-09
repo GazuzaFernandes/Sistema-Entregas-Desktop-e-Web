@@ -161,6 +161,7 @@
             this.Name = "FrmOrcamentoPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar preços de Produtos.";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmOrcamentoPrincipal_FormClosed);
             this.Load += new System.EventHandler(this.FrmOrcamentoPrincipal_Load);
             this.Click += new System.EventHandler(this.FrmOrcamentoPrincipal_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dgvValores)).EndInit();

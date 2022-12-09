@@ -184,5 +184,37 @@ namespace Logistica.Sistema_do_Financeiro
             FrmEscolha escolha = new FrmEscolha();
             escolha.ShowDialog();
         }
+
+        private void FrmPrincipalFinanceiro_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+            try
+            {
+                var pergunta = "Deseja abrir a tela de escolha de sistema ?";
+                if (MessageBox.Show(pergunta, "ATENÇÂO", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    Hide();
+                    FrmEscolha escolha = new FrmEscolha();
+                    escolha.ShowDialog();
+                }
+                else
+                {
+                    var novaPergunta = "Deseja finalizar o sistema ?";
+                    if (MessageBox.Show(novaPergunta, "ATEÇÃO", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        Application.Exit();
+                    }
+                    else
+                    {
+                        Hide();
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+        }
     }
 }

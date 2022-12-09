@@ -155,7 +155,8 @@ namespace Projeto
                                                     "q1s2e3f4t5",
                                                     "RbDesktop",                                             
                                                  $@"F:\_LOGISTICA\Restaurar\Rb\{DateTime.Now.ToShortDateString().Replace(":", "").Replace("/", "_").Replace(" ", "")}\",
-                                                   @"RbDesktop"); 
+                                                   @"RbDesktop");
+                Application.Exit();
             }
             catch (Exception ex)
             {

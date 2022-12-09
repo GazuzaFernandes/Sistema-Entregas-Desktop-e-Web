@@ -44,7 +44,7 @@ namespace Logistica.Sistema_de_Amostras
             rbCliente.Checked = false;
             rbEndereco.Checked = false;
             rbAmostra.Checked = false;
-            CarregarGridAmostras();          
+            CarregarGridAmostras();
         }
 
         private void btnAmostra_Click(object sender, EventArgs e)
@@ -68,7 +68,7 @@ namespace Logistica.Sistema_de_Amostras
                 amos.AmostraId = Convert.ToInt32(dvgAmostra.Rows[e.RowIndex].Cells[0].Value);
                 FrmAmostra amostra = new FrmAmostra();
                 amostra._amostracliente = amos;
-                amostra.ShowDialog();                
+                amostra.ShowDialog();
                 CarregarGridAmostras();
             }
             catch (Exception ex)
@@ -139,13 +139,44 @@ namespace Logistica.Sistema_de_Amostras
 
         private void label1_Click(object sender, EventArgs e)
         {
-       
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             FrmEscolha escolha = new FrmEscolha();
             escolha.ShowDialog();
+        }
+
+        private void FrmPrincipalAmostra_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            try
+            {
+                var pergunta = "Deseja abrir a tela de escolha de sistema ?";
+                if (MessageBox.Show(pergunta, "ATENÇÂO", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    Hide();
+                    FrmEscolha escolha = new FrmEscolha();
+                    escolha.ShowDialog();
+                }
+                else
+                {
+                    var novaPergunta = "Deseja finalizar o sistema ?";
+                    if (MessageBox.Show(novaPergunta, "ATEÇÃO", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        Application.Exit();
+                    }
+                    else
+                    {
+                        Hide();
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
         }
     }
 }

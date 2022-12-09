@@ -276,6 +276,8 @@
             this.Name = "FrmPrincipalEng";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Controle de obra da Engenharia";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPrincipalEng_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPrincipalEng_FormClosed);
             this.Load += new System.EventHandler(this.FrmPrincipalEng_Load);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).EndInit();

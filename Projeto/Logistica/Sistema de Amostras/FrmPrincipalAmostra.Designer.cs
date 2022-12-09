@@ -217,6 +217,7 @@
             this.Name = "FrmPrincipalAmostra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Historico de amostras.";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPrincipalAmostra_FormClosed);
             this.Load += new System.EventHandler(this.FrmPrincipalAmostra_Load);
             this.Click += new System.EventHandler(this.FrmPrincipalAmostra_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dvgAmostra)).EndInit();
