@@ -3,6 +3,7 @@ using DAL.Entities.Logistica;
 using DAL.Repository.Financeiro;
 using DAL.Repository.Logistica;
 using Logistica.Sistema_de_Logistica;
+using Projeto;
 using Projeto.Logistica.Sistema_do_Financeiro;
 using System;
 using System.Collections.Generic;
@@ -177,5 +178,11 @@ namespace Logistica.Sistema_do_Financeiro
             objBlControleGrid.DefinirAlturaLinha(30);
         }
         #endregion
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            FrmEscolha escolha = new FrmEscolha();
+            escolha.ShowDialog();
+        }
     }
 }

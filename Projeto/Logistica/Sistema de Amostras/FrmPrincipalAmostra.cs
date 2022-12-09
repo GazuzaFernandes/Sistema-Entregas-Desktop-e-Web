@@ -2,6 +2,7 @@
 using DAL.Entities.Amostras;
 using DAL.Repository.Amostras;
 using Logistica.Sistema_de_Logistica;
+using Projeto;
 using Projeto.Logistica.Sistema_de_Amostras;
 using System;
 using System.Collections.Generic;
@@ -134,6 +135,17 @@ namespace Logistica.Sistema_de_Amostras
         private void FrmPrincipalAmostra_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+       
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            FrmEscolha escolha = new FrmEscolha();
+            escolha.ShowDialog();
         }
     }
 }

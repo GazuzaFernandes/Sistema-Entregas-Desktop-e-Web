@@ -43,6 +43,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.cbEmpresas = new System.Windows.Forms.ComboBox();
             this.btnProposta = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -103,6 +104,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnLimparPesquisa
             // 
@@ -188,6 +190,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.cbEmpresas);
             this.panel1.Controls.Add(this.btnProposta);
@@ -245,6 +248,18 @@
             this.btnProposta.UseVisualStyleBackColor = true;
             this.btnProposta.Click += new System.EventHandler(this.btnProposta_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(226, 128);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(405, 28);
+            this.label1.TabIndex = 48;
+            this.label1.Text = "Clique na imagem para trocar de sistema.";
+            // 
             // FrmPrincipalEng
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -287,5 +302,6 @@
         private Button btnProposta;
         private Label label11;
         private ComboBox cbEmpresas;
+        private Label label1;
     }
 }

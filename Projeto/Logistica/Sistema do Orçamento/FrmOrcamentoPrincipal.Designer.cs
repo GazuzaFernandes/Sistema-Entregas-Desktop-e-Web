@@ -36,6 +36,7 @@
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvValores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,13 +48,13 @@
             this.dgvValores.BackgroundColor = System.Drawing.Color.White;
             this.dgvValores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvValores.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvValores.Location = new System.Drawing.Point(0, 137);
+            this.dgvValores.Location = new System.Drawing.Point(0, 161);
             this.dgvValores.Name = "dgvValores";
             this.dgvValores.ReadOnly = true;
             this.dgvValores.RowHeadersWidth = 51;
             this.dgvValores.RowTemplate.Height = 29;
             this.dgvValores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvValores.Size = new System.Drawing.Size(1121, 587);
+            this.dgvValores.Size = new System.Drawing.Size(1121, 563);
             this.dgvValores.TabIndex = 0;
             this.dgvValores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvValores_CellDoubleClick);
             // 
@@ -107,10 +108,11 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 88);
+            this.pictureBox1.Size = new System.Drawing.Size(147, 122);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 47;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label4
             // 
@@ -123,6 +125,18 @@
             this.label4.TabIndex = 52;
             this.label4.Text = "Pesquisar:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(165, 105);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(405, 28);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "Clique na imagem para trocar de sistema.";
+            // 
             // FrmOrcamentoPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -131,6 +145,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1121, 724);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnProduto);
             this.Controls.Add(this.btnLimparPesquisa);
@@ -163,5 +178,6 @@
         private TextBox txtPesquisar;
         private PictureBox pictureBox1;
         private Label label4;
+        private Label label1;
     }
 }

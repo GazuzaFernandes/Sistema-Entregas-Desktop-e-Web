@@ -49,6 +49,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNotaFiscais)).BeginInit();
             this.msNotasFiscais.SuspendLayout();
@@ -60,10 +61,11 @@
             this.pictureBox1.Location = new System.Drawing.Point(1130, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(138, 111);
+            this.pictureBox1.Size = new System.Drawing.Size(138, 129);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnLimparPesquisa
             // 
@@ -150,13 +152,13 @@
             this.dgvNotaFiscais.BackgroundColor = System.Drawing.Color.White;
             this.dgvNotaFiscais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNotaFiscais.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvNotaFiscais.Location = new System.Drawing.Point(0, 149);
+            this.dgvNotaFiscais.Location = new System.Drawing.Point(0, 169);
             this.dgvNotaFiscais.Name = "dgvNotaFiscais";
             this.dgvNotaFiscais.ReadOnly = true;
             this.dgvNotaFiscais.RowHeadersWidth = 51;
             this.dgvNotaFiscais.RowTemplate.Height = 29;
             this.dgvNotaFiscais.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNotaFiscais.Size = new System.Drawing.Size(1280, 565);
+            this.dgvNotaFiscais.Size = new System.Drawing.Size(1280, 545);
             this.dgvNotaFiscais.TabIndex = 26;
             this.dgvNotaFiscais.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNotaFiscais_CellDoubleClick);
             this.dgvNotaFiscais.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvNotaFiscais_DataBindingComplete);
@@ -284,6 +286,18 @@
             this.label3.TabIndex = 29;
             this.label3.Text = "Comercio:";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(707, 104);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(405, 28);
+            this.label4.TabIndex = 48;
+            this.label4.Text = "Clique na imagem para trocar de sistema.";
+            // 
             // FrmPrincipalFinanceiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -292,6 +306,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1280, 714);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -346,5 +361,6 @@
         private Label label1;
         private Label label2;
         private Label label3;
+        private Label label4;
     }
 }

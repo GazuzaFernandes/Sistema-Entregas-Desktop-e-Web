@@ -2,6 +2,7 @@
 using DAL.Entities.Logistica;
 using DAL.Repository.Engenharia;
 using Logistica.Sistema_de_Logistica;
+using Projeto;
 using Projeto.Logistica.Sistema_de_Logistica;
 using Projeto.Logistica.Sistema_dos_Engenheiros;
 using System;
@@ -148,5 +149,10 @@ namespace Logistica.Sistema_dos_Engenheiros
         }
         #endregion
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            FrmEscolha escolha = new FrmEscolha();
+            escolha.ShowDialog();
+        }
     }
 }

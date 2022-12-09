@@ -2,6 +2,7 @@
 using DAL.Entities.Orcamento;
 using DAL.Repository.Orcamento;
 using Logistica.Sistema_de_Logistica;
+using Projeto;
 using Projeto.Logistica.Sistema_do_Orçamento;
 using System;
 using System.Collections.Generic;
@@ -121,5 +122,11 @@ namespace Logistica.Sistema_do_Orçamento
             objBlControleGrid.DefinirAlturaLinha(30);
         }
         #endregion
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            FrmEscolha escolha = new FrmEscolha();
+            escolha.ShowDialog();
+        }
     }
 }

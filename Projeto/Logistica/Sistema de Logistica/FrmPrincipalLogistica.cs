@@ -2,6 +2,7 @@
 using DAL.Entities.Amostras;
 using DAL.Entities.Logistica;
 using DAL.Repository.Logistica;
+using Projeto;
 using Projeto.Logistica.Sistema_de_Logistica;
 using System;
 using System.Collections.Generic;
@@ -568,6 +569,12 @@ namespace Logistica.Sistema_de_Logistica
         {
             FrmEstoque estoque = new FrmEstoque();
             estoque.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            FrmEscolha escolha = new FrmEscolha();
+            escolha.ShowDialog();
         }
     }
 }

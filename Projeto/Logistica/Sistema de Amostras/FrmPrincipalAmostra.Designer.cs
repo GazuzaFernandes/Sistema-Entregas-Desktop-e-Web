@@ -39,6 +39,7 @@
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.btnAmostra = new System.Windows.Forms.Button();
             this.btnEstoque = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dvgAmostra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,33 +51,35 @@
             this.dvgAmostra.BackgroundColor = System.Drawing.Color.White;
             this.dvgAmostra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgAmostra.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dvgAmostra.Location = new System.Drawing.Point(0, 158);
+            this.dvgAmostra.Location = new System.Drawing.Point(0, 161);
             this.dvgAmostra.Name = "dvgAmostra";
             this.dvgAmostra.ReadOnly = true;
             this.dvgAmostra.RowHeadersWidth = 51;
             this.dvgAmostra.RowTemplate.Height = 29;
             this.dvgAmostra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgAmostra.Size = new System.Drawing.Size(1234, 526);
+            this.dvgAmostra.Size = new System.Drawing.Size(1234, 523);
             this.dvgAmostra.TabIndex = 2;
             this.dvgAmostra.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgAmostra_CellDoubleClick);
             this.dvgAmostra.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dvgAmostra_DataBindingComplete);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 110);
+            this.pictureBox1.Size = new System.Drawing.Size(177, 145);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnLimparPesquisa
             // 
             this.btnLimparPesquisa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimparPesquisa.Image = ((System.Drawing.Image)(resources.GetObject("btnLimparPesquisa.Image")));
-            this.btnLimparPesquisa.Location = new System.Drawing.Point(666, 25);
+            this.btnLimparPesquisa.Location = new System.Drawing.Point(622, 25);
             this.btnLimparPesquisa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLimparPesquisa.Name = "btnLimparPesquisa";
             this.btnLimparPesquisa.Size = new System.Drawing.Size(38, 38);
@@ -88,7 +91,7 @@
             // 
             this.btnPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
-            this.btnPesquisar.Location = new System.Drawing.Point(622, 25);
+            this.btnPesquisar.Location = new System.Drawing.Point(578, 25);
             this.btnPesquisar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(38, 38);
@@ -102,7 +105,7 @@
             this.rbAmostra.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbAmostra.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbAmostra.ForeColor = System.Drawing.Color.White;
-            this.rbAmostra.Location = new System.Drawing.Point(468, 78);
+            this.rbAmostra.Location = new System.Drawing.Point(484, 81);
             this.rbAmostra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbAmostra.Name = "rbAmostra";
             this.rbAmostra.Size = new System.Drawing.Size(136, 35);
@@ -117,7 +120,7 @@
             this.rbEndereco.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbEndereco.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbEndereco.ForeColor = System.Drawing.Color.White;
-            this.rbEndereco.Location = new System.Drawing.Point(319, 78);
+            this.rbEndereco.Location = new System.Drawing.Point(335, 81);
             this.rbEndereco.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbEndereco.Name = "rbEndereco";
             this.rbEndereco.Size = new System.Drawing.Size(133, 35);
@@ -132,7 +135,7 @@
             this.rbCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rbCliente.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rbCliente.ForeColor = System.Drawing.Color.White;
-            this.rbCliente.Location = new System.Drawing.Point(194, 78);
+            this.rbCliente.Location = new System.Drawing.Point(210, 81);
             this.rbCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbCliente.Name = "rbCliente";
             this.rbCliente.Size = new System.Drawing.Size(110, 35);
@@ -144,10 +147,10 @@
             // txtPesquisar
             // 
             this.txtPesquisar.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPesquisar.Location = new System.Drawing.Point(194, 25);
+            this.txtPesquisar.Location = new System.Drawing.Point(212, 25);
             this.txtPesquisar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(410, 38);
+            this.txtPesquisar.Size = new System.Drawing.Size(350, 38);
             this.txtPesquisar.TabIndex = 40;
             this.txtPesquisar.Text = "Digite para pesquisar:";
             this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
@@ -156,7 +159,7 @@
             // 
             this.btnAmostra.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAmostra.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAmostra.Location = new System.Drawing.Point(744, 51);
+            this.btnAmostra.Location = new System.Drawing.Point(749, 51);
             this.btnAmostra.Name = "btnAmostra";
             this.btnAmostra.Size = new System.Drawing.Size(207, 74);
             this.btnAmostra.TabIndex = 46;
@@ -176,6 +179,19 @@
             this.btnEstoque.UseVisualStyleBackColor = true;
             this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(210, 128);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(405, 28);
+            this.label1.TabIndex = 47;
+            this.label1.Text = "Clique na imagem para trocar de sistema.";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // FrmPrincipalAmostra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -183,6 +199,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1234, 684);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEstoque);
             this.Controls.Add(this.btnAmostra);
             this.Controls.Add(this.btnLimparPesquisa);
@@ -220,5 +237,6 @@
         private TextBox txtPesquisar;
         private Button btnAmostra;
         private Button btnEstoque;
+        private Label label1;
     }
 }
