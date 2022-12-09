@@ -44,6 +44,7 @@ namespace Logistica.Sistema_de_Logistica
             this.entradaEstoqueMadeirasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.msEstoqueProduto = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label84 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -189,7 +190,6 @@ namespace Logistica.Sistema_de_Logistica
             this.label49 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
-            this.label84 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -354,8 +354,21 @@ namespace Logistica.Sistema_de_Logistica
             this.panel1.Size = new System.Drawing.Size(1883, 221);
             this.panel1.TabIndex = 5;
             // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label84.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label84.ForeColor = System.Drawing.Color.White;
+            this.label84.Location = new System.Drawing.Point(1427, 183);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(405, 28);
+            this.label84.TabIndex = 48;
+            this.label84.Text = "Clique na imagem para trocar de sistema.";
+            // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(1485, 24);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -693,7 +706,7 @@ namespace Logistica.Sistema_de_Logistica
             this.tabPage4.Location = new System.Drawing.Point(4, 40);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1687, 751);
+            this.tabPage4.Size = new System.Drawing.Size(1875, 751);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Tabela Carretos";
             // 
@@ -778,7 +791,7 @@ namespace Logistica.Sistema_de_Logistica
             this.tabPage5.Controls.Add(this.label5);
             this.tabPage5.Location = new System.Drawing.Point(4, 40);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1687, 751);
+            this.tabPage5.Size = new System.Drawing.Size(1875, 751);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Calcular Mdf, m2, m3";
             // 
@@ -1224,7 +1237,7 @@ namespace Logistica.Sistema_de_Logistica
             this.tabPage2.Controls.Add(this.label47);
             this.tabPage2.Location = new System.Drawing.Point(4, 40);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1687, 751);
+            this.tabPage2.Size = new System.Drawing.Size(1875, 751);
             this.tabPage2.TabIndex = 5;
             this.tabPage2.Text = "Calcular Verniz e Presilhas";
             // 
@@ -2111,18 +2124,6 @@ namespace Logistica.Sistema_de_Logistica
             this.label47.Size = new System.Drawing.Size(446, 32);
             this.label47.TabIndex = 75;
             this.label47.Text = "PRESILHAS DE ALUMINIO PARA DECK";
-            // 
-            // label84
-            // 
-            this.label84.AutoSize = true;
-            this.label84.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label84.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label84.ForeColor = System.Drawing.Color.White;
-            this.label84.Location = new System.Drawing.Point(1427, 183);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(405, 28);
-            this.label84.TabIndex = 48;
-            this.label84.Text = "Clique na imagem para trocar de sistema.";
             // 
             // FrmPrincipalLogistica
             // 

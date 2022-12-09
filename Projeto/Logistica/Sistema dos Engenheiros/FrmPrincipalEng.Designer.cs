@@ -40,10 +40,10 @@
             this.rbEndereço = new System.Windows.Forms.RadioButton();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.cbEmpresas = new System.Windows.Forms.ComboBox();
             this.btnProposta = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -96,6 +96,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(28, 9);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -208,6 +209,18 @@
             this.panel1.Size = new System.Drawing.Size(1364, 173);
             this.panel1.TabIndex = 7;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(226, 128);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(405, 28);
+            this.label1.TabIndex = 48;
+            this.label1.Text = "Clique na imagem para trocar de sistema.";
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -247,18 +260,6 @@
             this.btnProposta.Text = "Nova Proposta";
             this.btnProposta.UseVisualStyleBackColor = true;
             this.btnProposta.Click += new System.EventHandler(this.btnProposta_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(226, 128);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(405, 28);
-            this.label1.TabIndex = 48;
-            this.label1.Text = "Clique na imagem para trocar de sistema.";
             // 
             // FrmPrincipalEng
             // 
