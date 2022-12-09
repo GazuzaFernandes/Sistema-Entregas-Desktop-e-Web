@@ -154,5 +154,19 @@ namespace Logistica.Sistema_dos_Engenheiros
             FrmEscolha escolha = new FrmEscolha();
             escolha.ShowDialog();
         }
+
+        private void FrmPrincipalEng_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Hide();
+            FrmEscolha escolha = new FrmEscolha();
+            escolha.ShowDialog();
+           
+            
+        }
+
+        private void FrmPrincipalEng_FormClosed(object sender, FormClosedEventArgs e)
+        {
+          
+        }
     }
 }

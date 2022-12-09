@@ -329,6 +329,7 @@
             this.Name = "FrmPrincipalFinanceiro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Notas Fiscais lançadas.";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPrincipalFinanceiro_FormClosed);
             this.Load += new System.EventHandler(this.FrmPrincipalFinanceiro_Load);
             this.Click += new System.EventHandler(this.FrmPrincipalFinanceiro_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

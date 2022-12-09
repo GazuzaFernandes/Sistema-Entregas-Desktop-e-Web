@@ -184,5 +184,13 @@ namespace Logistica.Sistema_do_Financeiro
             FrmEscolha escolha = new FrmEscolha();
             escolha.ShowDialog();
         }
+
+        private void FrmPrincipalFinanceiro_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+            Hide();
+            FrmEscolha escolha = new FrmEscolha();
+            escolha.ShowDialog();
+        }
     }
 }

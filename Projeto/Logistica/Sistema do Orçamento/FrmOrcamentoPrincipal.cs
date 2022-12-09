@@ -128,5 +128,13 @@ namespace Logistica.Sistema_do_Orçamento
             FrmEscolha escolha = new FrmEscolha();
             escolha.ShowDialog();
         }
+
+        private void FrmOrcamentoPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+            Hide();
+            FrmEscolha escolha = new FrmEscolha();
+            escolha.ShowDialog();
+        }
     }
 }

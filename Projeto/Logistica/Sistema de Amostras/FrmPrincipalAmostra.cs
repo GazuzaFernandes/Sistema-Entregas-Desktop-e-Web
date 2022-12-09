@@ -147,5 +147,13 @@ namespace Logistica.Sistema_de_Amostras
             FrmEscolha escolha = new FrmEscolha();
             escolha.ShowDialog();
         }
+
+        private void FrmPrincipalAmostra_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+            Hide();
+            FrmEscolha escolha = new FrmEscolha();
+            escolha.ShowDialog();
+        }
     }
 }

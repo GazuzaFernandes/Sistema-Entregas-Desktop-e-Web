@@ -2143,6 +2143,7 @@ namespace Logistica.Sistema_de_Logistica
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPrincipalLogistica_FormClosed);
             this.Load += new System.EventHandler(this.FrmPrincipalLogistica_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
