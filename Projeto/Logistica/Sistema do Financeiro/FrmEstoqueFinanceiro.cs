@@ -495,9 +495,9 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
         {
             try
             {
-                int id = 0;
-                int.TryParse(txtSaidaEstoque.Text, out id);
-                if (id > 0)
+                decimal id = 0;
+                decimal.TryParse(txtSaidaEstoque.Text, out id);
+                if (id != 0)
                 {
                     SaidadeMaterial();
                 }
@@ -611,5 +611,7 @@ namespace Projeto.Logistica.Sistema_do_Financeiro
                 txtEntradaEstoque.Enabled = false;
             }
         }
+
+        
     }
 }
