@@ -19,15 +19,20 @@ namespace Restauracao
                 OpenFileDialog od = new OpenFileDialog();
                 od.ShowDialog();
                 var arquivo = od.FileName;
-                FunctionsDataBase.RestoreDatabase("192.168.0.114",
+                FunctionsDataBase.RestoreDatabase("localhost",
                                                 "5432",
                                                 "postgres",
                                                 "q1s2e3f4t5",
                                                 "RbDesktop",
                                                 arquivo);
-                MessageBox.Show("Sistema Restaurado com Sucesso !");
+                FrmInicioRestauracao rest = new FrmInicioRestauracao();
+                rest.Show();
+                Hide();
+              
                 #endregion
-                Close();
+
+             
+                
           
             }
             catch (Exception ex)

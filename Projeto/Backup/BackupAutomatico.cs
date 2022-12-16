@@ -11,7 +11,7 @@ namespace Logistica
     {
         public class SystemRetaguarda
         {
-            private static string pastaBinPostgres = @"C:\Program Files\PostgreSQL\13\bin";
+            private static string pastaBinPostgres = @"C:\Program Files\PostgreSQL\15\bin";
             public static string GetPathApplicationConfiguration()
             {
                 var path = Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory.Replace("bin\\Debug\\", "Settings\\").Replace("bin\\Release\\", "Settings\\"));
@@ -50,7 +50,7 @@ namespace Logistica
                             Directory.CreateDirectory(pasta_salvamentto_arquivo_backup);
 
                         string backupFile = pasta_salvamentto_arquivo_backup + backupFileName 
-                            + "_" + DateTime.Now.ToString().Replace(":", "_").Replace("/", "_").Replace(" ", "_") + ".tar";
+                            + "_" + DateTime.Now.ToString().Replace(":", "_").Replace("/", "_").Replace(" ", "_") + ".rar";
 
                         string BackupString = $" --file={ backupFile} " +
                             $"--format=tar --host={ endereco_servidor } --username={ user } --port={ port } --dbname={ nome_banco_dados } -b --encoding utf8";
@@ -58,7 +58,7 @@ namespace Logistica
                         Process proc = new System.Diagnostics.Process();
 
                         proc.StartInfo.FileName = pastaBinPostgres + "\\pg_dump.exe";
-                        //PASTA BIN DO POSTGRESQL*************-C:\Program Files\PostgreSQL\14\bin
+                        //PASTA BIN DO POSTGRESQL*************-C:\Program Files\PostgreSQL\15\bin
                         proc.StartInfo.Arguments = BackupString;
                         proc.StartInfo.RedirectStandardOutput = true;//for error checks BackupString
                         proc.StartInfo.RedirectStandardError = true;
@@ -161,7 +161,7 @@ namespace Logistica
 
                 info.CreateNoWindow = true;//true para nao abrir CMD- ficar em segundo plano
                 info.UseShellExecute = false;
-                info.WorkingDirectory = @"C:\Program Files\PostgreSQL\13\bin\";
+                info.WorkingDirectory = @"C:\Program Files\PostgreSQL\15\bin\";
                 info.RedirectStandardError = true;
                 return info;
             }

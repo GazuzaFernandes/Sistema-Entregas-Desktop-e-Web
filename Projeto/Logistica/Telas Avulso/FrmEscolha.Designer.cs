@@ -28,14 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEscolha));
             this.cbSelecionar = new System.Windows.Forms.ComboBox();
             this.btnEntrar = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblMessageLoad = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,13 +68,6 @@
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             this.btnEntrar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnEntrar_MouseMove);
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 199);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(425, 48);
-            this.progressBar1.TabIndex = 3;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -88,22 +77,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // lblMessageLoad
-            // 
-            this.lblMessageLoad.AutoSize = true;
-            this.lblMessageLoad.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMessageLoad.ForeColor = System.Drawing.Color.White;
-            this.lblMessageLoad.Location = new System.Drawing.Point(12, 251);
-            this.lblMessageLoad.Name = "lblMessageLoad";
-            this.lblMessageLoad.Size = new System.Drawing.Size(42, 32);
-            this.lblMessageLoad.TabIndex = 5;
-            this.lblMessageLoad.Text = "....";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
             // label1
             // 
@@ -121,11 +94,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(464, 301);
+            this.ClientSize = new System.Drawing.Size(464, 212);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblMessageLoad);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.cbSelecionar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -147,10 +118,7 @@
 
         private ComboBox cbSelecionar;
         private Button btnEntrar;
-        private ProgressBar progressBar1;
         private PictureBox pictureBox1;
-        private Label lblMessageLoad;
-        private System.Windows.Forms.Timer timer1;
         private Label label1;
     }
 }

@@ -14,6 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Projeto.Backup.Backup;
 
 namespace Logistica.Sistema_do_Financeiro
 {
@@ -202,6 +203,7 @@ namespace Logistica.Sistema_do_Financeiro
                     var novaPergunta = "Deseja finalizar o sistema ?";
                     if (MessageBox.Show(novaPergunta, "ATEÇÃO", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
+                        Systembackup.Restauracao();
                         Application.Exit();
                     }
                     else
