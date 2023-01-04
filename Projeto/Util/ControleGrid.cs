@@ -1,4 +1,4 @@
-﻿namespace Logistica.Sistema_de_Logistica
+﻿namespace Projeto.Util
 {
     public class ControleGrid
     {
@@ -97,7 +97,7 @@
             }
         }
 
-        public void DefinirLarguras(List<int> ListaLarguras, Double larg)
+        public void DefinirLarguras(List<int> ListaLarguras, double larg)
         {
             int index = 0;
             try
@@ -109,10 +109,10 @@
                     {
 
                         //int novaLargura = Porcertagem(ListaLarguras[index]);
-                        Double lagu = Convert.ToDouble(larg);
+                        double lagu = Convert.ToDouble(larg);
 
                         //Double newLarg = ((larg - 600) * (ListaLarguras[index] / lagu)); //Antigo
-                        Double newLarg = (Double)(larg * (Convert.ToDouble(ListaLarguras[index]) / 100));
+                        double newLarg = (double)(larg * (Convert.ToDouble(ListaLarguras[index]) / 100));
                         //coluna.Width = Convert.ToInt32(newLarg * 18); //Antigo
                         coluna.Width = Convert.ToInt32(newLarg);
                         //coluna.Width = novaLargura;
@@ -130,7 +130,7 @@
         {
 
             // calcula a largura percentual relacionada a grid
-            return ((PorcentagemColuna * (grid.Width + 40)) / 100);
+            return PorcentagemColuna * (grid.Width + 40) / 100;
         }
 
         public void DefinirAlinhamento(List<string> ListaAlinhamento)
@@ -179,7 +179,7 @@
             }
         }
 
-       
+
     }
 
 }

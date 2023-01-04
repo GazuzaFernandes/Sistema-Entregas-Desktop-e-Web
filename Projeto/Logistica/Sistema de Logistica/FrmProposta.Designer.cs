@@ -580,6 +580,7 @@
             // txtCustoMaterial
             // 
             this.txtCustoMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtCustoMaterial.Cursor = System.Windows.Forms.Cursors.No;
             this.txtCustoMaterial.Enabled = false;
             this.txtCustoMaterial.Location = new System.Drawing.Point(1059, 26);
             this.txtCustoMaterial.Name = "txtCustoMaterial";

@@ -5,6 +5,7 @@ using Logistica.Sistema_de_Logistica;
 
 using Microsoft.Reporting.WinForms;
 using Projeto.Logistica.Sistema_do_Financeiro;
+using Projeto.Util;
 using System.Data;
 
 namespace Projeto.Logistica.Sistema_de_Logistica
@@ -634,7 +635,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                dgvHistorico.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 20F, GraphicsUnit.Pixel);
+                dgvHistorico.DefaultCellStyle.Font = new Font("Calibri", 20F, GraphicsUnit.Pixel);
                 var objBlControleGrid = new ControleGrid(dgvHistorico);
                 //Define quais colunas serão visíveis
                 objBlControleGrid.DefinirVisibilidade(new List<string>() { "DataComentario", "Comentario", });

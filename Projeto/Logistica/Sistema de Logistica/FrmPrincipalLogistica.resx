@@ -1156,8 +1156,24 @@ De 220m² a 249m² = R$ 620,00
 Acima de 250m² negociar o valor. 
 </value>
   </data>
+  <data name="label53.Text" xml:space="preserve">
+    <value>Usando exemplo um caibro 
+com comprimento de 3,15m dividido pelo espaçamento de 0,35.
+
+Vamos utilizar como base 1m² / pela Largura do Deck:
+45cm= 0,045mm / 65cm= 0,065mm / 70cm=0,070mm 
+10cm= 0,10mm / 15cm= 0,15mm
+
+Para saber quantas presilhas é utilizada vamos multiplicar 
+(linha 1 x linhas 2 / 3,12). O 3,12 é uma area equivale 1 m² 
+para saber quanto de presilha é utilizado por m²
+Para saber quanto vai de presilha por m²
+
+Vamos multiplicar: Presilhas m² x area m² desejada
+ (lembrando sempre colocar numero inteiro)</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>33</value>
+    <value>28</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

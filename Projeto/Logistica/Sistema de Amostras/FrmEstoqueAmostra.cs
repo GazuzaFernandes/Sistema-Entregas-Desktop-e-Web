@@ -2,7 +2,7 @@
 using DAL.Entities.Amostras;
 using DAL.Repository.Amostras;
 using Logistica.Sistema_de_Logistica;
-
+using Projeto.Util;
 using System.Data;
 
 

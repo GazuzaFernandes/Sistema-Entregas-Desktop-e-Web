@@ -5,6 +5,7 @@ using DAL.Repository.Logistica;
 using DAL.Repository.SenhaRestauracao;
 using Projeto;
 using Projeto.Logistica.Sistema_de_Logistica;
+using Projeto.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -209,6 +210,7 @@ namespace Logistica.Sistema_de_Logistica
                     #endregion
 
                     #region Status
+
                     if (cbFinalizado.Checked)//==
                         listaPropostaStatus = listaPropostaStatus.Where(p => p.Status.Equals("Finalizado")).ToList();
                     else if (cbPendente.Checked)
