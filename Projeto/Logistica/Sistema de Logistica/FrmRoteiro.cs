@@ -3,6 +3,7 @@ using DAL.Entities.Logistica;
 using DAL.Repository.Logistica;
 using DAL.Repository.SenhaRestauracao;
 using Logistica.Sistema_de_Logistica;
+using Projeto.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -298,7 +299,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                dgvSaidaMaterial.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 20F, GraphicsUnit.Pixel);
+                dgvSaidaMaterial.DefaultCellStyle.Font = new Font("Calibri", 20F, GraphicsUnit.Pixel);
                 var objBlControleGrid = new ControleGrid(dgvSaidaMaterial);
                 //Define quais colunas serão visíveis
                 objBlControleGrid.DefinirVisibilidade(new List<string>() { "Material", "UndMedida", "QtdCaixas"});

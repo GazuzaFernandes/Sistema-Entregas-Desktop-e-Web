@@ -1,18 +1,10 @@
 ﻿
 using DAL.Entities.Amostras;
 using DAL.Repository.Amostras;
-using Logistica.Sistema_de_Logistica;
 using Projeto;
 using Projeto.Logistica.Sistema_de_Amostras;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+using Projeto.Util;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using static Projeto.Backup.Backup;
 
 namespace Logistica.Sistema_de_Amostras

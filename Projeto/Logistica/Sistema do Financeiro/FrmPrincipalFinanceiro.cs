@@ -5,6 +5,7 @@ using DAL.Repository.Logistica;
 using Logistica.Sistema_de_Logistica;
 using Projeto;
 using Projeto.Logistica.Sistema_do_Financeiro;
+using Projeto.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

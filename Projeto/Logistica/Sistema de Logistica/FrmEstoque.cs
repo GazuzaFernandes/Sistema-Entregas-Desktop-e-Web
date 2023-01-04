@@ -5,6 +5,7 @@ using DAL.Repository.Logistica;
 using Logistica.Sistema_de_Logistica;
 using Microsoft.Reporting.WinForms;
 using Projeto.Logistica.Sistema_do_Financeiro;
+using Projeto.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -341,7 +342,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                dgvSaidaMaterial.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 20F, GraphicsUnit.Pixel);
+                dgvSaidaMaterial.DefaultCellStyle.Font = new Font("Calibri", 20F, GraphicsUnit.Pixel);
                 var objBlControleGrid = new ControleGrid(dgvSaidaMaterial);
                 //Define quais colunas serão visíveis
                 objBlControleGrid.DefinirVisibilidade(new List<string>()
@@ -381,7 +382,7 @@ namespace Projeto.Logistica.Sistema_de_Logistica
         {
             try
             {
-                dgvData.DefaultCellStyle.Font = new System.Drawing.Font("Calibri", 20F, GraphicsUnit.Pixel);
+                dgvData.DefaultCellStyle.Font = new Font("Calibri", 20F, GraphicsUnit.Pixel);
                 var objBlControleGrid = new ControleGrid(dgvData);
                 //Define quais colunas serão visíveis
                 objBlControleGrid.DefinirVisibilidade(new List<string>()

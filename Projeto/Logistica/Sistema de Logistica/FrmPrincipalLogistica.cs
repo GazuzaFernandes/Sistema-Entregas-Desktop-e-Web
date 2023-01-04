@@ -5,6 +5,7 @@ using DAL.Repository.Logistica;
 using DAL.Repository.SenhaRestauracao;
 using Projeto;
 using Projeto.Logistica.Sistema_de_Logistica;
+using Projeto.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -209,14 +210,29 @@ namespace Logistica.Sistema_de_Logistica
                     #endregion
 
                     #region Status
-                    if (cbFinalizado.Checked)//==
-                        listaPropostaStatus = listaPropostaStatus.Where(p => p.Status.Equals("Finalizado")).ToList();
-                    else if (cbPendente.Checked)
-                        listaPropostaStatus = listaPropostaStatus.Where(p => p.Status.Equals("Pendente")).ToList();
-                    else if (cbImediato.Checked)
-                        listaPropostaStatus = listaPropostaStatus.Where(p => p.Status.Equals("Imediato")).ToList();
-                    else if (cbCancelado.Checked)
-                        listaPropostaStatus = listaPropostaStatus.Where(p => p.Status.Equals("Cancelado")).ToList();
+                    switch (cbStatus.Text)
+                    {
+                        case "Pendente - Material na fabrica.":
+                            listaPropostaStatus = listaPropostaStatus.Where(p => p.Status.Equals("Pendente")).ToList();
+                            break;
+                        case "Imediato - Material em SP.":
+                            listaPropostaStatus = listaPropostaStatus.Where(p => p.Status.Equals("Imediato")).ToList();
+                            break;
+                        case "Finalizado - Material na Obra.":
+                            listaPropostaStatus = listaPropostaStatus.Where(p => p.Status.Equals("Finalizado")).ToList();
+                            break;
+                        case "Cancelado - Material Cancelado":
+                            listaPropostaStatus = listaPropostaStatus.Where(p => p.Status.Equals("Cancelado")).ToList();
+                            break;
+                    }
+                    //if (cbFinalizado.Checked)//==
+                    //    listaPropostaStatus = listaPropostaStatus.Where(p => p.Status.Equals("Finalizado")).ToList();
+                    //else if (cbPendente.Checked)
+                    //    listaPropostaStatus = listaPropostaStatus.Where(p => p.Status.Equals("Pendente")).ToList();
+                    //else if (cbImediato.Checked)
+                    //    listaPropostaStatus = listaPropostaStatus.Where(p => p.Status.Equals("Imediato")).ToList();
+                    //else if (cbCancelado.Checked)
+                    //    listaPropostaStatus = listaPropostaStatus.Where(p => p.Status.Equals("Cancelado")).ToList();
                     #endregion
                 }
                 dgvPrincipal.DataSource = listaPropostaStatus;

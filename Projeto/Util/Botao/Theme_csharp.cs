@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 using System.Security.Permissions;
 using System.Text;
 using System.Windows.Forms;
-using static Retaguarda.iTalk.iTalk_CheckBox;
+using static Projeto.Util.Botao.iTalk_CheckBox;
 using Timer = System.Windows.Forms.Timer;
 
 
@@ -27,7 +27,7 @@ using Timer = System.Windows.Forms.Timer;
 //
 //|------DO-NOT-REMOVE------|
 
-namespace Retaguarda.iTalk
+namespace Projeto.Util.Botao
 {
 
     #region RoundRect
@@ -110,7 +110,7 @@ namespace Retaguarda.iTalk
         #endregion
         #region EventArgs
 
-        protected override void OnTextChanged(System.EventArgs e)
+        protected override void OnTextChanged(EventArgs e)
         {
             base.OnTextChanged(e);
             iTalkTDTP.Text = Text;
@@ -122,14 +122,14 @@ namespace Retaguarda.iTalk
             Text = iTalkTDTP.Text;
         }
 
-        protected override void OnForeColorChanged(System.EventArgs e)
+        protected override void OnForeColorChanged(EventArgs e)
         {
             base.OnForeColorChanged(e);
             iTalkTDTP.ForeColor = ForeColor;
             Invalidate();
         }
 
-        protected override void OnFontChanged(System.EventArgs e)
+        protected override void OnFontChanged(EventArgs e)
         {
             base.OnFontChanged(e);
             iTalkTDTP.Font = Font;
@@ -149,7 +149,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        protected override void OnResize(System.EventArgs e)
+        protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
             if (_Multiline1)
@@ -170,7 +170,7 @@ namespace Retaguarda.iTalk
             _with1.CloseAllFigures();
         }
 
-        protected override void OnGotFocus(System.EventArgs e)
+        protected override void OnGotFocus(EventArgs e)
         {
             base.OnGotFocus(e);
             iTalkTDTP.Focus();
@@ -206,7 +206,7 @@ namespace Retaguarda.iTalk
             Size = new Size(135, 33);
             DoubleBuffered = true;
         }
-        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+        protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
             Bitmap B = new Bitmap(Width, Height);
@@ -236,7 +236,7 @@ namespace Retaguarda.iTalk
         private SolidBrush B1;
         private GraphicsPath Shape;
 
-        private System.Windows.Forms.TextBox txtDateTime;
+        private TextBox txtDateTime;
 
         public SexyDateTimePicker() : base()
         {
@@ -249,7 +249,7 @@ namespace Retaguarda.iTalk
             ForeColor = Color.DimGray;
 
             Format = DateTimePickerFormat.Short;
-            this.Enabled = true;
+            Enabled = true;
 
             P1 = new Pen(Color.FromArgb(180, 180, 180)); // P1 = Border color
             B1 = new SolidBrush(Color.White); // B1 = Rect Background color
@@ -266,17 +266,17 @@ namespace Retaguarda.iTalk
 
             txtDateTime = new TextBox();
             // 
-            this.txtDateTime.Location = new System.Drawing.Point(20, 49);
-            this.txtDateTime.MaxLength = 50;
-            this.txtDateTime.Name = "txtDateTime";
-            this.txtDateTime.TabIndex = 0;
-            this.txtDateTime.Text = "";
-            this.txtDateTime.Leave += new System.EventHandler(this.txtDateTime_Leave);
-            this.txtDateTime.Enter += new System.EventHandler(this.txtDateTime_Enter);
+            txtDateTime.Location = new Point(20, 49);
+            txtDateTime.MaxLength = 50;
+            txtDateTime.Name = "txtDateTime";
+            txtDateTime.TabIndex = 0;
+            txtDateTime.Text = "";
+            txtDateTime.Leave += new EventHandler(txtDateTime_Leave);
+            txtDateTime.Enter += new EventHandler(txtDateTime_Enter);
 
         }
 
-        private void txtDateTime_Enter(Object sender, System.EventArgs e)
+        private void txtDateTime_Enter(object sender, EventArgs e)
         {
             if (txtDateTime.Text.Length > 0)
             {
@@ -284,7 +284,7 @@ namespace Retaguarda.iTalk
                 txtDateTime.SelectionLength = txtDateTime.Text.Length;
             }
             //SetDate = true;
-            this.Value = DateTime.Now;
+            Value = DateTime.Now;
             //SetDate = false;
         }
 
@@ -292,7 +292,7 @@ namespace Retaguarda.iTalk
         {
 
         }
-        protected override void OnResize(System.EventArgs e)
+        protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
             Shape = new GraphicsPath();
@@ -316,7 +316,7 @@ namespace Retaguarda.iTalk
             //var icon = Utils.ExtractIcon("shell32.dll", 22, false).ToBitmap();
             //var iconCalendar = new Bitmap(GUI.Properties.Resources.icon_calendar);
             //e.Graphics.DrawImage(icon, new Point(this.ClientRectangle.X + this.ClientRectangle.Width - 25, this.ClientRectangle.Y + 5));
-            e.Graphics.DrawString(this.Text, this.Font, new SolidBrush(Color.Black), new PointF(3, 3));
+            e.Graphics.DrawString(Text, Font, new SolidBrush(Color.Black), new PointF(3, 3));
             //this.Controls.Add(txtDateTime);
             G.Dispose();
             B.Dispose();
@@ -347,13 +347,13 @@ namespace Retaguarda.iTalk
         protected override void OnResize(EventArgs e)
         {
             if (buttonWidth == 0) measureButtonWidth();
-            var margin = (this.ClientSize.Height - editbox.PreferredHeight) / 2;
+            var margin = (ClientSize.Height - editbox.PreferredHeight) / 2;
             editbox.Location = new Point(margin, margin);
-            editbox.Width = this.ClientSize.Width - margin - buttonWidth;
+            editbox.Width = ClientSize.Width - margin - buttonWidth;
             base.OnResize(e);
         }
 
-        
+
 
         private void measureButtonWidth()
         {
@@ -1565,7 +1565,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        public override System.Drawing.Color BackgroundTopGradient
+        public override Color BackgroundTopGradient
         {
             get
             {
@@ -1573,7 +1573,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        public override System.Drawing.Color BackgroundBottomGradient
+        public override Color BackgroundBottomGradient
         {
             get
             {
@@ -1581,7 +1581,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        public override System.Drawing.Color DropdownTopGradient
+        public override Color DropdownTopGradient
         {
             get
             {
@@ -1589,7 +1589,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        public override System.Drawing.Color DropdownBottomGradient
+        public override Color DropdownBottomGradient
         {
             get
             {
@@ -1597,7 +1597,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        public override System.Drawing.Color DroppedDownItemBackground
+        public override Color DroppedDownItemBackground
         {
             get
             {
@@ -1605,7 +1605,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        public override System.Drawing.Color Separator
+        public override Color Separator
         {
             get
             {
@@ -1613,7 +1613,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        public override System.Drawing.Color ImageMargin
+        public override Color ImageMargin
         {
             get
             {
@@ -1625,7 +1625,7 @@ namespace Retaguarda.iTalk
     public class DefaultCColorTable : xColorTable
     {
 
-        public override System.Drawing.Color CheckedBackground
+        public override Color CheckedBackground
         {
             get
             {
@@ -1633,7 +1633,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        public override System.Drawing.Color CheckedSelectedBackground
+        public override Color CheckedSelectedBackground
         {
             get
             {
@@ -1641,7 +1641,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        public override System.Drawing.Color SelectionBorder
+        public override Color SelectionBorder
         {
             get
             {
@@ -1649,7 +1649,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        public override System.Drawing.Color SelectionTopGradient
+        public override Color SelectionTopGradient
         {
             get
             {
@@ -1657,7 +1657,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        public override System.Drawing.Color SelectionMidGradient
+        public override Color SelectionMidGradient
         {
             get
             {
@@ -1665,7 +1665,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        public override System.Drawing.Color SelectionBottomGradient
+        public override Color SelectionBottomGradient
         {
             get
             {
@@ -1673,7 +1673,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        public override System.Drawing.Color PressedBackground
+        public override Color PressedBackground
         {
             get
             {
@@ -1681,7 +1681,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        public override System.Drawing.Color TextColor
+        public override Color TextColor
         {
             get
             {
@@ -1689,7 +1689,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        public override System.Drawing.Color Background
+        public override Color Background
         {
             get
             {
@@ -1697,7 +1697,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        public override System.Drawing.Color DropdownBorder
+        public override Color DropdownBorder
         {
             get
             {
@@ -1705,7 +1705,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        public override System.Drawing.Color Arrow
+        public override Color Arrow
         {
             get
             {
@@ -1713,7 +1713,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        public override System.Drawing.Color OverflowBackground
+        public override Color OverflowBackground
         {
             get
             {
@@ -1755,32 +1755,32 @@ namespace Retaguarda.iTalk
             }
         }
 
-        protected override void OnRenderToolStripBackground(System.Windows.Forms.ToolStripRenderEventArgs e)
+        protected override void OnRenderToolStripBackground(ToolStripRenderEventArgs e)
         {
             base.OnRenderToolStripBackground(e);
 
             // Menu strip bar gradient
-            using (LinearGradientBrush LGB = new LinearGradientBrush(e.AffectedBounds, this.ColorTable.BackgroundTopGradient, this.ColorTable.BackgroundBottomGradient, LinearGradientMode.Vertical))
+            using (LinearGradientBrush LGB = new LinearGradientBrush(e.AffectedBounds, ColorTable.BackgroundTopGradient, ColorTable.BackgroundBottomGradient, LinearGradientMode.Vertical))
             {
                 e.Graphics.FillRectangle(LGB, e.AffectedBounds);
             }
 
         }
 
-        protected override void OnRenderToolStripBorder(System.Windows.Forms.ToolStripRenderEventArgs e)
+        protected override void OnRenderToolStripBorder(ToolStripRenderEventArgs e)
         {
             if (e.ToolStrip.Parent == null)
             {
                 // Draw border around the menu drop-down
                 Rectangle Rect = new Rectangle(0, 0, e.ToolStrip.Width - 1, e.ToolStrip.Height - 1);
-                using (Pen P1 = new Pen(this.ColorTable.CommonColorTable.DropdownBorder))
+                using (Pen P1 = new Pen(ColorTable.CommonColorTable.DropdownBorder))
                 {
                     e.Graphics.DrawRectangle(P1, Rect);
                 }
 
 
                 // Fill the gap between menu drop-down and owner item
-                using (SolidBrush B1 = new SolidBrush(this.ColorTable.DroppedDownItemBackground))
+                using (SolidBrush B1 = new SolidBrush(ColorTable.DroppedDownItemBackground))
                 {
                     e.Graphics.FillRectangle(B1, e.ConnectedArea);
                 }
@@ -1788,7 +1788,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        protected override void OnRenderMenuItemBackground(System.Windows.Forms.ToolStripItemRenderEventArgs e)
+        protected override void OnRenderMenuItemBackground(ToolStripItemRenderEventArgs e)
         {
             if (e.Item.Enabled)
             {
@@ -1797,12 +1797,12 @@ namespace Retaguarda.iTalk
                     if (!e.Item.IsOnDropDown)
                     {
                         Rectangle SelRect = new Rectangle(0, 0, e.Item.Width - 1, e.Item.Height - 1);
-                        RectDrawing.DrawSelection(e.Graphics, this.ColorTable.CommonColorTable, SelRect);
+                        RectDrawing.DrawSelection(e.Graphics, ColorTable.CommonColorTable, SelRect);
                     }
                     else
                     {
                         Rectangle SelRect = new Rectangle(2, 0, e.Item.Width - 4, e.Item.Height - 1);
-                        RectDrawing.DrawSelection(e.Graphics, this.ColorTable.CommonColorTable, SelRect);
+                        RectDrawing.DrawSelection(e.Graphics, ColorTable.CommonColorTable, SelRect);
                     }
                 }
 
@@ -1811,43 +1811,43 @@ namespace Retaguarda.iTalk
                     Rectangle BorderRect = new Rectangle(0, 0, e.Item.Width - 1, e.Item.Height);
                     // Fill the background
                     Rectangle BackgroundRect = new Rectangle(1, 1, e.Item.Width - 2, e.Item.Height + 2);
-                    using (SolidBrush B1 = new SolidBrush(this.ColorTable.DroppedDownItemBackground))
+                    using (SolidBrush B1 = new SolidBrush(ColorTable.DroppedDownItemBackground))
                     {
                         e.Graphics.FillRectangle(B1, BackgroundRect);
                     }
 
 
                     // Draw border
-                    using (Pen P1 = new Pen(this.ColorTable.CommonColorTable.DropdownBorder))
+                    using (Pen P1 = new Pen(ColorTable.CommonColorTable.DropdownBorder))
                     {
-                        RectDrawing.DrawRoundedRectangle(e.Graphics, P1, System.Convert.ToSingle(BorderRect.X), System.Convert.ToSingle(BorderRect.Y), System.Convert.ToSingle(BorderRect.Width), System.Convert.ToSingle(BorderRect.Height), 2);
+                        RectDrawing.DrawRoundedRectangle(e.Graphics, P1, Convert.ToSingle(BorderRect.X), Convert.ToSingle(BorderRect.Y), Convert.ToSingle(BorderRect.Width), Convert.ToSingle(BorderRect.Height), 2);
                     }
 
                 }
-                e.Item.ForeColor = this.ColorTable.CommonColorTable.TextColor;
+                e.Item.ForeColor = ColorTable.CommonColorTable.TextColor;
             }
         }
 
-        protected override void OnRenderItemText(System.Windows.Forms.ToolStripItemTextRenderEventArgs e)
+        protected override void OnRenderItemText(ToolStripItemTextRenderEventArgs e)
         {
-            e.TextColor = this.ColorTable.CommonColorTable.TextColor;
+            e.TextColor = ColorTable.CommonColorTable.TextColor;
             base.OnRenderItemText(e);
         }
 
-        protected override void OnRenderItemCheck(System.Windows.Forms.ToolStripItemImageRenderEventArgs e)
+        protected override void OnRenderItemCheck(ToolStripItemImageRenderEventArgs e)
         {
             base.OnRenderItemCheck(e);
 
             Rectangle rect = new Rectangle(3, 1, e.Item.Height - 3, e.Item.Height - 3);
-            Color c = default(Color);
+            Color c = default;
 
             if (e.Item.Selected)
             {
-                c = this.ColorTable.CommonColorTable.CheckedSelectedBackground;
+                c = ColorTable.CommonColorTable.CheckedSelectedBackground;
             }
             else
             {
-                c = this.ColorTable.CommonColorTable.CheckedBackground;
+                c = ColorTable.CommonColorTable.CheckedBackground;
             }
 
             using (SolidBrush b = new SolidBrush(c))
@@ -1856,7 +1856,7 @@ namespace Retaguarda.iTalk
             }
 
 
-            using (Pen p = new Pen(this.ColorTable.CommonColorTable.SelectionBorder))
+            using (Pen p = new Pen(ColorTable.CommonColorTable.SelectionBorder))
             {
                 e.Graphics.DrawRectangle(p, rect);
             }
@@ -1865,44 +1865,44 @@ namespace Retaguarda.iTalk
             e.Graphics.DrawString("ü", new Font("Wingdings", 13, FontStyle.Regular), Brushes.Black, new Point(4, 2));
         }
 
-        protected override void OnRenderSeparator(System.Windows.Forms.ToolStripSeparatorRenderEventArgs e)
+        protected override void OnRenderSeparator(ToolStripSeparatorRenderEventArgs e)
         {
             base.OnRenderSeparator(e);
             int PT1 = 28;
-            int PT2 = System.Convert.ToInt32(e.Item.Width);
+            int PT2 = Convert.ToInt32(e.Item.Width);
             int Y = 3;
-            using (Pen P1 = new Pen(this.ColorTable.Separator))
+            using (Pen P1 = new Pen(ColorTable.Separator))
             {
                 e.Graphics.DrawLine(P1, PT1, Y, PT2, Y);
             }
 
         }
 
-        protected override void OnRenderImageMargin(System.Windows.Forms.ToolStripRenderEventArgs e)
+        protected override void OnRenderImageMargin(ToolStripRenderEventArgs e)
         {
             base.OnRenderImageMargin(e);
 
             Rectangle BackgroundRect = new Rectangle(0, -1, e.ToolStrip.Width, e.ToolStrip.Height + 1);
             using (LinearGradientBrush LGB = new LinearGradientBrush(BackgroundRect,
-                    this.ColorTable.DropdownTopGradient,
-                    this.ColorTable.DropdownBottomGradient,
+                    ColorTable.DropdownTopGradient,
+                    ColorTable.DropdownBottomGradient,
                     LinearGradientMode.Vertical))
             {
                 e.Graphics.FillRectangle(LGB, BackgroundRect);
             }
 
 
-            using (SolidBrush B1 = new SolidBrush(this.ColorTable.ImageMargin))
+            using (SolidBrush B1 = new SolidBrush(ColorTable.ImageMargin))
             {
                 e.Graphics.FillRectangle(B1, e.AffectedBounds);
             }
 
         }
 
-        protected override void OnRenderButtonBackground(System.Windows.Forms.ToolStripItemRenderEventArgs e)
+        protected override void OnRenderButtonBackground(ToolStripItemRenderEventArgs e)
         {
             Rectangle rect = new Rectangle(0, 0, e.Item.Width - 1, e.Item.Height - 1);
-            bool @checked = System.Convert.ToBoolean(((ToolStripButton)e.Item).Checked);
+            bool @checked = Convert.ToBoolean(((ToolStripButton)e.Item).Checked);
             bool drawBorder = false;
 
             if (@checked)
@@ -1911,7 +1911,7 @@ namespace Retaguarda.iTalk
 
                 if (e.Item.Selected && !e.Item.Pressed)
                 {
-                    using (SolidBrush b = new SolidBrush(this.ColorTable.CommonColorTable.CheckedSelectedBackground))
+                    using (SolidBrush b = new SolidBrush(ColorTable.CommonColorTable.CheckedSelectedBackground))
                     {
                         e.Graphics.FillRectangle(b, rect);
                     }
@@ -1919,7 +1919,7 @@ namespace Retaguarda.iTalk
                 }
                 else
                 {
-                    using (SolidBrush b = new SolidBrush(this.ColorTable.CommonColorTable.CheckedBackground))
+                    using (SolidBrush b = new SolidBrush(ColorTable.CommonColorTable.CheckedBackground))
                     {
                         e.Graphics.FillRectangle(b, rect);
                     }
@@ -1933,7 +1933,7 @@ namespace Retaguarda.iTalk
                 if (e.Item.Pressed)
                 {
                     drawBorder = true;
-                    using (SolidBrush b = new SolidBrush(this.ColorTable.CommonColorTable.PressedBackground))
+                    using (SolidBrush b = new SolidBrush(ColorTable.CommonColorTable.PressedBackground))
                     {
                         e.Graphics.FillRectangle(b, rect);
                     }
@@ -1942,14 +1942,14 @@ namespace Retaguarda.iTalk
                 else if (e.Item.Selected)
                 {
                     drawBorder = true;
-                    RectDrawing.DrawSelection(e.Graphics, this.ColorTable.CommonColorTable, rect);
+                    RectDrawing.DrawSelection(e.Graphics, ColorTable.CommonColorTable, rect);
                 }
 
             }
 
             if (drawBorder)
             {
-                using (Pen p = new Pen(this.ColorTable.CommonColorTable.SelectionBorder))
+                using (Pen p = new Pen(ColorTable.CommonColorTable.SelectionBorder))
                 {
                     e.Graphics.DrawRectangle(p, rect);
                 }
@@ -1957,7 +1957,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        protected override void OnRenderDropDownButtonBackground(System.Windows.Forms.ToolStripItemRenderEventArgs e)
+        protected override void OnRenderDropDownButtonBackground(ToolStripItemRenderEventArgs e)
         {
             Rectangle rect = new Rectangle(0, 0, e.Item.Width - 1, e.Item.Height - 1);
             bool drawBorder = false;
@@ -1965,7 +1965,7 @@ namespace Retaguarda.iTalk
             if (e.Item.Pressed)
             {
                 drawBorder = true;
-                using (SolidBrush b = new SolidBrush(this.ColorTable.CommonColorTable.PressedBackground))
+                using (SolidBrush b = new SolidBrush(ColorTable.CommonColorTable.PressedBackground))
                 {
                     e.Graphics.FillRectangle(b, rect);
                 }
@@ -1974,12 +1974,12 @@ namespace Retaguarda.iTalk
             else if (e.Item.Selected)
             {
                 drawBorder = true;
-                RectDrawing.DrawSelection(e.Graphics, this.ColorTable.CommonColorTable, rect);
+                RectDrawing.DrawSelection(e.Graphics, ColorTable.CommonColorTable, rect);
             }
 
             if (drawBorder)
             {
-                using (Pen p = new Pen(this.ColorTable.CommonColorTable.SelectionBorder))
+                using (Pen p = new Pen(ColorTable.CommonColorTable.SelectionBorder))
                 {
                     e.Graphics.DrawRectangle(p, rect);
                 }
@@ -2002,17 +2002,17 @@ namespace Retaguarda.iTalk
                 {
                     drawBorder = true;
                     drawSeparator = false;
-                    SolidBrush b = new SolidBrush(this.ColorTable.CommonColorTable.PressedBackground);
+                    SolidBrush b = new SolidBrush(ColorTable.CommonColorTable.PressedBackground);
                     try
                     {
                         e.Graphics.FillRectangle(b, borderRect);
                     }
                     finally
                     {
-                        flag = (b != null);
+                        flag = b != null;
                         if (flag)
                         {
-                            ((IDisposable)b).Dispose();
+                            b.Dispose();
                         }
                     }
                 }
@@ -2022,30 +2022,30 @@ namespace Retaguarda.iTalk
                     if (flag)
                     {
                         drawBorder = true;
-                        RectDrawing.DrawSelection(e.Graphics, this.ColorTable.CommonColorTable, borderRect);
+                        RectDrawing.DrawSelection(e.Graphics, ColorTable.CommonColorTable, borderRect);
                     }
                 }
                 flag = item.ButtonPressed;
                 if (flag)
                 {
-                    SolidBrush b2 = new SolidBrush(this.ColorTable.CommonColorTable.PressedBackground);
+                    SolidBrush b2 = new SolidBrush(ColorTable.CommonColorTable.PressedBackground);
                     try
                     {
                         e.Graphics.FillRectangle(b2, btnRect);
                     }
                     finally
                     {
-                        flag = (b2 != null);
+                        flag = b2 != null;
                         if (flag)
                         {
-                            ((IDisposable)b2).Dispose();
+                            b2.Dispose();
                         }
                     }
                 }
                 flag = drawBorder;
                 if (flag)
                 {
-                    Pen p = new Pen(this.ColorTable.CommonColorTable.SelectionBorder);
+                    Pen p = new Pen(ColorTable.CommonColorTable.SelectionBorder);
                     try
                     {
                         e.Graphics.DrawRectangle(p, borderRect);
@@ -2057,13 +2057,13 @@ namespace Retaguarda.iTalk
                     }
                     finally
                     {
-                        flag = (p != null);
+                        flag = p != null;
                         if (flag)
                         {
-                            ((IDisposable)p).Dispose();
+                            p.Dispose();
                         }
                     }
-                    this.DrawCustomArrow(e.Graphics, item);
+                    DrawCustomArrow(e.Graphics, item);
                 }
             }
         }
@@ -2071,33 +2071,33 @@ namespace Retaguarda.iTalk
 
         private void DrawCustomArrow(Graphics g, ToolStripSplitButton item)
         {
-            int dropWidth = System.Convert.ToInt32(item.DropDownButtonBounds.Width - 1);
-            int dropHeight = System.Convert.ToInt32(item.DropDownButtonBounds.Height - 1);
+            int dropWidth = Convert.ToInt32(item.DropDownButtonBounds.Width - 1);
+            int dropHeight = Convert.ToInt32(item.DropDownButtonBounds.Height - 1);
             float triangleWidth = dropWidth / 2.0F + 1;
-            float triangleLeft = System.Convert.ToSingle(item.DropDownButtonBounds.Left + (dropWidth - triangleWidth) / 2.0F);
+            float triangleLeft = Convert.ToSingle(item.DropDownButtonBounds.Left + (dropWidth - triangleWidth) / 2.0F);
             float triangleHeight = triangleWidth / 2.0F;
-            float triangleTop = System.Convert.ToSingle(item.DropDownButtonBounds.Top + (dropHeight - triangleHeight) / 2.0F + 1);
+            float triangleTop = Convert.ToSingle(item.DropDownButtonBounds.Top + (dropHeight - triangleHeight) / 2.0F + 1);
             RectangleF arrowRect = new RectangleF(triangleLeft, triangleTop, triangleWidth, triangleHeight);
 
-            this.DrawCustomArrow(g, item, Rectangle.Round(arrowRect));
+            DrawCustomArrow(g, item, Rectangle.Round(arrowRect));
         }
 
         private void DrawCustomArrow(Graphics g, ToolStripItem item, Rectangle rect)
         {
-            ToolStripArrowRenderEventArgs arrowEventArgs = new ToolStripArrowRenderEventArgs(g, item, rect, this.ColorTable.CommonColorTable.Arrow, ArrowDirection.Down);
+            ToolStripArrowRenderEventArgs arrowEventArgs = new ToolStripArrowRenderEventArgs(g, item, rect, ColorTable.CommonColorTable.Arrow, ArrowDirection.Down);
             base.OnRenderArrow(arrowEventArgs);
         }
 
-        protected override void OnRenderOverflowButtonBackground(System.Windows.Forms.ToolStripItemRenderEventArgs e)
+        protected override void OnRenderOverflowButtonBackground(ToolStripItemRenderEventArgs e)
         {
-            Rectangle rect = default(Rectangle);
-            Rectangle rectEnd = default(Rectangle);
+            Rectangle rect = default;
+            Rectangle rectEnd = default;
             rect = new Rectangle(0, 0, e.Item.Width - 1, e.Item.Height - 2);
             rectEnd = new Rectangle(rect.X - 5, rect.Y, rect.Width - 5, rect.Height);
 
             if (e.Item.Pressed)
             {
-                using (SolidBrush b = new SolidBrush(this.ColorTable.CommonColorTable.PressedBackground))
+                using (SolidBrush b = new SolidBrush(ColorTable.CommonColorTable.PressedBackground))
                 {
                     e.Graphics.FillRectangle(b, rect);
                 }
@@ -2105,34 +2105,34 @@ namespace Retaguarda.iTalk
             }
             else if (e.Item.Selected)
             {
-                RectDrawing.DrawSelection(e.Graphics, this.ColorTable.CommonColorTable, rect);
+                RectDrawing.DrawSelection(e.Graphics, ColorTable.CommonColorTable, rect);
             }
             else
             {
-                using (SolidBrush b = new SolidBrush(this.ColorTable.CommonColorTable.OverflowBackground))
+                using (SolidBrush b = new SolidBrush(ColorTable.CommonColorTable.OverflowBackground))
                 {
                     e.Graphics.FillRectangle(b, rect);
                 }
 
             }
 
-            using (Pen P1 = new Pen(this.ColorTable.CommonColorTable.Background))
+            using (Pen P1 = new Pen(ColorTable.CommonColorTable.Background))
             {
-                RectDrawing.DrawRoundedRectangle(e.Graphics, P1, System.Convert.ToSingle(rectEnd.X), System.Convert.ToSingle(rectEnd.Y), System.Convert.ToSingle(rectEnd.Width), System.Convert.ToSingle(rectEnd.Height), 3);
+                RectDrawing.DrawRoundedRectangle(e.Graphics, P1, Convert.ToSingle(rectEnd.X), Convert.ToSingle(rectEnd.Y), Convert.ToSingle(rectEnd.Width), Convert.ToSingle(rectEnd.Height), 3);
             }
 
 
             // Icon
-            int w = System.Convert.ToInt32(rect.Width - 1);
-            int h = System.Convert.ToInt32(rect.Height - 1);
+            int w = Convert.ToInt32(rect.Width - 1);
+            int h = Convert.ToInt32(rect.Height - 1);
             float triangleWidth = w / 2.0F + 1;
-            float triangleLeft = System.Convert.ToSingle(rect.Left + (w - triangleWidth) / 2.0F + 3);
+            float triangleLeft = Convert.ToSingle(rect.Left + (w - triangleWidth) / 2.0F + 3);
             float triangleHeight = triangleWidth / 2.0F;
-            float triangleTop = System.Convert.ToSingle(rect.Top + (h - triangleHeight) / 2.0F + 7);
+            float triangleTop = Convert.ToSingle(rect.Top + (h - triangleHeight) / 2.0F + 7);
             RectangleF arrowRect = new RectangleF(triangleLeft, triangleTop, triangleWidth, triangleHeight);
-            this.DrawCustomArrow(e.Graphics, e.Item, Rectangle.Round(arrowRect));
+            DrawCustomArrow(e.Graphics, e.Item, Rectangle.Round(arrowRect));
 
-            using (Pen p = new Pen(this.ColorTable.CommonColorTable.Arrow))
+            using (Pen p = new Pen(ColorTable.CommonColorTable.Arrow))
             {
                 e.Graphics.DrawLine(p, triangleLeft + 2, triangleTop - 2, triangleLeft + triangleWidth - 2, triangleTop - 2);
             }
@@ -2148,12 +2148,12 @@ namespace Retaguarda.iTalk
 
         public static void DrawSelection(Graphics G, xColorTable ColorTable, Rectangle Rect)
         {
-            Rectangle TopRect = default(Rectangle);
-            Rectangle BottomRect = default(Rectangle);
+            Rectangle TopRect = default;
+            Rectangle BottomRect = default;
             Rectangle FillRect = new Rectangle(Rect.X + 1, Rect.Y + 1, Rect.Width - 1, Rect.Height - 1);
 
             TopRect = FillRect;
-            TopRect.Height -= System.Convert.ToInt32(TopRect.Height / 2);
+            TopRect.Height -= Convert.ToInt32(TopRect.Height / 2);
             BottomRect = new Rectangle(TopRect.X, TopRect.Bottom, TopRect.Width, FillRect.Height - TopRect.Height);
 
             // Top gradient
@@ -2173,7 +2173,7 @@ namespace Retaguarda.iTalk
             // Border
             using (Pen P1 = new Pen(ColorTable.SelectionBorder))
             {
-                RectDrawing.DrawRoundedRectangle(G, P1, System.Convert.ToSingle(Rect.X), System.Convert.ToSingle(Rect.Y), System.Convert.ToSingle(Rect.Width), System.Convert.ToSingle(Rect.Height), 2);
+                DrawRoundedRectangle(G, P1, Convert.ToSingle(Rect.X), Convert.ToSingle(Rect.Y), Convert.ToSingle(Rect.Width), Convert.ToSingle(Rect.Height), 2);
             }
 
         }
@@ -2183,13 +2183,13 @@ namespace Retaguarda.iTalk
 
             using (GraphicsPath gp = new GraphicsPath())
             {
-                gp.AddLine(X + Rad, Y, X + W - (Rad * 2), Y);
-                gp.AddArc(X + W - (Rad * 2), Y, Rad * 2, Rad * 2, 270, 90);
-                gp.AddLine(X + W, Y + Rad, X + W, Y + H - (Rad * 2));
-                gp.AddArc(X + W - (Rad * 2), Y + H - (Rad * 2), Rad * 2, Rad * 2, 0, 90);
-                gp.AddLine(X + W - (Rad * 2), Y + H, X + Rad, Y + H);
-                gp.AddArc(X, Y + H - (Rad * 2), Rad * 2, Rad * 2, 90, 90);
-                gp.AddLine(X, Y + H - (Rad * 2), X, Y + Rad);
+                gp.AddLine(X + Rad, Y, X + W - Rad * 2, Y);
+                gp.AddArc(X + W - Rad * 2, Y, Rad * 2, Rad * 2, 270, 90);
+                gp.AddLine(X + W, Y + Rad, X + W, Y + H - Rad * 2);
+                gp.AddArc(X + W - Rad * 2, Y + H - Rad * 2, Rad * 2, Rad * 2, 0, 90);
+                gp.AddLine(X + W - Rad * 2, Y + H, X + Rad, Y + H);
+                gp.AddArc(X, Y + H - Rad * 2, Rad * 2, Rad * 2, 90, 90);
+                gp.AddLine(X, Y + H - Rad * 2, X, Y + Rad);
                 gp.AddArc(X, Y, Rad * 2, Rad * 2, 180, 90);
                 gp.CloseFigure();
 
@@ -2339,8 +2339,8 @@ namespace Retaguarda.iTalk
 
                 if (_IsParentForm)
                 {
-                    this.ParentForm.FormBorderStyle = FormBorderStyle.None;
-                    this.ParentForm.TransparencyKey = Color.Fuchsia;
+                    ParentForm.FormBorderStyle = FormBorderStyle.None;
+                    ParentForm.TransparencyKey = Color.Fuchsia;
 
                     if (!DesignMode)
                     {
@@ -2362,7 +2362,7 @@ namespace Retaguarda.iTalk
             Invalidate();
         }
 
-        protected override void OnMouseDown(System.Windows.Forms.MouseEventArgs e)
+        protected override void OnMouseDown(MouseEventArgs e)
         {
             base.OnMouseDown(e);
             if (e.Button == MouseButtons.Left)
@@ -2386,13 +2386,13 @@ namespace Retaguarda.iTalk
             }
         }
 
-        protected override void OnMouseUp(System.Windows.Forms.MouseEventArgs e)
+        protected override void OnMouseUp(MouseEventArgs e)
         {
             base.OnMouseUp(e);
             Cap = false;
         }
 
-        protected override void OnMouseMove(System.Windows.Forms.MouseEventArgs e)
+        protected override void OnMouseMove(MouseEventArgs e)
         {
             base.OnMouseMove(e);
             if (!(_IsParentForm && ParentForm.WindowState == FormWindowState.Maximized))
@@ -2404,11 +2404,11 @@ namespace Retaguarda.iTalk
             }
             if (Cap)
             {
-                Parent.Location = (System.Drawing.Point)((object)(System.Convert.ToDouble(MousePosition) - System.Convert.ToDouble(MouseP)));
+                Parent.Location = (Point)(object)(Convert.ToDouble(MousePosition) - Convert.ToDouble(MouseP));
             }
         }
 
-        protected override void OnInvalidated(System.Windows.Forms.InvalidateEventArgs e)
+        protected override void OnInvalidated(InvalidateEventArgs e)
         {
             base.OnInvalidated(e);
             ParentForm.Text = Text;
@@ -2419,7 +2419,7 @@ namespace Retaguarda.iTalk
             base.OnPaintBackground(e);
         }
 
-        protected override void OnTextChanged(System.EventArgs e)
+        protected override void OnTextChanged(EventArgs e)
         {
             base.OnTextChanged(e);
             Invalidate();
@@ -2605,8 +2605,8 @@ namespace Retaguarda.iTalk
         protected override void OnCreateControl()
         {
             base.OnCreateControl();
-            this.ParentForm.FormBorderStyle = FormBorderStyle.None;
-            this.ParentForm.TransparencyKey = Color.Fuchsia;
+            ParentForm.FormBorderStyle = FormBorderStyle.None;
+            ParentForm.TransparencyKey = Color.Fuchsia;
         }
 
         protected override void CreateHandle()
@@ -2616,7 +2616,7 @@ namespace Retaguarda.iTalk
 
         public iTalk_ThemeContainer()
         {
-            SetStyle((ControlStyles)(139270), true);
+            SetStyle((ControlStyles)139270, true);
             Dock = DockStyle.Fill;
             MoveHeight = 25;
             Padding = new Padding(3, 28, 3, 28);
@@ -2626,14 +2626,14 @@ namespace Retaguarda.iTalk
             DoubleBuffered = true;
         }
 
-        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+        protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
 
             Bitmap B = new Bitmap(Width, Height);
             Graphics G = Graphics.FromImage(B);
             Rectangle ClientRectangle = new Rectangle(0, 0, Width - 1, Height - 1);
-            Color TransparencyKey = this.ParentForm.TransparencyKey;
+            Color TransparencyKey = ParentForm.TransparencyKey;
 
             G.SmoothingMode = SmoothingMode.Default;
             G.Clear(TransparencyKey);
@@ -2644,8 +2644,8 @@ namespace Retaguarda.iTalk
             G.FillPath(new SolidBrush(Color.FromArgb(246, 246, 246)), RoundRectangle.RoundRect(new Rectangle(2, 20, Width - 5, Height - 42), BorderCurve));
 
             // Patch the header with a rectangle that has a curve so its border will remain within container bounds
-            G.FillPath(new SolidBrush(Color.FromArgb(52, 52, 52)), RoundRectangle.RoundRect(new Rectangle(2, 2, (int)(Width / 2 + 2), 16), BorderCurve));
-            G.FillPath(new SolidBrush(Color.FromArgb(52, 52, 52)), RoundRectangle.RoundRect(new Rectangle((int)(Width / 2 - 3), 2, (int)(Width / 2), 16), BorderCurve));
+            G.FillPath(new SolidBrush(Color.FromArgb(52, 52, 52)), RoundRectangle.RoundRect(new Rectangle(2, 2, Width / 2 + 2, 16), BorderCurve));
+            G.FillPath(new SolidBrush(Color.FromArgb(52, 52, 52)), RoundRectangle.RoundRect(new Rectangle(Width / 2 - 3, 2, Width / 2, 16), BorderCurve));
             // Fill the header rectangle below the patch
             G.FillRectangle(new SolidBrush(Color.FromArgb(52, 52, 52)), new Rectangle(2, 15, Width - 5, 10));
 
@@ -2664,7 +2664,7 @@ namespace Retaguarda.iTalk
 
             G.DrawString(_TextBottom, new Font("Trebuchet MS", 10, FontStyle.Bold), new SolidBrush(Color.FromArgb(221, 221, 221)), 5, Height - 23);
 
-            e.Graphics.DrawImage((Image)(B.Clone()), 0, 0);
+            e.Graphics.DrawImage((Image)B.Clone(), 0, 0);
             G.Dispose();
             B.Dispose();
         }
@@ -2702,38 +2702,38 @@ namespace Retaguarda.iTalk
             base.OnMouseClick(e);
             if (i > 0 & i < 28)
             {
-                this.FindForm().WindowState = FormWindowState.Minimized;
+                FindForm().WindowState = FormWindowState.Minimized;
             }
             else if (i > 30 & i < 75)
             {
-                this.FindForm().Close();
+                FindForm().Close();
             }
 
             State = MouseState.Down;
         }
 
-        protected override void OnMouseEnter(System.EventArgs e)
+        protected override void OnMouseEnter(EventArgs e)
         {
             base.OnMouseEnter(e);
             State = MouseState.Over;
             Invalidate();
         }
 
-        protected override void OnMouseLeave(System.EventArgs e)
+        protected override void OnMouseLeave(EventArgs e)
         {
             base.OnMouseLeave(e);
             State = MouseState.None;
             Invalidate();
         }
 
-        protected override void OnMouseUp(System.Windows.Forms.MouseEventArgs e)
+        protected override void OnMouseUp(MouseEventArgs e)
         {
             base.OnMouseUp(e);
             State = MouseState.Over;
             Invalidate();
         }
 
-        protected override void OnMouseMove(System.Windows.Forms.MouseEventArgs e)
+        protected override void OnMouseMove(MouseEventArgs e)
         {
             base.OnMouseMove(e);
             i = e.Location.X;
@@ -2759,11 +2759,11 @@ namespace Retaguarda.iTalk
         protected override void OnCreateControl()
         {
             base.OnCreateControl();
-            Point location = new Point(checked(this.FindForm().Width - 81), -1);
-            this.Location = location;
+            Point location = new Point(checked(FindForm().Width - 81), -1);
+            Location = location;
         }
 
-        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+        protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
 
@@ -2793,7 +2793,7 @@ namespace Retaguarda.iTalk
                 case MouseState.Over:
                     if (i > 0 & i < 28)
                     {
-                        LinearGradientBrush xMinimizeGradient = new LinearGradientBrush(this.MinimizeRect, Color.FromArgb(76, 76, 76, 76), Color.FromArgb(48, 48, 48), 90f);
+                        LinearGradientBrush xMinimizeGradient = new LinearGradientBrush(MinimizeRect, Color.FromArgb(76, 76, 76, 76), Color.FromArgb(48, 48, 48), 90f);
                         G.FillPath(xMinimizeGradient, GP_MinimizeRect);
                         G.DrawPath(new Pen(Color.FromArgb(40, 40, 40)), GP_MinimizeRect);
                         G.DrawString("0", new Font("Marlett", 11, FontStyle.Regular), new SolidBrush(Color.FromArgb(221, 221, 221)), MinimizeRect.Width - 22, MinimizeRect.Height - 16);
@@ -2848,7 +2848,7 @@ namespace Retaguarda.iTalk
         private Pen P3;
         private Image _Image;
         private Size _ImageSize;
-        private Boolean _Enabled;
+        private bool _Enabled;
         private StringAlignment _TextAlignment = StringAlignment.Center;
         private Color _TextColor = Color.DimGray;// Color.FromArgb(150, 150, 150);
         private ContentAlignment _ImageAlign = ContentAlignment.MiddleLeft;
@@ -2858,7 +2858,7 @@ namespace Retaguarda.iTalk
 
         private static PointF ImageLocation(StringFormat SF, SizeF Area, SizeF ImageArea)
         {
-            PointF MyPoint = default(PointF);
+            PointF MyPoint = default;
             switch (SF.Alignment)
             {
                 case StringAlignment.Center:
@@ -2936,7 +2936,7 @@ namespace Retaguarda.iTalk
         #endregion
         #region Properties
 
-        public Boolean Enabled
+        public bool Enabled
         {
             get { return _Enabled; }
             set
@@ -2990,21 +2990,21 @@ namespace Retaguarda.iTalk
 
         public StringAlignment TextAlignment
         {
-            get { return this._TextAlignment; }
+            get { return _TextAlignment; }
             set
             {
-                this._TextAlignment = value;
-                this.Invalidate();
+                _TextAlignment = value;
+                Invalidate();
             }
         }
 
         public override Color ForeColor
         {
-            get { return this._TextColor; }
+            get { return _TextColor; }
             set
             {
-                this._TextColor = value;
-                this.Invalidate();
+                _TextColor = value;
+                Invalidate();
             }
         }
 
@@ -3031,7 +3031,7 @@ namespace Retaguarda.iTalk
             base.OnMouseLeave(e);
         }
 
-        protected override void OnTextChanged(System.EventArgs e)
+        protected override void OnTextChanged(EventArgs e)
         {
             Invalidate();
             base.OnTextChanged(e);
@@ -3053,7 +3053,7 @@ namespace Retaguarda.iTalk
             P1 = new Pen(Color.FromArgb(190, 190, 190)); // P1 = Border color
         }
 
-        protected override void OnResize(System.EventArgs e)
+        protected override void OnResize(EventArgs e)
         {
             if (Width > 0 && Height > 0)
             {
@@ -3089,7 +3089,7 @@ namespace Retaguarda.iTalk
                 case 0:
                     _G.FillPath(InactiveGB, Shape);
                     _G.DrawPath(P1, Shape);
-                    if ((Image == null))
+                    if (Image == null)
                     {
                         _G.DrawString(Text, Font, new SolidBrush(ForeColor), R1, new StringFormat
                         {
@@ -3111,7 +3111,7 @@ namespace Retaguarda.iTalk
                     _G.FillPath(PressedGB, Shape);
                     _G.DrawPath(P3, Shape);
 
-                    if ((Image == null))
+                    if (Image == null)
                     {
                         _G.DrawString(Text, Font, new SolidBrush(ForeColor), R1, new StringFormat
                         {
@@ -3160,7 +3160,7 @@ namespace Retaguarda.iTalk
 
         private static PointF ImageLocation(StringFormat SF, SizeF Area, SizeF ImageArea)
         {
-            PointF MyPoint = default(PointF);
+            PointF MyPoint = default;
             switch (SF.Alignment)
             {
                 case StringAlignment.Center:
@@ -3258,11 +3258,11 @@ namespace Retaguarda.iTalk
 
         public StringAlignment TextAlignment
         {
-            get { return this._TextAlignment; }
+            get { return _TextAlignment; }
             set
             {
-                this._TextAlignment = value;
-                this.Invalidate();
+                _TextAlignment = value;
+                Invalidate();
             }
         }
 
@@ -3306,7 +3306,7 @@ namespace Retaguarda.iTalk
             base.OnMouseLeave(e);
         }
 
-        protected override void OnTextChanged(System.EventArgs e)
+        protected override void OnTextChanged(EventArgs e)
         {
             Invalidate();
             base.OnTextChanged(e);
@@ -3327,7 +3327,7 @@ namespace Retaguarda.iTalk
             P1 = new Pen(Color.FromArgb(0, 118, 176));
         }
 
-        protected override void OnResize(System.EventArgs e)
+        protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
             if (Width > 0 && Height > 0)
@@ -3364,7 +3364,7 @@ namespace Retaguarda.iTalk
                 case 0:
                     _G.FillPath(InactiveGB, Shape);
                     _G.DrawPath(P1, Shape);
-                    if ((Image == null))
+                    if (Image == null)
                     {
                         _G.DrawString(Text, Font, new SolidBrush(ForeColor), R1, new StringFormat
                         {
@@ -3385,7 +3385,7 @@ namespace Retaguarda.iTalk
                 case 1:
                     _G.FillPath(PressedGB, Shape);
                     _G.DrawPath(P3, Shape);
-                    if ((Image == null))
+                    if (Image == null)
                     {
                         _G.DrawString(Text, Font, new SolidBrush(ForeColor), R1, new StringFormat
                         {
@@ -3435,7 +3435,7 @@ namespace Retaguarda.iTalk
 
         public GraphicsPath Pill(Rectangle Rectangle, PillStyle PillStyle)
         {
-            GraphicsPath functionReturnValue = default(GraphicsPath);
+            GraphicsPath functionReturnValue = default;
             functionReturnValue = new GraphicsPath();
 
             if (PillStyle.Left)
@@ -3525,7 +3525,7 @@ namespace Retaguarda.iTalk
             Height = 23;
         }
 
-        protected override void OnMouseUp(System.Windows.Forms.MouseEventArgs e)
+        protected override void OnMouseUp(MouseEventArgs e)
         {
             base.OnMouseUp(e);
             Toggled = !Toggled;
@@ -3547,18 +3547,18 @@ namespace Retaguarda.iTalk
         void AnimationTimer_Tick(object sender, EventArgs e)
         {
             //  Create a slide animation when toggled on/off
-            if ((_Toggled == true))
+            if (_Toggled == true)
             {
-                if ((ToggleLocation < 100))
+                if (ToggleLocation < 100)
                 {
                     ToggleLocation += 10;
-                    this.Invalidate(false);
+                    Invalidate(false);
                 }
             }
-            else if ((ToggleLocation > 0))
+            else if (ToggleLocation > 0)
             {
                 ToggleLocation -= 10;
-                this.Invalidate(false);
+                Invalidate(false);
             }
         }
 
@@ -3569,32 +3569,32 @@ namespace Retaguarda.iTalk
             G.Clear(Parent.BackColor);
             checked
             {
-                Point point = new Point(0, (int)Math.Round(unchecked((double)this.Height / 2.0 - (double)this.cHandle.Height / 2.0)));
+                Point point = new Point(0, (int)Math.Round(unchecked(Height / 2.0 - cHandle.Height / 2.0)));
                 Point arg_A8_0 = point;
-                Point point2 = new Point(0, (int)Math.Round(unchecked((double)this.Height / 2.0 + (double)this.cHandle.Height / 2.0)));
+                Point point2 = new Point(0, (int)Math.Round(unchecked(Height / 2.0 + cHandle.Height / 2.0)));
                 LinearGradientBrush Gradient = new LinearGradientBrush(arg_A8_0, point2, Color.FromArgb(250, 250, 250), Color.FromArgb(240, 240, 240));
-                this.Bar = new Rectangle(8, 10, this.Width - 21, this.Height - 21);
+                Bar = new Rectangle(8, 10, Width - 21, Height - 21);
 
                 G.SmoothingMode = SmoothingMode.AntiAlias;
-                G.FillPath(Gradient, (GraphicsPath)this.Pill(0, (int)Math.Round(unchecked((double)this.Height / 2.0 - (double)this.cHandle.Height / 2.0)), this.Width - 1, this.cHandle.Height - 5, new iTalk_Toggle.PillStyle
+                G.FillPath(Gradient, (GraphicsPath)Pill(0, (int)Math.Round(unchecked(Height / 2.0 - cHandle.Height / 2.0)), Width - 1, cHandle.Height - 5, new PillStyle
                 {
                     Left = true,
                     Right = true
                 }));
-                G.DrawPath(new Pen(Color.FromArgb(177, 177, 176)), (GraphicsPath)this.Pill(0, (int)Math.Round(unchecked((double)this.Height / 2.0 - (double)this.cHandle.Height / 2.0)), this.Width - 1, this.cHandle.Height - 5, new iTalk_Toggle.PillStyle
+                G.DrawPath(new Pen(Color.FromArgb(177, 177, 176)), (GraphicsPath)Pill(0, (int)Math.Round(unchecked(Height / 2.0 - cHandle.Height / 2.0)), Width - 1, cHandle.Height - 5, new PillStyle
                 {
                     Left = true,
                     Right = true
                 }));
                 Gradient.Dispose();
-                switch (this.ToggleType)
+                switch (ToggleType)
                 {
-                    case iTalk_Toggle._Type.YesNo:
+                    case _Type.YesNo:
                         {
-                            bool toggled = this.Toggled;
+                            bool toggled = Toggled;
                             if (toggled)
                             {
-                                G.DrawString("Yes", new Font("Segoe UI", 7f, FontStyle.Regular), Brushes.Gray, (float)(this.Bar.X + 7), (float)this.Bar.Y, new StringFormat
+                                G.DrawString("Yes", new Font("Segoe UI", 7f, FontStyle.Regular), Brushes.Gray, Bar.X + 7, Bar.Y, new StringFormat
                                 {
                                     Alignment = StringAlignment.Center,
                                     LineAlignment = StringAlignment.Center
@@ -3602,7 +3602,7 @@ namespace Retaguarda.iTalk
                             }
                             else
                             {
-                                G.DrawString("No", new Font("Segoe UI", 7f, FontStyle.Regular), Brushes.Gray, (float)(this.Bar.X + 18), (float)this.Bar.Y, new StringFormat
+                                G.DrawString("No", new Font("Segoe UI", 7f, FontStyle.Regular), Brushes.Gray, Bar.X + 18, Bar.Y, new StringFormat
                                 {
                                     Alignment = StringAlignment.Center,
                                     LineAlignment = StringAlignment.Center
@@ -3610,12 +3610,12 @@ namespace Retaguarda.iTalk
                             }
                             break;
                         }
-                    case iTalk_Toggle._Type.OnOff:
+                    case _Type.OnOff:
                         {
-                            bool toggled = this.Toggled;
+                            bool toggled = Toggled;
                             if (toggled)
                             {
-                                G.DrawString("On", new Font("Segoe UI", 7f, FontStyle.Regular), Brushes.Gray, (float)(this.Bar.X + 7), (float)this.Bar.Y, new StringFormat
+                                G.DrawString("On", new Font("Segoe UI", 7f, FontStyle.Regular), Brushes.Gray, Bar.X + 7, Bar.Y, new StringFormat
                                 {
                                     Alignment = StringAlignment.Center,
                                     LineAlignment = StringAlignment.Center
@@ -3623,7 +3623,7 @@ namespace Retaguarda.iTalk
                             }
                             else
                             {
-                                G.DrawString("Off", new Font("Segoe UI", 7f, FontStyle.Regular), Brushes.Gray, (float)(this.Bar.X + 18), (float)this.Bar.Y, new StringFormat
+                                G.DrawString("Off", new Font("Segoe UI", 7f, FontStyle.Regular), Brushes.Gray, Bar.X + 18, Bar.Y, new StringFormat
                                 {
                                     Alignment = StringAlignment.Center,
                                     LineAlignment = StringAlignment.Center
@@ -3631,12 +3631,12 @@ namespace Retaguarda.iTalk
                             }
                             break;
                         }
-                    case iTalk_Toggle._Type.IO:
+                    case _Type.IO:
                         {
-                            bool toggled = this.Toggled;
+                            bool toggled = Toggled;
                             if (toggled)
                             {
-                                G.DrawString("I", new Font("Segoe UI", 7f, FontStyle.Regular), Brushes.Gray, (float)(this.Bar.X + 7), (float)this.Bar.Y, new StringFormat
+                                G.DrawString("I", new Font("Segoe UI", 7f, FontStyle.Regular), Brushes.Gray, Bar.X + 7, Bar.Y, new StringFormat
                                 {
                                     Alignment = StringAlignment.Center,
                                     LineAlignment = StringAlignment.Center
@@ -3644,7 +3644,7 @@ namespace Retaguarda.iTalk
                             }
                             else
                             {
-                                G.DrawString("O", new Font("Segoe UI", 7f, FontStyle.Regular), Brushes.Gray, (float)(this.Bar.X + 18), (float)this.Bar.Y, new StringFormat
+                                G.DrawString("O", new Font("Segoe UI", 7f, FontStyle.Regular), Brushes.Gray, Bar.X + 18, Bar.Y, new StringFormat
                                 {
                                     Alignment = StringAlignment.Center,
                                     LineAlignment = StringAlignment.Center
@@ -3653,8 +3653,8 @@ namespace Retaguarda.iTalk
                             break;
                         }
                 }
-                G.FillEllipse(new SolidBrush(Color.FromArgb(249, 249, 249)), this.Bar.X + (int)Math.Round(unchecked((double)this.Bar.Width * ((double)this.ToggleLocation / 80.0))) - (int)Math.Round((double)this.cHandle.Width / 2.0), this.Bar.Y + (int)Math.Round((double)this.Bar.Height / 2.0) - (int)Math.Round(unchecked((double)this.cHandle.Height / 2.0 - 1.0)), this.cHandle.Width, this.cHandle.Height - 5);
-                G.DrawEllipse(new Pen(Color.FromArgb(177, 177, 176)), this.Bar.X + (int)Math.Round(unchecked((double)this.Bar.Width * ((double)this.ToggleLocation / 80.0) - (double)checked((int)Math.Round((double)this.cHandle.Width / 2.0)))), this.Bar.Y + (int)Math.Round((double)this.Bar.Height / 2.0) - (int)Math.Round(unchecked((double)this.cHandle.Height / 2.0 - 1.0)), this.cHandle.Width, this.cHandle.Height - 5);
+                G.FillEllipse(new SolidBrush(Color.FromArgb(249, 249, 249)), Bar.X + (int)Math.Round(unchecked(Bar.Width * (ToggleLocation / 80.0))) - (int)Math.Round(cHandle.Width / 2.0), Bar.Y + (int)Math.Round(Bar.Height / 2.0) - (int)Math.Round(unchecked(cHandle.Height / 2.0 - 1.0)), cHandle.Width, cHandle.Height - 5);
+                G.DrawEllipse(new Pen(Color.FromArgb(177, 177, 176)), Bar.X + (int)Math.Round(unchecked(Bar.Width * (ToggleLocation / 80.0) - checked((int)Math.Round(cHandle.Width / 2.0)))), Bar.Y + (int)Math.Round(Bar.Height / 2.0) - (int)Math.Round(unchecked(cHandle.Height / 2.0 - 1.0)), cHandle.Width, cHandle.Height - 5);
             }
         }
     }
@@ -3685,7 +3685,7 @@ namespace Retaguarda.iTalk
             LinkColor = Color.FromArgb(51, 153, 225);
             ActiveLinkColor = Color.FromArgb(0, 101, 202);
             VisitedLinkColor = Color.FromArgb(0, 101, 202);
-            LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            LinkBehavior = LinkBehavior.NeverUnderline;
         }
     }
 
@@ -3833,7 +3833,7 @@ namespace Retaguarda.iTalk
         #endregion
         #region EventArgs
 
-        protected override void OnTextChanged(System.EventArgs e)
+        protected override void OnTextChanged(EventArgs e)
         {
             base.OnTextChanged(e);
             iTalkTB.Text = Text;
@@ -3845,14 +3845,14 @@ namespace Retaguarda.iTalk
             Text = iTalkTB.Text;
         }
 
-        protected override void OnForeColorChanged(System.EventArgs e)
+        protected override void OnForeColorChanged(EventArgs e)
         {
             base.OnForeColorChanged(e);
             iTalkTB.ForeColor = ForeColor;
             Invalidate();
         }
 
-        protected override void OnFontChanged(System.EventArgs e)
+        protected override void OnFontChanged(EventArgs e)
         {
             base.OnFontChanged(e);
             iTalkTB.Font = Font;
@@ -3877,7 +3877,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        protected override void OnResize(System.EventArgs e)
+        protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
             if (_Multiline)
@@ -3898,7 +3898,7 @@ namespace Retaguarda.iTalk
             _with1.CloseAllFigures();
         }
 
-        protected override void OnGotFocus(System.EventArgs e)
+        protected override void OnGotFocus(EventArgs e)
         {
             base.OnGotFocus(e);
             iTalkTB.Focus();
@@ -3937,7 +3937,7 @@ namespace Retaguarda.iTalk
             Size = new Size(135, 43);
             DoubleBuffered = true;
         }
-        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+        protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
             Bitmap B = new Bitmap(Width, Height);
@@ -4064,7 +4064,7 @@ namespace Retaguarda.iTalk
         #endregion
         #region EventArgs
 
-        protected override void OnTextChanged(System.EventArgs e)
+        protected override void OnTextChanged(EventArgs e)
         {
 
             base.OnTextChanged(e);
@@ -4077,14 +4077,14 @@ namespace Retaguarda.iTalk
             Text = iTalkTB.Text;
         }
 
-        protected override void OnForeColorChanged(System.EventArgs e)
+        protected override void OnForeColorChanged(EventArgs e)
         {
             base.OnForeColorChanged(e);
             iTalkTB.ForeColor = ForeColor;
             Invalidate();
         }
 
-        protected override void OnFontChanged(System.EventArgs e)
+        protected override void OnFontChanged(EventArgs e)
         {
             base.OnFontChanged(e);
             iTalkTB.Font = Font;
@@ -4109,7 +4109,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        protected override void OnResize(System.EventArgs e)
+        protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
             if (_Multiline)
@@ -4130,7 +4130,7 @@ namespace Retaguarda.iTalk
             _with1.CloseAllFigures();
         }
 
-        protected override void OnGotFocus(System.EventArgs e)
+        protected override void OnGotFocus(EventArgs e)
         {
             base.OnGotFocus(e);
             iTalkTB.Focus();
@@ -4170,7 +4170,7 @@ namespace Retaguarda.iTalk
             Size = new Size(135, 33);
             DoubleBuffered = true;
         }
-        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+        protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
             Bitmap B = new Bitmap(Width, Height);
@@ -4260,14 +4260,14 @@ namespace Retaguarda.iTalk
         #endregion
         #region EventArgs
 
-        protected override void OnForeColorChanged(System.EventArgs e)
+        protected override void OnForeColorChanged(EventArgs e)
         {
             base.OnForeColorChanged(e);
             iTalkRTB.ForeColor = ForeColor;
             Invalidate();
         }
 
-        protected override void OnFontChanged(System.EventArgs e)
+        protected override void OnFontChanged(EventArgs e)
         {
             base.OnFontChanged(e);
             iTalkRTB.Font = Font;
@@ -4277,14 +4277,14 @@ namespace Retaguarda.iTalk
             base.OnPaintBackground(e);
         }
 
-        protected override void OnSizeChanged(System.EventArgs e)
+        protected override void OnSizeChanged(EventArgs e)
         {
             base.OnSizeChanged(e);
             iTalkRTB.Size = new Size(Width - 13, Height - 11);
         }
 
 
-        protected override void OnResize(System.EventArgs e)
+        protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
 
@@ -4338,15 +4338,15 @@ namespace Retaguarda.iTalk
             TextChanged += _TextChanged;
         }
 
-        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+        protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            Bitmap B = new Bitmap(this.Width, this.Height);
+            Bitmap B = new Bitmap(Width, Height);
             Graphics G = Graphics.FromImage(B);
             G.SmoothingMode = SmoothingMode.AntiAlias;
             G.Clear(Color.Transparent);
-            G.FillPath(Brushes.White, this.Shape);
-            G.DrawPath(new Pen(Color.FromArgb(180, 180, 180)), this.Shape);
+            G.FillPath(Brushes.White, Shape);
+            G.DrawPath(new Pen(Color.FromArgb(180, 180, 180)), Shape);
             G.Dispose();
             e.Graphics.DrawImage((Image)B.Clone(), 0, 0);
             B.Dispose();
@@ -4457,7 +4457,7 @@ namespace Retaguarda.iTalk
         #endregion
         #region  EventArgs
 
-        protected override void OnResize(System.EventArgs e)
+        protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
             Height = 28;
@@ -4469,7 +4469,7 @@ namespace Retaguarda.iTalk
             Shape.CloseAllFigures();
         }
 
-        protected override void OnMouseMove(System.Windows.Forms.MouseEventArgs e)
+        protected override void OnMouseMove(MouseEventArgs e)
         {
             base.OnMouseMove(e);
             Xval = e.Location.X;
@@ -4486,21 +4486,21 @@ namespace Retaguarda.iTalk
             }
         }
 
-        protected override void OnMouseDown(System.Windows.Forms.MouseEventArgs e)
+        protected override void OnMouseDown(MouseEventArgs e)
         {
             base.OnMouseClick(e);
-            if (Xval > this.Width - 23 && Xval < this.Width - 3)
+            if (Xval > Width - 23 && Xval < Width - 3)
             {
                 if (Yval < 15)
                 {
-                    if ((Value + 1) <= _Maximum)
+                    if (Value + 1 <= _Maximum)
                     {
                         _Value++;
                     }
                 }
                 else
                 {
-                    if ((Value - 1) >= _Minimum)
+                    if (Value - 1 >= _Minimum)
                     {
                         _Value--;
                     }
@@ -4514,14 +4514,14 @@ namespace Retaguarda.iTalk
             Invalidate();
         }
 
-        protected override void OnKeyPress(System.Windows.Forms.KeyPressEventArgs e)
+        protected override void OnKeyPress(KeyPressEventArgs e)
         {
             base.OnKeyPress(e);
             try
             {
                 if (KeyboardNum == true)
                 {
-                    _Value = long.Parse((_Value).ToString() + e.KeyChar.ToString().ToString());
+                    _Value = long.Parse(_Value.ToString() + e.KeyChar.ToString().ToString());
                 }
                 if (_Value > _Maximum)
                 {
@@ -4533,7 +4533,7 @@ namespace Retaguarda.iTalk
             }
         }
 
-        protected override void OnKeyUp(System.Windows.Forms.KeyEventArgs e)
+        protected override void OnKeyUp(KeyEventArgs e)
         {
             base.OnKeyUp(e);
             if (e.KeyCode == Keys.Back)
@@ -4554,7 +4554,7 @@ namespace Retaguarda.iTalk
             base.OnMouseWheel(e);
             if (e.Delta > 0)
             {
-                if ((Value + 1) <= _Maximum)
+                if (Value + 1 <= _Maximum)
                 {
                     _Value++;
                 }
@@ -4562,7 +4562,7 @@ namespace Retaguarda.iTalk
             }
             else
             {
-                if ((Value - 1) >= _Minimum)
+                if (Value - 1 >= _Minimum)
                 {
                     _Value--;
                 }
@@ -4593,17 +4593,17 @@ namespace Retaguarda.iTalk
 
         public void Increment(int Value)
         {
-            this._Value += Value;
+            _Value += Value;
             Invalidate();
         }
 
         public void Decrement(int Value)
         {
-            this._Value -= Value;
+            _Value -= Value;
             Invalidate();
         }
 
-        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+        protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
             Bitmap B = new Bitmap(Width, Height);
@@ -4631,10 +4631,10 @@ namespace Retaguarda.iTalk
             switch (MyStringAlignment)
             {
                 case _TextAlignment.Near:
-                    G.DrawString(System.Convert.ToString(Value), Font, new SolidBrush(ForeColor), new Rectangle(5, 0, Width - 1, Height - 1), new StringFormat() { Alignment = StringAlignment.Near, LineAlignment = StringAlignment.Center });
+                    G.DrawString(Convert.ToString(Value), Font, new SolidBrush(ForeColor), new Rectangle(5, 0, Width - 1, Height - 1), new StringFormat() { Alignment = StringAlignment.Near, LineAlignment = StringAlignment.Center });
                     break;
                 case _TextAlignment.Center:
-                    G.DrawString(System.Convert.ToString(Value), Font, new SolidBrush(ForeColor), new Rectangle(0, 0, Width - 1, Height - 1), new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
+                    G.DrawString(Convert.ToString(Value), Font, new SolidBrush(ForeColor), new Rectangle(0, 0, Width - 1, Height - 1), new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
                     break;
             }
 
@@ -4662,21 +4662,21 @@ namespace Retaguarda.iTalk
 
         public override Color ForeColor
         {
-            get { return this._TextColor; }
+            get { return _TextColor; }
             set
             {
-                this._TextColor = value;
-                this.Invalidate();
+                _TextColor = value;
+                Invalidate();
             }
         }
 
         public Color BubbleColor
         {
-            get { return this._BubbleColor; }
+            get { return _BubbleColor; }
             set
             {
-                this._BubbleColor = value;
-                this.Invalidate();
+                _BubbleColor = value;
+                Invalidate();
             }
         }
 
@@ -4702,7 +4702,7 @@ namespace Retaguarda.iTalk
             Font = new Font("Segoe UI", 10);
         }
 
-        protected override void OnResize(System.EventArgs e)
+        protected override void OnResize(EventArgs e)
         {
             Shape = new GraphicsPath();
 
@@ -4720,7 +4720,7 @@ namespace Retaguarda.iTalk
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            Bitmap B = new Bitmap(this.Width, this.Height);
+            Bitmap B = new Bitmap(Width, Height);
             Graphics G = Graphics.FromImage(B);
             var _G = G;
             _G.SmoothingMode = SmoothingMode.HighQuality;
@@ -4768,21 +4768,21 @@ namespace Retaguarda.iTalk
 
         public override Color ForeColor
         {
-            get { return this._TextColor; }
+            get { return _TextColor; }
             set
             {
-                this._TextColor = value;
-                this.Invalidate();
+                _TextColor = value;
+                Invalidate();
             }
         }
 
         public Color BubbleColor
         {
-            get { return this._BubbleColor; }
+            get { return _BubbleColor; }
             set
             {
-                this._BubbleColor = value;
-                this.Invalidate();
+                _BubbleColor = value;
+                Invalidate();
             }
         }
 
@@ -4808,7 +4808,7 @@ namespace Retaguarda.iTalk
             Font = new Font("Segoe UI", 10);
         }
 
-        protected override void OnResize(System.EventArgs e)
+        protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
             Shape = new GraphicsPath();
@@ -4826,7 +4826,7 @@ namespace Retaguarda.iTalk
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            Bitmap B = new Bitmap(this.Width, this.Height);
+            Bitmap B = new Bitmap(Width, Height);
             Graphics G = Graphics.FromImage(B);
 
             var _G = G;
@@ -4837,7 +4837,7 @@ namespace Retaguarda.iTalk
             // Fill the body of the bubble with the specified color
             _G.FillPath(new SolidBrush(_BubbleColor), Shape);
             // Draw the string specified in 'Text' property
-            _G.DrawString(Text, Font, new SolidBrush(ForeColor), (new Rectangle(6, 4, Width - 15, Height)));
+            _G.DrawString(Text, Font, new SolidBrush(ForeColor), new Rectangle(6, 4, Width - 15, Height));
 
             // Draw a polygon on the right side of the bubble
             if (_DrawBubbleArrow == true)
@@ -4867,10 +4867,10 @@ namespace Retaguarda.iTalk
         public iTalk_Separator()
         {
             SetStyle(ControlStyles.ResizeRedraw, true);
-            this.Size = new Size(120, 10);
+            Size = new Size(120, 10);
         }
 
-        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+        protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
             e.Graphics.DrawLine(new Pen(Color.FromArgb(184, 183, 188)), 0, 5, Width, 5);
@@ -4895,7 +4895,7 @@ namespace Retaguarda.iTalk
             DoubleBuffered = true;
         }
 
-        protected override void OnResize(System.EventArgs e)
+        protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
 
@@ -4908,7 +4908,7 @@ namespace Retaguarda.iTalk
             _with1.CloseAllFigures();
         }
 
-        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+        protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
             Bitmap B = new Bitmap(Width, Height);
@@ -4937,12 +4937,12 @@ namespace Retaguarda.iTalk
             SetStyle(ControlStyles.UserPaint | ControlStyles.SupportsTransparentBackColor, true);
             BackColor = Color.Transparent;
             DoubleBuffered = true;
-            this.Size = new Size(212, 104);
-            this.MinimumSize = new Size(136, 50);
-            this.Padding = new Padding(5, 28, 5, 5);
+            Size = new Size(212, 104);
+            MinimumSize = new Size(136, 50);
+            Padding = new Padding(5, 28, 5, 5);
         }
 
-        protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+        protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
             Bitmap B = new Bitmap(Width, Height);
@@ -5032,13 +5032,13 @@ namespace Retaguarda.iTalk
             base.OnClick(e);
         }
 
-        protected override void OnTextChanged(System.EventArgs e)
+        protected override void OnTextChanged(EventArgs e)
         {
             Invalidate();
             base.OnTextChanged(e);
         }
 
-        protected override void OnResize(System.EventArgs e)
+        protected override void OnResize(EventArgs e)
         {
             if (Width > 0 && Height > 0)
             {
@@ -5128,7 +5128,7 @@ namespace Retaguarda.iTalk
         #endregion
         #region EventArgs
 
-        protected override void OnTextChanged(System.EventArgs e)
+        protected override void OnTextChanged(EventArgs e)
         {
             Invalidate();
             base.OnTextChanged(e);
@@ -5140,7 +5140,7 @@ namespace Retaguarda.iTalk
             Height = 15;
         }
 
-        protected override void OnMouseDown(System.Windows.Forms.MouseEventArgs e)
+        protected override void OnMouseDown(MouseEventArgs e)
         {
             if (!_Checked)
                 Checked = true;
@@ -5164,7 +5164,7 @@ namespace Retaguarda.iTalk
 
             foreach (Control _Control in Parent.Controls)
             {
-                if (!object.ReferenceEquals(_Control, this) && _Control is iTalk_RadioButton)
+                if (!ReferenceEquals(_Control, this) && _Control is iTalk_RadioButton)
                 {
                     ((iTalk_RadioButton)_Control).Checked = false;
                 }
@@ -5220,20 +5220,20 @@ namespace Retaguarda.iTalk
         {
             get
             {
-                if (this._Value == 0)
+                if (_Value == 0)
                 {
                     return 0;
                 }
-                return this._Value;
+                return _Value;
             }
             set
             {
-                if (value > this._Maximum)
+                if (value > _Maximum)
                 {
-                    value = this._Maximum;
+                    value = _Maximum;
                 }
-                this._Value = value;
-                this.Invalidate();
+                _Value = value;
+                Invalidate();
             }
         }
 
@@ -5241,16 +5241,16 @@ namespace Retaguarda.iTalk
         {
             get
             {
-                return this._Maximum;
+                return _Maximum;
             }
             set
             {
-                if (value < this._Value)
+                if (value < _Value)
                 {
-                    this._Value = value;
+                    _Value = value;
                 }
-                this._Maximum = value;
-                this.Invalidate();
+                _Maximum = value;
+                Invalidate();
             }
         }
 
@@ -5308,15 +5308,15 @@ namespace Retaguarda.iTalk
 
         public iTalk_Listview()
         {
-            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            this.DoubleBuffered = true;
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            DoubleBuffered = true;
             HeaderStyle = ColumnHeaderStyle.Nonclickable;
-            BorderStyle = System.Windows.Forms.BorderStyle.None;
+            BorderStyle = BorderStyle.None;
         }
 
         protected override void OnHandleCreated(EventArgs e)
         {
-            iTalk_Listview.SetWindowTheme(this.Handle, "explorer", null);
+            SetWindowTheme(Handle, "explorer", null);
             base.OnHandleCreated(e);
         }
     }
@@ -5402,7 +5402,7 @@ namespace Retaguarda.iTalk
             SetStyle((ControlStyles)139286, true);
             SetStyle(ControlStyles.Selectable, false);
 
-            DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            DrawMode = DrawMode.OwnerDrawFixed;
             DropDownStyle = ComboBoxStyle.DropDownList;
 
             BackColor = Color.FromArgb(246, 246, 246);
@@ -5416,8 +5416,8 @@ namespace Retaguarda.iTalk
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            LinearGradientBrush LGB = default(LinearGradientBrush);
-            GraphicsPath GP = default(GraphicsPath);
+            LinearGradientBrush LGB = default;
+            GraphicsPath GP = default;
 
             e.Graphics.Clear(BackColor);
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
@@ -5568,30 +5568,30 @@ namespace Retaguarda.iTalk
 
         public void Increment(int Val)
         {
-            this._Value += Val;
+            _Value += Val;
             Invalidate();
         }
 
         public void Decrement(int Val)
         {
-            this._Value -= Val;
+            _Value -= Val;
             Invalidate();
         }
 
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            using (Bitmap bitmap = new Bitmap(this.Width, this.Height))
+            using (Bitmap bitmap = new Bitmap(Width, Height))
             {
                 using (Graphics graphics = Graphics.FromImage(bitmap))
                 {
                     graphics.SmoothingMode = SmoothingMode.AntiAlias;
-                    graphics.Clear(this.BackColor);
-                    using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle, this._ProgressColor1, this._ProgressColor2, LinearGradientMode.ForwardDiagonal))
+                    graphics.Clear(BackColor);
+                    using (LinearGradientBrush brush = new LinearGradientBrush(ClientRectangle, _ProgressColor1, _ProgressColor2, LinearGradientMode.ForwardDiagonal))
                     {
                         using (Pen pen = new Pen(brush, 14f))
                         {
-                            switch (this.ProgressShapeVal)
+                            switch (ProgressShapeVal)
                             {
                                 case _ProgressShape.Round:
                                     pen.StartCap = LineCap.Round;
@@ -5603,15 +5603,15 @@ namespace Retaguarda.iTalk
                                     pen.EndCap = LineCap.Flat;
                                     break;
                             }
-                            graphics.DrawArc(pen, 0x12, 0x12, (this.Width - 0x23) - 2, (this.Height - 0x23) - 2, -90, (int)Math.Round((double)((360.0 / ((double)this._Maximum)) * this._Value)));
+                            graphics.DrawArc(pen, 0x12, 0x12, Width - 0x23 - 2, Height - 0x23 - 2, -90, (int)Math.Round((double)(360.0 / _Maximum * _Value)));
                         }
                     }
-                    using (LinearGradientBrush brush2 = new LinearGradientBrush(this.ClientRectangle, Color.FromArgb(0x34, 0x34, 0x34), Color.FromArgb(0x34, 0x34, 0x34), LinearGradientMode.Vertical))
+                    using (LinearGradientBrush brush2 = new LinearGradientBrush(ClientRectangle, Color.FromArgb(0x34, 0x34, 0x34), Color.FromArgb(0x34, 0x34, 0x34), LinearGradientMode.Vertical))
                     {
-                        graphics.FillEllipse(brush2, 0x18, 0x18, (this.Width - 0x30) - 1, (this.Height - 0x30) - 1);
+                        graphics.FillEllipse(brush2, 0x18, 0x18, Width - 0x30 - 1, Height - 0x30 - 1);
                     }
-                    SizeF MS = graphics.MeasureString(Convert.ToString(Convert.ToInt32((100 / _Maximum) * _Value)), Font);
-                    graphics.DrawString(Convert.ToString(Convert.ToInt32((100 / _Maximum) * _Value)), Font, Brushes.White, Convert.ToInt32(Width / 2 - MS.Width / 2), Convert.ToInt32(Height / 2 - MS.Height / 2));
+                    SizeF MS = graphics.MeasureString(Convert.ToString(Convert.ToInt32(100 / _Maximum * _Value)), Font);
+                    graphics.DrawString(Convert.ToString(Convert.ToInt32(100 / _Maximum * _Value)), Font, Brushes.White, Convert.ToInt32(Width / 2 - MS.Width / 2), Convert.ToInt32(Height / 2 - MS.Height / 2));
                     e.Graphics.DrawImage(bitmap, 0, 0);
                     graphics.Dispose();
                     bitmap.Dispose();
@@ -5672,7 +5672,7 @@ namespace Retaguarda.iTalk
         protected override void OnEnabledChanged(EventArgs e)
         {
             base.OnEnabledChanged(e);
-            AnimationSpeed.Enabled = this.Enabled;
+            AnimationSpeed.Enabled = Enabled;
         }
 
         protected override void OnHandleCreated(EventArgs e)
@@ -5692,14 +5692,14 @@ namespace Retaguarda.iTalk
             {
                 IndicatorIndex -= 1;
             }
-            this.Invalidate(false);
+            Invalidate(false);
         }
 
         #endregion
 
         public iTalk_ProgressIndicator()
         {
-            this.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.ResizeRedraw | ControlStyles.OptimizedDoubleBuffer, true);
+            SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.ResizeRedraw | ControlStyles.OptimizedDoubleBuffer, true);
 
             Size = new Size(80, 80);
             Text = string.Empty;
@@ -5717,45 +5717,45 @@ namespace Retaguarda.iTalk
         private void SetPoints()
         {
             Stack<PointF> stack = new Stack<PointF>();
-            PointF startingFloatPoint = new PointF(((float)this.Width) / 2f, ((float)this.Height) / 2f);
+            PointF startingFloatPoint = new PointF(Width / 2f, Height / 2f);
             for (float i = 0f; i < 360f; i += 45f)
             {
-                this.SetValue(startingFloatPoint, (int)Math.Round((double)((((double)this.Width) / 2.0) - 15.0)), (double)i);
-                PointF endPoint = this.EndPoint;
+                SetValue(startingFloatPoint, (int)Math.Round((double)(Width / 2.0 - 15.0)), (double)i);
+                PointF endPoint = EndPoint;
                 endPoint = new PointF(endPoint.X - 7.5f, endPoint.Y - 7.5f);
                 stack.Push(endPoint);
             }
-            this.FloatPoint = stack.ToArray();
+            FloatPoint = stack.ToArray();
         }
 
         private void UpdateGraphics()
         {
-            if ((this.Width > 0) && (this.Height > 0))
+            if (Width > 0 && Height > 0)
             {
-                Size size2 = new Size(this.Width + 1, this.Height + 1);
-                this.GraphicsContext.MaximumBuffer = size2;
-                this.BuffGraphics = this.GraphicsContext.Allocate(this.CreateGraphics(), this.ClientRectangle);
-                this.BuffGraphics.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+                Size size2 = new Size(Width + 1, Height + 1);
+                GraphicsContext.MaximumBuffer = size2;
+                BuffGraphics = GraphicsContext.Allocate(CreateGraphics(), ClientRectangle);
+                BuffGraphics.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
             }
         }
 
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            this.BuffGraphics.Graphics.Clear(this.BackColor);
-            int num2 = this.FloatPoint.Length - 1;
+            BuffGraphics.Graphics.Clear(BackColor);
+            int num2 = FloatPoint.Length - 1;
             for (int i = 0; i <= num2; i++)
             {
-                if (this.IndicatorIndex == i)
+                if (IndicatorIndex == i)
                 {
-                    this.BuffGraphics.Graphics.FillEllipse(this.AnimationColor, this.FloatPoint[i].X, this.FloatPoint[i].Y, 15f, 15f);
+                    BuffGraphics.Graphics.FillEllipse(AnimationColor, FloatPoint[i].X, FloatPoint[i].Y, 15f, 15f);
                 }
                 else
                 {
-                    this.BuffGraphics.Graphics.FillEllipse(this.BaseColor, this.FloatPoint[i].X, this.FloatPoint[i].Y, 15f, 15f);
+                    BuffGraphics.Graphics.FillEllipse(BaseColor, FloatPoint[i].X, FloatPoint[i].Y, 15f, 15f);
                 }
             }
-            this.BuffGraphics.Render(e.Graphics);
+            BuffGraphics.Render(e.Graphics);
         }
 
 
@@ -5815,7 +5815,7 @@ namespace Retaguarda.iTalk
             ItemSize = new Size(44, 135);
             DrawMode = TabDrawMode.OwnerDrawFixed;
 
-            foreach (TabPage Page in this.TabPages)
+            foreach (TabPage Page in TabPages)
             {
                 Page.BackColor = Color.FromArgb(246, 246, 246);
             }
@@ -5840,7 +5840,7 @@ namespace Retaguarda.iTalk
                 IEnumerator enumerator;
                 try
                 {
-                    enumerator = this.Controls.GetEnumerator();
+                    enumerator = Controls.GetEnumerator();
                     while (enumerator.MoveNext())
                     {
                         TabPage current = (TabPage)enumerator.Current;
@@ -5864,8 +5864,8 @@ namespace Retaguarda.iTalk
 
             _Graphics.Clear(Color.FromArgb(246, 246, 246));
             _Graphics.SmoothingMode = SmoothingMode.HighSpeed;
-            _Graphics.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighSpeed;
-            _Graphics.CompositingMode = System.Drawing.Drawing2D.CompositingMode.SourceOver;
+            _Graphics.CompositingQuality = CompositingQuality.HighSpeed;
+            _Graphics.CompositingMode = CompositingMode.SourceOver;
 
             // Draw tab selector background
             _Graphics.FillRectangle(new SolidBrush(Color.FromArgb(54, 57, 64)), new Rectangle(-5, 0, ItemSize.Height + 4, Height));
@@ -5886,7 +5886,7 @@ namespace Retaguarda.iTalk
                     // Draw tab text
                     _Graphics.DrawString(TabPages[TabIndex].Text, new Font(Font.FontFamily, Font.Size, FontStyle.Bold), new SolidBrush(Color.FromArgb(254, 255, 255)), new Rectangle(TabRect.Left + 40, TabRect.Top + 12, TabRect.Width - 40, TabRect.Height), new StringFormat { Alignment = StringAlignment.Near });
 
-                    if (this.ImageList != null)
+                    if (ImageList != null)
                     {
                         int Index = TabPages[TabIndex].ImageIndex;
                         if (!(Index == -1))
@@ -5900,7 +5900,7 @@ namespace Retaguarda.iTalk
                     Rectangle TabRect = new Rectangle(new Point(GetTabRect(TabIndex).Location.X - 2, GetTabRect(TabIndex).Location.Y - 2), new Size(GetTabRect(TabIndex).Width + 3, GetTabRect(TabIndex).Height - 8));
                     _Graphics.DrawString(TabPages[TabIndex].Text, new Font(Font.FontFamily, Font.Size, FontStyle.Bold), new SolidBrush(Color.FromArgb(159, 162, 167)), new Rectangle(TabRect.Left + 40, TabRect.Top + 12, TabRect.Width - 40, TabRect.Height), new StringFormat { Alignment = StringAlignment.Near });
 
-                    if (this.ImageList != null)
+                    if (ImageList != null)
                     {
                         int Index = TabPages[TabIndex].ImageIndex;
                         if (!(Index == -1))
@@ -6030,12 +6030,12 @@ namespace Retaguarda.iTalk
         {
             get
             {
-                return this.DividedValue;
+                return DividedValue;
             }
             set
             {
-                this.DividedValue = value;
-                this.Invalidate();
+                DividedValue = value;
+                Invalidate();
             }
         }
 
@@ -6044,11 +6044,11 @@ namespace Retaguarda.iTalk
         {
             get
             {
-                return (float)(((double)this._Value) / ((double)this.DividedValue));
+                return (float)(_Value / (double)DividedValue);
             }
             set
             {
-                this.Value = (int)Math.Round((double)(value * ((float)this.DividedValue)));
+                Value = (int)Math.Round((double)(value * (float)DividedValue));
             }
         }
 
@@ -6094,11 +6094,11 @@ namespace Retaguarda.iTalk
         {
             get
             {
-                return this._JumpToMouse;
+                return _JumpToMouse;
             }
             set
             {
-                this._JumpToMouse = value;
+                _JumpToMouse = value;
             }
         }
 
@@ -6108,9 +6108,9 @@ namespace Retaguarda.iTalk
         protected override void OnMouseMove(MouseEventArgs e)
         {
             base.OnMouseMove(e);
-            if ((this.Cap && (e.X > -1)) && (e.X < (this.Width + 1)))
+            if (Cap && e.X > -1 && e.X < Width + 1)
             {
-                this.Value = this._Minimum + ((int)Math.Round((double)((this._Maximum - this._Minimum) * (((double)e.X) / ((double)this.Width)))));
+                Value = _Minimum + (int)Math.Round((double)((_Maximum - _Minimum) * (e.X / (double)Width)));
             }
         }
 
@@ -6119,12 +6119,12 @@ namespace Retaguarda.iTalk
             base.OnMouseDown(e);
             if (e.Button == MouseButtons.Left)
             {
-                this.ValueDrawer = (int)Math.Round((double)((((double)(this._Value - this._Minimum)) / ((double)(this._Maximum - this._Minimum))) * (this.Width - 11)));
-                this.TrackBarHandleRect = new Rectangle(this.ValueDrawer, 0, 10, 20);
-                this.Cap = this.TrackBarHandleRect.Contains(e.Location);
-                if (this._JumpToMouse)
+                ValueDrawer = (int)Math.Round((double)((_Value - _Minimum) / (double)(_Maximum - _Minimum) * (Width - 11)));
+                TrackBarHandleRect = new Rectangle(ValueDrawer, 0, 10, 20);
+                Cap = TrackBarHandleRect.Contains(e.Location);
+                if (_JumpToMouse)
                 {
-                    this.Value = this._Minimum + ((int)Math.Round((double)((this._Maximum - this._Minimum) * (((double)e.X) / ((double)this.Width)))));
+                    Value = _Minimum + (int)Math.Round((double)((_Maximum - _Minimum) * (e.X / (double)Width)));
                 }
             }
         }
@@ -6132,7 +6132,7 @@ namespace Retaguarda.iTalk
         protected override void OnMouseUp(MouseEventArgs e)
         {
             base.OnMouseUp(e);
-            this.Cap = false;
+            Cap = false;
         }
 
 
@@ -6169,36 +6169,36 @@ namespace Retaguarda.iTalk
             G.SmoothingMode = SmoothingMode.AntiAlias;
             checked
             {
-                this.PipeBorder = RoundRectangle.RoundRect(1, 6, this.Width - 3, 8, 3);
+                PipeBorder = RoundRectangle.RoundRect(1, 6, Width - 3, 8, 3);
                 try
                 {
-                    this.ValueDrawer = (int)Math.Round(unchecked(checked((double)(this._Value - this._Minimum) / (double)(this._Maximum - this._Minimum)) * (double)checked(this.Width - 11)));
+                    ValueDrawer = (int)Math.Round(unchecked(checked((_Value - _Minimum) / (double)(_Maximum - _Minimum)) * checked(Width - 11)));
                 }
                 catch (Exception)
                 {
                 }
-                this.TrackBarHandleRect = new Rectangle(this.ValueDrawer, 0, 10, 20);
-                G.SetClip(this.PipeBorder);
-                this.ValueRect = new Rectangle(1, 7, this.TrackBarHandleRect.X + this.TrackBarHandleRect.Width - 2, 7);
-                this.VlaueLGB = new LinearGradientBrush(this.ValueRect, this._ValueColour, this._ValueColour, 90f);
-                G.FillRectangle(this.VlaueLGB, this.ValueRect);
+                TrackBarHandleRect = new Rectangle(ValueDrawer, 0, 10, 20);
+                G.SetClip(PipeBorder);
+                ValueRect = new Rectangle(1, 7, TrackBarHandleRect.X + TrackBarHandleRect.Width - 2, 7);
+                VlaueLGB = new LinearGradientBrush(ValueRect, _ValueColour, _ValueColour, 90f);
+                G.FillRectangle(VlaueLGB, ValueRect);
 
                 if (_DrawHatch == true)
                 {
-                    G.FillRectangle(Hatch, this.ValueRect);
+                    G.FillRectangle(Hatch, ValueRect);
                 }
 
                 G.ResetClip();
                 G.SmoothingMode = SmoothingMode.AntiAlias;
-                G.DrawPath(new Pen(Color.FromArgb(180, 180, 180)), this.PipeBorder);
-                this.TrackBarHandle = RoundRectangle.RoundRect(this.TrackBarHandleRect, 3);
-                this.TrackBarHandleLGB = new LinearGradientBrush(this.ClientRectangle, SystemColors.Control, SystemColors.Control, 90f);
-                G.FillPath(this.TrackBarHandleLGB, this.TrackBarHandle);
-                G.DrawPath(new Pen(Color.FromArgb(180, 180, 180)), this.TrackBarHandle);
+                G.DrawPath(new Pen(Color.FromArgb(180, 180, 180)), PipeBorder);
+                TrackBarHandle = RoundRectangle.RoundRect(TrackBarHandleRect, 3);
+                TrackBarHandleLGB = new LinearGradientBrush(ClientRectangle, SystemColors.Control, SystemColors.Control, 90f);
+                G.FillPath(TrackBarHandleLGB, TrackBarHandle);
+                G.DrawPath(new Pen(Color.FromArgb(180, 180, 180)), TrackBarHandle);
 
                 if (_DrawValueString == true)
                 {
-                    G.DrawString(System.Convert.ToString(ValueToSet), Font, Brushes.Gray, 0, 25);
+                    G.DrawString(Convert.ToString(ValueToSet), Font, Brushes.Gray, 0, 25);
                 }
             }
         }
@@ -6212,7 +6212,7 @@ namespace Retaguarda.iTalk
 
         public iTalk_MenuStrip()
         {
-            this.Renderer = new ControlRenderer();
+            Renderer = new ControlRenderer();
         }
 
         public new ControlRenderer Renderer
@@ -6231,7 +6231,7 @@ namespace Retaguarda.iTalk
 
         public iTalk_ContextMenuStrip()
         {
-            this.Renderer = new ControlRenderer();
+            Renderer = new ControlRenderer();
         }
 
         public new ControlRenderer Renderer
@@ -6249,7 +6249,7 @@ namespace Retaguarda.iTalk
 
         public iTalk_StatusStrip()
         {
-            this.Renderer = new ControlRenderer();
+            Renderer = new ControlRenderer();
             SizingGrip = false;
         }
 
@@ -6267,9 +6267,9 @@ namespace Retaguarda.iTalk
     {
         public iTalk_Icon_Info()
         {
-            this.ForeColor = Color.DimGray;
-            this.BackColor = Color.FromArgb(246, 246, 246);
-            this.Size = new Size(33, 33);
+            ForeColor = Color.DimGray;
+            BackColor = Color.FromArgb(246, 246, 246);
+            Size = new Size(33, 33);
             DoubleBuffered = true;
         }
         protected override void OnPaint(PaintEventArgs e)
@@ -6296,9 +6296,9 @@ namespace Retaguarda.iTalk
 
         public iTalk_Icon_Tick()
         {
-            this.ForeColor = Color.DimGray;
-            this.BackColor = Color.FromArgb(246, 246, 246);
-            this.Size = new Size(33, 33);
+            ForeColor = Color.DimGray;
+            BackColor = Color.FromArgb(246, 246, 246);
+            Size = new Size(33, 33);
             DoubleBuffered = true;
         }
 
