@@ -44,6 +44,7 @@ namespace Logistica.Sistema_de_Logistica
             this.entradaEstoqueMadeirasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.msEstoqueProduto = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbStatus = new System.Windows.Forms.CheckedListBox();
             this.label84 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -321,6 +322,7 @@ namespace Logistica.Sistema_de_Logistica
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.cbStatus);
             this.panel1.Controls.Add(this.label84);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label4);
@@ -350,6 +352,19 @@ namespace Logistica.Sistema_de_Logistica
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1883, 221);
             this.panel1.TabIndex = 5;
+            // 
+            // cbStatus
+            // 
+            this.cbStatus.FormattingEnabled = true;
+            this.cbStatus.Items.AddRange(new object[] {
+            "Pendente - Material na fabrica.",
+            "Imediato - Material em SP.",
+            "Finalizado - Material na Obra.",
+            "Cancelado - Material Cancelado"});
+            this.cbStatus.Location = new System.Drawing.Point(900, 13);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(265, 92);
+            this.cbStatus.TabIndex = 49;
             // 
             // label84
             // 
@@ -2288,5 +2303,6 @@ namespace Logistica.Sistema_de_Logistica
         private ToolStripMenuItem telefonesUteisToolStripMenuItem;
         private ToolStripMenuItem msEstoqueProduto;
         private Label label84;
+        private CheckedListBox cbStatus;
     }
 }
